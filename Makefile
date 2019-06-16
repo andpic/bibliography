@@ -31,8 +31,7 @@ clean:
 		*.xdy
 
 .PHONY: biblist
-biblist: 
-	rm -f biblist.b*
+biblist:
 	pdflatex -halt-on-error biblist.tex
 	biber biblist
 	pdflatex -halt-on-error biblist.tex

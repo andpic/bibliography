@@ -1,0 +1,12 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: apicciau/texlive_ubuntu:latest
+
+    steps:
+      - checkout
+
+      - run:
+          name: Create the PDF
+          command: bash .circleci/build_pdf.sh
