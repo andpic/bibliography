@@ -1,0 +1,25 @@
+\documentclass[a4paper,twoside]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{a4wide}
+\usepackage{underscore}
+\usepackage{amsmath}
+\usepackage[
+   sortcites,
+   backend=biber,
+   style=ieee,
+   sorting=ynt,
+   citestyle=numeric-comp,
+   backref
+]{biblatex}
+\usepackage{showkeys}
+
+\DeclareFieldFormat{abstract}{\par\small\emph{Abstract: }#1}
+\renewbibmacro*{finentry}{\printfield{abstract}\finentry}
+\addbibresource{bibliography.bib}
+
+\begin{document}
+\title{Bibliographic database}
+\nocite{*}
+\printbibliography
+\end{document}
