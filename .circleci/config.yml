@@ -6,7 +6,10 @@ jobs:
 
     steps:
       - checkout
-
       - run:
           name: Create the PDF
-          command: bash .circleci/build_pdf.sh
+          command: |
+            bash .circleci/build_pdf.sh
+            cp biblist.pdf /tmp/
+      - store_artifacts:
+          path: /tmp/biblist.pdf
