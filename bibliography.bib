@@ -10,8 +10,7 @@
   pages     = {196--203},
   doi       = {10.1109/PDP2018.2018.00034},
   abstract  = {Sparse triangular linear systems are ubiquitous in a wide range of science and engineering fields, and represent one of the most important building blocks of Sparse Numerical Lineal Algebra methods. For this reason, their parallel solution has been subject of exhaustive study, and efficient implementations of this kernel can be found for almost every hardware platform. However, the strong data dependencies that serialize a great deal of the execution and the load imbalance inherent to the triangular structure poses serious difficulties for its parallel performance, specially in the context of massively- parallel processors such as GPUs. To this day, the most widespread GPU implementation of this kernel is the one distributed in NVIDIA CUSPARSE library, which relies on a preprocessing stage to determine the parallel execution schedule. Although the solution phase is highly efficient, this strategy pays the cost of constant synchronizations with the CPU. In this work, we present a synchronization-free GPU al- gorithm to solve sparse triangular linear systems for the CSR format. The experimental evaluation shows performance improvements over CUSPARSE and a recently proposed synchronization-free method for the CSC matrix format.},
-  crossref  = {DBLP:conf/pdp/2018},
-  timestamp = {Tue, 03 Jul 2018 17:32:39 +0200}
+  timestamp = {Tue, 03 Jul 2018 17:32:39 +0200},
 }
 
 @PhdThesis{Achterberg2008,
@@ -4291,10 +4290,10 @@
   booktitle = {Proceedings of the IEEE International Symposium on Performance Analysis of Systems Software},
   date      = {2010},
   series    = {ISPASS '10},
-  month     = {March},
+  month     = {3},
   pages     = {235--246},
   doi       = {10.1109/ISPASS.2010.5452013},
- abstract = {Graphics processors (GPU) offer the promise of more than an order of magnitude speedup over conventional processors for certain non-graphics computations. Because the GPU is often presented as a C-like abstraction (e.g., Nvidia's CUDA), little is known about the characteristics of the GPU's architecture beyond what the manufacturer has documented. This work develops a microbechmark suite and measures the CUDA-visible architectural characteristics of the Nvidia GT200 (GTX280) GPU. Various undisclosed characteristics of the processing elements and the memory hierarchies are measured. This analysis exposes undocumented features that impact program performance and correctness. These measurements can be useful for improving performance optimization, analysis, and modeling on this architecture and offer additional insight on the decisions made in developing this GPU.},
+  abstract  = {Graphics processors (GPU) offer the promise of more than an order of magnitude speedup over conventional processors for certain non-graphics computations. Because the GPU is often presented as a C-like abstraction (e.g., Nvidia's CUDA), little is known about the characteristics of the GPU's architecture beyond what the manufacturer has documented. This work develops a microbechmark suite and measures the CUDA-visible architectural characteristics of the Nvidia GT200 (GTX280) GPU. Various undisclosed characteristics of the processing elements and the memory hierarchies are measured. This analysis exposes undocumented features that impact program performance and correctness. These measurements can be useful for improving performance optimization, analysis, and modeling on this architecture and offer additional insight on the decisions made in developing this GPU.},
   keywords  = {computer graphics;coprocessors;GPU microarchitecture;Nvidia GT200 GPU;graphics processors;microbenchmarking;Clocks;Computer architecture;Delay;Hardware;Kernel;Microarchitecture;Performance analysis;Registers;Samarium;Yarn},
 }
 
@@ -4749,7 +4748,7 @@
   booktitle = {Proceedings of the IEEE International Parallel and Distributed Processing Symposium},
   year      = {2018},
   series    = {IPDPS '18},
-  month     = {May},
+  month     = {5},
   pages     = {920--929},
   doi       = {10.1109/IPDPS.2018.00101},
   abstract  = {A myriad of problems in science and engineering, involve the solution of sparse triangular linear systems. They arise frequently as part of direct and iterative solvers for linear systems and eigenvalue problems, and hence can be considered as a key building block of sparse numerical linear algebra. This is why, since the early days, their parallel solution has been exhaustively studied, and efficient implementations of this kernel can be found for almost every hardware platform. In the GPU context, the most widespread implementation of this kernel is the one distributed in NVIDIA CUSPARSE library, which relies on a preprocessing stage to aggregate the unknowns of the triangular system into level sets. This determines an execution schedule for the solution of the system, where the level sets have to be processed sequentially while the unknowns that belong to one level set can be solved in parallel. One of the disadvantages of the CUSPARSE implementation is that this preprocessing stage is often extremely slow in comparison to the runtime of the solving phase. In this work, we present a parallel GPU algorithm that is able to compute the same level sets as CU S PARSE but takes significantly less runtime. Our experiments on a set of matrices from the SuiteSparse collection show acceleration factors of up to 44$\times$. Additionally, we provide a routine capable of solving a triangular linear system on the same pass used to calculate the level sets, yielding important performance benefits.},
@@ -4867,11 +4866,12 @@ practice the performance, and limitations of the approach stressing on the use o
 @Conference{Abdelfattah2018a,
   author       = {Ahmad Abdelfattah and Azzam Haidar and Stanimire Tomov and Jack Dongarra},
   title        = {Optimizing GPU Kernels for Irregular Batch Workloads: A Case Study for Cholesky Factorization},
-  booktitle    = {IEEE High Performance Extreme Computing Conference (HPEC{\textquoteright}18)},
+  booktitle    = {IEEE High Performance Extreme Computing Conference},
   year         = {2018},
+  series       = {HPEC'18},
   organization = {IEEE},
   publisher    = {IEEE},
-  month        = {09-2018},
+  month        = {9},
   abstract     = {This paper introduces several frameworks for the design and implementation of high performance GPU kernels that target batch workloads with irregular sizes. Such workloads are ubiquitous in many scientific applications, including sparse direct solvers, astrophysics, and quantum chemistry. The paper addresses two main categories of frameworks, taking the Cholesky factorization as a case study. The first uses host-side kernel launches, and the second uses device-side launches. Within each category, different design options are introduced, with an emphasis on the advantages and the disadvantages of each approach. Our best performing design outperforms the state-of-the-art CPU implementation, scoring up to 4.7$\times$ speedup in double precision on a Pascal P100 GPU.},
   address      = {Waltham, MA},
 }
@@ -4997,14 +4997,14 @@ practice the performance, and limitations of the approach stressing on the use o
   eprinttype = {arXiv},
 }
 
-@TechReport{kurzak2018,
+@TechReport{Kurzak2018,
   author      = {Kurzak, Jakub and Gates, Mark and Yamazaki, Ichitaro and Charara, Ali and YarKhan, Asim and Finney, Jamie and Ragghianti, Gerald and Luszczek, Piotr and Dongarra, Jack},
   title       = {{SLATE} Working Note 8: Linear Systems Performance Report},
   institution = {Innovative Computing Laboratory, University of Tennessee},
   year        = {2018},
   number      = {ICL-UT-XX-XX},
   note        = {revision 09-2018},
-  month       = {September},
+  month       = {9},
   abstract    = {Software for Linear Algebra Targeting Exascale (SLATE) is being developed as part of the Exascale Computing Project (ECP), which is a collaborative effort between two US Department of Energy (DOE) organizations, the Office of Science and the National Nuclear Security Administration (NNSA). The purpose of SLATE is to serve as a replacement for ScaLAPACK for the upcoming pre-exascale and exascale DOE machines. SLATE will accomplish this objective by leveraging recent progress in parallel programming models and by strongly focusing on
 supporting hardware accelerators.
 
@@ -5058,7 +5058,7 @@ details about the design of the SLATE software infrastructure can be found in th
   year      = {2018},
   editor    = {Li, Liang and Hasegawa, Kyoko and Tanaka, Satoshi},
   publisher = {Springer Singapore},
-  isbn      = {978-981-13-2853-4},
+  isbn      = {9789811328534},
   pages     = {401--413},
   abstract  = {A number of hybrid Bi-Conjugate Gradient (Bi-CG) methods such as the Bi-CG STABilized (BiCGSTAB) method have been developed for solving linear equations. BiCGSTAB has been most often used for efficiently solving the linear equations, but we have sometimes seen the convergence behavior with a long stagnation phase. In such cases, it is important to have Bi-CG coefficients that are as accurate as possible, and the stabilization strategy for improving the accuracy of the Bi-CG coefficients has been proposed. In present petascale high-performance computing hardware, the main bottleneck of Krylov subspace methods for efficient parallelization is the inner products which require a global reduction. The parallel variants of BiCGSTAB such as communication avoiding and pipelined BiCGSTAB reducing the number of global communication phases and hiding the communication latency have been proposed. However, the numerical stability, specifically, the convergence speed of the parallel variants of BiCGSTAB has not previously been clarified on problems with situations where the convergence is slow (strongly affected by rounding errors). In this paper, therefore, we examine the convergence speed between the standard BiCGSTAB and the parallel variants, and the effectiveness of the stabilization strategy by numerical experiments on the problems where the convergence has a long stagnation phase.},
   address   = {Singapore},
@@ -5106,7 +5106,7 @@ A sparse matrix has (non-zero) values and a structure. In this paper, we propose
   title    = {An efficient GPU version of the preconditioned GMRES method},
   journal  = {The Journal of Supercomputing},
   year     = {2018},
-  month    = {Oct},
+  month    = {10},
   issn     = {1573-0484},
   doi      = {10.1007/s11227-018-2658-1},
   url      = {https://doi.org/10.1007/s11227-018-2658-1},
@@ -5256,7 +5256,7 @@ This paper introduces GraphIt, a new DSL for graph computations that generates f
   booktitle = {Proceedings of the 3rd IEEE Advanced Information Technology, Electronic and Automation Control Conference},
   year      = {2018},
   series    = {IAEAC},
-  month     = {Oct},
+  month     = {10},
   pages     = {598--602},
   doi       = {10.1109/IAEAC.2018.8577693},
   abstract  = {Sparse matrix-vector multiplication (SpMV) as one of the most significant scientific kernels has been widely used in many scientific disciplines. In practical applications, large-scale spare matrices are usually used for calculation. During these years, Graphic Processing Unit (GPU) has become a powerful platform for high-performance computing, and optimizing$S$pMV on GPU based systems for efficient performance is the principal interest in many researches. In this paper, we proposed a new method to optimize SpMV on GPUs via index compression. Our index compression method can reduce the index value of the access space. The memory space for recording each column index is significantly reduced from two bytes to one byte, which outperforms the previous work on access performance. The main contributions we make are as follows: (1) Only one byte for each column index is required, which can significantly reduce the working set of the column index and further improve the cache hit ration. (2) Our method can be applied to any kind of matrices, while the previous work can only apply to subset of the matrices. Computational experiments on problems according to the previous work reveal that the best performance improvement ration for ours is up to about 1.5.},
@@ -5374,7 +5374,7 @@ In addition, we compare the performance in the general format (CSR format, BSR f
   title    = {Scaling sparse matrix-matrix multiplication in the accumulo database},
   journal  = {Distributed and Parallel Databases},
   year     = {2019},
-  month    = {Jan},
+  month    = {1},
   issn     = {1573-7578},
   doi      = {10.1007/s10619-019-07257-y},
   abstract = {We propose and implement a sparse matrix-matrix multiplication (SpGEMM) algorithm running on top of Accumulo's iterator framework which enables high performance distributed parallelism. The proposed algorithm provides write-locality while ingesting the output matrix back to database via utilizing row-by-row parallel SpGEMM. The proposed solution also alleviates scanning of input matrices multiple times by making use of Accumulo's batch scanning capability which is used for accessing multiple ranges of key-value pairs in parallel. Even though the use of batch-scanning introduces some latency overheads, these overheads are alleviated by the proposed solution and by using node-level parallelism structures. We also propose a matrix partitioning scheme which reduces the total communication volume and provides a balance of workload among servers. The results of extensive experiments performed on both real-world and synthetic sparse matrices show that the proposed algorithm scales significantly better than the outer-product parallel SpGEMM algorithm available in the Graphulo library. By applying the proposed matrix partitioning, the performance of the proposed algorithm is further improved considerably.},
@@ -5382,7 +5382,7 @@ In addition, we compare the performance in the general format (CSR format, BSR f
 }
 
 @TechReport{Hoemmen2019,
-  author      = {Mark Hoemmen, Jayesh Badwaik, Matthieu Brucher, Athanasios (Nasos) Iliopoulos, John Michopoulos},
+  author      = {Hoemmen, Mark and Badwaik, Jayesh and Brucher, Matthieu and Iliopoulos, Athanasios (Nasos) and Michopoulos, John},
   title       = {Historical lessons for C++ linear algebra library standardization},
   institution = {ISO C++ standards meeting (Kona)},
   year        = {2019},
@@ -5582,7 +5582,7 @@ The main contribution is a set of rules that helps in picking the best-performin
 }
 
 @InProceedings{Nisa2019,
-  author    = {Israt Nisa, Jiajia Li, Aravind Sukumaran-Rajam, Richard Vuduc, P. Sadayappan},
+  author    = {Nisa, Israt and Li, Jiajia and Sukumaran-Rajam, Aravind and Vuduc, Richard and Sadayappan, P.},
   title     = {Load-Balanced Sparse MTTKRP on GPUs},
   booktitle = {Proceedings of the 2019 International Parallel and Distributed Processing Symposium},
   year      = {2019},
@@ -5595,7 +5595,7 @@ The main contribution is a set of rules that helps in picking the best-performin
   author       = {{Kawaguchi}, Kenji and {Pack Kaelbling}, Leslie},
   title        = {Every Local Minimum is a Global Minimum of an Induced Model},
   year         = {2019},
-  month        = {Apr},
+  month        = {4},
   abstract     = {For non-convex optimization in machine learning, this paper proves that every local minimum achieves the global optimality of the perturbable gradient basis model at any differentiable point. As a result, non-convex machine learning is theoretically as supported as convex machine learning with a hand-crafted basis in terms of the loss at differentiable local minima, except in the case when a preference is given to the hand-crafted basis over the perturbable gradient basis. The proofs of these results are derived under mild assumptions. Accordingly, the proven results are directly applicable to many machine learning models, including practical deep neural networks, without any modification of practical methods. Furthermore, as special cases of our general results, this paper improves or complements several state-of-the-art theoretical results in the literature with a simple and unified proof technique.},
   eprint       = {arXiv:1904.03673},
   eprinttype   = {arXiv},
@@ -5688,7 +5688,7 @@ The main contribution is a set of rules that helps in picking the best-performin
   booktitle = {Proceedings of the 28th International Symposium on High-Performance Parallel and Distributed Computing},
   year      = {2019},
   location  = {Phoenix, AX, USA},
-  month     = june,
+  month     = {6},
   abstract  = {Performance of single-machine, shared memory graph processing is affected by expensive atomic updates and poor cache locality. Data duplication, a popular approach to eliminate atomic updates by creating thread-local copies of shared data, incurs extreme memory overheads due to the large sizes of typical input graphs. Even memory-efficient duplication strategies that exploit the power-law structure common to many graphs (by duplicating only the highly-connected "hub" vertices) suffer from overheads for having to dynamically identify the hub vertices. Degree Sorting, a popular graph reordering technique that re-assigns hub vertices consecutive IDs in a bid to improve spatial locality, is effective for single-threaded graph applications but suffers from increased false sharing in parallel executions. \\
 The main insight of this work is that the combination of data duplication and Degree Sorting eliminates the overheads of each optimization. Degree Sorting improves the efficiency of data duplication by assigning hub vertices consecutive IDs which enables easy identification of the hub vertices. Additionally, duplicating the hub vertex data eliminates false sharing in Degree Sorting since each thread updates its local copy of the hub vertex data. We evaluate this mutually-enabling combination of power-law-specific data duplication and Degree Sorting in a system called RADAR. RADAR improves performance by eliminating atomic updates for hub vertices and improving the cache locality of graph applications, providing speedups of up to 166x (1.88x on average) across different graph applications and input graphs.},
   timestamp = {2019.05.09},
@@ -5765,7 +5765,7 @@ The main insight of this work is that the combination of data duplication and De
   year      = {2019},
   editor    = {Geshi, Masaaki},
   publisher = {Springer Singapore},
-  isbn      = {978-981-13-6194-4},
+  isbn      = {9789811361944},
   pages     = {113--136},
   doi       = {10.1007/978-981-13-6194-4_7},
   abstract  = {Matrix computations lie at the heart of many scientific computations. While sophisticated algorithms have been established for various numerical linear algebra problems such as the solution of linear simultaneous equationsLinear simultaneous equation and eigenvalue problemsEigenvalue problem, they require considerable modification with the advent of exaFLOPS- scale supercomputers, which are expected to have a huge number of computing cores, deep memory hierarchyMemory hierarchy, and increased probability of hardware errors. In this chapter, we discuss projected hardware characteristics of exaFLOPS machines and summarize the challenges to be faced by numerical linear algebra algorithms in the near future. Based on these preparations, we present a brief survey of recent research efforts in the field of numerical linear algebra targeted at meeting these challenges.},
@@ -5828,7 +5828,7 @@ The main insight of this work is that the combination of data duplication and De
 }
 
 @Article{Das2019,
-  author     = {Swapnil Das, James Demmel, Kimon Fountoulakis, Laura Grigori, Michael. W. Mahoney},
+  author     = {Das, Swapnil and Demmel, James and Fountoulakis, Kimon and Grigori, Laura and Mahoney, Michael. W.},
   title      = {Parallel and Communication Avoiding Least Angle Regression},
   year       = {2019},
   eprint     = {arXiv:1905.11340},
@@ -5879,7 +5879,7 @@ The main insight of this work is that the combination of data duplication and De
   title     = {GraFBoost: Using Accelerated Flash Storage for External Graph Analytics},
   booktitle = {ACM/IEEE 45th Annual International Symposium on Computer Architecture},
   year      = {2018},
-  month     = {June},
+  month     = {6},
   pages     = {411--424},
   doi       = {10.1109/ISCA.2018.00042},
   abstract  = {We describe GraFBoost, a flash-based architecture with hardware acceleration for external analytics of multi-terabyte graphs. We compare the performance of GraFBoost with 1 GB of DRAM against various state-of-the-art graph analytics software including FlashGraph, running on a 32-thread Xeon server with 128 GB of DRAM. We demonstrate that despite the relatively small amount of DRAM, GraFBoost achieves high performance with very large graphs no other system can handle, and rivals the performance of the fastest software platforms on sizes of graphs that existing platforms can handle. Unlike in-memory and semi-external systems, GraFBoost uses a constant amount of memory for all problems, and its performance decreases very slowly as graph sizes increase, allowing GraFBoost to scale to much larger problems than possible with existing systems while using much less resources on a single-node system. The key component of GraFBoost is the sort-reduce accelerator, which implements a novel method to sequentialize fine-grained random accesses to flash storage. The sort-reduce accelerator logs random update requests and then uses hardware-accelerated external sorting with interleaved reduction functions. GraFBoost also stores newly updated vertex values generated in each superstep of the algorithm lazily with the old vertex values to further reduce I/O traffic. We evaluate the performance of GraFBoost for PageRank, breadth-first search and betweenness centrality on our FPGA-based prototype (Xilinx VC707 with 1 GB DRAM and 1 TB flash) and compare it to other graph processing systems including a pure software implementation of GrapFBoost.},
@@ -5970,7 +5970,7 @@ The main insight of this work is that the combination of data duplication and De
   title     = {Systolic Sparse Matrix Vector Multiply in the Age of TPUs and Accelerators},
   booktitle = {2019 Spring Simulation Conference (SpringSim)},
   year      = {2019},
-  month     = {April},
+  month     = {4},
   pages     = {1-10},
   doi       = {10.23919/SpringSim.2019.8732860},
   abstract  = {Tensor Processing Units has brought back systolic arrays as a computational alternative to high performance computing. Recently Google presented a Tensor Processing Unit for handling matrix multiplication using systolic arrays. This unit is designed for dense matrices only. As they stated, sparse architectural support was omitted momentarily but they will focus on sparsity in future designs. We propose a systolic array to compute the Sparse Matrix Vector product in $T2(n)\approx \displaystyle \lceil\frac{nnz}{2}\rceil+2n+2$ using 2 n+2 processing elements. The systolic array we propose also use accumulators to collect the partial results of the resulting vector and supports adapting tiling.},
@@ -6104,7 +6104,7 @@ The main insight of this work is that the combination of data duplication and De
   author        = {Yang, Carl and Buluc, Aydin and Owens, John D.},
   title         = {Design Principles for Sparse Matrix Multiplication on the GPU},
   year          = {2018},
-  month         = {mar},
+  month         = {3},
   __markedentry = {[ap8213:6]},
   abstract      = {We implement two novel algorithms for sparse-matrix dense-matrix multiplication (SpMM) on the GPU. Our algorithms expect the sparse input in the popular compressed-sparse-row (CSR) format and thus do not require expensive format conversion. While previous SpMM work concentrates on thread-level parallelism, we additionally focus on latency hiding with instruction-level parallelism and load-balancing. We show, both theoretically and experimentally, that the proposed SpMM is a better fit for the GPU than previous approaches. We identify a key memory access pattern that allows efficient access into both input and output matrices that is crucial to getting excellent performance on SpMM. By combining these two ingredients – (i) merge-based load-balancing and (ii) row-major coalesced memory access – we demonstrate a 3.6x peak speedup and a 23.5\% geomean speedup over state-of-the-art SpMM implementations on real-world datasets.},
   archiveprefix = {"arXiv"},
