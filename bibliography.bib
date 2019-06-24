@@ -6254,4 +6254,40 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   timestamp     = {2019.06.16},
 }
 
+@InProceedings{Li2019a,
+  author    = {Li, Jiajia and Uçar, Bora and Çatalyürek, Ümit V. and Sun, Jimeng and Barker, Kevin and Vuduc, Richard},
+  title     = {Efficient and Effective Sparse Tensor Reordering},
+  booktitle = {Proceedings of the ACM International Conference on Supercomputing},
+  year      = {2019},
+  series    = {ICS '19},
+  publisher = {ACM},
+  location  = {Phoenix, Arizona},
+  isbn      = {978-1-4503-6079-1},
+  pages     = {227--237},
+  doi       = {10.1145/3330345.3330366},
+  abstract  = {This paper formalizes the problem of reordering a sparse tensor to improve the spatial and temporal locality of operations with it, and proposes two reordering algorithms for this problem, which we call BFS-MCS and Lexi-Order. The BFS-MCS method is a Breadth First Search (BFS)-like heuristic approach based on the maximum cardinality search family; Lexi-Order is an extension of doubly lexical ordering of matrices to tensors. We show the effects of these schemes within the context of a widely used tensor computation, the CANDECOMP/PARAFAC decomposition (CPD), when storing the tensor in three previously proposed sparse tensor formats: coordinate (COO), compressed sparse fiber (CSF), and hierarchical coordinate (HiCOO). A new partition-based superblock scheduling is also proposed for HiCOO format to improve load balance. On modern multicore CPUs, we show Lexi-Order obtains up to 4.14$\times$ speedup on sequential HiCOO-Mttkrp and 11.88$\times$ speedup on its parallel counterpart. The performance of COO- and CSF-based Mttkrps also improves. Our two reordering methods are more effective than state-of-the-art approaches. The code is released as part of Parallel Tensor Infrastructure (ParTI!): https://github.com/hpcgarage/ParTI.},
+  acmid     = {3330366},
+  address   = {New York, NY, USA},
+  keywords  = {HiCOO, hierarchical coordinate, reordering, sparse tensor, tensor decomposition},
+  numpages  = {11},
+}
+
+@InProceedings{Sao2019a,
+  author    = {Sao, Piyush and Kannan, Ramakrishnan and Li, Xiaoye Sherry and Vuduc, Richard},
+  title     = {A Communication-avoiding 3D Sparse Triangular Solver},
+  booktitle = {Proceedings of the ACM International Conference on Supercomputing},
+  year      = {2019},
+  series    = {ICS '19},
+  publisher = {ACM},
+  location  = {Phoenix, Arizona},
+  isbn      = {978-1-4503-6079-1},
+  pages     = {127--137},
+  doi       = {10.1145/3330345.3330357},
+  abstract  = {We present a novel distributed memory algorithm to improve the strong scalability of the solution of a sparse triangular system. This operation appears in the solve phase of direct methods for solving general sparse linear systems, $Ax = b$. Our 3D sparse triangular solver employs several techniques, including a 3D MPI process grid, elimination tree parallelism, and data replication, all of which reduce the per-process communication when combined. We present analytical models to understand the communication cost of our algorithm and show that our 3D sparse triangular solver can reduce the per-process communication volume asymptotically by a factor of $O(n^{1/4})$ and $O(n^{1/6})$ for problems arising from the finite element discretizations of 2D "planar" and 3D "non-planar" PDEs, respectively. We implement our algorithm for use in SuperLU_DIST3D, using a hybrid MPI+OpenMP programming model. Our 3D triangular solve algorithm, when run on 12k cores of Cray XC30, outperforms the current state-of-the-art 2D algorithm by 7.2$\times$ for planar and 2.7$\times$ for the non-planar sparse matrices, respectively.},
+  acmid     = {3330357},
+  address   = {New York, NY, USA},
+  keywords  = {communication-avoiding algorithms, distributed-memory parallelism, sparse matrix computations},
+  numpages  = {11},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
