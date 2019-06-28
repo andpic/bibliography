@@ -6291,4 +6291,48 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   numpages  = {11},
 }
 
+@InBook{Alyahya2020,
+  author    = {Alyahya, Hana and Mehmood, Rashid and Katib, Iyad},
+  title     = {Parallel Iterative Solution of Large Sparse Linear Equation Systems on the Intel {MIC} Architecture},
+  booktitle = {Smart Infrastructure and Applications: Foundations for Smarter Cities and Societies},
+  year      = {2020},
+  editor    = {Mehmood, Rashid and See, Simon and Katib, Iyad and Chlamtac, Imrich},
+  publisher = {Springer International Publishing},
+  isbn      = {978-3-030-13705-2},
+  pages     = {377--407},
+  doi       = {10.1007/978-3-030-13705-2_16},
+  abstract  = {Many important scientific, engineering, and smart city applications require solving large sparse linear equation systems. The numerical methods for solving linear equations can be categorised into direct methods and iterative methods. Jacobi method is one of the iterative solvers that has been widely used due to its simplicity and efficiency. Its performance is affected by factors including the storage format, the specific computational algorithm, and its implementation. While the performance of Jacobi has been studied extensively on conventional CPU architectures, research on its performance on emerging architectures, such as the Intel Many Integrated Core (MIC) architecture, is still in its infancy. In this chapter, we investigate the performance of parallel implementations of the Jacobi method on Knights Corner (KNC), the first generation of the Intel MIC architectures. We implement Jacobi with two storage formats, Compressed Sparse Row (CSR) and Modified Sparse Row (MSR), and measure their performance in terms of execution time, offloading time, and speedup. We report results of sparse matrices with over 28 million rows and 640 million non-zero elements acquired from 13 diverse application domains. The experimental results show that our Jacobi parallel implementation on MIC achieves speedups of up to 27.75$\times$ compared to the sequential implementation. It also delivers a speedup of up to 3.81$\times$ compared to a powerful node comprising 24 cores in two Intel Xeon E5-2695v2 processors.},
+  address   = {Cham},
+}
+
+@InBook{AlAhmadi2020,
+  author    = {AlAhmadi, Sarah and Muhammed, Thaha and Mehmood, Rashid and Albeshri, Aiiad},
+  title     = {Performance Characteristics for Sparse Matrix-Vector Multiplication on GPUs},
+  booktitle = {Smart Infrastructure and Applications: Foundations for Smarter Cities and Societies},
+  year      = {2020},
+  editor    = {Mehmood, Rashid and See, Simon and Katib, Iyad and Chlamtac, Imrich},
+  publisher = {Springer International Publishing},
+  isbn      = {978-3-030-13705-2},
+  pages     = {409--426},
+  doi       = {10.1007/978-3-030-13705-2_17},
+  abstract  = {The massive parallelism provided by the graphics processing units (GPUs) offers tremendous performance in many high-performance computing applications. One such application is Sparse Matrix-Vector (SpMV) multiplication, which is an essential building block for numerous scientific and engineering applications. Researchers who propose new storage techniques for sparse matrix-vector multiplication focus mainly on a single evaluation metrics or performance characteristics which is usually the throughput performance of sparse matrix-vector multiplication in FLOPS. However, such an evaluation does not provide a deeper insight nor allow to compare new SpMV techniques with their competitors directly. In this chapter, we explain the notable performance characteristics of the GPU architectures and SpMV computations. We discuss various strategies to improve the performance of SpMV on GPUs. We also discuss a few performance criteria that are usually overlooked by the researchers during the evaluation process. We also analyze various well-known schemes such as COO, CSR, ELL, DIA, HYB, and CSR5 using the discussed performance characteristics.},
+  address   = {Cham},
+}
+
+@Online{Artemov2019,
+  author     = {Anton G. Artemov},
+  title      = {Sparse approximate matrix multiplication in a fully recursive distributed task-parallel framework},
+  year       = {2019},
+  abstract   = {In this paper we consider parallel implementations of approximate multiplication of large matrices with exponential decay of elements. Such matrices arise in computations related to electronic structure calculations and some other fields of science. Commonly, sparsity is introduced by truncation of input matrices. In turn, the sparse approximate multiplication algorithm [M. Challacombe and N. Bock, arXiv preprint 1011.3534, 2010] performs truncation of sub-matrix products. We consider these two methods and their combination, i.e. truncation of both input matrices and sub-matrix products. Implementations done using the Chunks and Tasks programming model and library [E. H. Rubensson and E. Rudberg, Parallel Comput., 40:328343, 2014] are presented and discussed. The absolute error asymptotic behavior is derived. A comparison between the three methods in terms of performance is done on a model problem. The algorithms are also applied to matrices coming from large chemical systems with $\approx$106 atoms.},
+  eprint     = {arXiv:1906.0814},
+  eprinttype = {arXiv},
+}
+
+@InProceedings{Anzalone2019,
+  author   = {Anzalone, E. and Capra, M. and Peloso, R. and Martina, M. and Masera, G.},
+  title    = {Low-power Hardware Accelerator for Sparse Matrix Convolution in Deep Neural Network"},
+  year     = {2019},
+  abstract = {Deep Neural Networks (DNN) have reached an outstanding accuracy in the past years, often going beyond human abilities. Nowadays, DNNs are widely used in many Artificial Intelligence (AI) applications such as computer vision, natural language processing and autonomous driving. However, these incredible performance come at a high computational cost, requiring complex hardware platforms. Therefore, the need for dedicated hardware accelerators able to drastically speed up the execution by preserving a low-power attitude arise. This paper presents innovative techniques able to tackle matrix sparsity in convolutional DNNs due to non-linear activation functions. Developed architectures allow to skip unnecessary operations, like zero multiplications, without sacrificing accuracy or throughput and improving the energy efficiency. Such improvement could enhance the performance of embedded limited-budget battery applications, where cost-effective hardware, accuracy and duration are critical to expanding the deployment of AI.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
