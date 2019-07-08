@@ -6335,4 +6335,70 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   abstract = {Deep Neural Networks (DNN) have reached an outstanding accuracy in the past years, often going beyond human abilities. Nowadays, DNNs are widely used in many Artificial Intelligence (AI) applications such as computer vision, natural language processing and autonomous driving. However, these incredible performance come at a high computational cost, requiring complex hardware platforms. Therefore, the need for dedicated hardware accelerators able to drastically speed up the execution by preserving a low-power attitude arise. This paper presents innovative techniques able to tackle matrix sparsity in convolutional DNNs due to non-linear activation functions. Developed architectures allow to skip unnecessary operations, like zero multiplications, without sacrificing accuracy or throughput and improving the energy efficiency. Such improvement could enhance the performance of embedded limited-budget battery applications, where cost-effective hardware, accuracy and duration are critical to expanding the deployment of AI.},
 }
 
+@Article{Davydov2019,
+  author        = {Davydov, Denis and Kronbichler, Martin},
+  title         = {Algorithms and data structures for matrix-free finite element operators with MPI-parallel sparse multi-vectors},
+  year          = {2019},
+  month         = {Jul},
+  eprint        = {arXiv:1907.01005},
+  eprinttype    = {arXiV},
+  abstract      = {Traditional solution approaches for problems in quantum mechanics scale as $O(M3)$, where $M$ is the number of electrons. Various methods have been proposed to address this issue and obtain linear scaling $O(M)$. One promising formulation is the direct minimization of energy. Such methods take advantage of physical localization of the solution, namely that the solution can be sought in terms of non-orthogonal orbitals with local support. In this work a numerically efficient implementation of sparse parallel vectors within the open-source finite element library deal.II is proposed. The main algorithmic ingredient is the matrix-free evaluation of the Hamiltonian operator by cell-wise quadrature. Based on an a-priori chosen support for each vector we develop algorithms and data structures to perform (i) matrix-free sparse matrix multivector products (SpMM), (ii) the projection of an operator onto a sparse sub-space (inner products), and (iii) post-multiplication of a sparse multivector with a square matrix. The node-level performance is analyzed using a roofline model. Our matrix-free implementation of finite element operators with sparse multivectors achieves the performance of 157 GFlop/s on Intel Cascade Lake architecture. Strong and weak scaling results are reported for a typical benchmark problem using quadratic and quartic finite element bases.},
+  adsnote       = {Provided by the SAO/NASA Astrophysics Data System},
+  adsurl        = {https://ui.adsabs.harvard.edu/abs/2019arXiv190701005D},
+  archiveprefix = {arXiv},
+  keywords      = {Computer Science - Mathematical Software, Computer Science - Data Structures and Algorithms, Mathematics - Numerical Analysis, Physics - Computational Physics},
+  primaryclass  = {cs.MS},
+}
+
+@Article{Choi2019,
+  author   = {Choi, Dongjin and Jang, Jun-Gi and Kang, U},
+  title    = {S3CMTF: Fast, accurate, and scalable method for incomplete coupled matrix-tensor factorization},
+  journal  = {{PloS} one},
+  year     = {2019},
+  volume   = {14},
+  number   = {6},
+  issn     = {1932-6203},
+  doi      = {10.1371/journal.pone.0217316},
+  abstract = {How can we extract hidden relations from a tensor and a matrix data simultaneously in a fast, accurate, and scalable way? Coupled matrix-tensor factorization (CMTF) is an important tool for this purpose. Designing an accurate and efficient CMTF method has become more crucial as the size and dimension of real-world data are growing explosively. However, existing methods for CMTF suffer from lack of accuracy, slow running time, and limited scalability. In this paper, we propose S3CMTF, a fast, accurate, and scalable CMTF method. In contrast to previous methods which do not handle large sparse tensors and are not parallelizable, S3CMTF provides parallel sparse CMTF by carefully deriving gradient update rules. S3CMTF asynchronously updates partial gradients without expensive locking. We show that our method is guaranteed to converge to a quality solution theoretically and empirically. S3CMTF further boosts the performance by carefully storing intermediate computation and reusing them. We theoretically and empirically show that S3CMTF is the fastest, outperforming existing methods. Experimental results show that S3CMTF is up to 930$\times$ faster than existing methods while providing the best accuracy. S3CMTF shows linear scalability on the number of data entries and the number of cores. In addition, we apply S3CMTF to Yelp rating tensor data coupled with 3 additional matrices to discover interesting patterns.},
+}
+
+@InProceedings{Lee2019,
+  author    = {Lee, Chao-Lin and Chao, Chen-Ting and Lee, Jenq-Kuen and Huang, Chung-Wen and Hung, Ming-Yu},
+  title     = {Sparse-Matrix Compression Primitives with OpenCL Framework to Support Halide},
+  booktitle = {Proceedings of the International Workshop on OpenCL},
+  year      = {2019},
+  series    = {IWOCL'19},
+  publisher = {ACM},
+  location  = {Boston, MA, USA},
+  isbn      = {978-1-4503-6230-6},
+  pages     = {1--2},
+  doi       = {10.1145/3318170.3318179},
+  abstract  = {Halide and OpenCL now play important roles for heterogeneous multi-core computing. OpenCL provides vendor-level support and Halide provides domain-specific support such as vision processing and AI model (TVM Halide IR). Halide also provides flexible scheduling for applications on target machines. OpenCL plays a supporting role for Halide environments. In this work, we investigate the research issues in supporting sparse computation with Halide and their corresponding OpenCL support. We present sparse matrix compression primitives on Halide for sparse matrix matrix (SpMM) multiplication with OpenCL framework. Halide is a programming language designed to process image and array from numerous algorithms and scheduling primitives to achieve state-of-art performance including SIMD and heterogeneous computation. This paper proposed the implementation of sparse matrix compression for Halide scheduling primitives including COO, CSR, and hybrid CSR. The design of experiments includes Halide primitives for sparse matrix compression and matrix computations. The experimental result of computation with compressing matrix shows the performance are improved by up to 85\% compared to the baseline without compression.},
+  acmid     = {3318179},
+  address   = {New York, NY, USA},
+  articleno = {24},
+  keywords  = {Halide, OpenCL, Sparse Matrix},
+  numpages  = {2},
+}
+
+@InProceedings{Loe2019,
+  author     = {Jennifer A. Loe and Heidi K. Thornquist and Erik G. Boman},
+  title      = {Polynomial Preconditioned GMRES to Reduce Communication in Parallel Computing},
+  year       = {2019},
+  eprint     = {arXiv:1907.00072},
+  eprinttype = {arXiv},
+  abstract   = {Polynomial preconditioning with the GMRES minimal residual polynomial has the potential to greatly reduce orthogonalization costs, making it useful for communication reduction. We implement polynomial preconditioning in the Belos package from Trilinos and show how it can be effective in both serial and parallel implementations. We further show it is a communication-avoiding technique and is a viable option to CAGMRES for large-scale parallel computing.},
+}
+
+@Article{Grutzmacher2019,
+  author   = {Grützmacher, Thomas and Cojean, Terry and Flegar, Goran and Göbel, Fritz and Anzt, Hartwig},
+  title    = {A customized precision format based on mantissa segmentation for accelerating sparse linear algebra},
+  journal  = {Concurrency and Computation: Practice and Experience},
+  year     = {2019},
+  doi      = {10.1002/cpe.5418},
+  eprint   = {https://onlinelibrary.wiley.com/doi/pdf/10.1002/cpe.5418},
+  abstract = {Summary In this work, we pursue the idea of radically decoupling the floating point format used for arithmetic operations from the format used to store the data in memory. We complement this idea with a customized precision memory format derived by splitting the mantissa (significand) of standard IEEE formats into segments, such that values can be accessed faster if lower accuracy is acceptable. Combined with precision-aware algorithms that dynamically adapt the data access accuracy to the numerical requirements, the customized precision memory format can render attractive runtime savings without impacting the memory footprint of the data or the accuracy of the final result. In an experimental analysis using the adaptive precision Jacobi method on diagonalizable test problems, we assess the benefits of the mantissa-segmenting customized precision format on recent multi- and manycore architectures.},
+  keywords = {adaptive precision Jacobi, GPUs, mantissa segmentation, modular precision ecosystem, multiprecision algorithm, multicore},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
