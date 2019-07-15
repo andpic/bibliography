@@ -6341,7 +6341,7 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   year          = {2019},
   month         = {Jul},
   eprint        = {arXiv:1907.01005},
-  eprinttype    = {arXiV},
+  eprinttype    = {arXiv},
   abstract      = {Traditional solution approaches for problems in quantum mechanics scale as $O(M3)$, where $M$ is the number of electrons. Various methods have been proposed to address this issue and obtain linear scaling $O(M)$. One promising formulation is the direct minimization of energy. Such methods take advantage of physical localization of the solution, namely that the solution can be sought in terms of non-orthogonal orbitals with local support. In this work a numerically efficient implementation of sparse parallel vectors within the open-source finite element library deal.II is proposed. The main algorithmic ingredient is the matrix-free evaluation of the Hamiltonian operator by cell-wise quadrature. Based on an a-priori chosen support for each vector we develop algorithms and data structures to perform (i) matrix-free sparse matrix multivector products (SpMM), (ii) the projection of an operator onto a sparse sub-space (inner products), and (iii) post-multiplication of a sparse multivector with a square matrix. The node-level performance is analyzed using a roofline model. Our matrix-free implementation of finite element operators with sparse multivectors achieves the performance of 157 GFlop/s on Intel Cascade Lake architecture. Strong and weak scaling results are reported for a typical benchmark problem using quadratic and quartic finite element bases.},
   adsnote       = {Provided by the SAO/NASA Astrophysics Data System},
   adsurl        = {https://ui.adsabs.harvard.edu/abs/2019arXiv190701005D},
@@ -6350,7 +6350,7 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   primaryclass  = {cs.MS},
 }
 
-@Article{Choi2019,
+@Article{Choi2019a,
   author   = {Choi, Dongjin and Jang, Jun-Gi and Kang, U},
   title    = {S3CMTF: Fast, accurate, and scalable method for incomplete coupled matrix-tensor factorization},
   journal  = {{PloS} one},
@@ -6399,6 +6399,64 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   eprint   = {https://onlinelibrary.wiley.com/doi/pdf/10.1002/cpe.5418},
   abstract = {Summary In this work, we pursue the idea of radically decoupling the floating point format used for arithmetic operations from the format used to store the data in memory. We complement this idea with a customized precision memory format derived by splitting the mantissa (significand) of standard IEEE formats into segments, such that values can be accessed faster if lower accuracy is acceptable. Combined with precision-aware algorithms that dynamically adapt the data access accuracy to the numerical requirements, the customized precision memory format can render attractive runtime savings without impacting the memory footprint of the data or the accuracy of the final result. In an experimental analysis using the adaptive precision Jacobi method on diagonalizable test problems, we assess the benefits of the mantissa-segmenting customized precision format on recent multi- and manycore architectures.},
   keywords = {adaptive precision Jacobi, GPUs, mantissa segmentation, modular precision ecosystem, multiprecision algorithm, multicore},
+}
+
+@Article{Goldenberg2019,
+  author   = {Goldenberg, S. and Stathopoulos, A. and Romero, E.},
+  title    = {A Golub--Kahan Davidson Method for Accurately Computing a Few Singular Triplets of Large Sparse Matrices},
+  journal  = {{SIAM} Journal on Scientific Computing},
+  year     = {2019},
+  volume   = {41},
+  number   = {4},
+  pages    = {A2172-A2192},
+  doi      = {10.1137/18M1222004},
+  abstract = {Obtaining high accuracy singular triplets for large sparse matrices is a significant challenge, especially when searching for the smallest triplets. Due to the difficulty and size of these problems, efficient methods must function iteratively, with preconditioners, and under strict memory constraints. In this research, we present a Golub--Kahan Davidson method (GKD), which satisfies these requirements and includes features such as soft-locking with orthogonality guarantees, an inner correction equation similar to Jacobi--Davidson, locally optimal +k restarting, and the ability to find real zero singular values in both square and rectangular matrices. Additionally, our method achieves full accuracy while avoiding the augmented matrix, which often converges slowly for the smallest triplets due to the difficulty of interior eigenvalue problems. We describe our method in detail, including implementation issues that arise. Our experimental results confirm the efficiency and stability of our method over the current implementation of PHSVDS in the PRIMME software package.},
+}
+
+@Article{Choi2019,
+  author     = {Bosu Choi and Andrew Christlieb and Yang Wang},
+  title      = {Multiscale High-Dimensional Sparse Fourier Algorithms for Noisy Data},
+  eprint     = {arXiv:1907.03692},
+  eprinttype = {arXiv},
+  abstract   = {We develop an efficient and robust high-dimensional sparse Fourier algorithm for noisy samples. Earlier in the paper Multi-dimensional sublinear sparse Fourier algorithm (2016) [3], an efficient sparse Fourier algorithm with $O(ds log s)$ average-case runtime and $O(ds)$ sampling complexity under certain assumptions was developed for signals that are s-sparse and bandlimited in the d-dimensional Fourier domain, i.e. there are at most s energetic frequencies and they are in $[-N/2, N/2)^d \cap \mathbb{Z}^d$. However, in practice the measurements of signals often contain noise, and in some cases may only be nearly sparse in the sense that they are well approximated by the best s Fourier modes. In this paper, we propose a multiscale sparse Fourier algorithm for noisy samples that proves to be both robust against noise and efficient.},
+}
+
+@Article{Klowckiewicz2019,
+  author     = {Bazyl Klowckiewicz and Eric Darve},
+  title      = {Sparse hierarchical preconditioners using piecewise smooth approximations of eigenvectors},
+  year       = {2019},
+  eprint     = {arXiv:1907.0},
+  eprinttype = {arXiv},
+  abstract   = {When solving linear systems arising from PDE discretizations, iterative methods (such as Conjugate Gradient, GMRES, or MINRES) are often the only practical choice. To converge in a small number of iterations, however, they have to be coupled with an efficient preconditioner. The efficiency of the preconditioner depends largely on its accuracy on the eigenvectors corresponding to small eigenvalues, and unfortunately, black-box methods typically cannot guarantee sufficient accuracy on these eigenvectors. Thus, constructing the preconditioner becomes a very problemdependent task. We describe a hierarchical approximate factorization approach which addresses this issue by focusing on improving the accuracy on smooth eigenvectors (such eigenvectors typically correspond to the small eigenvalues). The improved accuracy is achieved by preserving the action of the factorized matrix on piecewise polynomial functions of the PDE domain. Based on the factorization, we propose a family of sparse preconditioners with $O (n)$ or $O (n log n)$ construction complexities. Our methods exhibit the optimal $O (n)$ solution times in benchmarks run on large elliptic problems of different types, arising for example in flow or mechanical simulations. In the case of the linear elasticity equation the preconditioners are exact on the near-kernel rigid body modes.},
+}
+
+@PhdThesis{Yang2019,
+  author      = {Yang, Carl Y.},
+  title       = {High-Performance Linear Algebra-based Graph Framework on the GPU},
+  institution = {University of California, Davis},
+  year        = {2019},
+  url         = {https://escholarship.org/uc/item/37j8j27d},
+  abstract    = {High-performance implementations of graph algorithms are challenging to implement on new parallel hardware such as GPUs, because of three challenges: (1) difficulty of coming up with graph building blocks, (2) load imbalance on parallel hardware, and (3) graph problems having low arithmetic ratio. To address these challenges, GraphBLAS is an innovative, on-going effort by the graph analytics community to propose building blocks based in sparse linear algebra, which will allow graph algorithms to be expressed in a performant, succinct, composable and portable manner. Initial research efforts in implementing GraphBLAS on GPUs has been promising, but performance still trails by an order of magnitude compared to state-of-the-art graph frameworks using the traditional graph-centric approach of describing operations on vertices or edges.\\
+This dissertation examines the performance challenges of a linear algebra-based approach to building graph frameworks and describes new design principles for overcoming these bottlenecks. Among the new design principles is making exploiting input sparsity a first-class citizen in the framework. This is an especially important optimization, because it allows users to write graph algorithms without specifying certain implementation details thus permitting the software backend to choose the optimal implementation based on the input sparsity. Exploiting output sparsity allows users to tell the backend which values of the output in a single vectorized computation they do not want computed. We examine when it is profitable to exploit this output sparsity to reduce computational complexity. Load-balancing is an important feature for balancing work amongst parallel workers. We describe the important load-balancing features for handling graphs with different characteristics.\\
+The design principles described in the thesis have been implemented in GraphBLAST, an open-source high-performance graph framework on GPU developed as part of this dissertation. It is notable for being the first graph framework based in linear algebra to get comparable or faster performance compared to the traditional, vertex-centric backends. The benefits of design principles described in this thesis have been shown to be important for single GPU, and it will grow in importance when it serves as a building block for distributed implementation in the future and as a single GPU backend for higher-level languages such as Python. A graph framework based in linear algebra not only improves performance of existing graph algorithms, but in quickly prototyping new algorithms as well.},
+}
+
+@Article{Camacho2019,
+  author     = {Camacho, J. and Smilde, A. K. and Saccenti, E. and Westerhuis, J. A.},
+  title      = {All Sparse PCA Models Are Wrong, But Some Are Useful. Part I: Computation of Scores, Residuals and Explained Variance},
+  year       = {2019},
+  eprint     = {arXiv:1907.03989},
+  eprinttype = {arXiv},
+  abstract   = {Sparse Principal Component Analysis (sPCA) is a popular matrix factorization approach based on Principal Component Analysis (PCA) that combines variance maximization and sparsity with the ultimate goal of improving data interpretation. When moving from PCA to sPCA, there are a number of implications that the practitioner needs to be aware of. A relevant one is that scores and loadings in sPCA may not be orthogonal. For this reason, the traditional way of computing scores, residuals and variance explained that is used in the classical PCA cannot directly be applied to sPCA models. This also affects how sPCA components should be visualized. In this paper we illustrate this problem both theoretically and numerically using simulations for several state-ofthe-art sPCA algorithms, and provide proper computation of the different elements mentioned. We show that sPCA approaches present disparate and limited performance when modeling noisefree, sparse data. In a follow-up paper, we discuss the theoretical properties that lead to this problem.},
+}
+
+@Article{Bertsimas2019,
+  author     = {Dimitris Bertsimas and Bartolomeo Stellato},
+  title      = {Online Mixed-Integer Optimization in Milliseconds},
+  eprint     = {arXiv:1907.02206},
+  eprinttype = {arXiv},
+  abstract   = {We propose a method to solve online mixed-integer optimization (MIO) problems at very high speed using machine learning. By exploiting the repetitive nature of online optimization, we are able to greatly speedup the solution time. Our approach encodes the optimal solution into a small amount of information denoted as strategy using the Voice of Optimization framework proposed in [BS18]. In this way the core part of the optimization algorithm becomes a multiclass classification problem which can be solved very quickly. In this work we extend that framework to real-time and high-speed applications focusing on parametric mixed-integer quadratic optimization (MIQO). We propose an extremely fast online optimization algorithm consisting of a feedforward neural network (NN) evaluation and a linear system solution where the matrix has already been factorized. Therefore, this online approach does not require any solver nor iterative algorithm. We show the speed of the proposed method both in terms of total computations required and measured execution time. We estimate the number of floating point operations (flops) required to completely recover the optimal solution as a function of the problem dimensions. Compared to state-of-the-art MIO routines, the online running time of our method is very predictable and can be lower than a single matrix factorization time. We benchmark our method against the state-ofthe-art solver Gurobi obtaining from two to three orders of magnitude speedups on benchmarks with real-world data.},
+  timestamp  = {2019.07.09},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
