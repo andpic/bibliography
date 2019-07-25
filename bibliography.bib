@@ -4876,19 +4876,6 @@ practice the performance, and limitations of the approach stressing on the use o
   address      = {Waltham, MA},
 }
 
-@Online{Yang2018a,
-  author        = {Carl Yang and Aydin Buluç and John D. Owens},
-  title         = {Implementing Push-Pull Efficiently in GraphBLAS},
-  year          = {2018},
-  abstract      = {We factor Beamer's push-pull, also known as direction-optimized breadth-first-search (DOBFS) into 3 separable optimizations, and analyze them for generalizability, asymptotic speedup, and contribution to overall speedup. We demonstrate that masking is critical for high performance and can be generalized to all graph algorithms where the sparsity pattern of the output is known a priori. We show that these graph algorithm optimizations, which together constitute DOBFS, can be neatly and separably described using linear algebra and can be expressed in the GraphBLAS linear-algebra-based framework. We provide experimental evidence that with these optimizations, a DOBFS expressed in a linear-algebra-based graph framework attains competitive performance with state-of-the-art graph frameworks on the GPU and on a multi-threaded CPU, achieving 101 GTEPS on a Scale 22 RMAT graph.},
-  archiveprefix = {arXiv},
-  bibsource     = {dblp computer science bibliography, https://dblp.org},
-  biburl        = {https://dblp.org/rec/bib/journals/corr/abs-1804-03327},
-  eprint        = {arXiv:1804.03327},
-  eprinttype    = {arXiv},
-  timestamp     = {Mon, 13 Aug 2018 16:48:40 +0200},
-}
-
 @TechReport{Kaya2018,
   author      = {Oguz Kaya and Ramakrishnan Kannan and Grey Ballard},
   title       = {Partitioning and Communication Strategies for Sparse Non-negative Matrix Factorization},
@@ -5608,6 +5595,7 @@ The main contribution is a set of rules that helps in picking the best-performin
   author     = {Shane Barratt and Stephen Boyd},
   title      = {Least Squares Auto-Tuning},
   year       = {2019},
+  abstract   = {Least squares is by far the simplest and most commonly applied computational method in many fields. In almost all applications, the least squares objective is rarely the true objective. We account for this discrepancy by parametrizing the least squares problem and automatically adjusting these parameters using an optimization algorithm. We apply our method, which we call least squares auto-tuning, to data fitting.},
   eprint     = {arXiv:1904.05460},
   eprinttype = {arXiv},
 }
@@ -6132,11 +6120,10 @@ The main insight of this work is that the combination of data duplication and De
 @Article{Yang2018d,
   author        = {Carl Yang and Aydin Bulu{\c{c}} and John D. Owens},
   title         = {Implementing Push-Pull Efficiently in GraphBLAS},
-  journal       = {CoRR},
   year          = {2018},
   volume        = {abs/1804.03327},
-  eprint        = {1804.03327},
-  url           = {http://arxiv.org/abs/1804.03327},
+  eprint        = {arXiv:1804.03327},
+  eprinttype    = {arXiv},
   __markedentry = {[ap8213:6]},
   abstract      = {We factor Beamer's push-pull, also known as direction-optimized breadth-first-search (DOBFS) into 3 separable optimizations, and analyze them for generalizability, asymptotic speedup, and contribution to overall speedup. We demonstrate that masking is critical for high performance and can be generalized to all graph algorithms where the sparsity pattern of the output is known a priori. We show that these graph algorithm optimizations, which together constitute DOBFS, can be neatly and separably described using linear algebra and can be expressed in the GraphBLAS linear-algebra-based framework. We provide experimental evidence that with these optimizations, a DOBFS expressed in a linear-algebra-based graph framework attains competitive performance with state-of-the-art graph frameworks on the GPU and on a multi-threaded CPU, achieving 101 GTEPS on a Scale 22 RMAT graph.},
   archiveprefix = {arXiv},
@@ -6501,6 +6488,47 @@ The design principles described in the thesis have been implemented in GraphBLAS
   eprint     = {arXiv:1907.05830},
   eprinttype = {arXiv},
   abstract   = {Generalized Linear Models (GLM) form a wide class of regression and classification models, where prediction is a function of a linear combination of the input variables. For statistical inference in high dimension, sparsity inducing regularizations have proven to be useful while offering statistical guarantees. However, solving the resulting optimization problems can be challenging: even for popular iterative algorithms such as coordinate descent, one needs to loop over a large number of variables. To mitigate this, techniques known as screening rules and working sets diminish the size of the optimization problem at hand, either by progressively removing variables, or by solving a growing sequence of smaller problems. For both techniques, significant variables are identified thanks to convex duality arguments. In this paper, we show that the dual iterates of a GLM exhibit a Vector AutoRegressive (VAR) behavior after sign identification, when the primal problem is solved with proximal gradient descent or cyclic coordinate descent. Exploiting this regularity, one can construct dual points that offer tighter certificates of optimality, enhancing the performance of screening rules and helping to design competitive working set algorithms.},
+}
+
+@InProceedings{Behnezhad2019,
+  author    = {Behnezhad, Soheil and Brandt, Sebastian and Derakhshan, Mahsa and Fischer, Manuela and Hajiaghayi, MohammadTaghi and Karp, Richard M. and Uitto, Jara},
+  title     = {Massively Parallel Computation of Matching and MIS in Sparse Graphs},
+  booktitle = {Proceedings of the 2019 {ACM} Symposium on Principles of Distributed Computing},
+  year      = {2019},
+  series    = {PODC '19},
+  publisher = {ACM},
+  location  = {Toronto ON, Canada},
+  isbn      = {978-1-4503-6217-7},
+  pages     = {481--490},
+  doi       = {10.1145/3293611.3331609},
+  abstract  = {The Massively Parallel Computation (MPC) model serves as a common abstraction of many modern large-scale parallel computation frameworks and has recently gained a lot of importance, especially in the context of classic graph problems. In this work, we mainly consider maximal matching and maximal independent set problems in the MPC model.\\ 
+  These problems are known to admit efficient MPC algorithms if the space available per machine is near-linear in the number n of nodes. This is not only often significantly more than what we can afford, but also allows for easy if not trivial solutions for sparse graphs -- which are common in real-world large-scale graphs. We are, therefore, interested in the low-memory MPC model, where the space per machine is restricted to be strongly sublinear, that is, $n^\delta$ for any constant $0 < \delta < 1$. \\
+  We parametrize our algorithms by the arboricity $\lambda$ of the input graph. Our key ingredient is a degree reduction technique that reduces these problems in graphs with arboricity $\lambda$ to the corresponding problems in graphs with maximum degree $poly(\lambda, log n)$ in $O(log^2 log n)$ rounds, giving rise to $O(\sqrt{log \lambda} \cdot log log \lambda + log 2 log n)$-round algorithms.\\
+  Our result is particularly interesting for graphs with $poly log n$ arboricity as for such graphs, we get $O(log^2 log n)$-round algorithms. This covers most natural families of sparse graphs and almost exponentially improves over previous algorithms that all required log $O(1)$ n rounds in this regime of MPC.\\
+  Finally, our maximal matching algorithm can be employed to obtain a $(1+\epsilon)$-approximate maximum cardinality matching, a $(2+\epsilon)$-approximate maximum weighted matching, as well as a 2-approximate minimum vertex cover in essentially the same number of rounds.},
+  acmid     = {3331609},
+  address   = {New York, NY, USA},
+  keywords  = {approximation algorithms, arboricity, massively parallel computation, matching, maximal independent set, sparse graphs, sublinear memory},
+  numpages  = {10},
+}
+
+@InProceedings{Chang2019,
+  author    = {Chang, Yi-Jun and Fischer, Manuela and Ghaffari, Mohsen and Uitto, Jara and Zheng, Yufan},
+  title     = {The Complexity of {$\Delta +1$} Coloring in Congested Clique, Massively Parallel Computation, and Centralized Local Computation},
+  booktitle = {Proceedings of the 2019 ACM Symposium on Principles of Distributed Computing},
+  year      = {2019},
+  series    = {PODC '19},
+  publisher = {ACM},
+  location  = {Toronto ON, Canada},
+  isbn      = {978-1-4503-6217-7},
+  pages     = {471--480},
+  doi       = {10.1145/3293611.3331607},
+  url       = {http://doi.acm.org/10.1145/3293611.3331607},
+  abstract  = {In this paper, we present new randomized algorithms that improve the complexity of the classic $(\Delta+1)$-coloring problem, and its generalization $(\Delta+1)$-list-coloring, in three well-studied models of distributed, parallel, and centralized computation: Distributed Congested Clique: We present an $O(1)$-round randomized algorithm for $(\Delta + 1)$-list-coloring in the congested clique model of distributed computing. This settles the asymptotic complexity of this problem. It moreover improves upon the $O(log^\star \Delta)$-round randomized algorithms of Parter and Su [DISC'18] and $O((log log \Delta) \cdot log^\star \Delta)$-round randomized algorithm of Parter [ICALP'18].\\ Massively Parallel Computation: We present a randomized $(\Delta + 1)$-list-coloring algorithm with round complexity $O(\sqrt{log log n})$ in the Massively Parallel Computation (MPC) model with strongly sublinear memory per machine. This algorithm uses a memory of $O(n\alpha)$ per machine, for any desirable constant $\alpha > 0$, and a total memory of $\tilde{O} (m)$, where m is the number of edges in the graph. Notably, this is the first coloring algorithm with sublogarithmic round complexity, in the sublinear memory regime of MPC. For the quasilinear memory regime of MPC, an $O(1)$-round algorithm was given very recently by Assadi et al. [SODA'19].\\ Centralized Local Computation: We show that $(\Delta + 1)$-list-coloring can be solved by a randomized algorithm with query complexity $\Delta O(1) \dots O(log n)$, in the centralized local computation model. The previous state of the art for $(\Delta+1)$-list-coloring in the centralized local computation model are based on simulation of known LOCAL algorithms. The deterministic $O(\sqrt{\Delta poly log \Delta} + log^\star n)$-round LOCAL algorithm of Fraigniaud et al. [FOCS'16] can be implemented in the centralized local computation model with query complexity $\Delta^O(\sqrt{ \Delta poly log \Delta}) \dots O(log^\star n)$; the randomized $O(log^\star \Delta) + 2^O(\sqrt{log log n})$-round LOCAL algorithm of Chang et al. [STOC'18] can be implemented in the centralized local computation model with query complexity $\Delta^O(log\star \Delta) \dots O(log n)$.},
+  acmid     = {3331607},
+  address   = {New York, NY, USA},
+  keywords  = {centralized local computation, coloring, congested clique, massively parallel computation},
+  numpages  = {10},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
