@@ -4710,7 +4710,7 @@
 }
 
 @Online{Yang2018b,
-  author     = {Yang, Carl and Buluc, Aydin and Owens, John D.},
+  author     = {Yang, Carl and Buluç, Aydin and Owens, John D.},
   title      = {Design Principles for Sparse Matrix Multiplication on the GPU},
   year       = {2018},
   abstract   = {We implement two novel algorithms for sparse-matrix dense-matrix multiplication (SpMM) on the GPU. Our algorithms expect the sparse input in the popular compressed-sparse-row (CSR) format and thus do not require expensive format conversion. While previous SpMM work concentrates on thread-level parallelism, we additionally focus on latency hiding with instruction-level parallelism and load-balancing. We show, both theoretically and experimentally, that the proposed SpMM is a better fit for the GPU than previous approaches. We identify a key memory access pattern that allows efficient access into both input and output matrices that is crucial to getting excellent performance on SpMM. By combining these two ingredients – (i) merge-based load-balancing and (ii) row-major coalesced memory access – we demonstrate a 3.6x peak speedup and a 23.5\% geomean speedup over state-of-the-art SpMM implementations on real-world datasets.},
@@ -5736,7 +5736,7 @@ The main insight of this work is that the combination of data duplication and De
   abstract   = {This paper presents performance results comparing MPI-based implementations of the popular Conjugate Gradient (CG) method and several of its communication hiding (or “pipelined”) variants. Pipelined CG methods are designed to efficiently solve SPD linear systems on massively parallel distributed memory hardware, and typically display significantly improved strong scaling compared to classic CG. This increase in parallel performance is achieved by overlapping the global reduction phase (MPI_Iallreduce) required to compute the inner products in each iteration by (chiefly local) computational work such as the matrix-vector product as well as other global communication. This work includes a brief introduction to the deep pipelined CG method for readers that may be unfamiliar with the specifics of the method. A brief overview of implementation details provides the practical tools required for implementation of the algorithm. Subsequently, easily reproducible strong scaling results on the US Department of Energy (DoE) NERSC machine “Cori” (Phase I – Haswell nodes) on up to 1024 nodes with 16 MPI ranks per node are presented using an implementation of $p(l)$-CG that is available in the open source PETSc library. Observations on the staggering and overlap of the asynchronous, non-blocking global communication phases with communication and computational kernels are drawn from the experiments.},
 }
 
-@Article{Kong2019,
+@Article{Kong2019a,
   author     = {Fande Kong},
   title      = {Parallel memory-efficient all-at-once algorithms for the sparse matrix triple products in multigrid methods},
   journal    = {The International Journal of High Performance Computing Applications},
@@ -6086,18 +6086,6 @@ The main insight of this work is that the combination of data duplication and De
   eprint        = {arXiv:1806.05826},
   __markedentry = {[ap8213:6]},
   abstract      = {Solving linear systems is often the computational bottleneck in real-life problems. Iterative solvers are the only option due to the complexity of direct algorithms or because the system matrix is not explicitly known. Here, we develop a multilevel preconditioner for regularized least squares linear systems involving a feature or data matrix. Variants of this linear system may appear in machine learning applications, such as ridge regression, logistic regression, support vector machines and matrix factorization with side information. We use clustering algorithms to create coarser levels that preserve the principal components of the covariance or Gram matrix. These coarser levels approximate the dominant eigenvectors and are used to build a multilevel preconditioner accelerating the Conjugate Gradient method. We observed speed-ups for artificial and real-life data. For a specific data set, we achieved speed-up up to a factor 100.},
-  timestamp     = {2019.06.16},
-}
-
-@Article{Yang2018c,
-  author        = {Yang, Carl and Buluc, Aydin and Owens, John D.},
-  title         = {Design Principles for Sparse Matrix Multiplication on the GPU},
-  year          = {2018},
-  month         = {3},
-  __markedentry = {[ap8213:6]},
-  abstract      = {We implement two novel algorithms for sparse-matrix dense-matrix multiplication (SpMM) on the GPU. Our algorithms expect the sparse input in the popular compressed-sparse-row (CSR) format and thus do not require expensive format conversion. While previous SpMM work concentrates on thread-level parallelism, we additionally focus on latency hiding with instruction-level parallelism and load-balancing. We show, both theoretically and experimentally, that the proposed SpMM is a better fit for the GPU than previous approaches. We identify a key memory access pattern that allows efficient access into both input and output matrices that is crucial to getting excellent performance on SpMM. By combining these two ingredients – (i) merge-based load-balancing and (ii) row-major coalesced memory access – we demonstrate a 3.6x peak speedup and a 23.5\% geomean speedup over state-of-the-art SpMM implementations on real-world datasets.},
-  archiveprefix = {"arXiv"},
-  primaryclass  = {cs.DC},
   timestamp     = {2019.06.16},
 }
 
@@ -6560,6 +6548,169 @@ The design principles described in the thesis have been implemented in GraphBLAS
   pages     = {6215--6224},
   abstract  = {Graphics Processing Units (GPUs) are commonly used to train and evaluate neural networks efficiently. While previous work in deep learning has focused on accelerating operations on dense matrices/tensors on GPUs, efforts have concentrated on operations involving sparse data structures. Operations using sparse structures are common in natural language models at the input and output layers, because these models operate on sequences over discrete alphabets. We present two new GPU algorithms: one at the input layer, for multiplying a matrix by a few-hot vector (generalizing the more common operation of multiplication by a one-hot vector) and one at the output layer, for a fused softmax and top-N selection (commonly used in beam search). Our methods achieve speedups over state-of-theart parallel GPU baselines of up to 7$\times$ and 50$\times$, respectively. We also illustrate how our methods scale on different GPU architectures.},
   timestamp = {2019.08.02},
+}
+
+@InProceedings{Li2019b,
+  author    = {Li, Ming and Hawrylak, Peter and Hale, John},
+  title     = {Combining OpenCL and MPI to Support Heterogeneous Computing on a Cluster},
+  booktitle = {Proceedings of the Practice and Experience in Advanced Research Computing on Rise of the Machines (Learning)},
+  year      = {2019},
+  series    = {PEARC '19},
+  publisher = {ACM},
+  location  = {Chicago, IL, USA},
+  isbn      = {978-1-4503-7227-5},
+  pages     = {5:1--5:6},
+  doi       = {10.1145/3332186.3333059},
+  url       = {http://doi.acm.org/10.1145/3332186.3333059},
+  abstract  = {This paper presents an implementation of a heterogeneous programming model which combines Open Computing Language (OpenCL) and Message Passing Interface (MPI). The model is applied to solving a Markov decision process (MDP) with value iteration method. The performance test is conducted on a high performance computing cluster. At peak performance, the model is able to achieve a 57$\times$ speedup over a serial implementation. For an extremely large input MDP, which has 1,000,000 states, the obtained speedup is still over 12$\times$, showing that this heterogeneous programming model can solve MDPs more efficiently than the serial solver does.},
+  acmid     = {3333059},
+  address   = {New York, NY, USA},
+  articleno = {5},
+  keywords  = {HPC, MDP, MPI, OpenCL, heterogeneous computing, parallelism},
+  numpages  = {6},
+}
+
+@PhdThesis{Mamooler2019,
+  author      = {Mamooler, Parisa},
+  title       = {The domain decomposition method of Bank and Jimack as an optimized Schwarz method},
+  institution = {University of Geneva},
+  year        = {2019},
+  abstract    = {The aim of this thesis is to introduce the Bank-Jimack domain decomposition method and study its convergence behavior. We are interested in understanding what the precise contribution of the outer coarse mesh is to the convergence behavior of the domain decomposition method proposed by Bank and Jimack. We show for a two subdomain decomposition that the outer coarse mesh can be interpreted as computing an approximation to the optimal transmission condition represented by the Dirichlet to Neumann map, and thus the method of Bank and Jimack can be viewed as an optimized Schwarz method, i.e. a Schwarz method that uses Robin or higher order transmission conditions instead of theclassical Dirichlet ones.},
+  timestamp   = {2019.08.17},
+}
+
+@Article{Kong2019,
+  author      = {Fande Kong},
+  title       = {A parallel monolithic multilevel Schwarz preconditioner for the neutron transport criticality calculations with a nonlinear diffusion acceleration method},
+  year        = {2019},
+  eprint      = {1907.12590v1},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {The multigroup neutron transport criticality calculations using modern supercomputers have been widely employed in a nuclear reactor analysis for studying whether or not a system is self-sustaining. However, the design and development of an efficient parallel algorithm for the transport criticality calculations is a challenging task especially when the number of processor cores is large and the unstructured mesh is adopted since both the compute time and the memory usage need to be taken into consideration. In this paper, we study a monolithic multilevel Schwarz preconditioner for the transport criticality calculations using the nonlinear diffusion acceleration (NDA). In NDA, the linear systems of equations arising from the discretizations of the nonlinear diffusion equations and the transport equations need to be efficiently solved. To achieve this goal, we propose a monolithically coupled approach equipped with several important ingredients; e.g., subspace-based coarsening, aggressive coarsening and strength matrix thresholding. The proposed monolithic multilevel method is capable of efficiently handling the linear systems of equations for both the transport system and the diffusion system. In the multilevel method, the construction of coarse spaces is nontrivial and expensive. We propose a subspace-based coarsening algorithm to resolve this issue by exploring the matrix structures of the transport equations and the nonlinear diffusion equations. We numerically demonstrate that the monolithic multilevel preconditioner with the subspace-based coarsening algorithm is twice as fast as that equipped with a full space based coarsening approach on thousands of processor cores for an unstructured mesh neutron transport problem with billions of unknowns.},
+  file        = {online:http\://arxiv.org/pdf/1907.12590v1:PDF},
+  keywords    = {math.NA, cs.NA},
+}
+
+@InProceedings{Regunta2019,
+  author    = {S. C. Regunta and S. H. Tondomker and K. Kothapalli},
+  title     = {BRICS – Efficient Techniques for Estimating the Farness-Centrality in Parallel},
+  booktitle = {2019 IEEE International Parallel and Distributed Processing Symposium Workshops},
+  year      = {2019},
+  series    = {IPDPSW'19},
+  month     = {5},
+  pages     = {645--654},
+  doi       = {10.1109/IPDPSW.2019.00110},
+  abstract  = {In this paper, we study scalable parallel algorithms for estimating the farness-centrality value of the nodes in a given undirected and connected graph. Our algorithms consider approaches that are more suitable for sparse graphs. To this end, we propose four optimization techniques based on removing redundant nodes, removing identical nodes, removing chain nodes, and making use of decomposition based on the biconnected components of the input graph. We test our techniques on a collection of real-world graphs for the time taken and the average error percentage. We further analyze the applicability of our techniques on various classes of real-world graphs. We suggest why certain techniques work better on certain classes of graphs.},
+  keywords  = {Optimization;Measurement;Parallel algorithms;Scalability;Silicon;Social networking (online);Estimation;closeness centrality;parallel;real world graphs;estimation},
+}
+
+@Article{Carson2019,
+  author      = {Erin C. Carson},
+  title       = {An Adaptive $s$-step Conjugate Gradient Algorithm with Dynamic Basis Updating},
+  year        = {2019},
+  date        = {2019-08-12},
+  eprint      = {1908.04081v1},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {The adaptive $s$-step CG algorithm is a solver for sparse, symmetric positive definite linear systems designed to reduce the synchronization cost per iteration while still achieving a user-specified accuracy requirement. In this work, we improve the adaptive $s$-step conjugate gradient algorithm by use of iteratively updated estimates of the largest and smallest Ritz values, which give approximations of the largest and smallest eigenvalues of $A$, using a technique due to Meurant and Tichý [G. Meurant and P. Tichý, Numer. Algs. (2018), pp.~1--32]. The Ritz value estimates are used to dynamically update parameters for constructing Newton or Chebyshev polynomials so that the conditioning of the $s$-step bases can be continuously improved throughout the iterations. These estimates are also used to automatically set a variable related to the ratio of the sizes of the error and residual, which was previously treated as an input parameter. We show through numerical experiments that in many cases the new algorithm improves upon the previous adaptive $s$-step approach both in terms of numerical behavior and reduction in number of synchronizations.},
+  file        = {online:http\://arxiv.org/pdf/1908.04081v1:PDF},
+  keywords    = {math.NA, cs.DC, cs.NA},
+}
+
+@Article{Yang2019a,
+  author      = {Carl Yang and Aydin Buluc and John D. Owens},
+  title       = {GraphBLAST: A High-Performance Linear Algebra-based Graph Framework on the GPU},
+  year        = {2019},
+  eprint      = {1908.01407v2},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {High-performance implementations of graph algorithms are challenging to implement on new parallel hardware such as GPUs, because of three challenges: (1) difficulty of coming up with graph building blocks, (2) load imbalance on parallel hardware, and (3) graph problems having low arithmetic intensity. To address these challenges, GraphBLAS is an innovative, on-going effort by the graph analytics community to propose building blocks based in sparse linear algebra, which will allow graph algorithms to be expressed in a performant, succinct, composable and portable manner. In this paper, we examine the performance challenges of a linear algebra-based approach to building graph frameworks and describe new design principles for overcoming these bottlenecks. Among the new design principles is exploiting input sparsity, which allows users to write graph algorithms without specifying push and pull direction. Exploiting output sparsity allows users to tell the backend which values of the output in a single vectorized computation they do not want computed. Load-balancing is an important feature for balancing work amongst parallel workers. We describe the important load-balancing features for handling graphs with different characteristics. The design principles described in this paper have been implemented in "GraphBLAST", the first open-source linear algebra-based graph framework on GPU targeting high-performance computing. The results show that on a single GPU, GraphBLAST has on average at least an order of magnitude speedup over previous GraphBLAS implementations SuiteSparse and GBTL, comparable performance to the fastest GPU hardwired primitives and shared-memory graph frameworks Ligra and Gunrock, and better performance than any other GPU graph framework, while offering a simpler and more concise programming model.},
+  file        = {online:http\://arxiv.org/pdf/1908.01407v2:PDF},
+  keywords    = {cs.DC},
+}
+
+@Article{Iwashita2019,
+  author      = {Takeshi Iwashita and Senxi Li and Takeshi Fukaya},
+  title       = {Hierarchical Block Multi-Color Ordering: A New Parallel Ordering Method for Vectorization and Parallelization of the Sparse Triangular Solver in the ICCG Method},
+  year        = {2019},
+  eprint      = {1908.00741v1},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {In this paper, we propose a new parallel ordering method to vectorize and parallelize the sparse triangular solver, which is called hierarchical block multi-color ordering. In this method, the parallel forward and backward substitutions can be vectorized while preserving the advantages of block multi-color ordering, that is, fast convergence and fewer thread synchronizations. To evaluate the proposed method in a parallel ICCG (Incomplete Cholesky Conjugate Gradient) solver, numerical tests were conducted using five test matrices on three types of computational nodes. The numerical results indicate that the proposed method outperforms the conventional block and nodal multi-color ordering methods in 13 out of 15 test cases, which confirms the effectiveness of the method.},
+  file        = {online:http\://arxiv.org/pdf/1908.00741v1:PDF},
+  keywords    = {cs.DC},
+}
+
+@Article{Kong2019b,
+  author   = {Qian Kong and Yan-Fei Jing and Ting-Zhu Huang and Heng-Bin An},
+  title    = {Acceleration of the Scheduled Relaxation Jacobi method: promising strategies for solving large, sparse linear systems},
+  journal  = {Journal of Computational Physics},
+  year     = {2019},
+  pages    = {108862},
+  issn     = {0021-9991},
+  doi      = {https://doi.org/10.1016/j.jcp.2019.108862},
+  url      = {http://www.sciencedirect.com/science/article/pii/S0021999119305467},
+  abstract = {The main aim of this paper is to develop two algorithms based on the Scheduled Relaxation Jacobi (SRJ) method [J. Comput. Phys., 274 (2014), pp. 695-708] for solving problems arising from the finite-difference discretization of elliptic partial differential equations on large grids. These two algorithms are the Alternating Anderson-Scheduled Relaxation Jacobi (AASRJ) method by utilizing Anderson mixing after each SRJ iteration cycle and the Minimal Residual Scheduled Relaxation Jacobi (MRSRJ) method by minimizing residual after each SRJ iteration cycle, respectively. Through numerical experiments, we show that AASRJ is competitive with the optimal version of the SRJ method [J. Comput. Phys., 332 (2017), pp. 446-460] in most problems we considered here, and MRSRJ outperforms SRJ in all cases. The properties of AASRJ and MRSRJ are demonstrated. Both of them are promising strategies for solving large, sparse linear systems while maintaining the simplicity of the Jacobi method.},
+  keywords = {Acceleration, The Scheduled Relaxation Jacobi method, Anderson mixing},
+}
+
+@Article{Usman2019,
+  author    = {Sardar Usman and Rashid Mehmood and Iyad Katib and Aiiad Albeshri and Saleh M. Altowaijri},
+  title     = {ZAKI: A Smart Method and Tool for Automatic Performance Optimization of Parallel SpMV Computations on Distributed Memory Machines},
+  journal   = {Mobile Networks and Applications},
+  year      = {2019},
+  doi       = {10.1007/s11036-019-01318-3},
+  abstract  = {SpMV is a vital computing operation of many scientific, engineering, economic and social applications, increasingly being used to develop timely intelligence for the design and management of smart societies. Several factors affect the performance of SpMV computations, such as matrix characteristics, storage formats, software and hardware platforms. The complexity of the computer systems is on the rise with the increasing number of cores per processor, different levels of caches, processors per node and high speed interconnect. There is an ever-growing need for new optimization techniques and efficient ways of exploiting parallelism. In this paper, we propose ZAKI, a data-driven, machine-learning approach and tool, to predict the optimal number of processes for SpMV computations of an arbitrary sparse matrix on a distributed memory machine. The aim herein is to allow application scientists to automatically obtain the best configuration, and hence the best performance, for the execution of SpMV computations. We train and test the tool using nearly 2000 real world matrices obtained from 45 application domains including computational fluid dynamics (CFD), computer vision, and robotics. The tool uses three machine learning methods, decision trees, random forest, gradient boosting, and is evaluated in depth. A discussion on the applicability of our proposed tool to energy efficiency optimization of SpMV computations is given. This is the first work where the sparsity structure of matrices have been exploited to predict the optimal number of processes for a given matrix in distributed memory environments by using different base and ensemble machine learning methods.},
+  timestamp = {2019.08.17},
+}
+
+@Article{Peng2019,
+  author      = {Shaoyi Peng and Sheldon X. -D. Tan},
+  title       = {GLU3.0: Fast GPU-based Parallel Sparse LU Factorization for Circuit Simulation},
+  year        = {2019},
+  eprint      = {1908.00204v2},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {In this article, we propose a new GPU-based sparse LU factorization method, called GLU3.0, solves the aforementioned problems. First, it introduces a much more efficient double-U dependency detection algorithm to make the detection much simpler. Second, we observe that the potential parallelism is different as the matrix factorization goes on. We then develop three different modes of GPU kernel to adapt to different stages to accommodate the computing task changes in the factorization. As a result, the new GLU can dynamically allocate GPU blocks and wraps based on the number of columns in a level to better balance the computing demands and resources during the LU factorization process. Experimental results on circuit matrices from University of Florida Sparse Matrix Collection (UFL) show that the GLU3.0 can deliver 2-3 orders of magnitude speedup over GLU2.0 for the data dependency detection. Furthermore, GLU3.0 achieve 13.0$\times$ (arithmetic mean) and 6.7$\times$ (geometric mean) speedup over GLU2.0 and 7.1$\times$ (arithmetic mean) and 4.8$\times$ (geometric mean) over the recently proposed enhanced GLU2.0 sparse LU solver on the same set of circuit matrices.},
+  file        = {online:http\://arxiv.org/pdf/1908.00204v2:PDF},
+  keywords    = {cs.DC, cs.DS},
+}
+
+@InProceedings{Ribizel2019,
+  author    = {T. Ribizel and H. Anzt},
+  title     = {Approximate and Exact Selection on GPUs},
+  booktitle = {2019 IEEE International Parallel and Distributed Processing Symposium Workshops},
+  year      = {2019},
+  series    = {IPDPSW'19},
+  month     = {May},
+  pages     = {471--478},
+  doi       = {10.1109/IPDPSW.2019.00088},
+  abstract  = {We present a novel algorithm for parallel selection on GPUs. The algorithm requires no assumptions on the input data distribution, and has a much lower recursion depth compared to many state-of-the-art algorithms. We implement the algorithm for different GPU generations, always using the respectively-available low-level communication features, and assess the performance on server-line hardware. The computational complexity of our SampleSelect algorithm is comparable to specialized algorithms designed for - and exploiting the characteristics of - "pleasant" data distributions. At the same time, as the SampleSelect does not work on the actual values but the ranks of the elements only, it is robust to the input data and can complete significantly faster for adversarial data distributions. Additionally to the exact SampleSelect, we address the use case of approximate selection by designing a variant that radically reduces the computational cost while preserving high approximation accuracy.},
+  keywords  = {Approximation algorithms;Sorting;Indexes;Kernel;Graphics processing units;Partitioning algorithms;Hardware;parallel selection algorithm;GPU;kth order statistics;approximate threshold selection},
+}
+
+@InProceedings{Xie2019a,
+  author    = {Xie, Jiaming and Liang, Yun},
+  title     = {SPART: Optimizing CNNs by Utilizing Both Sparsity of Weights and Feature Maps},
+  booktitle = {Advanced Parallel Processing Technologies},
+  year      = {2019},
+  editor    = {Yew, Pen-Chung and Stenström, Per and Wu, Junjie and Gong, Xiaoli and Li, Tao},
+  publisher = {Springer International Publishing},
+  isbn      = {978-3-030-29611-7},
+  pages     = {71--85},
+  abstract  = {Intense convolution computation and great memory requirement in CNNs constraint their wider deployments and applications. Although both the weights and feature maps in CNNs can be sparse, directly mapping sparse convolution to spGEMM in HPC domain fails to improve the actual performance. Besides, existing sparse formats like CSR are not suitable for encoding the sparse feature maps because convolution operates across rows.},
+  address   = {Cham},
+}
+
+@InProceedings{Anzt2019a,
+  author    = {Hartwig Anzt and Goran Flegar},
+  title     = {Are we Doing the Right Thing? A Critical Analysis of the Academic {HPC} Community},
+  booktitle = {2019 {IEEE} International Parallel and Distributed Processing Symposium Workshops},
+  year      = {2019},
+  publisher = {{IEEE}},
+  month     = {5},
+  doi       = {10.1109/ipdpsw.2019.00122},
+  abstract  = {Like in any other research field, academically surviving in the High Performance Computing (HPC) community generally requires to publish papers, in the bast case many of them and in high-ranked journals or at top-tier conferences. As a result, the number of scientific papers published each year in this relatively small community easily outnumbers what a single researcher can read. At the same time, many of the proposed and analyzed strategies, algorithms, and hardware-optimized implementations never make it beyond the prototype stage, as they are abandoned once they served the single purpose of yielding (another) publication. In a time and field where high-quality manpower is a scarce resource, this is extremely inefficient. In this position paper we promote a radical paradigm shift towards accepting high-quality software patches to community software packages as legitimate conference contributions. In consequence, the reputation and appointability of researchers is no longer based on the classical scientific metrics, but on the quality and documentation of open source software contributions -- effectively improving and accelerating the collaborative development of community software.},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
