@@ -6714,4 +6714,37 @@ The design principles described in the thesis have been implemented in GraphBLAS
   abstract  = {Like in any other research field, academically surviving in the High Performance Computing (HPC) community generally requires to publish papers, in the bast case many of them and in high-ranked journals or at top-tier conferences. As a result, the number of scientific papers published each year in this relatively small community easily outnumbers what a single researcher can read. At the same time, many of the proposed and analyzed strategies, algorithms, and hardware-optimized implementations never make it beyond the prototype stage, as they are abandoned once they served the single purpose of yielding (another) publication. In a time and field where high-quality manpower is a scarce resource, this is extremely inefficient. In this position paper we promote a radical paradigm shift towards accepting high-quality software patches to community software packages as legitimate conference contributions. In consequence, the reputation and appointability of researchers is no longer based on the classical scientific metrics, but on the quality and documentation of open source software contributions -- effectively improving and accelerating the collaborative development of community software.},
 }
 
+@InProceedings{Garstka2019,
+  author    = {Michael Garstka and Mark Cannon and Paul Goulart},
+  title     = {{COSMO}: A conic operator splitting method for large convex problems},
+  booktitle = {2019 18th European Control Conference ({ECC})},
+  year      = {2019},
+  publisher = {{IEEE}},
+  month     = {6},
+  doi       = {10.23919/ecc.2019.8796161},
+  abstract  = {This paper describes the Conic Operator Splitting Method (COSMO), an operator splitting algorithm for convex optimisation problems with quadratic objective function and conic constraints. At each step the algorithm alternates between solving a quasi-definite linear system with a constant coefficient matrix and a projection onto convex sets. The solver is able to exploit chordal sparsity in the problem data and to detect infeasible problems. The low per-iteration computational cost makes the method particularly efficient for large problems, e.g. semidefinite programs in portfolio optimisation, graph theory, and robust control. Our Julia implementation is open-source, extensible, integrated into the Julia optimisation ecosystem and performs well on a variety of large convex problem classes.},
+}
+
+@Article{Stramondo2019,
+  author    = {Giulio Stramondo and Cătălin Bogdan Ciobanu and Cees Laat and Ana Lucia Varbanescu},
+  title     = {Designing and building application-centric parallel memories},
+  journal   = {Concurrency and Computation: Practice and Experience},
+  year      = {2019},
+  month     = {8},
+  doi       = {10.1002/cpe.5485},
+  abstract  = {Memory bandwidth is a critical performance factor for many applications and architectures. Intuitively, a parallel memory could be a good solution for any bandwidth-limited application, yet building application-centric custom parallel memories remains a challenge. In this work, we present a comprehensive approach to tackle this challenge and demonstrate how to systematically design and implement application-centric parallel memories. Specifically, our approach (1) analyzes the application memory access traces to extract parallel accesses, (2) configures our parallel memory for maximum performance, and (3) builds the actual application-centric memory system. We further provide a simple performance prediction model for the constructed memory system. We evaluate our approach with two sets of experiments. First, we demonstrate how our parallel memories provide performance benefits for a broad range of memory access patterns. Second, we prove the feasibility of our approach and validate our performance model by implementing and benchmarking the designed parallel memories using FPGA hardware and a sparse version of the STREAM benchmark.},
+  publisher = {Wiley},
+}
+
+@InProceedings{Nie2019a,
+  author    = {Jing Nie and Chunlei Zhang and Dan Zou and Fei Xia and Lina Lu and Xiang Wang and Fei Zhao},
+  title     = {Adaptive Sparse Matrix-Vector Multiplication on {CPU}-{GPU} Heterogeneous Architecture},
+  booktitle = {Proceedings of the 2019 3rd High Performance Computing and Cluster Technologies Conference},
+  year      = {2019},
+  series    = {HPCCT'19},
+  publisher = {{ACM} Press},
+  doi       = {10.1145/3341069.3341072},
+  abstract  = {SpMV is the core algorithm in solving the sparse linear equations, which is widely used in many research and engineering application field. GPU is the most common coprocessor in high-performance computing domain, and has already been proven to researchers the practical value in accelerating various algorithms. A lot of reletead work has been carried out to optimize parallel SpMV on CPU-GPU platforms, which mainly focuses on reducing the computing overhead on the GPU, including branch divergence and cache missing, and little attention was paid to the overall efficiency of the heterogeneous platform. In this paper, we describe the design and implementation of an adaptive sparse matrix-vector multiplication (SpMV) on CPU-GPU heterogeneous architecture. We propose a dynamic task scheduling framework for CPU-GPU platform to improve the utilization of both CPU and GPU. A double buffering scheme is also presented to hide the data transfer overhead between CPU and GPU. Two deeply optimized SpMV kernels are deployed for CPU and GPU respectively. The evaluation on typical sparse matrices indicates that the proposed algorithm obtains both significant performance increase and adaptability to different types of sparse matrices.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
