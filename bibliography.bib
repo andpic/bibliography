@@ -6747,4 +6747,16 @@ The design principles described in the thesis have been implemented in GraphBLAS
   abstract  = {SpMV is the core algorithm in solving the sparse linear equations, which is widely used in many research and engineering application field. GPU is the most common coprocessor in high-performance computing domain, and has already been proven to researchers the practical value in accelerating various algorithms. A lot of reletead work has been carried out to optimize parallel SpMV on CPU-GPU platforms, which mainly focuses on reducing the computing overhead on the GPU, including branch divergence and cache missing, and little attention was paid to the overall efficiency of the heterogeneous platform. In this paper, we describe the design and implementation of an adaptive sparse matrix-vector multiplication (SpMV) on CPU-GPU heterogeneous architecture. We propose a dynamic task scheduling framework for CPU-GPU platform to improve the utilization of both CPU and GPU. A double buffering scheme is also presented to hide the data transfer overhead between CPU and GPU. Two deeply optimized SpMV kernels are deployed for CPU and GPU respectively. The evaluation on typical sparse matrices indicates that the proposed algorithm obtains both significant performance increase and adaptability to different types of sparse matrices.},
 }
 
+@Article{Silvestri2019,
+  author      = {Francesco Silvestri and Flavio Vella},
+  title       = {A Computational Model for Tensor Core Units},
+  date        = {2019-08-19},
+  eprint      = {arXiv:1908.06649v1},
+  eprintclass = {cs.DS},
+  eprinttype  = {arXiv},
+  abstract    = {To respond to the need of efficient training and inference of deep neural networks, a pletora of domain-specific hardware architectures have been introduced, such as Google Tensor Processing Units and NVIDIA Tensor Cores. A common feature of these architectures is a hardware circuit for efficiently computing a dense matrix multiplication of a given small size. In order to broad the class of algorithms that exploit these systems, we propose a computational model, named TCU model, that captures the ability to natively multiply small matrices. We then use the TCU model for designing fast algorithms for linear algebra problems, including dense and sparse matrix multiplication, FFT, integer multiplication, and polynomial evaluation. We finally highlight a relation between the TCU model and the external memory model.},
+  file        = {:http\://arxiv.org/pdf/1908.06649v1:PDF},
+  keywords    = {cs.DS, cs.AR, cs.DC, cs.LG},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
