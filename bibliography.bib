@@ -6759,4 +6759,50 @@ The design principles described in the thesis have been implemented in GraphBLAS
   keywords    = {cs.DS, cs.AR, cs.DC, cs.LG},
 }
 
+@InProceedings{Besta2017,
+  author    = {Maciej Besta and Michał Podstawski and Linus Groner and Edgar Solomonik and Torsten Hoefler},
+  title     = {To Push or To Pull},
+  booktitle = {Proceedings of the 26th International Symposium on High-Performance Parallel and Distributed Computing},
+  year      = {2017},
+  series    = {HPDC'17},
+  publisher = {{ACM} Press},
+  doi       = {10.1145/3078597.3078616},
+  abstract  = {We reduce the cost of communication and synchronization in graph processing by analyzing the fastest way to process graphs: pushing the updates to a shared state or pulling the updates to a private state. We investigate the applicability of this push-pull dichotomy to various algorithms and its impact on complexity, performance, and the amount of used locks, atomics, and reads/writes. We consider 11 graph algorithms, 3 programming models, 2 graph abstractions, and various families of graphs. The conducted analysis illustrates surprising differences between push and pull variants of different algorithms in performance, speed of convergence, and code complexity; the insights are backed up by performance data from hardware counters. We use these findings to illustrate which variant is faster for each algorithm and to develop generic strategies that enable even higher speedups. Our insights can be used to accelerate graph processing engines or libraries on both massively-parallel shared-memory machines as well as distributed-memory systems.},
+}
+
+@InProceedings{Zheng2019,
+  author    = {Zheng, Tianqi and Zhang, Zhibin and Cheng, Xueqi},
+  title     = {SilverChunk: An Efficient In-Memory Parallel Graph Processing System},
+  booktitle = {Database and Expert Systems Applications},
+  year      = {2019},
+  editor    = {Hartmann, Sven and Küng, Josef and Chakravarthy, Sharma and Anderst-Kotsis, Gabriele and Tjoa, A Min and Khalil, Ismail},
+  publisher = {Springer International Publishing},
+  isbn      = {978-3-030-27618-8},
+  pages     = {222--236},
+  abstract  = {One of the main constructs of graph processing is the two-level nested loop structure. Parallelizing nested loops is notoriously unfriendly to both CPU and memory access when dealing with real graph data due to its skewed distribution. To address this problem, we present SilverChunk, a high performance graph processing system. SilverChunk builds edge chunks of equal size from original graphs and unfolds nested loops statically in pull-based executions (VR-Chunk) and dynamically in push-based executions (D-Chunk). VR-Chunk slices the entire graph into several chunks. A virtual vertex is generated pointing to the first half of each sliced edge list so that no edge list lives in more than one chunk. D-Chunk builds its chunk list via binary searching over the prefix degree sum array of the active vertices. Each chunk has a local buffer for conflict-free maintenance of the next frontier. By changing the units of scheduling from edges to chunks, SilverChunk achieves better CPU and memory utilization. SilverChunk provides a high level programming interface combined with multiple optimization techniques to help developing efficient graph processing applications. Our evaluation results reveal that SilverChunk outperforms state-of-the-art shared-memory graph processing systems by up to $4\times4$, including Gemini, Grazelle, etc. Moreover, it has lower memory overheads and nearly zero pre-processing time.},
+}
+
+@Article{Williams-Young2019,
+  author      = {David B. Williams-Young and Paul G. Beckman and Chao Yang},
+  title       = {A Shift Selection Strategy for Parallel Shift-Invert Spectrum Slicing in Symmetric Self-Consistent Eigenvalue Computation},
+  year        = {2019},
+  date        = {2019-08-16},
+  eprint      = {arXiv:1908.06043},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {The central importance of large scale eigenvalue problems in scientific computation necessitates the development massively parallel algorithms for their solution. Recent advances in dense numerical linear algebra have enabled the routine treatment of eigenvalue problems with dimensions on the order of hundreds of thousands on the world's largest supercomputers. In cases where dense treatments are not feasible, Krylov subspace methods offer an attractive alternative due to the fact that they do not require storage of the problem matrices. However, demonstration of scalability of either of these classes of eigenvalue algorithms on computing architectures capable of expressing excessive parallelism is non-trivial due to communication requirements and serial bottlenecks, respectively. In this work, we introduce the SISLICE method: a parallel shift-invert algorithm for the solution of the symmetric self-consistent field (SCF) eigenvalue problem. The SISLICE method drastically reduces the communication requirement of current parallel shift-invert eigenvalue algorithms through various shift selection and migration techniques based on density of states estimation and k-means clustering, respectively. This work demonstrates the robustness and parallel performance of the SISLICE method on a representative set of SCF eigenvalue problems and outlines research directions which will be explored in future work.},
+  keywords    = {math.NA, cs.DC, cs.NA, physics.comp-ph},
+}
+
+@Article{Sid-Lakhdar2019,
+  author      = {Wissam M. Sid-Lakhdar and Mohsen Mahmoudi Aznaveh and Xiaoye S. Li and James W. Demmel},
+  title       = {Multitask and Transfer Learning for Autotuning Exascale Applications},
+  date        = {2019-08-15},
+  eprint      = {arXiv:1908.05792},
+  eprintclass = {cs.LG},
+  eprinttype  = {arXiv},
+  abstract    = {Multitask learning and transfer learning have proven to be useful in the field of machine learning when additional knowledge is available to help a prediction task. We aim at deriving methods following these paradigms for use in autotuning, where the goal is to find the optimal performance parameters of an application treated as a black-box function. We show comparative results with state-of-the-art autotuning techniques. For instance, we observe an average $1.5\times$ improvement of the application runtime compared to the OpenTuner and HpBandSter autotuners. We explain how our approaches can be more suitable than some state-of-the-art autotuners for the tuning of any application in general and of expensive exascale applications in particular.},
+  keywords    = {cs.LG, cs.DC, stat.ML},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
