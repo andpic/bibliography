@@ -6805,4 +6805,18 @@ The design principles described in the thesis have been implemented in GraphBLAS
   keywords    = {cs.LG, cs.DC, stat.ML},
 }
 
+@Article{Karypis1998,
+  author    = {George Karypis and Vipin Kumar},
+  title     = {Multilevelk-way Partitioning Scheme for Irregular Graphs},
+  journal   = {Journal of Parallel and Distributed Computing},
+  year      = {1998},
+  volume    = {48},
+  number    = {1},
+  month     = {jan},
+  pages     = {96--129},
+  doi       = {10.1006/jpdc.1997.1404},
+  abstract  = {In this paper, we present and study a class of graph partitioning algorithms that reduces the size of the graph by collapsing vertices and edges, we find a $k$-way partitioning of the smaller graph, and then we uncoarsen and refine it to construct a $k$-way partitioning for the original graph. These algorithms compute a $k$-way partitioning of a graph $G= (V,E)$ in $O(|E|)$ time, which is faster by a factor of $O(log k)$ than previously proposed multilevel recursive bisection algorithms. A key contribution of our work is in finding a high-quality and computationally inexpensive refinement algorithm that can improve upon an initialk-way partitioning. We also study the effectiveness of the overall scheme for a variety of coarsening schemes. We present experimental results on a large number of graphs arising in various domains including finite element methods, linear programming, VLSI, and transportation. Our experiments show that this new scheme produces partitions that are of comparable or better quality than those produced by the multilevel bisection algorithm and requires substantially smaller time. Graphs containing up to 450,000 vertices and 3,300,000 edges can be partitioned in 256 domains in less than 40 s on a workstation such as SGI's Challenge. Compared with the widely used multilevel spectral bisection algorithm, our new algorithm is usually two orders of magnitude faster and produces partitions with substantially smaller edge-cut.},
+  publisher = {Elsevier {BV}},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
