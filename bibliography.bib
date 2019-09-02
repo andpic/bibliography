@@ -111,16 +111,15 @@
 }
 
 @Article{Azad2016,
-  Title                    = {Exploiting Multiple Levels of Parallelism in Sparse Matrix-Matrix Multiplication},
-  Author                   = {Ariful Azad and Grey Ballard and Aydin Buluç and James Demmel and Laura Grigori and Oded Schwartz and Sivan Toledo and Samuel Williams},
-  Number                   = {6},
-  Pages                    = {C624-C651},
-  Volume                   = {38},
-
- abstract = {Sparse matrix-matrix multiplication (or SpGEMM) is a key primitive for many high-performance graph algorithms as well as for some linear solvers, such as algebraic multigrid. The scaling of existing parallel implementations of SpGEMM is heavily bound by communication. Even though 3D (or 2.5D) algorithms have been proposed and theoretically analyzed in the flat MPI model on Erdős–Rényi matrices, those algorithms had not been implemented in practice and their complexities had not been analyzed for the general case. In this work, we present the first implementation of the 3D SpGEMM formulation that exploits multiple (intranode and internode) levels of parallelism, achieving significant speedups over the state-of-the-art publicly available codes at all levels of concurrencies. We extensively evaluate our implementation and identify bottlenecks that should be subject to further research.},
-  Date                     = {2016},
-  Doi                      = {10.1137/15M104253X},
-  Journaltitle             = {SIAM Journal on Scientific Computing}
+  author       = {Ariful Azad and Grey Ballard and Aydın Buluç and James Demmel and Laura Grigori and Oded Schwartz and Sivan Toledo and Samuel Williams},
+  title        = {Exploiting Multiple Levels of Parallelism in Sparse Matrix-Matrix Multiplication},
+  journaltitle = {SIAM Journal on Scientific Computing},
+  date         = {2016},
+  volume       = {38},
+  number       = {6},
+  pages        = {C624-C651},
+  doi          = {10.1137/15M104253X},
+  abstract     = {Sparse matrix-matrix multiplication (or SpGEMM) is a key primitive for many high-performance graph algorithms as well as for some linear solvers, such as algebraic multigrid. The scaling of existing parallel implementations of SpGEMM is heavily bound by communication. Even though 3D (or 2.5D) algorithms have been proposed and theoretically analyzed in the flat MPI model on Erdős–Rényi matrices, those algorithms had not been implemented in practice and their complexities had not been analyzed for the general case. In this work, we present the first implementation of the 3D SpGEMM formulation that exploits multiple (intranode and internode) levels of parallelism, achieving significant speedups over the state-of-the-art publicly available codes at all levels of concurrencies. We extensively evaluate our implementation and identify bottlenecks that should be subject to further research.},
 }
 
 @InProceedings{Bakhoda2009,
@@ -4710,7 +4709,7 @@
 }
 
 @Online{Yang2018b,
-  author     = {Yang, Carl and Buluç, Aydin and Owens, John D.},
+  author     = {Yang, Carl and Buluç, Aydın and Owens, John D.},
   title      = {Design Principles for Sparse Matrix Multiplication on the GPU},
   year       = {2018},
   abstract   = {We implement two novel algorithms for sparse-matrix dense-matrix multiplication (SpMM) on the GPU. Our algorithms expect the sparse input in the popular compressed-sparse-row (CSR) format and thus do not require expensive format conversion. While previous SpMM work concentrates on thread-level parallelism, we additionally focus on latency hiding with instruction-level parallelism and load-balancing. We show, both theoretically and experimentally, that the proposed SpMM is a better fit for the GPU than previous approaches. We identify a key memory access pattern that allows efficient access into both input and output matrices that is crucial to getting excellent performance on SpMM. By combining these two ingredients – (i) merge-based load-balancing and (ii) row-major coalesced memory access – we demonstrate a 3.6x peak speedup and a 23.5\% geomean speedup over state-of-the-art SpMM implementations on real-world datasets.},
@@ -6106,7 +6105,7 @@ The main insight of this work is that the combination of data duplication and De
 }
 
 @Article{Yang2018d,
-  author        = {Carl Yang and Aydin Bulu{\c{c}} and John D. Owens},
+  author        = {Carl Yang and Aydın Buluç and John D. Owens},
   title         = {Implementing Push-Pull Efficiently in GraphBLAS},
   year          = {2018},
   volume        = {abs/1804.03327},
@@ -6618,7 +6617,7 @@ The design principles described in the thesis have been implemented in GraphBLAS
 }
 
 @Article{Yang2019a,
-  author      = {Carl Yang and Aydin Buluc and John D. Owens},
+  author      = {Carl Yang and Aydın Buluç and John D. Owens},
   title       = {GraphBLAST: A High-Performance Linear Algebra-based Graph Framework on the GPU},
   year        = {2019},
   eprint      = {1908.01407v2},
@@ -6817,6 +6816,18 @@ The design principles described in the thesis have been implemented in GraphBLAS
   doi       = {10.1006/jpdc.1997.1404},
   abstract  = {In this paper, we present and study a class of graph partitioning algorithms that reduces the size of the graph by collapsing vertices and edges, we find a $k$-way partitioning of the smaller graph, and then we uncoarsen and refine it to construct a $k$-way partitioning for the original graph. These algorithms compute a $k$-way partitioning of a graph $G= (V,E)$ in $O(|E|)$ time, which is faster by a factor of $O(log k)$ than previously proposed multilevel recursive bisection algorithms. A key contribution of our work is in finding a high-quality and computationally inexpensive refinement algorithm that can improve upon an initialk-way partitioning. We also study the effectiveness of the overall scheme for a variety of coarsening schemes. We present experimental results on a large number of graphs arising in various domains including finite element methods, linear programming, VLSI, and transportation. Our experiments show that this new scheme produces partitions that are of comparable or better quality than those produced by the multilevel bisection algorithm and requires substantially smaller time. Graphs containing up to 450,000 vertices and 3,300,000 edges can be partitioned in 256 domains in less than 40 s on a workstation such as SGI's Challenge. Compared with the widely used multilevel spectral bisection algorithm, our new algorithm is usually two orders of magnitude faster and produces partitions with substantially smaller edge-cut.},
   publisher = {Elsevier {BV}},
+}
+
+@Article{Buluc2013,
+  author      = {Aydın Buluç and Henning Meyerhenke and Ilya Safro and Peter Sanders and Christian Schulz},
+  title       = {Recent Advances in Graph Partitioning},
+  date        = {2013-11-13},
+  eprint      = {http://arxiv.org/abs/1311.3144v3},
+  eprintclass = {cs.DS},
+  eprinttype  = {arXiv},
+  abstract    = {We survey recent trends in practical algorithms for balanced graph partitioning together with applications and future research directions.},
+  file        = {:http\://arxiv.org/pdf/1311.3144v3:PDF},
+  keywords    = {cs.DS, cs.DC, math.CO},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
