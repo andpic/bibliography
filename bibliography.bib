@@ -6822,7 +6822,7 @@ The design principles described in the thesis have been implemented in GraphBLAS
   author      = {Aydın Buluç and Henning Meyerhenke and Ilya Safro and Peter Sanders and Christian Schulz},
   title       = {Recent Advances in Graph Partitioning},
   date        = {2013-11-13},
-  eprint      = {http://arxiv.org/abs/1311.3144v3},
+  eprint      = {arXiv:1311.3144},
   eprintclass = {cs.DS},
   eprinttype  = {arXiv},
   abstract    = {We survey recent trends in practical algorithms for balanced graph partitioning together with applications and future research directions.},
@@ -6864,6 +6864,30 @@ The design principles described in the thesis have been implemented in GraphBLAS
   doi       = {10.1016/j.parco.2019.102545},
   abstract  = {Sparse matrix-matrix multiplication (SpGEMM) is a computational primitive that is widely used in areas ranging from traditional numerical applications to recent big data analysis and machine learning. Although many SpGEMM algorithms have been proposed, hardware specific optimizations for multi- and many-core processors are lacking and a detailed analysis of their performance under various use cases and matrices is not available. We firstly identify and mitigate multiple bottlenecks with memory management and thread scheduling on Intel Xeon Phi (Knights Landing or KNL). Specifically targeting many-core processors, we develop a hash-table-based algorithm and optimize a heap-based shared-memory SpGEMM algorithm. We examine their performance together with other publicly available codes. Different from the literature, our evaluation also includes use cases that are representative of real graph algorithms, such as multi-source breadth-first search or triangle counting. Our hash-table and heap-based algorithms are showing significant speedups from libraries in the majority of the cases while different algorithms dominate the other scenarios with different matrix size, sparsity, compression factor and operation type. We wrap up in-depth evaluation results and make a recipe to give the best SpGEMM algorithm for target scenario. We build the performance model for hash-table and heap-based algorithms, which supports the recipe. A critical finding is that hash-table-based SpGEMM gets a significant performance boost if the nonzeros are not required to be sorted within each row of the output matrix. Finally, we integrate our implementations into a large-scale protein clustering code named HipMCL, accelerating its SpGEMM kernel by up to 10X and achieving an overall performance boost for the whole HipMCL application by 2.6$\times$.},
   publisher = {Elsevier {BV}},
+}
+
+@Article{Jia2018,
+  author      = {Zhe Jia and Marco Maggioni and Benjamin Staiger and Daniele P. Scarpazza},
+  title       = {Dissecting the {NVIDIA} {Volta} {GPU} Architecture via Microbenchmarking},
+  date        = {2018-04-18},
+  eprint      = {arXiv:1804.06826v1},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {Every year, novel NVIDIA GPU designs are introduced. This rapid architectural and technological progression, coupled with a reluctance by manufacturers to disclose low-level details, makes it difficult for even the most proficient GPU software designers to remain up-to-date with the technological advances at a microarchitectural level. To address this dearth of public, microarchitectural-level information on the novel NVIDIA GPUs, independent researchers have resorted to microbenchmarks-based dissection and discovery. This has led to a prolific line of publications that shed light on instruction encoding, and memory hierarchy's geometry and features at each level. Namely, research that describes the performance and behavior of the Kepler, Maxwell and Pascal architectures. In this technical report, we continue this line of research by presenting the microarchitectural details of the NVIDIA Volta architecture, discovered through microbenchmarks and instruction set disassembly. Additionally, we compare quantitatively our Volta findings against its predecessors, Kepler, Maxwell and Pascal.},
+  file        = {:http\://arxiv.org/pdf/1804.06826v1:PDF},
+  keywords    = {cs.DC, cs.PF},
+}
+
+@Article{Jia2019,
+  author      = {Zhe Jia and Marco Maggioni and Jeffrey Smith and Daniele Paolo Scarpazza},
+  title       = {Dissecting the {NVidia} {Turing} {T4} {GPU} via Microbenchmarking},
+  date        = {2019-03-18},
+  eprint      = {arXiv:1903.07486v1},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {In 2019, the rapid rate at which GPU manufacturers refresh their designs, coupled with their reluctance to disclose microarchitectural details, is still a hurdle for those software designers who want to extract the highest possible performance. Last year, these very reasons motivated us to dissect the Volta GPU architecture using microbenchmarks. The introduction in August 2018 of Turing, NVidia's latest architecture, pressed us to update our study. In this report, we examine Turing and compare it quantitatively against previous NVidia GPU generations. Specifically, we study the T4 GPU: a low-power board aiming at inference applications. We describe its improvements against its inference-oriented predecessor: the P4 GPU based on the Pascal architecture. Both T4 and P4 GPUs achieve significantly higher frequency-per-Watt figures than their full-size counterparts. We study the performance of the T4's TensorCores, finding a much higher throughput on low-precision operands than on the P4 GPU. We reveal that Turing introduces new instructions that express matrix math more succinctly. We map Turing's instruction space, finding the same encoding as Volta, and additional instructions. We reveal that the Turing TU104 chip has the same memory hierarchy depth as the Volta GV100; cache levels sizes on the TU104 are frequently twice as large as those found on the Pascal GP104. We benchmark each constituent of the T4 memory hierarchy and find substantial overall performance improvements over its P4 predecessor. We studied how clock throttling affects compute-intensive workloads that hit power or thermal limits. Many of our findings are novel, published here for the first time. All of them can guide high-performance software developers get closer to the GPU's peak performance.},
+  file        = {:http\://arxiv.org/pdf/1903.07486v1:PDF},
+  keywords    = {cs.DC},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
