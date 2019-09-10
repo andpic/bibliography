@@ -6890,4 +6890,35 @@ The design principles described in the thesis have been implemented in GraphBLAS
   keywords    = {cs.DC},
 }
 
+@Article{Charara2019,
+  author     = {Charara, Ali and Keyes, David and Ltaief, Hatem},
+  title      = {Batched Triangular Dense Linear Algebra Kernels for Very Small Matrix Sizes on GPUs},
+  journal    = {ACM Transactions on Mathematcal Software},
+  year       = {2019},
+  volume     = {45},
+  number     = {2},
+  month      = may,
+  pages      = {15:1--15:28},
+  issn       = {0098-3500},
+  doi        = {10.1145/3267101},
+  abstract   = {Batched dense linear algebra kernels are becoming ubiquitous in scientific applications, ranging from tensor contractions in deep learning to data compression in hierarchical low-rank matrix approximation. Within a single API call, these kernels are capable of simultaneously launching up to thousands of similar matrix computations, removing the expensive overhead of multiple API calls while increasing the occupancy of the underlying hardware. A challenge is that for the existing hardware landscape (x86, GPUs, etc.), only a subset of the required batched operations is implemented by the vendors, with limited support for very small problem sizes. We describe the design and performance of a new class of batched triangular dense linear algebra kernels on very small data sizes (up to 256) using single and multiple GPUs. By deploying recursive formulations, stressing the register usage, maintaining data locality, reducing threads synchronization, and fusing successive kernel calls, the new batched kernels outperform existing state-of-the-art implementations.},
+  acmid      = {3267101},
+  address    = {New York, NY, USA},
+  articleno  = {15},
+  issue_date = {June 2019},
+  keywords   = {KBLAS, batched BLAS kernels, dense linear algebra, hardware accelerators, recursive formulation},
+  numpages   = {28},
+  publisher  = {ACM},
+}
+
+@Article{Higham2019,
+  author     = {Higham, Nicholas and Mary, Theo},
+  title      = {Solving Block Low-Rank Linear Systems by {LU} Factorization is Numerically Stable},
+  year       = {2019},
+  eprint     = {MIMS EPrint:2019.15},
+  eprinttype = {MIMS EPrint},
+  url        = {http://eprints.maths.manchester.ac.uk/2727/1/paper.pdf},
+  abstract   = {Block low-rank (BLR) matrices possess a blockwise low-rank property that can be exploited to reduce the complexity of numerical linear algebra algorithms. The impact of these lowrank approximations on the numerical stability of the algorithms in floating-point arithmetic has not previously been analyzed. We present rounding error analysis for the solution of a linear system by LU factorization of BLR matrices. Assuming that a stable pivoting scheme is used, we prove backward stability: the relative backward error is bounded by a modest constant times ε, where the low-rank threshold ε is the parameter controlling the accuracy of the blockwise low-rank approximations. In addition to this key result, our analysis offers three new insights into the numerical behavior of BLR algorithms. First, we compare the use of a global or local low-rank threshold and find that a global one should be preferred. Second, we show that performing intermediate recompressions during the factorization can significantly reduce its cost without compromising numerical stability. Third, we consider different BLR factorization variants and determine the compress–factor–update (CFU) variant to be the best. Tests on a wide range of matrices from various real-life applications show that the predictions from the analysis are realized in practice.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
