@@ -6933,4 +6933,18 @@ The design principles described in the thesis have been implemented in GraphBLAS
   keywords    = {math.NA, cs.NA, 97N20, G.1.3; I.2.8; G.3; G.4},
 }
 
+@InBook{Nowak2019,
+  author    = {Nowak, Ivo and Muts, Pavlo and Hendrix, Eligius M. T.},
+  title     = {Multi-Tree Decomposition Methods for Large-Scale Mixed Integer Nonlinear Optimization},
+  booktitle = {Large Scale Optimization in Supply Chains and Smart Manufacturing: Theory and Applications},
+  year      = {2019},
+  editor    = {Velásquez-Bermúdez, J. and Khakifirooz, M. and Fathi, M.},
+  publisher = {Springer International Publishing},
+  isbn      = {978-3-030-22788-3},
+  pages     = {27--58},
+  doi       = {10.1007/978-3-030-22788-3_2},
+  abstract  = {Most industrial optimization problems are sparse and can be formulated as block-separable mixed-integer nonlinear programmingMixed integer nonlinear programming(MINLP) problems, defined by linking low-dimensional sub-problems by (linear) coupling constraints. Decomposition methods solve a block-separable MINLP by alternately solving master problems and sub-problems. In practice, decomposition methods are sometimes the only possibility to compute high-quality solutions of large-scale optimization problems. However, efficient implementations may require expert knowledge and problem-specific features. Recently, there is renewed interest in making these methods accessible to general users by developing generic decomposition frameworks and modelling support. The focus of this chapter is on so-called multi-tree decomposition methods, which iteratively approximate the feasible area without using a single (global) branch-and-bound tree, i.e. branch-and-bound is only used for solving sub-problems. After an introduction, we describe first outer approximation (OA) decomposition methods, Outer approximationincluding the adaptive, multivariate partitioning (AMP)Adaptive, Multivariate Partitioning (AMP) algorithmand the novel decomposition-based outer approximation (DECOA) algorithmDecomposition-based outer approximation (DECOA). This is followed by a description of multi-tree methods using a reduced master problem for solving large-scale industrial optimization problems. The first method to be described applies parallel column generationColumn generation(CG) and iterative fixing for solving nonconvex transport optimization problems with several hundred millions of variables and constraints. The second method is based on a novel approach combining CG and compact outer approximation. The last methodology to be discussed is the general Benders decomposition methodBenders decomposition methodfor globally solving large nonconvex stochastic programs using a reduced mixed-integer programming (MIP) master problem.},
+  address   = {Cham},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
