@@ -6947,4 +6947,29 @@ abstract   = {Block low-rank (BLR) matrices possess a blockwise low-rank propert
   address   = {Cham},
 }
 
+@TechReport{Shaiek2019,
+  author      = {Hejer Shaiek and Stanimire Tomov and Alan Ayala and Azzam Haidar and Jack Dongarra},
+  title       = {{GPUDirect} {MPI} Communications and Optimizations to Accelerate {FFTs} on Exascale Systems},
+  institution = {ICL},
+  year        = {2019},
+  type        = {Extended Abstract},
+  number      = {icl-ut-19-06},
+  month       = {9},
+  abstract    = {Fast Fourier transforms (FFTs) are used in applications ranging from molecular dynamics and spectrum estimation to machine learn- ing, fast convolution and correlation, signal modulation, wireless multimedia applications, and others. However, FFTs are memory bound, and therefore, to accelerate them, it is crucial to avoid and optimize the FFTs communications. To this end, we present a 3-D FFT design for distributed graphics processing unit (GPU) systems that: (1) efficiently uses GPUs high bandwidth, (2) reduces global communications algorithmically, when possible, and (3) employs GPUDirect technologies as well as MPI optimizations in the development of high-performance FFTs for large-scale GPU-accelerated systems. We show that these developments and optimizations lead to very good strong scalability and a performance that is close to 90\% of the theoretical peak.},
+  journal     = {EuroMPI'19 Posters, Zurich, Switzerland},
+  keywords    = {CUDA-Aware MPI, ECP, FFT, FFT-ECP, gpu, GPUDirect},
+}
+
+@Article{Cheng2019,
+  author   = {Wanyou Cheng and Yu-Hong Dai},
+  title    = {An active set Newton-CG method for $\mathcal{l}$1 optimization},
+  journal  = {Applied and Computational Harmonic Analysis},
+  year     = {2019},
+  issn     = {1063-5203},
+  doi      = {10.1016/j.acha.2019.08.005},
+  url      = {http://www.sciencedirect.com/science/article/pii/S1063520318300459},
+  abstract = {In this paper, we investigate the active set identification technique of ISTA and provide some good properties. An active set Newton-CG method is then proposed for $\mathcal{l}$1 optimization. Under appropriate conditions, we show that the proposed method is globally convergent with some nonmonotone line search. The numerical comparisons with several state-of-art methods demonstrate the efficiency of the proposed method.},
+  keywords = {optimization, Shrinkage operator, Barzilai-Borwein method, Newton-CG method},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
