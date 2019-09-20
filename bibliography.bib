@@ -6972,4 +6972,32 @@ abstract   = {Block low-rank (BLR) matrices possess a blockwise low-rank propert
   keywords = {optimization, Shrinkage operator, Barzilai-Borwein method, Newton-CG method},
 }
 
+@PhdThesis{Ramesh2019,
+  author      = {Ramesh, Chinthala},
+  title       = {Hardware-Software Co-Design Accelerators for Sparse BLAS},
+  institution = {Centre for Nano Science and Engineering (CeNSE), Indian Institute of Science, Bangalore},
+  year        = {2019},
+  eprint      = {http://etd.iisc.ac.in/handle/2005/4276},
+  abstract    = {Sparse Basic Linear Algebra Subroutines (Sparse BLAS) is an important library. Sparse BLAS includes three levels of subroutines. Level 1, Level2 and Level 3 Sparse BLAS routines. Level 1 Sparse BLAS routines do computations over sparse vector and spare/dense vector. Level 2 deals with sparse matrix and vector operations. Level 3 deals with sparse matrix and dense matrix operations. The computations of these Sparse BLAS routines on General Purpose Processors (GPPs) not only suffer from less utilization of hardware resources but also takes more compute time than the workload due to poor data locality of sparse vector/matrix storage formats. In the literature, tremendous efforts have been put into software to improve these Sparse BLAS routines performance on GPPs. GPPs best suit for applications with high data locality, whereas Sparse BLAS routines operate on applications with less data locality hence, GPPs performance is poor. Various Custom Function Units (Hardware Accelerators) are proposed in the literature and are proved to be efficient than soft wares which tried to accelerate Sparse BLAS subroutines. Though existing hardware accelerators improved the Sparse BLAS performance compared to software Sparse BLAS routines, there is still lot of scope to improve these accelerators. This thesis describes both the existing software and hardware software co-designs (HW/SW co-design) and identifies the limitations of these existing solutions. We propose a new sparse data representation called Sawtooth Compressed Row Storage (SCRS) and corresponding SpMV and SpMM algorithms. SCRS based SpMV and SpMM are performing better than existing software solutions. Even though SCRS based SpMV and SpMM algorithms perform better than existing solutions, they still could not reach theoretical peak performance. The knowledge gained from the study of limitations of these existing solutions including the proposed SCRS based SpMV and SpMM is used to propose new HW/SW co-designs. Software accelerators are limited by the hardware properties of GPPs, and GPUs itself, hence, we propose HW/SW co-designs to accelerate few basic Sparse BLAS operations (SpVV and SpMV). Our proposed Parallel Sparse BLAS HW/SW co-design achieves near theoretical peak performance with reasonable hardware resources.},
+}
+
+@InProceedings{Mniszewski2019,
+  author    = {Mniszewski, Susan M.},
+  title     = {Graph Partitioning As Quadratic Unconstrained Binary Optimization {(QUBO)} on Spiking Neuromorphic Hardware},
+  booktitle = {Proceedings of the International Conference on Neuromorphic Systems},
+  year      = {2019},
+  series    = {ICONS'19},
+  publisher = {ACM},
+  location  = {Knoxville, TN, USA},
+  isbn      = {978-1-4503-7680-8},
+  pages     = {4:1--4:5},
+  doi       = {10.1145/3354265.3354269},
+  abstract  = {In this work, graph partitioning (GP) is explored using quadratic unconstrained binary optimization (QUBO) on the IBM TrueNorth spiking neuromorphic architecture. GP splits a graph into similar-sized parts while minimizing the number of cut edges between parts. Classical approaches to GP rely on heuristics and approximation algorithms. The GP QUBO formulation was inspired by previous work using the D-Wave quantum annealer. This approach is not limited to graph algorithms, but is applicable to solving a spectrum of NP-hard optimization problems. A classical pseudo simulated annealing metaheuristic is used to solve the QUBO. Implementation on the IBM TrueNorth using a spiking framework is described. Results as converged high-energy solutions are shown to be "good enough" or optimal for partitioning a graph into 2 parts.},
+  acmid     = {3354269},
+  address   = {New York, NY, USA},
+  articleno = {4},
+  keywords  = {IBM TrueNorth, QUBO, graph partitioning, quadratic unconstrained binary optimization, spiking neuromorphic hardware},
+  numpages  = {5},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
