@@ -4131,9 +4131,9 @@
   number       = {5},
   pages        = {2950--2971},
   doi          = {10.1137/10079687X},
-  url          = { 
+  url          = {
         https://doi.org/10.1137/10079687X
-    
+
 },
  abstract = {An iterative method LSMR is presented for solving linear systems $Ax=b$ and least-squares problems $\min \|Ax-b\|_2$, with A being sparse or a fast linear operator. LSMR is based on the Golub–Kahan bidiagonalization process. It is analytically equivalent to the MINRES method applied to the normal equation $A^T\! Ax = A^T\! b$, so that the quantities $\|A^T\! r_k\|$ are monotonically decreasing (where $r_k = b - Ax_k$ is the residual for the current iterate $x_k$). We observe in practice that $\|r_k\|$ also decreases monotonically, so that compared to LSQR (for which only $\|r_k\|$ is monotonic) it is safer to terminate LSMR early. We also report some experiments with reorthogonalization.},
 }
@@ -4276,9 +4276,9 @@
   number       = {5},
   pages        = {1909--1926},
   doi          = {10.1137/S1064829598339761},
-  url          = { 
+  url          = {
         https://doi.org/10.1137/S1064829598339761
-    
+
 },
  abstract = {We present a deflated version of the conjugate gradient algorithm for solving linear systems. The new algorithm can be useful in cases when a small number of eigenvalues of the iteration matrix are very close to the origin. It can also be useful when solving linear systems with multiple right-hand sides, since the eigenvalue information gathered from solving one linear system can be recycled for solving the next systems and then updated.},
 }
@@ -4845,7 +4845,7 @@
   booktitle = {Proceedings of NVIDIA's GPU Technology Conference},
   year      = {2018},
   series    = {GTC '18},
-  abstract  = {Recent in-hardware GPU acceleration of half precision arithmetic (FP16) -- motivated by various machine learning (ML) and artificial intelligence (AI) applications -- has reinvigorated a great interest in the mixed-precision iterative refinement technique. The technique is based on use of low precision arithmetic to accelerate the general HPC problem of solving Ax = b, where A is a large dense matrix, and the solution is needed in FP64 accuracy. While being a well known technique, its successful modification, software development, and adjustment to match architecture specifics, is challenging. For current manycore GPUs the challenges range from efficient parallelization to scaling, and using the FP16 arithmetic. Here, we address these challenges by showing how to algorithmically modify, develop high-performance implementations, and in general, how to use the FP16 arithmetic to significantly accelerate, as well as make more energy efficient, FP64-precision Ax = b solvers. One can reproduce our results as the developments will be made available through the MAGMA library. We quantify in 
+  abstract  = {Recent in-hardware GPU acceleration of half precision arithmetic (FP16) -- motivated by various machine learning (ML) and artificial intelligence (AI) applications -- has reinvigorated a great interest in the mixed-precision iterative refinement technique. The technique is based on use of low precision arithmetic to accelerate the general HPC problem of solving Ax = b, where A is a large dense matrix, and the solution is needed in FP64 accuracy. While being a well known technique, its successful modification, software development, and adjustment to match architecture specifics, is challenging. For current manycore GPUs the challenges range from efficient parallelization to scaling, and using the FP16 arithmetic. Here, we address these challenges by showing how to algorithmically modify, develop high-performance implementations, and in general, how to use the FP16 arithmetic to significantly accelerate, as well as make more energy efficient, FP64-precision Ax = b solvers. One can reproduce our results as the developments will be made available through the MAGMA library. We quantify in
 practice the performance, and limitations of the approach stressing on the use of the Volta V100 Tensor Cores that provide additional FP16 performance boost},
   timestamp = {2018.08.27},
 }
@@ -6488,7 +6488,7 @@ The design principles described in the thesis have been implemented in GraphBLAS
   isbn      = {978-1-4503-6217-7},
   pages     = {481--490},
   doi       = {10.1145/3293611.3331609},
-  abstract  = {The Massively Parallel Computation (MPC) model serves as a common abstraction of many modern large-scale parallel computation frameworks and has recently gained a lot of importance, especially in the context of classic graph problems. In this work, we mainly consider maximal matching and maximal independent set problems in the MPC model.\\ 
+  abstract  = {The Massively Parallel Computation (MPC) model serves as a common abstraction of many modern large-scale parallel computation frameworks and has recently gained a lot of importance, especially in the context of classic graph problems. In this work, we mainly consider maximal matching and maximal independent set problems in the MPC model.\\
   These problems are known to admit efficient MPC algorithms if the space available per machine is near-linear in the number n of nodes. This is not only often significantly more than what we can afford, but also allows for easy if not trivial solutions for sparse graphs -- which are common in real-world large-scale graphs. We are, therefore, interested in the low-memory MPC model, where the space per machine is restricted to be strongly sublinear, that is, $n^\delta$ for any constant $0 < \delta < 1$. \\
   We parametrize our algorithms by the arboricity $\lambda$ of the input graph. Our key ingredient is a degree reduction technique that reduces these problems in graphs with arboricity $\lambda$ to the corresponding problems in graphs with maximum degree $poly(\lambda, log n)$ in $O(log^2 log n)$ rounds, giving rise to $O(\sqrt{log \lambda} \cdot log log \lambda + log 2 log n)$-round algorithms.\\
   Our result is particularly interesting for graphs with $poly log n$ arboricity as for such graphs, we get $O(log^2 log n)$-round algorithms. This covers most natural families of sparse graphs and almost exponentially improves over previous algorithms that all required log $O(1)$ n rounds in this regime of MPC.\\
@@ -6962,13 +6962,13 @@ abstract   = {Block low-rank (BLR) matrices possess a blockwise low-rank propert
 
 @Article{Cheng2019,
   author   = {Wanyou Cheng and Yu-Hong Dai},
-  title    = {An active set Newton-CG method for $\mathcal{l}$1 optimization},
+  title    = {An active set Newton-CG method for {$\ell_1$} optimization},
   journal  = {Applied and Computational Harmonic Analysis},
   year     = {2019},
   issn     = {1063-5203},
   doi      = {10.1016/j.acha.2019.08.005},
   url      = {http://www.sciencedirect.com/science/article/pii/S1063520318300459},
-  abstract = {In this paper, we investigate the active set identification technique of ISTA and provide some good properties. An active set Newton-CG method is then proposed for $\mathcal{l}$1 optimization. Under appropriate conditions, we show that the proposed method is globally convergent with some nonmonotone line search. The numerical comparisons with several state-of-art methods demonstrate the efficiency of the proposed method.},
+  abstract = {In this paper, we investigate the active set identification technique of ISTA and provide some good properties. An active set Newton-CG method is then proposed for $\ell_1$ optimization. Under appropriate conditions, we show that the proposed method is globally convergent with some nonmonotone line search. The numerical comparisons with several state-of-art methods demonstrate the efficiency of the proposed method.},
   keywords = {optimization, Shrinkage operator, Barzilai-Borwein method, Newton-CG method},
 }
 
