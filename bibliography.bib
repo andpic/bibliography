@@ -111,16 +111,15 @@
 }
 
 @Article{Azad2016,
-  Title                    = {Exploiting Multiple Levels of Parallelism in Sparse Matrix-Matrix Multiplication},
-  Author                   = {Ariful Azad and Grey Ballard and Aydin Buluç and James Demmel and Laura Grigori and Oded Schwartz and Sivan Toledo and Samuel Williams},
-  Number                   = {6},
-  Pages                    = {C624-C651},
-  Volume                   = {38},
-
- abstract = {Sparse matrix-matrix multiplication (or SpGEMM) is a key primitive for many high-performance graph algorithms as well as for some linear solvers, such as algebraic multigrid. The scaling of existing parallel implementations of SpGEMM is heavily bound by communication. Even though 3D (or 2.5D) algorithms have been proposed and theoretically analyzed in the flat MPI model on Erdős–Rényi matrices, those algorithms had not been implemented in practice and their complexities had not been analyzed for the general case. In this work, we present the first implementation of the 3D SpGEMM formulation that exploits multiple (intranode and internode) levels of parallelism, achieving significant speedups over the state-of-the-art publicly available codes at all levels of concurrencies. We extensively evaluate our implementation and identify bottlenecks that should be subject to further research.},
-  Date                     = {2016},
-  Doi                      = {10.1137/15M104253X},
-  Journaltitle             = {SIAM Journal on Scientific Computing}
+  author       = {Ariful Azad and Grey Ballard and Aydın Buluç and James Demmel and Laura Grigori and Oded Schwartz and Sivan Toledo and Samuel Williams},
+  title        = {Exploiting Multiple Levels of Parallelism in Sparse Matrix-Matrix Multiplication},
+  journaltitle = {SIAM Journal on Scientific Computing},
+  date         = {2016},
+  volume       = {38},
+  number       = {6},
+  pages        = {C624-C651},
+  doi          = {10.1137/15M104253X},
+  abstract     = {Sparse matrix-matrix multiplication (or SpGEMM) is a key primitive for many high-performance graph algorithms as well as for some linear solvers, such as algebraic multigrid. The scaling of existing parallel implementations of SpGEMM is heavily bound by communication. Even though 3D (or 2.5D) algorithms have been proposed and theoretically analyzed in the flat MPI model on Erdős–Rényi matrices, those algorithms had not been implemented in practice and their complexities had not been analyzed for the general case. In this work, we present the first implementation of the 3D SpGEMM formulation that exploits multiple (intranode and internode) levels of parallelism, achieving significant speedups over the state-of-the-art publicly available codes at all levels of concurrencies. We extensively evaluate our implementation and identify bottlenecks that should be subject to further research.},
 }
 
 @InProceedings{Bakhoda2009,
@@ -4132,9 +4131,9 @@
   number       = {5},
   pages        = {2950--2971},
   doi          = {10.1137/10079687X},
-  url          = { 
+  url          = {
         https://doi.org/10.1137/10079687X
-    
+
 },
  abstract = {An iterative method LSMR is presented for solving linear systems $Ax=b$ and least-squares problems $\min \|Ax-b\|_2$, with A being sparse or a fast linear operator. LSMR is based on the Golub–Kahan bidiagonalization process. It is analytically equivalent to the MINRES method applied to the normal equation $A^T\! Ax = A^T\! b$, so that the quantities $\|A^T\! r_k\|$ are monotonically decreasing (where $r_k = b - Ax_k$ is the residual for the current iterate $x_k$). We observe in practice that $\|r_k\|$ also decreases monotonically, so that compared to LSQR (for which only $\|r_k\|$ is monotonic) it is safer to terminate LSMR early. We also report some experiments with reorthogonalization.},
 }
@@ -4277,9 +4276,9 @@
   number       = {5},
   pages        = {1909--1926},
   doi          = {10.1137/S1064829598339761},
-  url          = { 
+  url          = {
         https://doi.org/10.1137/S1064829598339761
-    
+
 },
  abstract = {We present a deflated version of the conjugate gradient algorithm for solving linear systems. The new algorithm can be useful in cases when a small number of eigenvalues of the iteration matrix are very close to the origin. It can also be useful when solving linear systems with multiple right-hand sides, since the eigenvalue information gathered from solving one linear system can be recycled for solving the next systems and then updated.},
 }
@@ -4710,7 +4709,7 @@
 }
 
 @Online{Yang2018b,
-  author     = {Yang, Carl and Buluc, Aydin and Owens, John D.},
+  author     = {Yang, Carl and Buluç, Aydın and Owens, John D.},
   title      = {Design Principles for Sparse Matrix Multiplication on the GPU},
   year       = {2018},
   abstract   = {We implement two novel algorithms for sparse-matrix dense-matrix multiplication (SpMM) on the GPU. Our algorithms expect the sparse input in the popular compressed-sparse-row (CSR) format and thus do not require expensive format conversion. While previous SpMM work concentrates on thread-level parallelism, we additionally focus on latency hiding with instruction-level parallelism and load-balancing. We show, both theoretically and experimentally, that the proposed SpMM is a better fit for the GPU than previous approaches. We identify a key memory access pattern that allows efficient access into both input and output matrices that is crucial to getting excellent performance on SpMM. By combining these two ingredients – (i) merge-based load-balancing and (ii) row-major coalesced memory access – we demonstrate a 3.6x peak speedup and a 23.5\% geomean speedup over state-of-the-art SpMM implementations on real-world datasets.},
@@ -4846,7 +4845,7 @@
   booktitle = {Proceedings of NVIDIA's GPU Technology Conference},
   year      = {2018},
   series    = {GTC '18},
-  abstract  = {Recent in-hardware GPU acceleration of half precision arithmetic (FP16) -- motivated by various machine learning (ML) and artificial intelligence (AI) applications -- has reinvigorated a great interest in the mixed-precision iterative refinement technique. The technique is based on use of low precision arithmetic to accelerate the general HPC problem of solving Ax = b, where A is a large dense matrix, and the solution is needed in FP64 accuracy. While being a well known technique, its successful modification, software development, and adjustment to match architecture specifics, is challenging. For current manycore GPUs the challenges range from efficient parallelization to scaling, and using the FP16 arithmetic. Here, we address these challenges by showing how to algorithmically modify, develop high-performance implementations, and in general, how to use the FP16 arithmetic to significantly accelerate, as well as make more energy efficient, FP64-precision Ax = b solvers. One can reproduce our results as the developments will be made available through the MAGMA library. We quantify in 
+  abstract  = {Recent in-hardware GPU acceleration of half precision arithmetic (FP16) -- motivated by various machine learning (ML) and artificial intelligence (AI) applications -- has reinvigorated a great interest in the mixed-precision iterative refinement technique. The technique is based on use of low precision arithmetic to accelerate the general HPC problem of solving Ax = b, where A is a large dense matrix, and the solution is needed in FP64 accuracy. While being a well known technique, its successful modification, software development, and adjustment to match architecture specifics, is challenging. For current manycore GPUs the challenges range from efficient parallelization to scaling, and using the FP16 arithmetic. Here, we address these challenges by showing how to algorithmically modify, develop high-performance implementations, and in general, how to use the FP16 arithmetic to significantly accelerate, as well as make more energy efficient, FP64-precision Ax = b solvers. One can reproduce our results as the developments will be made available through the MAGMA library. We quantify in
 practice the performance, and limitations of the approach stressing on the use of the Volta V100 Tensor Cores that provide additional FP16 performance boost},
   timestamp = {2018.08.27},
 }
@@ -4874,19 +4873,6 @@ practice the performance, and limitations of the approach stressing on the use o
   month        = {9},
   abstract     = {This paper introduces several frameworks for the design and implementation of high performance GPU kernels that target batch workloads with irregular sizes. Such workloads are ubiquitous in many scientific applications, including sparse direct solvers, astrophysics, and quantum chemistry. The paper addresses two main categories of frameworks, taking the Cholesky factorization as a case study. The first uses host-side kernel launches, and the second uses device-side launches. Within each category, different design options are introduced, with an emphasis on the advantages and the disadvantages of each approach. Our best performing design outperforms the state-of-the-art CPU implementation, scoring up to 4.7$\times$ speedup in double precision on a Pascal P100 GPU.},
   address      = {Waltham, MA},
-}
-
-@Online{Yang2018a,
-  author        = {Carl Yang and Aydin Buluç and John D. Owens},
-  title         = {Implementing Push-Pull Efficiently in GraphBLAS},
-  year          = {2018},
-  abstract      = {We factor Beamer's push-pull, also known as direction-optimized breadth-first-search (DOBFS) into 3 separable optimizations, and analyze them for generalizability, asymptotic speedup, and contribution to overall speedup. We demonstrate that masking is critical for high performance and can be generalized to all graph algorithms where the sparsity pattern of the output is known a priori. We show that these graph algorithm optimizations, which together constitute DOBFS, can be neatly and separably described using linear algebra and can be expressed in the GraphBLAS linear-algebra-based framework. We provide experimental evidence that with these optimizations, a DOBFS expressed in a linear-algebra-based graph framework attains competitive performance with state-of-the-art graph frameworks on the GPU and on a multi-threaded CPU, achieving 101 GTEPS on a Scale 22 RMAT graph.},
-  archiveprefix = {arXiv},
-  bibsource     = {dblp computer science bibliography, https://dblp.org},
-  biburl        = {https://dblp.org/rec/bib/journals/corr/abs-1804-03327},
-  eprint        = {arXiv:1804.03327},
-  eprinttype    = {arXiv},
-  timestamp     = {Mon, 13 Aug 2018 16:48:40 +0200},
 }
 
 @TechReport{Kaya2018,
@@ -5608,6 +5594,7 @@ The main contribution is a set of rules that helps in picking the best-performin
   author     = {Shane Barratt and Stephen Boyd},
   title      = {Least Squares Auto-Tuning},
   year       = {2019},
+  abstract   = {Least squares is by far the simplest and most commonly applied computational method in many fields. In almost all applications, the least squares objective is rarely the true objective. We account for this discrepancy by parametrizing the least squares problem and automatically adjusting these parameters using an optimization algorithm. We apply our method, which we call least squares auto-tuning, to data fitting.},
   eprint     = {arXiv:1904.05460},
   eprinttype = {arXiv},
 }
@@ -5748,7 +5735,7 @@ The main insight of this work is that the combination of data duplication and De
   abstract   = {This paper presents performance results comparing MPI-based implementations of the popular Conjugate Gradient (CG) method and several of its communication hiding (or “pipelined”) variants. Pipelined CG methods are designed to efficiently solve SPD linear systems on massively parallel distributed memory hardware, and typically display significantly improved strong scaling compared to classic CG. This increase in parallel performance is achieved by overlapping the global reduction phase (MPI_Iallreduce) required to compute the inner products in each iteration by (chiefly local) computational work such as the matrix-vector product as well as other global communication. This work includes a brief introduction to the deep pipelined CG method for readers that may be unfamiliar with the specifics of the method. A brief overview of implementation details provides the practical tools required for implementation of the algorithm. Subsequently, easily reproducible strong scaling results on the US Department of Energy (DoE) NERSC machine “Cori” (Phase I – Haswell nodes) on up to 1024 nodes with 16 MPI ranks per node are presented using an implementation of $p(l)$-CG that is available in the open source PETSc library. Observations on the staggering and overlap of the asynchronous, non-blocking global communication phases with communication and computational kernels are drawn from the experiments.},
 }
 
-@Article{Kong2019,
+@Article{Kong2019a,
   author     = {Fande Kong},
   title      = {Parallel memory-efficient all-at-once algorithms for the sparse matrix triple products in multigrid methods},
   journal    = {The International Journal of High Performance Computing Applications},
@@ -6101,18 +6088,6 @@ The main insight of this work is that the combination of data duplication and De
   timestamp     = {2019.06.16},
 }
 
-@Article{Yang2018c,
-  author        = {Yang, Carl and Buluc, Aydin and Owens, John D.},
-  title         = {Design Principles for Sparse Matrix Multiplication on the GPU},
-  year          = {2018},
-  month         = {3},
-  __markedentry = {[ap8213:6]},
-  abstract      = {We implement two novel algorithms for sparse-matrix dense-matrix multiplication (SpMM) on the GPU. Our algorithms expect the sparse input in the popular compressed-sparse-row (CSR) format and thus do not require expensive format conversion. While previous SpMM work concentrates on thread-level parallelism, we additionally focus on latency hiding with instruction-level parallelism and load-balancing. We show, both theoretically and experimentally, that the proposed SpMM is a better fit for the GPU than previous approaches. We identify a key memory access pattern that allows efficient access into both input and output matrices that is crucial to getting excellent performance on SpMM. By combining these two ingredients – (i) merge-based load-balancing and (ii) row-major coalesced memory access – we demonstrate a 3.6x peak speedup and a 23.5\% geomean speedup over state-of-the-art SpMM implementations on real-world datasets.},
-  archiveprefix = {"arXiv"},
-  primaryclass  = {cs.DC},
-  timestamp     = {2019.06.16},
-}
-
 @Article{Mohammadi2018a,
   author        = {Mahdi Soltan Mohammadi and Kazem Cheshmi and Ganesh Gopalakrishnan and Mary W. Hall and Maryam Mehri Dehnavi and Anand Venkat and Tomofumi Yuki and Michelle Mills Strout},
   title         = {Sparse Matrix Code Dependence Analysis Simplification at Compile Time},
@@ -6130,13 +6105,12 @@ The main insight of this work is that the combination of data duplication and De
 }
 
 @Article{Yang2018d,
-  author        = {Carl Yang and Aydin Bulu{\c{c}} and John D. Owens},
+  author        = {Carl Yang and Aydın Buluç and John D. Owens},
   title         = {Implementing Push-Pull Efficiently in GraphBLAS},
-  journal       = {CoRR},
   year          = {2018},
   volume        = {abs/1804.03327},
-  eprint        = {1804.03327},
-  url           = {http://arxiv.org/abs/1804.03327},
+  eprint        = {arXiv:1804.03327},
+  eprinttype    = {arXiv},
   __markedentry = {[ap8213:6]},
   abstract      = {We factor Beamer's push-pull, also known as direction-optimized breadth-first-search (DOBFS) into 3 separable optimizations, and analyze them for generalizability, asymptotic speedup, and contribution to overall speedup. We demonstrate that masking is critical for high performance and can be generalized to all graph algorithms where the sparsity pattern of the output is known a priori. We show that these graph algorithm optimizations, which together constitute DOBFS, can be neatly and separably described using linear algebra and can be expressed in the GraphBLAS linear-algebra-based framework. We provide experimental evidence that with these optimizations, a DOBFS expressed in a linear-algebra-based graph framework attains competitive performance with state-of-the-art graph frameworks on the GPU and on a multi-threaded CPU, achieving 101 GTEPS on a Scale 22 RMAT graph.},
   archiveprefix = {arXiv},
@@ -6335,4 +6309,696 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   abstract = {Deep Neural Networks (DNN) have reached an outstanding accuracy in the past years, often going beyond human abilities. Nowadays, DNNs are widely used in many Artificial Intelligence (AI) applications such as computer vision, natural language processing and autonomous driving. However, these incredible performance come at a high computational cost, requiring complex hardware platforms. Therefore, the need for dedicated hardware accelerators able to drastically speed up the execution by preserving a low-power attitude arise. This paper presents innovative techniques able to tackle matrix sparsity in convolutional DNNs due to non-linear activation functions. Developed architectures allow to skip unnecessary operations, like zero multiplications, without sacrificing accuracy or throughput and improving the energy efficiency. Such improvement could enhance the performance of embedded limited-budget battery applications, where cost-effective hardware, accuracy and duration are critical to expanding the deployment of AI.},
 }
 
+@Article{Davydov2019,
+  author        = {Davydov, Denis and Kronbichler, Martin},
+  title         = {Algorithms and data structures for matrix-free finite element operators with MPI-parallel sparse multi-vectors},
+  year          = {2019},
+  month         = {Jul},
+  eprint        = {arXiv:1907.01005},
+  eprinttype    = {arXiv},
+  abstract      = {Traditional solution approaches for problems in quantum mechanics scale as $O(M3)$, where $M$ is the number of electrons. Various methods have been proposed to address this issue and obtain linear scaling $O(M)$. One promising formulation is the direct minimization of energy. Such methods take advantage of physical localization of the solution, namely that the solution can be sought in terms of non-orthogonal orbitals with local support. In this work a numerically efficient implementation of sparse parallel vectors within the open-source finite element library deal.II is proposed. The main algorithmic ingredient is the matrix-free evaluation of the Hamiltonian operator by cell-wise quadrature. Based on an a-priori chosen support for each vector we develop algorithms and data structures to perform (i) matrix-free sparse matrix multivector products (SpMM), (ii) the projection of an operator onto a sparse sub-space (inner products), and (iii) post-multiplication of a sparse multivector with a square matrix. The node-level performance is analyzed using a roofline model. Our matrix-free implementation of finite element operators with sparse multivectors achieves the performance of 157 GFlop/s on Intel Cascade Lake architecture. Strong and weak scaling results are reported for a typical benchmark problem using quadratic and quartic finite element bases.},
+  adsnote       = {Provided by the SAO/NASA Astrophysics Data System},
+  adsurl        = {https://ui.adsabs.harvard.edu/abs/2019arXiv190701005D},
+  archiveprefix = {arXiv},
+  keywords      = {Computer Science - Mathematical Software, Computer Science - Data Structures and Algorithms, Mathematics - Numerical Analysis, Physics - Computational Physics},
+  primaryclass  = {cs.MS},
+}
+
+@Article{Choi2019a,
+  author   = {Choi, Dongjin and Jang, Jun-Gi and Kang, U},
+  title    = {S3CMTF: Fast, accurate, and scalable method for incomplete coupled matrix-tensor factorization},
+  journal  = {{PloS} one},
+  year     = {2019},
+  volume   = {14},
+  number   = {6},
+  issn     = {1932-6203},
+  doi      = {10.1371/journal.pone.0217316},
+  abstract = {How can we extract hidden relations from a tensor and a matrix data simultaneously in a fast, accurate, and scalable way? Coupled matrix-tensor factorization (CMTF) is an important tool for this purpose. Designing an accurate and efficient CMTF method has become more crucial as the size and dimension of real-world data are growing explosively. However, existing methods for CMTF suffer from lack of accuracy, slow running time, and limited scalability. In this paper, we propose S3CMTF, a fast, accurate, and scalable CMTF method. In contrast to previous methods which do not handle large sparse tensors and are not parallelizable, S3CMTF provides parallel sparse CMTF by carefully deriving gradient update rules. S3CMTF asynchronously updates partial gradients without expensive locking. We show that our method is guaranteed to converge to a quality solution theoretically and empirically. S3CMTF further boosts the performance by carefully storing intermediate computation and reusing them. We theoretically and empirically show that S3CMTF is the fastest, outperforming existing methods. Experimental results show that S3CMTF is up to 930$\times$ faster than existing methods while providing the best accuracy. S3CMTF shows linear scalability on the number of data entries and the number of cores. In addition, we apply S3CMTF to Yelp rating tensor data coupled with 3 additional matrices to discover interesting patterns.},
+}
+
+@InProceedings{Lee2019,
+  author    = {Lee, Chao-Lin and Chao, Chen-Ting and Lee, Jenq-Kuen and Huang, Chung-Wen and Hung, Ming-Yu},
+  title     = {Sparse-Matrix Compression Primitives with OpenCL Framework to Support Halide},
+  booktitle = {Proceedings of the International Workshop on OpenCL},
+  year      = {2019},
+  series    = {IWOCL'19},
+  publisher = {ACM},
+  location  = {Boston, MA, USA},
+  isbn      = {978-1-4503-6230-6},
+  pages     = {1--2},
+  doi       = {10.1145/3318170.3318179},
+  abstract  = {Halide and OpenCL now play important roles for heterogeneous multi-core computing. OpenCL provides vendor-level support and Halide provides domain-specific support such as vision processing and AI model (TVM Halide IR). Halide also provides flexible scheduling for applications on target machines. OpenCL plays a supporting role for Halide environments. In this work, we investigate the research issues in supporting sparse computation with Halide and their corresponding OpenCL support. We present sparse matrix compression primitives on Halide for sparse matrix matrix (SpMM) multiplication with OpenCL framework. Halide is a programming language designed to process image and array from numerous algorithms and scheduling primitives to achieve state-of-art performance including SIMD and heterogeneous computation. This paper proposed the implementation of sparse matrix compression for Halide scheduling primitives including COO, CSR, and hybrid CSR. The design of experiments includes Halide primitives for sparse matrix compression and matrix computations. The experimental result of computation with compressing matrix shows the performance are improved by up to 85\% compared to the baseline without compression.},
+  acmid     = {3318179},
+  address   = {New York, NY, USA},
+  articleno = {24},
+  keywords  = {Halide, OpenCL, Sparse Matrix},
+  numpages  = {2},
+}
+
+@InProceedings{Loe2019,
+  author     = {Jennifer A. Loe and Heidi K. Thornquist and Erik G. Boman},
+  title      = {Polynomial Preconditioned GMRES to Reduce Communication in Parallel Computing},
+  year       = {2019},
+  eprint     = {arXiv:1907.00072},
+  eprinttype = {arXiv},
+  abstract   = {Polynomial preconditioning with the GMRES minimal residual polynomial has the potential to greatly reduce orthogonalization costs, making it useful for communication reduction. We implement polynomial preconditioning in the Belos package from Trilinos and show how it can be effective in both serial and parallel implementations. We further show it is a communication-avoiding technique and is a viable option to CAGMRES for large-scale parallel computing.},
+}
+
+@Article{Grutzmacher2019,
+  author   = {Grützmacher, Thomas and Cojean, Terry and Flegar, Goran and Göbel, Fritz and Anzt, Hartwig},
+  title    = {A customized precision format based on mantissa segmentation for accelerating sparse linear algebra},
+  journal  = {Concurrency and Computation: Practice and Experience},
+  year     = {2019},
+  doi      = {10.1002/cpe.5418},
+  eprint   = {https://onlinelibrary.wiley.com/doi/pdf/10.1002/cpe.5418},
+  abstract = {Summary In this work, we pursue the idea of radically decoupling the floating point format used for arithmetic operations from the format used to store the data in memory. We complement this idea with a customized precision memory format derived by splitting the mantissa (significand) of standard IEEE formats into segments, such that values can be accessed faster if lower accuracy is acceptable. Combined with precision-aware algorithms that dynamically adapt the data access accuracy to the numerical requirements, the customized precision memory format can render attractive runtime savings without impacting the memory footprint of the data or the accuracy of the final result. In an experimental analysis using the adaptive precision Jacobi method on diagonalizable test problems, we assess the benefits of the mantissa-segmenting customized precision format on recent multi- and manycore architectures.},
+  keywords = {adaptive precision Jacobi, GPUs, mantissa segmentation, modular precision ecosystem, multiprecision algorithm, multicore},
+}
+
+@Article{Goldenberg2019,
+  author   = {Goldenberg, S. and Stathopoulos, A. and Romero, E.},
+  title    = {A Golub--Kahan Davidson Method for Accurately Computing a Few Singular Triplets of Large Sparse Matrices},
+  journal  = {{SIAM} Journal on Scientific Computing},
+  year     = {2019},
+  volume   = {41},
+  number   = {4},
+  pages    = {A2172-A2192},
+  doi      = {10.1137/18M1222004},
+  abstract = {Obtaining high accuracy singular triplets for large sparse matrices is a significant challenge, especially when searching for the smallest triplets. Due to the difficulty and size of these problems, efficient methods must function iteratively, with preconditioners, and under strict memory constraints. In this research, we present a Golub--Kahan Davidson method (GKD), which satisfies these requirements and includes features such as soft-locking with orthogonality guarantees, an inner correction equation similar to Jacobi--Davidson, locally optimal +k restarting, and the ability to find real zero singular values in both square and rectangular matrices. Additionally, our method achieves full accuracy while avoiding the augmented matrix, which often converges slowly for the smallest triplets due to the difficulty of interior eigenvalue problems. We describe our method in detail, including implementation issues that arise. Our experimental results confirm the efficiency and stability of our method over the current implementation of PHSVDS in the PRIMME software package.},
+}
+
+@Article{Choi2019,
+  author     = {Bosu Choi and Andrew Christlieb and Yang Wang},
+  title      = {Multiscale High-Dimensional Sparse Fourier Algorithms for Noisy Data},
+  eprint     = {arXiv:1907.03692},
+  eprinttype = {arXiv},
+  abstract   = {We develop an efficient and robust high-dimensional sparse Fourier algorithm for noisy samples. Earlier in the paper Multi-dimensional sublinear sparse Fourier algorithm (2016) [3], an efficient sparse Fourier algorithm with $O(ds log s)$ average-case runtime and $O(ds)$ sampling complexity under certain assumptions was developed for signals that are s-sparse and bandlimited in the d-dimensional Fourier domain, i.e. there are at most s energetic frequencies and they are in $[-N/2, N/2)^d \cap \mathbb{Z}^d$. However, in practice the measurements of signals often contain noise, and in some cases may only be nearly sparse in the sense that they are well approximated by the best s Fourier modes. In this paper, we propose a multiscale sparse Fourier algorithm for noisy samples that proves to be both robust against noise and efficient.},
+}
+
+@Article{Klowckiewicz2019,
+  author     = {Bazyl Klowckiewicz and Eric Darve},
+  title      = {Sparse hierarchical preconditioners using piecewise smooth approximations of eigenvectors},
+  year       = {2019},
+  eprint     = {arXiv:1907.0},
+  eprinttype = {arXiv},
+  abstract   = {When solving linear systems arising from PDE discretizations, iterative methods (such as Conjugate Gradient, GMRES, or MINRES) are often the only practical choice. To converge in a small number of iterations, however, they have to be coupled with an efficient preconditioner. The efficiency of the preconditioner depends largely on its accuracy on the eigenvectors corresponding to small eigenvalues, and unfortunately, black-box methods typically cannot guarantee sufficient accuracy on these eigenvectors. Thus, constructing the preconditioner becomes a very problemdependent task. We describe a hierarchical approximate factorization approach which addresses this issue by focusing on improving the accuracy on smooth eigenvectors (such eigenvectors typically correspond to the small eigenvalues). The improved accuracy is achieved by preserving the action of the factorized matrix on piecewise polynomial functions of the PDE domain. Based on the factorization, we propose a family of sparse preconditioners with $O (n)$ or $O (n log n)$ construction complexities. Our methods exhibit the optimal $O (n)$ solution times in benchmarks run on large elliptic problems of different types, arising for example in flow or mechanical simulations. In the case of the linear elasticity equation the preconditioners are exact on the near-kernel rigid body modes.},
+}
+
+@PhdThesis{Yang2019,
+  author      = {Yang, Carl Y.},
+  title       = {High-Performance Linear Algebra-based Graph Framework on the GPU},
+  institution = {University of California, Davis},
+  year        = {2019},
+  url         = {https://escholarship.org/uc/item/37j8j27d},
+  abstract    = {High-performance implementations of graph algorithms are challenging to implement on new parallel hardware such as GPUs, because of three challenges: (1) difficulty of coming up with graph building blocks, (2) load imbalance on parallel hardware, and (3) graph problems having low arithmetic ratio. To address these challenges, GraphBLAS is an innovative, on-going effort by the graph analytics community to propose building blocks based in sparse linear algebra, which will allow graph algorithms to be expressed in a performant, succinct, composable and portable manner. Initial research efforts in implementing GraphBLAS on GPUs has been promising, but performance still trails by an order of magnitude compared to state-of-the-art graph frameworks using the traditional graph-centric approach of describing operations on vertices or edges.\\
+This dissertation examines the performance challenges of a linear algebra-based approach to building graph frameworks and describes new design principles for overcoming these bottlenecks. Among the new design principles is making exploiting input sparsity a first-class citizen in the framework. This is an especially important optimization, because it allows users to write graph algorithms without specifying certain implementation details thus permitting the software backend to choose the optimal implementation based on the input sparsity. Exploiting output sparsity allows users to tell the backend which values of the output in a single vectorized computation they do not want computed. We examine when it is profitable to exploit this output sparsity to reduce computational complexity. Load-balancing is an important feature for balancing work amongst parallel workers. We describe the important load-balancing features for handling graphs with different characteristics.\\
+The design principles described in the thesis have been implemented in GraphBLAST, an open-source high-performance graph framework on GPU developed as part of this dissertation. It is notable for being the first graph framework based in linear algebra to get comparable or faster performance compared to the traditional, vertex-centric backends. The benefits of design principles described in this thesis have been shown to be important for single GPU, and it will grow in importance when it serves as a building block for distributed implementation in the future and as a single GPU backend for higher-level languages such as Python. A graph framework based in linear algebra not only improves performance of existing graph algorithms, but in quickly prototyping new algorithms as well.},
+}
+
+@Article{Camacho2019,
+  author     = {Camacho, J. and Smilde, A. K. and Saccenti, E. and Westerhuis, J. A.},
+  title      = {All Sparse PCA Models Are Wrong, But Some Are Useful. Part I: Computation of Scores, Residuals and Explained Variance},
+  year       = {2019},
+  eprint     = {arXiv:1907.03989},
+  eprinttype = {arXiv},
+  abstract   = {Sparse Principal Component Analysis (sPCA) is a popular matrix factorization approach based on Principal Component Analysis (PCA) that combines variance maximization and sparsity with the ultimate goal of improving data interpretation. When moving from PCA to sPCA, there are a number of implications that the practitioner needs to be aware of. A relevant one is that scores and loadings in sPCA may not be orthogonal. For this reason, the traditional way of computing scores, residuals and variance explained that is used in the classical PCA cannot directly be applied to sPCA models. This also affects how sPCA components should be visualized. In this paper we illustrate this problem both theoretically and numerically using simulations for several state-ofthe-art sPCA algorithms, and provide proper computation of the different elements mentioned. We show that sPCA approaches present disparate and limited performance when modeling noisefree, sparse data. In a follow-up paper, we discuss the theoretical properties that lead to this problem.},
+}
+
+@Article{Bertsimas2019,
+  author     = {Dimitris Bertsimas and Bartolomeo Stellato},
+  title      = {Online Mixed-Integer Optimization in Milliseconds},
+  eprint     = {arXiv:1907.02206},
+  eprinttype = {arXiv},
+  abstract   = {We propose a method to solve online mixed-integer optimization (MIO) problems at very high speed using machine learning. By exploiting the repetitive nature of online optimization, we are able to greatly speedup the solution time. Our approach encodes the optimal solution into a small amount of information denoted as strategy using the Voice of Optimization framework proposed in [BS18]. In this way the core part of the optimization algorithm becomes a multiclass classification problem which can be solved very quickly. In this work we extend that framework to real-time and high-speed applications focusing on parametric mixed-integer quadratic optimization (MIQO). We propose an extremely fast online optimization algorithm consisting of a feedforward neural network (NN) evaluation and a linear system solution where the matrix has already been factorized. Therefore, this online approach does not require any solver nor iterative algorithm. We show the speed of the proposed method both in terms of total computations required and measured execution time. We estimate the number of floating point operations (flops) required to completely recover the optimal solution as a function of the problem dimensions. Compared to state-of-the-art MIO routines, the online running time of our method is very predictable and can be lower than a single matrix factorization time. We benchmark our method against the state-ofthe-art solver Gurobi obtaining from two to three orders of magnitude speedups on benchmarks with real-world data.},
+  timestamp  = {2019.07.09},
+}
+
+@InBook{Bollhofer2019,
+  author     = {Bollhöfer, Matthias and Schenk, Olaf and Janalík, Radim and Hamm, Steve and Gullapalli, Kiran},
+  title      = {State-of-The-Art Sparse Direct Solvers},
+  year       = {2019},
+  eprint     = {arXiv:1907.05309},
+  eprinttype = {arXiv},
+  abstract   = {In this chapter we will give an insight into modern sparse elimination methods. These are driven by a preprocessing phase based on combinatorial algorithms which improve diagonal dominance, reduce fill-in and improve concurrency to allow for parallel treatment. Moreover, these methods detect dense submatrices which can be handled by dense matrix kernels based on multi-threaded level-3 BLAS. We will demonstrate for problems arising from circuit simulation how the improvement in recent years have advanced direct solution methods significantly},
+}
+
+@Article{Alappat2019,
+  author     = {Christie Alappat and Georg Hager and Olaf Schenk and Jonas Thies and Achim Basermann and Alan R. Bishop and Holger Fehske and Gerhard Wellein},
+  title      = {A Recursive Algebraic Coloring Technique for Hardware-Efficient Symmetric Sparse Matrix-Vector Multiplication},
+  year       = {2019},
+  eprint     = {arXiv:1907.06487},
+  eprinttype = {arXiv},
+  abstract   = {The symmetric sparse matrix-vector multiplication (SymmSpMV) is an important building block for many numerical linear algebra kernel operations or graph traversal applications. Parallelizing SymmSpMV on today's multicore platforms with up to 100 cores is difficult due to the need to manage conflicting updates on the result vector. Coloring approaches can be used to solve this problem without data duplication, but existing coloring algorithms do not take load balancing and deep memory hierarchies into account, hampering scalability and full-chip performance. In this work, we propose the recursive algebraic coloring engine (RACE), a novel coloring algorithm and open-source library implementation, which eliminates the shortcomings of previous coloring methods in terms of hardware efficiency and parallelization overhead. We describe the level construction, distance-k coloring, and load balancing steps in RACE, use it to parallelize SymmSpMV, and compare its performance on 31 sparse matrices with other state-of-the-art coloring techniques and Intel MKL on two modern multicore processors. RACE outperforms all other approaches substantially and behaves in accordance with the roofline model. Outliers are discussed and analyzed in detail. While we focus on SymmSpMV in this paper, our algorithm and software is applicable to any sparse matrix operation with data dependencies that can be resolved by distance-k coloring.},
+}
+
+@PhdThesis{Shi2019,
+  author      = {Yang Shi},
+  title       = {Efficient Tensor Operations via Compression and Parallel Computation},
+  institution = {University of California, Irvine},
+  year        = {2019},
+  url         = {https://escholarship.org/uc/item/2wm4k3sn},
+  abstract    = {Linear algebra is the foundation of machine learning, especially for handling big data. We want to extract useful information that can represent the behavior of the data. For data with underlying known structures, it is straightforward to apply algorithms that maintain that structure. For instance, singular value decomposition (SVD) is one way to approximate lowrank matrices. The generalized SVD, tensor decomposition, is the crux of model estimation for tensors. However, not all data has a trivial structure. Multi-modality data that contains information from different sources can be complex and hard to extract the structure. A data-independent randomized algorithm, such as sketching, is the solution for this case. Under both scenarios, the information extraction process may be statistically challenging as the problems are non-convex optimization problems. More importantly, the large size and the high-dimensionality of the data have been significant obstacles in discovering hidden variables and summarizing them. Thus, how to improve high-dimensional data computation efficiency is vitally important.\\ This thesis contains the theoretical analysis for learning the underlying information from high-dimensional structured or non-structured data via tensor operations such as tensor decomposition and tensor sketching. It is easy to consider tensors as multi-dimensional vectors or matrices and apply vector/matrix-based algorithms to find the solution. However, these methods omit multi-dimensionality of the data and can be computational inefficient than considering the tensor as a whole. We show the superiority of our approximation algorithms over these methods from computation and memory efficiency point of views.\\ This thesis also discusses optimizing tensor operation computations from the high-performance computing aspect. Conventional methods treat tensors as flattened matrices or vectors. Operations between tensors may require lots of permutations and reshapes. We propose new tensor algebra computation routines that avoid the prepossessing as much as possible. The value of this approach and its applications are recognized by NVIDIA. The proposed interface exists in the CUBLAS 8.0.},
+}
+
+@PhdThesis{Falco2019,
+  author      = {Aurélien Falco},
+  title       = {Bridging the Gap Between H-Matrices and Sparse Direct Methods for the Solution of Large Linear Systems},
+  institution = {Université de Bordeaux},
+  year        = {2019},
+  abstract    = {Many physical phenomena may be studied through modeling and numerical simulations, commonplace in scientific applications. To be tractable on a computer, appropriated discretization techniques must be considered, which often lead to a set of linear equations whose features depend on the discretization techniques. Among them, the Finite Element Method usually leads to sparse linear systems whereas the Boundary Element Method leads to dense linear systems. The size of the resulting linear systems depends on the domain where the studied physical phenomenon develops and tends to become larger and larger as the performance of the computer facilities increases. For the sake of numerical robustness, the solution techniques based on the factorization of the matrix associated with the linear system are the methods of choice when affordable. In that respect, hierarchical methods based on low-rank compression have allowed a drastic reduction of the computational requirements for the solution of dense linear systems over the last two decades. For sparse linear systems, their application remains a challenge which has been studied by both the community of hierarchical matrices and the community of sparse matrices. On the one hand, the first step taken by the community of hierarchical matrices most often takes advantage of the sparsity of the problem through the use of nested dissection. While this approach benefits from the hierarchical structure, it is not, however, as efficient as sparse solvers regarding the exploitation of zeros and the structural separation of zeros from non-zeros. On the other hand, sparse factorization is organized so as to lead to a sequence of smaller dense operations, enticing sparse solvers to use this property and exploit compression techniques from hierarchical methods in order to reduce the computational cost of these elementary operations. Nonetheless, the globally hierarchical structure may be lost if the compression of hierarchical methods is used only locally on dense submatrices. We here review the main techniques that have been employed by both those communities, trying to highlight their common properties and their respective limits with a special emphasis on studies that have aimed to bridge the gap between them. With these observations in mind, we propose a class of hierarchical algorithms based on the symbolic analysis of the structure of the factors of a sparse matrix. These algorithms rely on a symbolic information to cluster and construct a hierarchical structure coherent with the non-zero pattern of the matrix. Moreover, the resulting hierarchical matrix relies on low-rank compression for the reduction of the memory consumption of large submatrices as well as the time to solution of the solver. We also compare multiple ordering techniques based on geometrical or topological properties. Finally, we open the discussion to a coupling between the Finite Element Method and the Boundary Element Method in a unified computational framework. },
+}
+
+@Article{Massias2019,
+  author     = {Mathurin Massias and Samuel Vaiter and Alexandre Gramfort and Joseph Salmon},
+  title      = {Dual Extrapolation for Sparse Generalized Linear Models},
+  year       = {2019},
+  eprint     = {arXiv:1907.05830},
+  eprinttype = {arXiv},
+  abstract   = {Generalized Linear Models (GLM) form a wide class of regression and classification models, where prediction is a function of a linear combination of the input variables. For statistical inference in high dimension, sparsity inducing regularizations have proven to be useful while offering statistical guarantees. However, solving the resulting optimization problems can be challenging: even for popular iterative algorithms such as coordinate descent, one needs to loop over a large number of variables. To mitigate this, techniques known as screening rules and working sets diminish the size of the optimization problem at hand, either by progressively removing variables, or by solving a growing sequence of smaller problems. For both techniques, significant variables are identified thanks to convex duality arguments. In this paper, we show that the dual iterates of a GLM exhibit a Vector AutoRegressive (VAR) behavior after sign identification, when the primal problem is solved with proximal gradient descent or cyclic coordinate descent. Exploiting this regularity, one can construct dual points that offer tighter certificates of optimality, enhancing the performance of screening rules and helping to design competitive working set algorithms.},
+}
+
+@InProceedings{Behnezhad2019,
+  author    = {Behnezhad, Soheil and Brandt, Sebastian and Derakhshan, Mahsa and Fischer, Manuela and Hajiaghayi, MohammadTaghi and Karp, Richard M. and Uitto, Jara},
+  title     = {Massively Parallel Computation of Matching and MIS in Sparse Graphs},
+  booktitle = {Proceedings of the 2019 {ACM} Symposium on Principles of Distributed Computing},
+  year      = {2019},
+  series    = {PODC '19},
+  publisher = {ACM},
+  location  = {Toronto ON, Canada},
+  isbn      = {978-1-4503-6217-7},
+  pages     = {481--490},
+  doi       = {10.1145/3293611.3331609},
+  abstract  = {The Massively Parallel Computation (MPC) model serves as a common abstraction of many modern large-scale parallel computation frameworks and has recently gained a lot of importance, especially in the context of classic graph problems. In this work, we mainly consider maximal matching and maximal independent set problems in the MPC model.\\
+  These problems are known to admit efficient MPC algorithms if the space available per machine is near-linear in the number n of nodes. This is not only often significantly more than what we can afford, but also allows for easy if not trivial solutions for sparse graphs -- which are common in real-world large-scale graphs. We are, therefore, interested in the low-memory MPC model, where the space per machine is restricted to be strongly sublinear, that is, $n^\delta$ for any constant $0 < \delta < 1$. \\
+  We parametrize our algorithms by the arboricity $\lambda$ of the input graph. Our key ingredient is a degree reduction technique that reduces these problems in graphs with arboricity $\lambda$ to the corresponding problems in graphs with maximum degree $poly(\lambda, log n)$ in $O(log^2 log n)$ rounds, giving rise to $O(\sqrt{log \lambda} \cdot log log \lambda + log 2 log n)$-round algorithms.\\
+  Our result is particularly interesting for graphs with $poly log n$ arboricity as for such graphs, we get $O(log^2 log n)$-round algorithms. This covers most natural families of sparse graphs and almost exponentially improves over previous algorithms that all required log $O(1)$ n rounds in this regime of MPC.\\
+  Finally, our maximal matching algorithm can be employed to obtain a $(1+\epsilon)$-approximate maximum cardinality matching, a $(2+\epsilon)$-approximate maximum weighted matching, as well as a 2-approximate minimum vertex cover in essentially the same number of rounds.},
+  acmid     = {3331609},
+  address   = {New York, NY, USA},
+  keywords  = {approximation algorithms, arboricity, massively parallel computation, matching, maximal independent set, sparse graphs, sublinear memory},
+  numpages  = {10},
+}
+
+@InProceedings{Chang2019,
+  author    = {Chang, Yi-Jun and Fischer, Manuela and Ghaffari, Mohsen and Uitto, Jara and Zheng, Yufan},
+  title     = {The Complexity of {$\Delta +1$} Coloring in Congested Clique, Massively Parallel Computation, and Centralized Local Computation},
+  booktitle = {Proceedings of the 2019 ACM Symposium on Principles of Distributed Computing},
+  year      = {2019},
+  series    = {PODC '19},
+  publisher = {ACM},
+  location  = {Toronto ON, Canada},
+  isbn      = {978-1-4503-6217-7},
+  pages     = {471--480},
+  doi       = {10.1145/3293611.3331607},
+  url       = {http://doi.acm.org/10.1145/3293611.3331607},
+  abstract  = {In this paper, we present new randomized algorithms that improve the complexity of the classic $(\Delta+1)$-coloring problem, and its generalization $(\Delta+1)$-list-coloring, in three well-studied models of distributed, parallel, and centralized computation: Distributed Congested Clique: We present an $O(1)$-round randomized algorithm for $(\Delta + 1)$-list-coloring in the congested clique model of distributed computing. This settles the asymptotic complexity of this problem. It moreover improves upon the $O(log^\star \Delta)$-round randomized algorithms of Parter and Su [DISC'18] and $O((log log \Delta) \cdot log^\star \Delta)$-round randomized algorithm of Parter [ICALP'18].\\ Massively Parallel Computation: We present a randomized $(\Delta + 1)$-list-coloring algorithm with round complexity $O(\sqrt{log log n})$ in the Massively Parallel Computation (MPC) model with strongly sublinear memory per machine. This algorithm uses a memory of $O(n\alpha)$ per machine, for any desirable constant $\alpha > 0$, and a total memory of $\tilde{O} (m)$, where m is the number of edges in the graph. Notably, this is the first coloring algorithm with sublogarithmic round complexity, in the sublinear memory regime of MPC. For the quasilinear memory regime of MPC, an $O(1)$-round algorithm was given very recently by Assadi et al. [SODA'19].\\ Centralized Local Computation: We show that $(\Delta + 1)$-list-coloring can be solved by a randomized algorithm with query complexity $\Delta O(1) \dots O(log n)$, in the centralized local computation model. The previous state of the art for $(\Delta+1)$-list-coloring in the centralized local computation model are based on simulation of known LOCAL algorithms. The deterministic $O(\sqrt{\Delta poly log \Delta} + log^\star n)$-round LOCAL algorithm of Fraigniaud et al. [FOCS'16] can be implemented in the centralized local computation model with query complexity $\Delta^O(\sqrt{ \Delta poly log \Delta}) \dots O(log^\star n)$; the randomized $O(log^\star \Delta) + 2^O(\sqrt{log log n})$-round LOCAL algorithm of Chang et al. [STOC'18] can be implemented in the centralized local computation model with query complexity $\Delta^O(log\star \Delta) \dots O(log n)$.},
+  acmid     = {3331607},
+  address   = {New York, NY, USA},
+  keywords  = {centralized local computation, coloring, congested clique, massively parallel computation},
+  numpages  = {10},
+}
+
+@InProceedings{Kurzak2019,
+  author    = {Kurzak, Jakub and Tsai, Yaohung M. and Gates, Mark and Abdelfattah, Ahmad and Dongarra, Jack},
+  title     = {Massively Parallel Automated Software Tuning},
+  booktitle = {Proceedings of the 48th International Conference on Parallel Processing},
+  year      = {2019},
+  series    = {ICPP 2019},
+  publisher = {ACM},
+  location  = {Kyoto, Japan},
+  isbn      = {978-1-4503-6295-5},
+  pages     = {92:1--92:10},
+  doi       = {10.1145/3337821.3337908},
+  url       = {http://doi.acm.org/10.1145/3337821.3337908},
+  abstract  = {This article presents an implementation of a distributed autotuning engine developed as part of the Bench-testing OpenN Software Autotuning Infrastructure project. The system is geared towards performance optimization of computational kernels for graphics processing units, and allows for the deployment of vast autotuning sweeps to massively parallel machines. The software implements dynamic work scheduling to distributed-memory resources and takes advantage of multithreading for parallel compilation and dispatches kernel launches to multiple accelerators. This paper lays out the main design principles of the system and discusses the basic mechanics of the initial implementation. Preliminary performance results are presented, encountered challenges are discussed, and the future directions are outlined.},
+  acmid     = {3337908},
+  address   = {New York, NY, USA},
+  articleno = {92},
+  keywords  = {automated software tuning, graphics processing unit},
+  numpages  = {10},
+}
+
+@InProceedings{Argueta2019,
+  author    = {Arturo Argueta and David Chiang},
+  title     = {Accelerating Sparse Matrix Operations in Neural Networks on Graphics Processing Units},
+  booktitle = {Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics},
+  year      = {2019},
+  location  = {Florence, IT},
+  pages     = {6215--6224},
+  abstract  = {Graphics Processing Units (GPUs) are commonly used to train and evaluate neural networks efficiently. While previous work in deep learning has focused on accelerating operations on dense matrices/tensors on GPUs, efforts have concentrated on operations involving sparse data structures. Operations using sparse structures are common in natural language models at the input and output layers, because these models operate on sequences over discrete alphabets. We present two new GPU algorithms: one at the input layer, for multiplying a matrix by a few-hot vector (generalizing the more common operation of multiplication by a one-hot vector) and one at the output layer, for a fused softmax and top-N selection (commonly used in beam search). Our methods achieve speedups over state-of-theart parallel GPU baselines of up to 7$\times$ and 50$\times$, respectively. We also illustrate how our methods scale on different GPU architectures.},
+  timestamp = {2019.08.02},
+}
+
+@InProceedings{Li2019b,
+  author    = {Li, Ming and Hawrylak, Peter and Hale, John},
+  title     = {Combining OpenCL and MPI to Support Heterogeneous Computing on a Cluster},
+  booktitle = {Proceedings of the Practice and Experience in Advanced Research Computing on Rise of the Machines (Learning)},
+  year      = {2019},
+  series    = {PEARC '19},
+  publisher = {ACM},
+  location  = {Chicago, IL, USA},
+  isbn      = {978-1-4503-7227-5},
+  pages     = {5:1--5:6},
+  doi       = {10.1145/3332186.3333059},
+  url       = {http://doi.acm.org/10.1145/3332186.3333059},
+  abstract  = {This paper presents an implementation of a heterogeneous programming model which combines Open Computing Language (OpenCL) and Message Passing Interface (MPI). The model is applied to solving a Markov decision process (MDP) with value iteration method. The performance test is conducted on a high performance computing cluster. At peak performance, the model is able to achieve a 57$\times$ speedup over a serial implementation. For an extremely large input MDP, which has 1,000,000 states, the obtained speedup is still over 12$\times$, showing that this heterogeneous programming model can solve MDPs more efficiently than the serial solver does.},
+  acmid     = {3333059},
+  address   = {New York, NY, USA},
+  articleno = {5},
+  keywords  = {HPC, MDP, MPI, OpenCL, heterogeneous computing, parallelism},
+  numpages  = {6},
+}
+
+@PhdThesis{Mamooler2019,
+  author      = {Mamooler, Parisa},
+  title       = {The domain decomposition method of Bank and Jimack as an optimized Schwarz method},
+  institution = {University of Geneva},
+  year        = {2019},
+  abstract    = {The aim of this thesis is to introduce the Bank-Jimack domain decomposition method and study its convergence behavior. We are interested in understanding what the precise contribution of the outer coarse mesh is to the convergence behavior of the domain decomposition method proposed by Bank and Jimack. We show for a two subdomain decomposition that the outer coarse mesh can be interpreted as computing an approximation to the optimal transmission condition represented by the Dirichlet to Neumann map, and thus the method of Bank and Jimack can be viewed as an optimized Schwarz method, i.e. a Schwarz method that uses Robin or higher order transmission conditions instead of theclassical Dirichlet ones.},
+  timestamp   = {2019.08.17},
+}
+
+@Article{Kong2019,
+  author      = {Fande Kong},
+  title       = {A parallel monolithic multilevel Schwarz preconditioner for the neutron transport criticality calculations with a nonlinear diffusion acceleration method},
+  year        = {2019},
+  eprint      = {1907.12590v1},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {The multigroup neutron transport criticality calculations using modern supercomputers have been widely employed in a nuclear reactor analysis for studying whether or not a system is self-sustaining. However, the design and development of an efficient parallel algorithm for the transport criticality calculations is a challenging task especially when the number of processor cores is large and the unstructured mesh is adopted since both the compute time and the memory usage need to be taken into consideration. In this paper, we study a monolithic multilevel Schwarz preconditioner for the transport criticality calculations using the nonlinear diffusion acceleration (NDA). In NDA, the linear systems of equations arising from the discretizations of the nonlinear diffusion equations and the transport equations need to be efficiently solved. To achieve this goal, we propose a monolithically coupled approach equipped with several important ingredients; e.g., subspace-based coarsening, aggressive coarsening and strength matrix thresholding. The proposed monolithic multilevel method is capable of efficiently handling the linear systems of equations for both the transport system and the diffusion system. In the multilevel method, the construction of coarse spaces is nontrivial and expensive. We propose a subspace-based coarsening algorithm to resolve this issue by exploring the matrix structures of the transport equations and the nonlinear diffusion equations. We numerically demonstrate that the monolithic multilevel preconditioner with the subspace-based coarsening algorithm is twice as fast as that equipped with a full space based coarsening approach on thousands of processor cores for an unstructured mesh neutron transport problem with billions of unknowns.},
+  file        = {online:http\://arxiv.org/pdf/1907.12590v1:PDF},
+  keywords    = {math.NA, cs.NA},
+}
+
+@InProceedings{Regunta2019,
+  author    = {S. C. Regunta and S. H. Tondomker and K. Kothapalli},
+  title     = {BRICS – Efficient Techniques for Estimating the Farness-Centrality in Parallel},
+  booktitle = {2019 IEEE International Parallel and Distributed Processing Symposium Workshops},
+  year      = {2019},
+  series    = {IPDPSW'19},
+  month     = {5},
+  pages     = {645--654},
+  doi       = {10.1109/IPDPSW.2019.00110},
+  abstract  = {In this paper, we study scalable parallel algorithms for estimating the farness-centrality value of the nodes in a given undirected and connected graph. Our algorithms consider approaches that are more suitable for sparse graphs. To this end, we propose four optimization techniques based on removing redundant nodes, removing identical nodes, removing chain nodes, and making use of decomposition based on the biconnected components of the input graph. We test our techniques on a collection of real-world graphs for the time taken and the average error percentage. We further analyze the applicability of our techniques on various classes of real-world graphs. We suggest why certain techniques work better on certain classes of graphs.},
+  keywords  = {Optimization;Measurement;Parallel algorithms;Scalability;Silicon;Social networking (online);Estimation;closeness centrality;parallel;real world graphs;estimation},
+}
+
+@Article{Carson2019,
+  author      = {Erin C. Carson},
+  title       = {An Adaptive $s$-step Conjugate Gradient Algorithm with Dynamic Basis Updating},
+  year        = {2019},
+  date        = {2019-08-12},
+  eprint      = {1908.04081v1},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {The adaptive $s$-step CG algorithm is a solver for sparse, symmetric positive definite linear systems designed to reduce the synchronization cost per iteration while still achieving a user-specified accuracy requirement. In this work, we improve the adaptive $s$-step conjugate gradient algorithm by use of iteratively updated estimates of the largest and smallest Ritz values, which give approximations of the largest and smallest eigenvalues of $A$, using a technique due to Meurant and Tichý [G. Meurant and P. Tichý, Numer. Algs. (2018), pp.~1--32]. The Ritz value estimates are used to dynamically update parameters for constructing Newton or Chebyshev polynomials so that the conditioning of the $s$-step bases can be continuously improved throughout the iterations. These estimates are also used to automatically set a variable related to the ratio of the sizes of the error and residual, which was previously treated as an input parameter. We show through numerical experiments that in many cases the new algorithm improves upon the previous adaptive $s$-step approach both in terms of numerical behavior and reduction in number of synchronizations.},
+  file        = {online:http\://arxiv.org/pdf/1908.04081v1:PDF},
+  keywords    = {math.NA, cs.DC, cs.NA},
+}
+
+@Article{Yang2019a,
+  author      = {Carl Yang and Aydın Buluç and John D. Owens},
+  title       = {GraphBLAST: A High-Performance Linear Algebra-based Graph Framework on the GPU},
+  year        = {2019},
+  eprint      = {1908.01407v2},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {High-performance implementations of graph algorithms are challenging to implement on new parallel hardware such as GPUs, because of three challenges: (1) difficulty of coming up with graph building blocks, (2) load imbalance on parallel hardware, and (3) graph problems having low arithmetic intensity. To address these challenges, GraphBLAS is an innovative, on-going effort by the graph analytics community to propose building blocks based in sparse linear algebra, which will allow graph algorithms to be expressed in a performant, succinct, composable and portable manner. In this paper, we examine the performance challenges of a linear algebra-based approach to building graph frameworks and describe new design principles for overcoming these bottlenecks. Among the new design principles is exploiting input sparsity, which allows users to write graph algorithms without specifying push and pull direction. Exploiting output sparsity allows users to tell the backend which values of the output in a single vectorized computation they do not want computed. Load-balancing is an important feature for balancing work amongst parallel workers. We describe the important load-balancing features for handling graphs with different characteristics. The design principles described in this paper have been implemented in "GraphBLAST", the first open-source linear algebra-based graph framework on GPU targeting high-performance computing. The results show that on a single GPU, GraphBLAST has on average at least an order of magnitude speedup over previous GraphBLAS implementations SuiteSparse and GBTL, comparable performance to the fastest GPU hardwired primitives and shared-memory graph frameworks Ligra and Gunrock, and better performance than any other GPU graph framework, while offering a simpler and more concise programming model.},
+  file        = {online:http\://arxiv.org/pdf/1908.01407v2:PDF},
+  keywords    = {cs.DC},
+}
+
+@Article{Iwashita2019,
+  author      = {Takeshi Iwashita and Senxi Li and Takeshi Fukaya},
+  title       = {Hierarchical Block Multi-Color Ordering: A New Parallel Ordering Method for Vectorization and Parallelization of the Sparse Triangular Solver in the ICCG Method},
+  year        = {2019},
+  eprint      = {1908.00741v1},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {In this paper, we propose a new parallel ordering method to vectorize and parallelize the sparse triangular solver, which is called hierarchical block multi-color ordering. In this method, the parallel forward and backward substitutions can be vectorized while preserving the advantages of block multi-color ordering, that is, fast convergence and fewer thread synchronizations. To evaluate the proposed method in a parallel ICCG (Incomplete Cholesky Conjugate Gradient) solver, numerical tests were conducted using five test matrices on three types of computational nodes. The numerical results indicate that the proposed method outperforms the conventional block and nodal multi-color ordering methods in 13 out of 15 test cases, which confirms the effectiveness of the method.},
+  file        = {online:http\://arxiv.org/pdf/1908.00741v1:PDF},
+  keywords    = {cs.DC},
+}
+
+@Article{Kong2019b,
+  author   = {Qian Kong and Yan-Fei Jing and Ting-Zhu Huang and Heng-Bin An},
+  title    = {Acceleration of the Scheduled Relaxation Jacobi method: promising strategies for solving large, sparse linear systems},
+  journal  = {Journal of Computational Physics},
+  year     = {2019},
+  pages    = {108862},
+  issn     = {0021-9991},
+  doi      = {https://doi.org/10.1016/j.jcp.2019.108862},
+  url      = {http://www.sciencedirect.com/science/article/pii/S0021999119305467},
+  abstract = {The main aim of this paper is to develop two algorithms based on the Scheduled Relaxation Jacobi (SRJ) method [J. Comput. Phys., 274 (2014), pp. 695-708] for solving problems arising from the finite-difference discretization of elliptic partial differential equations on large grids. These two algorithms are the Alternating Anderson-Scheduled Relaxation Jacobi (AASRJ) method by utilizing Anderson mixing after each SRJ iteration cycle and the Minimal Residual Scheduled Relaxation Jacobi (MRSRJ) method by minimizing residual after each SRJ iteration cycle, respectively. Through numerical experiments, we show that AASRJ is competitive with the optimal version of the SRJ method [J. Comput. Phys., 332 (2017), pp. 446-460] in most problems we considered here, and MRSRJ outperforms SRJ in all cases. The properties of AASRJ and MRSRJ are demonstrated. Both of them are promising strategies for solving large, sparse linear systems while maintaining the simplicity of the Jacobi method.},
+  keywords = {Acceleration, The Scheduled Relaxation Jacobi method, Anderson mixing},
+}
+
+@Article{Usman2019,
+  author    = {Sardar Usman and Rashid Mehmood and Iyad Katib and Aiiad Albeshri and Saleh M. Altowaijri},
+  title     = {ZAKI: A Smart Method and Tool for Automatic Performance Optimization of Parallel SpMV Computations on Distributed Memory Machines},
+  journal   = {Mobile Networks and Applications},
+  year      = {2019},
+  doi       = {10.1007/s11036-019-01318-3},
+  abstract  = {SpMV is a vital computing operation of many scientific, engineering, economic and social applications, increasingly being used to develop timely intelligence for the design and management of smart societies. Several factors affect the performance of SpMV computations, such as matrix characteristics, storage formats, software and hardware platforms. The complexity of the computer systems is on the rise with the increasing number of cores per processor, different levels of caches, processors per node and high speed interconnect. There is an ever-growing need for new optimization techniques and efficient ways of exploiting parallelism. In this paper, we propose ZAKI, a data-driven, machine-learning approach and tool, to predict the optimal number of processes for SpMV computations of an arbitrary sparse matrix on a distributed memory machine. The aim herein is to allow application scientists to automatically obtain the best configuration, and hence the best performance, for the execution of SpMV computations. We train and test the tool using nearly 2000 real world matrices obtained from 45 application domains including computational fluid dynamics (CFD), computer vision, and robotics. The tool uses three machine learning methods, decision trees, random forest, gradient boosting, and is evaluated in depth. A discussion on the applicability of our proposed tool to energy efficiency optimization of SpMV computations is given. This is the first work where the sparsity structure of matrices have been exploited to predict the optimal number of processes for a given matrix in distributed memory environments by using different base and ensemble machine learning methods.},
+  timestamp = {2019.08.17},
+}
+
+@Article{Peng2019,
+  author      = {Shaoyi Peng and Sheldon X. -D. Tan},
+  title       = {GLU3.0: Fast GPU-based Parallel Sparse LU Factorization for Circuit Simulation},
+  year        = {2019},
+  eprint      = {1908.00204v2},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {In this article, we propose a new GPU-based sparse LU factorization method, called GLU3.0, solves the aforementioned problems. First, it introduces a much more efficient double-U dependency detection algorithm to make the detection much simpler. Second, we observe that the potential parallelism is different as the matrix factorization goes on. We then develop three different modes of GPU kernel to adapt to different stages to accommodate the computing task changes in the factorization. As a result, the new GLU can dynamically allocate GPU blocks and wraps based on the number of columns in a level to better balance the computing demands and resources during the LU factorization process. Experimental results on circuit matrices from University of Florida Sparse Matrix Collection (UFL) show that the GLU3.0 can deliver 2-3 orders of magnitude speedup over GLU2.0 for the data dependency detection. Furthermore, GLU3.0 achieve 13.0$\times$ (arithmetic mean) and 6.7$\times$ (geometric mean) speedup over GLU2.0 and 7.1$\times$ (arithmetic mean) and 4.8$\times$ (geometric mean) over the recently proposed enhanced GLU2.0 sparse LU solver on the same set of circuit matrices.},
+  file        = {online:http\://arxiv.org/pdf/1908.00204v2:PDF},
+  keywords    = {cs.DC, cs.DS},
+}
+
+@InProceedings{Ribizel2019,
+  author    = {T. Ribizel and H. Anzt},
+  title     = {Approximate and Exact Selection on GPUs},
+  booktitle = {2019 IEEE International Parallel and Distributed Processing Symposium Workshops},
+  year      = {2019},
+  series    = {IPDPSW'19},
+  month     = {May},
+  pages     = {471--478},
+  doi       = {10.1109/IPDPSW.2019.00088},
+  abstract  = {We present a novel algorithm for parallel selection on GPUs. The algorithm requires no assumptions on the input data distribution, and has a much lower recursion depth compared to many state-of-the-art algorithms. We implement the algorithm for different GPU generations, always using the respectively-available low-level communication features, and assess the performance on server-line hardware. The computational complexity of our SampleSelect algorithm is comparable to specialized algorithms designed for - and exploiting the characteristics of - "pleasant" data distributions. At the same time, as the SampleSelect does not work on the actual values but the ranks of the elements only, it is robust to the input data and can complete significantly faster for adversarial data distributions. Additionally to the exact SampleSelect, we address the use case of approximate selection by designing a variant that radically reduces the computational cost while preserving high approximation accuracy.},
+  keywords  = {Approximation algorithms;Sorting;Indexes;Kernel;Graphics processing units;Partitioning algorithms;Hardware;parallel selection algorithm;GPU;kth order statistics;approximate threshold selection},
+}
+
+@InProceedings{Xie2019a,
+  author    = {Xie, Jiaming and Liang, Yun},
+  title     = {SPART: Optimizing CNNs by Utilizing Both Sparsity of Weights and Feature Maps},
+  booktitle = {Advanced Parallel Processing Technologies},
+  year      = {2019},
+  editor    = {Yew, Pen-Chung and Stenström, Per and Wu, Junjie and Gong, Xiaoli and Li, Tao},
+  publisher = {Springer International Publishing},
+  isbn      = {978-3-030-29611-7},
+  pages     = {71--85},
+  abstract  = {Intense convolution computation and great memory requirement in CNNs constraint their wider deployments and applications. Although both the weights and feature maps in CNNs can be sparse, directly mapping sparse convolution to spGEMM in HPC domain fails to improve the actual performance. Besides, existing sparse formats like CSR are not suitable for encoding the sparse feature maps because convolution operates across rows.},
+  address   = {Cham},
+}
+
+@InProceedings{Anzt2019b,
+  author    = {Hartwig Anzt and Goran Flegar},
+  title     = {Are we Doing the Right Thing? A Critical Analysis of the Academic {HPC} Community},
+  booktitle = {2019 {IEEE} International Parallel and Distributed Processing Symposium Workshops},
+  year      = {2019},
+  series    = {IPDPSW'19},
+  publisher = {{IEEE}},
+  month     = {5},
+  doi       = {10.1109/ipdpsw.2019.00122},
+  abstract  = {Like in any other research field, academically surviving in the High Performance Computing (HPC) community generally requires to publish papers, in the bast case many of them and in high-ranked journals or at top-tier conferences. As a result, the number of scientific papers published each year in this relatively small community easily outnumbers what a single researcher can read. At the same time, many of the proposed and analyzed strategies, algorithms, and hardware-optimized implementations never make it beyond the prototype stage, as they are abandoned once they served the single purpose of yielding (another) publication. In a time and field where high-quality manpower is a scarce resource, this is extremely inefficient. In this position paper we promote a radical paradigm shift towards accepting high-quality software patches to community software packages as legitimate conference contributions. In consequence, the reputation and appointability of researchers is no longer based on the classical scientific metrics, but on the quality and documentation of open source software contributions -- effectively improving and accelerating the collaborative development of community software.},
+}
+
+@InProceedings{Garstka2019,
+  author    = {Michael Garstka and Mark Cannon and Paul Goulart},
+  title     = {{COSMO}: A conic operator splitting method for large convex problems},
+  booktitle = {2019 18th European Control Conference ({ECC})},
+  year      = {2019},
+  publisher = {{IEEE}},
+  month     = {6},
+  doi       = {10.23919/ecc.2019.8796161},
+  abstract  = {This paper describes the Conic Operator Splitting Method (COSMO), an operator splitting algorithm for convex optimisation problems with quadratic objective function and conic constraints. At each step the algorithm alternates between solving a quasi-definite linear system with a constant coefficient matrix and a projection onto convex sets. The solver is able to exploit chordal sparsity in the problem data and to detect infeasible problems. The low per-iteration computational cost makes the method particularly efficient for large problems, e.g. semidefinite programs in portfolio optimisation, graph theory, and robust control. Our Julia implementation is open-source, extensible, integrated into the Julia optimisation ecosystem and performs well on a variety of large convex problem classes.},
+}
+
+@Article{Stramondo2019,
+  author    = {Giulio Stramondo and Cătălin Bogdan Ciobanu and Cees Laat and Ana Lucia Varbanescu},
+  title     = {Designing and building application-centric parallel memories},
+  journal   = {Concurrency and Computation: Practice and Experience},
+  year      = {2019},
+  month     = {8},
+  doi       = {10.1002/cpe.5485},
+  abstract  = {Memory bandwidth is a critical performance factor for many applications and architectures. Intuitively, a parallel memory could be a good solution for any bandwidth-limited application, yet building application-centric custom parallel memories remains a challenge. In this work, we present a comprehensive approach to tackle this challenge and demonstrate how to systematically design and implement application-centric parallel memories. Specifically, our approach (1) analyzes the application memory access traces to extract parallel accesses, (2) configures our parallel memory for maximum performance, and (3) builds the actual application-centric memory system. We further provide a simple performance prediction model for the constructed memory system. We evaluate our approach with two sets of experiments. First, we demonstrate how our parallel memories provide performance benefits for a broad range of memory access patterns. Second, we prove the feasibility of our approach and validate our performance model by implementing and benchmarking the designed parallel memories using FPGA hardware and a sparse version of the STREAM benchmark.},
+  publisher = {Wiley},
+}
+
+@InProceedings{Nie2019a,
+  author    = {Jing Nie and Chunlei Zhang and Dan Zou and Fei Xia and Lina Lu and Xiang Wang and Fei Zhao},
+  title     = {Adaptive Sparse Matrix-Vector Multiplication on {CPU}-{GPU} Heterogeneous Architecture},
+  booktitle = {Proceedings of the 2019 3rd High Performance Computing and Cluster Technologies Conference},
+  year      = {2019},
+  series    = {HPCCT'19},
+  publisher = {{ACM} Press},
+  doi       = {10.1145/3341069.3341072},
+  abstract  = {SpMV is the core algorithm in solving the sparse linear equations, which is widely used in many research and engineering application field. GPU is the most common coprocessor in high-performance computing domain, and has already been proven to researchers the practical value in accelerating various algorithms. A lot of reletead work has been carried out to optimize parallel SpMV on CPU-GPU platforms, which mainly focuses on reducing the computing overhead on the GPU, including branch divergence and cache missing, and little attention was paid to the overall efficiency of the heterogeneous platform. In this paper, we describe the design and implementation of an adaptive sparse matrix-vector multiplication (SpMV) on CPU-GPU heterogeneous architecture. We propose a dynamic task scheduling framework for CPU-GPU platform to improve the utilization of both CPU and GPU. A double buffering scheme is also presented to hide the data transfer overhead between CPU and GPU. Two deeply optimized SpMV kernels are deployed for CPU and GPU respectively. The evaluation on typical sparse matrices indicates that the proposed algorithm obtains both significant performance increase and adaptability to different types of sparse matrices.},
+}
+
+@Article{Silvestri2019,
+  author      = {Francesco Silvestri and Flavio Vella},
+  title       = {A Computational Model for Tensor Core Units},
+  date        = {2019-08-19},
+  eprint      = {arXiv:1908.06649v1},
+  eprintclass = {cs.DS},
+  eprinttype  = {arXiv},
+  abstract    = {To respond to the need of efficient training and inference of deep neural networks, a pletora of domain-specific hardware architectures have been introduced, such as Google Tensor Processing Units and NVIDIA Tensor Cores. A common feature of these architectures is a hardware circuit for efficiently computing a dense matrix multiplication of a given small size. In order to broad the class of algorithms that exploit these systems, we propose a computational model, named TCU model, that captures the ability to natively multiply small matrices. We then use the TCU model for designing fast algorithms for linear algebra problems, including dense and sparse matrix multiplication, FFT, integer multiplication, and polynomial evaluation. We finally highlight a relation between the TCU model and the external memory model.},
+  file        = {:http\://arxiv.org/pdf/1908.06649v1:PDF},
+  keywords    = {cs.DS, cs.AR, cs.DC, cs.LG},
+}
+
+@InProceedings{Besta2017,
+  author    = {Maciej Besta and Michał Podstawski and Linus Groner and Edgar Solomonik and Torsten Hoefler},
+  title     = {To Push or To Pull},
+  booktitle = {Proceedings of the 26th International Symposium on High-Performance Parallel and Distributed Computing},
+  year      = {2017},
+  series    = {HPDC'17},
+  publisher = {{ACM} Press},
+  doi       = {10.1145/3078597.3078616},
+  abstract  = {We reduce the cost of communication and synchronization in graph processing by analyzing the fastest way to process graphs: pushing the updates to a shared state or pulling the updates to a private state. We investigate the applicability of this push-pull dichotomy to various algorithms and its impact on complexity, performance, and the amount of used locks, atomics, and reads/writes. We consider 11 graph algorithms, 3 programming models, 2 graph abstractions, and various families of graphs. The conducted analysis illustrates surprising differences between push and pull variants of different algorithms in performance, speed of convergence, and code complexity; the insights are backed up by performance data from hardware counters. We use these findings to illustrate which variant is faster for each algorithm and to develop generic strategies that enable even higher speedups. Our insights can be used to accelerate graph processing engines or libraries on both massively-parallel shared-memory machines as well as distributed-memory systems.},
+}
+
+@InProceedings{Zheng2019a,
+  author    = {Zheng, Tianqi and Zhang, Zhibin and Cheng, Xueqi},
+  title     = {SilverChunk: An Efficient In-Memory Parallel Graph Processing System},
+  booktitle = {Database and Expert Systems Applications},
+  year      = {2019},
+  editor    = {Hartmann, Sven and Küng, Josef and Chakravarthy, Sharma and Anderst-Kotsis, Gabriele and Tjoa, A Min and Khalil, Ismail},
+  publisher = {Springer International Publishing},
+  isbn      = {978-3-030-27618-8},
+  pages     = {222--236},
+  abstract  = {One of the main constructs of graph processing is the two-level nested loop structure. Parallelizing nested loops is notoriously unfriendly to both CPU and memory access when dealing with real graph data due to its skewed distribution. To address this problem, we present SilverChunk, a high performance graph processing system. SilverChunk builds edge chunks of equal size from original graphs and unfolds nested loops statically in pull-based executions (VR-Chunk) and dynamically in push-based executions (D-Chunk). VR-Chunk slices the entire graph into several chunks. A virtual vertex is generated pointing to the first half of each sliced edge list so that no edge list lives in more than one chunk. D-Chunk builds its chunk list via binary searching over the prefix degree sum array of the active vertices. Each chunk has a local buffer for conflict-free maintenance of the next frontier. By changing the units of scheduling from edges to chunks, SilverChunk achieves better CPU and memory utilization. SilverChunk provides a high level programming interface combined with multiple optimization techniques to help developing efficient graph processing applications. Our evaluation results reveal that SilverChunk outperforms state-of-the-art shared-memory graph processing systems by up to $4\times4$, including Gemini, Grazelle, etc. Moreover, it has lower memory overheads and nearly zero pre-processing time.},
+}
+
+@Article{Williams-Young2019,
+  author      = {David B. Williams-Young and Paul G. Beckman and Chao Yang},
+  title       = {A Shift Selection Strategy for Parallel Shift-Invert Spectrum Slicing in Symmetric Self-Consistent Eigenvalue Computation},
+  year        = {2019},
+  date        = {2019-08-16},
+  eprint      = {arXiv:1908.06043},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {The central importance of large scale eigenvalue problems in scientific computation necessitates the development massively parallel algorithms for their solution. Recent advances in dense numerical linear algebra have enabled the routine treatment of eigenvalue problems with dimensions on the order of hundreds of thousands on the world's largest supercomputers. In cases where dense treatments are not feasible, Krylov subspace methods offer an attractive alternative due to the fact that they do not require storage of the problem matrices. However, demonstration of scalability of either of these classes of eigenvalue algorithms on computing architectures capable of expressing excessive parallelism is non-trivial due to communication requirements and serial bottlenecks, respectively. In this work, we introduce the SISLICE method: a parallel shift-invert algorithm for the solution of the symmetric self-consistent field (SCF) eigenvalue problem. The SISLICE method drastically reduces the communication requirement of current parallel shift-invert eigenvalue algorithms through various shift selection and migration techniques based on density of states estimation and k-means clustering, respectively. This work demonstrates the robustness and parallel performance of the SISLICE method on a representative set of SCF eigenvalue problems and outlines research directions which will be explored in future work.},
+  keywords    = {math.NA, cs.DC, cs.NA, physics.comp-ph},
+}
+
+@Article{Sid-Lakhdar2019,
+  author      = {Wissam M. Sid-Lakhdar and Mohsen Mahmoudi Aznaveh and Xiaoye S. Li and James W. Demmel},
+  title       = {Multitask and Transfer Learning for Autotuning Exascale Applications},
+  date        = {2019-08-15},
+  eprint      = {arXiv:1908.05792},
+  eprintclass = {cs.LG},
+  eprinttype  = {arXiv},
+  abstract    = {Multitask learning and transfer learning have proven to be useful in the field of machine learning when additional knowledge is available to help a prediction task. We aim at deriving methods following these paradigms for use in autotuning, where the goal is to find the optimal performance parameters of an application treated as a black-box function. We show comparative results with state-of-the-art autotuning techniques. For instance, we observe an average $1.5\times$ improvement of the application runtime compared to the OpenTuner and HpBandSter autotuners. We explain how our approaches can be more suitable than some state-of-the-art autotuners for the tuning of any application in general and of expensive exascale applications in particular.},
+  keywords    = {cs.LG, cs.DC, stat.ML},
+}
+
+@Article{Karypis1998,
+  author    = {George Karypis and Vipin Kumar},
+  title     = {Multilevelk-way Partitioning Scheme for Irregular Graphs},
+  journal   = {Journal of Parallel and Distributed Computing},
+  year      = {1998},
+  volume    = {48},
+  number    = {1},
+  month     = {jan},
+  pages     = {96--129},
+  doi       = {10.1006/jpdc.1997.1404},
+  abstract  = {In this paper, we present and study a class of graph partitioning algorithms that reduces the size of the graph by collapsing vertices and edges, we find a $k$-way partitioning of the smaller graph, and then we uncoarsen and refine it to construct a $k$-way partitioning for the original graph. These algorithms compute a $k$-way partitioning of a graph $G= (V,E)$ in $O(|E|)$ time, which is faster by a factor of $O(log k)$ than previously proposed multilevel recursive bisection algorithms. A key contribution of our work is in finding a high-quality and computationally inexpensive refinement algorithm that can improve upon an initialk-way partitioning. We also study the effectiveness of the overall scheme for a variety of coarsening schemes. We present experimental results on a large number of graphs arising in various domains including finite element methods, linear programming, VLSI, and transportation. Our experiments show that this new scheme produces partitions that are of comparable or better quality than those produced by the multilevel bisection algorithm and requires substantially smaller time. Graphs containing up to 450,000 vertices and 3,300,000 edges can be partitioned in 256 domains in less than 40 s on a workstation such as SGI's Challenge. Compared with the widely used multilevel spectral bisection algorithm, our new algorithm is usually two orders of magnitude faster and produces partitions with substantially smaller edge-cut.},
+  publisher = {Elsevier {BV}},
+}
+
+@Article{Buluc2013,
+  author      = {Aydın Buluç and Henning Meyerhenke and Ilya Safro and Peter Sanders and Christian Schulz},
+  title       = {Recent Advances in Graph Partitioning},
+  date        = {2013-11-13},
+  eprint      = {arXiv:1311.3144},
+  eprintclass = {cs.DS},
+  eprinttype  = {arXiv},
+  abstract    = {We survey recent trends in practical algorithms for balanced graph partitioning together with applications and future research directions.},
+  file        = {:http\://arxiv.org/pdf/1311.3144v3:PDF},
+  keywords    = {cs.DS, cs.DC, math.CO},
+}
+
+@InProceedings{Herrmann2017,
+  author    = {J. Herrmann and J. Kho and B. Uçar and K. Kaya and Ü. V. Çatalyürek},
+  title     = {Acyclic Partitioning of Large Directed Acyclic Graphs},
+  booktitle = {2017 IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing},
+  year      = {2017},
+  series    = {CCGRID'17},
+  month     = {5},
+  pages     = {371--380},
+  doi       = {10.1109/CCGRID.2017.101},
+  abstract  = {Finding a good partition of a computational directed acyclic graph associated with an algorithm can help find an execution pattern improving data locality, conduct an analysis of data movement, and expose parallel steps. The partition is required to be acyclic, i.e., the inter-part edges between the vertices from different parts should preserve an acyclic dependency structure among the parts. In this work, we adopt the multilevel approach with coarsening, initial partitioning, and refinement phases for acyclic partitioning of directed acyclic graphs and develop a direct k-way partitioning scheme. To the best of our knowledge, no such scheme exists in the literature. To ensure the acyclicity of the partition at all times, we propose novel and efficient coarsening and refinement heuristics. The quality of the computed acyclic partitions is assessed by computing the edge cut, the total volume of communication between the parts, and the critical path latencies. We use the solution returned by well-known undirected graph partitioners as a baseline to evaluate our acyclic partitioner, knowing that the space of solution is more restricted in our problem. The experiments are run on large graphs arising from linear algebra applications.},
+}
+
+@Article{Herrmann2019,
+  author   = {Herrmann, J. and Özkaya, M. and Uçar, B. and Kaya, K. and Çatalyürek, Ü.},
+  title    = {Multilevel Algorithms for Acyclic Partitioning of Directed Acyclic Graphs},
+  journal  = {SIAM Journal on Scientific Computing},
+  year     = {2019},
+  volume   = {41},
+  number   = {4},
+  pages    = {A2117--A2145},
+  doi      = {10.1137/18M1176865},
+  abstract = {We investigate the problem of partitioning the vertices of a directed acyclic graph into a given number of parts. The objective function is to minimize the number or the total weight of the edges having end points in different parts, which is also known as the edge cut. The standard load balancing constraint of having an equitable partition of the vertices among the parts should be met. Furthermore, the partition is required to be acyclic; i.e., the interpart edges between the vertices from different parts should preserve an acyclic dependency structure among the parts. In this work, we adopt the multilevel approach with coarsening, initial partitioning, and refinement phases for acyclic partitioning of directed acyclic graphs. We focus on two-way partitioning (sometimes called bisection), as this scheme can be used in a recursive way for multiway partitioning. To ensure the acyclicity of the partition at all times, we propose novel and efficient coarsening and refinement heuristics. The quality of the computed acyclic partitions is assessed by computing the edge cut. We also propose effective ways to use the standard undirected graph partitioning methods in our multilevel scheme. We perform a large set of experiments on a dataset consisting of (i) graphs coming from an application and (ii) some others corresponding to matrices from a public collection. We report significant improvements compared to the current state of the art.},
+}
+
+@Article{Nagasaka2019,
+  author    = {Yusuke Nagasaka and Satoshi Matsuoka and Ariful Azad and Ayd{\i}n Bulu{\c{c}}},
+  title     = {Performance optimization, modeling and analysis of sparse matrix-matrix products on multi-core and many-core processors},
+  journal   = {Parallel Computing},
+  year      = {2019},
+  month     = {8},
+  pages     = {102545},
+  doi       = {10.1016/j.parco.2019.102545},
+  abstract  = {Sparse matrix-matrix multiplication (SpGEMM) is a computational primitive that is widely used in areas ranging from traditional numerical applications to recent big data analysis and machine learning. Although many SpGEMM algorithms have been proposed, hardware specific optimizations for multi- and many-core processors are lacking and a detailed analysis of their performance under various use cases and matrices is not available. We firstly identify and mitigate multiple bottlenecks with memory management and thread scheduling on Intel Xeon Phi (Knights Landing or KNL). Specifically targeting many-core processors, we develop a hash-table-based algorithm and optimize a heap-based shared-memory SpGEMM algorithm. We examine their performance together with other publicly available codes. Different from the literature, our evaluation also includes use cases that are representative of real graph algorithms, such as multi-source breadth-first search or triangle counting. Our hash-table and heap-based algorithms are showing significant speedups from libraries in the majority of the cases while different algorithms dominate the other scenarios with different matrix size, sparsity, compression factor and operation type. We wrap up in-depth evaluation results and make a recipe to give the best SpGEMM algorithm for target scenario. We build the performance model for hash-table and heap-based algorithms, which supports the recipe. A critical finding is that hash-table-based SpGEMM gets a significant performance boost if the nonzeros are not required to be sorted within each row of the output matrix. Finally, we integrate our implementations into a large-scale protein clustering code named HipMCL, accelerating its SpGEMM kernel by up to 10X and achieving an overall performance boost for the whole HipMCL application by 2.6$\times$.},
+  publisher = {Elsevier {BV}},
+}
+
+@Article{Jia2018,
+  author      = {Zhe Jia and Marco Maggioni and Benjamin Staiger and Daniele P. Scarpazza},
+  title       = {Dissecting the {NVIDIA} {Volta} {GPU} Architecture via Microbenchmarking},
+  date        = {2018-04-18},
+  eprint      = {arXiv:1804.06826v1},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {Every year, novel NVIDIA GPU designs are introduced. This rapid architectural and technological progression, coupled with a reluctance by manufacturers to disclose low-level details, makes it difficult for even the most proficient GPU software designers to remain up-to-date with the technological advances at a microarchitectural level. To address this dearth of public, microarchitectural-level information on the novel NVIDIA GPUs, independent researchers have resorted to microbenchmarks-based dissection and discovery. This has led to a prolific line of publications that shed light on instruction encoding, and memory hierarchy's geometry and features at each level. Namely, research that describes the performance and behavior of the Kepler, Maxwell and Pascal architectures. In this technical report, we continue this line of research by presenting the microarchitectural details of the NVIDIA Volta architecture, discovered through microbenchmarks and instruction set disassembly. Additionally, we compare quantitatively our Volta findings against its predecessors, Kepler, Maxwell and Pascal.},
+  file        = {:http\://arxiv.org/pdf/1804.06826v1:PDF},
+  keywords    = {cs.DC, cs.PF},
+}
+
+@Article{Jia2019,
+  author      = {Zhe Jia and Marco Maggioni and Jeffrey Smith and Daniele Paolo Scarpazza},
+  title       = {Dissecting the {NVidia} {Turing} {T4} {GPU} via Microbenchmarking},
+  date        = {2019-03-18},
+  eprint      = {arXiv:1903.07486v1},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {In 2019, the rapid rate at which GPU manufacturers refresh their designs, coupled with their reluctance to disclose microarchitectural details, is still a hurdle for those software designers who want to extract the highest possible performance. Last year, these very reasons motivated us to dissect the Volta GPU architecture using microbenchmarks. The introduction in August 2018 of Turing, NVidia's latest architecture, pressed us to update our study. In this report, we examine Turing and compare it quantitatively against previous NVidia GPU generations. Specifically, we study the T4 GPU: a low-power board aiming at inference applications. We describe its improvements against its inference-oriented predecessor: the P4 GPU based on the Pascal architecture. Both T4 and P4 GPUs achieve significantly higher frequency-per-Watt figures than their full-size counterparts. We study the performance of the T4's TensorCores, finding a much higher throughput on low-precision operands than on the P4 GPU. We reveal that Turing introduces new instructions that express matrix math more succinctly. We map Turing's instruction space, finding the same encoding as Volta, and additional instructions. We reveal that the Turing TU104 chip has the same memory hierarchy depth as the Volta GV100; cache levels sizes on the TU104 are frequently twice as large as those found on the Pascal GP104. We benchmark each constituent of the T4 memory hierarchy and find substantial overall performance improvements over its P4 predecessor. We studied how clock throttling affects compute-intensive workloads that hit power or thermal limits. Many of our findings are novel, published here for the first time. All of them can guide high-performance software developers get closer to the GPU's peak performance.},
+  file        = {:http\://arxiv.org/pdf/1903.07486v1:PDF},
+  keywords    = {cs.DC},
+}
+
+@Article{Charara2019,
+  author     = {Charara, Ali and Keyes, David and Ltaief, Hatem},
+  title      = {Batched Triangular Dense Linear Algebra Kernels for Very Small Matrix Sizes on GPUs},
+  journal    = {ACM Transactions on Mathematcal Software},
+  year       = {2019},
+  volume     = {45},
+  number     = {2},
+  month      = may,
+  pages      = {15:1--15:28},
+  issn       = {0098-3500},
+  doi        = {10.1145/3267101},
+  abstract   = {Batched dense linear algebra kernels are becoming ubiquitous in scientific applications, ranging from tensor contractions in deep learning to data compression in hierarchical low-rank matrix approximation. Within a single API call, these kernels are capable of simultaneously launching up to thousands of similar matrix computations, removing the expensive overhead of multiple API calls while increasing the occupancy of the underlying hardware. A challenge is that for the existing hardware landscape (x86, GPUs, etc.), only a subset of the required batched operations is implemented by the vendors, with limited support for very small problem sizes. We describe the design and performance of a new class of batched triangular dense linear algebra kernels on very small data sizes (up to 256) using single and multiple GPUs. By deploying recursive formulations, stressing the register usage, maintaining data locality, reducing threads synchronization, and fusing successive kernel calls, the new batched kernels outperform existing state-of-the-art implementations.},
+  acmid      = {3267101},
+  address    = {New York, NY, USA},
+  articleno  = {15},
+  issue_date = {June 2019},
+  keywords   = {KBLAS, batched BLAS kernels, dense linear algebra, hardware accelerators, recursive formulation},
+  numpages   = {28},
+  publisher  = {ACM},
+}
+
+@Article{Higham2019,
+  author     = {Higham, Nicholas and Mary, Theo},
+  title      = {Solving Block Low-Rank Linear Systems by {LU} Factorization is Numerically Stable},
+  year       = {2019},
+  eprint     = {MIMS EPrint:2019.15},
+  eprinttype = {MIMS EPrint},
+  url        = {http://eprints.maths.manchester.ac.uk/2727/1/paper.pdf},
+abstract   = {Block low-rank (BLR) matrices possess a blockwise low-rank property that can be exploited to reduce the complexity of numerical linear algebra algorithms. The impact of these lowrank approximations on the numerical stability of the algorithms in floating-point arithmetic has not previously been analyzed. We present rounding error analysis for the solution of a linear system by LU factorization of BLR matrices. Assuming that a stable pivoting scheme is used, we prove backward stability: the relative backward error is bounded by a modest constant times $\epsilon$, where the low-rank threshold $\epsilon$ is the parameter controlling the accuracy of the blockwise low-rank approximations. In addition to this key result, our analysis offers three new insights into the numerical behavior of BLR algorithms. First, we compare the use of a global or local low-rank threshold and find that a global one should be preferred. Second, we show that performing intermediate recompressions during the factorization can significantly reduce its cost without compromising numerical stability. Third, we consider different BLR factorization variants and determine the compress–factor–update (CFU) variant to be the best. Tests on a wide range of matrices from various real-life applications show that the predictions from the analysis are realized in practice.},
+}
+
+@Article{Blanchard2019,
+  author      = {Pierre Blanchard and Desmond J. Higham and Nicholas J. Higham},
+  title       = {Accurate Computation of the Log-Sum-Exp and Softmax Functions},
+  date        = {2019-09-08},
+  eprint      = {arXiv:1909.03469},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {Evaluating the log-sum-exp function or the softmax function is a key step in many modern data science algorithms, notably in inference and classification. Because of the exponentials that these functions contain, the evaluation is prone to overflow and underflow, especially in low precision arithmetic. Software implementations commonly use alternative formulas that avoid overflow and reduce the chance of harmful underflow, employing a shift or another rewriting. Although mathematically equivalent, these variants behave differently in floating-point arithmetic. We give rounding error analyses of different evaluation algorithms and interpret the error bounds using condition numbers for the functions. We conclude, based on the analysis and numerical experiments, that the shifted formulas are of similar accuracy to the unshifted ones and that the shifted softmax formula is typically more accurate than a division-free variant.},
+  file        = {:http\://arxiv.org/pdf/1909.03469v1:PDF},
+  keywords    = {math.NA, cs.NA, 97N20, G.1.3; I.2.8; G.3; G.4},
+}
+
+@InBook{Nowak2019,
+  author    = {Nowak, Ivo and Muts, Pavlo and Hendrix, Eligius M. T.},
+  title     = {Multi-Tree Decomposition Methods for Large-Scale Mixed Integer Nonlinear Optimization},
+  booktitle = {Large Scale Optimization in Supply Chains and Smart Manufacturing: Theory and Applications},
+  year      = {2019},
+  editor    = {Velásquez-Bermúdez, J. and Khakifirooz, M. and Fathi, M.},
+  publisher = {Springer International Publishing},
+  isbn      = {978-3-030-22788-3},
+  pages     = {27--58},
+  doi       = {10.1007/978-3-030-22788-3_2},
+  abstract  = {Most industrial optimization problems are sparse and can be formulated as block-separable mixed-integer nonlinear programmingMixed integer nonlinear programming(MINLP) problems, defined by linking low-dimensional sub-problems by (linear) coupling constraints. Decomposition methods solve a block-separable MINLP by alternately solving master problems and sub-problems. In practice, decomposition methods are sometimes the only possibility to compute high-quality solutions of large-scale optimization problems. However, efficient implementations may require expert knowledge and problem-specific features. Recently, there is renewed interest in making these methods accessible to general users by developing generic decomposition frameworks and modelling support. The focus of this chapter is on so-called multi-tree decomposition methods, which iteratively approximate the feasible area without using a single (global) branch-and-bound tree, i.e. branch-and-bound is only used for solving sub-problems. After an introduction, we describe first outer approximation (OA) decomposition methods, Outer approximationincluding the adaptive, multivariate partitioning (AMP)Adaptive, Multivariate Partitioning (AMP) algorithmand the novel decomposition-based outer approximation (DECOA) algorithmDecomposition-based outer approximation (DECOA). This is followed by a description of multi-tree methods using a reduced master problem for solving large-scale industrial optimization problems. The first method to be described applies parallel column generationColumn generation(CG) and iterative fixing for solving nonconvex transport optimization problems with several hundred millions of variables and constraints. The second method is based on a novel approach combining CG and compact outer approximation. The last methodology to be discussed is the general Benders decomposition methodBenders decomposition methodfor globally solving large nonconvex stochastic programs using a reduced mixed-integer programming (MIP) master problem.},
+  address   = {Cham},
+}
+
+@TechReport{Shaiek2019,
+  author      = {Hejer Shaiek and Stanimire Tomov and Alan Ayala and Azzam Haidar and Jack Dongarra},
+  title       = {{GPUDirect} {MPI} Communications and Optimizations to Accelerate {FFTs} on Exascale Systems},
+  institution = {ICL},
+  year        = {2019},
+  type        = {Extended Abstract},
+  number      = {icl-ut-19-06},
+  month       = {9},
+  abstract    = {Fast Fourier transforms (FFTs) are used in applications ranging from molecular dynamics and spectrum estimation to machine learn- ing, fast convolution and correlation, signal modulation, wireless multimedia applications, and others. However, FFTs are memory bound, and therefore, to accelerate them, it is crucial to avoid and optimize the FFTs communications. To this end, we present a 3-D FFT design for distributed graphics processing unit (GPU) systems that: (1) efficiently uses GPUs high bandwidth, (2) reduces global communications algorithmically, when possible, and (3) employs GPUDirect technologies as well as MPI optimizations in the development of high-performance FFTs for large-scale GPU-accelerated systems. We show that these developments and optimizations lead to very good strong scalability and a performance that is close to 90\% of the theoretical peak.},
+  journal     = {EuroMPI'19 Posters, Zurich, Switzerland},
+  keywords    = {CUDA-Aware MPI, ECP, FFT, FFT-ECP, gpu, GPUDirect},
+}
+
+@Article{Cheng2019,
+  author   = {Wanyou Cheng and Yu-Hong Dai},
+  title    = {An active set Newton-CG method for {$\ell_1$} optimization},
+  journal  = {Applied and Computational Harmonic Analysis},
+  year     = {2019},
+  issn     = {1063-5203},
+  doi      = {10.1016/j.acha.2019.08.005},
+  url      = {http://www.sciencedirect.com/science/article/pii/S1063520318300459},
+  abstract = {In this paper, we investigate the active set identification technique of ISTA and provide some good properties. An active set Newton-CG method is then proposed for $\ell_1$ optimization. Under appropriate conditions, we show that the proposed method is globally convergent with some nonmonotone line search. The numerical comparisons with several state-of-art methods demonstrate the efficiency of the proposed method.},
+  keywords = {optimization, Shrinkage operator, Barzilai-Borwein method, Newton-CG method},
+}
+
+@PhdThesis{Ramesh2019,
+  author      = {Ramesh, Chinthala},
+  title       = {Hardware-Software Co-Design Accelerators for Sparse BLAS},
+  institution = {Centre for Nano Science and Engineering (CeNSE), Indian Institute of Science, Bangalore},
+  year        = {2019},
+  eprint      = {http://etd.iisc.ac.in/handle/2005/4276},
+  abstract    = {Sparse Basic Linear Algebra Subroutines (Sparse BLAS) is an important library. Sparse BLAS includes three levels of subroutines. Level 1, Level2 and Level 3 Sparse BLAS routines. Level 1 Sparse BLAS routines do computations over sparse vector and spare/dense vector. Level 2 deals with sparse matrix and vector operations. Level 3 deals with sparse matrix and dense matrix operations. The computations of these Sparse BLAS routines on General Purpose Processors (GPPs) not only suffer from less utilization of hardware resources but also takes more compute time than the workload due to poor data locality of sparse vector/matrix storage formats. In the literature, tremendous efforts have been put into software to improve these Sparse BLAS routines performance on GPPs. GPPs best suit for applications with high data locality, whereas Sparse BLAS routines operate on applications with less data locality hence, GPPs performance is poor. Various Custom Function Units (Hardware Accelerators) are proposed in the literature and are proved to be efficient than soft wares which tried to accelerate Sparse BLAS subroutines. Though existing hardware accelerators improved the Sparse BLAS performance compared to software Sparse BLAS routines, there is still lot of scope to improve these accelerators. This thesis describes both the existing software and hardware software co-designs (HW/SW co-design) and identifies the limitations of these existing solutions. We propose a new sparse data representation called Sawtooth Compressed Row Storage (SCRS) and corresponding SpMV and SpMM algorithms. SCRS based SpMV and SpMM are performing better than existing software solutions. Even though SCRS based SpMV and SpMM algorithms perform better than existing solutions, they still could not reach theoretical peak performance. The knowledge gained from the study of limitations of these existing solutions including the proposed SCRS based SpMV and SpMM is used to propose new HW/SW co-designs. Software accelerators are limited by the hardware properties of GPPs, and GPUs itself, hence, we propose HW/SW co-designs to accelerate few basic Sparse BLAS operations (SpVV and SpMV). Our proposed Parallel Sparse BLAS HW/SW co-design achieves near theoretical peak performance with reasonable hardware resources.},
+}
+
+@InProceedings{Mniszewski2019,
+  author    = {Mniszewski, Susan M.},
+  title     = {Graph Partitioning As Quadratic Unconstrained Binary Optimization {(QUBO)} on Spiking Neuromorphic Hardware},
+  booktitle = {Proceedings of the International Conference on Neuromorphic Systems},
+  year      = {2019},
+  series    = {ICONS'19},
+  publisher = {ACM},
+  location  = {Knoxville, TN, USA},
+  isbn      = {978-1-4503-7680-8},
+  pages     = {4:1--4:5},
+  doi       = {10.1145/3354265.3354269},
+  abstract  = {In this work, graph partitioning (GP) is explored using quadratic unconstrained binary optimization (QUBO) on the IBM TrueNorth spiking neuromorphic architecture. GP splits a graph into similar-sized parts while minimizing the number of cut edges between parts. Classical approaches to GP rely on heuristics and approximation algorithms. The GP QUBO formulation was inspired by previous work using the D-Wave quantum annealer. This approach is not limited to graph algorithms, but is applicable to solving a spectrum of NP-hard optimization problems. A classical pseudo simulated annealing metaheuristic is used to solve the QUBO. Implementation on the IBM TrueNorth using a spiking framework is described. Results as converged high-energy solutions are shown to be "good enough" or optimal for partitioning a graph into 2 parts.},
+  acmid     = {3354269},
+  address   = {New York, NY, USA},
+  articleno = {4},
+  keywords  = {IBM TrueNorth, QUBO, graph partitioning, quadratic unconstrained binary optimization, spiking neuromorphic hardware},
+  numpages  = {5},
+}
+
+>>>>>>> 643703f842bceecc188d59b17c7d438d441d3939
 @Comment{jabref-meta: databaseType:biblatex;}
