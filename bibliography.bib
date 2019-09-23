@@ -7000,4 +7000,37 @@ abstract   = {Block low-rank (BLR) matrices possess a blockwise low-rank propert
   numpages  = {5},
 }
 
+@Article{Ballard2019,
+  author      = {Grey Ballard and James Demmel and Ioana Dumitriu and Alexander Rusciano},
+  title       = {A Generalized Randomized Rank-Revealing Factorization},
+  year        = {2019},
+  eprint      = {arXiv:1909.06524},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {We introduce a Generalized Randomized QR-decomposition that may be applied to arbitrary products of matrices and their inverses, without needing to explicitly compute the products or inverses. This factorization is a critical part of a communication-optimal spectral divide-and-conquer algorithm for the nonsymmetric eigenvalue problem. In this paper, we establish that this randomized QR-factorization satisfies the strong rank-revealing properties. We also formally prove its stability, making it suitable in applications. Finally, we present numerical experiments which demonstrate that our theoretical bounds capture the empirical behavior of the factorization.},
+  file        = {:http\://arxiv.org/pdf/1909.06524v1:PDF},
+  keywords    = {math.NA, cs.DS, cs.NA, 15-04},
+}
+
+@Article{Boulmier2019,
+  author      = {Anthony Boulmier and Franck Raynaud and Nabil Abdennadher and Bastien Chopard},
+  title       = {On the Benefits of Anticipating Load Imbalance for Performance Optimization of Parallel Applications},
+  year        = {2019},
+  date        = {2019-09-16},
+  eprint      = {arXiv:1909.07168},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {In parallel iterative applications, computational efficiency is essential for addressing large problems. Load imbalance is one of the major performance degradation factors of parallel applications. Therefore, distributing, cleverly, and as evenly as possible, the workload among processing elements (PE) maximizes application performance. So far, the standard load balancing method consists in distributing the workload evenly between PEs and, when load imbalance appears, redistributing the extra load from overloaded PEs to underloaded PEs. However, this does not anticipate the load imbalance growth that may continue during the next iterations. In this paper, we present a first step toward a novel philosophy of load balancing that unloads the PEs that will be overloaded in the near future to let the application rebalance itself via its own dynamics. Herein, we present a formal definition of our new approach using a simple mathematical model and discuss its advantages compared to the standard load balancing method. In addition to the theoretical study, we apply our method to an application that reproduces the computation of a fluid model with non-uniform erosion. The performance validates the benefit of anticipating load imbalance. We observed up to 16\% performance improvement compared to the standard load balancing method.},
+  file        = {:http\://arxiv.org/pdf/1909.07168v1:PDF},
+  keywords    = {cs.DC},
+}
+
+@PhdThesis{Hannah2019,
+  author      = {Hannah, Robert Rafaeil},
+  title       = {Fundamental Results on Asynchronous Parallel Optimization Algorithms},
+  institution = {{UCLA}},
+  year        = {2019},
+  abstract    = {In this thesis, we present a body of work on the performance and convergence properties of asynchronous-parallel algorithms completed over the course of my doctorate degree (Hannah, Feng, and Wotao Yin 2018; Hannah and Wotao Yin 2017b; T. Sun, Hannah, and Wotao Yin 2017; Hannah and Wotao Yin 2017a). Asynchronous algorithms eliminate the costly synchronization penalty of traditional synchronous-parallel algorithms. They do this by having computing nodes utilize the most recently available information to compute updates. However, it's not immediately clear whether the trade-off of eliminating synchronization penalty at the cost of using outdated information is favorable.\\ We first give a comprehensive theoretical justification of the performance advantages of asynchronous algorithms, which we summarize as "Faster Iterations, Same Quality" (Hannah and Wotao Yin 2017a). Under a well-justified model, we show that asynchronous algorithms complete "Faster Iterations". Using renewal theory, we demonstrate how network delays, heterogeneous sub-problem difficulty and computing power greatly hinder synchronous algorithms, but have no impact on their asynchronous counterparts. We next prove the first exact convergence rate results for a variety of synchronous algorithms including synchronous ARock and synchronous randomized block coordinate descent (sync-RBCD). This allows us to make a fair comparison between these algorithms and their asynchronous counterparts.\\ Finally we show that a variety of asynchronous algorithms have a convergence rate that essentially matches the previously derived exact rates for synchronous counterparts so long as the delays are not too large. Hence asynchronous algorithms complete faster iteration that are of the "Same Quality" as synchronous algorithms. Therefore we conclude that a wide variety of asynchronous algorithms will always outcompete their synchronous counterparts if the delays are not too large, and especially at scale. \\ Next we present the first asynchonous Nesterov-accelerated algorithm that attains a speedup: A2BCD (Hannah, Feng, and Wotao Yin 2018). We first prove that A2BCD attains NU_ACDM’s complexity to highest order. NU_ACDM is a state-of-the-art accelerated coordinate descent algorithm (Allen-Zhu, Qu, et al. 2016). Then we show that both A2BCD and NU_ACDM both have optimal complexity. Hence because A2BCD has faster iterations, and optimal complexity, it should be the fastest coordinate descent algorithm. We verify this with numerical experiments comparing A2BCD with NU_ACDM. We find that A2BCD is up to 4-5$\times$ faster than NU_ACDM, and hence conclude that our algorithm is the current fastest coordinate descent algorithm that exists. Finally we derive a second-order ODE, which is the continuoustime limit of A2BCD. The ODE analysis motivates and clarifies our proof strategy. \\ Lastly, we present earlier foundational work that comprises the basis of the technical innovations that made the previous results possible (Hannah and Wotao Yin 2017b). We show that ARock and its many special cases may converge even under unbounded delays (both stochastic and deterministic). These results sidestep longstanding impossibility results derived in the 1980s by making slightly stronger assumptions. They were also an early demonstration of the power of meticulous Lyapunov-function construction techniques pioneered in this body of work. },
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
