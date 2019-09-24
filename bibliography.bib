@@ -4976,7 +4976,7 @@ practice the performance, and limitations of the approach stressing on the use o
 
 @Online{Fukaya2018,
   author     = {Takeshi Fukaya and Ramaseshan Kannan and Yuji Nakatsukasa and Yusaku Yamamoto and Yuka Yanagisawa},
-  title      = {Shifted CholeskyQR for computing the QR factorization of ill-conditioned matrices},
+  title      = {Shifted {CholeskyQR} for computing the {QR} factorization of ill-conditioned matrices},
   year       = {2018},
   abstract   = {The Cholesky QR algorithm is an efficient communication-minimizing algorithm for computing the QR factorization of a tall-skinny matrix. Unfortunately it has the inherent numerical instability and breakdown when the matrix is ill-conditioned. A recent work establishes that the instability can be cured by repeating the algorithm twice (called CholeskyQR2). However, the applicability of CholeskyQR2 is still limited by the requirement that the Cholesky factorization of the Gram matrix runs to completion, which means it does not always work for matrices X with $\kappa_2(X) \ge u^{-\frac{1}{2}}$ where $u$ is the unit roundoff. In this work we extend the applicability to $\kappa_2(X)=\mathcal{O}(u^{-1})$ by introducing a shift to the computed Gram matrix so as to guarantee the Cholesky factorization $R^T R = A^T A+sI$ succeeds numerically. We show that the computed $A R^{-1}$ has reduced condition number ${} \le u^{-\frac{1}{2*}}$, for which CholeskyQR2 safely computes the QR factorization, yielding a computed Q of orthogonality $\mid Q^T Q - I\mid_2$ and residual $\mid A-QR\mid _F/\mid A\mid_F$ both $\mathcal{O}(u)$. Thus we obtain the required QR factorization by essentially running Cholesky QR thrice. We extensively analyze the resulting algorithm shiftedCholeskyQR to reveal its excellent numerical stability. shiftedCholeskyQR is also highly parallelizable, and applicable and effective also when working in an oblique inner product space. We illustrate our findings through experiments, in which we achieve significant (up to $\times$40) speedup over alternative methods.},
   eprint     = {arXiv:1809.11085},
@@ -6963,12 +6963,12 @@ The design principles described in the thesis have been implemented in GraphBLAS
 @Article{Cugu2019,
   author   = {İlke Çuğu and Murat Manguoğlu},
   title    = {A parallel multithreaded sparse triangular linear system solver},
-  journal  = {Computers & Mathematics with Applications},
+  journal  = {Computers \& Mathematics with Applications},
   year     = {2019},
   issn     = {0898-1221},
   doi      = {10.1016/j.camwa.2019.09.012},
   url      = {http://www.sciencedirect.com/science/article/pii/S0898122119304602},
-  abstract = {We propose a parallel sparse triangular linear system solver based on the Spike algorithm. Sparse triangular systems are required to be solved in many applications. Often, they are a bottleneck due to their inherently sequential nature. Furthermore, typically many successive systems with the same coefficient matrix and with different right hand side vectors are required to be solved. The proposed solver decouples the problem at the cost of extra arithmetic operations as in the banded case. Compared to the banded case, there are extra savings due to the sparsity of the triangular coefficient matrix. We show the parallel performance of the proposed solver against the state-of-the-art parallel sparse triangular solver in Intel’s Math Kernel Library (MKL) on a multicore architecture. We also show the effect of various sparse matrix reordering schemes. Numerical results show that the proposed solver outperforms MKL’s solver in $\circa$80\% of cases by a factor of 2.47, on average.},
+  abstract = {We propose a parallel sparse triangular linear system solver based on the Spike algorithm. Sparse triangular systems are required to be solved in many applications. Often, they are a bottleneck due to their inherently sequential nature. Furthermore, typically many successive systems with the same coefficient matrix and with different right hand side vectors are required to be solved. The proposed solver decouples the problem at the cost of extra arithmetic operations as in the banded case. Compared to the banded case, there are extra savings due to the sparsity of the triangular coefficient matrix. We show the parallel performance of the proposed solver against the state-of-the-art parallel sparse triangular solver in Intel’s Math Kernel Library (MKL) on a multicore architecture. We also show the effect of various sparse matrix reordering schemes. Numerical results show that the proposed solver outperforms MKL’s solver in $\sim$80\% of cases by a factor of 2.47, on average.},
   keywords = {Sparse triangular linear systems, Direct methods, Parallel computing},
 }
 
