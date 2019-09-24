@@ -5984,17 +5984,6 @@ The main insight of this work is that the combination of data duplication and De
   timestamp  = {2019.06.16},
 }
 
-@Online{Cartis2018a,
-  author        = {Coralia Cartis and Nick I. M. Gould and Philippe L. Toint},
-  title         = {Sharp worst-case evaluation complexity bounds for arbitrary-order nonconvex optimization with inexpensive constraints},
-  year          = {2018},
-  __markedentry = {[ap8213:]},
-  abstract      = {We provide sharp worst-case evaluation complexity bounds for non convex minimization problems with general inexpensive constraints, i.e. problems where the cost of evaluating/enforcing of the (possibly nonconvex or even disconnected) constraints, if any, is negligible compared to that of evaluating the objective function.  These bounds unify, extend or improve all known upper and lower complexity bounds for unconstrained and convexly-constrained problems. It is shown that, given an accuracy level $\epsilon$, a degree of highest available Lipschitz continuous derivatives $p$ and a desired optimality order $q$ between one and $p$, a conceptual regularization algorithm requires no more than $O(\epsilon^{-\frac{p+1}{p-q+1}}$ evaluations of the objective function and its derivatives to compute a suitably approximate $q$-th order minimizer. With an appropriate choice of the regularization, a similar result also holds if the $p$-th derivative is merely Holder rather than Lipschitz continuous. We provide an example that shows that the above complexity bound is sharp for unconstrained and a wide class of constrained problems; we also give reasons for the optimality of regularization methods from a worst-case complexity point of view, within a large class of algorithms that use the same derivative information.},
-  eprint        = {arXiv:1811.01220},
-  eprinttype    = {arXiv},
-  timestamp     = {2019.06.16},
-}
-
 @Article{Sao2019,
   author        = {Piyush Sao and Xiaoye S. Li and Richard Vuduc},
   title         = {A communication-avoiding 3D algorithm for sparse LU factorization on heterogeneous systems},
@@ -6058,36 +6047,6 @@ The main insight of this work is that the combination of data duplication and De
   volume        = {abs/1612.01178},
 }
 
-@Article{Li2018a,
-  author        = {Li, Ruipeng and Xi, Yuanzhe and Erlandson, Lucas and Saad, Yousef},
-  title         = {The Eigenvalues Slicing Library (EVSL): Algorithms, Implementation, and Software},
-  year          = {2018},
-  eprint        = {arXiv:1802.05215},
-  __markedentry = {[ap8213:6]},
-  abstract      = {This paper describes a software package called EVSL (for EigenValues Slicing Library) for solving large sparse real symmetric standard and generalized eigenvalue problems. As its name indicates, the package exploits spectrum slicing, a strategy that consists of dividing the spectrum into a number of subintervals and extracting eigenpairs from each subinterval independently. In order to enable such a strategy, the methods implemented in EVSL rely on a quick calculation of the spectral density of a given matrix, or a matrix pair. What distinguishes EVSL from other currently available packages is that EVSL relies entirely on filtering techniques. Polynomial and rational filtering are both implemented and are coupled with Krylov subspace methods and the subspace iteration algorithm. On the implementation side, the package offers interfaces for various scenarios including matrix-free modes, whereby the user can supply his/her own functions to perform matrix-vector operations or to solve sparse linear systems. The paper describes the algorithms in EVSL, provides details on their implementations, and discusses performance issues for the various methods.},
-  timestamp     = {2019.06.16},
-}
-
-@Article{Coutinho2018a,
-  author        = {Coutinho, Demetrios and Xavier-de-Souza, Samuel and Aloise, Daniel},
-  title         = {A Scalable Shared-Memory Parallel Simplex for Large-Scale Linear Programming},
-  year          = {2018},
-  eprint        = {arXiv:1804.04737},
-  __markedentry = {[ap8213:6]},
-  abstract      = {We present a shared-memory parallel implementation of the Simplex tableau algorithm for dense large-scale Linear Programming (LP) problems. We present the general scheme and explain each parallelization step of the standard simplex algorithm, emphasizing important solutions for solving performance bottlenecks. We analyzed the speedup and the parallel efficiency for the proposed implementation relative to the standard Simplex algorithm using a shared-memory system with 64 processing cores. The experiments were performed for several different problems, with up to 8192 variables and constraints, in their primal and dual formulations. The results show that the performance is mostly much better when we use the formulation with more variables than inequality constraints. Also, they show that the parallelization strategies applied to avoid bottlenecks caused the implementation to scale well with the problem size and the core count up to a certain limit of problem size. Further analysis showed that this was an effect of resource limitation. Even though, our implementation was able to reach speedups in the order of 19$\times$.},
-  timestamp     = {2019.06.16},
-}
-
-@Article{Tavernier2018a,
-  author        = {Joris Tavernier and Jaak Simm and Karl Meerbergen and Yves Moreau},
-  title         = {Multilevel preconditioning for Ridge Regression},
-  year          = {2018},
-  eprint        = {arXiv:1806.05826},
-  __markedentry = {[ap8213:6]},
-  abstract      = {Solving linear systems is often the computational bottleneck in real-life problems. Iterative solvers are the only option due to the complexity of direct algorithms or because the system matrix is not explicitly known. Here, we develop a multilevel preconditioner for regularized least squares linear systems involving a feature or data matrix. Variants of this linear system may appear in machine learning applications, such as ridge regression, logistic regression, support vector machines and matrix factorization with side information. We use clustering algorithms to create coarser levels that preserve the principal components of the covariance or Gram matrix. These coarser levels approximate the dominant eigenvectors and are used to build a multilevel preconditioner accelerating the Conjugate Gradient method. We observed speed-ups for artificial and real-life data. For a specific data set, we achieved speed-up up to a factor 100.},
-  timestamp     = {2019.06.16},
-}
-
 @Article{Mohammadi2018a,
   author        = {Mahdi Soltan Mohammadi and Kazem Cheshmi and Ganesh Gopalakrishnan and Mary W. Hall and Maryam Mehri Dehnavi and Anand Venkat and Tomofumi Yuki and Michelle Mills Strout},
   title         = {Sparse Matrix Code Dependence Analysis Simplification at Compile Time},
@@ -6117,48 +6076,6 @@ The main insight of this work is that the combination of data duplication and De
   bibsource     = {dblp computer science bibliography, https://dblp.org},
   biburl        = {https://dblp.org/rec/bib/journals/corr/abs-1804-03327},
   timestamp     = {Mon, 13 Aug 2018 16:48:40 +0200},
-}
-
-@Misc{Fukaya2018a,
-  author        = {Takeshi Fukaya and Ramaseshan Kannan and Yuji Nakatsukasa and Yusaku Yamamoto and Yuka Yanagisawa},
-  title         = {Shifted CholeskyQR for computing the QR factorization of ill-conditioned matrices},
-  year          = {2018},
-  eprint        = {arXiv:1809.11085},
-  __markedentry = {[ap8213:6]},
-  abstract      = {The Cholesky QR algorithm is an efficient communication-minimizing algorithm for computing the QR factorization of a tall-skinny matrix. Unfortunately it has the inherent numerical instability and breakdown when the matrix is ill-conditioned. A recent work establishes that the instability can be cured by repeating the algorithm twice (called CholeskyQR2). However, the applicability of CholeskyQR2 is still limited by the requirement that the Cholesky factorization of the Gram matrix runs to completion, which means it does not always work for matrices X with $\kappa_2(X) \ge u^{-\frac{1}{2}}$ where $u$ is the unit roundoff. In this work we extend the applicability to $\kappa_2(X)=\mathcal{O}(u^{-1})$ by introducing a shift to the computed Gram matrix so as to guarantee the Cholesky factorization $R^T R = A^T A+sI$ succeeds numerically. We show that the computed $A R^{-1}$ has reduced condition number ${} \le u^{-\frac{1}{2*}}$, for which CholeskyQR2 safely computes the QR factorization, yielding a computed Q of orthogonality $\mid Q^T Q - I\mid_2$ and residual $\mid A-QR\mid _F/\mid A\mid_F$ both $\mathcal{O}(u)$. Thus we obtain the required QR factorization by essentially running Cholesky QR thrice. We extensively analyze the resulting algorithm shiftedCholeskyQR to reveal its excellent numerical stability. shiftedCholeskyQR is also highly parallelizable, and applicable and effective also when working in an oblique inner product space. We illustrate our findings through experiments, in which we achieve significant (up to $\times$40) speedup over alternative methods.},
-  timestamp     = {2019.06.16},
-}
-
-@Misc{Rong2018a,
-  author        = {Hongbo Rong},
-  title         = {Expressing Sparse Matrix Computations for Productive Performance on Spatial Architectures},
-  year          = {2018},
-  eprint        = {arXiv:1810.07517},
-  __markedentry = {[ap8213:6]},
-  abstract      = {This paper addresses spatial programming of sparse matrix computations for productive performance. The challenge is how to express an irregular computation and its optimizations in a regular way.
-
-A sparse matrix has (non-zero) values and a structure. In this paper, we propose to classify the implementations of a computation on a sparse matrix into two categories: (1) structure-driven, or top-down, approach, which traverses the structure with given row and column indices and locates the corresponding values, and (2) values-driven, or bottom-up, approach, which loads and processes the values in parallel streams, and decodes the structure for the values’ corresponding row and column indices. On a spatial architecture like FPGAs, the values-driven approach is the norm. We show how to express a sparse matrix computation and its optimizations for a values-driven implementation. A compiler automatically synthesizes a code to decode the structure. In this way, programmers focus on optimizing the processing of the values, using familiar optimizations for dense matrices, while leaving the complex, irregular structure traversal to an automatic compiler. We also attempt to regularize the optimizations of the reduction for a dynamic number of values, which is common in a sparse matrix computation.},
-  timestamp     = {2019.06.16},
-}
-
-@Misc{Knigge2018a,
-  author        = {Timon E. Knigge and Rob H. Bisseling},
-  title         = {An improved exact algorithm and an NP-completeness proof for sparse matrix bipartitioning},
-  year          = {2018},
-  eprint        = {arXiv:1811.02043},
-  __markedentry = {[ap8213:6]},
-  abstract      = {We formulate the sparse matrix bipartitioning problem of minimizing the communication volume in parallel sparse matrix-vector multiplication. We prove its NP-completeness in the perfectly balanced case, where both parts of the partitioned matrix must have an equal number of nonzeros, by reduction from the graph bisection problem. We present an improved exact branch-and-bound algorithm which finds the minimum communication volume for a given maximum allowed imbalance. The algorithm is based on a maximum-flow bound and a pack- ing bound, which extend previous matching and packing bounds. We implemented the algorithm in a new program called MP (Matrix Partitioner), which solved 839 matrices from the SuiteSparse collection to optimality, each within 24 hours of CPU-time. Furthermore, MP solved the difficult problem of the matrix cage6 in about 3 days. The new program is about 13.8 times faster than the previous program MondriaanOpt.},
-  timestamp     = {2019.06.16},
-}
-
-@Misc{Cartis2018b,
-  author        = {Coralia Cartis and Nick I. M. Gould and Philippe L. Toint},
-  title         = {Sharp worst-case evaluation complexity bounds for arbitrary-order nonconvex optimization with inexpensive constraints},
-  year          = {2018},
-  eprint        = {arXiv:1811.01220},
-  __markedentry = {[ap8213:6]},
-  abstract      = {We provide sharp worst-case evaluation complexity bounds for non convex minimization problems with general inexpensive constraints, i.e. problems where the cost of evaluating/enforcing of the (possibly nonconvex or even disconnected) constraints, if any, is negligible compared to that of evaluating the objective function.  These bounds unify, extend or improve all known upper and lower complexity bounds for unconstrained and convexly-constrained problems. It is shown that, given an accuracy level $\epsilon$, a degree of highest available Lipschitz continuous derivatives $p$ and a desired optimality order $q$ between one and $p$, a conceptual regularization algorithm requires no more than $O(\epsilon^{-\frac{p+1}{p-q+1}}$ evaluations of the objective function and its derivatives to compute a suitably approximate $q$-th order minimizer. With an appropriate choice of the regularization, a similar result also holds if the $p$-th derivative is merely Holder rather than Lipschitz continuous. We provide an example that shows that the above complexity bound is sharp for unconstrained and a wide class of constrained problems; we also give reasons for the optimality of regularization methods from a worst-case complexity point of view, within a large class of algorithms that use the same derivative information.},
-  timestamp     = {2019.06.16},
 }
 
 @Article{Agullo2019,
@@ -6911,14 +6828,14 @@ The design principles described in the thesis have been implemented in GraphBLAS
   publisher  = {ACM},
 }
 
-@Article{Higham2019,
-  author     = {Higham, Nicholas and Mary, Theo},
-  title      = {Solving Block Low-Rank Linear Systems by {LU} Factorization is Numerically Stable},
+@Article{Blanchard2019a,
+  author     = {Blanchard, Pierre and Higham, Nicholas J. and Lopez, Florent and Mary, Theo and Pranesh, Srikara},
+  title      = {Mixed Precision Block Fused Multiply-Add: Error Analysis and Application to {GPU} Tensor Cores},
   year       = {2019},
-  eprint     = {MIMS EPrint:2019.15},
+  eprint     = {MIMS EPrint:2019.18},
   eprinttype = {MIMS EPrint},
   url        = {http://eprints.maths.manchester.ac.uk/2727/1/paper.pdf},
-abstract   = {Block low-rank (BLR) matrices possess a blockwise low-rank property that can be exploited to reduce the complexity of numerical linear algebra algorithms. The impact of these lowrank approximations on the numerical stability of the algorithms in floating-point arithmetic has not previously been analyzed. We present rounding error analysis for the solution of a linear system by LU factorization of BLR matrices. Assuming that a stable pivoting scheme is used, we prove backward stability: the relative backward error is bounded by a modest constant times $\epsilon$, where the low-rank threshold $\epsilon$ is the parameter controlling the accuracy of the blockwise low-rank approximations. In addition to this key result, our analysis offers three new insights into the numerical behavior of BLR algorithms. First, we compare the use of a global or local low-rank threshold and find that a global one should be preferred. Second, we show that performing intermediate recompressions during the factorization can significantly reduce its cost without compromising numerical stability. Third, we consider different BLR factorization variants and determine the compress–factor–update (CFU) variant to be the best. Tests on a wide range of matrices from various real-life applications show that the predictions from the analysis are realized in practice.},
+  abstract   = {Block low-rank (BLR) matrices possess a blockwise low-rank property that can be exploited to reduce the complexity of numerical linear algebra algorithms. The impact of these lowrank approximations on the numerical stability of the algorithms in floating-point arithmetic has not previously been analyzed. We present rounding error analysis for the solution of a linear system by LU factorization of BLR matrices. Assuming that a stable pivoting scheme is used, we prove backward stability: the relative backward error is bounded by a modest constant times $\epsilon$, where the low-rank threshold $\epsilon$ is the parameter controlling the accuracy of the blockwise low-rank approximations. In addition to this key result, our analysis offers three new insights into the numerical behavior of BLR algorithms. First, we compare the use of a global or local low-rank threshold and find that a global one should be preferred. Second, we show that performing intermediate recompressions during the factorization can significantly reduce its cost without compromising numerical stability. Third, we consider different BLR factorization variants and determine the compress–factor–update (CFU) variant to be the best. Tests on a wide range of matrices from various real-life applications show that the predictions from the analysis are realized in practice.},
 }
 
 @Article{Blanchard2019,
@@ -7031,6 +6948,40 @@ abstract   = {Block low-rank (BLR) matrices possess a blockwise low-rank propert
   institution = {{UCLA}},
   year        = {2019},
   abstract    = {In this thesis, we present a body of work on the performance and convergence properties of asynchronous-parallel algorithms completed over the course of my doctorate degree (Hannah, Feng, and Wotao Yin 2018; Hannah and Wotao Yin 2017b; T. Sun, Hannah, and Wotao Yin 2017; Hannah and Wotao Yin 2017a). Asynchronous algorithms eliminate the costly synchronization penalty of traditional synchronous-parallel algorithms. They do this by having computing nodes utilize the most recently available information to compute updates. However, it's not immediately clear whether the trade-off of eliminating synchronization penalty at the cost of using outdated information is favorable.\\ We first give a comprehensive theoretical justification of the performance advantages of asynchronous algorithms, which we summarize as "Faster Iterations, Same Quality" (Hannah and Wotao Yin 2017a). Under a well-justified model, we show that asynchronous algorithms complete "Faster Iterations". Using renewal theory, we demonstrate how network delays, heterogeneous sub-problem difficulty and computing power greatly hinder synchronous algorithms, but have no impact on their asynchronous counterparts. We next prove the first exact convergence rate results for a variety of synchronous algorithms including synchronous ARock and synchronous randomized block coordinate descent (sync-RBCD). This allows us to make a fair comparison between these algorithms and their asynchronous counterparts.\\ Finally we show that a variety of asynchronous algorithms have a convergence rate that essentially matches the previously derived exact rates for synchronous counterparts so long as the delays are not too large. Hence asynchronous algorithms complete faster iteration that are of the "Same Quality" as synchronous algorithms. Therefore we conclude that a wide variety of asynchronous algorithms will always outcompete their synchronous counterparts if the delays are not too large, and especially at scale. \\ Next we present the first asynchonous Nesterov-accelerated algorithm that attains a speedup: A2BCD (Hannah, Feng, and Wotao Yin 2018). We first prove that A2BCD attains NU_ACDM’s complexity to highest order. NU_ACDM is a state-of-the-art accelerated coordinate descent algorithm (Allen-Zhu, Qu, et al. 2016). Then we show that both A2BCD and NU_ACDM both have optimal complexity. Hence because A2BCD has faster iterations, and optimal complexity, it should be the fastest coordinate descent algorithm. We verify this with numerical experiments comparing A2BCD with NU_ACDM. We find that A2BCD is up to 4-5$\times$ faster than NU_ACDM, and hence conclude that our algorithm is the current fastest coordinate descent algorithm that exists. Finally we derive a second-order ODE, which is the continuoustime limit of A2BCD. The ODE analysis motivates and clarifies our proof strategy. \\ Lastly, we present earlier foundational work that comprises the basis of the technical innovations that made the previous results possible (Hannah and Wotao Yin 2017b). We show that ARock and its many special cases may converge even under unbounded delays (both stochastic and deterministic). These results sidestep longstanding impossibility results derived in the 1980s by making slightly stronger assumptions. They were also an early demonstration of the power of meticulous Lyapunov-function construction techniques pioneered in this body of work. },
+}
+
+@Article{Higham2019,
+  author     = {Higham, Nicholas and Mary, Theo},
+  title      = {Solving Block Low-Rank Linear Systems by {LU} Factorization is Numerically Stable},
+  year       = {2019},
+  eprint     = {MIMS EPrint:2019.15},
+  eprinttype = {MIMS EPrint},
+  url        = {http://eprints.maths.manchester.ac.uk/2733/1/paper.pdf},
+  abstract   = {Computing units that carry out a fused multiply-add (FMA) operation with matrix arguments, referred to as tensor units by some vendors, have great potential for use in scientific computing. However, these units are inherently mixed precision and existing rounding error analyses do not support them. We consider a mixed precision block FMA that generalizes both the usual scalar FMA and existing tensor units. We describe how to exploit such a block FMA in the numerical linear algebra kernels of matrix multiplication and LU factorization and give rounding error analyses of both kernels. An important application is to GMRES-based iterative refinement with block FMAs, for which our analysis provides new insight. Our framework is applicable to the tensor core units in the NVIDIA Volta and Turing GPUs. For these we compare matrix multiplication and LU factorization with TC16 and TC32 forms of FMA, which differ in the precision used for the output of the tensor cores. Our experiments on an NVDIA V100 GPU confirm the predictions of the analysis that the TC32 variant is much more accurate than the TC16 one, while achieving almost the same performance.},
+}
+
+@Article{Cugu2019,
+  author   = {İlke Çuğu and Murat Manguoğlu},
+  title    = {A parallel multithreaded sparse triangular linear system solver},
+  journal  = {Computers & Mathematics with Applications},
+  year     = {2019},
+  issn     = {0898-1221},
+  doi      = {10.1016/j.camwa.2019.09.012},
+  url      = {http://www.sciencedirect.com/science/article/pii/S0898122119304602},
+  abstract = {We propose a parallel sparse triangular linear system solver based on the Spike algorithm. Sparse triangular systems are required to be solved in many applications. Often, they are a bottleneck due to their inherently sequential nature. Furthermore, typically many successive systems with the same coefficient matrix and with different right hand side vectors are required to be solved. The proposed solver decouples the problem at the cost of extra arithmetic operations as in the banded case. Compared to the banded case, there are extra savings due to the sparsity of the triangular coefficient matrix. We show the parallel performance of the proposed solver against the state-of-the-art parallel sparse triangular solver in Intel’s Math Kernel Library (MKL) on a multicore architecture. We also show the effect of various sparse matrix reordering schemes. Numerical results show that the proposed solver outperforms MKL’s solver in $\circa$80\% of cases by a factor of 2.47, on average.},
+  keywords = {Sparse triangular linear systems, Direct methods, Parallel computing},
+}
+
+@Article{Tasseff2019,
+  author      = {Byron Tasseff and Carleton Coffrin and Andreas Wächter and Carl Laird},
+  title       = {Exploring Benefits of Linear Solver Parallelism on Modern Nonlinear Optimization Applications},
+  date        = {2019-09-17},
+  eprint      = {arXiv:1909.08104},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {The advent of efficient interior point optimization methods has enabled the tractable solution of large-scale linear and nonlinear programming (NLP) problems. A prominent example of such a method is seen in Ipopt, a widely-used, open-source nonlinear optimization solver. Algorithmically, Ipopt depends on the use of a sparse symmetric indefinite linear system solver, which is heavily employed within the optimization of barrier subproblems. As such, the performance and reliability of Ipopt is dependent on the properties of the selected linear solver. Inspired by a trend in mathematical programming toward solving larger and more challenging NLPs, this work explores two core questions: first, how does the scalability of available linear solvers, many of which exhibit shared-memory parallelism, impact Ipopt performance; and second, does the best linear solver vary across NLP problem classes, including nonlinear network problems and problems constrained by partial differential equations? To better understand these properties, this paper first describes available open- and closed-source, serial and parallel linear solvers and the fundamental differences among them. Second, it introduces the coupling of a new open-source linear solver capable of heterogeneous parallelism over multi-core central processing units and graphics processing units. Third, it compares linear solvers using a variety of mathematical programming problems, including standard test problems for linear and nonlinear optimization, optimal power flow benchmarks, and scalable two- and three-dimensional partial differential equation and optimal control problems. Finally, linear solver recommendations are provided to maximize Ipopt performance across different application domains.},
+  file        = {:http\://arxiv.org/pdf/1909.08104v1:PDF},
+  keywords    = {math.OC},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
