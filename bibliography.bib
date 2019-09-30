@@ -6996,4 +6996,26 @@ The design principles described in the thesis have been implemented in GraphBLAS
   keywords    = {stat.ME, math.ST, stat.ML, stat.TH, 62H25},
 }
 
+@Article{Xu2019a,
+  author      = {Weizhi Xu and Shengyu Fan and Tiantian Wang and Yufeng Zhou},
+  title       = {Blocking and sparsity for optimization of convolution calculation algorithm on GPUs},
+  date        = {2019-09-22},
+  eprint      = {arXiv:1909.09927},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {Convolution neural network (CNN) plays a paramount role in machine learning, which has made significant contributions, such as medical image classification, natural language processing, and recommender system. The success convolution neural network achieved excellent performance with fast execution time. Due to the convolution operation dominate the total operation time of Convolution neural network. In this paper, we propose a novel convolution method of Graphic Processing Units (GPUs), which reduce the convolution operation time and improve the execution speed approximately 2$\times$ than the state of the art convolution algorithm. Our work based on the observation is that the sparsity of the input feature map of convolution operation is relatively large, and the zero value of the feature map is redundancy for convolution result. Therefore, we skip the zero value calculation and improve the speed by compressing the feature map. Besides, the shape of the feature map for the deep network is small, and the number of threads is limited. Therefore, for a limited number of threads, it is necessary to reduce the amount of calculation to increase the calculation speed. Our algorithm has a good effect on the convolution operation of the feature map of the deep network with large sparsity and small size. In this work, our contributions can be summarized as follows: 1) A novel store format for hight-sparsity feature map. 2) A novel convolution algorithm based on block compression and Shared memory is proposed. 3) A feature map data-set for convolution algorithm optimization. 4) We performed a single-layer convolution comparison experiment with CuDNN for different models, and it is best to achieve 3.5$\times$ speedup. We also implemented the algorithm on the VGG-19 model, which can achieve 1.3$\times$$\sim$2.9$\times$ speedup in deep convolution operation, and the entire network can achieve 2.3$\times$ speedup.},
+  file        = {:http\://arxiv.org/pdf/1909.09927v1:PDF},
+  keywords    = {cs.DC},
+}
+
+@Article{Hu2019,
+  author   = {Yuangming Hu and Tzu-Mao Li and Luke Anderson and Jonathan Ragan-Kelley and Frédo Durand},
+  title    = {Taichi: A Language for High-Performance Computation on Spatially Sparse Data Structures},
+  journal  = {ACM Transactions on Graphics},
+  year     = {2019},
+  volume   = {38},
+  number   = {6},
+  abstract = {3D visual computing data are often spatially sparse. To exploit such sparsity, people have developed hierarchical sparse data structures, such as multilevel sparse voxel grids, particles, and 3D hash tables. However, developing and using these high-performance sparse data structures is challenging, due to their intrinsic complexity and overhead. We propose Taichi, a new data-oriented programming language for efficiently authoring, accessing, and maintaining such data structures. The language offers a high-level, data structure-agnostic interface for writing computation code. The user independently specifies the data structure. We provide several elementary components with different sparsity properties that can be arbitrarily composed to create a wide range of multi-level sparse data structures. This decoupling of data structures from computation makes it easy to experiment with different data structures without changing computation code, and allows users to write computation as if they are working with a dense array. Our compiler then uses the semantics of the data structure and index analysis to automatically optimize for locality, remove redundant operations for coherent accesses, maintain sparsity and memory allocations, and generate efficient parallel and vectorized instructions for CPUs and GPUs. \\ Our approach yields competitive performance on common computational kernels such as stencil applications, neighbor lookups, and particle scattering. We demonstrate our language by implementing simulation, rendering, and vision tasks including a material point method simulation, finite element analysis, a multigrid Poisson solver for pressure projection, volumetric path tracing, and 3D convolution on sparse grids. Our computation-data structure decoupling allows us to quickly experiment with different data arrangements, and to develop high-performance data structures tailored for specific computational tasks. With $\frac{1}{10}$th as many lines of code, we achieve 4.55$\times$ higher performance on average, compared to hand-optimized reference implementations.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
