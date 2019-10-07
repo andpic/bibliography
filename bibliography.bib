@@ -97,7 +97,7 @@
 }
 
 @Article{Aykanat2004,
-  author       = {Cevdet Aykanat and Ali Pinar and Umit V. Çatalyürek},
+  author       = {Cevdet Aykanat and Ali Pinar and {\"U}mit V. Çatalyürek},
   title        = {Permuting Sparse Rectangular Matrices into Block-Diagonal Form},
   journaltitle = {{SIAM} Journal on Scientific Computing},
   date         = {2004},
@@ -6147,7 +6147,7 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
 }
 
 @InProceedings{Li2019a,
-  author    = {Li, Jiajia and Uçar, Bora and Çatalyürek, Umit V. and Sun, Jimeng and Barker, Kevin and Vuduc, Richard},
+  author    = {Li, Jiajia and Uçar, Bora and Çatalyürek, {\"U}mit V. and Sun, Jimeng and Barker, Kevin and Vuduc, Richard},
   title     = {Efficient and Effective Sparse Tensor Reordering},
   booktitle = {Proceedings of the ACM International Conference on Supercomputing},
   year      = {2019},
@@ -6748,7 +6748,7 @@ The design principles described in the thesis have been implemented in GraphBLAS
 }
 
 @InProceedings{Herrmann2017,
-  author    = {J. Herrmann and J. Kho and B. Uçar and K. Kaya and U. V. Çatalyürek},
+  author    = {J. Herrmann and J. Kho and B. Uçar and K. Kaya and {\"U}. V. Çatalyürek},
   title     = {Acyclic Partitioning of Large Directed Acyclic Graphs},
   booktitle = {2017 IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing},
   year      = {2017},
@@ -6760,7 +6760,7 @@ The design principles described in the thesis have been implemented in GraphBLAS
 }
 
 @Article{Herrmann2019,
-  author   = {Herrmann, J. and Özkaya, M. and Uçar, B. and Kaya, K. and Çatalyürek, U.},
+  author   = {Herrmann, J. and Özkaya, M. and Uçar, B. and Kaya, K. and Çatalyürek, {\"U}.},
   title    = {Multilevel Algorithms for Acyclic Partitioning of Directed Acyclic Graphs},
   journal  = {SIAM Journal on Scientific Computing},
   year     = {2019},
@@ -7003,6 +7003,65 @@ The design principles described in the thesis have been implemented in GraphBLAS
   date      = {2019},
   series    = {ECMLPKDD'19},
   abstract  = {We present a multistage procedure to cluster directed and undirected weighted graphs by finding the block structure of their adjacency matrices. A central part of the process is to scale the adjacency matrix into a doubly-stochastic form, which permits detection of the whole matrix block structure with minimal spectral information (theoretically a single pair of singular vectors suffices).We present the different stages of our method, namely the impact of the doubly-stochastic scaling on singular vectors, detection of the block structure by means of these vectors, and details such as cluster refinement and a stopping criterion. Then we test thealgorithm's effectiveness by using it on two unsupervised classification tasks: community detection in networks and shape detection in cloudsof points in two dimensions. By comparing results of our approach with thoseof widely used algorithms designed for specific purposes, we observe that our method is competitive (for community detection) if not superior (for shape detection) in comparison with existing methods.},
+}
+
+@Article{Gataric2017,
+  author      = {Milana Gataric and Tengyao Wang and Richard J. Samworth},
+  title       = {Sparse principal component analysis via axis-aligned random projections},
+  date        = {2017-12-15},
+  eprint      = {arXiv:1712.05630},
+  eprintclass = {stat.ME},
+  eprinttype  = {arXiv},
+  abstract    = {We introduce a new method for sparse principal component analysis, based on the aggregation of eigenvector information from carefully-selected axis-aligned random projections of the sample covariance matrix. Unlike most alternative approaches, our algorithm is non-iterative, so is not vulnerable to a bad choice of initialisation. We provide theoretical guarantees under which our principal subspace estimator can attain the minimax optimal rate of convergence in polynomial time. In addition, our theory provides a more refined understanding of the statistical and computational trade-off in the problem of sparse principal component estimation, revealing a subtle interplay between the effective sample size and the number of random projections that are required to achieve the minimax optimal rate. Numerical studies provide further insight into the procedure and confirm its highly competitive finite-sample performance.},
+  file        = {:http\://arxiv.org/pdf/1712.05630v4:PDF},
+  keywords    = {stat.ME, math.ST, stat.ML, stat.TH, 62H25},
+}
+
+@Article{Xu2019a,
+  author      = {Weizhi Xu and Shengyu Fan and Tiantian Wang and Yufeng Zhou},
+  title       = {Blocking and sparsity for optimization of convolution calculation algorithm on GPUs},
+  date        = {2019-09-22},
+  eprint      = {arXiv:1909.09927},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {Convolution neural network (CNN) plays a paramount role in machine learning, which has made significant contributions, such as medical image classification, natural language processing, and recommender system. The success convolution neural network achieved excellent performance with fast execution time. Due to the convolution operation dominate the total operation time of Convolution neural network. In this paper, we propose a novel convolution method of Graphic Processing Units (GPUs), which reduce the convolution operation time and improve the execution speed approximately 2$\times$ than the state of the art convolution algorithm. Our work based on the observation is that the sparsity of the input feature map of convolution operation is relatively large, and the zero value of the feature map is redundancy for convolution result. Therefore, we skip the zero value calculation and improve the speed by compressing the feature map. Besides, the shape of the feature map for the deep network is small, and the number of threads is limited. Therefore, for a limited number of threads, it is necessary to reduce the amount of calculation to increase the calculation speed. Our algorithm has a good effect on the convolution operation of the feature map of the deep network with large sparsity and small size. In this work, our contributions can be summarized as follows: 1) A novel store format for hight-sparsity feature map. 2) A novel convolution algorithm based on block compression and Shared memory is proposed. 3) A feature map data-set for convolution algorithm optimization. 4) We performed a single-layer convolution comparison experiment with CuDNN for different models, and it is best to achieve 3.5$\times$ speedup. We also implemented the algorithm on the VGG-19 model, which can achieve 1.3$\times$$\sim$2.9$\times$ speedup in deep convolution operation, and the entire network can achieve 2.3$\times$ speedup.},
+  file        = {:http\://arxiv.org/pdf/1909.09927v1:PDF},
+  keywords    = {cs.DC},
+}
+
+@Article{Hu2019,
+  author   = {Yuangming Hu and Tzu-Mao Li and Luke Anderson and Jonathan Ragan-Kelley and Frédo Durand},
+  title    = {Taichi: A Language for High-Performance Computation on Spatially Sparse Data Structures},
+  journal  = {ACM Transactions on Graphics},
+  year     = {2019},
+  volume   = {38},
+  number   = {6},
+  abstract = {3D visual computing data are often spatially sparse. To exploit such sparsity, people have developed hierarchical sparse data structures, such as multilevel sparse voxel grids, particles, and 3D hash tables. However, developing and using these high-performance sparse data structures is challenging, due to their intrinsic complexity and overhead. We propose Taichi, a new data-oriented programming language for efficiently authoring, accessing, and maintaining such data structures. The language offers a high-level, data structure-agnostic interface for writing computation code. The user independently specifies the data structure. We provide several elementary components with different sparsity properties that can be arbitrarily composed to create a wide range of multi-level sparse data structures. This decoupling of data structures from computation makes it easy to experiment with different data structures without changing computation code, and allows users to write computation as if they are working with a dense array. Our compiler then uses the semantics of the data structure and index analysis to automatically optimize for locality, remove redundant operations for coherent accesses, maintain sparsity and memory allocations, and generate efficient parallel and vectorized instructions for CPUs and GPUs. \\ Our approach yields competitive performance on common computational kernels such as stencil applications, neighbor lookups, and particle scattering. We demonstrate our language by implementing simulation, rendering, and vision tasks including a material point method simulation, finite element analysis, a multigrid Poisson solver for pressure projection, volumetric path tracing, and 3D convolution on sparse grids. Our computation-data structure decoupling allows us to quickly experiment with different data arrangements, and to develop high-performance data structures tailored for specific computational tasks. With $\frac{1}{10}$th as many lines of code, we achieve 4.55$\times$ higher performance on average, compared to hand-optimized reference implementations.},
+}
+
+@Article{Yasar2019,
+  author      = {Abdurrahman Yaşar and {\"U}mit V. Çatalyürek},
+  title       = {Heuristics for Symmetric Rectilinear Matrix Partitioning},
+  date        = {2019-09-26},
+  eprint      = {arXiv:1909.12209},
+  eprintclass = {cs.DS},
+  eprinttype  = {arXiv},
+  abstract    = {Partitioning sparse matrices and graphs is a common and important problem in many scientific and graph analytics applications. In this work, we are concerned with a spatial partitioning called rectilinear partitioning (also known as generalized block distribution) of sparse matrices, which is needed for tiled (or {\em blocked}) execution of sparse matrix and graph analytics kernels. More specifically, in this work, we address the problem of symmetric rectilinear partitioning of square matrices. By symmetric, we mean having the same partition on rows and columns of the matrix, yielding a special tiling where the diagonal tiles (blocks) will be squares. We propose five heuristics to solve two different variants of this problem, and present a thorough experimental evaluation showing the effectiveness of the proposed algorithms.},
+  file        = {:http\://arxiv.org/pdf/1909.12209v1:PDF},
+  keywords    = {cs.DS},
+}
+
+@InProceedings{Mukkara2019,
+  author    = {Anurag Mukkara and Nathan Beckmann and Daniel Sanchez},
+  title     = {{PHI}: Architectural Support for Synchronization- and Bandwidth-Efficient Commutative Scatter Updates},
+  booktitle = {Proceedings of the 52nd Annual {IEEE}/{ACM} International Symposium on MIcroarchitecture},
+  date      = {2019},
+  series    = {MICRO-52},
+  location  = {Columbus, OH, USA},
+  month     = {10},
+  pages     = {14},
+  abstract  = {Many applications perform frequent scatter update operations to large data structures. For example, in push-style graph algorithms, processing each vertex requires updating the data of all its neighbors. Neighbors are often scattered over the whole graph, so these scatter updates have poor spatial and temporal locality. In current systems, scatter updates suffer high synchronization costs and high memory traffic. These drawbacks make push-style execution unattractive, and, when algorithms allow it, programmers gravitate towards pull-style implementations based on gather reads instead. \\ We present PHI, a push cache hierarchy that makes scatter updates synchronization- and bandwidth-efficient. PHI adds support for pushing sparse, commutative updates from cores towards main memory. PHI adds simple compute logic at each cache level to buffer and coalesce these commutative updates throughout the hierarchy. This avoids synchronization, exploits temporal locality, and produces a load balanced execution. Moreover, PHI exploits spatial locality by selectively deferring updates with poor spatial locality, batching them to achieve sequential main memory transfers. \\ PHI is the first system to leverage both the temporal and spatial locality benefits of commutative scatter updates, some of which do not apply to gather reads. As a result, PHI not only makes push algorithms efficient, but makes them consistently faster than pull ones. We evaluate PHI on graph algorithms and other sparse applications processing large inputs. PHI improves performance by 4.7$\times$ on average (and by up to 11$\times$), and reduces memory traffic by 2$\times$ (and by up to 5$\times$).},
+  journal   = {The 52nd Annual IEEE/ACM International Symposium on Microarchitecture},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
