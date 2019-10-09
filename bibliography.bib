@@ -7064,4 +7064,33 @@ The design principles described in the thesis have been implemented in GraphBLAS
   journal   = {The 52nd Annual IEEE/ACM International Symposium on Microarchitecture},
 }
 
+@PhdThesis{Nisa2019,
+  author      = {Israt J. Nisa},
+  title       = {Architecture-aware Algorithm Design of Sparse Tensor/Matrix Primitives for {GPU}s},
+  institution = {Ohio State University},
+  date        = {2019},
+  abstract    = {Sparse matrix/tensor operations have been a common computational motif in a wide spectrum of domains - numerical linear algebra, graph analytics, machine learning, health-care, etc. Sparse kernels play a key role in numerous machine learning algorithms and the rising popularity of this domain increases the significance of the primitives like SpMV (Sparse Matrix-Vector Multiplication), SDDMM (Sampled Dense-Dense Matrix Multiplication), MF/TF(Sparse Matrix/Tensor Factorization), etc. These primitives are data-parallel and highly suitable for GPU-like architectures that provide massive parallelism. Real-world matrices and tensors are large-scale and have millions of data points, which is sufficient to utilize all the cores of a GPU. Yet, a data parallel algorithm can become the bottleneck of an application and perform way below than the upper bound of the roofline model. Some common reasons are frequent irregular global memory access, low data reuse, and imbalanced work distribution. However, efficient utilization of GPU memory hierarchy, reduced thread communication, increased data locality , and an even workload distribution can provide ample opportunities for significant performance improvement. The challenge lies in utilizing the techniques across applications and achieve an even performance in spite of the irregularity of the input matrices or tensors. In this work, we systematically identify the performance bottlenecks of the important sparse algorithms and provide optimized and high performing solutions.\\At the beginning of this dissertation, we explore the application of cost-effective ML techniques in solving the format selection and performance modeling problem in the SpMV domain. By identifying a small set of sparse matrix features to use in training the ML models, we are able to select the best storage format, and predict the execution time of an SpMV kernel as well. Next, we optimize the SDDMM kernel, which is a key bottleneck in factor analysis and topic modeling algorithms like ALS, LDA, GaP, ALS, etc. The performance constraints are addressed by exploiting data reuse and increasing parallelism using virtual warping, multi-level tiling and effective use of on-chip memory (shared memory), etc. Rest of the following works are on the optimization of factorization techniques of sparse matrix and tensors on GPUs. For matrix factorization, we optimize the cyclic coordinate descent (CCD++), which is the state-of-the-art factorization method. An efficient GPU implementation is devised by using kernel fusion, tiling and binning. Next, we extend the optimization of the factorization problem to higher order data - tensor. MTTKRP (Matricized Tensor Times Khatri-Rao Products) is a key bottleneck of one of the most common tensor factorization techniques - CPD (CANDECOMP/PARAFAC decomposition). We develop new storage-efficient representations, B-CSF and HB-CSF, for tensors that enables high-performance and load-balanced execution of MTTKRP on GPUs. However, for a tensor with d modes, CPD requires a sequence of d tensor computations. To guarantee efficient memory access with respect to different modes, many storage formats store d distinct representations despite d-fold space overhead. Hence, we devise MM-CSF, a compact mixed-mode representation where better performance is achieved compared to existing solutions while utilizing a small fraction of the space.},
+}
+
+@Article{Demmel2019,
+  author      = {James Demmel and Laura Grigori and Alexander Rusciano},
+  title       = {An improved analysis and unified perspective on deterministic and randomized low rank matrix approximations},
+  date        = {2019-10-01},
+  eprint      = {arXiv:1910.00223},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {We introduce a Generalized LU-Factorization (GLU) for low-rank matrix approximation. We relate this to past approaches and extensively analyze its approximation properties. The established deterministic guarantees are combined with sketching ensembles satisfying Johnson-Lindenstrauss properties to present complete bounds. Particularly good performance is shown for the sub-sampled randomized Hadamard transform (SRHT) ensemble. Moreover, the factorization is shown to unify and generalize many past algorithms. It also helps to explain the effect of sketching on the growth factor during Gaussian Elimination.},
+  file        = {:http\://arxiv.org/pdf/1910.00223v1:PDF},
+  keywords    = {math.NA, cs.DS, cs.NA, 15-04},
+}
+
+@InProceedings{LeGorrec2019,
+  author    = {Luce le Gorrec and Sandrine Mouysset and Iain S. Duff and Philip A. Knight and Daniel Ruiz},
+  title     = {Uncovering Hidden Block Structure for Clustering},
+  booktitle = {Proceedings of the European Conference on Machine Learning and Principles and Practice of Knowledge Discovery},
+  date      = {2019},
+  series    = {ECMLPKDD'19},
+  abstract  = {We present a multistage procedure to cluster directed and undirected weighted graphs by finding the block structure of their adjacency matrices. A central part of the process is to scale the adjacency matrix into a doubly-stochastic form, which permits detection of the whole matrix block structure with minimal spectral information (theoretically a single pair of singular vectors suffices).We present the different stages of our method, namely the impact of the doubly-stochastic scaling on singular vectors, detection of the block structure by means of these vectors, and details such as cluster refinement and a stopping criterion. Then we test thealgorithm's effectiveness by using it on two unsupervised classification tasks: community detection in networks and shape detection in cloudsof points in two dimensions. By comparing results of our approach with thoseof widely used algorithms designed for specific purposes, we observe that our method is competitive (for community detection) if not superior (for shape detection) in comparison with existing methods.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
