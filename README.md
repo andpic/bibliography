@@ -1,6 +1,6 @@
-[![CircleCI](https://circleci.com/gh/andpic/bibliography.svg?style=svg&circle-token=d689174ba4c58e3e57b11621c48611738cc7c75d)](https://circleci.com/gh/andpic/bibliography) [![Latest version (PDF)](https://img.shields.io/badge/download-latest-blue)](https://circleci.com/api/v1.1/project/github/andpic/bibliography/latest/artifacts/0/tmp/biblist.pdf)
-
 # Bibliography
+
+[![CircleCI](https://circleci.com/gh/andpic/bibliography.svg?style=svg&circle-token=d689174ba4c58e3e57b11621c48611738cc7c75d)](https://circleci.com/gh/andpic/bibliography) [![Latest version (PDF)](https://img.shields.io/badge/download-latest-blue)](https://circleci.com/api/v1.1/project/github/andpic/bibliography/latest/artifacts/0/tmp/biblist.pdf)
 
 A selection of papers on numerical methods, linear algebra, sparse matrices, and GPUs.
 
