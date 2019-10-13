@@ -7082,4 +7082,53 @@ The design principles described in the thesis have been implemented in GraphBLAS
   abstract  = {SuiteSparse:GraphBLAS is a full implementation of the GraphBLAS standard, which provides a powerful and expressive framework for creating graph algorithms based on the elegant mathematics of sparse matrix operations on a semiring. Algorithms written in GraphBLAS achieve high performance with minimal development time. Using GraphBLAS, it took a mere 20 minutes to write a first-cut computational kernel that solves the Sparse Deep Neural Network Graph Challenge. Understanding the problem description and file format, writing code to read in the files that define the problem, and comparing our results with the reference solution took a full day. The kernel consists of a single for-loop around 4 lines of code, all of which are calls to GraphBLAS, and it worked perfectly the first time it was compiled. The sequential performance of the GraphBLAS solution is 3$\times$ to 5$\times$ faster than the MATLAB reference implementation. OpenMP parallelism gives an additional 10$\times$ to 15$\times$ speedup on a 20-core Intel processor, 17$\times$ on an IBM Power8 system, and 20$\times$ on a Power9 system, for the largest problems. Since SuiteSparse:GraphBLAS does not yet employ MPI, this was added at the application level, a development effort that took one week, primarily because of difficulties in resolving a load-balancing issue in the MPI-based parallel algorithm.},
 }
 
+@Article{Brock2019,
+  author      = {Benjamin Brock and Yuxin Chen and Jiakun Yan and John Owens and Aydın Buluç and Katherine Yelick},
+  title       = {{RDMA} vs. {RPC} for Implementing Distributed Data Structures},
+  date        = {2019-10-04},
+  eprint      = {arXiv:1910.02158},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {Distributed data structures are key to implementing scalable applications for scientific simulations and data analysis. In this paper we look at two implementation styles for distributed data structures: remote direct memory access (RDMA) and remote procedure call (RPC). We focus on operations that require individual accesses to remote portions of a distributed data structure, e.g., accessing a hash table bucket or distributed queue, rather than global operations in which all processors collectively exchange information. We look at the trade-offs between the two styles through microbenchmarks and a performance model that approximates the cost of each. The RDMA operations have direct hardware support in the network and therefore lower latency and overhead, while the RPC operations are more expressive but higher cost and can suffer from lack of attentiveness from the remote side. We also run experiments to compare the real-world performance of RDMA- and RPC-based data structure operations with the predicted performance to evaluate the accuracy of our model, and show that while the model does not always precisely predict running time, it allows us to choose the best implementation in the examples shown. We believe this analysis will assist developers in designing data structures that will perform well on current network architectures, as well as network architects in providing better support for this class of distributed data structures.},
+  file        = {:http\://arxiv.org/pdf/1910.02158v1:PDF},
+  keywords    = {cs.DC},
+}
+
+@TechReport{Tomov2019,
+  author      = {Tomov, Stanimire and Haidar, Azzam and Ayala, Alan and Shaiek, Hejer and Dongarra, Jack},
+  title       = {{FFT}-{ECP} Implementation Optimizations and Features Phase},
+  institution = {Innovative Computing Laboratory, University of Tennessee},
+  year        = {2019},
+  type        = {ECP WBS 2.3.3.09 Milestone Report},
+  number      = {FFT-ECP ST-MS-10-1440},
+  note        = {revision 09-2019},
+  month       = {September},
+  url         = {https://www.icl.utk.edu/files/publications/2019/icl-utk-1263-2019.pdf},
+  abstract    = {The goal of this milestone was the imlementation optimizations and features phase of 3-D FFTs in the FFT-ECP project. The target architectures are large-scale distributed GPU-accelerated platforms. \\ In this milestone we describe the implmentation optimizations, features, and performance of the 3-D FFTs that we developed for heterogeneous systems with GPUs. Specifically, this milestone delivered on the following sub-tasks: \begin{itemize} \item Extend FFT-ECP to support various precisions, including real, and investigate the feasibility of mixed precision FFT solvers; \item Develop support for flexible data layouts and enable the new library to handle data conversion/communication on the backend in an optimized and dynamic adaptive fashion based on the communication cost model analyzed in the previous milestone; \item Optimize the distributed 3-D FFT-ECP solver to enable multiple FFTs per MPI process (with accelerators) and multiple GPUs per node. \end{itemize} A main part of this milestone were the performance optimizations and the additions of features that targeted ECP applications need. \\ The artifacts delivered include the performance optimizations and features added to the solvers, and a tuned FFT-ECP software, freely available on the FFT-ECP’s Git repository hosted on Bitbucket, \url{https://bitbucket.org/icl/heffte/}. This is the first software release under the FFT-ECP project. Released is a new FFT library, called heFFTe version 0.1 (Highly Efficient FFTs for Exascale).\\ See also the FFT-ECP website, \url{http://icl.utk.edu/fft/} for more details on the FFT-ECP project.},
+}
+
+@Article{Zhang2019a,
+  author      = {Zecheng Zhang and Xiaoxiao Wu and Naijing Zhang and Siyuan Zhang and Edgar Solomonik},
+  title       = {Enabling Distributed-Memory Tensor Completion in Python using New Sparse Tensor Kernels},
+  date        = {2019-10-06},
+  eprint      = {arXiv:1910.02371},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {Tensor computations are increasingly prevalent numerical techniques in data science.However, innovation and deployment of methods on large sparse tensor datasets are made challenging by the difficulty of efficient implementation thereof.We provide a Python extension to the Cyclops tensor algebra library, which fully automates the management of distributed-memory parallelism and sparsity for NumPy-style operations on multidimensional arrays.We showcase this functionality with novel high-level implementations of three algorithms for the tensor completion problem: alternating least squares (ALS) with an implicit conjugate gradient method, stochastic gradient descent (SGD), and coordinate descent (CCD++).To make possible tensor completion for very sparse tensors, we introduce a new multi-tensor routine that is asymptotically more efficient than pairwise tensor contraction for key components of the tensor completion methods.Further, we add support for hypersparse matrix representations to Cyclops.We provide microbenchmarking results on the Stampede2 supercomputer to demonstrate the efficiency of this functionality.Finally, we study the accuracy and performance of the tensor completion methods for a synthetic tensor with 10 billion nonzeros and the Netflix dataset.},
+  file        = {:http\://arxiv.org/pdf/1910.02371v1:PDF},
+  keywords    = {cs.DC, cs.MS, cs.NA, math.NA},
+}
+
+@Article{Chehade2019,
+  author      = {Abdallah Chehade and Zunya Shi},
+  title       = {The Sparse Reverse of Principal Component Analysis for Fast Low-Rank Matrix Completion},
+  date        = {2019-10-04},
+  eprint      = {arXiv:1910.02155},
+  eprintclass = {cs.LG},
+  eprinttype  = {arXiv},
+  abstract    = {Matrix completion constantly receives tremendous attention from many research fields. It is commonly applied for recommender systems such as movie ratings, computer vision such as image reconstruction or completion, multi-task learning such as collaboratively modeling time-series trends of multiple sensors, and many other applications. Matrix completion techniques are usually computationally exhaustive and/or fail to capture the heterogeneity in the data. For example, images usually contain a heterogeneous set of objects, and thus it is a challenging task to reconstruct images with high levels of missing data. In this paper, we propose the sparse reverse of principal component analysis for matrix completion. The proposed approach maintains smoothness across the matrix, produces accurate estimates of the missing data, converges iteratively, and it is computationally tractable with a controllable upper bound on the number of iterations until convergence. The accuracy of the proposed technique is validated on natural images, movie ratings, and multisensor data. It is also compared with common benchmark methods used for matrix completion.},
+  file        = {:http\://arxiv.org/pdf/1910.02155v1:PDF},
+  keywords    = {cs.LG, eess.SP, stat.ML},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
