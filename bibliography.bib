@@ -3196,15 +3196,14 @@
 }
 
 @Book{Smith1993,
-  Title                    = {The Design and Analysis of Parallel Algorithms},
-  Author                   = {Justin R. Smith},
-  Publisher                = {Oxford University Press},
-
- abstract = {This text for students and professionals in computer science provides a valuable overview of current knowledge concerning parallel algorithms. These computer operations have recently acquired increased importance due to their ability to enhance the power of computers by permitting multiple processors to work on different parts of a problem independently and simultaneously. This approach has led to solutions of difficult problems in a number of vital fields, including artificial intelligence, image processing, and differential equations. As the first up-to-date summary of the topic, this book will be sought after by researchers, computer science professionals, and advanced students involved in parallel computing and parallel algorithms.},
-  Date                     = {1993},
-  ISBN                     = {0195078810},
-  Owner                    = {andrea},
-  Timestamp                = {2017.05.10}
+  author    = {Justin R. Smith},
+  title     = {The Design and Analysis of Parallel Algorithms},
+  date      = {1993},
+  publisher = {Oxford University Press},
+  isbn      = {0195078810},
+  abstract  = {This text for students and professionals in computer science provides a valuable overview of current knowledge concerning parallel algorithms. These computer operations have recently acquired increased importance due to their ability to enhance the power of computers by permitting multiple processors to work on different parts of a problem independently and simultaneously. This approach has led to solutions of difficult problems in a number of vital fields, including artificial intelligence, image processing, and differential equations. As the first up-to-date summary of the topic, this book will be sought after by researchers, computer science professionals, and advanced students involved in parallel computing and parallel algorithms.},
+  owner     = {andrea},
+  timestamp = {2017.05.10},
 }
 
 @InProceedings{Soman2010,
@@ -4665,7 +4664,7 @@
   doi      = {10.1002/cpe.4244},
   eprint   = {https://onlinelibrary.wiley.com/doi/pdf/10.1002/cpe.4244},
   url      = {https://onlinelibrary.wiley.com/doi/abs/10.1002/cpe.4244},
-  abstract = {Summary The sparse triangular solve kernels, SpTRSV and SpTRSM, are important building blocks for a number of numerical linear algebra routines. Parallelizing SpTRSV and SpTRSM on today's manycore platforms, such as GPUs, is not an easy task since computing a component of the solution may depend on previously computed components, enforcing a degree of sequential processing. As a consequence, most existing work introduces a preprocessing stage to partition the components into a group of level-sets or colour-sets so that components within a set are independent and can be processed simultaneously during the subsequent solution stage. However, this class of methods requires a long preprocessing time as well as significant runtime synchronization overheads between the sets. To address this, we propose in this paper novel approaches for SpTRSV and SpTRSM in which the ordering between components is naturally enforced within the solution stage. In this way, the cost for preprocessing can be greatly reduced, and the synchronizations between sets are completely eliminated. To further exploit the data-parallelism, we also develop an adaptive scheme for efficiently processing multiple right-hand sides in SpTRSM. A comparison with a state-of-the-art library supplied by the GPU vendor, using 20 sparse matrices on the latest GPU device, shows that the proposed approach obtains an average speedup of over two for SpTRSV and up to an order of magnitude speedup for SpTRSM. In addition, our method is up to two orders of magnitude faster for the preprocessing stage than existing SpTRSV and SpTRSM methods.},
+  abstract = {The sparse triangular solve kernels, SpTRSV and SpTRSM, are important building blocks for a number of numerical linear algebra routines. Parallelizing SpTRSV and SpTRSM on today's manycore platforms, such as GPUs, is not an easy task since computing a component of the solution may depend on previously computed components, enforcing a degree of sequential processing. As a consequence, most existing work introduces a preprocessing stage to partition the components into a group of level-sets or colour-sets so that components within a set are independent and can be processed simultaneously during the subsequent solution stage. However, this class of methods requires a long preprocessing time as well as significant runtime synchronization overheads between the sets. To address this, we propose in this paper novel approaches for SpTRSV and SpTRSM in which the ordering between components is naturally enforced within the solution stage. In this way, the cost for preprocessing can be greatly reduced, and the synchronizations between sets are completely eliminated. To further exploit the data-parallelism, we also develop an adaptive scheme for efficiently processing multiple right-hand sides in SpTRSM. A comparison with a state-of-the-art library supplied by the GPU vendor, using 20 sparse matrices on the latest GPU device, shows that the proposed approach obtains an average speedup of over two for SpTRSV and up to an order of magnitude speedup for SpTRSM. In addition, our method is up to two orders of magnitude faster for the preprocessing stage than existing SpTRSV and SpTRSM methods.},
   keywords = {GPU, manycore processor, sparse triangular solve, synchronization-free algorithm},
 }
 
@@ -6288,7 +6287,7 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   year     = {2019},
   doi      = {10.1002/cpe.5418},
   eprint   = {https://onlinelibrary.wiley.com/doi/pdf/10.1002/cpe.5418},
-  abstract = {Summary In this work, we pursue the idea of radically decoupling the floating point format used for arithmetic operations from the format used to store the data in memory. We complement this idea with a customized precision memory format derived by splitting the mantissa (significand) of standard IEEE formats into segments, such that values can be accessed faster if lower accuracy is acceptable. Combined with precision-aware algorithms that dynamically adapt the data access accuracy to the numerical requirements, the customized precision memory format can render attractive runtime savings without impacting the memory footprint of the data or the accuracy of the final result. In an experimental analysis using the adaptive precision Jacobi method on diagonalizable test problems, we assess the benefits of the mantissa-segmenting customized precision format on recent multi- and manycore architectures.},
+  abstract = {In this work, we pursue the idea of radically decoupling the floating point format used for arithmetic operations from the format used to store the data in memory. We complement this idea with a customized precision memory format derived by splitting the mantissa (significand) of standard IEEE formats into segments, such that values can be accessed faster if lower accuracy is acceptable. Combined with precision-aware algorithms that dynamically adapt the data access accuracy to the numerical requirements, the customized precision memory format can render attractive runtime savings without impacting the memory footprint of the data or the accuracy of the final result. In an experimental analysis using the adaptive precision Jacobi method on diagonalizable test problems, we assess the benefits of the mantissa-segmenting customized precision format on recent multi- and manycore architectures.},
   keywords = {adaptive precision Jacobi, GPUs, mantissa segmentation, modular precision ecosystem, multiprecision algorithm, multicore},
 }
 
@@ -7231,6 +7230,67 @@ The design principles described in the thesis have been implemented in GraphBLAS
   address   = {New York, NY, USA},
   keywords  = {Accelerators, Convolutional neural networks, Sparse tensors},
   numpages  = {15},
+}
+
+@Article{Tang2019,
+  author      = {Yu-Hang Tang and Oguz Selvitopi and Doru Popovici and Aydın Buluç},
+  title       = {A High-Throughput Solver for Marginalized Graph Kernels on {GPU}},
+  date        = {2019-10-14},
+  eprint      = {arXiv:1910.06310},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {We present the design and optimization of a solver for efficient and high-throughput computation of the marginalized graph kernel on General Purpose GPUs. The graph kernel is computed using the conjugate gradient method to solve a generalized Laplacian of the tensor product between a pair of graphs. To cope with the large gap between the instruction throughput and the memory bandwidth of the GPUs, our solver forms the graph tensor product on-the-fly without storing it in memory. This is achieved by using threads in a warp cooperatively to stream the adjacency and edge label matrices of individual graphs by small square matrix blocks called tiles, which are then staged in registers and the shared memory for later reuse. Warps across a thread block can further share tiles via the shared memory to increase data reuse. We exploit the sparsity of the graphs hierarchically by storing only non-empty tiles using a coordinate format and nonzero elements within each tile using bitmaps. We propose a new partition-based reordering algorithm for aggregating nonzero elements of the graphs into fewer but denser tiles to further exploit sparsity. We carry out extensive theoretical analyses on the graph tensor product primitives for tiles of various density and evaluate their performance on synthetic and real-world datasets. Our solver delivers three to four orders of magnitude speedup over existing CPU-based solvers such as GraKeL and GraphKernels. The capability of the solver enables kernel-based learning tasks at unprecedented scales.},
+  file        = {:http\://arxiv.org/pdf/1910.06310v2:PDF},
+  keywords    = {cs.DC, cs.LG, cs.PF},
+}
+
+@Article{Sivkov2019,
+  author      = {Ilia Sivkov and Alfio Lazzaro and Juerg Hutter},
+  title       = {{DBCSR}: A Library for Dense Matrix Multiplications on Distributed GPU-Accelerated Systems},
+  date        = {2019-10-10},
+  eprint      = {arXiv:1910.04796},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {Most, if not all the modern scientific simulation packages utilize matrix algebra operations. Among the operation of the linear algebra, one of the most important kernels is the multiplication of matrices, dense and sparse. Examples of application of such a kernel are in electronic structure calculations, machine learning, data mining, graph processing, and digital signal processing. Several optimized libraries exist that can achieve high-performance on distributed systems. Only a few of them target distributed GPU-accelerated systems. In most of the cases, these libraries are provided and optimized by system vendors for their specific computer systems. In this paper, we present the DBCSR library (Distributed Block Compressed Sparse Row) for the distributed dense matrix-matrix multiplications. Although the library is specifically designed for block-sparse matrix-matrix multiplications, we optimized it for the dense case on GPU-accelerated systems. We show that the DBCSR outperforms the multiplication of matrices of different sizes and shapes provided by a vendor optimized GPU version of the ScaLAPACK library up to 2.5$\times$ (1.4$\times$ on average).},
+  file        = {:http\://arxiv.org/pdf/1910.04796v1:PDF},
+  keywords    = {cs.DC, cs.MS},
+}
+
+@Article{Zhang2019b,
+  author      = {Yongzhe Zhang and Ariful Azad and Zhenjiang Hu},
+  title       = {{FastSV}: A Distributed-Memory Connected Component Algorithm with Fast Convergence},
+  date        = {2019-10-14},
+  eprint      = {arXiv:1910.05971},
+  eprintclass = {cs.DS},
+  eprinttype  = {arXiv},
+  abstract    = {This paper presents a new distributed-memory algorithm called FastSV for finding connected components in an undirected graph. Our algorithm simplifies the classic Shiloach-Vishkin algorithm and employs several novel and efficient hooking strategies for faster convergence. We map different steps of FastSV to linear algebraic operations and implement them with the help of scalable graph libraries. FastSV uses sparse operations to avoid redundant work and optimized MPI communication to avoid bottlenecks. The resultant algorithm shows high-performance and scalability as it can find the connected components of a hyperlink graph with over 134B edges in 30 seconds using 262K cores on a Cray XC40 supercomputer. FastSV outperforms the state-of-the-art algorithm by an average speedup of 2.21$\times$ (max 4.27$\times$) on a variety of real-world graphs.},
+  file        = {:http\://arxiv.org/pdf/1910.05971v1:PDF},
+  keywords    = {cs.DS, cs.DC},
+}
+
+@InProceedings{Ayala19,
+  author    = {Alan Ayala and Stanimire Tomov and Xi Luo and Hejer Shaiek and Azzam Haidar and George Bosilca and Jack Dongarra},
+  title     = {Impacts of Multi-{GPU} {MPI} Collective Communications on Large {FFT} Computation},
+  booktitle = {Proceedings of the Workshop on Exascale MPI (ExaMPI)},
+  year      = {2019},
+  series    = {SC'19},
+  abstract  = {Most applications targeting exascale, such as those part of the Exascale Computing Project (ECP), are designed for heterogeneous architectures and rely on the Message Passing Interface (MPI) as their underlying parallel programming model. In this paper we analyze the limitations of collective MPI communication for the computation of fast Fourier transforms (FFTs), which are relied on heavily for large-scale particle simulations. We present experiments made at one of the largest heterogeneous platforms, the Summit supercomputer at ORNL. We discuss communication models from state-of-the-art FFT libraries, and propose a new FFT library, named HEFFTE (Highly Efficient FFTs for Exascale), which supports heterogeneous architectures and yields considerable speedups compared with CPU libraries, while maintaining good weak as well as strong scalability.},
+  address   = {Denver, CO},
+  keywords  = {Collective MPI, Exascale applications, FFT, Heterogeneous systems, scalable},
+}
+
+@Article{Anzt2019c,
+  author   = {Anzt, Hartwig and Jack Dongarra and Flegar, Goran and Nicholas J. Higham and Quintana-Orti, Enrique S.},
+  title    = {Adaptive precision in block-Jacobi preconditioning for iterative sparse linear system solvers},
+  journal  = {Concurrency and Computation: Practice and Experience},
+  year     = {2019},
+  volume   = {31},
+  number   = {6},
+  pages    = {e4460},
+  doi      = {10.1002/cpe.4460},
+  url      = {https://onlinelibrary.wiley.com/doi/abs/10.1002/cpe.4460},
+  abstract = {We propose an adaptive scheme to reduce communication overhead caused by data movement by selectively storing the diagonal blocks of a block-Jacobi preconditioner in different precision formats (half, single, or double). This specialized preconditioner can then be combined with any Krylov subspace method for the solution of sparse linear systems to perform all arithmetic in double precision. We assess the effects of the adaptive precision preconditioner on the iteration count and data transfer cost of a preconditioned conjugate gradient solver. A preconditioned conjugate gradient method is, in general, a memory bandwidth-bound algorithm, and therefore its execution time and energy consumption are largely dominated by the costs of accessing the problem{\textquoteright}s data in memory. Given this observation, we propose a model that quantifies the time and energy savings of our approach based on the assumption that these two costs depend linearly on the bit length of a floating point number. Furthermore, we use a number of test problems from the SuiteSparse matrix collection to estimate the potential benefits of the adaptive block-Jacobi preconditioning scheme.},
+  keywords = {adaptive precision, block-Jacobi preconditioning, communication reduction, energy efficiency, Krylov subspace methods, sparse linear systems},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
