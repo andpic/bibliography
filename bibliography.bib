@@ -7306,4 +7306,34 @@ The design principles described in the thesis have been implemented in GraphBLAS
   address   = {Singapore},
 }
 
+@InProceedings{Sadi2019,
+  author    = {Sadi, Fazle and Sweeney, Joe and Low, Tze Meng and Hoe, James C. and Pileggi, Larry and Franchetti, Franz},
+  title     = {Efficient {SpMV} Operation for Large and Highly Sparse Matrices Using Scalable Multi-way Merge Parallelization},
+  booktitle = {Proceedings of the 52nd Annual {IEEE/ACM} International Symposium on Microarchitecture},
+  year      = {2019},
+  series    = {MICRO '52},
+  publisher = {ACM},
+  location  = {Columbus, OH, USA},
+  isbn      = {978-1-4503-6938-1},
+  pages     = {347--358},
+  doi       = {10.1145/3352460.3358330},
+  abstract  = {The importance of Sparse Matrix dense Vector multiplication (SpMV) operation in graph analytics and numerous scientific applications has led to development of custom accelerators that are intended to over-come the difficulties of sparse data operations on general purpose architectures. However, efficient SpMV operation on large problem (i.e. working set exceeds on-chip storage) is severely constrained due to strong dependence on limited amount of fast random access memory to scale. Additionally, unstructured matrix with high sparsity pose difficulties as most solutions rely on exploitation of data locality. This work presents an algorithm co-optimized scalable hardware architecture that can efficiently operate on very large (~billion nodes) and/or highly sparse (avg. degree <10) graphs with significantly less on-chip fast memory than existing solutions. A novel parallelization methodology for implementing large and high throughput multi-way merge network is the key enabler of this high performance SpMV accelerator. Additionally, a data compression scheme to reduce off-chip traffic and special computation for nodes with exceptionally large number of edges, commonly found in power-law graphs, are presented. This accelerator is demonstrated with 16-nm fabricated ASIC and Stratix 10 FPGA platforms. Experimental results show more than an order of magnitude improvement over current custom hardware solutions and more than two orders of magnitude improvement over commercial off-the-shelf (COTS) architectures for both performance and energy efficiency.},
+  acmid     = {3358330},
+  address   = {New York, NY, USA},
+  keywords  = {SpMV, custom hardware, merge parallelization, sparse matrices},
+  numpages  = {12},
+}
+
+@Article{Jiang2019,
+  author      = {Yuning Jiang and Dimitris Kouzoupis and Haoyu Yin and Moritz Diehl and Boris Houska},
+  title       = {Decentralized Optimization over Tree Graphs},
+  date        = {2019-10-21},
+  eprint      = {arXiv:1910.09206},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {This paper presents a decentralized algorithm for non-convex optimization over tree-structured networks. We assume that each node of this network can solve small-scale optimization problems and communicate approximate value functions with its neighbors based on a novel multi-sweep communication protocol. In contrast to existing parallelizable optimization algorithms for non-convex optimization the nodes of the network are neither synchronized nor assign any central entity. None of the nodes needs to know the whole topology of the network, but all nodes know that the network is tree-structured. We discuss conditions under which locally quadratic convergence rates can be achieved. The method is illustrated by running the decentralized asynchronous multi-sweep protocol on a radial AC power network case study.},
+  file        = {:http\://arxiv.org/pdf/1910.09206v1:PDF},
+  keywords    = {math.OC},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
