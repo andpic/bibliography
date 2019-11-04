@@ -7349,4 +7349,17 @@ The design principles described in the thesis have been implemented in GraphBLAS
   keywords  = {graph theory;mathematics computing;matrix algebra;programming environments;mathematical foundations;GraphBLAS standard;GraphBlas.org;matrix-based graph algorithms;matrix-based graph operations;programming environments;adjacency matrices;incidence matrices;matrix multiplication;matrix mathematics;Matrices;Sparse matrices;Finite element analysis;Standards;Additives},
 }
 
+@Article{Macintosh2019,
+  author    = {Hamish J. Macintosh and Jasmine E. Banks and Neil A. Kelson},
+  title     = {Implementing and Evaluating an Heterogeneous, Scalable, Tridiagonal Linear System Solver with {OpenCL} to Target {FPGAs}, {GPUs}, and {CPUs}},
+  journal   = {International Journal of Reconfigurable Computing},
+  year      = {2019},
+  volume    = {2019},
+  month     = {10},
+  pages     = {1--13},
+  doi       = {10.1155/2019/3679839},
+  abstract  = {Solving diagonally dominant tridiagonal linear systems is a common problem in scientific high-performance computing (HPC). Furthermore, it is becoming more commonplace for HPC platforms to utilise a heterogeneous combination of computing devices. Whilst it is desirable to design faster implementations of parallel linear system solvers, power consumption concerns are increasing in priority. This work presents the oclspkt routine. The oclspkt routine is a heterogeneous OpenCL implementation of the truncated SPIKE algorithm that can use FPGAs, GPUs, and CPUs to concurrently accelerate the solving of diagonally dominant tridiagonal linear systems. The routine is designed to solve tridiagonal systems of any size and can dynamically allocate optimised workloads to each accelerator in a heterogeneous environment depending on the accelerator’s compute performance. The truncated SPIKE FPGA solver is developed first for optimising OpenCL device kernel performance, global memory bandwidth, and interleaved host to device memory transactions. The FPGA OpenCL kernel code is then refactored and optimised to best exploit the underlying architecture of the CPU and GPU. An optimised TDMA OpenCL kernel is also developed to act as a serial baseline performance comparison for the parallel truncated SPIKE kernel since no FPGA tridiagonal solver capable of solving large tridiagonal systems was available at the time of development. The individual GPU, CPU, and FPGA solvers of the oclspkt routine are 110\%, 150\%, and 170\% faster, respectively, than comparable device-optimised third-party solvers and applicable baselines. Assessing heterogeneous combinations of compute devices, the GPU + FPGA combination is found to have the best compute performance and the FPGA-only configuration is found to have the best overall estimated energy efficiency.},
+  publisher = {Hindawi Limited},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
