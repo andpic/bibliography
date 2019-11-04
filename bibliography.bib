@@ -7362,4 +7362,55 @@ The design principles described in the thesis have been implemented in GraphBLAS
   publisher = {Hindawi Limited},
 }
 
+@Article{Buttari2019,
+  author   = {Buttari, Alfredo. and Orban, Dominique. and Ruiz, Daniel. and Titley-Peloquin, David.},
+  title    = {A Tridiagonalization Method for Symmetric Saddle-Point Systems},
+  journal  = {SIAM Journal on Scientific Computing},
+  year     = {2019},
+  volume   = {41},
+  number   = {5},
+  pages    = {S409--S432},
+  doi      = {10.1137/18M1194900},
+  url      = {https://doi.org/10.1137/18M1194900
++    
+},
+  abstract = {We propose an iterative method for the solution of symmetric saddle-point systems that exploits the orthogonal tridiagonalization method of Saunders, Simon, and Yip (1988). By contrast with methods based on the Golub and Kahan (1965) bidiagonalization process, our method takes advantage of two initial vectors and splits the system into the sum of a least-squares and a least-norm problem. Our method typically requires fewer operator-vector products than MINRES, yet performs a comparable amount of work per iteration and has comparable storage requirements.},
+}
+
+@Article{Sivkov2019a,
+  author      = {Ilia Sivkov and Patrick Seewald and Alfio Lazzaro and Juerg Hutter},
+  title       = {{DBCSR}: A Blocked Sparse Tensor Algebra Library},
+  date        = {2019-10-29},
+  eprint      = {arXiv:1910.13555},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {Advanced algorithms for large-scale electronic structure calculations are mostly based on processing multi-dimensional sparse data. Examples are sparse matrix-matrix multiplications in linear-scaling Kohn-Sham calculations or the efficient determination of the exact exchange energy. When going beyond mean field approaches, e.g. for Moller-Plesset perturbation theory, RPA and Coupled-Cluster methods, or the GW methods, it becomes necessary to manipulate higher-order sparse tensors. Very similar problems are also encountered in other domains, like signal processing, data mining, computer vision, and machine learning. With the idea that the most of the tensor operations can be mapped to matrices, we have implemented sparse tensor algebra functionalities in the frames of the sparse matrix linear algebra library DBCSR (Distributed Block Compressed Sparse Row). DBCSR has been specifically designed to efficiently perform blocked-sparse matrix operations, so it becomes natural to extend its functionality to include tensor operations. We describe the newly developed tensor interface and algorithms. In particular, we introduce the tensor contraction based on a fast rectangular sparse matrix multiplication algorithm.},
+  file        = {:http\://arxiv.org/pdf/1910.13555v1:PDF},
+  keywords    = {cs.DC},
+}
+
+@Article{Liu2019a,
+  author      = {Changxi Liu and Hailong Yang and Xu Liu and Zhongzhi Luan and Depei Qian},
+  title       = {Intelligent-Unrolling: Exploiting Regular Patterns in Irregular Applications},
+  date        = {2019-10-24},
+  eprint      = {arXiv:1910.13346},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {Modern optimizing compilers are able to exploit memory access or computation patterns to generate vectorization codes. However, such patterns in irregular applications are unknown until runtime due to the input dependence. Thus, either compiler's static optimization or profile-guided optimization based on specific inputs cannot predict the patterns for any common input, which leads to suboptimal code generation. To address this challenge, we develop Intelligent-Unroll, a framework to automatically optimize irregular applications with vectorization. Intelligent-Unroll allows the users to depict the computation task using \textit{code seed} with the memory access and computation patterns represented in \textit{feature table} and \textit{information-code tree}, and generates highly efficient codes. Furthermore, Intelligent-Unroll employs several novel optimization techniques to optimize reduction operations and gather/scatter instructions. We evaluate Intelligent-Unroll with sparse matrix-vector multiplication (SpMV) and graph applications. Experimental results show that Intelligent-Unroll is able to generate more efficient vectorization codes compared to the state-of-the-art implementations.},
+  file        = {:http\://arxiv.org/pdf/1910.13346v1:PDF},
+  keywords    = {cs.DC, cs.PF, cs.PL},
+}
+
+@Article{Dhulipala2019,
+  author      = {Laxman Dhulipala and Charlie McGuffey and Hongbo Kang and Yan Gu and Guy E. Blelloch and Phillip B. Gibbons and Julian Shun},
+  title       = {Semi-Asymmetric Parallel Graph Algorithms for {NVRAMs}},
+  date        = {2019-10-27},
+  eprint      = {arXiv:1910.12310},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {Emerging non-volatile main memory (NVRAM) technologies provide novel features for large-scale graph analytics, combining byte-addressability, low idle power, and improved memory-density. Systems are likely to have an order of magnitude more NVRAM than traditional memory (DRAM), allowing large graph problems to be solved efficiently at a modest cost on a single machine. However, a significant challenge in achieving high performance is in accounting for the fact that NVRAM writes can be significantly more expensive than NVRAM reads. In this paper, we propose an approach to parallel graph analytics in which the graph is stored as a read-only data structure (in NVRAM), and the amount of mutable memory is kept proportional to the number of vertices. Similar to the popular semi-external and semi-streaming models for graph analytics, the approach assumes that the vertices of the graph fit in a fast read-write memory (DRAM), but the edges do not. In NVRAM systems, our approach eliminates writes to the NVRAM, among other benefits. We present a model, the Parallel Semi-Asymmetric Model (PSAM), to analyze algorithms in the setting, and run experiments on a 48-core NVRAM system to validate the effectiveness of these algorithms. To this end, we study over a dozen graph problems. We develop parallel algorithms for each that are efficient, often work-optimal, in the model. Experimentally, we run all of the algorithms on the largest publicly-available graph and show that our PSAM algorithms outperform the fastest prior algorithms designed for DRAM or NVRAM. We also show that our algorithms running on NVRAM nearly match the fastest prior algorithms running solely in DRAM, by effectively hiding the costs of repeatedly accessing NVRAM versus DRAM.},
+  file        = {:http\://arxiv.org/pdf/1910.12310v1:PDF},
+  keywords    = {cs.DC, cs.DS},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
