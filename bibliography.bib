@@ -7426,4 +7426,27 @@ The design principles described in the thesis have been implemented in GraphBLAS
   keywords  = {C language;formal specification;graph theory;mathematics computing;C programming language specification;open source repository;linear algebra;LAGraph graph algorithms project;ongoing community effort;GraphBLAS;Libraries;Sparse matrices;Linear algebra;Matlab;Software algorithms;Hardware;Data structures;GraphBLAS;Graph Algorithms},
 }
 
+@InBook{Cook2019,
+  author    = {William Cook},
+  title     = {Computing in Combinatorial Optimization},
+  booktitle = {Lecture Notes in Computer Science},
+  year      = {2019},
+  editor    = {Steffen B., Woeginger G.},
+  volume    = {10000},
+  publisher = {Springer, Cham.},
+  isbn      = {978-3-319-91908-9},
+  doi       = {10.1007/978-3-319-91908-9_3},
+  abstract  = {Research in combinatorial optimization successfully combines diverse ideas drawn from computer science, mathematics, and operations research. We give a tour of this work, focusing on the early development of the subject and the central role played by linear programming. The paper concludes with a short wish list of future research directions.},
+}
+
+@Article{Higham2019b,
+  author     = {Higham, Nicholas and Pranesh, Srikara},
+  title      = {Exploiting Lower Precision Arithmetic in Solving Symmetric Positive Definite Linear Systems and Least Squares Problems},
+  year       = {2019},
+  eprint     = {MIMS EPrint:2019.20},
+  eprinttype = {MIMS EPrint},
+  url        = {http://eprints.maths.manchester.ac.uk/2736/1/paper.pdf},
+  abstract   = {What is the fastest way to solve a linear system $Ax= b$ in arithmetic of a given precision when $A$ is symmetric positive definite and otherwise unstructured? The usual answer is by Cholesky factorization, assuming that $A$ can be factorized. We develop an algorithm that can be faster, given an arithmetic of precision lower than the working precision as well as (optionally) one of higher precision. The arithmetics might, for example, be of precisions half, single, and double; half and double, possibly with quadruple; or single and double, possibly with quadruple. We compute a Cholesky factorization at the lower precision and use the factors as preconditioners in GMRES-based iterative refinement. To avoid breakdown of the factorization we shift the matrix by a small multiple of its diagonal. We explain why this is preferable to the common approach of shifting by a multiple of the identity matrix, We also incorporate scaling in order to avoid overflow and reduce the chance of underflow when working in IEEE half precision arithmetic. We extend the algorithm to solve a linear least squares problem with a well conditioned coefficient matrix by forming and solving the normal equations. In both algorithms most of the work is done at low precision provided that iterative refinement and the inner iterative solver converge quickly. We explain why replacing GMRES by the conjugate gradient method causes convergence guarantees to be lost, but show that this change has little effect on convergence in practice. Our numerical experiments confirm the potential of the new algorithms to provide faster solutions in environments that support multiple precisions of arithmetic.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
