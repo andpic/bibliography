@@ -7459,4 +7459,24 @@ The design principles described in the thesis have been implemented in GraphBLAS
   keywords = {Structured Query Language;Sparks;Algebra;Engines;Programming;Distributed databases;Data processing},
 }
 
+@InProceedings{Helal2019,
+  author    = {Ahmed E. Helal and Ashwin M. Aji and Michael L. Chu and Bradford M. Beckmann and Wu-chun Feng},
+  title     = {Adaptive Task Aggregation for High-Performance Sparse Solvers on {GPUs}},
+  booktitle = {The 28th International Conference on Parallel Architectures and Compilation},
+  year      = {2019},
+  series    = {PACT'19},
+  abstract  = {Sparse solvers are heavily used in computational fluid dynamics (CFD), computer-aided design (CAD), and other important application domains. These solvers remain challenging to execute on massively parallel architectures, due to the sequential dependencies between the fine-grained application tasks. In particular, parallel sparse solvers typically suffer from substantial scheduling and dependency-management overheads relative to the compute operations. We propose adaptive task aggregation (ATA) to efficiently execute such irregular computations on GPU architectures via hierarchical dependency management and lowlatency task scheduling. On a gamut of  representative problems with different data-dependency structures, ATA significantly outperforms existing GPU task-execution approaches, achieving a geometric mean speedup of 2.2$\times$ to 3.7$\times$ across different sparse kernels (with speedups of up to two orders of magnitude).},
+}
+
+@Article{Kim2019,
+  author    = {Hyunjun Kim and Sungin Hong and Jeonghwan Park and Hwansoo Han},
+  title     = {Static code transformations for thread-dense memory accesses in {GPU} computing},
+  journal   = {Concurrency and Computation: Practice and Experience},
+  year      = {2019},
+  month     = {oct},
+  doi       = {10.1002/cpe.5512},
+  abstract  = {Due to the GPU's complex memory system and massive thread-level parallelism, application programmers often have difficulty optimizing GPU programs. An essential approach to memory optimization is to utilize low-latency on-chip memory to avoid high latency of off-chip memory accesses. Shared memory is an on-chip memory, which is explicitly managed by programmers. Shared memory has a read/write latency similar to that of the L1 cache, but poor data management can degrade performance. In this paper, we present a static code transformation that preloads dataset in GPU's shared memory. Our static analysis primarily targets global memory requests with high thread-density for preloading in shared memory. The thread-dense memory access pattern is a pattern in which many threads efficiently manage the address space of shared memory, as well as reuse the same data in a thread block. We limit the usage of shared memory so that thread-level parallelism remains at the same level when selecting datasets for preloading. Finally, our source-to-source compiler allows to preload selected datasets in shared memory by transforming non-optimized GPU kernel code. Our methods achieve 1.26$\times$ and 1.62$\times$ speedups on average (geometric mean), respectively with GTX980 and P100 GPUs.},
+  publisher = {Wiley},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
