@@ -7336,6 +7336,19 @@ The design principles described in the thesis have been implemented in GraphBLAS
   keywords    = {math.OC},
 }
 
+@InProceedings{Kepner2016,
+  author    = {Kepner, J. and Aaltonen, P. and Bader, D. and Buluç, A. and Franchetti, F. and Gilbert, J. and Hutchison, D. and Kumar, M. and Lumsdaine, A. and Meyerhenke, H. and McMillan, S. and Yang, C. and Owens, J. D. and Zalewski, M. and Mattson, T. and Moreira, J.},
+  title     = {Mathematical foundations of the {GraphBLAS}},
+  booktitle = {IEEE High Performance Extreme Computing Conference},
+  year      = {2016},
+  series    = {HPEC '16},
+  month     = {9},
+  pages     = {1-9},
+  doi       = {10.1109/HPEC.2016.7761646},
+  abstract  = {The GraphBLAS standard (GraphBlas.org) is being developed to bring the potential of matrix-based graph algorithms to the broadest possible audience. Mathematically, the GraphBLAS defines a core set of matrix-based graph operations that can be used to implement a wide class of graph algorithms in a wide range of programming environments. This paper provides an introduction to the mathematics of the GraphBLAS. Graphs represent connections between vertices with edges. Matrices can represent a wide range of graphs using adjacency matrices or incidence matrices. Adjacency matrices are often easier to analyze while incidence matrices are often better for representing data. Fortunately, the two are easily connected by matrix multiplication. A key feature of matrix mathematics is that a very small number of matrix operations can be used to manipulate a very wide range of graphs. This composability of a small number of operations is the foundation of the GraphBLAS. A standard such as the GraphBLAS can only be effective if it has low performance overhead. Performance measurements of prototype GraphBLAS implementations indicate that the overhead is low.},
+  keywords  = {graph theory;mathematics computing;matrix algebra;programming environments;mathematical foundations;GraphBLAS standard;GraphBlas.org;matrix-based graph algorithms;matrix-based graph operations;programming environments;adjacency matrices;incidence matrices;matrix multiplication;matrix mathematics;Matrices;Sparse matrices;Finite element analysis;Standards;Additives},
+}
+
 @Article{Macintosh2019,
   author    = {Hamish J. Macintosh and Jasmine E. Banks and Neil A. Kelson},
   title     = {Implementing and Evaluating an Heterogeneous, Scalable, Tridiagonal Linear System Solver with {OpenCL} to Target {FPGAs}, {GPUs}, and {CPUs}},
@@ -7370,6 +7383,121 @@ The design principles described in the thesis have been implemented in GraphBLAS
   abstract    = {A majority coloring of a directed graph is a vertex-coloring in which every vertex has the same color as at most half of its out-neighbors. Kreutzer, Oum, Seymour, van der Zypen and Wood proved that every digraph has a majority 4-coloring and conjectured that every digraph admits a majority 3-coloring. We verify this conjecture for digraphs with chromatic number at most 6 or dichromatic number at most 3. We obtain analogous results for list coloring: We show that every digraph with list chromatic number at most 6 or list dichromatic number at most 3 is majority 3-choosable. We deduce that digraphs with maximum out-degree at most 4 or maximum degree at most 7 are majority 3-choosable. On the way to these results we investigate digraphs admitting a majority 2-coloring. We show that every digraph without odd directed cycles is majority 2-choosable. We answer an open question posed by Kreutzer et al. negatively, by showing that deciding whether a given digraph is majority 2-colorable is NP-complete. Finally we deal with a fractional relaxation of majority coloring proposed by Kreutzer et al. and show that every digraph has a fractional majority 3.9602-coloring. We show that every digraph with minimum out-degree $\Omega\left((1/\varepsilon)^2\ln(1/\varepsilon)\right)$ has a fractional majority $(2+\varepsilon)$-coloring.},
   file        = {:http\://arxiv.org/pdf/1911.01954v1:PDF},
   keywords    = {math.CO, 05C15, 05C20},
+}
+
+@Article{Buttari2019,
+  author   = {Buttari, Alfredo. and Orban, Dominique. and Ruiz, Daniel. and Titley-Peloquin, David.},
+  title    = {A Tridiagonalization Method for Symmetric Saddle-Point Systems},
+  journal  = {SIAM Journal on Scientific Computing},
+  year     = {2019},
+  volume   = {41},
+  number   = {5},
+  pages    = {S409--S432},
+  doi      = {10.1137/18M1194900},
+  url      = {https://doi.org/10.1137/18M1194900},
+  abstract = {We propose an iterative method for the solution of symmetric saddle-point systems that exploits the orthogonal tridiagonalization method of Saunders, Simon, and Yip (1988). By contrast with methods based on the Golub and Kahan (1965) bidiagonalization process, our method takes advantage of two initial vectors and splits the system into the sum of a least-squares and a least-norm problem. Our method typically requires fewer operator-vector products than MINRES, yet performs a comparable amount of work per iteration and has comparable storage requirements.},
+}
+
+@Article{Sivkov2019a,
+  author      = {Ilia Sivkov and Patrick Seewald and Alfio Lazzaro and Juerg Hutter},
+  title       = {{DBCSR}: A Blocked Sparse Tensor Algebra Library},
+  date        = {2019-10-29},
+  eprint      = {arXiv:1910.13555},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {Advanced algorithms for large-scale electronic structure calculations are mostly based on processing multi-dimensional sparse data. Examples are sparse matrix-matrix multiplications in linear-scaling Kohn-Sham calculations or the efficient determination of the exact exchange energy. When going beyond mean field approaches, e.g. for Moller-Plesset perturbation theory, RPA and Coupled-Cluster methods, or the GW methods, it becomes necessary to manipulate higher-order sparse tensors. Very similar problems are also encountered in other domains, like signal processing, data mining, computer vision, and machine learning. With the idea that the most of the tensor operations can be mapped to matrices, we have implemented sparse tensor algebra functionalities in the frames of the sparse matrix linear algebra library DBCSR (Distributed Block Compressed Sparse Row). DBCSR has been specifically designed to efficiently perform blocked-sparse matrix operations, so it becomes natural to extend its functionality to include tensor operations. We describe the newly developed tensor interface and algorithms. In particular, we introduce the tensor contraction based on a fast rectangular sparse matrix multiplication algorithm.},
+  file        = {:http\://arxiv.org/pdf/1910.13555v1:PDF},
+  keywords    = {cs.DC},
+}
+
+@Article{Liu2019a,
+  author      = {Changxi Liu and Hailong Yang and Xu Liu and Zhongzhi Luan and Depei Qian},
+  title       = {Intelligent-Unrolling: Exploiting Regular Patterns in Irregular Applications},
+  date        = {2019-10-24},
+  eprint      = {arXiv:1910.13346},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {Modern optimizing compilers are able to exploit memory access or computation patterns to generate vectorization codes. However, such patterns in irregular applications are unknown until runtime due to the input dependence. Thus, either compiler's static optimization or profile-guided optimization based on specific inputs cannot predict the patterns for any common input, which leads to suboptimal code generation. To address this challenge, we develop Intelligent-Unroll, a framework to automatically optimize irregular applications with vectorization. Intelligent-Unroll allows the users to depict the computation task using \textit{code seed} with the memory access and computation patterns represented in \textit{feature table} and \textit{information-code tree}, and generates highly efficient codes. Furthermore, Intelligent-Unroll employs several novel optimization techniques to optimize reduction operations and gather/scatter instructions. We evaluate Intelligent-Unroll with sparse matrix-vector multiplication (SpMV) and graph applications. Experimental results show that Intelligent-Unroll is able to generate more efficient vectorization codes compared to the state-of-the-art implementations.},
+  file        = {:http\://arxiv.org/pdf/1910.13346v1:PDF},
+  keywords    = {cs.DC, cs.PF, cs.PL},
+}
+
+@Article{Dhulipala2019,
+  author      = {Laxman Dhulipala and Charlie McGuffey and Hongbo Kang and Yan Gu and Guy E. Blelloch and Phillip B. Gibbons and Julian Shun},
+  title       = {Semi-Asymmetric Parallel Graph Algorithms for {NVRAMs}},
+  date        = {2019-10-27},
+  eprint      = {arXiv:1910.12310},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {Emerging non-volatile main memory (NVRAM) technologies provide novel features for large-scale graph analytics, combining byte-addressability, low idle power, and improved memory-density. Systems are likely to have an order of magnitude more NVRAM than traditional memory (DRAM), allowing large graph problems to be solved efficiently at a modest cost on a single machine. However, a significant challenge in achieving high performance is in accounting for the fact that NVRAM writes can be significantly more expensive than NVRAM reads. In this paper, we propose an approach to parallel graph analytics in which the graph is stored as a read-only data structure (in NVRAM), and the amount of mutable memory is kept proportional to the number of vertices. Similar to the popular semi-external and semi-streaming models for graph analytics, the approach assumes that the vertices of the graph fit in a fast read-write memory (DRAM), but the edges do not. In NVRAM systems, our approach eliminates writes to the NVRAM, among other benefits. We present a model, the Parallel Semi-Asymmetric Model (PSAM), to analyze algorithms in the setting, and run experiments on a 48-core NVRAM system to validate the effectiveness of these algorithms. To this end, we study over a dozen graph problems. We develop parallel algorithms for each that are efficient, often work-optimal, in the model. Experimentally, we run all of the algorithms on the largest publicly-available graph and show that our PSAM algorithms outperform the fastest prior algorithms designed for DRAM or NVRAM. We also show that our algorithms running on NVRAM nearly match the fastest prior algorithms running solely in DRAM, by effectively hiding the costs of repeatedly accessing NVRAM versus DRAM.},
+  file        = {:http\://arxiv.org/pdf/1910.12310v1:PDF},
+  keywords    = {cs.DC, cs.DS},
+}
+
+@InProceedings{Mattson2019,
+  author    = {Mattson, T. and Davis, T. A. and Kumar, M. and Buluc, A. and McMillan, S. and Moreira, J. and Yang, C.},
+  title     = {{LAGraph}: A Community Effort to Collect Graph Algorithms Built on Top of the GraphBLAS},
+  booktitle = {2019 IEEE International Parallel and Distributed Processing Symposium Workshops},
+  year      = {2019},
+  series    = {IPDPSW'19},
+  month     = {5},
+  pages     = {276-284},
+  doi       = {10.1109/IPDPSW.2019.00053},
+  abstract  = {In 2013, we released a position paper to launch a community effort to define a common set of building blocks for constructing graph algorithms in the language of linear algebra. This led to the GraphBLAS. We released a specification for the C programming language binding to the GraphBLAS in 2017. Since that release, multiple libraries that conform to the GraphBLAS C specification have been produced. In this position paper, we launch the next phase of this ongoing community effort: a project to assemble a set of high level graph algorithms built on top of the GraphBLAS. While many of these algorithms are well-known with high quality implementations available, they have not been assembled in one place and integrated with the GraphBLAS. We call this project the LAGraph graph algorithms project and with this position paper, we put out a call for collaborators to join us. While the initial goal is to just assemble these algorithms into a single framework, the long term goal is a library of production-worthy code, with the LAGraph library serving as an open source repository of verified graph algorithms that use the GraphBLAS.},
+  keywords  = {C language;formal specification;graph theory;mathematics computing;C programming language specification;open source repository;linear algebra;LAGraph graph algorithms project;ongoing community effort;GraphBLAS;Libraries;Sparse matrices;Linear algebra;Matlab;Software algorithms;Hardware;Data structures;GraphBLAS;Graph Algorithms},
+}
+
+@InBook{Cook2019,
+  author    = {William Cook},
+  title     = {Computing in Combinatorial Optimization},
+  booktitle = {Lecture Notes in Computer Science},
+  year      = {2019},
+  editor    = {Steffen B., Woeginger G.},
+  volume    = {10000},
+  publisher = {Springer, Cham.},
+  isbn      = {978-3-319-91908-9},
+  doi       = {10.1007/978-3-319-91908-9_3},
+  abstract  = {Research in combinatorial optimization successfully combines diverse ideas drawn from computer science, mathematics, and operations research. We give a tour of this work, focusing on the early development of the subject and the central role played by linear programming. The paper concludes with a short wish list of future research directions.},
+}
+
+@Article{Higham2019b,
+  author     = {Higham, Nicholas and Pranesh, Srikara},
+  title      = {Exploiting Lower Precision Arithmetic in Solving Symmetric Positive Definite Linear Systems and Least Squares Problems},
+  year       = {2019},
+  eprint     = {MIMS EPrint:2019.20},
+  eprinttype = {MIMS EPrint},
+  url        = {http://eprints.maths.manchester.ac.uk/2736/1/paper.pdf},
+  abstract   = {What is the fastest way to solve a linear system $Ax= b$ in arithmetic of a given precision when $A$ is symmetric positive definite and otherwise unstructured? The usual answer is by Cholesky factorization, assuming that $A$ can be factorized. We develop an algorithm that can be faster, given an arithmetic of precision lower than the working precision as well as (optionally) one of higher precision. The arithmetics might, for example, be of precisions half, single, and double; half and double, possibly with quadruple; or single and double, possibly with quadruple. We compute a Cholesky factorization at the lower precision and use the factors as preconditioners in GMRES-based iterative refinement. To avoid breakdown of the factorization we shift the matrix by a small multiple of its diagonal. We explain why this is preferable to the common approach of shifting by a multiple of the identity matrix, We also incorporate scaling in order to avoid overflow and reduce the chance of underflow when working in IEEE half precision arithmetic. We extend the algorithm to solve a linear least squares problem with a well conditioned coefficient matrix by forming and solving the normal equations. In both algorithms most of the work is done at low precision provided that iterative refinement and the inner iterative solver converge quickly. We explain why replacing GMRES by the conjugate gradient method causes convergence guarantees to be lost, but show that this change has little effect on convergence in practice. Our numerical experiments confirm the potential of the new algorithms to provide faster solutions in environments that support multiple precisions of arithmetic.},
+}
+
+@Article{Zhao2019,
+  author   = {Zhao, K. and Su, J. and Yu, J. X. and Zhang, H.},
+  title    = {{SQL-G}: Efficient Graph Analytics by {SQL}},
+  journal  = {IEEE Transactions on Knowledge and Data Engineering},
+  year     = {2019},
+  doi      = {10.1109/TKDE.2019.2950620},
+  abstract = {Querying graphs and conducting graph analytics become important in data processing since there are many real applications dealing with massive graphs, such as online social networks, Semantic Web, knowledge graphs, etc. Over the years, many distributed graph processing systems have been developed to support graph analytics using various programming models, and many graph querying languages have been proposed. A natural question that arises is how to integrate graph data and traditional non-graph data in a distributed system for users to conduct analytics. There are two issues. One issue is related to expressiveness on how to specify graph analytics as well as data analytics by a querying language. The other issue is related to efficiency on how to process analytics in a distributed system. For the first issue, SQL is a best candidate, since SQL is a well-accepted language for data processing. We concentrate on SQL for graph analytics. Our early work shows that graph analytics can be supported by SQL in a way from "semiring + while" to "relational algebra + while" via the enhanced recursive SQL queries. In this paper, we focus on the second issue on how to process such enhanced recursive SQL queries based on the GAS (Gather-Apply-Scatter) model under which efficient graph processing systems can be developed. To demonstrate the efficiency, we implemented a system by tightly coupling Spark SQL and GraphX on Spark which is one of the most popular in-memory data-flow processing platforms. First, we enhance Spark SQL by adding the capability of supporting the enhanced recursive SQL queries for graph analytics. In this regard, graph analytics can be processed using a distributed SQL engine alone. Second, we further propose new transformation rules to optimize/translate the operations for recursive SQL queries to the operations by GraphX. In this regard, graph analytics by SQL can be processed in a similar way as done by a distributed graph processing system using the APIs provided by the system. We conduct extensive performance studies to test graph analytics using large real graphs. We show that our approach can achieve similar or even higher efficiency, in comparison to the built-in graph algorithms in the existing graph processing systems.},
+  keywords = {Structured Query Language;Sparks;Algebra;Engines;Programming;Distributed databases;Data processing},
+}
+
+@InProceedings{Helal2019,
+  author    = {Ahmed E. Helal and Ashwin M. Aji and Michael L. Chu and Bradford M. Beckmann and Wu-chun Feng},
+  title     = {Adaptive Task Aggregation for High-Performance Sparse Solvers on {GPUs}},
+  booktitle = {The 28th International Conference on Parallel Architectures and Compilation},
+  year      = {2019},
+  series    = {PACT'19},
+  abstract  = {Sparse solvers are heavily used in computational fluid dynamics (CFD), computer-aided design (CAD), and other important application domains. These solvers remain challenging to execute on massively parallel architectures, due to the sequential dependencies between the fine-grained application tasks. In particular, parallel sparse solvers typically suffer from substantial scheduling and dependency-management overheads relative to the compute operations. We propose adaptive task aggregation (ATA) to efficiently execute such irregular computations on GPU architectures via hierarchical dependency management and lowlatency task scheduling. On a gamut of  representative problems with different data-dependency structures, ATA significantly outperforms existing GPU task-execution approaches, achieving a geometric mean speedup of 2.2$\times$ to 3.7$\times$ across different sparse kernels (with speedups of up to two orders of magnitude).},
+}
+
+@Article{Kim2019,
+  author    = {Hyunjun Kim and Sungin Hong and Jeonghwan Park and Hwansoo Han},
+  title     = {Static code transformations for thread-dense memory accesses in {GPU} computing},
+  journal   = {Concurrency and Computation: Practice and Experience},
+  year      = {2019},
+  month     = {oct},
+  doi       = {10.1002/cpe.5512},
+  abstract  = {Due to the GPU's complex memory system and massive thread-level parallelism, application programmers often have difficulty optimizing GPU programs. An essential approach to memory optimization is to utilize low-latency on-chip memory to avoid high latency of off-chip memory accesses. Shared memory is an on-chip memory, which is explicitly managed by programmers. Shared memory has a read/write latency similar to that of the L1 cache, but poor data management can degrade performance. In this paper, we present a static code transformation that preloads dataset in GPU's shared memory. Our static analysis primarily targets global memory requests with high thread-density for preloading in shared memory. The thread-dense memory access pattern is a pattern in which many threads efficiently manage the address space of shared memory, as well as reuse the same data in a thread block. We limit the usage of shared memory so that thread-level parallelism remains at the same level when selecting datasets for preloading. Finally, our source-to-source compiler allows to preload selected datasets in shared memory by transforming non-optimized GPU kernel code. Our methods achieve 1.26$\times$ and 1.62$\times$ speedups on average (geometric mean), respectively with GTX980 and P100 GPUs.},
+  publisher = {Wiley},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
