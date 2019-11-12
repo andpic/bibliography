@@ -119,7 +119,7 @@
   number       = {6},
   pages        = {C624-C651},
   doi          = {10.1137/15M104253X},
-  abstract     = {Sparse matrix-matrix multiplication (or SpGEMM) is a key primitive for many high-performance graph algorithms as well as for some linear solvers, such as algebraic multigrid. The scaling of existing parallel implementations of SpGEMM is heavily bound by communication. Even though 3D (or 2.5D) algorithms have been proposed and theoretically analyzed in the flat MPI model on Erdős–Rényi matrices, those algorithms had not been implemented in practice and their complexities had not been analyzed for the general case. In this work, we present the first implementation of the 3D SpGEMM formulation that exploits multiple (intranode and internode) levels of parallelism, achieving significant speedups over the state-of-the-art publicly available codes at all levels of concurrencies. We extensively evaluate our implementation and identify bottlenecks that should be subject to further research.},
+  abstract     = {Sparse matrix-matrix multiplication (or SpGEMM) is a key primitive for many high-performance graph algorithms as well as for some linear solvers, such as algebraic multigrid. The scaling of existing parallel implementations of SpGEMM is heavily bound by communication. Even though 3D (or 2.5D) algorithms have been proposed and theoretically analyzed in the flat MPI model on Erdős--Rényi matrices, those algorithms had not been implemented in practice and their complexities had not been analyzed for the general case. In this work, we present the first implementation of the 3D SpGEMM formulation that exploits multiple (intranode and internode) levels of parallelism, achieving significant speedups over the state-of-the-art publicly available codes at all levels of concurrencies. We extensively evaluate our implementation and identify bottlenecks that should be subject to further research.},
 }
 
 @InProceedings{Bakhoda2009,
@@ -4134,7 +4134,7 @@
         https://doi.org/10.1137/10079687X
 
 },
- abstract = {An iterative method LSMR is presented for solving linear systems $Ax=b$ and least-squares problems $\min \|Ax-b\|_2$, with A being sparse or a fast linear operator. LSMR is based on the Golub–Kahan bidiagonalization process. It is analytically equivalent to the MINRES method applied to the normal equation $A^T\! Ax = A^T\! b$, so that the quantities $\|A^T\! r_k\|$ are monotonically decreasing (where $r_k = b - Ax_k$ is the residual for the current iterate $x_k$). We observe in practice that $\|r_k\|$ also decreases monotonically, so that compared to LSQR (for which only $\|r_k\|$ is monotonic) it is safer to terminate LSMR early. We also report some experiments with reorthogonalization.},
+ abstract = {An iterative method LSMR is presented for solving linear systems $Ax=b$ and least-squares problems $\min \|Ax-b\|_2$, with A being sparse or a fast linear operator. LSMR is based on the Golub--Kahan bidiagonalization process. It is analytically equivalent to the MINRES method applied to the normal equation $A^T\! Ax = A^T\! b$, so that the quantities $\|A^T\! r_k\|$ are monotonically decreasing (where $r_k = b - Ax_k$ is the residual for the current iterate $x_k$). We observe in practice that $\|r_k\|$ also decreases monotonically, so that compared to LSQR (for which only $\|r_k\|$ is monotonic) it is safer to terminate LSMR early. We also report some experiments with reorthogonalization.},
 }
 
 @Article{Agullo2009,
@@ -4251,7 +4251,7 @@
   number       = {3},
   pages        = {205--223},
   doi          = {10.1080/17445760802337010},
- abstract = {A wide class of numerical methods needs to solve a linear system, where the matrix pattern of non-zero coefficients can be arbitrary. These problems can greatly benefit from highly multithreaded computational power and large memory bandwidth available on graphics processor units (GPUs), especially since dedicated general purpose APIs such as close-to-metal (CTM) (AMD–ATI) and compute unified device architecture (CUDA) (NVIDIA) have appeared. CUDA even provides a BLAS implementation, but only for dense matrices (CuBLAS). Other existing linear solvers for the GPU are also limited by their internal matrix representation. This paper describes how to combine recent GPU programming techniques and new GPU dedicated APIs with high performance computing strategies (namely block compressed row storage (BCRS), register blocking and vectorization), to implement a sparse general-purpose linear solver. Our implementation of the Jacobi-preconditioned conjugate gradient algorithm outperforms by up to a factor of 6.0$\times$ leading-edge CPU counterparts, making it attractive for applications which are content with single precision.},
+ abstract = {A wide class of numerical methods needs to solve a linear system, where the matrix pattern of non-zero coefficients can be arbitrary. These problems can greatly benefit from highly multithreaded computational power and large memory bandwidth available on graphics processor units (GPUs), especially since dedicated general purpose APIs such as close-to-metal (CTM) (AMD--ATI) and compute unified device architecture (CUDA) (NVIDIA) have appeared. CUDA even provides a BLAS implementation, but only for dense matrices (CuBLAS). Other existing linear solvers for the GPU are also limited by their internal matrix representation. This paper describes how to combine recent GPU programming techniques and new GPU dedicated APIs with high performance computing strategies (namely block compressed row storage (BCRS), register blocking and vectorization), to implement a sparse general-purpose linear solver. Our implementation of the Jacobi-preconditioned conjugate gradient algorithm outperforms by up to a factor of 6.0$\times$ leading-edge CPU counterparts, making it attractive for applications which are content with single precision.},
 }
 
 @Manual{Gurobi2017,
@@ -4407,11 +4407,11 @@
 
 @Article{Ekstrom2018,
   author      = {Ekstr{\"o}m, Sven-Erik and Garoni, Carlo},
-  title       = {A matrix-less and parallel interpolation–extrapolation algorithm for computing the eigenvalues of preconditioned banded symmetric Toeplitz matrices},
+  title       = {A matrix-less and parallel interpolation--extrapolation algorithm for computing the eigenvalues of preconditioned banded symmetric Toeplitz matrices},
   journal     = {Numerical Algorithms},
   year        = {2018},
   doi         = {10.1007/s11075-018-0508-0},
-  abstract    = {In  the  past  few  years,  Bogoya,  Bottcher,  Grudsky,  and  Maximenko obtained the precise asymptotic expansion for the eigenvalues of a Toeplitz matrix $T_n(f)$, under suitable assumptions on the generating function $f$, as the matrix size $n$ goes to infinity. On the basis of  several numerical experiments, it was conjectured by Serra-Capizzano that a completely analogous expansion also holds for the eigenvalues of the preconditioned Toeplitz matrix $T_n(u)^{-1}T_n(v)$, provided $f = v/u$ is monotone and further conditions on $u$ and $v$ are satisfied. Based on this expansion, we here propose and analyze an interpolation–extrapolation algorithm for computing the eigenvalues of $T_n(u)^{-1}T_n(v)$. The algorithm is suited for parallel implementation and it may be called “matrix-less” as it does not need to store the entries of the matrix. We illustrate the performance of the algorithm through numerical experiments and we also present its generalization to the case where $f = v/u$ is non-monotone.},
+  abstract    = {In  the  past  few  years,  Bogoya,  Bottcher,  Grudsky,  and  Maximenko obtained the precise asymptotic expansion for the eigenvalues of a Toeplitz matrix $T_n(f)$, under suitable assumptions on the generating function $f$, as the matrix size $n$ goes to infinity. On the basis of  several numerical experiments, it was conjectured by Serra-Capizzano that a completely analogous expansion also holds for the eigenvalues of the preconditioned Toeplitz matrix $T_n(u)^{-1}T_n(v)$, provided $f = v/u$ is monotone and further conditions on $u$ and $v$ are satisfied. Based on this expansion, we here propose and analyze an interpolation--extrapolation algorithm for computing the eigenvalues of $T_n(u)^{-1}T_n(v)$. The algorithm is suited for parallel implementation and it may be called “matrix-less” as it does not need to store the entries of the matrix. We illustrate the performance of the algorithm through numerical experiments and we also present its generalization to the case where $f = v/u$ is non-monotone.},
   institution = {Uppsala University, Division of Scientific Computing},
 }
 
@@ -4711,7 +4711,7 @@
   author     = {Yang, Carl and Buluç, Aydın and Owens, John D.},
   title      = {Design Principles for Sparse Matrix Multiplication on the {GPU}},
   year       = {2018},
-  abstract   = {We implement two novel algorithms for sparse-matrix dense-matrix multiplication (SpMM) on the GPU. Our algorithms expect the sparse input in the popular compressed-sparse-row (CSR) format and thus do not require expensive format conversion. While previous SpMM work concentrates on thread-level parallelism, we additionally focus on latency hiding with instruction-level parallelism and load-balancing. We show, both theoretically and experimentally, that the proposed SpMM is a better fit for the GPU than previous approaches. We identify a key memory access pattern that allows efficient access into both input and output matrices that is crucial to getting excellent performance on SpMM. By combining these two ingredients – (i) merge-based load-balancing and (ii) row-major coalesced memory access – we demonstrate a 3.6x peak speedup and a 23.5\% geomean speedup over state-of-the-art SpMM implementations on real-world datasets.},
+  abstract   = {We implement two novel algorithms for sparse-matrix dense-matrix multiplication (SpMM) on the GPU. Our algorithms expect the sparse input in the popular compressed-sparse-row (CSR) format and thus do not require expensive format conversion. While previous SpMM work concentrates on thread-level parallelism, we additionally focus on latency hiding with instruction-level parallelism and load-balancing. We show, both theoretically and experimentally, that the proposed SpMM is a better fit for the GPU than previous approaches. We identify a key memory access pattern that allows efficient access into both input and output matrices that is crucial to getting excellent performance on SpMM. By combining these two ingredients -- (i) merge-based load-balancing and (ii) row-major coalesced memory access -- we demonstrate a 3.6x peak speedup and a 23.5\% geomean speedup over state-of-the-art SpMM implementations on real-world datasets.},
   eprint     = {arXiv:1803.08601},
   eprinttype = {arXiv},
 }
@@ -4816,8 +4816,8 @@
   issn     = {0743-7315},
   doi      = {https://doi.org/10.1016/j.jpdc.2018.08.005},
   url      = {http://www.sciencedirect.com/science/article/pii/S0743731518305860},
-  abstract = {For the parallelization of sparse matrix–vector multiplication (SpMV) on distributed memory systems, nonzero-based fine-grain and medium-grain partitioning models attain the lowest communication volume and computational imbalance among all partitioning models. This usually comes, however, at the expense of high message count, i.e., high latency overhead. This work addresses this shortcoming by proposing new fine-grain and medium-grain models that are able to minimize communication volume and message count in a single partitioning phase. The new models utilize message nets in order to encapsulate the minimization of total message count. We further fine-tune these models by proposing delayed addition and thresholding for message nets in order to establish a trade-off between the conflicting objectives of minimizing communication volume and message count. The experiments on an extensive dataset of nearly one thousand matrices show that the proposed models improve the total message count of the original nonzero-based models by up to 27\% on the average, which is reflected on the parallel runtime of SpMV as an average reduction of 15\% on 512 processors.},
-  keywords = {Sparse matrix, Sparse matrix–vector multiplication, Row-column-parallel SpMV, Load balancing, Communication overhead, Hypergraph, Fine-grain partitioning, Medium-grain partitioning, Recursive bipartitioning},
+  abstract = {For the parallelization of sparse matrix--vector multiplication (SpMV) on distributed memory systems, nonzero-based fine-grain and medium-grain partitioning models attain the lowest communication volume and computational imbalance among all partitioning models. This usually comes, however, at the expense of high message count, i.e., high latency overhead. This work addresses this shortcoming by proposing new fine-grain and medium-grain models that are able to minimize communication volume and message count in a single partitioning phase. The new models utilize message nets in order to encapsulate the minimization of total message count. We further fine-tune these models by proposing delayed addition and thresholding for message nets in order to establish a trade-off between the conflicting objectives of minimizing communication volume and message count. The experiments on an extensive dataset of nearly one thousand matrices show that the proposed models improve the total message count of the original nonzero-based models by up to 27\% on the average, which is reflected on the parallel runtime of SpMV as an average reduction of 15\% on 512 processors.},
+  keywords = {Sparse matrix, Sparse matrix--vector multiplication, Row-column-parallel SpMV, Load balancing, Communication overhead, Hypergraph, Fine-grain partitioning, Medium-grain partitioning, Recursive bipartitioning},
 }
 
 @Online{Schlag2018,
@@ -4957,7 +4957,7 @@ practice the performance, and limitations of the approach stressing on the use o
   journal   = {Electronic Transactions on Numerical Analysis},
   year      = {2018},
   volume    = {XX},
-  abstract  = {McDonald, Pestana and Wathen (SIAM J. Sci. Comput. 40 (2), pp. A2012–A1033, 2018) present a method for preconditioning of time-dependent PDEs via approximation by a nearby time-periodic problem, that is, they employ circulant-related matrices as preconditioners for the non-symmetric block Toeplitz matrices which arise from an all-at-once formulation. They suggest that such an approach might be efficiently implemented in parallel. In this short article, we present parallel numerical results for their preconditioner which exhibit strong scaling. We also extend their preconditioner via a Neumann series approach, which also allows for efficient parallel execution. Our simple implementation (in C++ and MPI) is available at the Git repository PARALAAOMPI.},
+  abstract  = {McDonald, Pestana and Wathen (SIAM J. Sci. Comput. 40 (2), pp. A2012--A1033, 2018) present a method for preconditioning of time-dependent PDEs via approximation by a nearby time-periodic problem, that is, they employ circulant-related matrices as preconditioners for the non-symmetric block Toeplitz matrices which arise from an all-at-once formulation. They suggest that such an approach might be efficiently implemented in parallel. In this short article, we present parallel numerical results for their preconditioner which exhibit strong scaling. We also extend their preconditioner via a Neumann series approach, which also allows for efficient parallel execution. Our simple implementation (in C++ and MPI) is available at the Git repository PARALAAOMPI.},
   timestamp = {2018.10.10},
 }
 
@@ -5439,7 +5439,7 @@ In addition, we compare the performance in the general format (CSR format, BSR f
   issn     = {0743-7315},
   doi      = {10.1016/j.jpdc.2019.01.015},
   url      = {http://www.sciencedirect.com/science/article/pii/S0743731519300917},
-  abstract = {In this paper we present research on improving the resilience of the execution of scientific software, an increasingly important concern in High Performance Computing (HPC). We build on an existing high-level abstraction framework, the Oxford Parallel library for Structured meshes (OPS), developed for the solution of multi-block structured mesh-based applications, and implement an algorithm in the library to carry out checkpointing automatically, without the intervention of the user. The target applications are a hydrodynamics benchmark application from the Mantevo Suite, CloverLeaf 3D, the sparse linear solver proxy application TeaLeaf, and the OpenSBLI compressible Navier–Stokes direct numerical simulation (DNS) solver. We present (1) the basic algorithm that OPS relies on to determine the optimal checkpoint in terms of size and location, (2) improvements that supply additional information to improve the decision, (3) techniques that reduce the cost of writing the checkpoints to non-volatile storage, (4) a performance analysis of the developed techniques on a single workstation and on several supercomputers, including ORNL’s Titan. Our results demonstrate the utility of the high-level abstractions approach in automating the checkpointing process and show that performance is comparable to, or better than the reference in all cases.},
+  abstract = {In this paper we present research on improving the resilience of the execution of scientific software, an increasingly important concern in High Performance Computing (HPC). We build on an existing high-level abstraction framework, the Oxford Parallel library for Structured meshes (OPS), developed for the solution of multi-block structured mesh-based applications, and implement an algorithm in the library to carry out checkpointing automatically, without the intervention of the user. The target applications are a hydrodynamics benchmark application from the Mantevo Suite, CloverLeaf 3D, the sparse linear solver proxy application TeaLeaf, and the OpenSBLI compressible Navier--Stokes direct numerical simulation (DNS) solver. We present (1) the basic algorithm that OPS relies on to determine the optimal checkpoint in terms of size and location, (2) improvements that supply additional information to improve the decision, (3) techniques that reduce the cost of writing the checkpoints to non-volatile storage, (4) a performance analysis of the developed techniques on a single workstation and on several supercomputers, including ORNL’s Titan. Our results demonstrate the utility of the high-level abstractions approach in automating the checkpointing process and show that performance is comparable to, or better than the reference in all cases.},
   keywords = {Domain specific language, High performance computing, Checkpointing, Resilience, Parallel I/O},
 }
 
@@ -5474,7 +5474,7 @@ In addition, we compare the performance in the general format (CSR format, BSR f
   title    = {Convergence and evaluation-complexity analysis of a regularized tensor-Newton method for solving nonlinear least-squares problems},
   journal  = {Computational Optimization and Applications},
   doi      = {10.1007/s10589-019-00064-2},
-  abstract = {Given a twice-continuously differentiable vector-valued function $r(x)$, a local minimizer of $\Vert r(x) \Vert_2$ is sought. We propose and analyse tensor-Newton methods, in which $r(x)$ is replaced locally by its second-order Taylor approximation. Convergence is controlled by regularization of various orders. We establish global convergence to a first-order critical point of $\Vert r(x) \Vert_2$, and provide function evaluation bounds that agree with the best-known bounds for methods using second derivatives. Numerical experiments comparing tensor-Newton methods with regularized Gauss–Newton and Newton methods demonstrate the practical performance of the newly proposed method.},
+  abstract = {Given a twice-continuously differentiable vector-valued function $r(x)$, a local minimizer of $\Vert r(x) \Vert_2$ is sought. We propose and analyse tensor-Newton methods, in which $r(x)$ is replaced locally by its second-order Taylor approximation. Convergence is controlled by regularization of various orders. We establish global convergence to a first-order critical point of $\Vert r(x) \Vert_2$, and provide function evaluation bounds that agree with the best-known bounds for methods using second derivatives. Numerical experiments comparing tensor-Newton methods with regularized Gauss--Newton and Newton methods demonstrate the practical performance of the newly proposed method.},
 }
 
 @InProceedings{Flegar2017,
@@ -5731,7 +5731,7 @@ The main insight of this work is that the combination of data duplication and De
   series     = {EuroMPI'19},
   eprint     = {arXiv:1905.06850},
   eprinttype = {arXiv},
-  abstract   = {This paper presents performance results comparing MPI-based implementations of the popular Conjugate Gradient (CG) method and several of its communication hiding (or “pipelined”) variants. Pipelined CG methods are designed to efficiently solve SPD linear systems on massively parallel distributed memory hardware, and typically display significantly improved strong scaling compared to classic CG. This increase in parallel performance is achieved by overlapping the global reduction phase (MPI_Iallreduce) required to compute the inner products in each iteration by (chiefly local) computational work such as the matrix-vector product as well as other global communication. This work includes a brief introduction to the deep pipelined CG method for readers that may be unfamiliar with the specifics of the method. A brief overview of implementation details provides the practical tools required for implementation of the algorithm. Subsequently, easily reproducible strong scaling results on the US Department of Energy (DoE) NERSC machine “Cori” (Phase I – Haswell nodes) on up to 1024 nodes with 16 MPI ranks per node are presented using an implementation of $p(l)$-CG that is available in the open source PETSc library. Observations on the staggering and overlap of the asynchronous, non-blocking global communication phases with communication and computational kernels are drawn from the experiments.},
+  abstract   = {This paper presents performance results comparing MPI-based implementations of the popular Conjugate Gradient (CG) method and several of its communication hiding (or “pipelined”) variants. Pipelined CG methods are designed to efficiently solve SPD linear systems on massively parallel distributed memory hardware, and typically display significantly improved strong scaling compared to classic CG. This increase in parallel performance is achieved by overlapping the global reduction phase (MPI_Iallreduce) required to compute the inner products in each iteration by (chiefly local) computational work such as the matrix-vector product as well as other global communication. This work includes a brief introduction to the deep pipelined CG method for readers that may be unfamiliar with the specifics of the method. A brief overview of implementation details provides the practical tools required for implementation of the algorithm. Subsequently, easily reproducible strong scaling results on the US Department of Energy (DoE) NERSC machine “Cori” (Phase I -- Haswell nodes) on up to 1024 nodes with 16 MPI ranks per node are presented using an implementation of $p(l)$-CG that is available in the open source PETSc library. Observations on the staggering and overlap of the asynchronous, non-blocking global communication phases with communication and computational kernels are drawn from the experiments.},
 }
 
 @Article{Kong2019a,
@@ -6508,7 +6508,7 @@ The design principles described in the thesis have been implemented in GraphBLAS
 
 @InProceedings{Regunta2019,
   author    = {S. C. Regunta and S. H. Tondomker and K. Kothapalli},
-  title     = {BRICS – Efficient Techniques for Estimating the Farness-Centrality in Parallel},
+  title     = {BRICS -- Efficient Techniques for Estimating the Farness-Centrality in Parallel},
   booktitle = {2019 IEEE International Parallel and Distributed Processing Symposium Workshops},
   year      = {2019},
   series    = {IPDPSW'19},
@@ -6834,7 +6834,7 @@ The design principles described in the thesis have been implemented in GraphBLAS
   eprint     = {MIMS EPrint:2019.18},
   eprinttype = {MIMS EPrint},
   url        = {http://eprints.maths.manchester.ac.uk/2727/1/paper.pdf},
-  abstract   = {Block low-rank (BLR) matrices possess a blockwise low-rank property that can be exploited to reduce the complexity of numerical linear algebra algorithms. The impact of these lowrank approximations on the numerical stability of the algorithms in floating-point arithmetic has not previously been analyzed. We present rounding error analysis for the solution of a linear system by LU factorization of BLR matrices. Assuming that a stable pivoting scheme is used, we prove backward stability: the relative backward error is bounded by a modest constant times $\epsilon$, where the low-rank threshold $\epsilon$ is the parameter controlling the accuracy of the blockwise low-rank approximations. In addition to this key result, our analysis offers three new insights into the numerical behavior of BLR algorithms. First, we compare the use of a global or local low-rank threshold and find that a global one should be preferred. Second, we show that performing intermediate recompressions during the factorization can significantly reduce its cost without compromising numerical stability. Third, we consider different BLR factorization variants and determine the compress–factor–update (CFU) variant to be the best. Tests on a wide range of matrices from various real-life applications show that the predictions from the analysis are realized in practice.},
+  abstract   = {Block low-rank (BLR) matrices possess a blockwise low-rank property that can be exploited to reduce the complexity of numerical linear algebra algorithms. The impact of these lowrank approximations on the numerical stability of the algorithms in floating-point arithmetic has not previously been analyzed. We present rounding error analysis for the solution of a linear system by LU factorization of BLR matrices. Assuming that a stable pivoting scheme is used, we prove backward stability: the relative backward error is bounded by a modest constant times $\epsilon$, where the low-rank threshold $\epsilon$ is the parameter controlling the accuracy of the blockwise low-rank approximations. In addition to this key result, our analysis offers three new insights into the numerical behavior of BLR algorithms. First, we compare the use of a global or local low-rank threshold and find that a global one should be preferred. Second, we show that performing intermediate recompressions during the factorization can significantly reduce its cost without compromising numerical stability. Third, we consider different BLR factorization variants and determine the compress--factor--update (CFU) variant to be the best. Tests on a wide range of matrices from various real-life applications show that the predictions from the analysis are realized in practice.},
 }
 
 @Article{Blanchard2019,
@@ -7498,6 +7498,147 @@ The design principles described in the thesis have been implemented in GraphBLAS
   doi       = {10.1002/cpe.5512},
   abstract  = {Due to the GPU's complex memory system and massive thread-level parallelism, application programmers often have difficulty optimizing GPU programs. An essential approach to memory optimization is to utilize low-latency on-chip memory to avoid high latency of off-chip memory accesses. Shared memory is an on-chip memory, which is explicitly managed by programmers. Shared memory has a read/write latency similar to that of the L1 cache, but poor data management can degrade performance. In this paper, we present a static code transformation that preloads dataset in GPU's shared memory. Our static analysis primarily targets global memory requests with high thread-density for preloading in shared memory. The thread-dense memory access pattern is a pattern in which many threads efficiently manage the address space of shared memory, as well as reuse the same data in a thread block. We limit the usage of shared memory so that thread-level parallelism remains at the same level when selecting datasets for preloading. Finally, our source-to-source compiler allows to preload selected datasets in shared memory by transforming non-optimized GPU kernel code. Our methods achieve 1.26$\times$ and 1.62$\times$ speedups on average (geometric mean), respectively with GTX980 and P100 GPUs.},
   publisher = {Wiley},
+}
+
+@InProceedings{Elafrou2019,
+  author    = {Elafrou, Athena and Goumas, Georgios and Koziris, Nectarios},
+  title     = {Conflict-free Symmetric Sparse Matrix-vector Multiplication on Multicore Architectures},
+  booktitle = {Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis},
+  year      = {2019},
+  series    = {SC '19},
+  publisher = {ACM},
+  location  = {Denver, Colorado},
+  isbn      = {978-1-4503-6229-0},
+  pages     = {48:1--48:15},
+  doi       = {10.1145/3295500.3356148},
+  abstract  = {Exploiting the numeric symmetry in sparse matrices to reduce their memory footprint is very tempting for optimizing the memory-bound Sparse Matrix-Vector Multiplication (SpMV) kernel. Despite being very beneficial for serial computation, storing the upper or lower triangular part of the matrix introduces race conditions in the updates to the output vector in a parallel execution. Previous work has suggested using local, per-thread vectors to circumvent this problem, introducing a work-inefficient reduction step that limits the scalability of SpMV. In this paper, we address this issue with Conflict-Free Symmetric (CFS) SpMV, an optimization strategy that organizes the parallel computation into phases of conflict-free execution. We identify such phases through graph coloring and propose heuristics to improve the coloring quality for SpMV in terms of load balancing and locality to the input and output vectors. We evaluate our approach on two multicore shared-memory systems and demonstrate improved performance over the state-of-the-art.},
+  acmid     = {3356148},
+  address   = {New York, NY, USA},
+  articleno = {48},
+  keywords  = {conjugate gradient, sparse linear algebra, sparse matrix vector multiplication, symmetric sparse matrices},
+  numpages  = {15},
+}
+
+@InProceedings{Fujiki2019,
+  author    = {Fujiki, Daichi and Chatterjee, Niladrish and Lee, Donghyuk and O'Connor, Mike},
+  title     = {Near-memory Data Transformation for Efficient Sparse Matrix Multi-vector Multiplication},
+  booktitle = {Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis},
+  year      = {2019},
+  series    = {SC '19},
+  publisher = {ACM},
+  location  = {Denver, Colorado},
+  isbn      = {978-1-4503-6229-0},
+  pages     = {55:1--55:17},
+  doi       = {10.1145/3295500.3356154},
+  abstract  = {Efficient manipulation of sparse matrices is critical to a wide range of HPC applications. Increasingly, GPUs are used to accelerate these sparse matrix operations. We study one common operation, Sparse Matrix Multi-Vector Multiplication (SpMM), and evaluate the impact of the sparsity, distribution of non-zero elements, and tile-traversal strategies on GPU implementations. Using these insights, we determine that operating on these sparse matrices in a Densified Compressed Sparse Row (DCSR) is well-suited to the parallel warp-synchronous execution model of the GPU processing elements.\\ Preprocessing or storing the sparse matrix in the DCSR format, however, often requires significantly more memory storage than conventional Compressed Sparse Row (CSR) or Compressed Sparse Column (CSC) formats. Given that SpMM kernels are often bottlenecked on DRAM bandwidth, the increase in DRAM traffic to access the larger DCSR formatted data structure can result in a slowdown for many matrices.\\ We propose a near-memory transform engine to dynamically create DCSR formatted tiles for the GPU processing elements from the CSC formatted matrix in memory. This work enhances a GPU's last-level cache/memory controller unit to act as an efficient translator between the compute-optimized representation of data and its corresponding storage/bandwidth-optimized format to accelerate sparse workloads. Our approach achieves 2.26$\times$ better performance on average compared to the vendor supplied optimized library for sparse matrix operations, cuSPARSE.},
+  acmid     = {3356154},
+  address   = {New York, NY, USA},
+  articleno = {55},
+  numpages  = {17},
+}
+
+@InProceedings{Zhu2019,
+  author    = {Zhu, G. and Jiang, P. and Agrawal, G.},
+  title     = {A Methodology for Characterizing Sparse Datasets and Its Application to SIMD Performance Prediction},
+  booktitle = {Proceedings of the 28th International Conference on Parallel Architectures and Compilation Techniques},
+  year      = {2019},
+  series    = {PACT '19},
+  month     = {9},
+  pages     = {445-456},
+  doi       = {10.1109/PACT.2019.00042},
+  abstract  = {Irregular computations are commonly seen in many scientific and engineering domains that use unstructured meshes or sparse matrices. The performance of an irregular application is very dependent upon the dataset. This paper poses the following question: "given an unstructured mesh or a graph, what method(s) can be used to sample it, such that the execution on the resulting sampled dataset can accurately reflect performance characteristics on the full dataset". Our first insight is that developing a universal sampling approach for all sparse matrices is unpractical. According to the non-zero distribution of the sparse matrix, we propose two novel sampling strategies: Stride Average sampling and Random Tile sampling, which are suitable for uniform and skewed sparse matrices respectively. To help categorize a sparse matrix as uniform or skewed, we introduce clustering coefficient as an important feature which can be propagated into the decision tree model. We also adapt Random Node Neighbor sampling approach for efficient estimation of clustering coefficient. We apply our unstructured dataset characterization approach to modeling the performance for SIMD irregular applications, where the sampled dataset obtained is used to predict cache miss rate and SIMD utilization ratio. We also build analytical models to estimate overheads incurred by load imbalance among threads. With knowledge of these factors, we adapt a code skeleton framework SKOPE to capture the workload behaviors and aggregate performance statistics for execution time prediction.},
+  keywords  = {Sparse matrices;Parallel processing;Adaptation models;Instruction sets;Load modeling;Predictive models;Analytical models;irregular application;performance prediction;SIMD;sampling},
+}
+
+@InProceedings{Nisa2019,
+  author    = {Nisa, Israt and Li, Jiajia and Sukumaran-Rajam, Aravind and Rawat, Prasant Singh and Krishnamoorthy, Sriram and Sadayappan, P.},
+  title     = {An Efficient Mixed-mode Representation of Sparse Tensors},
+  booktitle = {Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis},
+  year      = {2019},
+  series    = {SC '19},
+  publisher = {ACM},
+  location  = {Denver, Colorado},
+  isbn      = {978-1-4503-6229-0},
+  pages     = {49:1--49:25},
+  doi       = {10.1145/3295500.3356216},
+  abstract  = {The Compressed Sparse Fiber (CSF) representation for sparse tensors is a generalization of the Compressed Sparse Row (CSR) format for sparse matrices. For a tensor with d modes, typical tensor methods such as CANDECOMP/PARAFAC decomposition (CPD) require a sequence of d tensor computations, where efficient memory access with respect to different modes is required for each of them. The straightforward solution is to use d distinct representations of the tensor, with each one being efficient for one of the d computations. However, a d-fold space overhead is often unacceptable in practice, especially with memory-constrained GPUs. In this paper, we present a mixed-mode tensor representation that partitions the tensor's nonzero elements into disjoint sections, each of which is compressed to create fibers along a different mode. Experimental results demonstrate that better performance can be achieved while utilizing only a small fraction of the space required to keep d distinct CSF representations.},
+  acmid     = {3356216},
+  address   = {New York, NY, USA},
+  articleno = {49},
+  keywords  = {CANDECOMP/PARAFAC decomposition, GPU, MTTKRP, sparse tensors},
+  numpages  = {25},
+}
+
+@InProceedings{Besta2019,
+  author    = {Besta, Maciej and Weber, Simon and Gianinazzi, Lukas and Gerstenberger, Robert and Ivanov, Andrey and Oltchik, Yishai and Hoefler, Torsten},
+  title     = {Slim Graph: Practical Lossy Graph Compression for Approximate Graph Processing, Storage, and Analytics},
+  booktitle = {Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis},
+  year      = {2019},
+  series    = {SC '19},
+  publisher = {ACM},
+  location  = {Denver, Colorado},
+  isbn      = {978-1-4503-6229-0},
+  pages     = {35:1--35:25},
+  doi       = {10.1145/3295500.3356182},
+  abstract  = {We propose Slim Graph: the first programming model and framework for practical lossy graph compression that facilitates high-performance approximate graph processing, storage, and analytics. Slim Graph enables the developer to express numerous compression schemes using small and programmable compression kernels that can access and modify local parts of input graphs. Such kernels are executed in parallel by the underlying engine, isolating developers from complexities of parallel programming. Our kernels implement novel graph compression schemes that preserve numerous graph properties, for example connected components, minimum spanning trees, or graph spectra. Finally, Slim Graph uses statistical divergences and other metrics to analyze the accuracy of lossy graph compression. We illustrate both theoretically and empirically that Slim Graph accelerates numerous graph algorithms, reduces storage used by graph datasets, and ensures high accuracy of results. Slim Graph may become the common ground for developing, executing, and analyzing emerging lossy graph compression schemes.},
+  acmid     = {3356182},
+  address   = {New York, NY, USA},
+  articleno = {35},
+  numpages  = {25},
+}
+
+@Article{Han2019,
+  author   = {Han, J. and Xiong, K. and Nie, F. and Li, X.},
+  title    = {Structured Graph Reconstruction for Scalable Clustering},
+  journal  = {IEEE Transactions on Knowledge and Data Engineering},
+  year     = {2019},
+  doi      = {10.1109/TKDE.2019.2948850},
+  abstract = {Spectral clustering is a quite simple but effective method for solving graph clustering problem. It first embeds the original data into a lower dimensional space with spectral analysis, and then relys on an algorithm to obtain the final cluster labels. Since it involves eigen-decomposition of the graph Laplacian matrix for spectral embedding, spectral clustering suffers from high computational cost as data grow in scale. It is also limited by the performance of post-processing algorithm such as kmeans. To address these two issues, in this paper, we propose a novel approach denoted by Orthogonal and Nonnegative Graph Reconstruction (ONGR) for large scale clustering. The two constraints are served as the structure constraint under which the graph reconstructed by the indicator matrix is structured. The proposed method mainly needs to perform economical singular value decomposition for small size matrix thus it scales linearly with the data size. Moreover, the interpretability of the indicator matrix is offered due to the nonnegative constraint. Therefore, the final cluster labels can be directly obtained without post-processing. Extensive experiments show the effectiveness of the proposed method.},
+  keywords = {Laplace equations;Matrix decomposition;Scalability;Clustering algorithms;Sparse matrices;Linear programming;Clustering methods;scalable clustering;interpretability;structure constraints;graph reconstruction},
+}
+
+@Article{Lee2019,
+  author   = {Dongha Lee and Jinoh Oh and Hwanjo Yu},
+  title    = {{OCam}: Out-of-core coordinate descent algorithm for matrix completion},
+  journal  = {Information Sciences},
+  year     = {2019},
+  issn     = {0020-0255},
+  doi      = {10.1016/j.ins.2019.09.077},
+  url      = {http://www.sciencedirect.com/science/article/pii/S0020025519309284},
+  abstract = {Recently, there are increasing reports that most datasets can be actually stored in disks of a single off-the-shelf workstation, and utilizing out-of-core methods is much cheaper and even faster than using a distributed system. For these reasons, out-of-core methods have been actively developed for machine learning and graph processing. The goal of this paper is to develop an efficient out-of-core matrix completion method based on coordinate descent approach. Coordinate descent-based matrix completion (CD-MC) has two strong benefits over other approaches: 1) it does not involve heavy computation such as matrix inversion and 2) it does not have step-size hyper-parameters, which reduces the effort for hyper-parameter tuning. Existing solutions for CD-MC have been developed and analyzed for in-memory setting and they do not take disk-I/O into account. Thus, we propose OCam, a novel out-of-core coordinate descent algorithm for matrix completion. Our evaluation results and cost analyses provide sound evidences supporting the following benefits of OCam: (1) Scalability -- OCam is a truly scalable out-of-core method and thus decomposes a matrix larger than the size of memory, (2) Efficiency -- OCam is super fast. OCam is up to 10$\times$ faster than the state-of-the-art out-of-core method, and up to 4.1$\times$ faster than a competing distributed method when using eight machines. The source code of OCam will be available for reproducibility.},
+  keywords = {Matrix completion, Out-of-core method, Coordinate descent},
+}
+
+@InProceedings{Dong2019,
+  author    = {Dong, X. and Liu, L. and Zhao, P. and Li, G. and Li, J. and Wang, X. and Feng, X.},
+  title     = {Acorns: A Framework for Accelerating Deep Neural Networks with Input Sparsity},
+  booktitle = {Proceedings of the 28th International Conference on Parallel Architectures and Compilation Techniques},
+  year      = {2019},
+  series    = {PACT '19},
+  month     = {9},
+  pages     = {178--191},
+  doi       = {10.1109/PACT.2019.00022},
+  abstract  = {Deep neural networks have been employed in a broad range of applications, including face detection, natural language processing, and autonomous driving. Yet, the neural networks with the capability to tackle real-world problems are intrinsically expensive in computation, hindering the usage of these models. Sparsity in the input data of neural networks provides an optimizing opportunity. However, harnessing the potential performance improvement on modern CPU faces challenges raised by sparse computations of the neural network, such as cache-unfriendly memory accesses and efficient sparse kernel implementation. In this paper, we propose Acorns, a framework to accelerate deep neural networks with input sparsity. In Acorns, sparse input data is organized into our designed sparse data layout, which allows memory-friendly access for kernels in neural networks and opens the door for many performance-critical optimizations. Upon that, Acorns generates efficient sparse kernels for operators in neural networks from kernel templates, which combine directions that express specific optimizing transformations to be performed, and straightforward code that describes the computation. Comprehensive evaluations demonstrate Acorns can outperform state-of-the-art baselines by significant speedups. On the real-world detection task in autonomous driving, Acorns demonstrates 1.8-22.6$\times$ performance improvement over baselines. Specifically, the generated programs achieve 1.8-2.4$\times$ speedups over Intel MKL-DNN, 3.0-8.8$\times$ speedups over TensorFlow, and 11.1-13.2$\times$ speedups over Intel MKL-Sparse.},
+  keywords  = {Neural networks;Kernel;Layout;Convolution;Autonomous vehicles;Optimization;Deep Learning;Sparse;Optimization;Compiler},
+}
+
+@InProceedings{Gates2019,
+  author    = {Gates, Mark and Kurzak, Jakub and Charara, Ali and YarKhan, Asim and Dongarra, Jack},
+  title     = {{SLATE}: Design of a Modern Distributed and Accelerated Linear Algebra Library},
+  booktitle = {Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis},
+  year      = {2019},
+  series    = {SC '19},
+  publisher = {ACM},
+  location  = {Denver, Colorado},
+  isbn      = {978-1-4503-6229-0},
+  pages     = {26:1--26:18},
+  doi       = {10.1145/3295500.3356223},
+  abstract  = {The SLATE (Software for Linear Algebra Targeting Exascale) library is being developed to provide fundamental dense linear algebra capabilities for current and upcoming distributed high-performance systems, both accelerated CPU-GPU based and CPU based. SLATE will provide coverage of existing ScaLAPACK functionality, including the parallel BLAS; linear systems using LU and Cholesky; least squares problems using QR; and eigenvalue and singular value problems. In this respect, it will serve as a replacement for ScaLAPACK, which after two decades of operation, cannot adequately be retrofitted for modern accelerated architectures. SLATE uses modern techniques such as communication-avoiding algorithms, lookahead panels to overlap communication and computation, and task-based scheduling, along with a modern C++ framework. Here we present the design of SLATE and initial reports of several of its components.},
+  acmid     = {3356223},
+  address   = {New York, NY, USA},
+  articleno = {26},
+  keywords  = {GPU computing, dense linear algebra, distributed computing},
+  numpages  = {18},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
