@@ -7655,4 +7655,85 @@ The design principles described in the thesis have been implemented in GraphBLAS
   publisher = {Society for Industrial {\&} Applied Mathematics ({SIAM})},
 }
 
+@Article{Kouyialis2019,
+  author    = {Georgia Kouyialis and Xiaoyu Wang and Ruth Misener},
+  title     = {Symmetry Detection for Quadratic Optimization Using Binary Layered Graphs},
+  journal   = {Processes},
+  year      = {2019},
+  volume    = {7},
+  number    = {11},
+  month     = {11},
+  pages     = {838},
+  doi       = {10.3390/pr7110838},
+  abstract  = {Symmetry in mathematical optimization may create multiple, equivalent solutions. In nonconvex optimization, symmetry can negatively affect algorithm performance, e.g., of branch-and-bound when symmetry induces many equivalent branches. This paper develops detection methods for symmetry groups in quadratically-constrained quadratic optimization problems. Representing the optimization problem with adjacency matrices, we use graph theory to transform the adjacency matrices into binary layered graphs. We enter the binary layered graphs into the software package nauty that generates important symmetric properties of the original problem. Symmetry pattern knowledge motivates a discretization pattern that we use to reduce computation time for an approximation of the point packing problem. This paper highlights the importance of detecting and classifying symmetry and shows that knowledge of this symmetry enables quick approximation of a highly symmetric optimization problem},
+  publisher = {{MDPI} {AG}},
+}
+
+@Article{Yang2019,
+  author  = {Tianbao Yang},
+  title   = {Advancing Non-Convex and Constrained Learning: Challenges and Opportunities},
+  journal = {{AI} Matters},
+  year    = {2019},
+  volume  = {5},
+  issue   = {3},
+  pages   = {29--39},
+  doi     = {10.1145/3362077.3362085},
+}
+
+@Article{Adoni2019,
+  author    = {Hamilton Wilfried Yves Adoni and Tarik Nahhal and Moez Krichen and Brahim Aghezzaf and Abdeltif Elbyed},
+  title     = {A survey of current challenges in partitioning and processing of graph-structured data in parallel and distributed systems},
+  journal   = {Distributed and Parallel Databases},
+  year      = {2019},
+  month     = {11},
+  doi       = {10.1007/s10619-019-07276-9},
+  abstract  = {One of the concepts that attracts attention since entering of big data era is the graph-structured data. Suitable frameworks to handle such data would face several constraints, especially scalability, partitioning challenges, processing complexity and hardware configurations. Unfortunately, although several works deal with big data issues, there is a lack of literature review concerning the challenges related to query answering on large-scale graph data. In this survey paper, we review current problems related to the partitioning and processing of graph-structured data. We discuss existing graph processing systems and provide some insights to know how to choose the right system for parallel and distributed processing of large-scale graph data. Finally, we survey current open challenges in this field.},
+  publisher = {Springer Science and Business Media {LLC}},
+}
+
+@Article{Donnat2019,
+  author      = {Claire Donnat and Susan Holmes},
+  title       = {Convex Hierarchical Clustering for Graph-Structured Data},
+  date        = {2019-11-08},
+  eprint      = {arXiv:1911.03417},
+  eprintclass = {stat.AP},
+  eprinttype  = {arXiv},
+  abstract    = {Convex clustering is a recent stable alternative to hierarchical clustering. It formulates the recovery of progressively coalescing clusters as a regularized convex problem. While convex clustering was originally designed for handling Euclidean distances between data points, in a growing number of applications, the data is directly characterized by a similarity matrix or weighted graph. In this paper, we extend the robust hierarchical clustering approach to these broader classes of similarities. Having defined an appropriate convex objective, the crux of this adaptation lies in our ability to provide: (a) an efficient recovery of the regularization path and (b) an empirical demonstration of the use of our method. We address the first challenge through a proximal dual algorithm, for which we characterize both the theoretical efficiency as well as the empirical performance on a set of experiments. Finally, we highlight the potential of our method by showing its application to several real-life datasets, thus providing a natural extension to the current scope of applications of convex clustering.},
+  file        = {:http\://arxiv.org/pdf/1911.03417v1:PDF},
+  keywords    = {stat.AP, cs.LG, stat.ML},
+}
+
+@Article{Giles2019,
+  author      = {Michael B. Giles and Arnulf Jentzen and Timo Welti},
+  title       = {Generalised multilevel Picard approximations},
+  date        = {2019-11-08},
+  eprint      = {http://arxiv.org/abs/1911.03188v1},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {It is one of the most challenging problems in applied mathematics to approximatively solve high-dimensional partial differential equations (PDEs). In particular, most of the numerical approximation schemes studied in the scientific literature suffer under the curse of dimensionality in the sense that the number of computational operations needed to compute an approximation with an error of size at most $ \varepsilon > 0 $ grows at least exponentially in the PDE dimension $ d \in \mathbb{N} $ or in the reciprocal of $ \varepsilon $. Recently, so-called full-history recursive multilevel Picard (MLP) approximation methods have been introduced to tackle the problem of approximately solving high-dimensional PDEs. MLP approximation methods currently are, to the best of our knowledge, the only methods for parabolic semi-linear PDEs with general time horizons and general initial conditions for which there is a rigorous proof that they are indeed able to beat the curse of dimensionality. The main purpose of this work is to investigate MLP approximation methods in more depth, to reveal more clearly how these methods can overcome the curse of dimensionality, and to propose a generalised class of MLP approximation schemes, which covers previously analysed MLP approximation schemes as special cases. In particular, we develop an abstract framework in which this class of generalised MLP approximations can be formulated and analysed and, thereafter, apply this abstract framework to derive a computational complexity result for suitable MLP approximations for semi-linear heat equations. These resulting MLP approximations for semi-linear heat equations essentially are generalisations of previously introduced MLP approximations for semi-linear heat equations.},
+  file        = {:http\://arxiv.org/pdf/1911.03188v1:PDF},
+  keywords    = {math.NA, cs.NA, math.AP, math.PR, 65M75, 65C05},
+}
+
+@InProceedings{Shi2019,
+  author    = {Zai Shi and Atilla Eryilmaz},
+  title     = {Cubic Regularized {ADMM} with Convergence to a Local Minimum in Non-convex Optimization},
+  booktitle = {Proceedings of the 57th Annual Allerton Conference on Communication, Contrl, and Computing},
+  year      = {2019},
+  series    = {Allerton},
+  abstract  = {How to escape saddle points is a critical issue in nonconvex optimization. Previous methods on this issue mainly assume that the objective function is Hessian-Lipschitz, which leave a gap for applications using non-Hessian-Lipschitz functions. In this paper, we propose Cubic Regularized Alternating Direction Method of Multipliers (CR-ADMM) to escape saddle points of separable non-convex functions containing a non-HessianLipschitz component. By carefully choosing a parameter, we prove that CR-ADMM converges to a local minimum of the original function with a rate of $O(\frac{1}{T} \frac{1}{3})$ in time horizon $T$, which is faster than gradient-based methods. We also show that when one or more steps of CR-ADMM are not solved exactly, CRADMM can converge to a neighborhood of the local minimum. Through the experiments of matrix factorization problems, CRADMM is shown to have a faster rate and a lower optimality gap compared with other gradient-based methods. Our approach can also find applications in other scenarios where regularized non-convex cost minimization is performed, such as parameter optimization of deep neural networks.},
+}
+
+@Article{Steck2019,
+  author      = {Daniel Steck and Christian Kanzow},
+  title       = {Regularization of Limited Memory Quasi-Newton Methods for Large-Scale Nonconvex Minimization},
+  date        = {2019-11-11},
+  eprint      = {arXiv:1911.04584},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {This paper deals with the unconstrained optimization of smooth objective functions. It presents a class of regularized quasi-Newton methods whose globalization turns out to be more efficient than standard line search or trust-region strategies. The focus is therefore on the solution of large-scale problems using limited memory quasi-Newton techniques. Global convergence of the regularization methods is shown under mild assumptions. The details of the regularized limited memory quasi-Newton updates are discussed including their compact representations. Numerical results using all large-scale test problems from the CUTEst collection indicate that the regularization method outperforms the standard line search limited memory BFGS method.},
+  file        = {:http\://arxiv.org/pdf/1911.04584v1:PDF},
+  keywords    = {math.OC, cs.NA, math.NA},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
