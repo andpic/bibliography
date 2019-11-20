@@ -7736,4 +7736,52 @@ The design principles described in the thesis have been implemented in GraphBLAS
   keywords    = {math.OC, cs.NA, math.NA},
 }
 
+@InProceedings{Agarwal2019,
+  author    = {Abhishek Agarwal and Jianhao Peng and Olgica Milenkovic},
+  title     = {Online Convex Matrix Factorization with Representative Regions},
+  booktitle = {Proceddings of the 33rd Conference on Neural Information Processing Systems},
+  year      = {2019},
+  series    = {NeurIPS' 19},
+  location  = {Vancouver, CA},
+  abstract  = {Matrix factorization (MF) is a versatile learning method that has found wide applications in various data-driven disciplines. Still, many MF algorithms do not adequately scale with the size of available datasets and/or lack interpretability. To improve the computational efficiency of the method, an online (streaming) MF algorithm was proposed in [1]. To enable data interpretability, a constrained version of MF, termed convex MF, was introduced in [2]. In the latter work, the basis vectors are required to lie in the convex hull of the data samples, thereby ensuring that every basis can be interpreted as a weighted combination of data samples. No current algorithmic solutions for online convex MF are known as it is challenging to find adequate convex bases without having access to the complete dataset. We address both problems by proposing the first online convex MF algorithm that maintains a collection of constant-size sets of representative data samples needed for interpreting each of the basis [2] and has the same almost sure convergence guarantees as the online learning algorithm of [1]. Our proof techniques combine random coordinate descent algorithms with specialized quasi-martingale convergence analysis. Experiments on synthetic and real world datasets show significant computational savings of the proposed online convex MF method compared to classical convex MF. Since the proposed method maintains small representative sets of data samples needed for convex interpretations, it is related to a body of work in theoretical computer science, pertaining to generating point sets [3], and in computer vision, pertaining to archetypal analysis [4]. Nevertheless, it differs from these lines of work both in terms of the objective and algorithmic implementations.},
+}
+
+@Article{Bento2019,
+  author   = {Bento, José and Ioannidis, Stratis},
+  title    = {A family of tractable graph metrics},
+  journal  = {Applied Network Science},
+  year     = {2019},
+  volume   = {4},
+  number   = {1},
+  month    = nov,
+  pages    = {107},
+  issn     = {2364-8228},
+  doi      = {10.1007/s41109-019-0219-z},
+  url      = {https://doi.org/10.1007/s41109-019-0219-z},
+  abstract = {Important data mining problems such as nearest-neighbor search and clustering admit theoretical guarantees when restricted to objects embedded in a metric space. Graphs are ubiquitous, and clustering and classification over graphs arise in diverse areas, including, e.g., image processing and social networks. Unfortunately, popular distance scores used in these applications, that scale over large graphs, are not metrics and thus come with no guarantees. Classic graph distances such as, e.g., the chemical distance and the Chartrand-Kubiki-Shultz distance are arguably natural and intuitive, and are indeed also metrics, but they are intractable: as such, their computation does not scale to large graphs. We define a broad family of graph distances, that includes both the chemical and the Chartrand-Kubiki-Shultz distances, and prove that these are all metrics. Crucially, we show that our family includes metrics that are tractable. Moreover, we extend these distances by incorporating auxiliary node attributes, which is important in practice, while maintaining both the metric property and tractability.},
+  day      = {15},
+}
+
+@Article{Buttari2019a,
+  author   = {Buttari, Alfredo. and Orban, Dominique. and Ruiz, Daniel. and Titley-Peloquin, David.},
+  title    = {A Tridiagonalization Method for Symmetric Saddle-Point Systems},
+  journal  = {SIAM Journal on Scientific Computing},
+  year     = {2019},
+  volume   = {41},
+  number   = {5},
+  pages    = {409--432},
+  doi      = {10.1137/18M1194900},
+  abstract = {We propose an iterative method for the solution of symmetric saddle-point systems that exploits the orthogonal tridiagonalization method of Saunders, Simon, and Yip (1988). By contrast with methods based on the Golub and Kahan (1965) bidiagonalization process, our method takes advantage of two initial vectors and splits the system into the sum of a least-squares and a least-norm problem. Our method typically requires fewer operator-vector products than MINRES, yet performs a comparable amount of work per iteration and has comparable storage requirements},
+}
+
+@InProceedings{Koutis2019,
+  author    = {Ioannis Koutis and Huong Le},
+  title     = {Spectral Modification of Graphs for Improved Spectral Clustering},
+  booktitle = {Proceedings of the 33rd Conference on Neural Information Processing Systems},
+  year      = {2019},
+  series    = {NeurIPS' 19},
+  location  = {Vancouver, CA},
+  abstract  = {Spectral clustering algorithms provide approximate solutions to hard optimization problems that formulate graph partitioning in terms of the graph conductance. It is well understood that the quality of these approximate solutions is negatively affected by a possibly significant gap between the conductance and the second eigenvalue of the graph. In this paper we show that for any graph $G$, there exists a ‘spectral maximizer’ graph $H$ which is cut-similar to $G$, but has eigenvalues that are near the theoretical limit implied by the cut structure of $G$. Applying then spectral clustering on $H$ has the potential to produce improved cuts that also exist in $G$ due to the cut similarity. This leads to the second contribution of this work: we describe a practical spectral modification algorithm that raises the eigenvalues of the input graph, while preserving its cuts. Combined with spectral clustering on the modified graph, this yields demonstrably improved cuts.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
