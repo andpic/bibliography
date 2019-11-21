@@ -7784,4 +7784,58 @@ The design principles described in the thesis have been implemented in GraphBLAS
   abstract  = {Spectral clustering algorithms provide approximate solutions to hard optimization problems that formulate graph partitioning in terms of the graph conductance. It is well understood that the quality of these approximate solutions is negatively affected by a possibly significant gap between the conductance and the second eigenvalue of the graph. In this paper we show that for any graph $G$, there exists a ‘spectral maximizer’ graph $H$ which is cut-similar to $G$, but has eigenvalues that are near the theoretical limit implied by the cut structure of $G$. Applying then spectral clustering on $H$ has the potential to produce improved cuts that also exist in $G$ due to the cut similarity. This leads to the second contribution of this work: we describe a practical spectral modification algorithm that raises the eigenvalues of the input graph, while preserving its cuts. Combined with spectral clustering on the modified graph, this yields demonstrably improved cuts.},
 }
 
+@InProceedings{Dumitrasc2019,
+  author   = {Dumitrasc, Andrei and Leleux, Philippe and Rüde, Ulrich},
+  title    = {Block partitioning of sparse rectangular matrices},
+  year     = {2019},
+  volume   = {19},
+  series   = {PAMM '19},
+  number   = {1},
+  doi      = {10.1002/pamm.201900287},
+  url      = {https://onlinelibrary.wiley.com/doi/abs/10.1002/pamm.201900287},
+  abstract = {Abstract We present a means of reordering large, sparse rectangular matrices such that their nonzeros are closer to the diagonal. This enables a block-partitioning which is useful in parallel contexts. We use the Reverse Cuthill-McKee (RCM) algorithm on the adjacency matrix of the associated bipartite graph. The resulting, reordered matrix has a block bidiagonal structure.},
+  journal  = {Proceedings of Applied Mathematics and Mechanics},
+}
+
+@InProceedings{Piccinotti2019,
+  author    = {Piccinotti, D. and Ramalli, E. and Parravicini, A. and Brondolin, R. and Santambrogio, M.},
+  title     = {Solving write conflicts in {GPU}-accelerated graph computation: A {PageRank} case-study},
+  booktitle = {Proceedings of the IEEE 5th International forum on Research and Technology for Society and Industry},
+  year      = {2019},
+  series    = {RTSI '19},
+  month     = {Sep.},
+  pages     = {144-148},
+  doi       = {10.1109/RTSI.2019.8895572},
+  abstract  = {Graph ranking algorithms, such as PageRank, are widely used in a number of real-world applications like web search. As the size of the graphs on which these algorithms are applied gets bigger and bigger, it becomes necessary to devise powerful and flexible techniques to accelerate and parallelize the computation, both at software and hardware level. Leveraging GPUs is a promising direction due to their highly parallel computing capabilities, but execution time is often hampered by write conflicts. In this paper, we present a solution to handle write conflicts in GPU computations exploiting high level of parallelism, and show how this technique can effectively be used to accelerate the computation of PageRank by a factor of 5$\times$, with respect to a baseline in which conflicts are not handled. Our solution is implemented at software level, and doesn't require specific hardware resources.},
+  issn      = {2687-6809},
+  keywords  = {Graph Algorithms;GPU;Atomic Addition;PageRank},
+}
+
+@Article{Ribizel2019a,
+  author   = {Tobias Ribizel and Hartwig Anzt},
+  title    = {Parallel Selection on {GPUs}},
+  journal  = {Parallel Computing},
+  year     = {2019},
+  pages    = {102588},
+  issn     = {0167-8191},
+  doi      = {10.1016/j.parco.2019.102588},
+  url      = {http://www.sciencedirect.com/science/article/pii/S0167819119301796},
+  abstract = {We present a novel parallel selection algorithm for GPUs capable of handling single rank selection (single selection) and multiple rank selection (multiselection). The algorithm requires no assumptions on the input data distribution, and has a much lower recursion depth compared to many state-of-the-art algorithms. We implement the algorithm for different GPU generations, always leveraging the respectively-available low-level communication features, and assess the performance on server-line hardware. The computational complexity of our SampleSelect algorithm is comparable to specialized algorithms designed for – and exploiting the characteristics of – “pleasant” data distributions. At the same time, as the proposed SampleSelect algorithm does not work on the actual element values but on the element ranks of the elements only, it is robust to the input data and can complete significantly faster for adversarial data distributions. We also address the use case of approximate selection by designing a variant that radically reduces the computational cost while preserving high approximation accuracy.},
+  keywords = {Parallel selection algorithm, GPU, Multiselection, th order statistics, Approximate selection},
+}
+
+@InProceedings{Anzt2019d,
+  author   = {Anzt, Hartwig and Cojean, Terry and Kühn, Eileen},
+  title    = {Towards a New Peer Review Concept for Scientific Computing ensuring Technical Quality, Software Sustainability, and Result Reproducibility},
+  year     = {2019},
+  volume   = {19},
+  series   = {PAMM '19},
+  number   = {1},
+  doi      = {10.1002/pamm.201900490},
+  eprint   = {https://onlinelibrary.wiley.com/doi/pdf/10.1002/pamm.201900490},
+  url      = {https://onlinelibrary.wiley.com/doi/abs/10.1002/pamm.201900490},
+  abstract = {In this position paper we argue for implementing an alternative peer review process for scientific computing contributions that promotes high quality scientific software developments as fully-recognized conference submission. The idea is based on leveraging the code reviewers' feedback on scientific software contributions to community software developments as a third-party review involvement. Providing open access to this technical review would complement the scientific review of the contribution, efficiently reduce the workload of the undisclosed reviewers, improve the algorithm implementation quality and software sustainability, and ensure full reproducibility of the reported results. Using this process creates incentives to publish scientific algorithms in open source software – instead of designing prototype algorithms with the unique purpose of publishing a paper. In addition, the comments and suggestions of the community being archived in the versioning control systems ensure that also community reviewers are receiving credit for the review contributions – unlike reviewers in the traditional peer review process. Finally, it reflects the particularity of the scientific computing community using conferences rather than journals as the main publication venue.},
+  journal  = {Proceedings of Applied Mathematics and Mechanics},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
