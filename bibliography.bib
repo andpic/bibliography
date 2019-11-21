@@ -7838,4 +7838,15 @@ The design principles described in the thesis have been implemented in GraphBLAS
   journal  = {Proceedings of Applied Mathematics and Mechanics},
 }
 
+@InProceedings{Sahasrabudhe2019,
+  author    = {Damodar Sahasrabudhe and Eric T. Phipps and Sivasankaran Rajamanickam and Martin Berzins},
+  title     = {A Portable {SIMD} Primitive Using Kokkos for Heterogeneous Architectures},
+  booktitle = {Proceedings of the 6th Workshop on Accelerator Programming Using Directives},
+  year      = {2019},
+  publisher = {ACM},
+  location  = {Denver, Colorado},
+  pages     = {1--23},
+  abstract  = {As computer architectures are rapidly evolving (e.g. those designed for exascale), multiple portability frameworks have been developed to avoid new architecture-specific development and tuning. However, portability frameworks depend on compilers for auto-vectorization and may lack support for explicit vectorization on heterogeneous platforms. Alternatively, programmers can use intrinsics-based primitives to achieve more efficient vectorization, but the lack of a gpu back-end for these primitives makes such code non-portable. A unified, portable, Single Instruction Multiple Data (SIMD) primitive proposed in this work, allows intrinsics-based vectorization on cpus and many-core architectures such as Intel Knights Landing (KNL), and also facilitates Single Instruction Multiple Threads (SIMT) based execution on gpus. This unified primitive, coupled with the Kokkos portability ecosystem, makes it possible to develop explicitly vectorized code, which is portable across heterogeneous platforms. The new SIMD primitive is used on different architectures to test the performance boost against hard-to-auto-vectorize baseline, to measure the overhead against efficiently vectroized baseline, and to evaluate the new feature called the “logical vector length” (LVL). The SIMD primitive provides portability across cpus and gpus without any performance degradation being observed experimentally.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
