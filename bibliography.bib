@@ -7849,4 +7849,53 @@ The design principles described in the thesis have been implemented in GraphBLAS
   abstract  = {As computer architectures are rapidly evolving (e.g. those designed for exascale), multiple portability frameworks have been developed to avoid new architecture-specific development and tuning. However, portability frameworks depend on compilers for auto-vectorization and may lack support for explicit vectorization on heterogeneous platforms. Alternatively, programmers can use intrinsics-based primitives to achieve more efficient vectorization, but the lack of a gpu back-end for these primitives makes such code non-portable. A unified, portable, Single Instruction Multiple Data (SIMD) primitive proposed in this work, allows intrinsics-based vectorization on cpus and many-core architectures such as Intel Knights Landing (KNL), and also facilitates Single Instruction Multiple Threads (SIMT) based execution on gpus. This unified primitive, coupled with the Kokkos portability ecosystem, makes it possible to develop explicitly vectorized code, which is portable across heterogeneous platforms. The new SIMD primitive is used on different architectures to test the performance boost against hard-to-auto-vectorize baseline, to measure the overhead against efficiently vectroized baseline, and to evaluate the new feature called the “logical vector length” (LVL). The SIMD primitive provides portability across cpus and gpus without any performance degradation being observed experimentally.},
 }
 
+@Article{Zhang2019c,
+  author      = {Yunming Zhang and Ajay Brahmakshatriya and Xinyi Chen and Laxman Dhulipala and Shoaib Kamil and Saman Amarasinghe and Julian Shun},
+  title       = {{PriorityGraph}: A Unified Programming Model for Optimizing Ordered Graph Algorithms},
+  date        = {2019-11-17},
+  eprint      = {arXiv:1911.07260},
+  eprintclass = {cs.PL},
+  eprinttype  = {arXiv},
+  abstract    = {Many graph problems can be solved using ordered parallel graph algorithms that achieve significant speedup over their unordered counterparts by reducing redundant work. This paper introduces PriorityGraph, a new programming framework that simplifies writing high-performance parallel ordered graph algorithms. The key to PriorityGraph is a novel priority-based abstraction that enables vertices to be processed in a dynamic order while hiding low-level implementation details from the user. PriorityGraph is implemented as a language and compiler extension to GraphIt. The PriorityGraph compiler extension leverages new program analyses, transformations, and code generation to produce fast implementations of ordered parallel graph algorithms. We also introduce bucket fusion, a new performance optimization that fuses together different rounds of ordered algorithms to reduce synchronization overhead, resulting in 1.2$\times$ to 3$\times$ speedup over the fastest existing ordered algorithm implementations on road networks with large diameters. PriorityGraph achieves up to 3$\times$ speedup on six ordered graph algorithms over state-of-the-art frameworks and hand-optimized implementations (Julienne, Galois, and GAPBS) that support ordered algorithms.},
+  file        = {:http\://arxiv.org/pdf/1911.07260v1:PDF},
+  keywords    = {cs.PL, cs.DC},
+}
+
+@Article{Apers2019,
+  author      = {Simon Apers and Ronald de Wolf},
+  title       = {Quantum Speedup for Graph Sparsification, Cut Approximation and Laplacian Solving},
+  date        = {2019-11-17},
+  eprint      = {arXiv:1911.07306},
+  eprintclass = {quant-ph},
+  eprinttype  = {arXiv},
+  abstract    = {Graph sparsification underlies a large number of algorithms, ranging from approximation algorithms for cut problems to solvers for linear systems in the graph Laplacian. In its strongest form, "spectral sparsification" reduces the number of edges to near-linear in the number of nodes, while approximately preserving the cut and spectral structure of the graph. The breakthrough work by Bencz\'ur and Karger (STOC'96) and Spielman and Teng (STOC'04) showed that sparsification can be done optimally in time near-linear in the number of edges of the original graph. \\ In this work we show that quantum algorithms allow to speed up spectral sparsification, and thereby many of the derived algorithms. Given adjacency-list access to a weighted graph with $n$ nodes and $m$ edges, our algorithm outputs an $\epsilon$-spectral sparsifier in time $\widetilde{O}(\sqrt{mn}/\epsilon)$. We prove that this is tight up to polylog-factors. The algorithm builds on a string of existing results, most notably sparsification algorithms by Spielman and Srivastava (STOC'08) and Koutis and Xu (TOPC'16), a spanner construction by Thorup and Zwick (STOC'01), a single-source shortest-paths quantum algorithm by D\"urr et al. (ICALP'04) and an efficient $k$-wise independent hash construction by Christiani, Pagh and Thorup (STOC'15). Combining our sparsification algorithm with existing classical algorithms yields the first quantum speedup, roughly from $\widetilde{O}(m)$ to $\widetilde{O}(\sqrt{mn})$, for approximating the max cut, min cut, min $st$-cut, sparsest cut and balanced separator of a graph. Combining our algorithm with a classical Laplacian solver, we demonstrate a similar speedup for Laplacian solving, for approximating effective resistances, cover times and eigenvalues of the Laplacian, and for spectral clustering.},
+  file        = {:http\://arxiv.org/pdf/1911.07306v1:PDF},
+  keywords    = {quant-ph, cs.CC, cs.DS},
+}
+
+@TechReport{Regev2019,
+  author      = {Regev, Shaked and Saunders, Michael A.},
+  title       = {{SSAI}: A Symmetric Sparse Approximate Inverse Preconditioner for the Conjugate Gradient Method},
+  institution = {Stanford University},
+  year        = {2019},
+  abstract    = {We propose a method for solving a Hermitian positive definite linear system $Ax = b$, where $A$ is
+an explicit sparse matrix (real or complex). A sparse approximate right inverse $M$ is computed and replaced by
+$\tilde{M} = (M + M^H)/2$, which is used as a left-right preconditioner in a modified version of the preconditioned conjugate
+gradient (PCG) method. M is formed column by column and can therefore be computed in parallel. PCG requires
+only matrix-vector multiplications with $A$ and $\tilde{M}$ (not solving a linear system with the preconditioner), and so too
+can be carried out in parallel. We compare it with incomplete Cholesky factorization (the gold standard for PCG)
+and with MATLAB’s backslash operator (sparse Cholesky) on matrices from various applications.},
+}
+
+@Article{Enayati2019,
+  author    = {Shakiba Enayati and Osman Y. Özaltın},
+  title     = {Optimal Influenza Vaccine Distribution with Equity},
+  journal   = {European Journal of Operational Research},
+  year      = {2019},
+  month     = {11},
+  doi       = {10.1016/j.ejor.2019.11.025},
+  abstract  = {This paper is concerned with the optimal influenza vaccine distribution in a heterogeneous population consisting of multiple subgroups. We employ a compartmental model for influenza transmission and formulate a mathematical program to minimize the number of vaccine doses distributed to effectively extinguish an emerging outbreak in its early stages. We propose an equity constraint to help public health authorities consider fairness when making vaccine distribution decisions. We develop an exact solution approach that generates a vaccine distribution policy with a solution quality guarantee. We perform sensitivity analyses on key epidemic parameters in order to illustrate the application of the proposed model. We then analyze the scalability of the solution approach for a population consisting of subgroups based on geographic location and age. We finally demonstrate the proposed model’s ability to consider vaccine coverage inequity and discuss a derivative-free optimization approach, as an alternative solution method which can consider various different objective functions and constraints. Our results indicate that consideration of group-specific transmission dynamics is paramount to the optimal distribution of influenza vaccines.},
+  publisher = {Elsevier {BV}},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
