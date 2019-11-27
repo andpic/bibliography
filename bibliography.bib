@@ -7849,4 +7849,29 @@ The design principles described in the thesis have been implemented in GraphBLAS
   abstract  = {As computer architectures are rapidly evolving (e.g. those designed for exascale), multiple portability frameworks have been developed to avoid new architecture-specific development and tuning. However, portability frameworks depend on compilers for auto-vectorization and may lack support for explicit vectorization on heterogeneous platforms. Alternatively, programmers can use intrinsics-based primitives to achieve more efficient vectorization, but the lack of a gpu back-end for these primitives makes such code non-portable. A unified, portable, Single Instruction Multiple Data (SIMD) primitive proposed in this work, allows intrinsics-based vectorization on cpus and many-core architectures such as Intel Knights Landing (KNL), and also facilitates Single Instruction Multiple Threads (SIMT) based execution on gpus. This unified primitive, coupled with the Kokkos portability ecosystem, makes it possible to develop explicitly vectorized code, which is portable across heterogeneous platforms. The new SIMD primitive is used on different architectures to test the performance boost against hard-to-auto-vectorize baseline, to measure the overhead against efficiently vectroized baseline, and to evaluate the new feature called the “logical vector length” (LVL). The SIMD primitive provides portability across cpus and gpus without any performance degradation being observed experimentally.},
 }
 
+@Article{Han2019a,
+  author      = {Ruobing Han and Yang You and James Demmel},
+  title       = {Auto-Precision Scaling for Distributed Deep Learning},
+  date        = {2019-11-20},
+  eprint      = {arXiv:1911.08907},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {In recent years, large-batch optimization is becoming the key of distributed deep learning. However, large-batch optimization is hard. Straightforwardly porting the code often leads to a significant loss in testing accuracy. As some researchers suggested that large batch optimization leads to a low generalization performance, and they further conjectured that large-batch training needs a higher floating-point precision to achieve a higher generalization performance. To solve this problem, we conduct an open study in this paper. Our target is to find the number of bits that large-batch training needs. To do so, we need a system for customized precision study. However, state-of-the-art systems have some limitations that lower the efficiency of developers and researchers. To solve this problem, we design and implement our own system CPD: A High Performance System for Customized-Precision Distributed DL. In our experiments, our application often loses accuracy if we use a very-low precision (e.g. 8 bits or 4 bits). To solve this problem, we proposed the APS (Auto-Precision-Scaling) algorithm, which is a layer-wise adaptive scheme for gradients shifting. With APS, we are able to make the large-batch training converge with only 4 bits.},
+  file        = {:http\://arxiv.org/pdf/1911.08907v1:PDF},
+  keywords    = {cs.DC, cs.LG},
+}
+
+@Article{Ayall2019,
+  author    = {Ayall, T. and Duan, H. and Liu, C.},
+  title     = {Edge Property Based Stream Order Reduce the Performance of Stream Edge Graph Partition},
+  journal   = {Journal of Physics: Conference Series},
+  year      = {2019},
+  volume    = {1395},
+  month     = {nov},
+  pages     = {1--8},
+  doi       = {10.1088/1742-6596/1395/1/012010},
+  abstract  = {The graph data exist everywhere in various disciplines such as in social network, biological network, chemical compound, and computer vision, etc. Currently, the size of a graph data have dramatically increased; all disciplines have extracted knowledge from a graph by partitioning and distributing a graph into different clusters node using the distributed graph processing system or graph database, however the graph partition has reduced the performance of those system. Even if the stream edge graph partition has shown better partition quality than vertex graph partition for skew degree distribution of a graph and support big graph partition, the stream order has affected the quality of stream edge graph partition. In this study,we propose two edge properties based stream order models such as TFB (Tree edges First then Backward edges follow), BFT (Backward edges First then Tree edges follow) and study the effect of stream order on stream edge graph partition algorithms. The result shows that TFB and BFT models significantly affect the quality of stream edge partition except hashing and all algorithms show best quality of partition on Random order than other order such as TFB, BFT, BFS (Breadth First Search), and DFS (Depth First Search)},
+  publisher = {{IOP} Publishing},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
