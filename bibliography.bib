@@ -7383,19 +7383,6 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   keywords    = {math.CO, 05C15, 05C20},
 }
 
-@Article{Buttari2019,
-  author   = {Buttari, Alfredo. and Orban, Dominique. and Ruiz, Daniel. and Titley-Peloquin, David.},
-  title    = {A Tridiagonalization Method for Symmetric Saddle-Point Systems},
-  journal  = {SIAM Journal on Scientific Computing},
-  year     = {2019},
-  volume   = {41},
-  number   = {5},
-  pages    = {S409--S432},
-  doi      = {10.1137/18M1194900},
-  url      = {https://doi.org/10.1137/18M1194900},
-  abstract = {We propose an iterative method for the solution of symmetric saddle-point systems that exploits the orthogonal tridiagonalization method of Saunders, Simon, and Yip (1988). By contrast with methods based on the Golub and Kahan (1965) bidiagonalization process, our method takes advantage of two initial vectors and splits the system into the sum of a least-squares and a least-norm problem. Our method typically requires fewer operator-vector products than MINRES, yet performs a comparable amount of work per iteration and has comparable storage requirements.},
-}
-
 @Article{Sivkov2019a,
   author      = {Ilia Sivkov and Patrick Seewald and Alfio Lazzaro and Juerg Hutter},
   title       = {{DBCSR}: A Blocked Sparse Tensor Algebra Library},
@@ -7760,18 +7747,6 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   day      = {15},
 }
 
-@Article{Buttari2019a,
-  author   = {Buttari, Alfredo. and Orban, Dominique. and Ruiz, Daniel. and Titley-Peloquin, David.},
-  title    = {A Tridiagonalization Method for Symmetric Saddle-Point Systems},
-  journal  = {SIAM Journal on Scientific Computing},
-  year     = {2019},
-  volume   = {41},
-  number   = {5},
-  pages    = {409--432},
-  doi      = {10.1137/18M1194900},
-  abstract = {We propose an iterative method for the solution of symmetric saddle-point systems that exploits the orthogonal tridiagonalization method of Saunders, Simon, and Yip (1988). By contrast with methods based on the Golub and Kahan (1965) bidiagonalization process, our method takes advantage of two initial vectors and splits the system into the sum of a least-squares and a least-norm problem. Our method typically requires fewer operator-vector products than MINRES, yet performs a comparable amount of work per iteration and has comparable storage requirements},
-}
-
 @InProceedings{Koutis2019,
   author    = {Ioannis Koutis and Huong Le},
   title     = {Spectral Modification of Graphs for Improved Spectral Clustering},
@@ -7913,6 +7888,63 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   doi       = {10.1016/j.ejor.2019.11.025},
   abstract  = {This paper is concerned with the optimal influenza vaccine distribution in a heterogeneous population consisting of multiple subgroups. We employ a compartmental model for influenza transmission and formulate a mathematical program to minimize the number of vaccine doses distributed to effectively extinguish an emerging outbreak in its early stages. We propose an equity constraint to help public health authorities consider fairness when making vaccine distribution decisions. We develop an exact solution approach that generates a vaccine distribution policy with a solution quality guarantee. We perform sensitivity analyses on key epidemic parameters in order to illustrate the application of the proposed model. We then analyze the scalability of the solution approach for a population consisting of subgroups based on geographic location and age. We finally demonstrate the proposed model’s ability to consider vaccine coverage inequity and discuss a derivative-free optimization approach, as an alternative solution method which can consider various different objective functions and constraints. Our results indicate that consideration of group-specific transmission dynamics is paramount to the optimal distribution of influenza vaccines.},
   publisher = {Elsevier {BV}},
+}
+
+@Article{Elsen2019,
+  author      = {Erich Elsen and Marat Dukhan and Trevor Gale and Karen Simonyan},
+  title       = {Fast Sparse ConvNets},
+  date        = {2019-11-21},
+  eprint      = {arXiv:1911.09723},
+  eprintclass = {cs.CV},
+  eprinttype  = {arXiv},
+  abstract    = {Historically, the pursuit of efficient inference has been one of the driving forces behind research into new deep learning architectures and building blocks. Some recent examples include: the squeeze-and-excitation module, depthwise separable convolutions in Xception, and the inverted bottleneck in MobileNet v2. Notably, in all of these cases, the resulting building blocks enabled not only higher efficiency, but also higher accuracy, and found wide adoption in the field. In this work, we further expand the arsenal of efficient building blocks for neural network architectures; but instead of combining standard primitives (such as convolution), we advocate for the replacement of these dense primitives with their sparse counterparts. While the idea of using sparsity to decrease the parameter count is not new, the conventional wisdom is that this reduction in theoretical FLOPs does not translate into real-world efficiency gains. We aim to correct this misconception by introducing a family of efficient sparse kernels for ARM and WebAssembly, which we open-source for the benefit of the community as part of the XNNPACK library. Equipped with our efficient implementation of sparse primitives, we show that sparse versions of MobileNet v1, MobileNet v2 and EfficientNet architectures substantially outperform strong dense baselines on the efficiency-accuracy curve. On Snapdragon 835 our sparse networks outperform their dense equivalents by $1.3-2.4\times$ -- equivalent to approximately one entire generation of MobileNet-family improvement. We hope that our findings will facilitate wider adoption of sparsity as a tool for creating efficient and accurate deep learning architectures.},
+  file        = {:http\://arxiv.org/pdf/1911.09723v1:PDF},
+  keywords    = {cs.CV},
+}
+
+@Article{Hernandez2019,
+  author      = {Taylor M. Hernandez and Roel Van Beeumen and Mark A. Caprio and Chao Yang},
+  title       = {A greedy algorithm for computing eigenvalues of a symmetric matrix},
+  date        = {2019-11-20},
+  eprint      = {arXiv:1911.10041},
+  eprintclass = {physics.comp-ph},
+  eprinttype  = {arXiv},
+  abstract    = {We present a greedy algorithm for computing selected eigenpairs of a large sparse matrix $H$ that can exploit localization features of the eigenvector. When the eigenvector to be computed is localized, meaning only a small number of its components have large magnitudes, the proposed algorithm identifies the location of these components in a greedy manner, and obtains approximations to the desired eigenpairs of $H$ by computing eigenpairs of a submatrix extracted from the corresponding rows and columns of $H$. Even when the eigenvector is not completely localized, the approximate eigenvectors obtained by the greedy algorithm can be used as good starting guesses to accelerate the convergence of an iterative eigensolver applied to $H$. We discuss a few possibilities for selecting important rows and columns of $H$ and techniques for constructing good initial guesses for an iterative eigensolver using the approximate eigenvectors returned from the greedy algorithm. We demonstrate the effectiveness of this approach with examples from nuclear quantum many-body calculations and many-body localization studies of quantum spin chains.},
+  file        = {:http\://arxiv.org/pdf/1911.10041v1:PDF},
+  keywords    = {physics.comp-ph},
+}
+
+@Article{Gong2019,
+  author      = {Zhangxiaowen Gong and Houxiang Ji and Christopher Fletcher and Christopher Hughes and Josep Torrellas},
+  title       = {SparseTrain:Leveraging Dynamic Sparsity in Training DNNs on General-Purpose SIMD Processors},
+  date        = {2019-11-22},
+  eprint      = {arXiv:1911.10175},
+  eprintclass = {cs.LG},
+  eprinttype  = {arXiv},
+  abstract    = {Our community has greatly improved the efficiency of deep learning applications, including by exploiting sparsity in inputs. Most of that work, though, is for inference, where weight sparsity is known statically, and/or for specialized hardware. We propose a scheme to leverage dynamic sparsity during training. In particular, we exploit zeros introduced by the ReLU activation function to both feature maps and their gradients. This is challenging because the sparsity degree is moderate and the locations of zeros change over time. We also rely purely on software. We identify zeros in a dense data representation without transforming the data and performs conventional vectorized computation. Variations of the scheme are applicable to all major components of training: forward propagation, backward propagation by inputs, and backward propagation by weights. Our method significantly outperforms a highly-optimized dense direct convolution on several popular deep neural networks. At realistic sparsity, we speed up the training of the non-initial convolutional layers in VGG16, ResNet-34, ResNet-50, and Fixup ResNet-50 by 2.19$\times$, 1.37$\times$, 1.31$\times$, and 1.51$\times$ respectively on an Intel Skylake-X CPU.},
+  file        = {:http\://arxiv.org/pdf/1911.10175v1:PDF},
+  keywords    = {cs.LG, cs.DC, stat.ML},
+}
+
+@TechReport{Buttari2019a,
+  author      = {Alfredo Buttari and Søren Hauberg and Costy Kodsi},
+  title       = {Parallel {QR} factorization of block-tridiagonal matrices},
+  institution = {Institut de recherche en informatique de Toulouse (IRIT)},
+  year        = {2019},
+  abstract    = {In this work, we deal with the QR factorization of block-tridiagonal matrices, where the blocks are dense and rectangular. This work is motivated by a novel method for computing geodesics over Riemannian manifolds. If blocks are reduced sequentially along the diagonal, only limited parallelism is available. We propose a matrix permutation approach based on the Nested Dissection method which improves parallelism at the cost of additional computations and storage. We provide a detailed analysis of the approach showing that this extra cost is bounded. Finally, we present an implementation for shared memory systems relying on task parallelism and the use of a runtime system. Experimental results support the conclusions of our analysis and show that the proposed approach leads to good performance and scalability.},
+}
+
+@Article{Buttari2019,
+  author   = {Buttari, Alfredo. and Orban, Dominique. and Ruiz, Daniel. and Titley-Peloquin, David.},
+  title    = {A Tridiagonalization Method for Symmetric Saddle-Point Systems},
+  journal  = {SIAM Journal on Scientific Computing},
+  year     = {2019},
+  volume   = {41},
+  number   = {5},
+  pages    = {S409--S432},
+  doi      = {10.1137/18M1194900},
+  url      = {https://doi.org/10.1137/18M1194900},
+  abstract = {We propose an iterative method for the solution of symmetric saddle-point systems that exploits the orthogonal tridiagonalization method of Saunders, Simon, and Yip (1988). By contrast with methods based on the Golub and Kahan (1965) bidiagonalization process, our method takes advantage of two initial vectors and splits the system into the sum of a least-squares and a least-norm problem. Our method typically requires fewer operator-vector products than MINRES, yet performs a comparable amount of work per iteration and has comparable storage requirements.},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
