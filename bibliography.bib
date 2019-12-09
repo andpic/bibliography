@@ -8066,4 +8066,28 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   keywords  = {performance portability, productivity, mini-app, programming models},
 }
 
+@InProceedings{Yasar2019a,
+  author    = {Abdurrahman Yaşar, Sivasankaran Rajamanickam, Jonathan W. Berry, Michael M. Wolf, Jeffrey Young, Ümit V. Çatalyürek},
+  title     = {Linear Algebra-Based Triangle Counting via Fine-Grained Tasking on Heterogeneous Environments},
+  booktitle = {Proceedings of the IEEE High Performance Extreme Computing Conference},
+  year      = {2019},
+  series    = {HPEC '19},
+  month     = {9},
+  pages     = {1--4},
+  doi       = {10.1109/HPEC.2019.8916492},
+  abstract  = {Triangle counting is a representative graph problem that shows the challenges of improving graph algorithm performance using algorithmic techniques and adopting graph algorithms to new architectures. In this paper, we describe an update to the linear-algebraic formulation of the triangle counting problem. Our new approach relies on fine-grained tasking based on a tile layout. We adopt this task based algorithm to heterogeneous architectures (CPUs and GPUs) for up to 10.8$\times$ speed up over past year's graph challenge submission. This implementation also results in the fastest kernel time known at time of publication for real-world graphs like twitter (3.7 second) and friendster (1.8 seconds) on GPU accelerators when the graph is GPU resident. This is a 1.7 and 1.2 time improvement over previous state-of-the-art triangle counting on GPUs. We also improved end-to-end execution time by overlapping computation and communication of the graph to the GPUs. In terms of end-toend execution time, our implementation also achieves the fastest end-to-end times due to very low overhead costs.},
+  issn      = {2377-6943},
+}
+
+@Article{Li2019c,
+  author   = {M. {Li} and Y. {Liu} and H. {Yang} and Z. {Luan} and L. {Gan} and G. {Yang} and D. {Qian}},
+  title    = {Accelerating Sparse Cholesky Factorization on Sunway Manycore Architecture},
+  journal  = {IEEE Transactions on Parallel and Distributed Systems},
+  year     = {2019},
+  issn     = {2161-9883},
+  doi      = {10.1109/TPDS.2019.2953852},
+  abstract = {To improve the performance of Sparse Cholesky factorization, existing research divides the adjacent columns of the sparse matrix with the same nonzero patterns into supernodes for parallelization. However, due to the various structures of sparse matrices, the computation of the generated supernodes varies significantly, and thus hard to optimize when computed by dense matrix kernels. Therefore, how to efficiently map sparse Choleksy factorization to the emerging architectures, such as Sunway many-core processor, remains an active research direction. In this paper, we propose swCholesky, which is a highly optimized implementation of sparse Cholesky factorization on Sunway processor. Specifically, we design three kernel task queues and a dense matrix library to dynamically adapt to the kernel characteristics and architecture features. In addition, we propose an auto-tuning mechanism to search for the optimal settings of the important parameters in swCholesky. Our experiments show that swCholesky achieves better performance than state-of-the-art implementations.},
+  keywords = {Sunway architecture;Sparse Cholesky factorization;Performance Optimization},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
