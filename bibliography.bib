@@ -8090,4 +8090,54 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   keywords = {Sunway architecture;Sparse Cholesky factorization;Performance Optimization},
 }
 
+@Article{Arjevani2019,
+  author      = {Yossi Arjevani and Yair Carmon and John C. Duchi and Dylan J. Foster and Nathan Srebro and Blake Woodworth},
+  title       = {Lower Bounds for Non-Convex Stochastic Optimization},
+  date        = {2019-12-05},
+  eprint      = {arXiv:1912.02365},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {We lower bound the complexity of finding $\epsilon$-stationary points (with gradient norm at most $\epsilon$) using stochastic first-order methods. In a well-studied model where algorithms access smooth, potentially non-convex functions through queries to an unbiased stochastic gradient oracle with bounded variance, we prove that (in the worst case) any algorithm requires at least $\epsilon^{-4}$ queries to find an $\epsilon$ stationary point. The lower bound is tight, and establishes that stochastic gradient descent is minimax optimal in this model. In a more restrictive model where the noisy gradient estimates satisfy a mean-squared smoothness property, we prove a lower bound of $\epsilon^{-3}$ queries, establishing the optimality of recently proposed variance reduction techniques.},
+  file        = {:http\://arxiv.org/pdf/1912.02365v1:PDF},
+  keywords    = {math.OC, cs.IT, cs.LG, math.IT, stat.ML},
+}
+
+@Article{Cifuentes2019,
+  author      = {Diego Cifuentes and Ankur Moitra},
+  title       = {Polynomial time guarantees for the {Burer-Monteiro} method},
+  date        = {2019-12-03},
+  eprint      = {arXiv:1912.01745},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {The Burer-Monteiro method is one of the most widely used techniques for solving large-scale semidefinite programs (SDP). The basic idea is to solve a nonconvex program in $Y$, where $Y$ is an $n \times p$ matrix such that $X = Y Y^T$. In this paper, we show that this method can solve SDPs in polynomial time in an smoothed analysis setting. More precisely, we consider an SDP whose domain satisfies some compactness and smoothness assumptions, and slightly perturb the cost matrix and the constraints. We show that if $p \gtrsim \sqrt{2(1+\eta)m}$, where $m$ is the number of constraints and $\eta>0$ is any fixed constant, then the Burer-Monteiro method can solve SDPs to any desired accuracy in polynomial time, in the setting of smooth analysis. Our bound on $p$ approaches the celebrated Barvinok-Pataki bound in the limit as $\eta$ goes to zero, beneath which it is known that the nonconvex program can be suboptimal. Previous analyses were unable to give polynomial time guarantees for the Burer-Monteiro method, since they either assumed that the criticality conditions are satisfied exactly, or ignored the nontrivial problem of computing an approximately feasible solution. We address the first problem through a novel connection with tubular neighborhoods of algebraic varieties. For the feasibility problem we consider a least squares formulation, and provide the first guarantees that do not rely on the restricted isometry property.},
+  file        = {:http\://arxiv.org/pdf/1912.01745v1:PDF},
+  keywords    = {math.OC, stat.ML, 90C22 (Primary) 90C26 (Secondary)},
+}
+
+@Article{Quirynen2019,
+  author      = {Rien Quirynen and Stefano Di Cairano},
+  title       = {{PRESAS}: Block-Structured Preconditioning of Iterative Solvers within a Primal Active-Set Method for fast {MPC}},
+  date        = {2019-12-04},
+  eprint      = {arXiv:1912.02122},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {Model predictive control (MPC) for linear dynamical systems requires solving an optimal control structured quadratic program (QP) at each sampling instant. This paper proposes a primal active-set strategy (PRESAS) for the efficient solution of such block-sparse QPs, based on a preconditioned iterative solver to compute the search direction in each iteration. Rank-one factorization updates of the preconditioner result in a per-iteration computational complexity of $\mathcal{O}(N m^2)$, where $m$ denotes the number of state and control variables and $N$ the number of control intervals. Three different block-structured preconditioning techniques are presented and their numerical properties are studied further. In addition, an augmented Lagrangian based implementation is proposed to avoid a costly initialization procedure to find a primal feasible starting point. Based on a standalone C code implementation, we illustrate the computational performance of PRESAS against current state of the art QP solvers for multiple linear and nonlinear MPC case studies. We also show that the solver is real-time feasible on a dSPACE MicroAutoBox-II rapid prototyping unit for vehicle control applications, and numerical reliability is illustrated based on experimental results from a testbench of small-scale autonomous vehicles.},
+  file        = {:http\://arxiv.org/pdf/1912.02122v1:PDF},
+  keywords    = {math.OC, cs.SY, eess.SY},
+}
+
+@InProceedings{Dufrechou2019,
+  author    = {E. {Dufrechou} and P. {Ezzatti} and E. S. {Quintana-Orti}},
+  title     = {Automatic Selection of Sparse Triangular Linear System Solvers on {GPUs} through Machine Learning Techniques},
+  booktitle = {Proceeding of the 31st International Symposium on Computer Architecture and High Performance Computing},
+  year      = {2019},
+  series    = {SBAC-PAD '19},
+  month     = {10},
+  pages     = {41--47},
+  doi       = {10.1109/SBAC-PAD.2019.00020},
+  abstract  = {The solution of sparse triangular linear systems is often the most time-consuming stage of preconditioned iterative methods to solve general sparse linear systems, where it has to be applied several times for the same sparse matrix. For this reason, its computational performance has a strong impact on a wide range of scientific and engineering applications, which has motivated the study of its efficient execution on massively parallel platforms. In this sense, several methods have been proposed to tackle this operation on graphics processing units (GPUs), which can be classified under either the level-set or the self-scheduling paradigms. The results obtained from the experimental evaluation of the different methods suggest that both paradigms perform well for certain problems but poorly for others. Additionally, the relation between the properties of the linear systems and the performance of the different solvers is not evident a-priori. In this context, techniques that allow to predict inexpensively which is be the best solver for a particular linear system can lead to important runtime reductions. Our approach leverages machine learning techniques to select the best sparse triangular solver for a given linear system, with focus on the case where a small number of triangular systems has to be solved for the same matrix. We study the performance of several methods using different features derived from the sparse matrices, obtaining models with more than 80\% of accuracy and acceptable prediction speed. These results are an important advance towards the automatic selection of the best GPU solver for a given sparse triangular linear system, and the characterization of the performance of these kernels.},
+  issn      = {1550-6533},
+  keywords  = {Linear systems;Sparse matrices;Machine learning;Kernel;Graphics processing units;Instruction sets;Indexes;graphics processors;sparse triangular linear systems;high performance;machine learning},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
