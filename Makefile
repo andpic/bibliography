@@ -4,6 +4,9 @@ all: clean pdf
 BASENAME=bibliography
 TEXNAME=$(BASENAME).tex
 BIBNAME=$(BASENAME).bib
+HTMLNAME=$(BASENAME).html
+MDNAME=$(BASENAME).md
+
 RM=rm -f
 
 .PHONY: clean
@@ -47,4 +50,9 @@ html:
 	htlatex $(TEXNAME) "xhtml_mathjax.cfg, charset=utf-8" " -cunihtf -utf8"
 	biber $(BASENAME)
 	htlatex $(TEXNAME) "xhtml_mathjax.cfg, charset=utf-8" " -cunihtf -utf8"
+
+.PHONY: md
+md:
+	make html
+	pandoc $(HTMLNAME) -o $(MDNAME)
 
