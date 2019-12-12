@@ -37,6 +37,12 @@ biblist:
 	pdflatex -halt-on-error biblist.tex
 	pdflatex -halt-on-error biblist.tex
 
+.PHONY: html
+html:
+	htlatex biblist.tex "xhtml_mathjax.cfg, charset=utf-8" " -cunihtf -utf8"
+	biber biblist
+	htlatex biblist.tex "xhtml_mathjax.cfg, charset=utf-8" " -cunihtf -utf8"
+
 .PHONY: update
 update: 
 	pdflatex -halt-on-error -shell-escape $(FILE)
