@@ -4,7 +4,7 @@ all: clean pdf
 BASENAME=bibliography
 TEXNAME=$(BASENAME).tex
 BIBNAME=$(BASENAME).bib
-RM=rm
+RM=rm -f
 
 .PHONY: clean
 clean:
