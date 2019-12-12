@@ -2,6 +2,6 @@
 
 make
 
-if [ ! -f biblist.pdf ]; then
+if [ ! -f bibliography.pdf ]; then
    exit -1 
 fi

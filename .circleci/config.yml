@@ -10,6 +10,6 @@ jobs:
           name: Create the PDF
           command: |
             bash .circleci/build_pdf.sh
-            cp biblist.pdf /tmp/
+            cp bibliography.pdf /tmp/
       - store_artifacts:
-          path: /tmp/biblist.pdf
+          path: /tmp/bibliography.pdf

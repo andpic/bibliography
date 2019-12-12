@@ -1,9 +1,14 @@
 # LaTeX Makefile
-all: clean biblist 
+all: clean pdf 
+
+BASENAME=bibliography
+TEXNAME=$(BASENAME).tex
+BIBNAME=$(BASENAME).bib
+RM=rm -f
 
 .PHONY: clean
 clean:
-	rm	-f \
+	$(RM) \
 		*.acn \
 		*.acr \
 		*.alg \
@@ -30,14 +35,16 @@ clean:
 		*.out \
 		*.xdy
 
-.PHONY: biblist
-biblist:
-	pdflatex -halt-on-error biblist.tex
-	biber biblist
-	pdflatex -halt-on-error biblist.tex
-	pdflatex -halt-on-error biblist.tex
+.PHONY: pdf
+pdf:
+	pdflatex -halt-on-error $(TEXNAME)
+	biber $(BASENAME)
+	pdflatex -halt-on-error $(TEXNAME)
+	pdflatex -halt-on-error $(TEXNAME)
 
-.PHONY: update
-update: 
-	pdflatex -halt-on-error -shell-escape $(FILE)
+.PHONY: html
+html:
+	htlatex $(TEXNAME) "xhtml_mathjax.cfg, charset=utf-8" " -cunihtf -utf8"
+	biber $(BASENAME)
+	htlatex $(TEXNAME) "xhtml_mathjax.cfg, charset=utf-8" " -cunihtf -utf8"
 
