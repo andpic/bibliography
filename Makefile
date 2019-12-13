@@ -1,11 +1,7 @@
 # LaTeX Makefile
 all: clean pdf 
 
-BASENAME=bibliography
-TEXNAME=$(BASENAME).tex
-BIBNAME=$(BASENAME).bib
-HTMLNAME=$(BASENAME).html
-MDNAME=$(BASENAME).md
+DOC_NAME=bibliography
 HTLATEX_SETTINGS="html,charset=utf-8" " -cunihtf -utf8"
 RM=rm -f
 
@@ -50,20 +46,20 @@ clean:
 
 .PHONY: pdf
 pdf:
-	pdflatex -halt-on-error $(TEXNAME)
-	biber $(BASENAME)
-	pdflatex -halt-on-error $(TEXNAME)
-	pdflatex -halt-on-error $(TEXNAME)
+	pdflatex -halt-on-error $(DOC_NAME).tex
+	biber $(DOC_NAME)
+	pdflatex -halt-on-error $(DOC_NAME).tex
+	pdflatex -halt-on-error $(DOC_NAME).tex
 
 .PHONY: html
 html:
-	htlatex $(BASENAME) $(HTLATEX_SETTINGS)
-	biber $(BASENAME)
-	htlatex $(BASENAME) $(HTLATEX_SETTINGS)
-	htlatex $(BASENAME) $(HTLATEX_SETTINGS)
+	htlatex $(DOC_NAME) $(HTLATEX_SETTINGS)
+	biber $(DOC_NAME)
+	htlatex $(DOC_NAME) $(HTLATEX_SETTINGS)
+	htlatex $(DOC_NAME) $(HTLATEX_SETTINGS)
 
 .PHONY: md
 md:
 	make html
-	pandoc $(HTMLNAME) -o $(MDNAME)
+	pandoc $(DOC_NAME).html -o $(DOC_NAME).md
 
