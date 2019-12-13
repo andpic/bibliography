@@ -6,7 +6,7 @@ TEXNAME=$(BASENAME).tex
 BIBNAME=$(BASENAME).bib
 HTMLNAME=$(BASENAME).html
 MDNAME=$(BASENAME).md
-
+HTLATEX_SETTINGS="html,charset=utf-8" " -cunihtf -utf8"
 RM=rm -f
 
 .PHONY: clean
@@ -36,7 +36,17 @@ clean:
 		*.run.xml \
 		*.toc \
 		*.out \
-		*.xdy
+		*.xdy \
+		*.4ct \
+		*.4tc \
+		*.css \
+		*.dvi \
+		*.html \
+		*.idv \
+		*.lg \
+		*.tmp \
+		*.xref \
+		*.png
 
 .PHONY: pdf
 pdf:
@@ -47,9 +57,10 @@ pdf:
 
 .PHONY: html
 html:
-	htlatex $(TEXNAME) "xhtml_mathjax.cfg, charset=utf-8" " -cunihtf -utf8"
+	htlatex $(BASENAME) $(HTLATEX_SETTINGS)
 	biber $(BASENAME)
-	htlatex $(TEXNAME) "xhtml_mathjax.cfg, charset=utf-8" " -cunihtf -utf8"
+	htlatex $(BASENAME) $(HTLATEX_SETTINGS)
+	htlatex $(BASENAME) $(HTLATEX_SETTINGS)
 
 .PHONY: md
 md:
