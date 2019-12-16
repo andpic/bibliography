@@ -7985,4 +7985,65 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   keywords  = {Program processors;Boosting;Energy consumption;Aging;Games;Benchmark testing;Hardware;Turbo Frequency;TLP Exploitation;Aging;Energy},
 }
 
+@Article{Curtis2019,
+  author      = {Curtis, Frank E. and Robinson, Daniel P. and Royer, Clément and Wright, Stephen J.},
+  title       = {Trust-Region {Newton-CG} with Strong Second-Order Complexity Guarantees for Nonconvex Optimization},
+  date        = {2019-12-09},
+  eprint      = {arXiv:1912.04365},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {Worst-case complexity guarantees for nonconvex optimization algorithms have been a topic of growing interest. Multiple frameworks that achieve the best known complexity bounds among a broad class of first- and second-order strategies have been proposed. These methods have often been designed primarily with complexity guarantees in mind and, as a result, represent a departure from the algorithms that have proved to be the most effective in practice. In this paper, we consider trust-region Newton methods, one of the most popular classes of algorithms for solving nonconvex optimization problems. By introducing slight modifications to the original scheme, we obtain two methods---one based on exact subproblem solves and one exploiting inexact subproblem solves as in the popular "trust-region Newton-Conjugate-Gradient" (Newton-CG) method---with iteration and operation complexity bounds that match the best known bounds for the aforementioned class of first- and second-order methods. The resulting Newton-CG method also retains the attractive practical behavior of classical trust-region Newton-CG, which we demonstrate with numerical comparisons on a standard benchmark test set.},
+  file        = {:http\://arxiv.org/pdf/1912.04365v1:PDF},
+  keywords    = {math.OC},
+}
+
+@Article{Dvurechensky2019,
+  author      = {Dvurechensky, Pavel and Gasnikov, Alexander and Ostroukhov, Petr and Uribe, César A. and Ivanova, Anastasiya},
+  title       = {Near-optimal tensor methods for minimizing the gradient norm of convex function},
+  date        = {2019-12-06},
+  eprint      = {arXiv: 1912.03381},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {Motivated by convex problems with linear constraints and, in particular, by entropy-regularized optimal transport, we consider the problem of finding $\varepsilon$-approximate stationary points, i.e. points with the norm of the objective gradient less than $\varepsilon$, of convex functions with Lipschitz $p$-th order derivatives. Lower complexity bounds for this problem were recently proposed in [Grapiglia and Nesterov, arXiv:1907.07053]. However, the methods presented in the same paper do not have optimal complexity bounds. We propose two optimal up to logarithmic factors methods with complexity bounds $\tilde{O}(\varepsilon^{-2(p+1)/(3p+1)})$ and $\tilde{O}(\varepsilon^{-2/(3p+1)})$ with respect to the initial objective residual and the distance between the starting point and solution respectively.},
+  file        = {:http\://arxiv.org/pdf/1912.03381v1:PDF},
+  keywords    = {math.OC},
+}
+
+@Article{Crowley2019,
+  author      = {Crowley, Colin and Rodriguez, Jose Israel and Weiker, Jacob and Zoromski, Jacob},
+  title       = {Regeneration graphs for polynomial system solving},
+  date        = {2019-12-09},
+  eprint      = {arXiv:1912.04394},
+  eprintclass = {math.AG},
+  eprinttype  = {arXiv},
+  abstract    = {Regeneration is a popular method for describing the solution set of a system of polynomial equations. In this paper we introduce regeneration graphs to solve polynomial systems. This translates the problem of solving a polynomial system to that of traversing a directed acyclic graph. Previous regeneration algorithms can be viewed in our context as breadth first traversal, and we formulate a depth first alternative which is useful in many applications because it quickly produces a subset of the solutions and is not ``all or nothing.''},
+  file        = {:http\://arxiv.org/pdf/1912.04394v1:PDF},
+  keywords    = {math.AG},
+}
+
+@Article{Ozaslan2019,
+  author      = {Ozaslan, Ibrahim Kurban and Pilanci, Mert and Arikan, Orhan},
+  title       = {Regularized Momentum Iterative Hessian Sketch for Large Scale Linear System of Equations},
+  date        = {2019-12-07},
+  eprint      = {arXiv:1912.03514},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {In this article, Momentum Iterative Hessian Sketch (M-IHS) techniques, a group of solvers for large scale linear Least Squares (LS) problems, are proposed and analyzed in detail. The proposed techniques are obtained by incorporating the Heavy Ball Acceleration into the Iterative Hessian Sketch algorithm and they provide significant improvements over the randomized preconditioning techniques. Through the error analyses of the M-IHS variants, lower bounds on the sketch size for various randomized distributions to converge at a pre-determined rate with a constant probability are established. The bounds present the best results in the current literature for obtaining a solution approximation and they suggest that the sketch size can be chosen proportional to the statistical dimension of the regularized problem regardless of the size of the coefficient matrix. The statistical dimension is always smaller than the rank and it gets smaller as the regularization parameter increases. By using approximate solvers along with the iterations, the M-IHS variants are capable of avoiding all matrix decompositions and inversions, which is one of the main advantages over the alternative solvers such as the Blendenpik and the LSRN. Similar to the Chebyshev Semi-iterations, the M-IHS variants do not use any inner products and eliminate the corresponding synchronizations steps in hierarchical or distributed memory systems, yet the M-IHS converges faster than the Chebyshev Semi-iteration based solvers.},
+  file        = {:http\://arxiv.org/pdf/1912.03514v1:PDF},
+  keywords    = {math.OC, cs.CC, 15B52, 65F08, 65F10, 65F22, 65F50, 68W20, 90C06},
+}
+
+@InProceedings{Barkalov,
+  author    = {Barkalov, Konstantin and Lebedev, Ilya},
+  title     = {Parallel Global Optimization for Non-convex Mixed-Integer Problems},
+  booktitle = {Proceedings of the 5th Russian Supercomputing Days Conference},
+  year      = {2019},
+  editor    = {Voevodin, Vladimir and Sobolev, Sergey},
+  series    = {RuSCDays'19},
+  publisher = {Springer International Publishing},
+  isbn      = {978-3-030-36592-9},
+  pages     = {98--109},
+  abstract  = {The paper considers the mixed-integer global optimization problems. A novel parallel algorithm for solving the problems of this class based on the index algorithm for solving the continuous global optimization problems has been proposed. The comparison of this algorithm with known analogs demonstrates the efficiency of the developed approach. The proposed algorithm allows an efficient parallelization including the employment of the graphics accelerators. The results of performed numerical experiments (solving a series of 100 multiextremal mixed-integer problems) confirm a good speedup of the algorithm with the use of GPU.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
