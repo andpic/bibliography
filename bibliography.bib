@@ -8307,4 +8307,40 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   abstract = {The Emu Chick prototype implements migratory memory-side processing in a novel hardware system. Rather than transferring large amounts of data across the system interconnect, the Emu Chick moves lightweight thread contexts to near-memory cores before the beginning of each remote memory read. Previous work has characterized the performance of the Chick prototype in terms of memory bandwidth and programming differences from more typical, non-migratory platforms, but there has not yet been an analysis of algorithms on this system.  This work evaluates irregular algorithms that could benefit from the lightweight, memory-side processing of the Chick and demonstrates techniques and optimization strategies for achieving performance in sparse matrix-vector multiply operation (SpMV), breadth-first search (BFS), and graph alignment across up to eight distributed nodes encompassing 64 nodelets in the Chick system. We also define and justify relative metrics to compare prototype FPGA-based hardware with established ASIC architectures. The Chick currently supports up to 68x scaling for graph alignment, 80 MTEPS for BFS on balanced graphs, and 50\% of measured STREAM bandwidth for SpMV.},
 }
 
+@Article{Song2019,
+  author      = {Lili Song and Luis Nunes Vicente},
+  title       = {Modeling Hessian-vector products in nonlinear optimization: New Hessian-free methods},
+  date        = {2019-12-22},
+  eprint      = {arXiv:1912.10523},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {In this paper, we suggest two ways of calculating interpolation models for unconstrained smooth nonlinear optimization when Hessian-vector products are available. The main idea is to interpolate the objective function using a quadratic on a set of points around the current one and concurrently using the curvature information from products of the Hessian times appropriate vectors, possibly defined by the interpolating points. These enriched interpolating conditions form then an affine space of model Hessians or model Newton directions, from which a particular one can be computed once an equilibrium or least secant principle is defined. A first approach consists of recovering the Hessian matrix satisfying the enriched interpolating conditions, from which then a Newton direction model can be computed. In a second approach we pose the recovery problem directly in the Newton direction. These techniques can lead to a significant reduction in the overall number of Hessian-vector products when compared to the inexact or truncated Newton method, although simple implementations may pay a cost in linear algebra or number of function evaluations.},
+  file        = {:http\://arxiv.org/pdf/1912.10523v1:PDF},
+  keywords    = {math.NA, cs.NA},
+}
+
+@Article{Lin2019a,
+  author      = {Lin Lin and Xiaojie Wu},
+  title       = {Numerical solution of large scale {Hartree-Fock-Bogoliubov} equations},
+  date        = {2019-12-21},
+  eprint      = {arXiv:1912.10157},
+  eprintclass = {physics.comp-ph},
+  eprinttype  = {arXiv},
+  abstract    = {The Hartree-Fock-Bogoliubov (HFB) theory is the starting point for treating superconducting systems. However, the computational cost for solving large scale HFB equations can be much larger than that of the Hartree-Fock equations, particularly when the Hamiltonian matrix is sparse, and the number of electrons $N$ is relatively small compared to the matrix size $N_{b}$. We first provide a concise and relatively self-contained review of the HFB theory for general finite sized quantum systems, with special focus on the treatment of spin symmetries from a linear algebra perspective. We then demonstrate that the pole expansion and selected inversion (PEXSI) method can be particularly well suited for solving large scale HFB equations. For a Hubbard-type Hamiltonian, the cost of PEXSI is at most $\Or(N_b^2)$ for both gapped and gapless systems, which can be significantly faster than the standard cubic scaling diagonalization methods. We show that PEXSI can solve a two-dimensional Hubbard-Hofstadter model with $N_b$ up to $2.88\times 10^6$, and the wall clock time is less than $100$ s using $17280$ CPU cores. This enables the simulation of physical systems under experimentally realizable magnetic fields, which cannot be otherwise simulated with smaller systems.},
+  file        = {:http\://arxiv.org/pdf/1912.10157v1:PDF},
+  keywords    = {physics.comp-ph, cs.NA, math.NA},
+}
+
+@Article{Majumdar2020,
+  author   = {Majumdar, Anirudha and Hall, Georgina and Ahmadi, Amir Ali},
+  title    = {Recent Scalability Improvements for Semidefinite Programming with Applications in Machine Learning, Control, and Robotics},
+  journal  = {Annual Review of Control, Robotics, and Autonomous Systems},
+  year     = {2020},
+  volume   = {3},
+  number   = {1},
+  doi      = {10.1146/annurev-control-091819-074326},
+  eprint   = {https://doi.org/10.1146/annurev-control-091819-074326},
+  abstract = {Historically, scalability has been a major challenge for the successful application of semidefinite programming in fields such as machine learning, control, and robotics. In this article, we survey recent approaches to this challenge, including those that exploit structure (e.g., sparsity and symmetry) in a problem, those that produce low-rank approximate solutions to semidefinite programs, those that use more scalable algorithms that rely on augmented Lagrangian techniques and the alternating-direction method of multipliers, and those that trade off scalability with conservatism (e.g., by approximating semidefinite programs with linear and second-order cone programs). For each class of approaches, we provide a high-level exposition, an entry point to the corresponding literature, and examples drawn from machine learning, control, or robotics. We also present a list of software packages that implement many of the techniques discussed in the review. Our hope is that this article will serve as a gateway to the rich and exciting literature on scalable semidefinite programming for both theorists and practitioners.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
