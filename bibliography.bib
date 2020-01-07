@@ -8405,7 +8405,7 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   number      = {19--57},
   abstract    = {Since the elimination algorithm of Fourier and Motzkin, many different methods have been developed for solving linear programs. When analyzing the time complexity of LP algorithms, it is typically either assumed that calculations are performed exactly and bounds are derived on the number of elementary arithmetic operations necessary, or the cost of all arithmetic operations is considered through a bit-complexity analysis. Yet in practice, implementations typically use limited-precision arithmetic. In this paper we introduce the idea of a limited-precision LP oracle and study how such an oracle could be used within a larger framework to compute exact precision solutions to LPs. Under mild assumptions, it is shown that a polynomial number of calls to such an oracle and a polynomial number of bit operations, is sufficient to compute an exact solution to an LP. This work provides a foundation for understanding and analyzing the behavior of the methods that are currently most effective in practice for solving LPs exactly.},
 }
-
+%%
 @Article{Fagnon2019,
   author      = {Vincent Fagnon and Imed Kacem and Giorgio Lucarelli and Bertrand Simon},
   title       = {Scheduling on Hybrid Platforms: Improved Approximability Window},
@@ -8460,7 +8460,7 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   eprint      = {arXiv:1912.12008},
   eprintclass = {cs.LG},
   eprinttype  = {arXiv},
-  abstract    = {Fast matrix algorithms have become the fundamental tools of machine learning in big data era. The generalized matrix regression problem is widely used in the matrix approximation such as CUR decomposition, kernel matrix approximation, and stream singular value decomposition (SVD), etc. In this paper, we propose a fast generalized matrix regression algorithm (Fast GMR) which utilizes sketching technique to solve the GMR problem efficiently. Given error parameter $0<\epsilon<1$, the Fast GMR algorithm can achieve a $(1+\epsilon)$ relative error with the sketching sizes being of order $\cO(\epsilon^{-1/2})$ for a large group of GMR problems. We apply the Fast GMR algorithm to the symmetric positive definite matrix approximation and single pass singular value decomposition and they achieve a better performance than conventional algorithms. Our empirical study also validates the effectiveness and efficiency of our proposed algorithms.},
+  abstract    = {Fast matrix algorithms have become the fundamental tools of machine learning in big data era. The generalized matrix regression problem is widely used in the matrix approximation such as CUR decomposition, kernel matrix approximation, and stream singular value decomposition (SVD), etc. In this paper, we propose a fast generalized matrix regression algorithm (Fast GMR) which utilizes sketching technique to solve the GMR problem efficiently. Given error parameter $0 < \epsilon < 1$, the Fast GMR algorithm can achieve a $O(1+\epsilon)$ relative error with the sketching sizes being of order $O(\epsilon^{-1/2})$ for a large group of GMR problems. We apply the Fast GMR algorithm to the symmetric positive definite matrix approximation and single pass singular value decomposition and they achieve a better performance than conventional algorithms. Our empirical study also validates the effectiveness and efficiency of our proposed algorithms.},
   file        = {:http\://arxiv.org/pdf/1912.12008v1:PDF},
   keywords    = {cs.LG, stat.ML},
 }
@@ -8479,13 +8479,13 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
 
 @Article{ValeroLara2020,
   author   = {Pedro Valero-Lara and Sandra Catalán and Xavier Martorell and Tetsuzo Usui and Jesús Labarta},
-  title    = {{sLASs}: A fully automatic auto-tuned linear algebra library based on OpenMP extensions implemented in OmpSs (LASs Library)},
+  title    = {{sLASs}: A fully automatic auto-tuned linear algebra library based on OpenMP extensions implemented in {OmpSs} (LASs Library)},
   journal  = {Journal of Parallel and Distributed Computing},
   year     = {2020},
   issn     = {0743-7315},
   doi      = {https://doi.org/10.1016/j.jpdc.2019.12.002},
   url      = {http://www.sciencedirect.com/science/article/pii/S0743731519303417},
-  abstract = {In this work we have implemented a novel Linear Algebra Library on top of the task-based runtime OmpSs-2. We have used some of the most advanced OmpSs-2 features; weak dependencies and regions, together with the final clause for the implementation of auto-tunable code for the BLAS-3 trsm routine and the LAPACK routines npgetrf and npgesv. All these implementations are part of the first prototype of sLASs library, a novel library for auto-tunable codes for linear algebra operations based on LASs library. In all these cases, the use of the OmpSs-2 features presents an improvement in terms of execution time against other reference libraries such as, the original LASs library, PLASMA, ATLAS and Intel MKL. These codes are able to reduce the execution time in about 18% on big matrices, by increasing the IPC on gemm and reducing the time of task instantiation. For a few medium matrices, benefits are also seen. For small matrices and a subset of medium matrices, specific optimizations that allow to increase the degree of parallelism in both, gemm and trsm tasks, are applied. This strategy achieves an increment in performance of up to 40\%.},
+  abstract = {In this work we have implemented a novel Linear Algebra Library on top of the task-based runtime OmpSs-2. We have used some of the most advanced OmpSs-2 features; weak dependencies and regions, together with the final clause for the implementation of auto-tunable code for the BLAS-3 trsm routine and the LAPACK routines npgetrf and npgesv. All these implementations are part of the first prototype of sLASs library, a novel library for auto-tunable codes for linear algebra operations based on LASs library. In all these cases, the use of the OmpSs-2 features presents an improvement in terms of execution time against other reference libraries such as, the original LASs library, PLASMA, ATLAS and Intel MKL. These codes are able to reduce the execution time in about 18\% on big matrices, by increasing the IPC on gemm and reducing the time of task instantiation. For a few medium matrices, benefits are also seen. For small matrices and a subset of medium matrices, specific optimizations that allow to increase the degree of parallelism in both, gemm and trsm tasks, are applied. This strategy achieves an increment in performance of up to 40\%.},
   keywords = {LASs, OmpSs, Linear algebra, Auto-tuning},
 }
 
