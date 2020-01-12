@@ -8497,4 +8497,96 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   abstract = {In this paper, we give a new penalized semidefinite programming approach for non-convex quadratically-constrained quadratic programs (QCQPs). We incorporate penalty terms into the objective of convex relaxations in order to retrieve feasible and near-optimal solutions for non-convex QCQPs. We introduce a generalized linear independence constraint qualification (GLICQ) criterion and prove that any GLICQ regular point that is sufficiently close to the feasible set can be used to construct an appropriate penalty term and recover a feasible solution. As a consequence, we describe a heuristic sequential procedure that preserves feasibility and aims to improve the  bjective value at each iteration. Numerical experiments on large-scale system identification problems as well as benchmark instances from the library of quadratic programming (QPLIB) demonstrate the ability of the proposed penalized semidefinite programs in finding near-optimal solutions for non-convex QCQP.},
 }
 
+@InProceedings{Ellis2019,
+  author    = {Marquita Ellis and Giulia Guidi and Aydın Buluç and Leonid Oliker and Katherine Yelick},
+  title     = {{diBELLA}: Distributed Long Read to Long Read Alignment},
+  booktitle = {Proceedings of the 48th International Conference on Parallel Processing},
+  year      = {2019},
+  series    = {ICPP 2019},
+  publisher = {{ACM} Press},
+  doi       = {10.1145/3337821.3337919},
+  abstract  = {We present a parallel algorithm and scalable implementation for genome analysis, specifically the problem of finding overlaps and alignments for data from “third generation” long read sequencers [29]. While long sequences of DNA offer enormous advantages for biological analysis and insight, current long read sequencing instruments have high error rates and therefore require different approaches to analysis than their short read counterparts. Our work focuses on an efficient distributed-memory parallelization of an accurate single-node algorithm for overlapping and aligning long reads. We achieve scalability of this irregular algorithm by addressing the competing issues of increasing parallelism, minimizing communication, constraining the memory footprint, and ensuring good load balance. The resulting application, diBELLA, is the first distributed memory overlapper and aligner specifically designed for long reads and parallel scalability. We describe and present analyses for high level design trade-offs and conduct an extensive empirical analysis that compares performance characteristics across state-of-the-art HPC systems as well as a commercial cloud architectures, highlighting the advantages of state-of-the-art network technologies.},
+}
+
+@Article{Allman2020,
+  author      = {Andrew Allman and Qi Zhang},
+  title       = {Branch-and-Price for a Class of Nonconvex Mixed-Integer Nonlinear Programs},
+  date        = {2020-01-06},
+  eprint      = {arXiv:2001.01794},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {This work attempts to combine the strengths of two major technologies that have matured over the last three decades: global mixed-integer nonlinear optimization and branch-and-price. We consider a class of generally nonconvex mixed-integer nonlinear programs (MINLPs) with linear complicating constraints and integer linking variables. If the complicating constraints are removed, the problem becomes easy to solve, e.g. due to decomposable structure. Integrality of the linking variables allows us to apply a discretization approach to derive a Dantzig-Wolfe reformulation and solve the problem to global optimality using branch-and-price. It is a remarkably simple idea; but to our surprise, it has barely found any application in the literature. In this work, we show that many relevant problems directly fall or can be reformulated into this class of MINLPs. We present the branch-and-price algorithm and demonstrate its effectiveness (and sometimes ineffectiveness) in an extensive computational study considering multiple large-scale problems of practical relevance, showing that, in many cases, orders-of-magnitude reductions in solution time can be achieved.},
+  file        = {:http\://arxiv.org/pdf/2001.01794v1:PDF},
+  keywords    = {math.OC},
+}
+
+@Article{Li2020,
+  author      = {Jiajia Li and Mahesh Lakshminarasimhan and Xiaolong Wu and Ang Li and Catherine Olschanowsky and Kevin Barker},
+  title       = {A Parallel Sparse Tensor Benchmark Suite on {CPUs} and {GPUs}},
+  date        = {2020-01-02},
+  eprint      = {arXiv:2001.00660},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {Tensor computations present significant performance challenges that impact a wide spectrum of applications ranging from machine learning, healthcare analytics, social network analysis, data mining to quantum chemistry and signal processing. Efforts to improve the performance of tensor computations include exploring data layout, execution scheduling, and parallelism in common tensor kernels. This work presents a benchmark suite for arbitrary-order sparse tensor kernels using state-of-the-art tensor formats: coordinate (COO) and hierarchical coordinate (HiCOO) on CPUs and GPUs. It presents a set of reference tensor kernel implementations that are compatible with real-world tensors and power law tensors extended from synthetic graph generation techniques. We also propose Roofline performance models for these kernels to provide insights of computer platforms from sparse tensor view.},
+  file        = {:http\://arxiv.org/pdf/2001.00660v1:PDF},
+  keywords    = {cs.DC, cs.PF},
+}
+
+@InProceedings{Kedward2020,
+  author    = {Laurence Kedward and Christian B. Allen and T. Rendall},
+  title     = {Comparing Matrix-based and Matrix-free Discrete Adjoint Approaches to the Euler Equations},
+  booktitle = {{AIAA} Scitech 2020 Forum},
+  year      = {2020},
+  publisher = {American Institute of Aeronautics and Astronautics},
+  month     = {jan},
+  doi       = {10.2514/6.2020-1294},
+  abstract  = {Detail is presented on the implementation of numerical derivatives with focus given to the discrete adjoint equations. Two approaches are considered: a hybrid matrix-based scheme where the convective Jacobian is constructed explicitly; and a matrix-free method using reverse-mode automatic differentiation. The hybrid matrix-based scheme exploits a compact convective stencil using graph colouring to evaluate the convective Jacobian terms in $O(10)$ residual evaluations. Jacobian terms, grouped by colours, are evaluated using the complex step tangent model; this approach requires no external libraries or tools, minimal code modification and provides derivatives accurate to machine precision. The remaining artificial dissipation terms are trivial to differentiate by hand where the sensor coefficients are held constant. The hybrid matrix-based methodology is validated and compared with the `traditional` matrix-free approach using reverse-mode automatic differentiation. The adjoint equations using both approaches are solved using the same fixed-point Runge-Kutta iteration accelerated by agglomeration multigrid. No loss in accuracy is seen between the matrix-based and the matrix-free methods when validated with the complex step tangent model. The hybrid matrix-based approach demonstrates a notable runtime performance advantage over the traditional matrix-free approach due to the prior calculation of Jacobian terms. Moreover, the convective Jacobian calculation takes less than $5\%$ of primal runtime due to the compact stencil used. A critical analysis of the results and methodology is consequently presented, focusing on the general applicability of the hybrid approach to more complex problems.},
+}
+
+@Article{Bergamaschi2020,
+  author      = {Luca Bergamaschi and Jose Marin and Angeles Martinez},
+  title       = {Compact Quasi-Newton preconditioners for {SPD} linear systems},
+  date        = {2020-01-04},
+  eprint      = {arXiv:2001.01062},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {In this paper preconditioners for the Conjugate Gradient method are studied to solve the Newton system with symmetric positive definite Jacobian. In particular, we define a sequence of preconditioners built by means of SR1 and BFGS low-rank updates. We develop conditions under which the SR1 update maintains the preconditioner SPD. Spectral analysis of the SR1 preconditioned Jacobians shows an improved eigenvalue distribution as the Newton iteration proceeds. A compact matrix formulation of the preconditioner update is developed which reduces the cost of its application and is more suitable for parallel implementation. Some notes on the implementation of the corresponding Inexact Newton method are given and numerical results on a number of model problems illustrate the efficiency of the proposed preconditioners.},
+  file        = {:http\://arxiv.org/pdf/2001.01062v1:PDF},
+  keywords    = {math.NA, cs.NA},
+}
+
+@Article{Morinigo2020,
+  author    = {José A. Moríñigo and Pablo Garcı́a-Muller and Antonio J. Rubio-Montero and Antonio Gómez-Iglesias and Norbert Meyer and Rafael Mayo-Garcı́a},
+  title     = {Performance drop at executing communication-intensive parallel algorithms},
+  journal   = {The Journal of Supercomputing},
+  year      = {2020},
+  month     = {jan},
+  doi       = {10.1007/s11227-019-03142-8},
+  abstract  = {This work summarizes the results of a set of executions completed on three fat-tree network supercomputers: Stampede at TACC (USA), Helios at IFERC (Japan) and Eagle at PSNC (Poland). Three MPI-based, communication-intensive scientific applications compiled for CPUs have been executed under weak-scaling tests: the molecular dynamics solver LAMMPS; the finite element-based mini-kernel miniFE of NERSC (USA); and the three-dimensional fast Fourier transform mini-kernel bigFFT of LLNL (USA). The design of the experiments focuses on the sensitivity of the applications to rather different patterns of task location, to assess the impact on the cluster performance. The accomplished weak-scaling tests stress the effect of the MPI-based application mappings (concentrated vs. distributed patterns of MPI tasks over the nodes) on the cluster. Results reveal that highly distributed task patterns may imply a much larger execution time in scale, when several hundreds or thousands of MPI tasks are involved in the experiments. Such a characterization serves users to carry out further, more efficient executions. Also researchers may use these experiments to improve their scalability simulators. In addition, these results are useful from the clusters administration standpoint since tasks mapping has an impact on the cluster throughput.},
+  publisher = {Springer Science and Business Media {LLC}},
+}
+
+@Article{Mukunoki2020,
+  author    = {Daichi Mukunoki and Takeshi Ogita},
+  title     = {Performance and energy consumption of accurate and mixed-precision linear algebra kernels on {GPUs}},
+  journal   = {Journal of Computational and Applied Mathematics},
+  year      = {2020},
+  month     = {jan},
+  pages     = {112701},
+  doi       = {10.1016/j.cam.2019.112701},
+  abstract  = {This paper presents the implementation, performance, and energy consumption of accurate and mixed-precision linear algebra kernels, including inner-product (DOT), dense matrix–vector multiplication (GEMV), dense matrix multiplication (GEMM), and sparse matrix–vector multiplication (SpMV) for the compressed sparse row (CSR) format (CSRMV), on graphics processing units (GPUs). We employ a mixed-precision design in our implementation, which makes it possible to perform internal floating-point operations with at least 2-fold the precision of the input and output data precision: for binary32 data, the computation is performed on binary64, and for binary64 data, the computation is performed on 2-fold the precision with an accurate inner product algorithm referred to as Dot2. We developed highly optimized implementations which can achieve performance close to the upper bound performance. From our evaluation on Titan V, a Volta architecture GPU, we made the following observations: as the Dot2 operation consumes 11 times binary64 instructions, GEMM requires the corresponding overheads (in terms of both execution time and energy consumption), compared to the standard binary64 implementation. On the other hand, the accuracy of DOT, GEMV, and CSRMV is improved with a very small overhead to the execution time and up to roughly 30\% overhead to the energy requirement.},
+  publisher = {Elsevier {BV}},
+}
+
+@InCollection{Anikin2020,
+  author    = {Anton Anikin and Yuriy Dorn and Yurii Nesterov},
+  title     = {Computational Methods for the Stable Dynamic Model},
+  booktitle = {Communications in Computer and Information Science},
+  year      = {2020},
+  publisher = {Springer International Publishing},
+  pages     = {280--294},
+  doi       = {10.1007/978-3-030-38603-0_21},
+  abstract  = {Traffic assignment problem is one of the central problems in transportation science. Various model assumptions lead to different setups corresponding to nonlinear optimization problems.\\ In this work, we focus on the stable dynamic model and its generalizations. We propose new equivalent representation for stable dynamic model [Nesterov and de Palma, 2003]. We use smoothing technique to derive new model, which can be interpreted as a stochastic equilibrium model.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
