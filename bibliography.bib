@@ -8589,4 +8589,60 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   abstract  = {Traffic assignment problem is one of the central problems in transportation science. Various model assumptions lead to different setups corresponding to nonlinear optimization problems.\\ In this work, we focus on the stable dynamic model and its generalizations. We propose new equivalent representation for stable dynamic model [Nesterov and de Palma, 2003]. We use smoothing technique to derive new model, which can be interpreted as a stochastic equilibrium model.},
 }
 
+@Article{Liers2020,
+  author   = {Frauke Liers and Alexander Martin and Maximilian Merkert and Nick Mertens Dennis Michaels},
+  title    = {Towards the Solution of Mixed-Integer Nonlinear Optimization Problems using Simultaneous Convexification},
+  year     = {2020},
+  abstract = {Solving mixed-integer nonlinear optimization problems (MINLPs) to global optimality is extremely challenging. An important step for enabling their solution consists in the design of convex relaxations of the feasible set. Known solution approaches based on spatial branch-and-bound become more effective the tighter the used relaxations are. Relaxations are commonly established by convex underestimators, where each constraint function is considered separately. Instead, a considerably tighter relaxation can be found via so-called simultaneous convexification, where convex underestimators are derived for more than one constraint at a time. In this work, we present a global solution approach for solving mixed-integer nonlinear problems that uses simultaneous convexification. We introduce a separation method for the convex hull of constrained sets. It relies on determining the convex envelope of linear combinations of the constraints and on solving a nonsmooth convex problem. In particular, we apply the method to quadratic absolute value functions and derive their convex envelopes. The practicality of the proposed solution approach is demonstrated on several test instances from gas network optimization, where the method outperforms standard approaches that use separate convex relaxations.},
+}
+
+@InProceedings{Laberge2020,
+  author    = {Laberge, G. and Shirzad, S. and Diehl, P. and Kaiser, H. and Prudhomme, S. and Lemoine, A. S.},
+  title     = {Scheduling Optimization of Parallel Linear Algebra Algorithms Using Supervised Learning},
+  booktitle = {Proceedings of the 2019 IEEE/ACM Workshop on Machine Learning in High Performance Computing Environments},
+  year      = {2019},
+  series    = {MLHPC '19},
+  month     = {11},
+  pages     = {31--43},
+  doi       = {10.1109/MLHPC49564.2019.00009},
+  abstract  = {Linear algebra algorithms are used widely in a variety of domains, e.g machine learning, numerical physics and video games graphics. For all these applications, loop-level parallelism is required to achieve high performance. However, finding the optimal way to schedule the workload between threads is a non-trivial problem because it depends on the structure of the algorithm being parallelized and the hardware the executable is run on. In the realm of Asynchronous Many Task runtime systems, a key aspect of the scheduling problem is predicting the proper chunk-size, where the chunk-size is defined as the number of iterations of a for-loop are assigned to a thread as one task. In this paper, we study the applications of supervised learning models to predict the chunk-size which yields maximum performance on multiple parallel linear algebra operations using the HPX backend of Blaze's linear algebra library. More precisely, we generate our training and tests sets by measuring performance of the application with different chunk-sizes for multiple linear algebra operations; vector-addition, matrix-vector-multiplication, matrix-matrix addition and matrix-matrix-multiplication. We compare the use of logistic regression, neural networks and decision trees with a newly developed decision tree based model in order to predict the optimal value for chunk-size. Our results show that classical decision trees and our custom decision tree model are able to forecast a chunk-size which results in good performance for the linear algebra operations.},
+}
+
+@Article{Iakymchuk2020,
+  author   = {Roman Iakymchuk and Maria Barreda and Stef Graillat and José Aliaga and Enrique Quintana-Ortí},
+  title    = {Reproducibility of Parallel Preconditioned Conjugate Gradient in Hybrid Programming Environments},
+  year     = {2020},
+  eprint   = {hal-02427795},
+  url      = {https://hal.archives-ouvertes.fr/hal-02427795},
+  abstract = {The Preconditioned Conjugate Gradient method is often employed for the solution of linear systems of equations arising in numerical simulations of physical phenomena. While being widely used, the solver is also known for its lack of accuracy while computing the residual. In this article, we propose two algorithmic solutions that originate from the ExBLAS project to enhance the accuracy of the solver as well as to ensure its reproducibility in a hybrid MPI + OpenMP tasks programming environment. One is based on ExBLAS and preserves every bit of information until the final rounding, while the other relies upon floating-point expansions and, hence, expands the intermediate precision. Instead of converting the entire solver into its ExBLAS-related implementation, we identify those parts that violate reproducibility/non-associativity, secure them, and combine this with the sequential executions. These algorithmic strategies are reinforced with programmability suggestions to assure deterministic executions. Finally, we verify these approaches on two modern HPC systems: both versions deliver reproducible number of iterations, residuals, direct errors, and vector-solutions for the overhead of less than 37.7 \% on 768 cores.},
+}
+
+@Article{Chou2020,
+  author      = {Stephen Chou and Fredrik Kjolstad and Saman Amarasinghe},
+  title       = {Automatic Generation of Efficient Sparse Tensor Format Conversion Routines},
+  date        = {2020-01-08},
+  eprint      = {arXiv:2001.02609},
+  eprintclass = {cs.MS},
+  eprinttype  = {arXiv},
+  abstract    = {This paper shows how to generate code that efficiently converts sparse tensors between disparate storage formats (data layouts) like CSR, DIA, ELL, and many others. We decompose sparse tensor conversion into three logical phases: coordinate remapping, analysis, and assembly. We then develop a language that precisely describes how different formats group together and order a tensor's nonzeros in memory. This enables a compiler to emit code that performs complex reorderings (remappings) of nonzeros when converting between formats. We additionally develop a query language that can extract complex statistics about sparse tensors, and we show how to emit efficient analysis code that computes such queries. Finally, we define an abstract interface that captures how data structures for storing a tensor can be efficiently assembled given specific statistics about the tensor. Disparate formats can implement this common interface, thus letting a compiler emit optimized sparse tensor conversion code for arbitrary combinations of a wide range of formats without hard-coding for any specific one. Our evaluation shows that our technique generates sparse tensor conversion routines with performance between 0.99 and 2.2$\times$ that of hand-optimized implementations in two widely used sparse linear algebra libraries, SPARSKIT and Intel MKL. By emitting code that avoids materializing temporaries, our technique also outperforms both libraries by between 1.4 and 3.4$\times$ for CSC/COO to DIA/ELL conversion.},
+  file        = {:http\://arxiv.org/pdf/2001.02609v1:PDF},
+  keywords    = {cs.MS, cs.PL},
+}
+
+@InProceedings{Antonakopoulos2020,
+  author    = {Kimon Antonakopoulos and E. Veronica Belmega and Panayotis Mertikopoulos},
+  title     = {Online and Stochastic Optimization beyond Lipschitz Continuity: A Riemannian Approach},
+  booktitle = {Proceedings of the 8th International Conference on Learning Representations},
+  year      = {2020},
+  series    = {ICLR 2020},
+  abstract  = {Motivated by applications to machine learning and imaging science, we study a class of online and stochastic optimization problems with loss functions that are not Lipschitz continuous; in particular, the loss functions encountered by the optimizer could exhibit gradient singularities or be singular themselves. Drawing on tools and techniques from Riemannian geometry, we examine a Riemann–Lipschitz (RL) continuity condition which is tailored to the singularity landscape of the problem’s loss functions. In this way, we are able to tackle cases beyond the Lipschitz framework provided by a global norm, and we derive optimal regret bounds and last iterate convergence results through the use of regularized learning methods (such as online mirror descent). These results are subsequently validated in a class of stochastic Poisson inverse problems that arise in imaging science.},
+}
+
+@Article{Attouch2020,
+  author   = {Hedy Attouch and Zaki Chbani and Hassan Riahi},
+  title    = {Fast Convex Optimization Via a Third-Order In Time Evolution Equation},
+  year     = {2020},
+  abstract = {In a Hilbert space H, we develop fast convex optimization methods, which are based on a third order in time evolution system. The function to minimize $f : \mathcal{H} \rightarrow \mathbb{R}$ is convex, continuously differentiable, with $\text{argmin} f \neq \emptyset$, and enters the dynamic via its gradient. On the basis of Lyapunov’s analysis and temporal scaling techniques, we show a convergence rate of the values of the order $\nicefrac{1}{t^3}$ , and obtain the convergence of the trajectories towards optimal solutions. When $f$ is strongly convex, an exponential rate of convergence is obtained. We complete the study of the continuous dynamic by introducing a damping term induced by the Hessian of $f$. This allows the oscillations to be controlled and attenuated. Then, we analyze the convergence of the proximal-based algorithms obtained by temporal discretization of this system, and obtain similar convergence rates. The algorithmic results are valid for a general convex, lower semicontinuous, and proper function $f : \mathcal{H} \rightarrow \mathbb{R} \cup \{ +\infty \}$.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
