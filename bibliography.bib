@@ -8645,4 +8645,89 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   abstract = {In a Hilbert space H, we develop fast convex optimization methods, which are based on a third order in time evolution system. The function to minimize $f : \mathcal{H} \rightarrow \mathbb{R}$ is convex, continuously differentiable, with $\text{argmin} f \neq \emptyset$, and enters the dynamic via its gradient. On the basis of Lyapunov’s analysis and temporal scaling techniques, we show a convergence rate of the values of the order $\nicefrac{1}{t^3}$ , and obtain the convergence of the trajectories towards optimal solutions. When $f$ is strongly convex, an exponential rate of convergence is obtained. We complete the study of the continuous dynamic by introducing a damping term induced by the Hessian of $f$. This allows the oscillations to be controlled and attenuated. Then, we analyze the convergence of the proximal-based algorithms obtained by temporal discretization of this system, and obtain similar convergence rates. The algorithmic results are valid for a general convex, lower semicontinuous, and proper function $f : \mathcal{H} \rightarrow \mathbb{R} \cup \{ +\infty \}$.},
 }
 
+@Article{Mo2020,
+  author    = {Tieqiang Mo and Renfa Li},
+  title     = {Iteratively solving sparse linear system based on {PaRSEC} task scheduling},
+  journal   = {The International Journal of High Performance Computing Applications},
+  year      = {2020},
+  month     = {1},
+  pages     = {109434201989999},
+  doi       = {10.1177/1094342019899997},
+  abstract  = {With the new architecture and new programming paradigms such as task-based scheduling emerging in the parallel high performance computing area, it is of great importance to utilize these features to tune the monolithic computing codes. In this article, the classical conjugate gradient algorithms targeting at sparse linear system $Ax = b$ in Krylov subspace are pipelining to execute interdependent tasks on Parallel Runtime Scheduling and Execution Controller (PaRSEC) runtime. Firstly, the sparse matrix $A$ is split in rows to unfold more coarse-grained parallelism. Secondly, the partitioned sub-vectors are not assembled into one full vector in RAM to run sparse matrix--vector product (SpMV) operations for eliminating the communication overhead. Moreover, in the SpMV computation, if all elements of one column in the split sub-matrix are zeros, the corresponding product operations of these elements may be removed by reorganizing sub-vectors. Finally, the latency of migrating sub-vector is partially overlapped by the duration of performing SpMV operations through the further splitting in columns of sparse matrix on GPUs. In experiments, a series of tests demonstrate that optimal speedup and higher pipelining efficiency has been achieved for the pipelined task scheduling on PaRSEC runtime. Fusing SpMV concurrency and dot product pipelining can achieve higher speedup and efficiency.},
+  publisher = {{SAGE} Publications},
+}
+
+@Article{Porcelli2020,
+  author      = {Margherita Porcelli and Philippe L. Toint},
+  title       = {Global and local information in structured derivative free optimization with {BFO}},
+  date        = {2020-01-14},
+  eprint      = {arXiv:2001.04801},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {A structured version of derivative-free random pattern search optimization algorithms is introduced which is able to exploit coordinate partially separable structure (typically associated with sparsity) often present in unconstrained and bound-constrained optimization problems. This technique improves performance by orders of magnitude and makes it possible to solve large problems that otherwise are totally intractable by other derivative-free methods. A library of interpolation-based modelling tools is also described, which can be associated to the structured or unstructured versions of the initial BFO pattern search algorithm. The use of the library further enhances performance, especially when associated with structure. The significant gains in performance associated with these two techniques are illustrated using a new freely-available release of BFO which incorporates them. A interesting conclusion of the results presented is that providing global structural information on a problem can result in significantly less evaluations of the objective function than attempting to building local Taylor-like models.},
+  file        = {:http\://arxiv.org/pdf/2001.04801v1:PDF},
+  keywords    = {math.OC, 65K05, 90C56, 90C90},
+}
+
+@Article{Bramas2020,
+  author    = {Bérenger Bramas and Alain Ketterlin},
+  title     = {Improving parallel executions by increasing task granularity in task-based runtime systems using acyclic {DAG} clustering},
+  journal   = {{PeerJ} Computer Science},
+  year      = {2020},
+  volume    = {6},
+  month     = {jan},
+  pages     = {e247},
+  doi       = {10.7717/peerj-cs.247},
+  abstract  = {The task-based approach is a parallelization paradigm in which an algorithm is transformed into a direct acyclic graph of tasks: the vertices are computational elements extracted from the original algorithm and the edges are dependencies between those. During the execution, the management of the dependencies adds an overhead that can become significant when the computational cost of the tasks is low. A possibility to reduce the makespan is to aggregate the tasks to make them heavier, while having fewer of them, with the objective of mitigating the importance of the overhead. In this paper, we study an existing clustering/partitioning strategy to speed up the parallel execution of a task-based application. We provide two additional heuristics to this algorithm and perform an in-depth study on a large graph set. In addition, we propose a new model to estimate the execution duration and use it to choose the proper granularity. We show that this strategy allows speeding up a real numerical application by a factor of 7 on a multi-core system.},
+  publisher = {{PeerJ}},
+}
+
+@Article{Chen2020,
+  author    = {Yongyong Chen and Shuqin Wang and Fangying Zheng and Yigang Cen},
+  title     = {Graph-regularized least squares regression for multi-view subspace clustering},
+  journal   = {Knowledge-Based Systems},
+  year      = {2020},
+  month     = {jan},
+  pages     = {105482},
+  doi       = {10.1016/j.knosys.2020.105482},
+  abstract  = {Many works have proven that the consistency and differences in multi-view subspace clustering make the clustering results better than the single-view clustering. Therefore, this paper studies the multi-view clustering problem, which aims to divide data points into several groups using multiple features. However, existing multi-view clustering methods fail to capturing the grouping effect and local geometrical structure of the multiple features. In order to solve these problems, this paper proposes a novel multi-view subspace clustering model called graph-regularized least squares regression (GLSR), which uses not only the least squares regression instead of the nuclear norm to generate grouping effect, but also the manifold constraint to preserve the local geometrical structure of multiple features. Specifically, the proposed GLSR method adopts the least squares regression to learn the globally consensus information shared by multiple views and the column-sparsity norm to measure the residual information. Under the alternating direction method of multipliers framework, an effective method is developed by iteratively update all variables. Numerical studies on eight real databases demonstrate the effectiveness and superior performance of the proposed GLSR over eleven state-of-the-art methods.},
+  publisher = {Elsevier {BV}},
+}
+
+@Article{Jakovetic2020,
+  author      = {Dusan Jakovetic and Natasa Krejic and Natasa Krklec Jerinkic and Greta Malaspina and Alessandra Micheletti},
+  title       = {Distributed Fixed Point Method for Solving Systems of Linear Algebraic Equations},
+  date        = {2020-01-12},
+  eprint      = {arXiv:2001.03968},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {We present a class of iterative fully distributed fixed point methods to solve a system of linear equations, such that each agent in the network holds one of the equations of the system. Under a generic directed, strongly connected network, we prove a convergence result analogous to the one for fixed point methods in the classical, centralized, framework: the proposed method converges to the solution of the system of linear equations at a linear rate. We further explicitly quantify the rate in terms of the linear system and the network parameters. Next, we show that the algorithm provably works under time-varying directed networks provided that the underlying graph is connected over bounded iteration intervals, and we establish a linear convergence rate for this setting as well. A set of numerical results is presented, demonstrating practical benefits of the method over existing alternatives.},
+  file        = {:http\://arxiv.org/pdf/2001.03968v1:PDF},
+  keywords    = {math.NA, cs.NA, math.OC},
+}
+
+@InProceedings{Cao2019,
+  author    = {Quinglei Cao and Yu Pei and Thomas Herauldt and Kadir Akbudak and Aleksandr Mikhalev and George Bosilca and Hatem Ltaief and David Keyes and Jack Dongarra},
+  title     = {Performance Analysis of Tile Low-Rank Cholesky Factorization Using {PaRSEC} Instrumentation Tools},
+  booktitle = {Proceedings of the 2019 {IEEE}/{ACM} International Workshop on Programming and Performance Visualization Tools},
+  year      = {2019},
+  series    = {ProTools '19},
+  publisher = {{IEEE}},
+  month     = {nov},
+  doi       = {10.1109/protools49597.2019.00009},
+  abstract  = {This paper highlights the necessary development of new instrumentation tools within the PaRSE task-based runtime system to leverage the performance of low-rank matrix computations. In particular, the tile low-rank (TLR) Cholesky factorization represents one of the most critical matrix operations toward solving challenging large-scale scientific applications. The challenge resides in the heterogeneous arithmetic intensity of the various computational kernels, which stresses PaRSE's dynamic engine when orchestrating the task executions at runtime. Such irregular workload imposes the deployment of new scheduling heuristics to privilege the critical path, while exposing task parallelism to maximize hardware occupancy. To measure the effectiveness of PaRSE's engine and its various scheduling strategies for tackling such workloads, it becomes paramount to implement adequate performance analysis and profiling tools tailored to fine-grained and heterogeneous task execution. This permits us not only to provide insights from PaRSE, but also to identify potential applications' performance bottlenecks. These instrumentation tools may actually foster synergism between applications and PaRSE developers for productivity as well as high-performance computing purposes. We demonstrate the benefits of these amenable tools, while assessing the performance of TLR Cholesky factorization from data distribution, communication-reducing and synchronization-reducing perspectives. This tool-assisted performance analysis results in three major contributions: a new hybrid data distribution, a new hierarchical TLR Cholesky algorithm, and a new performance model for tuning the tile size. The new TLR Cholesky factorization achieves an 8X performance speedup over existing implementations on massively parallel supercomputers, toward solving large-scale 3D climate and weather prediction applications.},
+}
+
+@Article{Chen2019,
+  author      = {Long Chen and Hao Luo},
+  title       = {First order optimization methods based on Hessian-driven Nesterov accelerated gradient flow},
+  date        = {2019-12-19},
+  eprint      = {arXiv:1912.09276},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {A novel dynamical inertial Newton system, which is called Hessian-driven Nesterov accelerated gradient (H-NAG) flow is proposed. Convergence of the continuous trajectory are established via tailored Lyapunov function, and new first-order accelerated optimization methods are proposed from ODE solvers. It is shown that (semi-)implicit schemes can always achieve linear rate and explicit schemes have the optimal(accelerated) rates for convex and strongly convex objectives. In particular, Nesterov's optimal method is recovered from an explicit scheme for our H-NAG flow. Furthermore, accelerated splitting algorithms for composite optimization problems are also developed.},
+  file        = {:http\://arxiv.org/pdf/1912.09276v2:PDF},
+  keywords    = {math.OC},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
