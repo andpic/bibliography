@@ -8945,4 +8945,103 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   publisher = {Elsevier {BV}},
 }
 
+@InProceedings{Goncalves2019,
+  author    = {Goncalves, M. and Lamb, I. and Brum, R. M. and Azambuja, J. R.},
+  title     = {Evaluating the Impact of Accuracy Relaxation in the Reliability of GPU Register Files},
+  booktitle = {Proceedings of the 26th IEEE International Conference on Electronics, Circuits and Systems},
+  year      = {2019},
+  series    = {ICECS '19},
+  month     = {Nov},
+  pages     = {205--208},
+  doi       = {10.1109/ICECS46596.2019.8964908},
+  abstract  = {Thanks to the high computing power, GPUs have joined application domains where reliability is a major concern. Faults on electronic components are mainly caused by energized particles, which may cause malfunction and make them result in incorrect output. Errors may be unacceptable for most applications but a small margin of error can be considered safe in some cases. This work uses an approximate computing perspective to analyze the influence of application accuracy relaxation in GPU register files reliability. We perform a fault injection campaign in a Kepler GPU to identify registers' vulnerability and the impact on resulting data. Results show increase in register file reliability in an average of 71.6\% for 1\% of application accuracy relaxation.},
+  issn      = {null},
+  keywords  = {Approximate computing;GPUs;radiation effects},
+}
+
+@Article{Berger2020,
+  author      = {Guillaume O. Berger and P. -A. Absil and Raphaël M. Jungers and Yurii Nesterov},
+  title       = {On the Quality of First-Order Approximation of Functions with Hölder Continuous Gradient},
+  date        = {2020-01-22},
+  eprint      = {arXiv:2001.07946},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {We show that Hölder continuity of the gradient is not only a sufficient condition, but also a necessary condition for the existence of a global upper bound on the error of the first-order Taylor approximation. We also relate this global upper bound to the Hölder constant of the gradient. This relation is expressed as an interval, depending on the Hölder constant, in which the error of the first-order Taylor approximation is guaranteed to be. We show that, for the Lipschitz continuous case, the interval cannot be reduced. An application to the norms of quadratic forms is proposed, which allows us to derive a novel characterization of Euclidean norms.},
+  file        = {:http\://arxiv.org/pdf/2001.07946v1:PDF},
+  keywords    = {math.OC, 68Q25, 90C30, 90C48},
+}
+
+@Article{Alimo2020,
+  author   = {Alimo, Ryan and Beyhaghi, Pooriya and Bewley, Thomas R.},
+  title    = {Delaunay-based derivative-free optimization via global surrogates. Part III: nonconvex constraints},
+  journal  = {Journal of Global Optimization},
+  year     = {2020},
+  month    = {1},
+  issn     = {1573-2916},
+  doi      = {10.1007/s10898-019-00854-2},
+  abstract = {This paper introduces a Delaunay-based derivative-free optimization algorithm, dubbed $\Delta- -DOGS(\Omega)$, for problems with both (a) a nonconvex, computationally expensive objective function $f(x)$, and (b) nonlinear, computationally expensive constraint functions $c_\mathcal{l}(x)$  which, taken together, define a nonconvex, possibly even disconnected feasible domain $\Omega$ which is assumed to lie within a known rectangular search domain   $\Omega_s$, everywhere within which the $f(x)$ and $c_\mathcal{l}(x)$ may be evaluated. Approximations of both the objective function $f(x)$ as well as the feasible domain $\Omega$ are developed and refined as the iterations proceed. The approach is practically limited to the problems with less than about ten adjustable parameters. The work is an extension of our original Delaunay-based optimization algorithm (see JOGO DOI: 10.1007/s10898-015-0384-2), and inherits many of the constructions and strengths of that algorithm, including: (1) a surrogate function $p(x)$ interpolating all existing function evaluations and summarizing their trends, (2) a synthetic, piecewise-quadratic uncertainty function $e(x)$ built on the framework of a Delaunay triangulation amongst existing datapoints, (3) a tunable balance between global exploration (large $K$) and local refinement (small $K$), (4) provable global convergence for a sufficiently large $K$, under the assumption that the objective and constraint functions are twice differentiable with bounded Hessians, (5) an Adaptive-K variant of the algorithm that efficiently tunes $K$ automatically based on a target value of the objective function, and (6) remarkably fast global convergence on a variety of benchmark problems.},
+  day      = {23},
+}
+
+@Article{Baayen2020,
+  author      = {Jorn Baayen and Jakub Marecek},
+  title       = {Mixed-Integer Path-Stable Optimisation, with Applications in Model-Predictive Control of Water Systems},
+  date        = {2020-01-22},
+  eprint      = {arXiv:2001.08121},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {Many systems exhibit a mixture of continuous and discrete dynamics. We consider a family of mixed-integer non-convex non-linear optimisation problems obtained in discretisations of optimal control of such systems. For this family, a branch-and-bound algorithm solves the discretised problem to global optimality. As an example, we consider water systems, where variations in flow and variations in water levels are continuous, while decisions related to fixed-speed pumps and whether gates that may be opened and closed are discrete. We show that the related optimal-control problems come from the family we introduce -- and implement deterministic solvers with global convergence guarantees.},
+  file        = {:http\://arxiv.org/pdf/2001.08121v1:PDF},
+  keywords    = {math.OC, cs.SY, eess.SY},
+}
+
+@Article{Ginsbach2020,
+  author      = {Philip Ginsbach and Bruce Collie and Michael F. P. O'Boyle},
+  title       = {Automatically Harnessing Sparse Acceleration},
+  date        = {2020-01-22},
+  doi         = {10.1145/3377555.3377893},
+  eprint      = {arXiv:2001.07938},
+  eprintclass = {cs.PF},
+  eprinttype  = {arXiv},
+  abstract    = {Sparse linear algebra is central to many scientific programs, yet compilers fail to optimize it well. High-performance libraries are available, but adoption costs are significant. Moreover, libraries tie programs into vendor-specific software and hardware ecosystems, creating non-portable code. In this paper, we develop a new approach based on our specification Language for implementers of Linear Algebra Computations (LiLAC). Rather than requiring the application developer to (re)write every program for a given library, the burden is shifted to a one-off description by the library implementer. The LiLAC-enabled compiler uses this to insert appropriate library routines without source code changes. LiLAC provides automatic data marshaling, maintaining state between calls and minimizing data transfers. Appropriate places for library insertion are detected in compiler intermediate representation, independent of source languages. We evaluated on large-scale scientific applications written in FORTRAN; standard C/C++ and FORTRAN benchmarks; and C++ graph analytics kernels. Across heterogeneous platforms, applications and data sets we show speedups of 1.1$\times$ to over 10$\times$ without user intervention.},
+  file        = {:http\://arxiv.org/pdf/2001.07938v1:PDF},
+  keywords    = {cs.PF, cs.MS},
+}
+
+@Article{Dong2020,
+  author      = {Jing Dong and Xin T. Tong},
+  title       = {Replica Exchange for Non-Convex Optimization},
+  date        = {2020-01-23},
+  eprint      = {arXiv:2001.08356},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {Gradient descent (GD) is known to converge quickly for convex objective functions, but it can be trapped at local minimums. On the other hand, Langevin dynamics (LD) can explore the state space and find global minimums, but in order to give accurate estimates, LD needs to run with small discretization stepsize and weak stochastic force, which in general slow down its convergence. This paper shows that these two algorithms can "collaborate" through a simple exchange mechanism, in which they swap their current positions if LD yields a lower objective function. This idea can be seen as the singular limit of the replica exchange technique from the sampling literature. We show that this new algorithm converges to the global minimum linearly with high probability, assuming the objective function is strongly convex in a neighborhood of the unique global minimum. By replacing gradients with stochastic gradients, and adding a proper threshold to the exchange mechanism, our algorithm can also be used in online settings. We further verify our theoretical results through some numerical experiments, and observe superior performance of the proposed algorithm over running GD or LD alone.},
+  file        = {:http\://arxiv.org/pdf/2001.08356v1:PDF},
+  keywords    = {math.OC, math.PR, stat.ML},
+}
+
+@Article{Bolte2020,
+  author      = {Jerome Bolte and Edouard Pauwels},
+  title       = {Curiosities and counterexamples in smooth convex optimization},
+  date        = {2020-01-22},
+  eprint      = {arXiv:2001.07999},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {Counterexamples to some old-standing optimization problems in the smooth convex coercive setting are provided. We show that block-coordinate, steepest descent with exact search or Bregman descent methods do not generally converge. Other failures of various desirable features are established: directional convergence of Cauchy's gradient curves, convergence of Newton's flow, finite length of Tikhonov path, convergence of central paths, or smooth Kurdyka-Lojasiewicz inequality. All examples are planar. These examples are based on general smooth convex interpolation results. Given a decreasing sequence of positively curved C k convex compact sets in the plane, we provide a level set interpolation of a C k smooth convex function where k $\ge$ 2 is arbitrary. If the intersection is reduced to one point our interpolant has positive definite Hessian, otherwise it is positive definite out of the solution set. Furthermore , given a sequence of decreasing polygons we provide an interpolant agreeing with the vertices and whose gradients coincide with prescribed normals.},
+  file        = {:http\://arxiv.org/pdf/2001.07999v1:PDF},
+  keywords    = {math.OC},
+}
+
+@Article{Mukhopadhyay2020,
+  author    = {Samrat Mukhopadhyay},
+  title     = {Stochastic Gradient Descent For Linear Systems With Sequential Matrix Entry Accumulation},
+  journal   = {Signal Processing},
+  year      = {2020},
+  month     = {1},
+  pages     = {107494},
+  doi       = {10.1016/j.sigpro.2020.107494},
+  abstract  = {Conventional stochastic iterative methods are often employed for solving linear systems of equations involving large matrix sizes using low memory footprint. However, their performances are often limited by the unavailability of all the matrix entries, which is often termed as the problem of missing data. Although Ma and Needell [1] has recently proposed a method, termed as mSGD, assuming a model for data missing that results in improved convergence, their result is also affected by constant large variance of the stochastic gradient. In this paper we propose a SGD type method termed as cumulative information SGD (CISGD) for solving a linear system with missing data with an additional provision to accumulate a very small number of matrix entries sequentially per iteration, termed as the sequential matrix entry accumulation (SEMEA) mechanism. CISGD uses the data collected by SEMEA mechanism along with the prior model for data missing mechanism of [1] to gradually reduce variance of the stochastic gradient. The convergence of the proposed CISGD is theoretically analyzed and some interesting implications of the result are investigated under a specific SEMEA mechanism. Finally, numerical experiments are performed along with simulations that corroborate the theoretical findings regarding the efficacy of the proposed CISGD method.},
+  publisher = {Elsevier {BV}},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
