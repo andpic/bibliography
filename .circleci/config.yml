@@ -9,7 +9,7 @@ jobs:
       - run:
           name: Create the PDF
           command: |
-            python compile.py bibliography.tex pdf
+            python compile.py pdf
             cp bibliography.pdf /tmp/
       - store_artifacts:
           path: /tmp/bibliography.pdf
