@@ -9044,4 +9044,40 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   publisher = {Elsevier {BV}},
 }
 
+@InCollection{Li2020a,
+  author    = {Ruipeng Li and Chaoyu Zhang},
+  title     = {Efficient Parallel Implementations of Sparse Triangular Solves for {GPU} Architectures},
+  booktitle = {Proceedings of the 2020 {SIAM} Conference on Parallel Processing for Scientific Computing},
+  year      = {2020},
+  publisher = {Society for Industrial and Applied Mathematics},
+  pages     = {106--117},
+  doi       = {10.1137/1.9781611976137.10},
+  abstract  = {The sparse triangular matrix solve (SpTrSV) is an important computation kernel that is demanded by a variety of numerical methods such as the Gauss-Seidel iterations. However, developing efficient parallel algorithms for SpTrSV that are suitable for GPUs remains a challenging task due to the inherently sequential nature in the solve. In this paper, we revisit this problem by reviewing several parallel algorithms based on different task scheduling and different sparse matrix storage schemes, proposing modifications to the existing methods that can greatly improve the performance, and describing the implementations in detail. Numerical results of Gauss-Seidel iterations with structured and unstructured matrices make evident the superiority of the proposed algorithms and implementations comparing with state-of-the-art methods in the literature.},
+  month     = {jan},
+}
+
+@InCollection{Loe2020,
+  author    = {Jennifer A. Loe and Heidi K. Thornquist and Erik G. Boman},
+  title     = {Polynomial Preconditioned {GMRES} in Trilinos: Practical Considerations for High-Performance Computing},
+  booktitle = {Proceedings of the 2020 {SIAM} Conference on Parallel Processing for Scientific Computing},
+  year      = {2020},
+  publisher = {Society for Industrial and Applied Mathematics},
+  pages     = {35--45},
+  doi       = {10.1137/1.9781611976137.4},
+  abstract  = {Polynomial preconditioners for GMRES and other Krylov solvers are well-known but are infrequently used in large-scale software libraries or applications. This may be due to stability problems or complicated algorithms. We implement the GMRES polynomial as a preconditioner in the software library Trilinos and demonstrate that it is stable and effective for parallel computing. Trade-offs when selecting a polynomial degree and combining with other preconditioners are analyzed. We also discuss communication-avoiding (CA) properties of the polynomial and relate these to current CA-GMRES methods.},
+  month     = {jan},
+}
+
+@Article{Stonyakin2020,
+  author      = {Fedor Stonyakin and Alexander Tyurin and Alexander Gasnikov and Pavel Dvurechensky and Artem Agafonov and Darina Dvinskikh and Dmitry Pasechnyuk and Sergei Artamonov and Victorya Piskunova},
+  title       = {Inexact Relative Smoothness and Strong Convexity for Optimization and Variational Inequalities by Inexact Model},
+  date        = {2020-01-23},
+  eprint      = {arXiv:2001.09013},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {In this paper we propose a general algorithmic framework for first-order methods in optimization in a broad sense, including minimization problems, saddle-point problems and variational inequalities. This framework allows to obtain many known methods as a special case, the list including accelerated gradient method, composite optimization methods, level-set methods, Bregman proximal methods. The idea of the framework is based on constructing an inexact model of the main problem component, i.e. objective function in optimization or operator in variational inequalities. Besides reproducing known results, our framework allows to construct new methods, which we illustrate by constructing a universal conditional gradient method and universal method for variational inequalities with composite structure. These method works for smooth and non-smooth problems with optimal complexity without a priori knowledge of the problem smoothness. As a particular case of our general framework, we introduce relative smoothness for operators and propose an algorithm for VIs with such operator. We also generalize our framework for relatively strongly convex objectives and strongly monotone variational inequalities. This paper is an extended and updated version of [arXiv:1902.00990]. In particular, we add an extension of relative strong convexity for optimization and variational inequalities.},
+  file        = {:http\://arxiv.org/pdf/2001.09013v1:PDF},
+  keywords    = {math.OC},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
