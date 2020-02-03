@@ -9,7 +9,7 @@ jobs:
       - run:
           name: Create the PDF
           command: |
-            bash .circleci/build_pdf.sh
+            python compile.py bibliography.tex pdf
             cp bibliography.pdf /tmp/
       - store_artifacts:
           path: /tmp/bibliography.pdf
