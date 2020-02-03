@@ -106,6 +106,7 @@ def _compile_html(tex_file_path):
 
 
 def main(tex_file_path, output_format):
+    tex_file_path = os.path.realpath(tex_file_path)
     if output_format == "pdf":
         success = _compile_pdf(tex_file_path)
     elif output_format == "html":
