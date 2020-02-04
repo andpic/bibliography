@@ -9216,21 +9216,6 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   keywords  = {Benchmark testing;Graphics processing units;Resilience;Instruction sets;Kernel;Matrix decomposition;reliability;high performance computing;soft errors;fault injection},
 }
 
-@InProceedings{Milroy2019,
-  author    = {Milroy, Daniel J. and Baker, Allison H. and Dennis, John M. and Gettelman, Andrew and Hammerling, Dorit M.},
-  title     = {Can We Use Mixed Precision in a Large Climate Code and Trust the Results?},
-  booktitle = {Proceedings ot the International Workshop on Software Correctness for HPC Applications},
-  year      = {2019},
-  language  = {English},
-  series    = {Correctness '19},
-  publisher = {Institute of Electrical and Electronics Engineers (IEEE)},
-  month     = {9},
-  abstract  = {Earth system models (ESMs) are computationally expensive and represent many complex processes on a wide range of scales from molecular to global. Certain ESM computations require high-precision while others, such as atmospheric microphysics (e.g., precipitation) which are approximated by bulk properties, should not. As such, atmospheric microphysics models are prime candidates for conversion to single-precision, which afford distinct computational and memory advantages over typical double-precision numbers. However, care must be taken as indiscriminate type casting to single precision can result in numerical instability and divergent output when applied naively. In this work we relate our experiences attempting to improve the performance of the Morrison-Gettelman microphysics package (MG2) in a popular ESM by modifying it to compute in single precision without sacrificing correctness. We find that modification of the entire MG2 package to compute with singleprecision floats achieves a respectable performance increase but does not appear to be correct in terms of maintaining consistency with double-precision MG2. On the other hand, narrowing the scope of our conversion to a couple expensive subprograms yields more satisfying results in terms of correctness but with negligible overall performance improvement. We evaluate correctness with both an objective statistical tool and traditional approaches more familiar to climate scientists. While we are still working toward our ultimate goal of improving the performance of MG2 without negatively affecting model output, we believe that our experiences may be helpful to other groups pursuing similar goals.},
-  address   = {United States},
-  day       = {25},
-  keywords  = {performance portability, productivity, mini-app, programming models},
-}
-
 @InProceedings{Fevotte2019,
   author    = {François Févotte and Bruno Lathuilière},
   title     = {Debugging and optimization of {HPC} programs with the {Verrou} tool},
@@ -9265,6 +9250,65 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   abstract    = {Test instability in a floating-point program occurs when the control flow of the program diverges from its ideal execution assuming real arithmetic. This phenomenon is caused by the presence of round-off errors that affect the evaluation of arithmetic expressions occurring in conditional statements. Unstable tests may lead to significant errors in safety-critical applications that depend on numerical computations. Writing programs that take into consideration test instability is a difficult task that requires expertise on finite precision computations and rounding errors. This paper presents a toolchain to automatically generate and verify a provably correct test-stable floating-point program from a functional specification in real arithmetic. The input is a real-valued program written in the Prototype Verification System (PVS) specification language and the output is a transformed floating-point C program annotated with ANSI/ISO C Specification Language (ACSL) contracts. These contracts relate the floating-point program to its functional specification in real arithmetic. The transformed program detects if unstable tests may occur and, in these cases, issues a warning and terminate. An approach that combines the Frama-C analyzer, the PRECiSA round-off error estimator, and PVS is proposed to automatically verify that the generated program code is correct in the sense that, if the program terminates without a warning, it follows the same computational path as its real-valued functional specification.},
   file        = {:http\://arxiv.org/pdf/2001.02981v1:PDF},
   keywords    = {cs.PL, cs.NA, math.NA},
+}
+
+@Article{Cartis2020,
+  author      = {Coralia Cartis and Nick Gould and Philippe L. Toint},
+  title       = {Strong Evaluation Complexity Bounds for Arbitrary-Order Optimization of Nonconvex Nonsmooth Composite Functions},
+  date        = {2020-01-29},
+  eprint      = {arXiv:2001.10802},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {We introduce the concept of strong high-order approximate minimizers for nonconvex optimization problems. These apply in both standard smooth and composite non-smooth settings, and additionally allow convex or inexpensive constraints. An adaptive regularization algorithm is then proposed to find such approximate minimizers. Under suitable Lipschitz continuity assumptions, whenever the feasible set is convex, it is shown that using a model of degree $p$, this algorithm will find a strong approximate q-th-order minimizer in at most ${\cal O}\left(\max_{1\leq j\leq q}\epsilon_j^{-(p+1)/(p-j+1)}\right)$ evaluations of the problem's functions and their derivatives, where $\epsilon_j$ is the $j$-th order accuracy tolerance; this bound applies when either $q=1$ or the problem is not composite with $q \leq 2$. For general non-composite problems, even when the feasible set is nonconvex, the bound becomes ${\cal O}\left(\max_{1\leq j\leq q}\epsilon_j^{-q(p+1)/p}\right)$ evaluations. If the problem is composite, and either $q > 1$ or the feasible set is not convex, the bound is then ${\cal O}\left(\max_{1\leq j\leq q}\epsilon_j^{-(q+1)}\right)$ evaluations. These results not only provide, to our knowledge, the first known bound for (unconstrained or inexpensively-constrained) composite problems for optimality orders exceeding one, but also give the first sharp bounds for high-order strong approximate $q$-th order minimizers of standard (unconstrained and inexpensively constrained) smooth problems, thereby complementing known results for weak minimizers.},
+  file        = {:http\://arxiv.org/pdf/2001.10802v1:PDF},
+  keywords    = {math.OC, 90C60, 90C46, 90C30, 90C26, 65K10, 49M37, F.2.1; G.1.6},
+}
+
+@Article{Bellavia2020,
+  author      = {Stefania Bellavia and Gianmarco Gurioli},
+  title       = {Complexity Analysis of a Stochastic Cubic Regularisation Method under Inexact Gradient Evaluations and Dynamic Hessian Accuracy},
+  date        = {2020-01-29},
+  eprint      = {arXiv:2001.10827},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {We here adapt an extended version of the adaptive cubic regularisation method with dynamic inexact Hessian information for nonconvex optimisation in [2] to the stochastic optimisation setting. While exact function evaluations are still considered, this novel variant inherits the innovative use of adaptive accuracy requirements for Hessian approximations introduced in [2] and additionally employs inexact computations of the gradient. Without restrictions on the variance of the errors, we assume that these approximations are available within a sufficiently large, but fixed, probability and we extend, in the spirit of [13], the deterministic analysis of the framework to its stochastic counterpart, showing that the expected number of iterations to reach a first-order stationary point matches the well known worst-case optimal complexity. This is, in fact, still given by $O(epsilon^(-3/2))$, with respect to the first-order epsilon tolerance.},
+  file        = {:http\://arxiv.org/pdf/2001.10827v1:PDF},
+  keywords    = {math.NA, cs.NA},
+}
+
+@Article{Feng2020,
+  author   = {Z. {Feng}},
+  title    = {{GRASS}: {GRAph} Spectral Sparsification Leveraging Scalable Spectral Perturbation Analysis},
+  journal  = {{IEEE} Transactions on Computer-Aided Design of Integrated Circuits and Systems},
+  year     = {2020},
+  pages    = {1-1},
+  issn     = {1937-4151},
+  doi      = {10.1109/TCAD.2020.2968543},
+  abstract = {Spectral graph sparsification aims to find ultra-sparse subgraphs whose Laplacian matrix can well approximate the original Laplacian eigenvalues and eigenvectors. In recent years, spectral sparsification techniques have been extensively studied for accelerating various numerical and graph-related applications. Prior nearly-linear-time spectral sparsification methods first extract low-stretch spanning tree from the original graph to form the backbone of the sparsifier, and then recover small portions of spectrally-critical off-tree edges to the spanning tree to significantly improve the approximation quality. However, it is not clear how many off-tree edges should be recovered for achieving a desired spectral similarity level within the sparsifier. Motivated by recent graph signal processing techniques, this paper proposes a similarity-aware spectral graph sparsification framework that leverages efficient spectral off-tree edge embedding and filtering schemes to construct spectral sparsifiers with guaranteed spectral similarity (relative condition number) level. An iterative graph densification scheme is also introduced to facilitate efficient and effective filtering of off-tree edges for highly ill-conditioned problems. The proposed method has been validated using various kinds of graphs obtained from public domain sparse matrix collections relevant to VLSI CAD, finite element analysis, as well as social and data networks frequently studied in many machine learning and data mining applications. For instance, a sparse SDD matrix with 40 million unknowns and 180 million nonzeros can be solved (1E-3 accuracy level) within two minutes using a single CPU core and about 6GB memory.},
+  keywords = {Spectral graph theory;iterative matrix solver;graph partitioning;circuit analysis;perturbation analysis.},
+}
+
+@Article{Kardos2020,
+  author      = {Juraj Kardos and Drosos Kourounis and Olaf Schenk},
+  title       = {Reduced-Space Interior Point Methods in Power Grid Problems},
+  date        = {2020-01-29},
+  eprint      = {arXiv:2001.10815},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {Due to critical environmental issues, the power systems have to accommodate a significant level of penetration of renewable generation which requires smart approaches to the power grid control. Associated optimal control problems are large-scale nonlinear optimization problems with up to hundreds of millions of variables and constraints. The interior point methods become computationally intractable, mainly due to the solution of large linear systems. This document addresses the computational bottlenecks of the interior point method during the solution of the security constrained optimal power flow problems by applying reduced space quasi-Newton IPM, which could utilize high-performance computers due to the inherent parallelism in the adjoint method. Reduced space IPM approach and the adjoint method is a novel approach when it comes to solving the (security constrained) optimal power flow problems. These were previously used in the PDE-constrained optimization. The presented methodology is suitable for high-performance architectures due to inherent parallelism in the adjoint method during the gradient evaluation, since the individual contingency scenarios are modeled by independent set of the constraints. Preliminary evaluation of the performance and convergence is performed to study the reduced space approach.},
+  file        = {:http\://arxiv.org/pdf/2001.10815v1:PDF},
+  keywords    = {math.OC, cs.CE, cs.DC},
+}
+
+@Article{Sun2020,
+  author   = {J. {Sun} and G. {Sun} and S. {Zhan} and J. {Zhang} and Y. {Chen}},
+  title    = {Automated Performance Modeling of {HPC} Applications Using Machine Learning},
+  journal  = {{IEEE} Transactions on Computers},
+  year     = {2020},
+  issn     = {2326-3814},
+  doi      = {10.1109/TC.2020.2964767},
+  abstract = {Automated performance modeling and performance prediction of parallel programs are highly valuable in many use cases, such as in guiding task management and job scheduling, offering insights of application behaviors, and assisting resource requirement estimation. The performance of parallel programs is affected by numerous factors, including but not limited to hardware, applications, algorithms, and input parameters, thus an accurate performance prediction is often a challenging task. In this study, we focus on automatically predicting the execution time of parallel programs with different inputs, at different scale, and without domain knowledge. We model the correlation between the execution time and domain-independent runtime features. These features include values of variables, counters of branches, loops, and MPI communications. After collecting data from executions with different inputs, a random forest machine learning approach is used to build an empirical performance model, which can predict the execution time of the program given an input. An instance-transfer learning method is used to reuse an existing model and improve the prediction on a new platform that lacks historical execution data. Our experiments and analyses of three parallel applications on three different systems confirm that our method performs well, with less than $20\%$ prediction error on average.},
+  keywords = {Parallel computing;performance modeling;machine learning;model transferring},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
