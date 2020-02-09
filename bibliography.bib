@@ -9340,4 +9340,69 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   abstract  = {We investigate the use of coverage-guided fuzzing as a means of proving satisfiability of SMT formulas over finite variable domains, with specific application to floating-point constraints. We show how an SMT formula can be encoded as a program containing a location that is reachable if and only if the program's input corresponds to a satisfying assignment to the formula. A coverage-guided fuzzer can then be used to search for an input that reaches the location, yielding a satisfying assignment. We have implemented this idea in a tool, Just Fuzz-it Solver (JFS), and we present a large experimental evaluation showing that JFS is both competitive with and complementary to state-of-the-art SMT solvers with respect to solving floating-point constraints, and that the coverage-guided approach of JFS provides significant benefit over naive fuzzing in the floating-point domain. Applied in a portfolio manner, the JFS approach thus has the potential to complement traditional SMT solvers for program analysis tasks that involve reasoning about floating-point constraints.},
 }
 
+@Article{Brust2020,
+  author   = {J. J. Brust and S. Leyffer, and and C. G. Petra},
+  title    = {Compact Representations of Structured {BFGS} Matrices},
+  year     = {2020},
+  eprint   = {ANL/MCS-P9279-0120},
+  abstract = {For general large-scale optimization problems compact representations exist in which recursive quasi-Newton update formulas are represented as compact matrix factorizations. For problems in which the objective function contains additional structure, so-called structured quasiNewton methods exploit available second-derivative information and approximate unavailable second derivatives. This article develops the compact representations of two structured Broyden-FletcherGoldfarb-Shanno update formulas. The compact representations enable efficient limited memory and initialization strategies. Two limited memory line search algorithms are described and tested on a collection of problems.},
+}
+
+@Article{Kamzolov2020,
+  author      = {Dmitry Kamzolov and Alexander Gasnikov and Pavel Dvurechensky},
+  title       = {On the Optimal Combination of Tensor Optimization Methods},
+  date        = {2020-02-03},
+  eprint      = {arXiv:2002.01004},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {We consider the minimization problem of a sum of a number of functions having Lipshitz $p$-th order derivatives with different Lipschitz constants. In this case, to accelerate optimization, we propose a general framework allowing to obtain near-optimal oracle complexity for each function in the sum separately, meaning, in particular, that the oracle for a function with lower Lipschitz constant is called a smaller number of times. As a building block, we extend the current theory of tensor methods and show how to generalize near-optimal tensor methods to work with inexact tensor step. Further, we investigate the situation when the functions in the sum have Lipschitz derivatives of a different order. For this situation, we propose a generic way to separate the oracle complexity between the parts of the sum. Our method is not optimal, which leads to an open problem of the optimal combination of oracles of a different order.},
+  file        = {:http\://arxiv.org/pdf/2002.01004v1:PDF},
+  keywords    = {math.OC},
+}
+
+@Article{Zheng2020,
+  author      = {Qingqing Zheng and Yuanzhe Xi and Yousef Saad},
+  title       = {A power Schur complement Low-Rank correction preconditioner for general sparse linear systems},
+  date        = {2020-02-03},
+  eprint      = {arXiv:2002.00917},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {An effective power based parallel preconditioner is proposed for general large sparse linear systems. The preconditioner combines a power series expansion method with some low-rank correction techniques, where the Sherman-Morrison-Woodbury formula is utilized. A matrix splitting of the Schur complement is proposed to expand the power series. The number of terms used in the power series expansion can control the approximation accuracy of the preconditioner to the inverse of the Schur complement. To construct the preconditioner, graph partitioning is invoked to reorder the original coefficient matrix, leading to a special block two-by-two matrix whose two off-diagonal submatrices are block diagonal. Variables corresponding to interface variables are obtained by solving a linear system with the coeffcient matrix being the Schur complement. For the variables related to the interior variables, one only needs to solve a block diagonal linear system. This can be performed efficiently in parallel. Various numerical examples are provided to illustrate that the efficiency of the proposed preconditioner.},
+  file        = {:http\://arxiv.org/pdf/2002.00917v1:PDF},
+  keywords    = {math.NA, cs.NA},
+}
+
+@Article{Martinsson2020,
+  author      = {Per-Gunnar Martinsson and Joel Tropp},
+  title       = {Randomized Numerical Linear Algebra: Foundations \& Algorithms},
+  date        = {2020-02-04},
+  eprint      = {arXiv:2002.01387},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {This survey describes probabilistic algorithms for linear algebra computations, such as factorizing matrices and solving linear systems. It focuses on techniques that have a proven track record for real-world problem instances. The paper treats both the theoretical foundations of the subject and the practical computational issues.\\ Topics covered include norm estimation; matrix approximation by sampling; structured and unstructured random embeddings; linear regression problems; low-rank approximation; subspace iteration and Krylov methods; error estimation and adaptivity; interpolatory and CUR factorizations; Nyström approximation of positive-semidefinite matrices; single view ("streaming") algorithms; full rank-revealing factorizations; solvers for linear systems; and approximation of kernel matrices that arise in machine learning and in scientific computing.},
+  file        = {:http\://arxiv.org/pdf/2002.01387v1:PDF},
+  keywords    = {math.NA, cs.NA},
+}
+
+@Article{Rodomanov2020,
+  author      = {Anton Rodomanov and Yurii Nesterov},
+  title       = {Greedy Quasi-Newton Methods with Explicit Superlinear Convergence},
+  date        = {2020-02-03},
+  eprint      = {arXiv:2002.00657},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {In this paper, we study greedy variants of quasi-Newton methods. They are based on the updating formulas from a certain subclass of the Broyden family. In particular, this subclass includes the well-known DFP, BFGS and SR1 updates. However, in contrast to the classical quasi-Newton methods, which use the difference of successive iterates for updating the Hessian approximations, our methods apply basis vectors, greedily selected so as to maximize a certain measure of progress. For greedy quasi-Newton methods, we establish an explicit non-asymptotic bound on their rate of local superlinear convergence, which contains a contraction factor, depending on the square of the iteration counter. We also show that these methods produce Hessian approximations whose deviation from the exact Hessians linearly convergences to zero.},
+  file        = {:http\://arxiv.org/pdf/2002.00657v1:PDF},
+  keywords    = {math.OC},
+}
+
+@PhdThesis{Huang2019,
+  author      = {Ruihao Huang},
+  title       = {Novel COmputational Methods for Eigenvalue Problems},
+  institution = {Michigan Technological University},
+  year        = {2019},
+  url         = {https://digitalcommons.mtu.edu/cgi/viewcontent.cgi?article=2090&context=etdr},
+  abstract    = {This dissertation focuses on novel computational method for eigenvalue problems. In Chapter 1, preliminaries of functional analysis related to eigenvalue problems are presented. Some classical methods for matrix eigenvalue problems are discussed. Several PDE eigenvalue problems are covered. The chapter is concluded with a summary of the contributions. In Chapter 2, a novel recursive contour integral method (RIM) for matrix eigenvalue problem is proposed. This method can effectively find all eigenvalues in a region on the complex plane with no a priori spectrum information. Regions that contain eigenvalues are subdivided and tested recursively until the size of region reaches specified precision. The method is robust, which is demonstrated using various examples. In Chapter 3, we propose an improved version of RIM for non-Hermitian eigenvalue problems, called SIM-M. By incorporating Cayley transformation and Arnoldi’s method, the main computation cost of solving linear systems is reduced significantly. The numerical experiments demonstrate that RIM-M gains significant speed-up over RIM.\\ In Chapter 4, we propose a multilevel spectral indicator method (SIM-M) to address the memory requirement for large sparse matrices. We modify the indicator of RIM-M such that it requires much less memory. Matrices from University of Florida Sparse Matrix Collection are tested, suggesting that a parallel version of SIM-M has the potential to be efficient.\\ In Chapter 5, we develop a novel method to solve the elliptic PDE eigenvalue problem. We construct a multi-wavelet basis with Riesz stability in H1 0 ($\Omega$). By incorporating multi-grid discretization scheme and sparse grids, the method retains the optimal convergence rate for the smallest eigenvalue with much less computational cost.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
