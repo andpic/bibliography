@@ -9405,4 +9405,91 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   abstract    = {This dissertation focuses on novel computational method for eigenvalue problems. In Chapter 1, preliminaries of functional analysis related to eigenvalue problems are presented. Some classical methods for matrix eigenvalue problems are discussed. Several PDE eigenvalue problems are covered. The chapter is concluded with a summary of the contributions. In Chapter 2, a novel recursive contour integral method (RIM) for matrix eigenvalue problem is proposed. This method can effectively find all eigenvalues in a region on the complex plane with no a priori spectrum information. Regions that contain eigenvalues are subdivided and tested recursively until the size of region reaches specified precision. The method is robust, which is demonstrated using various examples. In Chapter 3, we propose an improved version of RIM for non-Hermitian eigenvalue problems, called SIM-M. By incorporating Cayley transformation and Arnoldi’s method, the main computation cost of solving linear systems is reduced significantly. The numerical experiments demonstrate that RIM-M gains significant speed-up over RIM.\\ In Chapter 4, we propose a multilevel spectral indicator method (SIM-M) to address the memory requirement for large sparse matrices. We modify the indicator of RIM-M such that it requires much less memory. Matrices from University of Florida Sparse Matrix Collection are tested, suggesting that a parallel version of SIM-M has the potential to be efficient.\\ In Chapter 5, we develop a novel method to solve the elliptic PDE eigenvalue problem. We construct a multi-wavelet basis with Riesz stability in H1 0 ($\Omega$). By incorporating multi-grid discretization scheme and sparse grids, the method retains the optimal convergence rate for the smallest eigenvalue with much less computational cost.},
 }
 
+@Article{Lin2020,
+  author      = {Tianyi Lin and Chi Jin and Michael. I. Jordan},
+  title       = {Near-Optimal Algorithms for Minimax Optimization},
+  date        = {2020-02-05},
+  eprint      = {arXiv:2002.02417},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {This paper resolves a longstanding open question pertaining to the design of near-optimal first-order algorithms for smooth and strongly-convex-strongly-concave minimax problems. Current state-of-the-art first-order algorithms find an approximate Nash equilibrium using $\tilde{O}(\kappa_{\mathbf x}+\kappa_{\mathbf y})$ or $\tilde{O}(\min\{\kappa_{\mathbf x}\sqrt{\kappa_{\mathbf y}}, \sqrt{\kappa_{\mathbf x}}\kappa_{\mathbf y}\})$ gradient evaluations, where $\kappa_{\mathbf x}$ and $\kappa_{\mathbf y}$ are the condition numbers for the strong-convexity and strong-concavity assumptions. A gap remains between these results and the best existing lower bound $\tilde{\Omega}(\sqrt{\kappa_{\mathbf x}\kappa_{\mathbf y}})$. This paper presents the first algorithm with $\tilde{O}(\sqrt{\kappa_{\mathbf x}\kappa_{\mathbf y}})$ gradient complexity, matching the lower bound up to logarithmic factors. Our new algorithm is designed based on an accelerated proximal point method and an accelerated solver for minimax proximal steps. It can be easily extended to the settings of strongly-convex-concave, convex-concave, nonconvex-strongly-concave, and nonconvex-concave functions. This paper also presents algorithms that match or outperform all existing methods in these settings in terms of gradient complexity, up to logarithmic factors.},
+  file        = {:http\://arxiv.org/pdf/2002.02417v1:PDF},
+  keywords    = {math.OC, cs.LG, stat.ML},
+}
+
+@Article{Rahimian2020,
+  author   = {Hamed Rahimian and Sanjay Mehrotra},
+  title    = {Sequential Convexification of a Bilinear Set},
+  url      = {http://www.optimization-online.org/DB_FILE/2020/01/7595.pdf},
+  abstract = {We present a sequential convexification procedure to derive, in the limit, a set arbitrary close to the convex hull of $\epsilon$-feasible solutions to a general nonconvex continuous bilinear set. Recognizing that bilinear terms can be represented with a finite number nonlinear nonconvex constraints in the lifted matrix space, our procedure performs a sequential convexification with respect to all nonlinear nonconvex constraints. Moreover, our approach relies on generating liftand-project cuts using simple 0-1 disjunctions, where cuts are generated at all fractional extreme point solutions of the current relaxation. An implication of our convexification procedure is that the constraints describing the convex hull can be used in a cutting plane algorithm to solve a linear optimization problem over the bilinear set to $\epsilon$-optimality},
+}
+
+@InProceedings{BenKhalifa2019,
+  author    = {Dorra Ben Khalifa and Matthieu Martel and Assalé Adjé},
+  title     = {{POP:} A Tuning Assistant for Mixed-Precision Floating-Point Computations},
+  booktitle = {Proceedings of the 7th International Workshop on Formal Techniques for Safety-Critical Systems},
+  year      = {2019},
+  series    = {FTSCS '19},
+  abstract  = {In this article, we describe a static program analysis to determine the lowest floating-point precisions on inputs and intermediate results that guarantees a desired accuracy of the output values. A common practice used by developers without advanced training in computer arithmetic consists in using the highest precision available in hardware (double precision on most CPU's) which can be exorbitant in terms of energy consumption, memory traffic, and bandwidth capacity. To overcome this difficulty, we propose a new precision tuning tool for the floatingpoint programs integrating a static forward and backward analysis, done by abstract interpretation. Next, our analysis will be expressed as a set of linear constraints easily checked by an SMT solver.},
+}
+
+@Article{Solomonik2020,
+  author    = {Edgar Solomonik and James Demmel},
+  title     = {Fast Bilinear Algorithms for Symmetric Tensor Contractions},
+  journal   = {Computational Methods in Applied Mathematics},
+  year      = {2020},
+  month     = {2},
+  doi       = {10.1515/cmam-2019-0075},
+  abstract  = {In matrix-vector multiplication, matrix symmetry does not permit a straightforward reduction in computational cost. More generally, in contractions of symmetric tensors, the symmetries are not preserved in the usual algebraic form of contraction algorithms. We introduce an algorithm that reduces the bilinear complexity (number of computed elementwise products) for most types of symmetric tensor contractions. In particular, it lowers the bilinear complexity of symmetrized contractions of symmetric tensors of order $s+v$ and $v+t$ by a factor of $\frac{(s+t+v)!}{s!t!v!}$ to leading order. The algorithm computes a symmetric tensor of bilinear products, then subtracts unwanted parts of its partial sums. Special cases of this algorithm provide improvements to the bilinear complexity of the multiplication of a symmetric matrix and a vector, the symmetrized vector outer product, and the symmetrized product of symmetric matrices. While the algorithm requires more additions for each elementwise product, the total number of operations is in some cases less than classical algorithms, for tensors of any size. We provide a round-off error analysis of the algorithm and demonstrate that the error is not too large in practice. Finally, we provide an optimized implementation for one variant of the symmetry-preserving algorithm, which achieves speedups of up to 4.58$\times$ for a particular tensor contraction, relative to a classical approach that casts the problem as a matrix-matrix multiplication.},
+  publisher = {Walter de Gruyter {GmbH}},
+}
+
+@Article{Guettel2020,
+  author      = {Stefan Güttel and Daniel Kressner and Kathryn Lund},
+  title       = {Limited-memory polynomial methods for large-scale matrix functions},
+  date        = {2020-02-05},
+  eprint      = {arXiv:2002.01682},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {Matrix functions are a central topic of linear algebra, and problems requiring their numerical approximation appear increasingly often in scientific computing. We review various limited-memory methods for the approximation of the action of a large-scale matrix function on a vector. Emphasis is put on polynomial methods, whose memory requirements are known or prescribed a priori. Methods based on explicit polynomial approximation or interpolation, as well as restarted Arnoldi methods, are treated in detail. An overview of existing software is also given, as well as a discussion of challenging open problems.},
+  file        = {:http\://arxiv.org/pdf/2002.01682v2:PDF},
+  keywords    = {math.NA, cs.NA},
+}
+
+@Article{Bauch2020,
+  author      = {Jonathan Bauch and Boaz Nadler},
+  title       = {Rank $2r$ iterative least squares: efficient recovery of ill-conditioned low rank matrices from few entries},
+  date        = {2020-02-05},
+  eprint      = {arXiv:2002.01849},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {We present a new, simple and computationally efficient iterative method for low rank matrix completion. Our method is inspired by the class of factorization-type iterative algorithms, but substantially differs from them in the way the problem is cast. Precisely, given a target rank $r$, instead of optimizing on the manifold of rank $r$ matrices, we allow our interim estimated matrix to have a specific over-parametrized rank $2r$ structure. Our algorithm, denoted \texttt{R2RILS}, for rank $2r$ iterative least squares, thus has low memory requirements, and at each iteration it solves a computationally cheap sparse least-squares problem. We motivate our algorithm by its theoretical analysis for the simplified case of a rank-1 matrix. Empirically, \texttt{R2RILS} is able to recover, with machine precision, ill conditioned low rank matrices from very few observations -- near the information limit. Finally, \texttt{R2RILS} is stable to corruption of the observed entries by additive zero mean Gaussian noise.},
+  file        = {:http\://arxiv.org/pdf/2002.01849v1:PDF},
+  keywords    = {math.OC},
+}
+
+@Article{Kressner2020,
+  author      = {Daniel Kressner and Kathryn Lund and Stefano Massei and Davide Palitta},
+  title       = {Compress-and-restart block Krylov subspace methods for Sylvester matrix equations},
+  date        = {2020-02-04},
+  eprint      = {arXiv:2002.01506},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {Block Krylov subspace methods (KSMs) comprise building blocks in many state-of-the-art solvers for large-scale matrix equations as they arise, e.g., from the discretization of partial differential equations. While extended and rational block Krylov subspace methods provide a major reduction in iteration counts over polynomial block KSMs, they also require reliable solvers for the coefficient matrices, and these solvers are often iterative methods themselves. It is not hard to devise scenarios in which the available memory, and consequently the dimension of the Krylov subspace, is limited. In such scenarios for linear systems and eigenvalue problems, restarting is a well explored technique for mitigating memory constraints. In this work, such restarting techniques are applied to polynomial KSMs for matrix equations with a compression step to control the growing rank of the residual. An error analysis is also performed, leading to heuristics for dynamically adjusting the basis size in each restart cycle. A panel of numerical experiments demonstrates the effectiveness of the new method with respect to extended block KSMs.},
+  file        = {:http\://arxiv.org/pdf/2002.01506v1:PDF},
+  keywords    = {math.NA, cs.NA, 65F10, 65N22, 65J10, 65F30, 65F50},
+}
+
+@Article{Awwal2020,
+  author      = {Aliyu Muhammed Awwal and Poom Kumam and Hassan Mohammad},
+  title       = {Iterative algorithm with structured diagonal Hessian approximation for solving nonlinear least squares problems},
+  date        = {2020-02-05},
+  eprint      = {arXiv:2002.01871},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {Nonlinear least-squares problems are a special class of unconstrained optimization problems in which their gradient and Hessian have special structures. In this paper, we exploit these structures and proposed a matrix-free algorithm with a diagonal Hessian approximation for solving nonlinear least-squares problems. We devise appropriate safeguarding strategies to ensure the Hessian matrix is positive definite throughout the iteration process. The proposed algorithm generates descent direction and is globally convergent. Preliminary numerical experiments show that the proposed method is competitive with a recently developed similar method.},
+  file        = {:http\://arxiv.org/pdf/2002.01871v1:PDF},
+  keywords    = {math.OC, 90C30, 65K05, 49M37},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
