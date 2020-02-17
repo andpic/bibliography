@@ -8203,7 +8203,7 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   eprint      = {arXiv:1912.07168},
   eprintclass = {math.OC},
   eprinttype  = {arXiv},
-  abstract    = {In this paper, we provide a control-theoretic perspective on optimal tensor optimization algorithms for minimizing a convex function in a finite-dimensional Euclidean space. Given a function $\Phi: \mathbb{R}^d \rightarrow \mathbb{R}$ that is convex and twice-continuously differentiable, we study an ordinary differential equation (ODE) that is governed by the gradient operator $\nabla \Phi$ and a positive control parameter $\lambda(t)$ that tends to infinity as $t \rightarrow +\infty$. The tuning of $\lambda(\cdot)$ is achieved via a closed-loop control law based on the \textit{algebraic equation} $[\lambda(t)]^p\|\nabla\Phi(x(t))\|^{p-1} = \theta$ for a given $\theta > 0$. We prove the existence and uniqueness of a local solution to this closed-loop ODE by the Banach fixed-point theorem. We then present a Lyapunov function that allows us to establish the existence and uniqueness of a global solution and analyze the convergence properties of trajectories. The rate of convergence is $\mathcal{O}(t^{-(3p+1)/2})$ in terms of objective gap and $\mathcal{O}(t^{-3p})$ in terms of squared gradient norm. We present two frameworks for implicit time discretization of the ODE, one of which generalizes the \textsf{large-step A-HPE} framework of~\cite{Monteiro-2013-Accelerated}, and the other of which leads to a new $p$-th order tensor algorithm. A highlight of our analysis is that we show that all of the $p$-th order optimal tensor algorithms in this paper minimize the squared gradient norm at a rate of $\mathcal{O}(k^{-3p})$.},
+  abstract    = {In this paper, we provide a control-theoretic perspective on optimal tensor optimization algorithms for minimizing a convex function in a finite-dimensional Euclidean space. Given a function $\Phi: \mathbb{R}^d \rightarrow \mathbb{R}$ that is convex and twice-continuously differentiable, we study an ordinary differential equation (ODE) that is governed by the gradient operator $\nabla \Phi$ and a positive control parameter $\lambda(t)$ that tends to infinity as $t \rightarrow +\infty$. The tuning of $\lambda(\cdot)$ is achieved via a closed-loop control law based on the \textit{algebraic equation} $[\lambda(t)]^p\|\nabla\Phi(x(t))\|^{p-1} = \theta$ for a given $\theta > 0$. We prove the existence and uniqueness of a local solution to this closed-loop ODE by the Banach fixed-point theorem. We then present a Lyapunov function that allows us to establish the existence and uniqueness of a global solution and analyze the convergence properties of trajectories. The rate of convergence is $\mathcal{O}(t^{-(3p+1)/2})$ in terms of objective gap and $\mathcal{O}(t^{-3p})$ in terms of squared gradient norm. We present two frameworks for implicit time discretization of the ODE, one of which generalizes the \textsf{large-step A-HPE} framework of~[Monteiro2013], and the other of which leads to a new $p$-th order tensor algorithm. A highlight of our analysis is that we show that all of the $p$-th order optimal tensor algorithms in this paper minimize the squared gradient norm at a rate of $\mathcal{O}(k^{-3p})$.},
   file        = {:http\://arxiv.org/pdf/1912.07168v1:PDF},
   keywords    = {math.OC, cs.CC, cs.DS},
 }
@@ -9341,7 +9341,7 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
 }
 
 @Article{Brust2020,
-  author   = {J. J. Brust and S. Leyffer, and and C. G. Petra},
+  author   = {J. J. Brust and S. Leyffer and C. G. Petra},
   title    = {Compact Representations of Structured {BFGS} Matrices},
   year     = {2020},
   eprint   = {ANL/MCS-P9279-0120},
@@ -9490,6 +9490,166 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   abstract    = {Nonlinear least-squares problems are a special class of unconstrained optimization problems in which their gradient and Hessian have special structures. In this paper, we exploit these structures and proposed a matrix-free algorithm with a diagonal Hessian approximation for solving nonlinear least-squares problems. We devise appropriate safeguarding strategies to ensure the Hessian matrix is positive definite throughout the iteration process. The proposed algorithm generates descent direction and is globally convergent. Preliminary numerical experiments show that the proposed method is competitive with a recently developed similar method.},
   file        = {:http\://arxiv.org/pdf/2002.01871v1:PDF},
   keywords    = {math.OC, 90C30, 65K05, 49M37},
+}
+
+@Article{Dvurechensky2020,
+  author      = {Pavel Dvurechensky and Shimrit Shtern and Mathias Staudigl and Petr Ostroukhov and Kamil Safin},
+  title       = {Self-concordant analysis of Frank-Wolfe algorithms},
+  date        = {2020-02-11},
+  eprint      = {arXiv:2002.04320},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {Projection-free optimization via different variants of the Frank-Wolfe (FW) method has become one of the cornerstones in optimization for machine learning since in many cases the linear minimization oracle is much cheaper to implement than projections and some sparsity needs to be preserved. In a number of applications, e.g. Poisson inverse problems or quantum state tomography, the loss is given by a self-concordant (SC) function having unbounded curvature, implying absence of theoretical guarantees for the existing FW methods. We use the theory of SC functions to provide a new adaptive step size for FW methods and prove global convergence rate $O(\frac{1}{k})$, $k$ being the iteration counter. If the problem can be represented by a local linear minimization oracle, we are the first to propose a FW method with linear convergence rate without assuming neither strong convexity nor a Lipschitz continuous gradient.},
+  file        = {:http\://arxiv.org/pdf/2002.04320v1:PDF},
+  keywords    = {math.OC, cs.LG, stat.CO, 65K05, 90C25,},
+}
+
+@Article{Alimisis2020,
+  author      = {Foivos Alimisis and Antonio Orvieto and Gary Bécigneul and Aurelien Lucchi},
+  title       = {Practical Accelerated Optimization on Riemannian Manifolds},
+  date        = {2020-02-11},
+  eprint      = {arXiv:2002.04144},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {We develop a new Riemannian descent algorithm with an accelerated rate of convergence. We focus on functions that are geodesically convex or weakly-quasi-convex, which are weaker function classes compared to prior work that has considered geodesically strongly convex functions. Our proof of convergence relies on a novel estimate sequence which allows to demonstrate the dependency of the convergence rate on the curvature of the manifold. We validate our theoretical results empirically on several optimization problems defined on a sphere and on the manifold of positive definite matrices.},
+  file        = {:http\://arxiv.org/pdf/2002.04144v1:PDF},
+  keywords    = {math.OC},
+}
+
+@Article{Zhang2020,
+  author      = {Jingzhao Zhang and Hongzhou Lin and Suvrit Sra and Ali Jadbabaie},
+  title       = {On Complexity of Finding Stationary Points of Nonsmooth Nonconvex Functions},
+  date        = {2020-02-10},
+  eprint      = {arXiv:2002.04130},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {We provide the first \emph{non-asymptotic} analysis for finding stationary points of nonsmooth, nonconvex functions. In particular, we study the class of Hadamard semi-differentiable functions, perhaps the largest class of nonsmooth functions for which the chain rule of calculus holds. This class contains important examples such as ReLU neural networks and others with non-differentiable activation functions. First, we show that finding an $\epsilon$-stationary point with first-order methods is impossible in finite time. Therefore, we introduce the notion of \emph{$(\delta, \epsilon)$-stationarity}, a generalization that allows for a point to be within distance $\delta$ of an $\epsilon$-stationary point and reduces to $\epsilon$-stationarity for smooth functions. We propose a series of randomized first-order methods and analyze their complexity of finding a $(\delta, \epsilon)$-stationary point. Furthermore, we provide a lower bound and show that our stochastic algorithm has min-max optimal dependence on $\delta$. Empirically, our methods perform well for training ReLU neural networks.},
+  file        = {:http\://arxiv.org/pdf/2002.04130v1:PDF},
+  keywords    = {math.OC, cs.LG},
+}
+
+@Article{Zhang2020a,
+  author    = {Yi Zhang and Nikolaos V. Sahinidis and Carlos Nohra and Gang Rong},
+  title     = {Optimality-based domain reduction for inequality-constrained {NLP} and {MINLP} problems},
+  journal   = {Journal of Global Optimization},
+  year      = {2020},
+  month     = {2},
+  doi       = {10.1007/s10898-020-00886-z},
+  abstract  = {In spatial branch-and-bound algorithms, optimality-based domain reduction is normally performed after solving a node and relies on duality information to reduce ranges of variables. In this work, we propose novel optimality conditions for NLP and MINLP problems and apply them for domain reduction prior to solving a node in branch-and-bound. The conditions apply to nonconvex inequality-constrained problems for which we exploit monotonicity properties of objectives and constraints. We develop three separate reduction algorithms for unconstrained, one-constraint, and multi-constraint problems. We use the optimality conditions to reduce ranges of variables through forward and backward bound propagation of gradients respective to each decision variable. We describe an efficient implementation of these techniques in the branch-and-bound solver BARON. The implementation dynamically recognizes and ignores inactive constraints at each node of the search tree. Our computations demonstrate that the proposed techniques often reduce the solution time and total number of nodes for continuous problems; they are less effective for mixed-integer programs.},
+  publisher = {Springer Science and Business Media {LLC}},
+}
+
+@Article{Mai2020,
+  author      = {Ngoc Hoang Anh Mai and Victor Magron and Jean-Bernard Lasserre},
+  title       = {A sparse version of Reznick's Positivstellensatz},
+  date        = {2020-02-12},
+  eprint      = {arXiv:2002.05101},
+  eprintclass = {math.AG},
+  eprinttype  = {arXiv},
+  abstract    = {If $f$ is a positive definite form, Reznick's Positivstellensatz [Mathematische Zeitschrift. 220 (1995), pp. 75--97] states that there exists $k\in\mathbf{N}$ such that ${\| x \|^{2k}_2}f$ is a sum of squares of polynomials. Assuming that $f$ can be written as a sum of forms $\sum_{l=1}^p f_l$, where each $f_l$ depends on a subset of the initial variables, and assuming that these subsets satisfy the so-called running intersection property, we provide a sparse version of Reznick's Positivstellensatz. Namely, there exists $k \in \mathbf{N}$ such that $f=\sum_{l = 1}^p {{\sigma_l}/{H_l^{k}}}$, where $\sigma_l$ is a sum of squares of polynomials, $H_l$ is a uniform polynomial denominator, and both polynomials $\sigma_l,H_l$ involve the same variables as $f_l$, for each $l=1,\dots,p$. In other words, the sparsity pattern of $f$ is also reflected in this sparse version of Reznick's certificate of positivity. We next use this result to also obtain positivity certificates for (i) polynomials nonnegative on the whole space and (ii) polynomials nonnegative on a (possibly non-compact) basic semialgebraic set, assuming that the input data satisfy the running intersection property. Both are sparse versions of a positivity certificate due to Putinar and Vasilescu.},
+  file        = {:http\://arxiv.org/pdf/2002.05101v2:PDF},
+  keywords    = {math.AG},
+}
+
+@TechReport{Nesterov2020,
+  author     = {Yurii Nesterov},
+  title      = {Superfast second-order methods for Unconstrained Convex Optimization},
+  year       = {2020},
+  eprint     = {2020/07},
+  eprinttype = {Core Discussion Paper},
+  url        = {https://dial.uclouvain.be/pr/boreal/object/boreal%3A227146/datastream/PDF_01/view},
+  abstract   = {In this paper, we present new second-order methods with converge rate $O(k^{-4})$, where $k$ is the iteration counter. This is faster that the existing lower bound for this type of schemes [1, 2], which is $O(k^{-7/2})$. Our progress can be explained by a finer specification of the problem class. The main idea of this approach consists in implementation of the third-order scheme from [15] using the second-order oracle. At each iteration of our method, we solve a nontrivial auxiliary problem by a linearly convergent scheme based on the relative non-degeneracy condition [3, 10]. During this process, the Hessian of the objective function is computed once, and the gradient is computed $O(\text{ln}\frac{1}{\epsilon})$ times, where $\epsilon$ is the desired accuracy of the solution for our problem.},
+}
+
+@TechReport{Nesterov2020a,
+  author   = {Yurii Nesterov},
+  title    = {Inexact Accelerated High-Order Proximal-Point Methods},
+  year     = {2020},
+  abstract = {In this paper, we present a new framework of Bi-Level Unconstrained Minimization (BLUM) for development of accelerated methods in Convex Programming. These methods use approximations of the high-order proximal points, which are solutions of some auxiliary parametric optimization problems. For computing these points, we can use different methods, and, in particular, the lower-order schemes. This opens a possibility for the latter methods to overpass traditional limits of the Complexity Theory. As an example, we obtain a new second-order method with the convergence rate $O(k^{-4})$ , where $k$ is the iteration counter. This rate is better than the maximal possible rate of convergence for this type of methods, as applied to functions with Lipschitz continuous Hessian. We also present new methods with the exact auxiliary search procedure, which have the rate of convergence $O(k^{-(3p+1)/2})$, where $p \ge 1$ is the order of the proximal operator. The auxiliary problem at each iteration of these schemes is convex.},
+}
+
+@Article{Legat2020,
+  author      = {Benoit Legat and Oscar Dowson and Joaquim Dias Garcia and Miles Lubin},
+  title       = {MathOptInterface: a data structure for mathematical optimization problems},
+  date        = {2020-02-09},
+  eprint      = {arXiv:2002.03447},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {JuMP is an open-source algebraic modeling language in the Julia language. In this work, we discuss a complete re-write of JuMP based on a novel abstract data structure, which we call MathOptInterface, for representing instances of mathematical optimization problems. MathOptInterface is significantly more general than existing data structures in the literature, encompassing, for example, a spectrum of problems classes from integer programming with indicator constraints to bilinear semidefinite programming. We highlight the challenges that arise from this generality, and how we overcame them in the re-write of JuMP.},
+  file        = {:http\://arxiv.org/pdf/2002.03447v1:PDF},
+  keywords    = {math.OC},
+}
+
+@Article{Chen2020a,
+  author      = {Tong Chen and Jean-Bernard Lasserre and Victor Magron and Edouard Pauwels},
+  title       = {Polynomial Optimization for Bounding Lipschitz Constants of Deep Networks},
+  date        = {2020-02-10},
+  eprint      = {arXiv:2002.03657},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {The Lipschitz constant of a network plays an important role in many applications of deep learning, such as robustness certification and Wasserstein Generative Adversarial Network. We introduce a semidefinite programming hierarchy to estimate the global and local Lipschitz constant of a multiple layer deep neural network. The novelty is to combine a polynomial lifting for ReLU functions derivatives with a weak generalization of Putinar's positivity certificate. This idea could also apply to other, nearly sparse, polynomial optimization problems in machine learning. We empirically demonstrate that our method not only runs faster than state-of-the-art linear programming based method, but also provides sharper bounds.},
+  file        = {:http\://arxiv.org/pdf/2002.03657v1:PDF},
+  keywords    = {math.OC, cs.LG},
+}
+
+@Article{Huang2020,
+  author      = {Xunpeng Huang and Xianfeng Liang and Zhengyang Liu and Yue Yu and Lei Li},
+  title       = {SPAN: A Stochastic Projected Approximate Newton Method},
+  date        = {2020-02-10},
+  eprint      = {arXiv:2002.03687},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {Second-order optimization methods have desirable convergence properties. However, the exact Newton method requires expensive computation for the Hessian and its inverse. In this paper, we propose SPAN, a novel approximate and fast Newton method. SPAN computes the inverse of the Hessian matrix via low-rank approximation and stochastic Hessian-vector products. Our experiments on multiple benchmark datasets demonstrate that SPAN outperforms existing first-order and second-order optimization methods in terms of the convergence wall-clock time. Furthermore, we provide a theoretical analysis of the per-iteration complexity, the approximation error, and the convergence rate. Both the theoretical analysis and experimental results show that our proposed method achieves a better trade-off between the convergence rate and the per-iteration efficiency.},
+  file        = {:http\://arxiv.org/pdf/2002.03687v1:PDF},
+  keywords    = {math.OC, cs.LG, 90C15, 90C25},
+}
+
+@Article{Muehlebach2020,
+  author      = {Michael Muehlebach and Michael I. Jordan},
+  title       = {Continuous-time Lower Bounds for Gradient-based Algorithms},
+  date        = {2020-02-10},
+  eprint      = {arXiv:2002.03546},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {This article derives lower bounds on the convergence rate of continuous-time gradient-based optimization algorithms. The algorithms are subjected to a time-normalization constraint that avoids a reparametrization of time in order to make the discussion of continuous-time convergence rates meaningful. We reduce the multi-dimensional problem to a single dimension, recover well-known lower bounds from the discrete-time setting, and provide insights into why these lower bounds occur. We further explicitly provide algorithms that achieve the proposed lower bounds, even when the function class under consideration includes certain non-convex functions.},
+  file        = {:http\://arxiv.org/pdf/2002.03546v1:PDF},
+  keywords    = {math.OC, cs.SY, eess.SY},
+}
+
+@Article{Tutunov2020,
+  author      = {Rasul Tutunov and Minne Li and Jun Wang and Haitham Bou-Ammar},
+  title       = {Compositional ADAM: An Adaptive Compositional Solver},
+  date        = {2020-02-10},
+  eprint      = {arXiv:2002.03755},
+  eprintclass = {cs.LG},
+  eprinttype  = {arXiv},
+  abstract    = {In this paper, we present C-ADAM, the first adaptive solver for compositional problems involving a non-linear functional nesting of expected values. We proof that C-ADAM converges to a stationary point in $\mathcal{O}(\delta^{-2.25})$ with $\delta$ being a precision parameter. Moreover, we demonstrate the importance of our results by bridging, for the first time, model-agnostic meta-learning (MAML) and compositional optimisation showing fastest known rates for deep network adaptation to-date. Finally, we validate our findings in a set of experiments from portfolio optimisation and meta-learning. Our results manifest significant sample complexity reductions compared to both standard and compositional solvers.},
+  file        = {:http\://arxiv.org/pdf/2002.03755v1:PDF},
+  keywords    = {cs.LG, math.OC, stat.ML},
+}
+
+@Article{Song2020,
+  author      = {Yang Song and Chenlin Meng and Renjie Liao and Stefano Ermon},
+  title       = {Nonlinear Equation Solving: A Faster Alternative to Feedforward Computation},
+  date        = {2020-02-10},
+  eprint      = {arXiv:2002.03629},
+  eprintclass = {cs.LG},
+  eprinttype  = {arXiv},
+  abstract    = {Feedforward computations, such as evaluating a neural network or sampling from an autoregressive model, are ubiquitous in machine learning. The sequential nature of feedforward computation, however, requires a strict order of execution and cannot be easily accelerated with parallel computing. To enable parrallelization, we frame the task of feedforward computation as solving a system of nonlinear equations. We then propose to find the solution using a Jacobi or Gauss-Seidel fixed-point iteration method, as well as hybrid methods of both. Crucially, Jacobi updates operate independently on each equation and can be executed in parallel. Our method is guaranteed to give exactly the same values as the original feedforward computation with a reduced (or equal) number of parallel iterations. Experimentally, we demonstrate the effectiveness of our approach in accelerating 1) the evaluation of DenseNets on ImageNet and 2) autoregressive sampling of MADE and PixelCNN. We are able to achieve between 1.2 and 33 speedup factors under various conditions and computation models.},
+  file        = {:http\://arxiv.org/pdf/2002.03629v1:PDF},
+  keywords    = {cs.LG, stat.ML},
+}
+
+@Article{Keriven2020,
+  author      = {Nicolas Keriven and Samuel Vaiter},
+  title       = {Sparse and Smooth: improved guarantees for Spectral Clustering in the Dynamic Stochastic Block Model},
+  date        = {2020-02-07},
+  eprint      = {arXiv:2002.02892},
+  eprintclass = {stat.ML},
+  eprinttype  = {arXiv},
+  abstract    = {In this paper, we analyse classical variants of the Spectral Clustering (SC) algorithm in the Dynamic Stochastic Block Model (DSBM). Existing results show that, in the relatively sparse case where the expected degree grows logarithmically with the number of nodes, guarantees in the static case can be extended to the dynamic case and yield improved error bounds when the DSBM is sufficiently smooth in time, that is, the communities do not change too much between two time steps. We improve over these results by drawing a new link between the sparsity and the smoothness of the DSBM: the more regular the DSBM is, the more sparse it can be, while still guaranteeing consistent recovery. In particular, a mild condition on the smoothness allows to treat the sparse case with bounded degree. We also extend these guarantees to the normalized Laplacian, and as a by-product of our analysis, we obtain to our knowledge the best spectral concentration bound available for the normalized Laplacian of matrices with independent Bernoulli entries.},
+  file        = {:http\://arxiv.org/pdf/2002.02892v2:PDF},
+  keywords    = {stat.ML, cs.LG, math.ST, stat.TH},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
