@@ -9652,4 +9652,65 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   keywords    = {stat.ML, cs.LG, math.ST, stat.TH},
 }
 
+@InProceedings{Zeni2020,
+  author       = {Alberto Zeni and Giulia Guidi and Marquita Ellis and Nan Ding and Marco D. Santambrogio and Steven Hofmeyr and Aydın Buluç and Leonid Oliker and Katherine Yelick},
+  title        = {{LOGAN}: High-Performance GPU-Based X-Drop Long-Read Alignment},
+  date         = {2020-02-12},
+  series       = {IPDPS 2020},
+  eprint       = {arXiv:2002.05200},
+  eprintclass  = {q-bio.GN},
+  eprinttype   = {arXiv},
+  abstract     = {Pairwise sequence alignment is one of the most computationally intensive kernels in genomic data analysis, accounting for more than 90\% of the runtime for key bioinformatics applications. This method is particularly expensive for third-generation sequences due to the high computational cost of analyzing sequences of length between 1Kb and 1Mb. Given the quadratic overhead of exact pairwise algorithms for long alignments, the community primarily relies on approximate algorithms that search only for high-quality alignments and stop early when one is not found. In this work, we present the first GPU optimization of the popular X-drop alignment algorithm, that we named LOGAN. Results show that our high-performance multi-GPU implementation achieves up to 181.6 GCUPS and speed-ups up to 6.6$\times$ and 30.7$\times$ using 1 and 6 NVIDIA Tesla V100, respectively, over the state-of-the-art software running on two IBM Power9 processors using 168 CPU threads, with equivalent accuracy. We also demonstrate a 2.3$\times$ LOGAN speed-up versus ksw2, a state-of-art vectorized algorithm for sequence alignment implemented in minimap2, a long-read mapping software. To highlight the impact of our work on a real-world application, we couple LOGAN with a many-to-many long-read alignment software called BELLA, and demonstrate that our implementation improves the overall BELLA runtime by up to 10.6$\time$. Finally, we adapt the Roofline model for LOGAN and demonstrate that our implementation is near-optimal on the NVIDIA Tesla V100s.},  
+  file         = {:http\://arxiv.org/pdf/2002.05200v1:PDF},
+  journaltitle = {Proceedings of the 34th IEEE International Parallel and Distributed Processing Symposium},
+  keywords     = {q-bio.GN, cs.DC},
+}
+
+@InProceedings{Mutlu2019,
+  author    = {B. O. {Mutlu} and G. {Kestor} and A. {Cristal} and O. {Unsal} and S. {Krishnamoorthy}},
+  title     = {Ground-Truth Prediction to Accelerate Soft-Error Impact Analysis for Iterative Methods},
+  booktitle = {Proceedings of the 26th IEEE International Conference on High Performance Computing, Data, and Analytics},
+  year      = {2019},
+  series    = {HiPC '19},
+  month     = {Dec},
+  pages     = {333-344},
+  doi       = {10.1109/HiPC.2019.00048},
+  abstract  = {Understanding the impact of soft errors on applications can be expensive. Often, it requires an extensive error injection campaign involving numerous runs of the full application in the presence of errors. In this paper, we present a novel approach to arriving at the ground truth-the true impact of an error on the final output-for iterative methods by observing a small number of iterations to learn deviations between normal and error-impacted execution. We develop a machine learning based predictor for three iterative methods to generate ground-truth results without running them to completion for every error injected. We demonstrate that this approach achieves greater accuracy than alternative prediction strategies, including three existing soft error detection strategies. We demonstrate the effectiveness of the ground truth prediction model in evaluating vulnerability and the effectiveness of soft error detection strategies in the context of iterative methods.},
+  issn      = {1094-7256},
+  keywords  = {Iterative Solvers;Failure Prediction;Machine Leraning;Soft Errors;Detectors},
+}
+
+@InProceedings{Afibuzzaman2019,
+  author    = {M. {Afibuzzaman} and F. {Rabbi} and M. Y. {Özkaya} and H. M. {Aktulga} and U. V. {Çatalyürek}},
+  title     = {DeepSparse: A Task-Parallel Framework for SparseSolvers on Deep Memory Architectures},
+  booktitle = {2019 IEEE 26th International Conference on High Performance Computing, Data, and Analytics (HiPC)},
+  year      = {2019},
+  month     = {Dec},
+  pages     = {373-382},
+  doi       = {10.1109/HiPC.2019.00052},
+  abstract  = {Data movement is an important bottleneck against efficiency and energy consumption in large-scale sparse matrix computations that are commonly used in linear solvers, eigensolvers and graph analytics. We introduce a novel task-parallel sparse solver framework, named DeepSparse, which adopts a fully integrated task-parallel approach. DeepSparse framework differs from existing work in that it adopts a holistic approach that targets all computational steps in a sparse solver rather than narrowing the problem into small kernels (e.g., SpMM, SpMV). We present the implementation details of DeepSparse and demonstrate its merit in two popular eigensolvers, LOBPCG and Lanczos algorithms. We observe that DeepSparse achieves 2$\times$ - 16$\times$ fewer cache misses across different cache layers (L1, L2 and L3) over implementations of the same solvers based on optimized library function calls. We also achieve 2$\times$ - 3.9$\times$ improvement in execution time when using DeepSparse over the same library versions.},
+  issn      = {1094-7256},
+  keywords  = {Sparse solvers, task parallelism, data dependency graphs, performance optimization.},
+}
+
+@InProceedings{Botoeva2020,
+  author    = {lena Botoeva and Panagiotis Kouvaros and Jan Kronqvist and Alessio Lomuscio and Ruth Misener},
+  title     = {Efficient Verification of ReLU-based Neural Networks via Dependency Analysis},
+  booktitle = {Proceedings of the 34th AAAI Conference on Artificial Intelligence},
+  series    = {AAI20},
+  abstract  = {We introduce an efficient method for the verification of ReLU-based feed-forward neural networks. We derive an automated procedure that exploits dependency relations between the ReLU nodes, thereby pruning the search tree that needs to be considered by MILP-based formulations of the verification problem. We augment the resulting algorithm with methods for input domain splitting and symbolic interval propagation. We present Venus, the resulting verification toolkit, and evaluate it on the ACAS collision avoidance networks and models trained on the MNIST and CIFAR-10 datasets. The experimental results obtained indicate considerable gains over the present state-of-the-art tools.},
+}
+
+@Article{Moutafis2020,
+  author    = {Byron E Moutafis and George A Gravvanis and Christos K Filelis-Papadopoulos},
+  title     = {Hybrid multi-projection method using sparse approximate inverses on {GPU} clusters},
+  journal   = {The International Journal of High Performance Computing Applications},
+  year      = {2020},
+  month     = {feb},
+  pages     = {109434202090563},
+  doi       = {10.1177/1094342020905637},
+  abstract  = {The state-of-the-art supercomputing infrastructures are equipped with accelerators, such as graphics processing units (GPUs), that operate as coprocessors for each workstation of the distributed memory system. The multi-projection type methods are a class of algebraic domain decomposition methods based on semi-aggregation techniques. The multi-projection type methods have improved convergence behavior, as the number of subdomains increases, due to the corresponding augmentation of the semi-aggregated local linear systems with more coarse components, while the number of fine components is reduced. Moreover, limited amount of communications among the workstations is required by the proposed method. The utilization of the available GPUs allows an increase in the number of subdomains along with finer-grained parallelism, leading to improved performance. A load-balancing algorithm that ensures the concurrency of the computations on multicore processors and GPUs is proposed. Flexible parallel preconditioned Krylov subspace iterative methods enhanced with multi-projection type methods have been designed appropriately in order to have improved performance, compared to CPU-only or GPU-only executions, by exploiting the available CPUs and GPUs of the distributed memory system concurrently. The unsymmetric local linear systems are solved by the preconditioned Bi-Conjugate Gradient STABilized (BiCGSTAB) method enhanced with the modified generic factored approximate sparse inverse preconditioner, whereas the preconditioned conjugate gradient (CG) method along with the symmetric factored approximate sparse inverse preconditioner is used for the symmetric positive definite local coefficient matrices. Numerical results regarding the convergence behavior, the performance, and the scalability of the proposed method for several problems are given.},
+  publisher = {{SAGE} Publications},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
