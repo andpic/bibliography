@@ -9713,4 +9713,27 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   publisher = {{SAGE} Publications},
 }
 
+@Article{Shi2020,
+  author      = {Ziqiang Shi},
+  title       = {{SingCubic}: Cyclic Incremental Newton-type Gradient Descent with Cubic Regularization for Non-Convex Optimization},
+  date        = {2020-02-17},
+  eprint      = {arXiv:2002.06848},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {In this work, we generalized and unified two recent completely different works of~\cite{shi2015large} and~\cite{cartis2012adaptive} respectively into one by proposing the cyclic incremental Newton-type gradient descent with cubic regularization (SingCubic) method for optimizing non-convex functions. Through the iterations of SingCubic, a cubic regularized global quadratic approximation using Hessian information is kept and solved. Preliminary numerical experiments show the encouraging performance of the SingCubic algorithm when compared to basic incremental or stochastic Newton-type implementations. The results and technique can be served as an initiate for the research on the incremental Newton-type gradient descent methods that employ cubic regularization. The methods and principles proposed in this paper can be used to do logistic regression, autoencoder training, independent components analysis, Ising model/Hopfield network training, multilayer perceptron, deep convolutional network training and so on. We will open-source parts of our implementations soon.},
+  file        = {:http\://arxiv.org/pdf/2002.06848v1:PDF},
+  keywords    = {math.OC},
+}
+
+@Article{Moutafis2020a,
+  author    = {B. E. Moutafis and G. A. Gravvanis and C. K. Filelis-Papadopoulos},
+  title     = {On the design of two-stage multiprojection methods for distributed memory systems},
+  journal   = {The Journal of Supercomputing},
+  year      = {2020},
+  month     = {feb},
+  doi       = {10.1007/s11227-020-03201-5},
+  abstract  = {Solving large sparse linear systems, efficiently, on supercomputing infrastructures is a time-consuming component for a wide variety of simulation processes. An effective parallel solver should meet the required specifications, concerning both convergence behavior and scalability. Herewith, a class of two-stage algebraic domain decomposition preconditioning schemes based on the upper Schur complement method is proposed, in order to exploit appropriately distributed memory systems with multicore processors. The design of the method has been focused on homogeneous hybrid parallel systems, i.e., distributed and shared memory systems. However, the proposed method can also be applied to heterogeneous systems, such as cloud infrastructures, or hybrid parallel systems with accelerators, by modifying the workload distribution algorithm and taking into account the different network latencies and bandwidths. The first stage of the proposed schemes is related to the assignment of the subdomains among the workstations of the distributed system, whereas the second stage concerns the further redistribution of the subdomains to each core of a processor. The proposed method utilizes multiprojection techniques, based on semi-aggregated subdomains, leading to improved convergence behavior as the number of subdomains increases. Moreover, a subspace compression technique is used, in order to improve the performance of the preprocessing phase and reduce the memory requirements of the proposed scheme. The preconditioning schemes were combined with a parallel Krylov subspace method, i.e., the parallel preconditioned GMRES(m) method. The convergence behavior, the performance and the scalability of the proposed preconditioning schemes are examined and compared to existing state-of-the-art methods, by conducting several numerical experiments on supercomputing infrastructures.},
+  publisher = {Springer Science and Business Media {LLC}},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
