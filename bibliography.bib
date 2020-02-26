@@ -9736,4 +9736,76 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   publisher = {Springer Science and Business Media {LLC}},
 }
 
+@InProceedings{Sao2020,
+  author    = {Piyush Sao and Ramakrishnan Kannan and Prasun Gera and Richard Vuduc},
+  title     = {A supernodal all-pairs shortest path algorithm},
+  booktitle = {Proceedings of the 25th {ACM} {SIGPLAN} Symposium on Principles and Practice of Parallel Programming},
+  year      = {2020},
+  series    = {PPoPP '20},
+  publisher = {{ACM}},
+  month     = {2},
+  doi       = {10.1145/3332466.3374533},
+  abstract  = {We show how to exploit graph sparsity in the Floyd-Warshall algorithm for the all-pairs shortest path (Apsp) problem. Floyd-Warshall is an attractive choice for Apsp on high-performing systems due to its structural similarity to solving dense linear systems and matrix multiplication. However, if sparsity of the input graph is not properly exploited, Floyd-Warshall will perform unnecessary asymptotic work and thus may not be a suitable choice for many input graphs. To overcome this limitation, the key idea in our approach is to use the known algebraic relationship between Floyd-Warshall and Gaussian elimination, and import several algorithmic techniques from sparse Cholesky factorization, namely, fill-in reducing ordering, symbolic analysis, supernodal traversal, and elimination tree parallelism. When combined, these techniques reduce computation, improve locality and enhance parallelism. We implement these ideas in an efficient shared memory parallel prototype that is orders of magnitude faster than an efficient multi-threaded baseline Floyd-Warshall that does not exploit sparsity. Our experiments suggest that the Floyd-Warshall algorithm can compete with Dijkstra's algorithm (the algorithmic core of Johnson's algorithm) for several classes sparse graphs.},
+}
+
+@Article{Zhang2020b,
+  author      = {Zhekai Zhang and Hanrui Wang and Song Han and William J. Dally},
+  title       = {{SpArch}: Efficient Architecture for Sparse Matrix Multiplication},
+  date        = {2020-02-20},
+  eprint      = {arXiv:2002.08947},
+  eprintclass = {cs.AR},
+  eprinttype  = {arXiv},
+  abstract    = {Generalized Sparse Matri$\times$-Matri$\times$ Multiplication (SpGEMM) is a ubiquitous task in various engineering and scientific applications. However, inner product based SpGENN introduces redundant input fetches for mismatched nonzero operands, while outer product based approach suffers from poor output locality due to numerous partial product matrices. Inefficiency in the reuse of either inputs or outputs data leads to e$\times$tensive and e$\times$pensive DRAM access. To address this problem, this paper proposes an efficient sparse matri$\times$ multiplication accelerator architecture, SpArch, which jointly optimizes the data locality for both input and output matrices. We first design a highly parallelized streaming-based merger to pipeline the multiply and merge stage of partial matrices so that partial matrices are merged on chip immediately after produced. We then propose a condensed matri$\times$ representation that reduces the number of partial matrices by three orders of magnitude and thus reduces DRAM access by 5.4$\times$. We further develop a Huffman tree scheduler to improve the scalability of the merger for larger sparse matrices, which reduces the DRAM access by another 1.8$\times$. We also resolve the increased input matri$\times$ read induced by the new representation using a row prefetcher with near-optimal buffer replacement policy, further reducing the DRAM access by 1.5$\times$. Evaluated on 20 benchmarks, SpArch reduces the total DRAM access by 2.8$\times$ over previous state-of-the-art. On average, SpArch achieves 4$\times$, 19$\times$, 18$\times$, 17$\times$, 1285$\times$ speedup and 6$\times$, 164$\times$, 435$\times$, 307$\times$, 62$\times$ energy savings over OuterSPACE, MKL, cuSPARSE, CUSP, and ARM Armadillo, respectively.},
+  file        = {:http\://arxiv.org/pdf/2002.08947v1:PDF},
+  keywords    = {cs.AR, cs.DC},
+}
+
+@InProceedings{Parger2020,
+  author    = {Mathias Parger and Martin Winter and Daniel Mlakar and Markus Steinberger},
+  title     = {{spECK}: accelerating GPU sparse matrix-matrix multiplication through lightweight analysis},
+  booktitle = {Proceedings of the 25th {ACM} {SIGPLAN} Symposium on Principles and Practice of Parallel Programming},
+  year      = {2020},
+  series    = {PPoPP '20},
+  publisher = {{ACM}},
+  month     = {feb},
+  doi       = {10.1145/3332466.3374521},
+  abstract  = {parse general matrix-matrix multiplication on GPUs is challenging due to the varying sparsity patterns of sparse matrices. Existing solutions achieve good performance for certain types of matrices, but fail to accelerate all kinds of matrices in the same manner. Our approach combines multiple strategies with dynamic parameter selection to dynamically choose and tune the best fitting algorithm for each row of the matrix. This choice is supported by a lightweight, multi-level matrix analysis, which carefully balances analysis cost and expected performance gains. Our evaluation on thousands of matrices with various characteristics shows that we outperform all currently available solutions in 79\% over all matrices with >15k products and that we achieve the second best performance in 15\%. For these matrices, our solution is on average 83\% faster than the second best approach and up to 25$\times$ faster than other state-of-the-art GPU implementations. Using our approach, applications can expect great performance independent of the matrices they work on.},
+}
+
+@InProceedings{DeFreez2020,
+  author    = {Daniel DeFreez and Antara Bhowmick and Ignacio Laguna and Cindy Rubio-González},
+  title     = {Detecting and reproducing error-code propagation bugs in {MPI} implementations},
+  booktitle = {Proceedings of the 25th {ACM} {SIGPLAN} Symposium on Principles and Practice of Parallel Programming},
+  year      = {2020},
+  series    = {PPoPP '20},
+  publisher = {{ACM}},
+  month     = {2},
+  doi       = {10.1145/3332466.3374515},
+  abstract  = {We present an approach to automatically detect and reproduce error code propagation bugs in MPI implementations. Specifically, we combine static analysis and program repair for bug detection, and apply fault injection to reproduce error propagation bugs found in MPI libraries written in C. We demonstrate our approach on the MPICH library, one of the most popular implementations of MPI, and the MPICH-based implementation MVAPICH, uncovering 447 previously unknown bugs. We discovered that 31 of these bugs result in program crashes, and 60\% of the MPICH test suite is susceptible to crashing due to failures to propagate error codes. Moreover, 95 bugs produce undesirable behavior that has been confirmed dynamically, causing tests to fail, hanging processes, or simply dropping error codes before reaching user applications.},
+}
+
+@InProceedings{Thayer2020,
+  author    = {Samuel Thayer and Ganesh L. Gopalakrishnan and Ian Briggs and Michael Bentley and Dong H. Ahn and Ignacio Laguna and Gregory L. Lee},
+  title     = {{ArcherGear}},
+  booktitle = {Proceedings of the 25th {ACM} {SIGPLAN} Symposium on Principles and Practice of Parallel Programming},
+  year      = {2020},
+  series    = {PPoPP '20},
+  publisher = {{ACM}},
+  month     = {feb},
+  doi       = {10.1145/3332466.3374504},
+  abstract  = {There is growing uptake of shared memory parallelism in high performance computing, and this has increased the need for data race checking during the creation of new parallel codes or parallelizing existing sequential codes. While race checking concepts and implementations have been around for many concurrency models, including tasking models such as Cilk and PThreads (e.g., the Thread Sanitizer tool), practically usable race checkers for other APIs such as OpenMP have been lagging. For example, the OpenMP parallelization of an important library (namely Hypre) was initially unsuccessful due to inexplicable nondeterminism introduced when the code was optimized, and later root-caused to a race by the then recently developed OpenMP race checker Archer [2]. The open-source Archer now enjoys significant traction within several organizations.},
+}
+
+@InProceedings{Zhou2020,
+  author    = {Keren Zhou and Mark Krentel and John Mellor-Crummey},
+  title     = {A tool for top-down performance analysis of {GPU}-accelerated applications},
+  booktitle = {Proceedings of the 25th {ACM} {SIGPLAN} Symposium on Principles and Practice of Parallel Programming},
+  year      = {2020},
+  series    = {PPoPP '20},
+  publisher = {{ACM}},
+  month     = {feb},
+  doi       = {10.1145/3332466.3374534},
+  abstract  = {To support performance measurement and analysis of GPU-accelerated applications, we extended the HPCToolkit performance tools with several novel features. To support efficient monitoring of accelerated applications, HPCToolkit employs a new wait-free data structure to coordinate measurement and attribution between each application thread and a GPU monitor thread. To help developers understand the performance of accelerated applications, HPCToolkit attributes metrics to heterogeneous calling contexts that span both CPUs and GPUs. To support fine-grain analysis and tuning of GPU-accelerated code, HPCToolkit collects PC samples of both CPU and GPU activity to derive and attribute metrics at all levels in a heterogeneous calling context.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
