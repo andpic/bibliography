@@ -9808,4 +9808,53 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   abstract  = {To support performance measurement and analysis of GPU-accelerated applications, we extended the HPCToolkit performance tools with several novel features. To support efficient monitoring of accelerated applications, HPCToolkit employs a new wait-free data structure to coordinate measurement and attribution between each application thread and a GPU monitor thread. To help developers understand the performance of accelerated applications, HPCToolkit attributes metrics to heterogeneous calling contexts that span both CPUs and GPUs. To support fine-grain analysis and tuning of GPU-accelerated code, HPCToolkit collects PC samples of both CPU and GPU activity to derive and attribute metrics at all levels in a heterogeneous calling context.},
 }
 
+@Article{Kamzolov2020a,
+  author      = {Dmitry Kamzolov and Alexander Gasnikov},
+  title       = {Near-Optimal Hyperfast Second-Order Method for convex optimization and its Sliding},
+  date        = {2020-02-20},
+  eprint      = {arXiv:2002.09050},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {In this paper, we present a new Hyperfast Second-Order Method with convergence rate $O(N^{-5})$ up to a logarithmic factor for the convex function with Lipshitz $3$rd derivative. This method based on two ideas. The first comes from the superfast second-order scheme of Yu. Nesterov (CORE Discussion Paper 2020/07, 2020). It allows implementing the third-order scheme by solving subproblem using only the second-order oracle. This method converges with rate $O(N^{-4})$. The second idea comes from the work of Kamzolov et al. (arXiv:2002.01004). It is the inexact near-optimal third-order method. In this work, we improve its convergence and merge it with the scheme of solving subproblem using only the second-order oracle. As a result, we get convergence rate $O(N^{-5})$ up to a logarithmic factor. This convergence rate is near-optimal and the best known up to this moment. Further, we investigate the situation when there is a sum of two functions and improve the sliding framework from Kamzolov et al. (arXiv:2002.01004) for the second-order methods.},
+  file        = {:http\://arxiv.org/pdf/2002.09050v1:PDF},
+  keywords    = {math.OC},
+}
+
+@Article{Doikov2020,
+  author      = {Nikita Doikov and Yurii Nesterov},
+  title       = {Inexact Tensor Methods with Dynamic Accuracies},
+  date        = {2020-02-21},
+  eprint      = {arXiv:2002.09403},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {In this paper, we study inexact high-order Tensor Methods for solving convex optimization problems with composite objective. At every step of such methods, we use approximate solution of the auxiliary problem, defined by the bound for the residual in function value. We propose two dynamic strategies for choosing the inner accuracy: the first one is decreasing as $1/k^{p + 1}$, where $p \geq 1$ is the order of the method and $k$ is the iteration counter, and the second approach is using for the inner accuracy the last progress in the target objective. We show that inexact Tensor Methods with these strategies achieve the same global convergence rate as in the error-free case. For the second approach we also establish local superlinear rates (for $p \geq 2$), and propose the accelerated scheme. Lastly, we present computational results on a variety of machine learning problems for several methods and different accuracy policies.},
+  file        = {:http\://arxiv.org/pdf/2002.09403v1:PDF},
+  keywords    = {math.OC},
+}
+
+@Article{Acebron2020,
+  author    = {Juan A. Acebrón},
+  title     = {A Probabilistic Linear Solver Based on a Multilevel Monte Carlo Method},
+  journal   = {Journal of Scientific Computing},
+  year      = {2020},
+  volume    = {82},
+  number    = {3},
+  month     = {2},
+  doi       = {10.1007/s10915-020-01168-2},
+  abstract  = {We describe a new Monte Carlo method based on a multilevel method for computing the action of the resolvent matrix over a vector. The method is based on the numerical evaluation of the Laplace transform of the matrix exponential, which is computed efficiently using a multilevel Monte Carlo method. Essentially, it requires generating suitable random paths which evolve through the indices of the matrix according to the probability law of a continuous-time Markov chain governed by the associated Laplacian matrix. The convergence of the proposed multilevel method has been discussed, and several numerical examples were run to test the performance of the algorithm. These examples concern the computation of some metrics of interest in the analysis of complex networks, and the numerical solution of a boundary-value problem for an elliptic partial differential equation. In addition, the algorithm was conveniently parallelized, and the scalability analyzed and compared with the results of other existing Monte Carlo method for solving linear algebra systems.},
+  publisher = {Springer Science and Business Media {LLC}},
+}
+
+@Article{Jyothi2020,
+  author      = {R. Jyothi and P. Babu},
+  title       = {PIANO: A Fast Parallel Iterative Algorithm for Multinomial and Sparse Multinomial Logistic Regression},
+  date        = {2020-02-21},
+  eprint      = {arXiv:2002.09133},
+  eprintclass = {stat.ML},
+  eprinttype  = {arXiv},
+  abstract    = {Multinomial Logistic Regression is a well-studied tool for classification and has been widely used in fields like image processing, computer vision and, bioinformatics, to name a few. Under a supervised classification scenario, a Multinomial Logistic Regression model learns a weight vector to differentiate between any two classes by optimizing over the likelihood objective. With the advent of big data, the inundation of data has resulted in large dimensional weight vector and has also given rise to a huge number of classes, which makes the classical methods applicable for model estimation not computationally viable. To handle this issue, we here propose a parallel iterative algorithm: Parallel Iterative Algorithm for MultiNomial LOgistic Regression (PIANO) which is based on the Majorization Minimization procedure, and can parallely update each element of the weight vectors. Further, we also show that PIANO can be easily extended to solve the Sparse Multinomial Logistic Regression problem - an extensively studied problem because of its attractive feature selection property. In particular, we work out the extension of PIANO to solve the Sparse Multinomial Logistic Regression problem with l1 and l0 regularizations. We also prove that PIANO converges to a stationary point of the Multinomial and the Sparse Multinomial Logistic Regression problems. Simulations were conducted to compare PIANO with the existing methods, and it was found that the proposed algorithm performs better than the existing methods in terms of speed of convergence.},
+  file        = {:http\://arxiv.org/pdf/2002.09133v1:PDF},
+  keywords    = {stat.ML, cs.LG, math.OC},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
