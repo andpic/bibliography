@@ -9857,4 +9857,39 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   keywords    = {stat.ML, cs.LG, math.OC},
 }
 
+@Article{Hanzely2020,
+  author      = {Filip Hanzely and Nikita Doikov and Peter Richtárik and Yurii Nesterov},
+  title       = {Stochastic Subspace Cubic Newton Method},
+  date        = {2020-02-21},
+  eprint      = {arXiv:2002.09526},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {In this paper, we propose a new randomized second-order optimization algorithm---Stochastic Subspace Cubic Newton (SSCN)---for minimizing a high dimensional convex function $f$. Our method can be seen both as a {\em stochastic} extension of the cubically-regularized Newton method of Nesterov and Polyak (2006), and a {\em second-order} enhancement of stochastic subspace descent of Kozak et al. (2019). We prove that as we vary the minibatch size, the global convergence rate of SSCN interpolates between the rate of stochastic coordinate descent (CD) and the rate of cubic regularized Newton, thus giving new insights into the connection between first and second-order methods. Remarkably, the local convergence rate of SSCN matches the rate of stochastic subspace descent applied to the problem of minimizing the quadratic function $\frac12 (x-x^*)^\top \nabla^2f(x^*)(x-x^*)$, where $x^*$ is the minimizer of $f$, and hence depends on the properties of $f$ at the optimum only. Our numerical experiments show that SSCN outperforms non-accelerated first-order CD algorithms while being competitive to their accelerated variants.},
+  file        = {:http\://arxiv.org/pdf/2002.09526v1:PDF},
+  keywords    = {math.OC, cs.LG},
+}
+
+@Article{Selvitopi2020,
+  author       = {Oguz Selvitopi and Md Taufique Hussain and Ariful Azad and Aydın Buluç},
+  title        = {Optimizing High Performance Markov Clustering for Pre-Exascale Architectures},
+  journaltitle = {34th IEEE International Parallel and Distributed Processing Symposium (IPDPS), 2020},
+  date         = {2020-02-24},
+  eprint       = {arXiv:2002.10083},
+  eprintclass  = {cs.DC},
+  eprinttype   = {arXiv},
+  abstract     = {HipMCL is a high-performance distributed memory implementation of the popular Markov Cluster Algorithm (MCL) and can cluster large-scale networks within hours using a few thousand CPU-equipped nodes. It relies on sparse matrix computations and heavily makes use of the sparse matrix-sparse matrix multiplication kernel (SpGEMM). The existing parallel algorithms in HipMCL are not scalable to Exascale architectures, both due to their communication costs dominating the runtime at large concurrencies and also due to their inability to take advantage of accelerators that are increasingly popular. In this work, we systematically remove scalability and performance bottlenecks of HipMCL. We enable GPUs by performing the expensive expansion phase of the MCL algorithm on GPU. We propose a CPU-GPU joint distributed SpGEMM algorithm called pipelined Sparse SUMMA and integrate a probabilistic memory requirement estimator that is fast and accurate. We develop a new merging algorithm for the incremental processing of partial results produced by the GPUs, which improves the overlap efficiency and the peak memory usage. We also integrate a recent and faster algorithm for performing SpGEMM on CPUs. We validate our new algorithms and optimizations with extensive evaluations. With the enabling of the GPUs and integration of new algorithms, HipMCL is up to 12.4x faster, being able to cluster a network with 70 million proteins and 68 billion connections just under 15 minutes using 1024 nodes of ORNL's Summit supercomputer.},
+  file         = {:http\://arxiv.org/pdf/2002.10083v1:PDF},
+  keywords     = {cs.DC},
+}
+
+@TechReport{Carratala2020,
+  author      = {Rocío Carratalá-Sáez and Mathieu Faverge and Grégoire Pichon and Guillaume Sylvand and Enrique S. Quintana-Ortí},
+  title       = {Tiled Algorithms for Efficient Task-Parallel H-Matrix Solvers},
+  institution = {INRIA},
+  year        = {2020},
+  eprint      = {hal-02489269},
+  url         = {https://hal.inria.fr/hal-02489269},
+  abstract    = {In this paper, we describe and evaluate an extension of the Chameleon library to operate with hierarchical matrices (H-Matrices) and hierarchical arithmetic (H-Arithmetic), producing efficient solvers for linear systems arising in Boundary Element Methods (BEM). Our approach builds upon an open-source H-Matrices library from Airbus, named Hmat-oss, that collects sequential numerical kernels for both hierarchical and low-rank structures; the tiled algorithms and task-parallel decompositions available in Chameleon for the solution of linear systems; and the StarPU runtime system to orchestrate an efficient task-parallel (multi-threaded) execution on a multicore architecture. Using an application producing matrices with features close to real industrial applications, we present shared-memory results that demonstrate a fair level of performance, close to (and sometimes better than) the one offered by a pure H-Matrix approach, as proposed by Airbus Hmat proprietary (and non open-source) library. Hence, this combination Chameleon + Hmat-oss proposes the most efficient fully open-source software stack to solve dense compressible linear systems on shared memory architectures (distributed memory is under development).},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
