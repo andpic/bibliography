@@ -9733,7 +9733,7 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   title     = {On the design of two-stage multiprojection methods for distributed memory systems},
   journal   = {The Journal of Supercomputing},
   year      = {2020},
-  month     = {feb},
+  month     = {2},
   doi       = {10.1007/s11227-020-03201-5},
   abstract  = {Solving large sparse linear systems, efficiently, on supercomputing infrastructures is a time-consuming component for a wide variety of simulation processes. An effective parallel solver should meet the required specifications, concerning both convergence behavior and scalability. Herewith, a class of two-stage algebraic domain decomposition preconditioning schemes based on the upper Schur complement method is proposed, in order to exploit appropriately distributed memory systems with multicore processors. The design of the method has been focused on homogeneous hybrid parallel systems, i.e., distributed and shared memory systems. However, the proposed method can also be applied to heterogeneous systems, such as cloud infrastructures, or hybrid parallel systems with accelerators, by modifying the workload distribution algorithm and taking into account the different network latencies and bandwidths. The first stage of the proposed schemes is related to the assignment of the subdomains among the workstations of the distributed system, whereas the second stage concerns the further redistribution of the subdomains to each core of a processor. The proposed method utilizes multiprojection techniques, based on semi-aggregated subdomains, leading to improved convergence behavior as the number of subdomains increases. Moreover, a subspace compression technique is used, in order to improve the performance of the preprocessing phase and reduce the memory requirements of the proposed scheme. The preconditioning schemes were combined with a parallel Krylov subspace method, i.e., the parallel preconditioned GMRES(m) method. The convergence behavior, the performance and the scalability of the proposed preconditioning schemes are examined and compared to existing state-of-the-art methods, by conducting several numerical experiments on supercomputing infrastructures.},
   publisher = {Springer Science and Business Media {LLC}},
@@ -9770,7 +9770,7 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   year      = {2020},
   series    = {PPoPP '20},
   publisher = {{ACM}},
-  month     = {feb},
+  month     = {2},
   doi       = {10.1145/3332466.3374521},
   abstract  = {parse general matrix-matrix multiplication on GPUs is challenging due to the varying sparsity patterns of sparse matrices. Existing solutions achieve good performance for certain types of matrices, but fail to accelerate all kinds of matrices in the same manner. Our approach combines multiple strategies with dynamic parameter selection to dynamically choose and tune the best fitting algorithm for each row of the matrix. This choice is supported by a lightweight, multi-level matrix analysis, which carefully balances analysis cost and expected performance gains. Our evaluation on thousands of matrices with various characteristics shows that we outperform all currently available solutions in 79\% over all matrices with >15k products and that we achieve the second best performance in 15\%. For these matrices, our solution is on average 83\% faster than the second best approach and up to 25$\times$ faster than other state-of-the-art GPU implementations. Using our approach, applications can expect great performance independent of the matrices they work on.},
 }
@@ -9794,7 +9794,7 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   year      = {2020},
   series    = {PPoPP '20},
   publisher = {{ACM}},
-  month     = {feb},
+  month     = {2},
   doi       = {10.1145/3332466.3374504},
   abstract  = {There is growing uptake of shared memory parallelism in high performance computing, and this has increased the need for data race checking during the creation of new parallel codes or parallelizing existing sequential codes. While race checking concepts and implementations have been around for many concurrency models, including tasking models such as Cilk and PThreads (e.g., the Thread Sanitizer tool), practically usable race checkers for other APIs such as OpenMP have been lagging. For example, the OpenMP parallelization of an important library (namely Hypre) was initially unsuccessful due to inexplicable nondeterminism introduced when the code was optimized, and later root-caused to a race by the then recently developed OpenMP race checker Archer [2]. The open-source Archer now enjoys significant traction within several organizations.},
 }
@@ -9806,7 +9806,7 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   year      = {2020},
   series    = {PPoPP '20},
   publisher = {{ACM}},
-  month     = {feb},
+  month     = {2},
   doi       = {10.1145/3332466.3374534},
   abstract  = {To support performance measurement and analysis of GPU-accelerated applications, we extended the HPCToolkit performance tools with several novel features. To support efficient monitoring of accelerated applications, HPCToolkit employs a new wait-free data structure to coordinate measurement and attribution between each application thread and a GPU monitor thread. To help developers understand the performance of accelerated applications, HPCToolkit attributes metrics to heterogeneous calling contexts that span both CPUs and GPUs. To support fine-grain analysis and tuning of GPU-accelerated code, HPCToolkit collects PC samples of both CPU and GPU activity to derive and attribute metrics at all levels in a heterogeneous calling context.},
 }
