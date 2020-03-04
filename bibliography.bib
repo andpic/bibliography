@@ -9895,4 +9895,28 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   abstract    = {In this paper, we describe and evaluate an extension of the Chameleon library to operate with hierarchical matrices (H-Matrices) and hierarchical arithmetic (H-Arithmetic), producing efficient solvers for linear systems arising in Boundary Element Methods (BEM). Our approach builds upon an open-source H-Matrices library from Airbus, named Hmat-oss, that collects sequential numerical kernels for both hierarchical and low-rank structures; the tiled algorithms and task-parallel decompositions available in Chameleon for the solution of linear systems; and the StarPU runtime system to orchestrate an efficient task-parallel (multi-threaded) execution on a multicore architecture. Using an application producing matrices with features close to real industrial applications, we present shared-memory results that demonstrate a fair level of performance, close to (and sometimes better than) the one offered by a pure H-Matrix approach, as proposed by Airbus Hmat proprietary (and non open-source) library. Hence, this combination Chameleon + Hmat-oss proposes the most efficient fully open-source software stack to solve dense compressible linear systems on shared memory architectures (distributed memory is under development).},
 }
 
+@Article{Gu2020,
+  author      = {Zhixiang Gu and Jose Moreira and David Edelsohn and Ariful Azad},
+  title       = {Bandwidth-Optimized Parallel Algorithms for Sparse Matrix-Matrix Multiplication using Propagation Blocking},
+  date        = {2020-02-26},
+  eprint      = {arXiv:2002.11302},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {Sparse matrix-matrix multiplication (SpGEMM) is a widely used kernel in various graph, scientific computing and machine learning algorithms. It is well known that SpGEMM is a memory-bound operation, and its peak performance is expected to be bound by the memory bandwidth. Yet, existing algorithms fail to saturate the memory bandwidth, resulting in suboptimal performance under the Roofline model. In this paper we characterize existing SpGEMM algorithms based on their memory access patterns and develop practical lower and upper bounds for SpGEMM performance. We then develop an SpGEMM algorithm based on outer product matrix multiplication. The newly developed algorithm called PB-SpGEMM saturates memory bandwidth by using the propagation blocking technique and by performing in-cache sorting and merging. For many practical matrices, PB-SpGEMM runs 20\%-50\% faster than the state-of-the-art heap and hash SpGEMM algorithms on modern multicore processors. Most importantly, PB-SpGEMM attains performance predicted by the Roofline model, and its performance remains stable with respect to matrix size and sparsity.},
+  file        = {:http\://arxiv.org/pdf/2002.11302v1:PDF},
+  keywords    = {cs.DC},
+}
+
+@Article{Gao2020a,
+  author      = {Jianhua Gao and Weixing Ji and Zhaonian Tan and Yueyan Zhao},
+  title       = {A Systematic Survey of General Sparse Matrix-Matrix Multiplication},
+  date        = {2020-02-26},
+  eprint      = {arXiv:2002.11273},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {SpGEMM (General Sparse Matrix-Matrix Multiplication) has attracted much attention from researchers in fields of multigrid methods and graph analysis. Many optimization techniques have been developed for certain application fields and computing architecture over the decades. The objective of this paper is to provide a structured and comprehensive overview of the research on SpGEMM. Existing optimization techniques have been grouped into different categories based on their target problems and architectures. Covered topics include SpGEMM applications, size prediction of result matrix, matrix partitioning and load balancing, result accumulating, and target architecture-oriented optimization. The rationales of different algorithms in each category are analyzed, and a wide range of SpGEMM algorithms are summarized. This survey sufficiently reveals the latest progress and research status of SpGEMM optimization from 1977 to 2019. More specifically, an experimentally comparative study of existing implementations on CPU and GPU is presented. Based on our findings, we highlight future research directions and how future studies can leverage our findings to encourage better design and implementation.},
+  file        = {:http\://arxiv.org/pdf/2002.11273v1:PDF},
+  keywords    = {cs.DC, 68-02, 68W10, 65F50, A.1; D.1.3; G.1.3},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
