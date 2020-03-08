@@ -2053,8 +2053,6 @@
   pages      = {1999--2006},
   doi        = {10.1109/IPDPS.2011.362},
   abstract   = {The Simplex algorithm is a well known method to solve linear programming (LP) problems. In this paper, we propose a parallel implementation of the Simplex on a CPU-GPU systems via CUDA. Double precision implementation is used in order to improve the quality of solutions. Computational tests have been carried out on randomly generated instances for non-sparse LP problems. The tests show a maximum speedup of 12:5 on a GTX 260 board.},
-  annotation = {{I}n this paper the authors present their implementation of the revised tableau simplex method with {CUDA}, which does not use existing libraries. {T}he basic idea of the work is to decompose the tableau into blocks, in such a way that each block is assigned to a thread block (or work-group, in {O}pen{CL} jargon) during the pivoting phase. {T}he software is tested on randomly generated instances of a size up to $4000$ constraints and $4000$ variables. {B}ecause of the size of problems and the employment of double precision data representation, it takes more to determine the pivot element on the {GPU} than on the {CPU}. {C}ommunication between the host and the accelerator is done using page-locked host memory. {T}he test environment is an {I}ntel {X}eon {CPU} ($\unit[3.0]{GHz}$) and an {N}vidia {GTX} 260 {GPU}. {T}he achieved speedup with respect to the same algorithm implemented on {CPU} is about $12$.},
-  file       = {:home/andrea/Dropbox/PhD/Papers/Lalami et al. - Efficient Implementation of the Simplex Method on a CPU-GPU system.pdf:PDF},
   owner      = {ap8213},
   timestamp  = {2014.10.09},
 }
@@ -9917,6 +9915,84 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   abstract    = {SpGEMM (General Sparse Matrix-Matrix Multiplication) has attracted much attention from researchers in fields of multigrid methods and graph analysis. Many optimization techniques have been developed for certain application fields and computing architecture over the decades. The objective of this paper is to provide a structured and comprehensive overview of the research on SpGEMM. Existing optimization techniques have been grouped into different categories based on their target problems and architectures. Covered topics include SpGEMM applications, size prediction of result matrix, matrix partitioning and load balancing, result accumulating, and target architecture-oriented optimization. The rationales of different algorithms in each category are analyzed, and a wide range of SpGEMM algorithms are summarized. This survey sufficiently reveals the latest progress and research status of SpGEMM optimization from 1977 to 2019. More specifically, an experimentally comparative study of existing implementations on CPU and GPU is presented. Based on our findings, we highlight future research directions and how future studies can leverage our findings to encourage better design and implementation.},
   file        = {:http\://arxiv.org/pdf/2002.11273v1:PDF},
   keywords    = {cs.DC, 68-02, 68W10, 65F50, A.1; D.1.3; G.1.3},
+}
+
+@TechReport{Agullo2020,
+  author      = {Emmanuel Agullo and Siegfried Cools and Emrullah Fatih-Yetkin and Luc Giraud and Nick Schenkel and Wim Vanroose},
+  title       = {On soft errors in the Conjugate Gradient method: sensitivity and robust numerical detection},
+  institution = {INRIA},
+  year        = {2020},
+  eprint      = {hal-02495301},
+  url         = {https://hal.inria.fr/hal-02495301},
+  abstract    = {The conjugate gradient (CG) method is the most widely used iterative scheme for the solution of large sparse systems of linear equations when the matrix is symmetric positive definite. Although more than sixty year old, it is still a serious candidate for extreme-scale computation on large computing platforms. On the technological side, the continuous shrinking of transistor geometry and the increasing complexity of these devices affect dramatically their sensitivity to natural radiation, and thus diminish their reliability. One of the most common effects produced by natural radiation is the single event upset which consists in a bit-flip in a memory cell producing unexpected results at application level. Consequently, the future computing facilities at extreme scale might be more prone to errors of any kind including bit-flip during calculation. These numerical and technological observations are the main motivations for this work, where we first investigate through extensive numerical experiments the sensitivity of CG to bit-flips in its main computationally intensive kernels, namely the matrix-vector product and the preconditioner application. We further propose numerical criteria to detect the occurrence of such soft errors; we assess their robustness through extensive numerical experiments.},
+}
+
+@InCollection{Chevalier2020,
+  author    = {Cédric Chevalier and Franck Ledoux and Sébastien Morais},
+  title     = {A Multilevel Mesh Partitioning Algorithm Driven by Memory Constraints},
+  booktitle = {Proceedings of the {SIAM} Workshop on Combinatorial Scientific Computing},
+  year      = {2020},
+  publisher = {Society for Industrial and Applied Mathematics},
+  pages     = {85--95},
+  doi       = {10.1137/1.9781611976229.9},
+  abstract  = {Running numerical simulations on HPC architectures requires distributing data to be processed over the various available processing units. This task is usually done by partitioning tools, whose primary goal is to balance the workload while minimizing inter-process communication. However, they do not take the memory load and memory capacity of the processing units into account. As this can lead to memory overflow, we propose a new approach to address mesh partitioning by including ghost cells in the memory usage and by considering memory capacity as a strong constraint to abide. We model the problem using a bipartite graph and present a new greedy algorithm that aims at producing a partition according to the memory capacity. This algorithm focuses on memory consumption, and we use it in a multi-level approach to improving the quality of the returned solutions during the refinement phase. The experimental results obtained from our benchmarks show that our approach can yield solutions respecting memory constraints for instances where traditional partitioning tools fail.},
+  month     = jan,
+}
+
+@Article{Boley2020,
+  author      = {Daniel Boley},
+  title       = {On Fast Computation of Directed Graph Laplacian Pseudo-Inverse},
+  date        = {2020-02-28},
+  eprint      = {arXiv:2002.12773},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {The Laplacian matrix and its pseudo-inverse for a strongly connected directed graph is fundamental in computing many properties of a directed graph. Examples include random-walk centrality and betweenness measures, average hitting and commute times, and other connectivity measures. These measures arise in the analysis of many social and computer networks. In this short paper, we show how a linear system involving the Laplacian may be solved in time linear in the number of edges, times a factor depending on the separability of the graph. This leads directly to the column-by-column computation of the entire Laplacian pseudo-inverse in time quadratic in the number of nodes, i.e., constant time per matrix entry. The approach is based on "off-the-shelf" iterative methods for which global linear convergence is guaranteed, without recourse to any matrix elimination algorithm.},
+  file        = {:http\://arxiv.org/pdf/2002.12773v1:PDF},
+  keywords    = {math.NA, cs.NA, 65F20, 65F10},
+}
+
+@InCollection{Kolodziej2020,
+  author    = {Scott P. Kolodziej and Timothy A. Davis},
+  title     = {Generalized Gains for Hybrid Vertex Separator Algorithms},
+  booktitle = {Proceedings of the {SIAM} Workshop on Combinatorial Scientific Computing},
+  year      = {2020},
+  publisher = {Society for Industrial and Applied Mathematics},
+  pages     = {96--105},
+  doi       = {10.1137/1.9781611976229.10},
+  abstract  = {In this paper, we derive generalized vertex gains for computing vertex separators, greatly improving the efficiency and data reuse in hybrid graph partitioning contexts. Using these generalized gains, we design a novel algorithm for computing vertex separators in arbitrary graphs and compare our approach to METIS, a popular graph partitioning library. In general, our hybrid algorithm scales well to very large graphs with the increased information sharing that the generalized gains afford.},
+  month     = jan,
+}
+
+@Article{Zhu2020a,
+  author   = {Y. {Zhu} and Y. {Liu} and G. {Zhang}},
+  title    = {{FT-PBLAS}: {PBLAS}-based Fault-tolerant Linear Algebra Computation on High-performance Computing Systems},
+  journal  = {IEEE Access},
+  year     = {2020},
+  pages    = {1-1},
+  issn     = {2169-3536},
+  doi      = {10.1109/ACCESS.2020.2975832},
+  abstract = {As high-performance computing (HPC) systems have scaled up, resilience has become a great challenge. To guarantee resilience, various kinds of hardware and software techniques have been proposed. However, among popular software fault-tolerant techniques, both the checkpoint-restart approach and the replication technique face challenges of scalability in the era of peta- and exa-scale systems due to their numerous processes. In this situation, algorithm-based approaches, or algorithm-based fault tolerance (ABFT) mechanisms, have become attractive because they are efficient and lightweight. Although the ABFT technique is algorithm-dependent, it is possible to implement it at a low level (e.g., in libraries for basic numerical algorithms) and make it application-independent. However, previous ABFT approaches have mainly aimed at achieving fault tolerance in integrated circuits (ICs) or at the architecture level and are therefore not suitable for HPC systems; e.g., they use checksums of rows and columns of matrices rather than checksums of blocks to detect errors. Furthermore, they cannot deal with errors caused by node failure, which are common in current HPC systems. To solve these problems, this paper proposes FT-PBLAS, a PBLAS-based library for fault-tolerant parallel linear algebra computations that can be regarded as a fault-tolerant version of the parallel basic linear algebra subprograms (PBLAS), because it provides a series of fault-tolerant versions of interfaces in PBLAS. To support the underlying error detection and recovery mechanisms in the library, we propose a block-checksum approach for non-fatal errors and a scheme for addressing node failure, respectively. We evaluate two fault-tolerant mechanisms and FT-PBLAS on HPC systems, and the experimental results demonstrate the performance of our library.},
+  keywords = {Fault tolerance;Fault tolerant systems;Libraries;Linear algebra;Computational modeling;Software;Integrated circuits;Algorithm-based fault tolerance;HPC systems;Node failure;Matrix multiplication;Linear algebra computations},
+}
+
+@Article{Dinh2020,
+  author      = {Grace Dinh and James Demmel},
+  title       = {Communication-Optimal Tilings for Projective Nested Loops with Arbitrary Bounds},
+  date        = {2020-02-28},
+  eprint      = {arXiv:2003.00119},
+  eprintclass = {cs.DS},
+  eprinttype  = {arXiv},
+  abstract    = {Reducing communication - either between levels of a memory hierarchy or between processors over a network - is a key component of performance optimization (in both time and energy) for many problems, including dense linear algebra, particle interactions, and machine learning. For these problems, which can be represented as nested-loop computations, previous tiling based approaches have been used to find both lower bounds on the communication required to execute them and optimal rearrangements, or blockings, to attain such lower bounds. However, such general approaches have typically assumed the problem sizes are large, an assumption that is often not met in practice. For instance, the classical $(\text{num arithmetic operations})/(\text{cache size})^{1/2}$ lower bound for matrix multiplication is not tight for matrix-vector multiplications, which must read in at least $O(\text{num arithmetic operations})$ words of memory; similar issues occur for almost all convolutions in machine learning applications, which use extremely small filter sizes (and therefore, loop bounds). In this paper, we provide an efficient way to both find and obtain, via an appropriate, efficiently constructible blocking, communication lower bounds and matching tilings which attain these lower bounds for nested loop programs with arbitrary loop bounds that operate on multidimensional arrays in the projective case, where the array indices are subsets of the loop indices. Our approach works on all such problems, regardless of dimensionality, size, memory access patterns, or number of arrays, and directly applies to (among other examples) matrix multiplication and similar dense linear algebra operations, tensor contractions, n-body pairwise interactions, pointwise convolutions, and fully connected layers.},
+  keywords    = {cs.DS},
+}
+
+@InProceedings{Menon2020,
+  author    = {Harshitha Menon and Abhinav Bhatele and Todd Gamblin},
+  title     = {Auto-tuning Parameter Choices in HPC Applications using Bayesian Optimization},
+  booktitle = {Proceedings of the 2020 IEEE International Parallel and Distributed Processing Symposium},
+  date      = {2020},
+  series    = {IPDPS '20},
+  abstract  = {High performance computing applications, runtimes, and platforms are becoming more configurable to enable applications to obtain better performance. As a result, users are increasingly presented with a multitude of options to configure application-specific as well as platform-level parameters. The combined effect of different parameter choices on application performance is difficult to predict, and an exhaustive evaluation of this combinatorial parameter space is practically infeasible. One approach to parameter selection is a user-guided exploration of a part of the space. However, such an ad hoc exploration of the parameter space can result in suboptimal choices. Therefore, an automatic approach that can efficiently explore the parameter space is needed. In this paper, we propose HiPerBOt, a Bayesian optimization based configuration selection framework to identify application and platform-level parameters that result in high performing configurations. We demonstrate the effectiveness of HiPerBOt in tuning parameters that include compiler flags, runtime settings, and application-level options for several parallel codes, including, Kripke, Hypre, LULESH, and OpenAtom.},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
