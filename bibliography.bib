@@ -4653,11 +4653,10 @@
   title         = {Sparse Matrix Code Dependence Analysis Simplification at Compile Time},
   date          = {2018},
   abstract      = {Analyzing array-based computations to determine data dependences is useful for many applications including automatic parallelization, race detection, computation and communication overlap, verification, and shape analysis. For sparse matrix codes, array data dependence analysis is made more difficult by the use of index arrays that make it possible to store only the nonzero entries of the matrix (e.g., in A[B[i]], B is an index array). Here, dependence analysis is often stymied by such indirect array accesses due to the values of the index array not being available at compile time. Consequently, many dependences cannot be proven unsatisfiable or determined until runtime. Nonetheless, index arrays in sparse matrix codes often have properties such as monotonicity of index array elements that can be exploited to reduce the amount of runtime analysis needed. In this paper, we contribute a formulation of array data dependence analysis that includes encoding index array properties as universally quantified constraints. This makes it possible to leverage existing SMT solvers to determine whether such dependences are unsatisfiable and significantly reduces the number of dependences that require runtime analysis in a set of eight sparse matrix kernels. Another contribution is an algorithm for simplifying the remaining satisfiable data dependences by discovering equalities and/or subset relationships. These simplifications are essential to make a runtime-inspection-based approach feasible.},
-  archiveprefix = {arXiv},
   bibsource     = {dblp computer science bibliography, https://dblp.org},
   biburl        = {https://dblp.org/rec/bib/journals/corr/abs-1807-10852},
   eprint        = {arXiv:1807.10852},
-  eprinttype    = {arXiv:},
+  eprinttype    = {arXiv},
   timestamp     = {Mon, 13 Aug 2018 16:46:36 +0200},
 }
 
@@ -5932,22 +5931,6 @@ The main insight of this work is that the combination of data duplication and De
   volume        = {abs/1612.01178},
 }
 
-@Article{Mohammadi2018a,
-  author        = {Mohammadi, Mahdi Soltan and Cheshmi, Kazem and Gopalakrishnan, Ganesh and Hall, Mary W. and Dehnavi, Maryam Mehri and Venkat, Anand and Yuki, Tomofumi and Strout, Michelle Mills},
-  title         = {Sparse Matrix Code Dependence Analysis Simplification at Compile Time},
-  journaltitle  = {CoRR},
-  date          = {2018},
-  volume        = {abs/1807.10852},
-  eprint        = {1807.10852},
-  eprinttype    = {arXiv},
-  url           = {http://arxiv.org/abs/1807.10852},
-  __markedentry = {[ap8213:]},
-  abstract      = {Analyzing array-based computations to determine data dependences is useful for many applications including automatic parallelization, race detection, computation and communication overlap, verification, and shape analysis. For sparse matrix codes, array data dependence analysis is made more difficult by the use of index arrays that make it possible to store only the nonzero entries of the matrix (e.g., in A[B[i]], B is an index array). Here, dependence analysis is often stymied by such indirect array accesses due to the values of the index array not being available at compile time. Consequently, many dependences cannot be proven unsatisfiable or determined until runtime. Nonetheless, index arrays in sparse matrix codes often have properties such as monotonicity of index array elements that can be exploited to reduce the amount of runtime analysis needed. In this paper, we contribute a formulation of array data dependence analysis that includes encoding index array properties as universally quantified constraints. This makes it possible to leverage existing SMT solvers to determine whether such dependences are unsatisfiable and significantly reduces the number of dependences that require runtime analysis in a set of eight sparse matrix kernels. Another contribution is an algorithm for simplifying the remaining satisfiable data dependences by discovering equalities and/or subset relationships. These simplifications are essential to make a runtime-inspection-based approach feasible.},
-  bibsource     = {dblp computer science bibliography, https://dblp.org},
-  biburl        = {https://dblp.org/rec/bib/journals/corr/abs-1807-10852},
-  timestamp     = {Mon, 13 Aug 2018 16:46:36 +0200},
-}
-
 @Article{Yang2018d,
   author        = {Yang, Carl and Buluç, Aydın and Owens, John D.},
   title         = {Implementing Push-Pull Efficiently in GraphBLAS},
@@ -5957,7 +5940,6 @@ The main insight of this work is that the combination of data duplication and De
   eprinttype    = {arXiv},
   __markedentry = {[ap8213:]},
   abstract      = {We factor Beamer's push-pull, also known as direction-optimized breadth-first-search (DOBFS) into 3 separable optimizations, and analyze them for generalizability, asymptotic speedup, and contribution to overall speedup. We demonstrate that masking is critical for high performance and can be generalized to all graph algorithms where the sparsity pattern of the output is known a priori. We show that these graph algorithm optimizations, which together constitute DOBFS, can be neatly and separably described using linear algebra and can be expressed in the GraphBLAS linear-algebra-based framework. We provide experimental evidence that with these optimizations, a DOBFS expressed in a linear-algebra-based graph framework attains competitive performance with state-of-the-art graph frameworks on the GPU and on a multi-threaded CPU, achieving 101 GTEPS on a Scale 22 RMAT graph.},
-  archiveprefix = {arXiv},
   bibsource     = {dblp computer science bibliography, https://dblp.org},
   biburl        = {https://dblp.org/rec/bib/journals/corr/abs-1804-03327},
   timestamp     = {Mon, 13 Aug 2018 16:48:40 +0200},
@@ -9552,20 +9534,25 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
 }
 
 @TechReport{Nesterov2020,
-  author     = {Yurii Nesterov},
-  title      = {Superfast second-order methods for Unconstrained Convex Optimization},
-  year       = {2020},
-  eprint     = {2020/07},
-  eprinttype = {Core Discussion Paper},
-  url        = {https://dial.uclouvain.be/pr/boreal/object/boreal%3A227146/datastream/PDF_01/view},
-  abstract   = {In this paper, we present new second-order methods with converge rate $O(k^{-4})$, where $k$ is the iteration counter. This is faster that the existing lower bound for this type of schemes [1, 2], which is $O(k^{-7/2})$. Our progress can be explained by a finer specification of the problem class. The main idea of this approach consists in implementation of the third-order scheme from [15] using the second-order oracle. At each iteration of our method, we solve a nontrivial auxiliary problem by a linearly convergent scheme based on the relative non-degeneracy condition [3, 10]. During this process, the Hessian of the objective function is computed once, and the gradient is computed $O(\text{ln}\frac{1}{\epsilon})$ times, where $\epsilon$ is the desired accuracy of the solution for our problem.},
+  author      = {Yurii Nesterov},
+  title       = {Superfast second-order methods for Unconstrained Convex Optimization},
+  institution = {UCL - SSH/LIDAM/CORE - Center for operations research and econometrics},
+  year        = {2020},
+  eprint      = {2020/07},
+  eprinttype  = {CORE Discussion Papers},
+  url         = {https://dial.uclouvain.be/pr/boreal/object/boreal%3A227146/datastream/PDF_01/view},
+  abstract    = {In this paper, we present new second-order methods with converge rate $O(k^{-4})$, where $k$ is the iteration counter. This is faster that the existing lower bound for this type of schemes [1, 2], which is $O(k^{-7/2})$. Our progress can be explained by a finer specification of the problem class. The main idea of this approach consists in implementation of the third-order scheme from [15] using the second-order oracle. At each iteration of our method, we solve a nontrivial auxiliary problem by a linearly convergent scheme based on the relative non-degeneracy condition [3, 10]. During this process, the Hessian of the objective function is computed once, and the gradient is computed $O(\text{ln}\frac{1}{\epsilon})$ times, where $\epsilon$ is the desired accuracy of the solution for our problem.},
 }
 
 @TechReport{Nesterov2020a,
-  author   = {Yurii Nesterov},
-  title    = {Inexact Accelerated High-Order Proximal-Point Methods},
-  year     = {2020},
-  abstract = {In this paper, we present a new framework of Bi-Level Unconstrained Minimization (BLUM) for development of accelerated methods in Convex Programming. These methods use approximations of the high-order proximal points, which are solutions of some auxiliary parametric optimization problems. For computing these points, we can use different methods, and, in particular, the lower-order schemes. This opens a possibility for the latter methods to overpass traditional limits of the Complexity Theory. As an example, we obtain a new second-order method with the convergence rate $O(k^{-4})$ , where $k$ is the iteration counter. This rate is better than the maximal possible rate of convergence for this type of methods, as applied to functions with Lipschitz continuous Hessian. We also present new methods with the exact auxiliary search procedure, which have the rate of convergence $O(k^{-(3p+1)/2})$, where $p \ge 1$ is the order of the proximal operator. The auxiliary problem at each iteration of these schemes is convex.},
+  author      = {Yurii Nesterov},
+  title       = {Inexact Accelerated High-Order Proximal-Point Methods},
+  institution = {UCL - SSH/LIDAM/CORE - Center for operations research and econometrics},
+  year        = {2020},
+  eprint      = {2020/08},
+  eprinttype  = {CORE Discussion Papers},
+  url         = {http://hdl.handle.net/2078.1/227219},
+  abstract    = {In this paper, we present a new framework of Bi-Level Unconstrained Minimization (BLUM) for development of accelerated methods in Convex Programming. These methods use approximations of the high-order proximal points, which are solutions of some auxiliary parametric optimization problems. For computing these points, we can use different methods, and, in particular, the lower-order schemes. This opens a possibility for the latter methods to overpass traditional limits of the Complexity Theory. As an example, we obtain a new second-order method with the convergence rate $O(k^{-4})$ , where $k$ is the iteration counter. This rate is better than the maximal possible rate of convergence for this type of methods, as applied to functions with Lipschitz continuous Hessian. We also present new methods with the exact auxiliary search procedure, which have the rate of convergence $O(k^{-(3p+1)/2})$, where $p \ge 1$ is the order of the proximal operator. The auxiliary problem at each iteration of these schemes is convex.},
 }
 
 @Article{Legat2020,
@@ -9993,6 +9980,30 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   date      = {2020},
   series    = {IPDPS '20},
   abstract  = {High performance computing applications, runtimes, and platforms are becoming more configurable to enable applications to obtain better performance. As a result, users are increasingly presented with a multitude of options to configure application-specific as well as platform-level parameters. The combined effect of different parameter choices on application performance is difficult to predict, and an exhaustive evaluation of this combinatorial parameter space is practically infeasible. One approach to parameter selection is a user-guided exploration of a part of the space. However, such an ad hoc exploration of the parameter space can result in suboptimal choices. Therefore, an automatic approach that can efficiently explore the parameter space is needed. In this paper, we propose HiPerBOt, a Bayesian optimization based configuration selection framework to identify application and platform-level parameters that result in high performing configurations. We demonstrate the effectiveness of HiPerBOt in tuning parameters that include compiler flags, runtime settings, and application-level options for several parallel codes, including, Kripke, Hypre, LULESH, and OpenAtom.},
+}
+
+@InProceedings{Vlaski2019,
+  author    = {S. Vlaski and A. H. Sayed},
+  title     = {Polynomial Escape-Time from Saddle Points in Distributed Non-Convex Optimization},
+  booktitle = {Proceedings of the 8th IEEE International Workshop on Computational Advances in Multi-Sensor Adaptive Processing},
+  year      = {2019},
+  series    = {CAMSAP '19},
+  month     = {12},
+  pages     = {171-175},
+  doi       = {10.1109/CAMSAP45676.2019.9022458},
+  abstract  = {The diffusion strategy for distributed learning from streaming data employs local stochastic gradient updates along with exchange of iterates over neighborhoods. In this work we establish that agents cluster around a network centroid in the mean-fourth sense and proceeded to study the dynamics of this point. We establish expected descent in non-convex environments in the large-gradient regime and introduce a short-term model to examine the dynamics over finite-time horizons. Using this model, we establish that the diffusion strategy is able to escape from strict saddle-points in $O(1/\mu)$ iterations, where $\mu$ denotes the step-size; it is also able to return approximately second-order stationary points in a polynomial number of iterations. Relative to prior works on the polynomial escape from saddle-points, most of which focus on centralized perturbed or stochastic gradient descent, our approach requires less restrictive conditions on the gradient noise process.},
+  keywords  = {Perturbation methods;Stochastic processes;Optimization;Eigenvalues and eigenfunctions;Approximation algorithms;Topology;Annealing;Stochastic optimization;adaptation;nonconvex costs;saddle point;escape time;gradient noise;stationary points;distributed optimization;diffusion learning},
+}
+
+@TechReport{Nesterov2020b,
+  author      = {Yurii Nesterov},
+  title       = {Inexact high-order proximal-point methods with auxiliary search procedure},
+  institution = {UCL - SSH/LIDAM/CORE - Center for operations research and econometrics},
+  year        = {2020},
+  eprint      = {2020/10},
+  eprinttype  = {CORE Discussion Papers},
+  url         = {http://hdl.handle.net/2078.1/227954},
+  abstract    = {In this paper, we complement the framework of Bi-Level Unconstrained Minimization (BLUM)[21] by a new pth-order proximal-point method convergent as $O(k^{-(3p+1)/2})$, where k is the iteration counter. As compared with [21], we replace the auxiliary line search by a convex segment search. This allows us to bound its complexity of by a logarithm of the desired accuracy. Each step in this search needs an approximate computation of the proximal-point operator. Under assumption on boundedness of $(p+1)$st derivative of the objective function, this can be done by one step of the pth-order augmented tensor method. In this way, for $p = 2$, we get a new second-order method with the rate of convergence $O(^{k-7/2})$ and logarithmic complexity of the auxiliary search at each iteration. Another possibility is to compute the proximal-point operator by lower-order minimization methods. As an example, for $p = 3$, we consider the upper-level process convergent as $O^{(k-5)}$. Assuming the boundedness of fourth derivative, an appropriate approximation of the proximal-point operator can be computed by a second-order method in logarithmic number of iterations. This combination gives a second-order scheme with much better complexity than the existing theoretical limits.},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
