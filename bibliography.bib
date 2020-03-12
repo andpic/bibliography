@@ -9998,6 +9998,32 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   abstract    = {In this paper, we complement the framework of Bi-Level Unconstrained Minimization (BLUM)[21] by a new pth-order proximal-point method convergent as $O(k^{-(3p+1)/2})$, where k is the iteration counter. As compared with [21], we replace the auxiliary line search by a convex segment search. This allows us to bound its complexity of by a logarithm of the desired accuracy. Each step in this search needs an approximate computation of the proximal-point operator. Under assumption on boundedness of $(p+1)$st derivative of the objective function, this can be done by one step of the pth-order augmented tensor method. In this way, for $p = 2$, we get a new second-order method with the rate of convergence $O(^{k-7/2})$ and logarithmic complexity of the auxiliary search at each iteration. Another possibility is to compute the proximal-point operator by lower-order minimization methods. As an example, for $p = 3$, we consider the upper-level process convergent as $O^{(k-5)}$. Assuming the boundedness of fourth derivative, an appropriate approximation of the proximal-point operator can be computed by a second-order method in logarithmic number of iterations. This combination gives a second-order scheme with much better complexity than the existing theoretical limits.},
 }
 
+@Article{Gruetzmacher2020,
+  author    = {Thomas Grützmacher and Terry Cojean and Goran Flegar and Hartwig Anzt and Enrique S. Quintana-Ortı́},
+  title     = {Acceleration of {PageRank} with Customized Precision Based on Mantissa Segmentation},
+  doi       = {10.1145/3380934},
+  number    = {1},
+  pages     = {1--19},
+  volume    = {7},
+  abstract  = {We describe the application of a communication-reduction technique for the PageRank algorithm that dynamically adapts the precision of the data access to the numerical requirements of the algorithm as the iteration converges. Our variable-precision strategy, using a customized precision format based on mantissa segmentation (CPMS), abandons the IEEE 754 single- and double-precision number representation formats employed in the standard implementation of PageRank, and instead handles the data in memory using a customized floating-point format. The customized format enables fast data access in different accuracy, prevents overflow/underflow by preserving the IEEE 754 double-precision exponent, and efficiently avoids data duplication, since all bits of the original IEEE 754 double-precision mantissa are preserved in memory, but re-organized for efficient reduced precision access. With this approach, the truncated values (omitting significand bits), as well as the original IEEE double-precision values, can be retrieved without duplicating the data in different formats.\\ Our numerical experiments on an NVIDIA V100 GPU (Volta architecture) and a server equipped with two Intel Xeon Platinum 8168 CPUs (48 cores in total) expose that, compared with a standard IEEE double-precision implementation, the CPMS-based PageRank completes about 10\% faster if high-accuracy output is needed, and about 30\% faster if reduced output accuracy is acceptable.},
+  journal   = {{ACM} Transactions on Parallel Computing},
+  month     = {3},
+  publisher = {Association for Computing Machinery ({ACM})},
+  year      = {2020},
+}
+
+@Article{Kahl2020,
+  author      = {Karsten Kahl and Bruno Lang},
+  date        = {2020-03-06},
+  title       = {On the equivalence of the Hermitian eigenvalue problem and hypergraph edge elimination},
+  eprint      = {2003.03145},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {It is customary to identify sparse matrices with the corresponding adjacency or incidence graph. For the solution of linear systems of equations using Gaussian elimination, the representation by its adjacency graph allows a symbolic computation that can be used to predict memory footprints and enables the determination of near-optimal elimination orderings based on heuristics. The Hermitian eigenvalue problem on the other hand seems to evade such treatment at first glance due to its inherent iterative nature. In this paper we prove this assertion wrong by showing the equivalence of the Hermitian eigenvalue problem with a symbolic edge elimination procedure. A symbolic calculation based on the incidence graph of the matrix can be used in analogy to the symbolic phase of Gaussian elimination to develop heuristics which reduce memory footprint and computations. Yet, we also show that the question of an optimal elimination strategy remains NP-hard, in analogy to the linear systems case.},
+  file        = {:http\://arxiv.org/pdf/2003.03145v1:PDF},
+  keywords    = {math.NA, cs.NA, math.CO, 65F15, 05C50, 05C65, 68R10},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
