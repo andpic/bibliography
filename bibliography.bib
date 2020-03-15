@@ -10024,6 +10024,76 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   keywords    = {math.NA, cs.NA, math.CO, 65F15, 05C50, 05C65, 68R10},
 }
 
+@Article{Thebelt2020,
+  author      = {Alexander Thebelt and Jan Kronqvist and Miten Mistry and Robert M. Lee and Nathan Sudermann-Merx and Ruth Misener},
+  date        = {2020-03-10},
+  title       = {ENTMOOT: A Framework for Optimization over Ensemble Tree Models},
+  eprint      = {2003.04774},
+  eprintclass = {stat.ML},
+  eprinttype  = {arXiv},
+  abstract    = {Gradient boosted trees and other regression tree models perform well in a wide range of real-world, industrial applications. These tree models (i) offer insight into important prediction features, (ii) effectively manage sparse data, and (iii) have excellent prediction capabilities. Despite their advantages, they are generally unpopular for decision-making tasks and black-box optimization, which is due to their difficult-to-optimize structure and the lack of a reliable uncertainty measure. ENTMOOT is our new framework for integrating (already trained) tree models into larger optimization problems. The contributions of ENTMOOT include: (i) explicitly introducing a reliable uncertainty measure that is compatible with tree models, (ii) solving the larger optimization problems that incorporate these uncertainty aware tree models, (iii) proving that the solutions are globally optimal, i.e. no better solution exists. In particular, we show how the ENTMOOT approach allows a simple integration of tree models into decision-making and black-box optimization, where it proves as a strong competitor to commonly-used frameworks.},
+  file        = {:http\://arxiv.org/pdf/2003.04774v1:PDF},
+  keywords    = {stat.ML, cs.AI, cs.LG, math.OC},
+}
+
+@Article{Carmon2020,
+  author      = {Yair Carmon and John C. Duchi},
+  date        = {2020-03-10},
+  title       = {First-Order Methods for Nonconvex Quadratic Minimization},
+  eprint      = {2003.04546},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {We consider minimization of indefinite quadratics with either trust-region (norm) constraints or cubic regularization. Despite the nonconvexity of these problems we prove that, under mild assumptions, gradient descent converges to their global solutions, and give a non-asymptotic rate of convergence for the cubic variant. We also consider Krylov subspace solutions and establish sharp convergence guarantees to the solutions of both trust-region and cubic-regularized problems. Our rates mirror the behavior of these methods on convex quadratics and eigenvector problems, highlighting their scalability. When we use Krylov subspace solutions to approximate the cubic-regularized Newton step, our results recover the strongest known convergence guarantees to approximate second-order stationary points of general smooth nonconvex functions.},
+  file        = {:http\://arxiv.org/pdf/2003.04546v1:PDF},
+  keywords    = {math.OC},
+}
+
+@Article{Duff2020,
+  author    = {Iain Duff and Jonathan Hogg and Florent Lopez},
+  title     = {A New Sparse $LDL^T$ Solver Using A Posteriori Threshold Pivoting},
+  doi       = {10.1137/18m1225963},
+  number    = {2},
+  pages     = {C23--C42},
+  volume    = {42},
+  abstract  = {The factorization of sparse symmetric indefinite systems is particularly challenging since pivoting is required to maintain stability of the factorization. Pivoting techniques generally offer limited parallelism and are associated with significant data movement hindering the scalability of these methods. Variants of the threshold partial pivoting (TPP) algorithm, for example, have often been used because of its numerical robustness but standard implementations exhibit poor parallel performance. On the other hand, some methods trade stability for performance on parallel architectures such as the supernode Bunch--Kaufman used in the PARDISO solver. In this case, however, the factors obtained might not be used to accurately compute the solution of the system. For this reason we have designed a task-based $LDL^{T}$ factorization algorithm based on a new pivoting strategy called a posteriori threshold pivoting (APTP) that is much more suitable for modern multicore architectures and has the same numerical robustness as the TPP strategy. We implemented our algorithm in a new version of the SPRAL sparse symmetric indefinite direct solver, which initially supported GPU-only factorization. We have used OpenMP 4 task features to implement a multifrontal algorithm with dense factorizations using the novel APTP, and we show that it performs favorably compared to the state-of-the-art solvers HSL\_MA86, HSL\_MA97 and PARDISO both in terms of performance on a multicore machine and in terms of numerical robustness. Finally we show that this new solver is able to make use of GPU devices for accelerating the factorization on heterogeneous architectures.},
+  journal   = {{SIAM} Journal on Scientific Computing},
+  month     = {1},
+  publisher = {Society for Industrial {\&} Applied Mathematics ({SIAM})},
+  year      = {2020},
+}
+
+@Article{Tanaka2020,
+  author      = {Yuichi Tanaka and Yonina C. Eldar and Antonio Ortega and Gene Cheung},
+  date        = {2020-03-09},
+  title       = {Sampling on Graphs: From Theory to Applications},
+  eprint      = {2003.03957},
+  eprintclass = {eess.SP},
+  eprinttype  = {arXiv},
+  abstract    = {The study of sampling signals on graphs, with the goal of building an analog of sampling for standard signals in the time and spatial domains, has attracted considerable attention recently. Beyond adding to the growing theory on graph signal processing (GSP), sampling on graphs has various promising applications. In this article, we review current progress on sampling over graphs focusing on theory and potential applications. Most methodologies used in graph signal sampling are designed to parallel those used in sampling for standard signals, however, sampling theory for graph signals significantly differs from that for Shannon--Nyquist and shift invariant signals. This is due in part to the fact that the definitions of several important properties, such as shift invariance and bandlimitedness, are different in GSP systems. Throughout, we discuss similarities and differences between standard and graph sampling and highlight open problems and challenges.},
+  file        = {:http\://arxiv.org/pdf/2003.03957v2:PDF},
+  keywords    = {eess.SP, cs.LG},
+}
+
+@Article{Miasnikof2020,
+  author      = {Pierre Miasnikof and Seo Hong and Yuri Lawryshyn},
+  date        = {2020-03-09},
+  title       = {Graph Clustering Via QUBO and Digital Annealing},
+  eprint      = {2003.03872},
+  eprintclass = {cs.SI},
+  eprinttype  = {arXiv},
+  abstract    = {This article empirically examines the computational cost of solving a known hard problem, graph clustering, using novel purpose-built computer hardware. We express the graph clustering problem as an intra-cluster distance or dissimilarity minimization problem. We formulate our poblem as a quadratic unconstrained binary optimization problem and employ a novel computer architecture to obtain a numerical solution. Our starting point is a clustering formulation from the literature. This formulation is then converted to a quadratic unconstrained binary optimization formulation. Finally, we use a novel purpose-built computer architecture to obtain numerical solutions. For benchmarking purposes, we also compare computational performances to those obtained using a commercial solver, Gurobi, running on conventional hardware. Our initial results indicate the purpose-built hardware provides equivalent solutions to the commercial solver, but in a very small fraction of the time required.},
+  file        = {:http\://arxiv.org/pdf/2003.03872v1:PDF},
+  keywords    = {cs.SI, cs.DM},
+}
+
+@TechReport{Brock2020,
+  author      = {Benjamin Brock and Aydın Buluç and Timothy G. Mattson and Scott McMillan and Jose E. Moreira},
+  date        = {2020},
+  institution = {U.C. Berkeley},
+  title       = {A Roadmap for the {GraphBLAS} {C++} {API}},
+  abstract    = {The GraphBLAS is an API for graph algorithms expressed in terms of linear algebra. The current GraphBLAS specification is for the C Programming Language. Implementations of the GraphBLAS exposed a number of limitations due to C that restrict both the expressiveness and the performance of the GraphBLAS. The C++ language’s first-class support for generics, including template metaprogramming, addresses these limitations, yielding a simpler GraphBLAS API that should deliver better performance especially for methods based on user-defined types and operators. When combined with the pervasiveness of C++ across many domains as well as within largescale distributed codes, we see a compelling argument to define a GraphBLAS C++ API. This paper presents a roadmap for the development of a GraphBLAS C++ API with a focus on the open issues we must resolve before completing the specification. Our goal is to foster discussion within the GraphBLAS user community and receive feedback on the directions we are taking with the GraphBLAS C++ API.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
