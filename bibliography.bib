@@ -10094,6 +10094,41 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   abstract    = {The GraphBLAS is an API for graph algorithms expressed in terms of linear algebra. The current GraphBLAS specification is for the C Programming Language. Implementations of the GraphBLAS exposed a number of limitations due to C that restrict both the expressiveness and the performance of the GraphBLAS. The C++ language’s first-class support for generics, including template metaprogramming, addresses these limitations, yielding a simpler GraphBLAS API that should deliver better performance especially for methods based on user-defined types and operators. When combined with the pervasiveness of C++ across many domains as well as within largescale distributed codes, we see a compelling argument to define a GraphBLAS C++ API. This paper presents a roadmap for the development of a GraphBLAS C++ API with a focus on the open issues we must resolve before completing the specification. Our goal is to foster discussion within the GraphBLAS user community and receive feedback on the directions we are taking with the GraphBLAS C++ API.},
 }
 
+@Article{Nayak2020,
+  author      = {Pratik Nayak and Terry Cojean and Hartwig Anzt},
+  date        = {2020-03-11},
+  title       = {Evaluating Abstract Asynchronous Schwarz solvers},
+  eprint      = {2003.05361v1},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {With the commencement of the exascale computing era, we realize that the majority of the leadership supercomputers are heterogeneous and massively parallel even on a single node with multiple co-processors such as GPUs and multiple cores on each node. For example, ORNLs Summit accumulates six NVIDIA Tesla V100s and 42 core IBM Power9s on each node. Synchronizing across all these compute resources in a single node or even across multiple nodes is prohibitively expensive. Hence it is necessary to develop and study asynchronous algorithms that circumvent this issue of bulk-synchronous computing for massive parallelism. In this study, we examine the asynchronous version of the abstract Restricted Additive Schwarz method as a solver where we do not explicitly synchronize, but allow for communication of the data between the sub-domains to be completely asynchronous thereby removing the bulk synchronous nature of the algorithm. We accomplish this by using the onesided RMA functions of the MPI standard. We study the benefits of using such an asynchronous solver over its synchronous counterpart on both multi-core architectures and on multiple GPUs. We also study the communication patterns and local solvers and their effect on the global solver. Finally, we show that this concept can render attractive runtime benefits over the synchronous counterparts.},
+  file        = {:http\://arxiv.org/pdf/2003.05361v1:PDF},
+  keywords    = {cs.DC, cs.MS},
+}
+
+@Article{Yu2020,
+  author      = {Tong Yu and Hong Zhu},
+  date        = {2020-03-12},
+  title       = {Hyper-Parameter Optimization: A Review of Algorithms and Applications},
+  eprint      = {2003.05689v1},
+  eprintclass = {cs.LG},
+  eprinttype  = {arXiv},
+  abstract    = {Since deep neural networks were developed, they have made huge contributions to everyday lives. Machine learning provides more rational advice than humans are capable of in almost every aspect of daily life. However, despite this achievement, the design and training of neural networks are still challenging and unpredictable procedures. To lower the technical thresholds for common users, automated hyper-parameter optimization (HPO) has become a popular topic in both academic and industrial areas. This paper provides a review of the most essential topics on HPO. The first section introduces the key hyper-parameters related to model training and structure, and discusses their importance and methods to define the value range. Then, the research focuses on major optimization algorithms and their applicability, covering their efficiency and accuracy especially for deep learning networks. This study next reviews major services and toolkits for HPO, comparing their support for state-of-the-art searching algorithms, feasibility with major deep learning frameworks, and extensibility for new modules designed by users. The paper concludes with problems that exist when HPO is applied to deep learning, a comparison between optimization algorithms, and prominent approaches for model evaluation with limited computational resources.},
+  file        = {:http\://arxiv.org/pdf/2003.05689v1:PDF},
+  keywords    = {cs.LG, stat.ML},
+}
+
+@Article{Chen2020b,
+  author    = {Yuedan Chen and Guoqing Xiao and Fan Wu and Zhuo Tang and Keqin Li},
+  title     = {{tpSpMV}: A Two-Phase Large-scale Sparse Matrix-Vector Multiplication Kernel for Manycore Architectures},
+  doi       = {10.1016/j.ins.2020.03.020},
+  abstract  = {Sparse matrix-vector multiplication (SpMV) is one of the important subroutines in numerical linear algebras widely used in lots of large-scale applications. Accelerating SpMV on multicore and manycore architectures based on Compressed Sparse Row (CSR) format via row-wise parallelization is one of the most popular directions. However, there are three main challenges in optimizing parallel CSR-based SpMV: (a) limited local memory of each computing unit can be overwhelmed by assignments to long rows of large-scale sparse matrices; (b) irregular accesses to the input vector result in expensive memory access latency; (c) sparse data structure leads to low bandwidth usage. This paper proposes a two-phase large-scale SpMV, called tpSpMV, based on the memory structure and computing architecture of multicore and manycore architectures to alleviate the three main difficulties. First, we propose the two-phase parallel execution technique for tpSpMV that performs parallel CSR-based SpMV into two separate phases to overcome the computational scale limitation. Second, we respectively propose the adaptive partitioning methods and parallelization designs using the local memory caching technique for the two phases to exploit the architectural advantages of the high-performance computing platforms and alleviate the problem of high memory access latency. Third, we design several optimizations, such as data reduction, aligned memory accessing, and pipeline technique, to improve bandwidth usage and optimize tpSpMV’s performance. Experimental results on SW26010 CPUs of the Sunway TaihuLight supercomputer prove that tpSpMV achieves up to 28.61 speedups and yields the performance improvement of 13.16\% over the state-of-the-art work on average.},
+  journal   = {Information Sciences},
+  month     = mar,
+  publisher = {Elsevier {BV}},
+  year      = {2020},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
