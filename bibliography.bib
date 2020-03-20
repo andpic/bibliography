@@ -10129,6 +10129,29 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   year      = {2020},
 }
 
+@Article{Acer2020,
+  author    = {Seher Acer and Cevdet Aykanat},
+  title     = {Reordering sparse matrices into block-diagonal column-overlapped form},
+  doi       = {10.1016/j.jpdc.2020.03.002},
+  abstract  = {Many scientific and engineering applications necessitate computing the minimum norm solution of a sparse underdetermined linear system of equations. The minimum 2-norm solution of such systems can be obtained by a recent parallel algorithm, whose numerical effectiveness and parallel scalability are validated in both shared- and distributed-memory architectures. This parallel algorithm assumes the coefficient matrix in a block-diagonal column-overlapped (BDCO) form, which is a variant of the block-diagonal form where the successive diagonal blocks may overlap along their columns. The total overlap size of the BDCO form is an important metric in the performance of the subject parallel algorithm since it determines the size of the reduced system, solution of which is a bottleneck operation in the parallel algorithm. In this work, we propose a hypergraph partitioning model for reordering sparse matrices into BDCO form with the objective of minimizing the total overlap size and the constraint of maintaining balance on the number of nonzeros of the diagonal blocks. Our model makes use of existing partitioning tools that support fixed vertices in the recursive bipartitioning paradigm. Experimental results validate the use of our model as it achieves small overlap size and balanced diagonal blocks.},
+  journal   = {Journal of Parallel and Distributed Computing},
+  month     = {3},
+  publisher = {Elsevier {BV}},
+  year      = {2020},
+}
+
+@Article{Chilukuri2020,
+  author      = {Aditya Chilukuri and Josh Milthorpe and Beau Johnston},
+  date        = {2020-03-12},
+  title       = {Characterizing Optimizations to Memory Access Patterns using Architecture-Independent Program Features},
+  eprint      = {2003.06064v1},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {High-performance computing developers are faced with the challenge of optimizing the performance of OpenCL workloads on diverse architectures. The Architecture-Independent Workload Characterization (AIWC) tool is a plugin for the Oclgrind OpenCL simulator that gathers metrics of OpenCL programs that can be used to understand and predict program performance on an arbitrary given hardware architecture. However, AIWC metrics are not always easily interpreted and do not reflect some important memory access patterns affecting efficiency across architectures. We propose a new metric of parallel spatial locality -- the closeness of memory accesses simultaneously issued by OpenCL work-items (threads). We implement the parallel spatial locality metric in the AIWC framework, and analyse gathered results on matrix multiply and the Extended OpenDwarfs OpenCL benchmarks. The differences in the observed parallel spatial locality metric across implementations of matrix multiply reflect the optimizations performed. The new metric can be used to distinguish between the OpenDwarfs benchmarks based on the memory access patterns affecting their performance on various architectures. The improvements suggested to AIWC will help HPC developers better understand memory access patterns of complex codes and guide optimization of codes for arbitrary hardware targets.},
+  file        = {:http\://arxiv.org/pdf/2003.06064v1:PDF},
+  keywords    = {cs.DC},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
