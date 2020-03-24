@@ -4294,15 +4294,16 @@
   keywords  = {concurrency control;data handling;graph theory;graphics processing units;matrix algebra;parallel algorithms;storage management;GPU;Nvidia concurrency-prioritising CUSPARSE algorithm;OpenCL;data locality;graph partitioning;input matrix;low-latency local memories;multicore CPU;numerical optimisation problem;sparse triangular system of linear equations;Algorithm design and analysis;Concurrent computing;Context;Data structures;Graphics processing units;Partitioning algorithms;Sparse matrices;CUSPARSE;GPU;OpenCL;concurrency;data locality;linear algebra;sparse;systems of equations},
 }
 
-@Article{Davis2018,
+@Article{Davis2020,
   author       = {Davis, Timothy A. and Hager, William W. and Kolodziej, Scott P. and Yearalan, S. Nuri},
-  title        = {Algorithm {XXX}: {Mongoose}, A Graph Coarsening and Partitioning Library},
   journaltitle = {ACM Transactions on Mathematical Software},
-  year         = {2018},
-  date         = {2018-04},
-  volume       = {0},
-  number       = {0},
+  title        = {Algorithm 1003: {Mongoose}, A Graph Coarsening and Partitioning Library},
+  doi          = {10.1145/3387915},
+  issue        = {1},
+  number       = {7},
+  volume       = {46},
   abstract     = {Partitioning  graphs  is  a  common  and  useful  operation  in  many  areas,  from  parallel  computing  to  VLSI design to sparse matrix algorithms. In this paper, we introduce Mongoose, a multilevel hybrid graph partitioning algorithm and library. Building on previous work in multilevel partitioning frameworks and combinatoric approaches, we introduce novel stall-reducing and stall-free coarsening strategies, as well as an efficient hybrid algorithm leveraging 1) traditional combinatoric methods and 2) continuous quadratic programming  formulations. We  demonstrate how  this  new hybrid  algorithm outperforms  either strategy in isolation, and we also compare Mongoose to METIS and demonstrate its effectiveness on large and social networking (power law) graphs.},
+  year         = {2020},
 }
 
 @InProceedings{Hong2018,
@@ -10150,6 +10151,42 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   abstract    = {High-performance computing developers are faced with the challenge of optimizing the performance of OpenCL workloads on diverse architectures. The Architecture-Independent Workload Characterization (AIWC) tool is a plugin for the Oclgrind OpenCL simulator that gathers metrics of OpenCL programs that can be used to understand and predict program performance on an arbitrary given hardware architecture. However, AIWC metrics are not always easily interpreted and do not reflect some important memory access patterns affecting efficiency across architectures. We propose a new metric of parallel spatial locality -- the closeness of memory accesses simultaneously issued by OpenCL work-items (threads). We implement the parallel spatial locality metric in the AIWC framework, and analyse gathered results on matrix multiply and the Extended OpenDwarfs OpenCL benchmarks. The differences in the observed parallel spatial locality metric across implementations of matrix multiply reflect the optimizations performed. The new metric can be used to distinguish between the OpenDwarfs benchmarks based on the memory access patterns affecting their performance on various architectures. The improvements suggested to AIWC will help HPC developers better understand memory access patterns of complex codes and guide optimization of codes for arbitrary hardware targets.},
   file        = {:http\://arxiv.org/pdf/2003.06064v1:PDF},
   keywords    = {cs.DC},
+}
+
+@Article{Chowdhury2020,
+  author      = {Agniva Chowdhury and Palma London and Haim Avron and Petros Drineas},
+  date        = {2020-03-18},
+  title       = {Speeding up Linear Programming using Randomized Linear Algebra},
+  eprint      = {2003.08072v1},
+  eprintclass = {cs.DS},
+  eprinttype  = {arXiv},
+  abstract    = {Linear programming (LP) is an extremely useful tool and has been successfully applied to solve various problems in a wide range of areas, including operations research, engineering, economics, or even more abstract mathematical areas such as combinatorics. It is also used in many machine learning applications, such as $\mathcal{l}_1$-regularized SVMs, basis pursuit, nonnegative matrix factorization, etc. Interior Point Methods (IPMs) are one of the most popular methods to solve LPs both in theory and in practice. Their underlying complexity is dominated by the cost of solving a system of linear equations at each iteration. In this paper, we consider \emph{infeasible} IPMs for the special case where the number of variables is much larger than the number of constraints. Using tools from Randomized Linear Algebra, we present a preconditioning technique that, when combined with the Conjugate Gradient iterative solver, provably guarantees that infeasible IPM algorithms (suitably modified to account for the error incurred by the approximate solver), converge to a feasible, approximately optimal solution, without increasing their iteration complexity. Our empirical evaluations verify our theoretical results on both real-world and synthetic data.},
+  file        = {:http\://arxiv.org/pdf/2003.08072v1:PDF},
+  keywords    = {cs.DS, math.OC},
+}
+
+@InProceedings{Gu2019,
+  author    = {Ruidong Gu and Paul Beata and Michela Becchi},
+  booktitle = {Proceedings of the 2019 {IEEE} International Symposium on Workload Characterization},
+  title     = {Characterizing the Performance/Accuracy Tradeoff of High-Precision Applications via Auto-tuning},
+  doi       = {10.1109/iiswc47752.2019.9042137},
+  publisher = {{IEEE}},
+  series    = {IISWC '19},
+  abstract  = {Many scientific applications (e.g., molecular dynamics, climate modeling and astrophysical simulations) rely on floating-point arithmetic. Floating-point representation is by definition a finite approximation of real numbers, and thus it can lead to inaccuracy and reproducibility issues. To overcome these issues, existing work has proposed high-precision floating-point libraries to be used in scientific simulations, but they come at the cost of significant additional execution time. In this work we analyze performance and accuracy effects from tuning down groups of variables and operations guided by compile-time considerations. The goal of our tuning approach is to convert existing floating-point programs to mixed precision while balancing accuracy and performance. To this end, the tuner starts by maximizing accuracy through the use of a high-precision library and then achieves performance gains under a given error bound by incrementally tuning down groups of variables and operations from higher to lower precision (e.g., double precision). The approach provides input-data independence in its results by defining tuning strategies based on loop structures and the investigation of floating-point computation patterns. In addition, it has a smaller search space than exhaustive or bitonic search algorithms, leading to a significant reduction in tuning time, especially on larger, long-running applications. We tested our tuning on a computational fluid dynamics (CFD) application.},
+  month     = {11},
+  year      = {2019},
+}
+
+@Article{Anaissi2020,
+  author      = {Ali Anaissi and Basem Suleiman and Seid Miad Zandavi},
+  date        = {2020-03-18},
+  title       = {NeCPD: An Online Tensor Decomposition with Optimal Stochastic Gradient Descent},
+  eprint      = {2003.08844v1},
+  eprintclass = {cs.LG},
+  eprinttype  = {arXiv},
+  abstract    = {Multi-way data analysis has become an essential tool for capturing underlying structures in higher-order datasets stored in tensor $\mathcal{X} \in \mathbb{R} ^{I_1 \times \dots \times I_N}$. CANDECOMP/PARAFAC (CP) decomposition has been extensively studied and applied to approximate $\mathcal{X}$ by $N$ loading matrices $A^{(1)}, \dots, A^{(N)}$ where $N$ represents the order of the tensor. We propose a new efficient CP decomposition solver named NeCPD for non-convex problem in multi-way online data based on stochastic gradient descent (SGD) algorithm. SGD is very useful in online setting since it allows us to update $\mathcal{X}^{(t+1)}$ in one single step. In terms of global convergence, it is well known that SGD stuck in many saddle points when it deals with non-convex problems. We study the Hessian matrix to identify theses saddle points, and then try to escape them using the perturbation approach which adds little noise to the gradient update step. We further apply Nesterov's Accelerated Gradient (NAG) method in SGD algorithm to optimally accelerate the convergence rate and compensate Hessian computational delay time per epoch. Experimental evaluation in the field of structural health monitoring using laboratory-based and real-life structural datasets show that our method provides more accurate results compared with existing online tensor analysis methods.},
+  file        = {:http\://arxiv.org/pdf/2003.08844v1:PDF},
+  keywords    = {cs.LG, stat.ML},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
