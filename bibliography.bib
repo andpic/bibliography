@@ -10273,6 +10273,51 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   year      = {2020},
 }
 
+@InCollection{Favaro2020,
+  author    = {Federico Favaro and Ernesto Dufrechou and Pablo Ezzatti and Juan P. Oliver},
+  booktitle = {Applied Reconfigurable Computing. Architectures, Tools, and Applications},
+  title     = {Exploring {FPGA} Optimizations to Compute Sparse Numerical Linear Algebra Kernels},
+  doi       = {10.1007/978-3-030-44534-8_20},
+  pages     = {258--268},
+  publisher = {Springer International Publishing},
+  abstract  = {The solution of sparse triangular linear systems (sptrsv) is the bottleneck of many numerical methods. Thus, it is crucial to count with efficient implementations of such kernel, at least for commonly used platforms. In this sense, Field–Programmable Gate Arrays (FPGAs) have evolved greatly in the last years, entering the HPC hardware ecosystem largely due to their superior energy–efficiency relative to more established accelerators. Up until recently, the design for FPGAs implied the use of low–level Hardware Description Languages (HDL) such as VHDL or Verilog. Nowadays, manufacturers are making a large effort to adopt High–Level Synthesis languages like C/C++ or OpenCL, but the gap between their performance and that of HDLs is not yet fully studied. This work focuses on the performance offered by FPGAs to compute the sptrsv using OpenCL. For this purpose, we implement different parallel variants of this kernel and experimentally evaluate several setups, varying among others the work–group size, the number of compute units, the unroll–factor and the vectorization–factor.},
+  year      = {2020},
+}
+
+@Article{Deng2020,
+  author    = {Xiaoge Deng and Tao Sun and Peibing Du and Dongsheng Li},
+  title     = {A Nonconvex Implementation of Sparse Subspace Clustering: Algorithm and Convergence Analysis},
+  doi       = {10.1109/access.2020.2981740},
+  pages     = {54741--54750},
+  volume    = {8},
+  abstract  = {Subspace clustering has been widely applied to detect meaningful clusters in high-dimensional data spaces. And the sparse subspace clustering (SSC) obtains superior clustering performance by solving a relaxed $\epsilon_0$-minimization problem with  $\epsilon_1$-norm. Although the use of  $\epsilon_1$-norm instead of the  $\epsilon_0$ one can make the object function convex, it causes large errors on large coefficients in some cases. In this paper, we study the sparse subspace clustering algorithm based on a nonconvex modeling formulation. Specifically, we introduce a nonconvex pseudo-norm that makes a better approximation to the  $\epsilon_0$-minimization than the traditional  $\epsilon_1$-minimization framework and consequently finds a better affinity matrix. However, this formulation makes the optimization task challenging due to that the traditional alternating direction method of multipliers (ADMM) encounters troubles in solving the nonconvex subproblems. In view of this, the reweighted techniques are employed in making these subproblems convex and easily solvable. We provide several guarantees to derive the convergence results, which proves that the nonconvex algorithm is globally convergent to a critical point. Experiments on two real-world problems of motion segmentation and face clustering show that our method outperforms state-of-the-art techniques.},
+  journal   = {{IEEE} Access},
+  publisher = {Institute of Electrical and Electronics Engineers ({IEEE})},
+  year      = {2020},
+}
+
+@Article{Wei2020,
+  author    = {Xiaohui Wei and Hengshan Yue and Shang Gao and Lina Li and Ruyu Zhang and Jingweijia Tan},
+  title     = {G-{SEAP}: Analyzing and characterizing soft-error aware approximation in {GPGPUs}},
+  doi       = {10.1016/j.future.2020.03.040},
+  abstract  = {As General-Purpose Graphics Processing Units (GPGPUs) become pervasive for the High-Performance Computing (HPC), ensuring that programs can be protected from soft errors has become increasingly important. Soft errors may cause Silent Data Corruptions (SDCs), which produces erroneous execution results silently. Due to the massive parallelism of GPGPUs, fully protecting them against soft errors introduces nontrivial overhead. Fortunately, imprecise execution outcomes are inherently tolerable for some HPC programs due to the nature of these applications. Leveraging the feature, selective soft error protection can be applied to reduce energy consumptions.\\ In this work, we first propose a GPGPU-based Soft-Error aware APproximation analysis framework (G-SEAP) to characterize the approximation characteristics of soft errors. Based on G-SEAP, we perform an exhaustive analysis for 17 representative HPC benchmarks and observe 72.7\% of SDCs on average are approximable. We also observe that the dataflow of application, kernel function reliability requirement, instruction-type, and data bit-location are all important factors for program's correctness. Lastly, according to observations, we further design an approximate Error Correction Codes (ECCs) mechanism and an approximate instruction duplication technique to illustrate how G-SEAP provides useful guidance for energy-efficient soft-error elimination in GPGPUs.},
+  journal   = {Future Generation Computer Systems},
+  month     = {3},
+  publisher = {Elsevier {BV}},
+  year      = {2020},
+}
+
+@Article{Fasi2020,
+  author     = {Fasi, Massimiliano and Higham, Nicholas},
+  date       = {2020},
+  title      = {Generating extreme-scale matrices with specified singular values or condition numbers},
+  eprint     = {MIMS EPrint:2020.8},
+  eprinttype = {MIMS EPrint},
+  issn       = {1749-9097},
+  url        = {http://eprints.maths.manchester.ac.uk/2755/1/fahi20.pdf},
+  abstract   = {A widely used form of test matrix is the randsvd matrix constructed as the product $A = U \Sigma V^*$, where $U$ and $V$ are random orthogonal or unitary matrices from the Haar distribution and $\Sigma$ is a diagonal matrix of singular values. Such matrices are random but have a specified singular value distribution. The cost of forming an $m \times n$ randsvd matrix is $m^3 + n ^3$ flops, which is prohibitively expensive at extreme scale; moreover, the randsvd construction requires a significant amount of communication, making it unsuitable for distributed memory environments. By dropping the requirement that $U$ and $V$ be Haar distributed and that both be random, we derive new algorithms for forming $A$ that have cost linear in the number of matrix elements and require a low amount of communication and synchronization. We specialize these algorithms to generating matrices with specified 2-norm condition number. Numerical experiments show that the algorithms have excellent efficiency and scalability.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
