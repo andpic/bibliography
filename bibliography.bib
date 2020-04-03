@@ -10318,6 +10318,34 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   abstract   = {A widely used form of test matrix is the randsvd matrix constructed as the product $A = U \Sigma V^*$, where $U$ and $V$ are random orthogonal or unitary matrices from the Haar distribution and $\Sigma$ is a diagonal matrix of singular values. Such matrices are random but have a specified singular value distribution. The cost of forming an $m \times n$ randsvd matrix is $m^3 + n ^3$ flops, which is prohibitively expensive at extreme scale; moreover, the randsvd construction requires a significant amount of communication, making it unsuitable for distributed memory environments. By dropping the requirement that $U$ and $V$ be Haar distributed and that both be random, we derive new algorithms for forming $A$ that have cost linear in the number of matrix elements and require a low amount of communication and synchronization. We specialize these algorithms to generating matrices with specified 2-norm condition number. Numerical experiments show that the algorithms have excellent efficiency and scalability.},
 }
 
+@Article{Anzt2020a,
+  author    = {Hartwig Anzt and Terry Cojean and Chen Yen-Chen and Jack Dongarra and Goran Flegar and Pratik Nayak and Stanimire Tomov and Yuhsiang M. Tsai and Weichung Wang},
+  title     = {Load-balancing Sparse Matrix Vector Product Kernels on {GPUs}},
+  doi       = {10.1145/3380930},
+  number    = {1},
+  pages     = {1--26},
+  volume    = {7},
+  abstract  = {Efficient processing of Irregular Matrices on Single Instruction, Multiple Data (SIMD)-type architectures is a persistent challenge. Resolving it requires innovations in the development of data formats, computational techniques, and implementations that strike a balance between thread divergence, which is inherent for Irregular Matrices, and padding, which alleviates the performance-detrimental thread divergence but introduces artificial overheads. To this end, in this article, we address the challenge of designing high performance sparse matrix-vector product (SpMV) kernels designed for Nvidia Graphics Processing Units (GPUs). We present a compressed sparse row (CSR) format suitable for unbalanced matrices. We also provide a load-balancing kernel for the coordinate (COO) matrix format and extend it to a hybrid algorithm that stores part of the matrix in SIMD-friendly Ellpack format (ELL) format. The ratio between the ELL- and the COO-part is determined using a theoretical analysis of the nonzeros-per-row distribution. For the over 2,800 test matrices available in the Suite Sparse matrix collection, we compare the performance against SpMV kernels provided by NVIDIA’s cuSPARSE library and a heavily-tuned sliced ELL (SELL-P) kernel that prevents unnecessary padding by considering the irregular matrices as a combination of matrix blocks stored in ELL format.},
+  journal   = {{ACM} Transactions on Parallel Computing},
+  month     = {3},
+  publisher = {Association for Computing Machinery ({ACM})},
+  year      = {2020},
+}
+
+@Article{Hamilton2020,
+  author    = {Kathleen E. Hamilton and Catherine D. Schuman and Steven R. Young and Ryan S. Bennink and Neena Imam and Travis S. Humble},
+  title     = {Accelerating Scientific Computing in the Post-Moore's Era},
+  doi       = {10.1145/3380940},
+  number    = {1},
+  pages     = {1--31},
+  volume    = {7},
+  abstract  = {Novel uses of graphical processing units for accelerated computation revolutionized the field of high-performance scientific computing by providing specialized workflows tailored to algorithmic requirements. As the era of Moore’s law draws to a close, many new non–von Neumann processors are emerging as potential computational accelerators, including those based on the principles of neuromorphic computing, tensor algebra, and quantum information. While development of these new processors is continuing to mature, the potential impact on accelerated computing is anticipated to be profound. We discuss how different processing models can advance computing in key scientific paradigms: machine learning and constraint satisfaction. Significantly, each of these new processor types utilizes a fundamentally different model of computation, and this raises questions about how to best use such processors in the design and implementation of applications. While many processors are being developed with a specific domain target, the ubiquity of spin-glass models and neural networks provides an avenue for multi-functional applications. This also hints at the infrastructure needed to integrate next-generation processing units into future high-performance computing systems.},
+  journal   = {{ACM} Transactions on Parallel Computing},
+  month     = {3},
+  publisher = {Association for Computing Machinery ({ACM})},
+  year      = {2020},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
