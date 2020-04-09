@@ -5051,9 +5051,11 @@ A sparse matrix has (non-zero) values and a structure. In this paper, we propose
 
 @TechReport{Buttari2018,
   author      = {Buttari, Alfredo},
-  title       = {Scalability of parallel sparse direct solvers: methods, memory and performance},
-  institution = {IRIT, Institut de recherche en informatique de Toulouse},
   date        = {2018-09},
+  institution = {IRIT, Institut de recherche en informatique de Toulouse},
+  title       = {Scalability of parallel sparse direct solvers: methods, memory and performance},
+  eprint      = {01913033},
+  eprinttype  = {HAL},
   type        = {Habilitation {\`a} diriger des recherches},
   url         = {https://hal.archives-ouvertes.fr/tel-01913033},
   abstract    = {The fast and accurate solution of large size sparse systems of linear equations is at the heart of numerical applications from a very broad range of domains including structural mechanics, fluid dynamics, geophysics, medical imaging, chemistry. Among the most commonly used techniques, direct methods, based on the factorization of the system matrix, are generally appreciated for their numerical robustness and ease of use. These advantages, however, come at the price of a considerable operations count and memory footprint. The work presented in this thesis is concerned with improving the scalability of sparse direct solvers, intended as the ability to solve problems of larger and larger size. More precisely, our work aims at developing solvers which are scalable in performance, memory consumption and complexity. We address performance scalability, that is the ability to reduce the execution time as more computational resources are available, introducing algorithms that improve parallelism by reducing communications and synchronizations. We discuss the use of novel parallel programming paradigms and tools to achieve their implementation in an efficient and portable way on modern, heterogeneous supercomputers. We present methods that make sparse direct solvers memory-scalable, that is, capable of taking advantage of parallelism without increasing the overall memory footprint. Finally we show how it is possible to use data sparsity to achieve an asymptotic reduction of the cost of such methods. The presented algorithms have been implemented in the freely distributed MUMPS and qr_mumps solver packages and their effectiveness assessed on real life problems from academic and industrial applications.},
@@ -5427,10 +5429,11 @@ In addition, we compare the performance in the general format (CSR format, BSR f
 
 @TechReport{Harvey2019,
   author      = {Harvey, David and van der Hoeven, Joris},
-  title       = {Integer multiplication in time $O(n log n)$},
-  institution = {HAL archives},
   date        = {2019},
-  number      = {hal-02070778},
+  institution = {HAL archives},
+  title       = {Integer multiplication in time $O(n log n)$},
+  eprint      = {02070778},
+  eprinttype  = {HAL},
   url         = {https://hal.archives-ouvertes.fr/hal-02070778},
   abstract    = {We present an algorithm that computes the product of two $n$-bitintegers in $O(n log n)$ bit operations.},
 }
@@ -8572,12 +8575,13 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
 }
 
 @Article{Iakymchuk2020,
-  author   = {Roman Iakymchuk and Maria Barreda and Stef Graillat and José Aliaga and Enrique Quintana-Ortí},
-  title    = {Reproducibility of Parallel Preconditioned Conjugate Gradient in Hybrid Programming Environments},
-  year     = {2020},
-  eprint   = {hal-02427795},
-  url      = {https://hal.archives-ouvertes.fr/hal-02427795},
-  abstract = {The Preconditioned Conjugate Gradient method is often employed for the solution of linear systems of equations arising in numerical simulations of physical phenomena. While being widely used, the solver is also known for its lack of accuracy while computing the residual. In this article, we propose two algorithmic solutions that originate from the ExBLAS project to enhance the accuracy of the solver as well as to ensure its reproducibility in a hybrid MPI + OpenMP tasks programming environment. One is based on ExBLAS and preserves every bit of information until the final rounding, while the other relies upon floating-point expansions and, hence, expands the intermediate precision. Instead of converting the entire solver into its ExBLAS-related implementation, we identify those parts that violate reproducibility/non-associativity, secure them, and combine this with the sequential executions. These algorithmic strategies are reinforced with programmability suggestions to assure deterministic executions. Finally, we verify these approaches on two modern HPC systems: both versions deliver reproducible number of iterations, residuals, direct errors, and vector-solutions for the overhead of less than 37.7 \% on 768 cores.},
+  author     = {Roman Iakymchuk and Maria Barreda and Stef Graillat and José Aliaga and Enrique Quintana-Ortí},
+  title      = {Reproducibility of Parallel Preconditioned Conjugate Gradient in Hybrid Programming Environments},
+  eprint     = {02427795},
+  eprinttype = {HAL},
+  url        = {https://hal.archives-ouvertes.fr/hal-02427795},
+  abstract   = {The Preconditioned Conjugate Gradient method is often employed for the solution of linear systems of equations arising in numerical simulations of physical phenomena. While being widely used, the solver is also known for its lack of accuracy while computing the residual. In this article, we propose two algorithmic solutions that originate from the ExBLAS project to enhance the accuracy of the solver as well as to ensure its reproducibility in a hybrid MPI + OpenMP tasks programming environment. One is based on ExBLAS and preserves every bit of information until the final rounding, while the other relies upon floating-point expansions and, hence, expands the intermediate precision. Instead of converting the entire solver into its ExBLAS-related implementation, we identify those parts that violate reproducibility/non-associativity, secure them, and combine this with the sequential executions. These algorithmic strategies are reinforced with programmability suggestions to assure deterministic executions. Finally, we verify these approaches on two modern HPC systems: both versions deliver reproducible number of iterations, residuals, direct errors, and vector-solutions for the overhead of less than 37.7 \% on 768 cores.},
+  year       = {2020},
 }
 
 @Article{Chou2020,
@@ -9899,12 +9903,13 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
 
 @TechReport{Agullo2020,
   author      = {Emmanuel Agullo and Siegfried Cools and Emrullah Fatih-Yetkin and Luc Giraud and Nick Schenkel and Wim Vanroose},
-  title       = {On soft errors in the Conjugate Gradient method: sensitivity and robust numerical detection},
   institution = {INRIA},
-  year        = {2020},
+  title       = {On soft errors in the Conjugate Gradient method: sensitivity and robust numerical detection},
   eprint      = {hal-02495301},
+  eprinttype  = {HAL},
   url         = {https://hal.inria.fr/hal-02495301},
   abstract    = {The conjugate gradient (CG) method is the most widely used iterative scheme for the solution of large sparse systems of linear equations when the matrix is symmetric positive definite. Although more than sixty year old, it is still a serious candidate for extreme-scale computation on large computing platforms. On the technological side, the continuous shrinking of transistor geometry and the increasing complexity of these devices affect dramatically their sensitivity to natural radiation, and thus diminish their reliability. One of the most common effects produced by natural radiation is the single event upset which consists in a bit-flip in a memory cell producing unexpected results at application level. Consequently, the future computing facilities at extreme scale might be more prone to errors of any kind including bit-flip during calculation. These numerical and technological observations are the main motivations for this work, where we first investigate through extensive numerical experiments the sensitivity of CG to bit-flips in its main computationally intensive kernels, namely the matrix-vector product and the preconditioner application. We further propose numerical criteria to detect the occurrence of such soft errors; we assess their robustness through extensive numerical experiments.},
+  year        = {2020},
 }
 
 @InCollection{Chevalier2020,
@@ -10380,6 +10385,41 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   journal  = {IEEE Transactions on Nuclear Science},
   keywords = {Approximate computing;graphics processing units;radiation effects;selective fault tolerance},
   year     = {2020},
+}
+
+@Article{Serafino2020,
+  author      = {Daniela di Serafino and Gerardo Toraldo and Marco Viola},
+  date        = {2020-04-02},
+  title       = {Using gradient directions to get global convergence of Newton-type methods},
+  eprint      = {2004.00968v1},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {The renewed interest in Steepest Descent (SD) methods following the work of Barzilai and Borwein [IMA Journal of Numerical Analysis, 8 (1988)] has driven us to consider a globalization strategy based on SD, which is applicable to any line-search method. In particular, we combine Newton-type directions with scaled SD steps to have suitable descent directions. Scaling the SD directions with a suitable step length makes a significant difference with respect to similar globalization approaches, in terms of both theoretical features and computational behavior. We apply our strategy to Newton's method and the BFGS method, with computational results that appear interesting compared with the results of well-established globalization strategies devised ad hoc for those methods.},
+  file        = {:http\://arxiv.org/pdf/2004.00968v1:PDF},
+  keywords    = {math.OC, cs.NA, math.NA, 65K05, 90C30, 49M15, G.1.6},
+}
+
+@Article{Steinerberger2020,
+  author      = {Stefan Steinerberger},
+  date        = {2020-04-02},
+  title       = {A Spectral Approach to the Shortest Path Problem},
+  eprint      = {2004.01163v1},
+  eprintclass = {math.CO},
+  eprinttype  = {arXiv},
+  abstract    = {Let $G=(V,E)$ be a simple, connected graph. One is often interested in a short path between two vertices $u,v$. We propose a spectral algorithm: construct the function $\phi:V \rightarrow \mathbb{R}_{\geq 0}$ $$ \phi = \arg\min_{f:V \rightarrow \mathbb{R} \atop f(u) = 0, f \not\equiv 0} \frac{\sum_{(w_1, w_2) \in E}{(f(w_1)-f(w_2))^2}}{\sum_{w \in V}{f(w)^2}}.$$ $\phi$ can also be understood as the smallest eigenvector of the Laplacian Matrix $L=D-A$ after the $u-$th row and column have been removed. We start in the point $v$ and construct a path from $v$ to $u$: at each step, we move to the neighbor for which $\phi$ is the smallest. This algorithm provably terminates and results in a short path from $v$ to $u$, often the shortest. The efficiency of this method is due to a discrete analogue of a phenomenon in Partial Differential Equations that is not well understood. We prove optimality for trees and discuss a number of open questions.},
+  file        = {:http\://arxiv.org/pdf/2004.01163v1:PDF},
+  keywords    = {math.CO, cs.CG, cs.DM, math.SP},
+}
+
+@TechReport{Buttari2020,
+  author      = {Alfredo Buttari and Markus Huber and Philippe Leleux and Theo Mary and Ulrich Rüde and Barbara Wohlmuth},
+  date        = {2020},
+  institution = {Institut de recherche en informatique de Toulouse (IRIT)},
+  title       = {Block Low Rank Single Precision Coarse Grid Solvers forExtreme Scale Multigrid Methods},
+  eprint      = {02528532},
+  eprinttype  = {HAL},
+  url         = {https://hal.archives-ouvertes.fr/hal-02528532},
+  abstract    = {Extreme scale simulation requires fast and scalable algorithms, such as multigrid methods. To achieve asymptotically optimal complexity it is essential to employ a hierarchy of grids. The cost to solve the coarsest grid system can often be neglected in sequential computings, but cannot be ignored in massively parallel executions. In this case, the coarsest grid can be large and its efficient solution becomes a challenging task. We propose solving the coarse grid system using modern, approximate sparse direct methods and investigate the expected gains compared with traditional iterative methods. Since the coarse grid system only requires an approximate solution, we show that we can leverage block low-rank techniques, combined with the use of single precision arithmetic, to significantly reduce the computational requirements of the direct solver. In the case of extreme scale computing, the coarse grid system is too large for a sequential solution, but too small to permit massively parallel efficiency. We show that the agglomeration of the coarse grid system to a subset of processors is necessary for the sparse direct solver to achieve performance. We demonstrate the efficiency of the proposed method on a Stokes-type saddle point system. We employ a monolithic Uzawa multigrid method. In particular, we show that the use of an approximate sparse direct solver for the coarse grid system can outperform that of a preconditioned minimal residual iterative method. This is demonstrated for the multigrid solution of systems of order up to 1+e11 degrees of freedom on a petascale supercomputer using 43 200 processes.},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
