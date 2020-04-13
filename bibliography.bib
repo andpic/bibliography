@@ -10422,6 +10422,87 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   abstract    = {Extreme scale simulation requires fast and scalable algorithms, such as multigrid methods. To achieve asymptotically optimal complexity it is essential to employ a hierarchy of grids. The cost to solve the coarsest grid system can often be neglected in sequential computings, but cannot be ignored in massively parallel executions. In this case, the coarsest grid can be large and its efficient solution becomes a challenging task. We propose solving the coarse grid system using modern, approximate sparse direct methods and investigate the expected gains compared with traditional iterative methods. Since the coarse grid system only requires an approximate solution, we show that we can leverage block low-rank techniques, combined with the use of single precision arithmetic, to significantly reduce the computational requirements of the direct solver. In the case of extreme scale computing, the coarse grid system is too large for a sequential solution, but too small to permit massively parallel efficiency. We show that the agglomeration of the coarse grid system to a subset of processors is necessary for the sparse direct solver to achieve performance. We demonstrate the efficiency of the proposed method on a Stokes-type saddle point system. We employ a monolithic Uzawa multigrid method. In particular, we show that the use of an approximate sparse direct solver for the coarse grid system can outperform that of a preconditioned minimal residual iterative method. This is demonstrated for the multigrid solution of systems of order up to 1+e11 degrees of freedom on a petascale supercomputer using 43 200 processes.},
 }
 
+@Article{Altschuler2020,
+  author      = {Jason M. Altschuler and Pablo A. Parrilo},
+  date        = {2020-04-06},
+  title       = {Random Osborne: a simple, practical algorithm for Matrix Balancing in near-linear time},
+  eprint      = {2004.02837v1},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {We revisit Matrix Balancing, a pre-conditioning task used ubiquitously for computing eigenvalues and matrix exponentials. Since 1960, Osborne's algorithm has been the practitioners' algorithm of choice, and is now implemented in most numerical software packages. However, the theoretical properties of Osborne's algorithm are not well understood. Here, we show that a simple random variant of Osborne's algorithm converges in near-linear time in the input sparsity. Specifically, it balances $K\in\mathbb{R}_{\geq 0}^{n\times n}$ after $O(m\epsilon^{-2}\log\kappa)$ arithmetic operations, where $m$ is the number of nonzeros in $K$, $\epsilon$ is the $\ell_1$ accuracy, and $\kappa=\sum_{ij}K_{ij}/(\min_{ij:K_{ij}\neq 0}K_{ij})$ measures the conditioning of $K$. Previous work had established near-linear runtimes either only for $\ell_2$ accuracy (a weaker criterion which is less relevant for applications), or through an entirely different algorithm based on (currently) impractical Laplacian solvers. We further show that if the graph with adjacency matrix $K$ is moderately connected--e.g., if $K$ has at least one positive row/column pair--then Osborne's algorithm initially converges exponentially fast, yielding an improved runtime $O(m\epsilon^{-1}\log\kappa)$. We also address numerical precision issues by showing that these runtime bounds still hold when using $O(\log(n\kappa/\epsilon))$-bit numbers. Our results are established through a potential argument that leverages a convex optimization perspective of Osborne's algorithm, and relates the per-iteration progress to the current imbalance as measured in Hellinger distance. Unlike previous analyses, we critically exploit log-convexity of the potential. Our analysis extends to other variants of Osborne's algorithm: along the way, we establish significantly improved runtime bounds for cyclic, greedy, and parallelized variants.},
+  file        = {:http\://arxiv.org/pdf/2004.02837v1:PDF},
+  keywords    = {math.OC, cs.DS, cs.NA, math.NA},
+}
+
+@Article{Altschuler2020a,
+  author      = {Jason M. Altschuler and Pablo A. Parrilo},
+  date        = {2020-04-07},
+  title       = {Approximating Min-Mean-Cycle for low-diameter graphs in near-optimal time and memory},
+  eprint      = {2004.03114v1},
+  eprintclass = {cs.DS},
+  eprinttype  = {arXiv},
+  abstract    = {We revisit Min-Mean-Cycle, the classical problem of finding a cycle in a weighted directed graph with minimum mean weight. Despite an extensive algorithmic literature, previous work falls short of a near-linear runtime in the number of edges $m$--in fact, there is a natural barrier which precludes such a runtime for solving Min-Mean-Cycle exactly. Here, we give a much faster approximation algorithm that, for graphs with polylogarithmic diameter, has near-linear runtime. In particular, this is the first algorithm whose runtime for the complete graph scales in the number of vertices $n$ as $\tilde{O}(n^2)$. Moreover--unconditionally on the diameter--the algorithm uses only $O(n)$ memory beyond reading the input, making it "memory-optimal". The algorithm is also simple to implement and has remarkable practical performance. Our approach is based on solving a linear programming (LP) relaxation using entropic regularization, which effectively reduces the LP to a Matrix Balancing problem--a la the popular reduction of Optimal Transport to Matrix Scaling. We then round the fractional LP solution using a variant of the classical Cycle-Cancelling algorithm that is sped up to near-linear runtime at the expense of being approximate, and implemented in a memory-optimal manner. We also provide an alternative algorithm with slightly faster theoretical runtime, albeit worse memory usage and practicality. This algorithm uses the same rounding procedure, but solves the LP relaxation by leveraging recent developments in area-convexity regularization. Its runtime scales inversely in the approximation accuracy, which we show is optimal--barring a major breakthrough in algorithmic graph theory, namely faster Shortest Paths algorithms.},
+  file        = {:http\://arxiv.org/pdf/2004.03114v1:PDF},
+  keywords    = {cs.DS, math.OC},
+}
+
+@Article{Wang2020,
+  author      = {Hanzhi Wang and Zhewei Wei and Ye Yuan and Xiaoyong Du and Ji-Rong Wen},
+  date        = {2020-04-07},
+  title       = {Exact Single-Source SimRank Computation on Large Graphs},
+  doi         = {10.1145/3318464.3389781},
+  eprint      = {2004.03493v1},
+  eprintclass = {cs.DS},
+  eprinttype  = {arXiv},
+  abstract    = {SimRank is a popular measurement for evaluating the node-to-node similarities based on the graph topology. In recent years, single-source and top-$k$ SimRank queries have received increasing attention due to their applications in web mining, social network analysis, and spam detection. However, a fundamental obstacle in studying SimRank has been the lack of ground truths. The only exact algorithm, Power Method, is computationally infeasible on graphs with more than $10^6$ nodes. Consequently, no existing work has evaluated the actual trade-offs between query time and accuracy on large real-world graphs. In this paper, we present ExactSim, the first algorithm that computes the exact single-source and top-$k$ SimRank results on large graphs. With high probability, this algorithm produces ground truths with a rigorous theoretical guarantee. We conduct extensive experiments on real-world datasets to demonstrate the efficiency of ExactSim. The results show that ExactSim provides the ground truth for any single-source SimRank query with a precision up to 7 decimal places within a reasonable query time.},
+  file        = {:http\://arxiv.org/pdf/2004.03493v1:PDF},
+  keywords    = {cs.DS},
+}
+
+@Article{Tang2020,
+  author      = {Wentao Tang and Prodromos Daoutidis},
+  date        = {2020-04-04},
+  title       = {Fast and Stable Nonconvex Constrained Distributed Optimization: The ELLADA Algorithm},
+  eprint      = {2004.01977v1},
+  eprintclass = {eess.SY},
+  eprinttype  = {arXiv},
+  abstract    = {Distributed optimization, where the computations are performed in a localized and coordinated manner using multiple agents, is a promising approach for solving large-scale optimization problems, e.g., those arising in model predictive control (MPC) of large-scale plants. However, a distributed optimization algorithm that is computationally efficient, globally convergent, amenable to nonconvex constraints and general inter-subsystem interactions remains an open problem. In this paper, we combine three important modifications to the classical alternating direction method of multipliers (ADMM) for distributed optimization. Specifically, (i) an extra-layer architecture is adopted to accommodate nonconvexity and handle inequality constraints, (ii) equality-constrained nonlinear programming (NLP) problems are allowed to be solved approximately, and (iii) a modified Anderson acceleration is employed for reducing the number of iterations. Theoretical convergence towards stationary solutions and computational complexity of the proposed algorithm, named ELLADA, is established. Its application to distributed nonlinear MPC is also described and illustrated through a benchmark process system.},
+  file        = {:http\://arxiv.org/pdf/2004.01977v1:PDF},
+  keywords    = {eess.SY, cs.SY},
+}
+
+@Article{Bergou2020,
+  author       = {E. Bergou and Y. Diouane and V. Kungurtsev},
+  date         = {2020-04-06},
+  journaltitle = {JOTA, 2020},
+  title        = {Convergence and Complexity Analysis of a Levenberg-Marquardt Algorithm for Inverse Problems},
+  eprint       = {2004.03005v1},
+  eprintclass  = {math.OC},
+  eprinttype   = {arXiv},
+  abstract     = {The Levenberg-Marquardt algorithm is one of the most popular algorithms for finding the solution of nonlinear least squares problems. Across different modified variations of the basic procedure, the algorithm enjoys global convergence, a competitive worst case iteration complexity rate, and a guaranteed rate of local convergence for both zero and nonzero small residual problems, under suitable assumptions. We introduce a novel Levenberg-Marquardt method that matches, simultaneously, the state of the art in all of these convergence properties with a single seamless algorithm. Numerical experiments confirm the theoretical behavior of our proposed algorithm.},
+  file         = {:http\://arxiv.org/pdf/2004.03005v1:PDF},
+  keywords     = {math.OC},
+}
+
+@Article{Luo2020,
+  author      = {Xiaopeng Luo and Xin Xu},
+  date        = {2020-04-05},
+  title       = {Regularized asymptotic descents for nonconvex optimization},
+  eprint      = {2004.02210v1},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {In this paper we propose regularized asymptotic descent (RAD) methods for solving nonconvex optimization problems. Our motivation is first to apply the regularized iteration and then to use an explicit asymptotic formula to approximate the solution of each regularized minimization. We consider a class of possibly nonconvex, nonsmooth, or even discontinuous objectives extended from strongly convex functions with Lipschitz-continuous gradients, in each of which has a unique global minima and is continuously differentiable at the global minimizer. The main theoretical result shows that the RAD method enjoys the global linear convergence with high probability for such a class of nonconvex objectives, i.e., the method will not be trapped in saddle points, local minima, or even discontinuities. Besides, the method is derivative-free and its per-iteration cost, i.e., the number of function evaluations, is bounded, so that it has a complexity bound $\mathcal{O}(\log\frac{1}{\epsilon})$ for finding a point such that the optimality gap at this point is less than $\epsilon>0$.},
+  file        = {:http\://arxiv.org/pdf/2004.02210v1:PDF},
+  keywords    = {math.OC, cs.NA, math.NA, 65K05, 68Q25, 90C26, 90C56},
+}
+
+@Article{Lu2020,
+  author   = {Yuechao Lu and Ichitaro Yamazaki and Fumihiko Ino and Yasuyuki Matsushita and StanimireTomov and Jack Dongarra},
+  date     = {2020},
+  title    = {Reducing the Amount of Out-of-Core Data Access for {GPU}-Accelerated Randomized {SVD}},
+  abstract = {We propose two acceleration methods, namely Fused and Gram, for reducing outof-core data access when performing randomized singular value decomposition (RSVD) on graphics processing units (GPUs). Out-of-core data here are data that are too large to fit into the GPU memory at once. Both methods accelerate GPU-enabled RSVD using the following three schemes: (1) a highly tuned general matrix-matrix multiplication (GEMM) scheme for processing out-of-core data on GPUs; (2) a data-access reduction scheme based on one-dimensional (1D) data partition; and (3) a first-in, first-out (FIFO) scheme that reduces CPU-GPU data transfer using the reverse iteration. The Fused method further reduces the amount of out-of-core data access by merging two GEMM operations into a single operation. In contrast, the Gram method reduces both in-core and out-of-core data access by explicitly forming the Gram matrix. According to our experimental results, the Fused and Gram methods improved the RSVD performance by up to 1.7$\times$ and 5.2$\times$, respectively, compared with a straightforward method that deploys schemes (1) and (2) on the GPU. In addition, we present a case study of deploying the Gram method for accelerating robust principal component analysis (RPCA), a convex optimization problem in machine learning.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
