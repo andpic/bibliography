@@ -10503,6 +10503,30 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   abstract = {We propose two acceleration methods, namely Fused and Gram, for reducing outof-core data access when performing randomized singular value decomposition (RSVD) on graphics processing units (GPUs). Out-of-core data here are data that are too large to fit into the GPU memory at once. Both methods accelerate GPU-enabled RSVD using the following three schemes: (1) a highly tuned general matrix-matrix multiplication (GEMM) scheme for processing out-of-core data on GPUs; (2) a data-access reduction scheme based on one-dimensional (1D) data partition; and (3) a first-in, first-out (FIFO) scheme that reduces CPU-GPU data transfer using the reverse iteration. The Fused method further reduces the amount of out-of-core data access by merging two GEMM operations into a single operation. In contrast, the Gram method reduces both in-core and out-of-core data access by explicitly forming the Gram matrix. According to our experimental results, the Fused and Gram methods improved the RSVD performance by up to 1.7$\times$ and 5.2$\times$, respectively, compared with a straightforward method that deploys schemes (1) and (2) on the GPU. In addition, we present a case study of deploying the Gram method for accelerating robust principal component analysis (RPCA), a convex optimization problem in machine learning.},
 }
 
+@Article{Ek2020,
+  author      = {David Ek and Anders Forsgren},
+  date        = {2020-04-08},
+  title       = {Approximate solution of system of equations arising in interior-point methods for bound-constrained optimization},
+  eprint      = {2004.04057v1},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {The focus in this paper is interior-point methods for bound-constrained nonlinear optimization where the system of nonlinear equations that arise are solved with Newton's method. There is a trade-off between solving Newton systems directly, which give high quality solutions, and solving many approximate Newton systems which are computationally less expensive but give lower quality solutions. We propose partial and full approximate solutions to the Newton systems, which in general involves solving a reduced system of linear equations. The specific approximate solution and the size of the reduced system that needs to be solved at each iteration are determined by estimates of the active and inactive constraints at the solution. These sets are at each iteration estimated by a simple heuristic. In addition, we motivate and suggest two modified-Newton approaches which are based on an intermediate step that consists of the partial approximate solutions. The theoretical setting is introduced and asymptotic error bounds are given along with numerical results for bound-constrained convex quadratic optimization problems, both random and from the CUTEst test collection.},
+  file        = {:http\://arxiv.org/pdf/2004.04057v1:PDF},
+  keywords    = {math.OC},
+}
+
+@Article{Champion2020,
+  author      = {Camille Champion and Blazère Mélanie and Burcelin Rémy and Loubes Jean-Michel and Risser Laurent},
+  date        = {2020-04-08},
+  title       = {Robust spectral clustering using LASSO regularization},
+  eprint      = {2004.03845v1},
+  eprintclass = {stat.ML},
+  eprinttype  = {arXiv},
+  abstract    = {Cluster structure detection is a fundamental task for the analysis of graphs, in order to understand and to visualize their functional characteristics. Among the different cluster structure detection methods, spectral clustering is currently one of the most widely used due to its speed and simplicity. Yet, there are few theoretical guarantee to recover the underlying partitions of the graph for general models. This paper therefore presents a variant of spectral clustering, called 1-spectral clustering, performed on a new random model closely related to stochastic block model. Its goal is to promote a sparse eigenbasis solution of a 1 minimization problem revealing the natural structure of the graph. The effectiveness and the robustness to small noise perturbations of our technique is confirmed through a collection of simulated and real data examples.},
+  file        = {:http\://arxiv.org/pdf/2004.03845v1:PDF},
+  keywords    = {stat.ML, cs.LG},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
