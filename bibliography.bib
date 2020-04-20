@@ -10539,6 +10539,32 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   keywords    = {cs.LG, cs.DM, eess.SP, stat.ML},
 }
 
+@Article{Duff2020a,
+  author    = {Duff, Iain and Leleux, Philippe and Ruiz, Daniel and Torun, F. Sukru},
+  title     = {Improving the Scalability of the {ABCD} Solver with a Combination of New Load Balancing and Communication Minimization Techniques},
+  doi       = {10.3233/APC200052},
+  issn      = {0927-5452},
+  number    = {Parallel Computing: Technology Trends},
+  pages     = {277--286},
+  volume    = {36},
+  abstract  = {The hybrid scheme block row-projection method implemented in the ABCD Solver is designed for solving large sparse unsymmetric systems of equations on distributed memory parallel computers. The method implements a block Cimmino iterative scheme, accelerated with a stabilized block conjugate gradient algorithm. An augmented pseudo-direct variant has also been developed to overcome convergence issues. Both methods are included in the ABCD solver with a hybrid parallelization scheme. The parallel performance of the ABCD Solver is improved in the first non-beta release, version 1.0, which we present in this paper. Novel algorithms for the distribution of partitions to processes are introduced to minimize communication as well as to balance the workload. Furthermore, the master-slave approach on each subsystem is also improved in order to achieve higher scalability through run-time placement of processes. We illustrate the improved parallel scalability of the ABCD Solver on a distributed memory architecture by solving several problems from the SuiteSparse Matrix Collection.},
+  journal   = {Advances in Parallel Computing},
+  publisher = {IOS Press},
+  year      = {2020},
+}
+
+@Article{Zhang2020c,
+  author      = {Qingsong Zhang and Feihu Huang and Cheng Deng and Heng Huang},
+  date        = {2020-04-12},
+  title       = {Faster Stochastic Quasi-Newton Methods},
+  eprint      = {2004.06479v1},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {Recently, stochastic optimization methods are a class of powerful optimization tools in machine learning. Stochastic gradient descent (SGD) is one of the representative stochastic methods and is widely used for many machine learning problems. However, SGD only uses the first-order information of problems to optimize them, which results in its some limitations such as its solutions without high accuracy. Thus, stochastic quasi-Newton methods recently have been widely concerned due to utilizing approximate Hessian information, which is more robust and can achieve better accuracy than stochastic first-order methods. Considering that existing stochastic quasi-Newton methods still do not reach the best known stochastic first-order oracle (SFO) complexity, thus, we propose a novel faster stochastic quasi-Newton method (SpiderSQN) based on the variance reduced technique of SIPDER. Moreover, we prove that our SpiderSQN method reach the best known SFO complexity of $\mathcal{O}(n+n^{1/2}\epsilon^{-2})$ in the finite-sum setting to obtain an $\epsilon$-first-order stationary point. To further improve its practical performance, we incorporate SpiderSQN with different effective momentum schemes. Moreover, the proposed algorithms are generalized to the online setting, and the corresponding SFO complexity of $\mathcal{O}(\epsilon^{-3})$ is developed, which matches the existing best result. Extensive experiments on benchmark datasets demonstrate that the proposed SpiderSQN-type of algorithms outperform state-of-the-art algorithms for nonconvex optimization.},
+  file        = {:http\://arxiv.org/pdf/2004.06479v1:PDF},
+  keywords    = {math.OC},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
