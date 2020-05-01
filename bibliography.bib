@@ -10579,6 +10579,64 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   year      = {2020},
 }
 
+@InCollection{Cheramangalath2020,
+  author    = {Unnikrishnan Cheramangalath and Rupesh Nasre and Y. N. Srikant},
+  booktitle = {Distributed Graph Analytics},
+  title     = {Graph Analytics Frameworks},
+  doi       = {10.1007/978-3-030-41886-1_4},
+  pages     = {99--122},
+  publisher = {Springer International Publishing},
+  abstract  = {Frameworks take away the drudgery of routine tasks in programming graph analytic applications. This chapter describes in some detail, the different models of execution that are used in graph analytics, such as BSP, Map-Reduce, asynchronous execution, GAS, Inspector-Executor, and Advance-Filter-Compute. It also provides a glimpse of different existing frameworks on multi-core CPUs, GPUs, and distributed systems.},
+  year      = {2020},
+}
+
+@Article{Karunakaran2020,
+  author    = {Sivakumar Karunakaran and Lavanya Selvaganesh},
+  title     = {A novel graph matrix representation: sequence of neighbourhood matrices with an application},
+  doi       = {10.1007/s42452-020-2635-1},
+  number    = {5},
+  volume    = {2},
+  abstract  = {In the study of network optimization, fnding the shortest path minimizing time/distance/cost from a source node to a destination node is one of the fundamental problems. Our focus here is to fnd the shortest path between any pair of nodes in a given undirected unweighted simple graph with the help of the sequence of powers of neighbourhood matrices. The authors recently introduced the concept of neighbourhood matrix as a novel representation of graphs using the neighbourhood sets of the vertices. In this article, an extension of the above work is presented by introducing a sequence of matrices, referred to as the sequence of powers of $\mathcal{N}\mathcal{M}(G)$. It is denoted it by $\mathcal{N}\mathcal{M}^{(l)} (G)=\left[ \eta^{l}_{ij}\right], 1 \le l \le k(G)$, where $k(G)$ is called the iteration number, $k(G) = \lceil \text{log}_2 \text{diameter}(G) \rceil$. As this sequence of matrices captures the distance between the nodes profoundly, we further develop the technique and present several characterizations. Based on the theoretical results, we present an algorithm to fnd the shortest path between any pair of nodes in a given graph. The proposed algorithm and the claims therein are formally validated through simulations on synthetic data and the real network data from Facebook. The empirical results are quite promising with our algorithm having best running time among all the existing well-known shortest path algorithms for the considered graph classes.},
+  journal   = {{SN} Applied Sciences},
+  month     = {apr},
+  publisher = {Springer Science and Business Media {LLC}},
+  year      = {2020},
+}
+
+@InCollection{Khalifa2020,
+  author    = {Dorra Ben Khalifa and Matthieu Martel and Assal{\'{e}} Adj{\'{e}}},
+  booktitle = {Communications in Computer and Information Science},
+  title     = {{POP}: A Tuning Assistant for Mixed-Precision Floating-Point Computations},
+  doi       = {10.1007/978-3-030-46902-3_5},
+  pages     = {77--94},
+  publisher = {Springer International Publishing},
+  abstract  = {In this article, we describe a static program analysis to determine the lowest floating-point precisions on inputs and intermediate results that guarantees a desired accuracy of the output values. A common practice used by developers without advanced training in computer arithmetic consists in using the highest precision available in hardware (double precision on most CPU’s) which can be exorbitant in terms of energy consumption, memory traffic, and bandwidth capacity. To overcome this difficulty, we propose a new precision tuning tool for the floating-point programs integrating a static forward and backward analysis, done by abstract interpretation. Next, our analysis will be expressed as a set of linear constraints easily checked by an SMT solver.},
+  year      = {2020},
+}
+
+@Article{Kanagasabapathi2020,
+  author    = {Somasundaram Kanagasabapathi and MG Thushara},
+  title     = {{FORWARD} {AND} {BACKWARD} {STATIC} {ANALYSIS} {FOR} {CRITICAL} {NUMERICAL} {ACCURACY} {IN} {FLOATING} {POINT} {PROGRAMS}},
+  doi       = {10.7494/csci.2020.21.2.3421},
+  number    = {2},
+  volume    = {21},
+  abstract  = {In this article, we introduce a new static analysis for numerical accuracy. We address the problem of determining the minimal accuracy on the inputs and on the intermediary results of a program containing floating-point computations in order to ensure the desired accuracy of the outputs. The main approach is to combine a forward and backward static analysis, done by abstract interpretation. The backward analysis computes the minimal accuracy needed for the inputs and intermediary results of the program in order to ensure the desired accuracy of the results (as specified by the user). In practice, the information collected by our analysis may help optimize the formats used to represent the values stored in the variables of the program or to select the appropriate sensors. To illustrate our analysis, we have shown a prototype example with experimental results.},
+  journal   = {Computer Science},
+  month     = {apr},
+  publisher = {{AGHU} University of Science and Technology Press},
+  year      = {2020},
+}
+
+@Article{Fasi2020a,
+  author     = {Fasi, Massimiliano and Higham, Nicholas J. and Mikaitis, Mantas and Pranesh, Srikara},
+  date       = {2020},
+  title      = {Numerical Behavior of the {NVIDIA} Tensor Cores},
+  eprint     = {MIMS EPrint:2020.10},
+  eprinttype = {MIMS EPrint},
+  url        = {http://eprints.maths.manchester.ac.uk/2761/1/fhms20.pdf},
+  abstract   = {We explore the floating-point arithmetic used by the NVIDIA Volta tensor cores, which are hardware accelerators for mixed-precision matrix multiplication. We investigate what precision is used for intermediate results, whether subnormal numbers are supported, what rounding mode is used, in which order the operations in the dot products arising in the matrix multiplication are performed, and whether partial sums are normalized. These aspects are not documented by NVIDIA, and we gain insight by running carefully designed numerical experiments on these hardware accelerators. Knowing the answers to these questions is important if one wishes to: 1) build hardware that computes a matrix-matrix product matching the results of NVIDIA tensor cores; 2) achieve bit-reproducible results when designing on conventional hardware with IEEE 754 floating point arithmetic code meant to run on NVIDIA tensor cores; and 3) understand the differences between results produced by code that utilizes tensor cores and code that uses only IEEE 754-compliant arithmetic operations. As an additional result, we point out a non-monotonicity issue that arises in floating-point multi-operand addition without the normalization of the intermediate results.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
