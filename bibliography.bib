@@ -10637,6 +10637,38 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   abstract   = {We explore the floating-point arithmetic used by the NVIDIA Volta tensor cores, which are hardware accelerators for mixed-precision matrix multiplication. We investigate what precision is used for intermediate results, whether subnormal numbers are supported, what rounding mode is used, in which order the operations in the dot products arising in the matrix multiplication are performed, and whether partial sums are normalized. These aspects are not documented by NVIDIA, and we gain insight by running carefully designed numerical experiments on these hardware accelerators. Knowing the answers to these questions is important if one wishes to: 1) build hardware that computes a matrix-matrix product matching the results of NVIDIA tensor cores; 2) achieve bit-reproducible results when designing on conventional hardware with IEEE 754 floating point arithmetic code meant to run on NVIDIA tensor cores; and 3) understand the differences between results produced by code that utilizes tensor cores and code that uses only IEEE 754-compliant arithmetic operations. As an additional result, we point out a non-monotonicity issue that arises in floating-point multi-operand addition without the normalization of the intermediate results.},
 }
 
+@Article{Zhang2020d,
+  author    = {Zhang, Guanglu and Allaire, Douglas and Cagan, Jonathan},
+  title     = {An Initial Guess Free Method for Least Squares Parameter Estimation in Nonlinear Models},
+  doi       = {10.13140/RG.2.2.32573.82402},
+  language  = {en},
+  abstract  = {Fitting models to data is critical in many science and engineering fields. A major task in fitting models to data is to estimate the value of each parameter in a given model. Iterative methods, such as the Gauss-Newton method and the Levenberg-Marquardt method, are often employed for parameter estimation in nonlinear models. However, practitioners must guess the initial value for each parameter in order to initialize these iterative methods. A poor initial guess can contribute to non-convergence of these methods or lead these methods to converge to a wrong solution. In this paper, an initial guess free method is introduced to find the optimal parameter estimators in a nonlinear model that minimizes the squared error of the fit. The method includes three algorithms that require different level of computational power to find the optimal parameter estimators. The method constructs a solution interval for each parameter in the model. These solution intervals significantly reduce the search space for optimal parameter estimators. The method also provides an empirical probability distribution for each parameter, which is valuable for parameter uncertainty assessment. The initial guess free method is validated through a case study in which Fick's second law is fit to an experimental data set. This case study shows that the initial guess free method can find the optimal parameter estimators efficiently. A four-step procedure for implementing the initial guess free method in practice is also outlined.},
+  publisher = {Unpublished},
+  year      = {2020},
+}
+
+@Article{Connolly2020,
+  author     = {Connolly, Michael P. and Higham, Nicholas J. and Mary, Theo},
+  date       = {2020},
+  title      = {Stochastic Rounding and its Probabilistic Backward Error Analysis},
+  eprint     = {MIMS EPrint:2020.12},
+  eprinttype = {MIMS EPrint},
+  url        = {http://eprints.maths.manchester.ac.uk/2763/1/paper.pdf},
+  abstract   = {Stochastic rounding rounds a real number to the next larger or smaller floatingpoint number with probabilities 1 minus the relative distances to those numbers. It is gaining attention in deep learning because it can improve the accuracy of the computations. We compare basic properties of stochastic rounding with those for round to nearest, finding properties in common as well as significant differences. We prove that for stochastic rounding the rounding errors are mean independent random variables with zero mean. We derive a new version of our probabilistic error analysis theorem from [SIAM J. Sci. Comput., 41 (2019), pp. A2815–A2835], weakening the assumption of independence of the random variables to mean independence. These results imply that for a wide range of linear algebra computations the backward error for stochastic rounding is unconditionally bounded by a multiple of $\sqrt{n}u$ to first order, with a certain probability, where $n$ is the problem size and $u$ is the unit roundoff. This is the first scenario where the rule of thumb that one can replace nu by $\sqrt{n}u$ in a rounding error bound has been shown to hold without any additional assumptions on the rounding errors. We also explain how stochastic rounding avoids the phenomenon of stagnation in sums, whereby small addends are obliterated by round to nearest when they are too small relative to the sum.},
+}
+
+@Article{Das2020,
+  author      = {Arnab Das and Ian Briggs and Ganesh Gopalakrishnan and Sriram Krishnamoorthy},
+  date        = {2020-04-24},
+  title       = {An Abstraction-guided Approach to Scalable and Rigorous Floating-Point Error Analysis},
+  eprint      = {2004.11960v1},
+  eprintclass = {cs.PL},
+  eprinttype  = {arXiv},
+  abstract    = {Automated techniques for rigorous floating-point round-off error analysis are important in areas including formal verification of correctness and precision tuning. Existing tools and techniques, while providing tight bounds, fail to analyze expressions with more than a few hundred operators, thus unable to cover important practical problems. In this work, we present Satire, a new tool that sheds light on how scalability and bound-tightness can be attained through a combination of incremental analysis, abstraction, and judicious use of concrete and symbolic evaluation. Satire has handled problems exceeding 200K operators. We present Satire's underlying error analysis approach, information-theoretic abstraction heuristics, and a wide range of case studies, with evaluation covering FFT, Lorenz system of equations, and various PDE stencil types. Our results demonstrate the tightness of Satire's bounds, its acceptable runtime, and valuable insights provided.},
+  file        = {:http\://arxiv.org/pdf/2004.11960v1:PDF},
+  keywords    = {cs.PL, cs.NA, cs.SC, math.NA},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
