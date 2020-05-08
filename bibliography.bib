@@ -10669,6 +10669,122 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   keywords    = {cs.PL, cs.NA, cs.SC, math.NA},
 }
 
+@InProceedings{Said2020,
+  author    = {Noureddine Ait Said and Mounir Benabdenbi and Katell Morin-Allory},
+  booktitle = {2020 15th Design {\&} Technology of Integrated Systems in Nanoscale Era ({DTIS})},
+  title     = {{FPU} Bit-Width Optimization for Approximate Computing: A Non-Intrusive Approach},
+  doi       = {10.1109/dtis48698.2020.9080931},
+  publisher = {{IEEE}},
+  abstract  = {F1oating-Point Units (FPUs) count as a significant part of computing resources in modern general-purpose and application-specific processors. Full-precision FPUs can be a source of extensive hardware overhead (power consumption, area, memory footprint etc.). On the other hand, several applications feature the inherent ability to tolerate precision loss. This has lead to the development of a new computing paradigm: Transprecision Computing (TC), where variable and arbitrary precision hardware FPUs have been introduced. Many tools and libraries have been proposed to simulate the effects of approximation on applications, to help designers to select the most optimized FPU architecture adequate for a given application.However, existing techniques require developers to rewrite part or all of their existing software stacks (applications, libraries, operating systems …), which is often infeasible, complex or at least a very time-consuming development effort.This work proposes a non-intrusive approach, which does not need source code modification, by introducing approximations at the low-level in assembly. This allows approximating virtually all kinds of executable binaries (bare-metal applications, single- /multi-threaded user applications, OS/RTOS, etc.).We implement the approach on top of the well known QEMU dynamic binary translator. We perform experiments on a set of benchmarks from the literature, and we demonstrate how the approach further simplifies evaluating the impact of FP approximations on numerical applications outputs, without being intrusive to the source code.},
+  month     = {apr},
+  year      = {2020},
+}
+
+@Article{Rodomanov2020b,
+  author       = {Anton Rodomanov and Yurii Nesterov},
+  date         = {2020-04-29},
+  journaltitle = {CORE Discussion Papers ; 2020/13 (2020) 24 pages http://hdl.handle.net/2078.1/229640},
+  title        = {New Results on Superlinear Convergence of Classical Quasi-Newton Methods},
+  eprint       = {2004.14866v1},
+  eprintclass  = {math.OC},
+  eprinttype   = {arXiv},
+  abstract     = {We present a new theoretical analysis of local superlinear convergence of the classical quasi-Newton methods from the convex Broyden class. Our analysis is based on the potential function involving the logarithm of determinant of Hessian approximation and the trace of inverse Hessian approximation. For the well-known DFP and BFGS methods, we obtain the rates of the form $\left[\frac{L}{\mu} \left(\exp\left\{\frac{n}{k} \ln \frac{L}{\mu}\right\} - 1\right)\right]^{k/2}$ and $\left[\exp\left\{\frac{n}{k} \ln \frac{L}{\mu}\right\} - 1\right]^{k/2}$ respectively, where $k$ is the iteration counter, $n$ is the dimension of the problem, $\mu$ is the strong convexity parameter, and $L$ is the Lipschitz constant of the gradient. Currently, these are the best known superlinear convergence rates for these methods. In particular, our results show that the starting moment of superlinear convergence of BFGS method depends on the logarithm of the condition number $\frac{L}{\mu}$ in the worst case.},
+  file         = {:http\://arxiv.org/pdf/2004.14866v1:PDF},
+  keywords     = {math.OC},
+}
+
+@Article{Schaefer2020,
+  author      = {Florian Schäfer and Matthias Katzfuss and Houman Owhadi},
+  date        = {2020-04-29},
+  title       = {Sparse Cholesky factorization by Kullback-Leibler minimization},
+  eprint      = {2004.14455v1},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {We propose to compute a sparse approximate inverse Cholesky factor $L$ of a dense covariance matrix $\Theta$ by minimizing the Kullback-Leibler divergence between the Gaussian distributions $\mathcal{N}(0, \Theta)$ and $\mathcal{N}(0, L^{-\top} L^{-1})$, subject to a sparsity constraint. Surprisingly, this problem has a closed-form solution that can be computed efficiently, recovering the popular Vecchia approximation in spatial statistics. Based on recent results on the approximate sparsity of inverse Cholesky factors of $\Theta$ obtained from pairwise evaluation of Green's functions of elliptic boundary-value problems at points $\{x_{i}\}_{1 \leq i \leq N} \subset \mathbb{R}^{d}$, we propose an elimination ordering and sparsity pattern that allows us to compute $\epsilon$-approximate inverse Cholesky factors of such $\Theta$ in computational complexity $\mathcal{O}(N \log(N/\epsilon)^d)$ in space and $\mathcal{O}(N \log(N/\epsilon)^{2d})$ in time. To the best of our knowledge, this is the best asymptotic complexity for this class of problems. Furthermore, our method is embarrassingly parallel, automatically exploits low-dimensional structure in the data, and can perform Gaussian-process regression in linear (in $N$) space complexity. Motivated by the optimality properties of our methods, we propose methods for applying it to the joint covariance of training and prediction points in Gaussian-process regression, greatly improving stability and computational cost. Finally, we show how to apply our method to the important setting of Gaussian processes with additive noise, sacrificing neither accuracy nor computational complexity.},
+  file        = {:http\://arxiv.org/pdf/2004.14455v1:PDF},
+  keywords    = {math.NA, cs.NA, math.OC, math.ST, stat.CO, stat.TH},
+}
+
+@Article{Liu2020,
+  author    = {Hongbin Liu and Hu Ren and Hanfeng Gu and Fei Gao and Guangwen Yang},
+  title     = {{UNAT}: {UNstructured} Acceleration Toolkit on {SW}26010 many-core processor},
+  doi       = {10.1108/ec-09-2019-0401},
+  number    = {ahead-of-print},
+  volume    = {ahead-of-print},
+  abstract  = {The purpose of this paper is to provide an automatic parallelization toolkit for unstructured mesh-based computation. Among all kinds of mesh types, unstructured meshes are dominant in engineering simulation scenarios and play an essential role in scientific computations for their geometrical flexibility. However, the high-fidelity applications based on unstructured grids are still time-consuming, no matter for programming or running.\\ This study develops an efficient UNstructured Acceleration Toolkit (UNAT), which provides friendly high-level programming interfaces and elaborates lower level implementation on the target hardware to get nearly hand-optimized performance. At the present state, two efficient strategies, a multi-level blocks method and a row-subsections method, are designed and implemented on Sunway architecture. Random memory access and write–write conflict issues of unstructured meshes have been handled by partitioning, coloring and other hardware-specific techniques. Moreover, a data-reuse mechanism is developed to increase the computational intensity and alleviate the memory bandwidth bottleneck.\\ The authors select sparse matrix-vector multiplication as a performance benchmark of UNAT across different data layouts and different matrix formats. Experimental results show that the speed-ups reach up to 26$\times$ compared to single management processing element, and the utilization ratio tests indicate the capability of achieving nearly hand-optimized performance. Finally, the authors adopt UNAT to accelerate a well-tuned unstructured solver and obtain speed-ups of 19$\times$ and 10$\times$ on average for main kernels and overall solver, respectively.\\ The authors design an unstructured mesh toolkit, UNAT, to link the hardware and numerical algorithm, and then, engineers can focus on the algorithms and solvers rather than the parallel implementation. For the many-core processor SW26010 of the fastest supercomputer in China, UNAT yields up to 26$\times$ speed-ups and achieves nearly hand-optimized performance.},
+  journal   = {Engineering Computations},
+  month     = {may},
+  publisher = {Emerald},
+  year      = {2020},
+}
+
+@Article{Perez2020,
+  author    = {Alberto Cabrera Perez and Alejandro Acosta and Francisco Almeida and Vicente Blanco},
+  title     = {A dynamic Multi-Objective approach for dynamic load balancing in heterogeneous systems},
+  doi       = {10.1109/tpds.2020.2989869},
+  pages     = {1--1},
+  abstract  = {Modern standards in High Performance Computing (HPC) have started to consider energy consumption and power draw as a limiting factor. New and more complex architectures have been introduced in HPC systems to afford these new restrictions, and include coprocessors such as GPGPUs for intensive computational tasks. As systems increase in heterogeneity, workload distribution becomes a more core problem to achieve the maximum efficiency in every computational component. We present a Multi-Objective Dynamic Load Balancing (DLB) approach where several objectives can be applied to tune an application. These objectives can be dynamically exchanged during the execution of an algorithm to better adapt to the resources available in a system. We have implemented the Multi-Objective DLB together with a generic heuristic engine, designed to perform multiple strategies for DLB in iterative problems. We also present Ull Multiobjective Framework (UllMF), an open-source tool that implements the Multi-Objective generic approach. UllMF separates metric gathering, objective functions to be optimized and load balancing algorithms, and improves code portability using a simple interface to reduce the costs of new implementations. We illustrate how performance and energy consumption are improved for the implemented techniques, and analyze their quality using different DLB techniques from the literature.},
+  journal   = {{IEEE} Transactions on Parallel and Distributed Systems},
+  publisher = {Institute of Electrical and Electronics Engineers ({IEEE})},
+  year      = {2020},
+}
+
+@Article{Bonifati2020,
+  author      = {Angela Bonifati and Stefania Dumbrava and Haridimos Kondylakis},
+  date        = {2020-04-30},
+  title       = {Graph Summarization},
+  eprint      = {2004.14794v2},
+  eprintclass = {cs.DB},
+  eprinttype  = {arXiv},
+  abstract    = {The continuous and rapid growth of highly interconnected datasets, which are both voluminous and complex, calls for the development of adequate processing and analytical techniques. One method for condensing and simplifying such datasets is graph summarization. It denotes a series of application-specific algorithms designed to transform graphs into more compact representations while preserving structural patterns, query answers, or specific property distributions. As this problem is common to several areas studying graph topologies, different approaches, such as clustering, compression, sampling, or influence detection, have been proposed, primarily based on statistical and optimization methods. The focus of our chapter is to pinpoint the main graph summarization methods, but especially to focus on the most recent approaches and novel research trends on this topic, not yet covered by previous surveys.},
+  file        = {:http\://arxiv.org/pdf/2004.14794v2:PDF},
+  keywords    = {cs.DB},
+}
+
+@Article{Cao2020,
+  author    = {Xuanyu Cao and K. J. Ray Liu},
+  title     = {Distributed Newton's Method for Network Cost Minimization},
+  doi       = {10.1109/tac.2020.2989266},
+  pages     = {1--1},
+  abstract  = {In this work, we examine a novel generic network cost minimization problem, in which every node has a local decision vector to optimize. Each node incurs a cost associated with its decision vector while each link incurs a cost related to the decision vectors of its two end nodes. All nodes collaborate to minimize the overall network cost. The formulated network cost minimization problem has broad applications in distributed signal processing and control, in which the notion of link costs often arises. To solve this problem in a decentralized manner, we develop a distributed variant of the Newton's method, which possesses faster convergence than alternative first order optimization methods such as gradient descent and alternating direction method of multipliers. The proposed method is based on an appropriate splitting of the Hessian matrix and an approximation of its inverse, which is used to determine the Newton step. Global linear convergence of the proposed algorithm is established under several standard technical assumptions on the local cost functions. Furthermore, analogous to classical centralized Newton's method, a quadratic convergence phase of the algorithm over a certain time interval is identified. Finally, numerical simulations are conducted to validate the effectiveness of the proposed algorithm and its superiority over other first order methods, especially when the cost functions are ill-conditioned. Complexity issues of the proposed distributed Newton's method and alternative first order methods are also discussed.},
+  journal   = {{IEEE} Transactions on Automatic Control},
+  publisher = {Institute of Electrical and Electronics Engineers ({IEEE})},
+  year      = {2020},
+}
+
+@Article{Soltaniyeh2020,
+  author      = {Mohammadreza Soltaniyeh and Richard P. Martin and Santosh Nagarakatte},
+  date        = {2020-04-29},
+  title       = {Synergistic CPU-FPGA Acceleration of Sparse Linear Algebra},
+  eprint      = {2004.13907v1},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {This paper describes REAP, a software-hardware approach that enables high performance sparse linear algebra computations on a cooperative CPU-FPGA platform. REAP carefully separates the task of organizing the matrix elements from the computation phase. It uses the CPU to provide a first-pass re-organization of the matrix elements, allowing the FPGA to focus on the computation. We introduce a new intermediate representation that allows the CPU to communicate the sparse data and the scheduling decisions to the FPGA. The computation is optimized on the FPGA for effective resource utilization with pipelining. REAP improves the performance of Sparse General Matrix Multiplication (SpGEMM) and Sparse Cholesky Factorization by 3.2X and 1.85X compared to widely used sparse libraries for them on the CPU, respectively.},
+  file        = {:http\://arxiv.org/pdf/2004.13907v1:PDF},
+  keywords    = {cs.DC, cs.MS, cs.PL},
+}
+
+@Article{Chen2020c,
+  author    = {Yuedan Chen and Guoqing Xiao and M. Tamer Ozsu and Chubo Liu and Albert Zomaya and Tao Li},
+  title     = {{aeSpTV}: An Adaptive and Efficient Framework for Sparse Tensor-Vector Product Kernel on a High-Performance Computing Platform},
+  doi       = {10.1109/tpds.2020.2990429},
+  pages     = {1--1},
+  abstract  = {Multi-dimensional, large-scale, and sparse data, which can be neatly represented by sparse tensors, are increasingly used in various applications such as data analysis and machine learning. A high-performance sparse tensor-vector product (SpTV), one of the most fundamental operations of processing sparse tensors, is necessary for improving efficiency of related applications. In this paper, we propose aeSpTV, an adaptive and efficient SpTV framework on Sunway TaihuLight supercomputer, to solve several challenges of optimizing SpTV on high-performance computing platforms. First, to map SpTV to Sunway architecture and tame expensive memory access latency and parallel writing conflict due to the intrinsic irregularity of SpTV, we introduce an adaptive SpTV parallelization. Second, to co-execute with the parallelization design while still ensuring high efficiency, we design a sparse tensor data structure named CSSoCR. Third, based on the adaptive SpTV parallelization with the novel tensor data structure, we present an auto-tuner that chooses the most befitting tensor partitioning method for aeSpTV using the variance analysis theory of mathematical statistics to achieve load balance. Fourth, to further leverage the computing power of Sunway, we propose customized optimizations for aeSpTV. Experimental results show that aeSpTV yields good sacalability on both thread-level and process-level parallelism of Sunway. It achieves a maximum GFLOPS of 195.69 on 128 processes. Additionally, it is proved that optimization effects of the partitioning auto-tuner and optimization techniques are remarkable.},
+  journal   = {{IEEE} Transactions on Parallel and Distributed Systems},
+  publisher = {Institute of Electrical and Electronics Engineers ({IEEE})},
+  year      = {2020},
+}
+
+@TechReport{Regev2020,
+  author      = {Shaked Regev and Michael A. Saunders},
+  date        = {2020},
+  institution = {Stanford University},
+  title       = {{SSAI}: A Symmetric Sparse Approximate Inverse Preconditioner for the Conjugate Gradient Methods {PCG} and {PCGLS}},
+  eprint      = {M130639},
+  url         = {https://web.stanford.edu/group/SOL/reports/M130639.pdf},
+  abstract    = {We propose a method for solving a Hermitian positive definite linear system $Ax = b$, where $A$ is an explicit sparse matrix (real or complex). A sparse approximate right inverse $M$ is computed and replaced by its symmetrization $\tilde{M}$, which is used as a left-right preconditioner in a modified version of the preconditioned conjugategradient method (PCG), where $M$ is modified occasionally, if necessary, to make it more positive definite. $M$ is formed column by column and can therefore be computed in parallel. PCG requires only matrix-vector multiplications with $A$ and $\tilde{M}$ (not solving a linear system with $\tilde{M}$), and so too can be carried out in parallel. We compare it with incomplete Cholesky factorization (the gold standard for PCG) and with MATLAB’s backslash operator (sparse Cholesky) on matrices from various applications. For least-squares problems, we implement an analogous form of preconditioned Conjugate Gradient Least-Squares (PCGLS) which is also shown to be robust.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
