@@ -10785,6 +10785,70 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   abstract    = {We propose a method for solving a Hermitian positive definite linear system $Ax = b$, where $A$ is an explicit sparse matrix (real or complex). A sparse approximate right inverse $M$ is computed and replaced by its symmetrization $\tilde{M}$, which is used as a left-right preconditioner in a modified version of the preconditioned conjugategradient method (PCG), where $M$ is modified occasionally, if necessary, to make it more positive definite. $M$ is formed column by column and can therefore be computed in parallel. PCG requires only matrix-vector multiplications with $A$ and $\tilde{M}$ (not solving a linear system with $\tilde{M}$), and so too can be carried out in parallel. We compare it with incomplete Cholesky factorization (the gold standard for PCG) and with MATLAB’s backslash operator (sparse Cholesky) on matrices from various applications. For least-squares problems, we implement an analogous form of preconditioned Conjugate Gradient Least-Squares (PCGLS) which is also shown to be robust.},
 }
 
+@Article{Tripathy2020,
+  author      = {Alok Tripathy and Katherine Yelick and Aydin Buluc},
+  date        = {2020-05-07},
+  title       = {Reducing Communication in Graph Neural Network Training},
+  eprint      = {2005.03300v1},
+  eprintclass = {cs.LG},
+  eprinttype  = {arXiv},
+  abstract    = {Graph Neural Networks (GNNs) are powerful and flexible neural networks that use the naturally sparse connectivity information of the data. GNNs represent this connectivity as sparse matrices, which have lower arithmetic intensity and thus higher communication costs compared to dense matrices, making GNNs harder to scale to high concurrencies than convolutional or fully-connected neural networks. We present a family of parallel algorithms for training GNNs. These algorithms are based on their counterparts in dense and sparse linear algebra, but they had not been previously applied to GNN training. We show that they can asymptotically reduce communication compared to existing parallel GNN training methods. We implement a promising and practical version that is based on 2D sparse-dense matrix multiplication using torch.distributed. Our implementation parallelizes over GPU-equipped clusters. We train GNNs on up to a hundred GPUs on datasets that include a protein network with over a billion edges.},
+  file        = {:http\://arxiv.org/pdf/2005.03300v1:PDF},
+  keywords    = {cs.LG, cs.DC, stat.ML},
+}
+
+@Article{Derezinski2020,
+  author      = {Michał Dereziński and Michael W. Mahoney},
+  date        = {2020-05-07},
+  title       = {Determinantal Point Processes in Randomized Numerical Linear Algebra},
+  eprint      = {2005.03185v1},
+  eprintclass = {cs.DS},
+  eprinttype  = {arXiv},
+  abstract    = {Randomized Numerical Linear Algebra (RandNLA) uses randomness to develop improved algorithms for matrix problems that arise in scientific computing, data science, machine learning, etc. Determinantal Point Processes (DPPs), a seemingly unrelated topic in pure and applied mathematics, is a class of stochastic point processes with probability distribution characterized by sub-determinants of a kernel matrix. Recent work has uncovered deep and fruitful connections between DPPs and RandNLA which lead to new guarantees and improved algorithms that are of interest to both areas. We provide an overview of this exciting new line of research, including brief introductions to RandNLA and DPPs, as well as applications of DPPs to classical linear algebra tasks such as least squares regression, low-rank approximation and the Nystr\"om method. For example, random sampling with a DPP leads to new kinds of unbiased estimators for least squares, enabling more refined statistical and inferential understanding of these algorithms; a DPP is, in some sense, an optimal randomized algorithm for the Nystr\"om method; and a RandNLA technique called leverage score sampling can be derived as the marginal distribution of a DPP. We also discuss recent algorithmic developments, illustrating that, while not quite as efficient as standard RandNLA techniques, DPP-based algorithms are only moderately more expensive.},
+  file        = {:http\://arxiv.org/pdf/2005.03185v1:PDF},
+  keywords    = {cs.DS, cs.LG},
+}
+
+@Article{Cornelis2020,
+  author      = {Jeffrey Cornelis and Wim Vanroose},
+  date        = {2020-05-06},
+  title       = {Projected Newton method for noise constrained $\ell_p$ regularization},
+  eprint      = {2005.02687v1},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {Choosing an appropriate regularization term is necessary to obtain a meaningful solution to an ill-posed linear inverse problem contaminated with measurement errors or noise. A regularization term in the the $\ell_p$ norm with $p\geq 1$ covers a wide range of choices since its behavior critically depends on the choice of $p$ and since it can easily be combined with a suitable regularization matrix. We develop an efficient algorithm that simultaneously determines the regularization parameter and corresponding $\ell_p$ regularized solution such that the discrepancy principle is satisfied. We project the problem on a low-dimensional Generalized Krylov subspace and compute the Newton direction for this much smaller problem. We illustrate some interesting properties of the algorithm and compare its performance with other state-of-the-art approaches using a number of numerical experiments, with a special focus of the sparsity inducing $\ell_1$ norm and edge-preserving total variation regularization.},
+  file        = {:http\://arxiv.org/pdf/2005.02687v1:PDF},
+  keywords    = {math.NA, cs.NA},
+}
+
+@Article{Kochurov2020,
+  author      = {Max Kochurov and Rasul Karimov and Sergei Kozlukov},
+  date        = {2020-05-06},
+  title       = {Geoopt: Riemannian Optimization in PyTorch},
+  eprint      = {2005.02819v1},
+  eprintclass = {cs.CG},
+  eprinttype  = {arXiv},
+  abstract    = {Geoopt is a research-oriented modular open-source package for Riemannian Optimization in PyTorch. The core of Geoopt is a standard Manifold interface which allows for the generic implementation of optimization algorithms. Geoopt supports basic Riemannian SGD as well as adaptive optimization algorithms. Geoopt also provides several algorithms and arithmetic methods for supported manifolds, which allow composing geometry-aware neural network layers that can be integrated with existing models.},
+  file        = {:http\://arxiv.org/pdf/2005.02819v1:PDF},
+  keywords    = {cs.CG, cs.LG, 53-04, G.4},
+}
+
+@Article{Ahrens2020,
+  author    = {Ahrens, Peter and Demmel, James and Nguyen, Hong},
+  date      = {2020},
+  title     = {Algorithms for Efficient Reproducible Floating Point Summation},
+  doi       = {10.1145/3389360},
+  issn      = {0098-3500},
+  number    = {ja},
+  url       = {https://dl.acm.org/doi/abs/10.1145/3389360},
+  volume    = {0},
+  abstract  = {We define reproducibility to mean getting bitwise identical results from multiple runs of the same program, perhaps with different hardware resources or other changes that should not change the answer. Many users depend on reproducibility for debugging or correctness. However, dynamic scheduling of parallel computing resources, with nonassociativity of floating-point addition, makes reproducibility a challenge even for summing a vector of numbers, or the Basic Linear Algebra Subprograms (BLAS). We describe an algorithm that computes a reproducible floating point sum, independent of summation order. The algorithm uses only a subset of IEEE Standard 754-2008. It is communication-optimal, i.e. it does just one pass over the data in the sequential case, or one reduction operation in parallel, requiring an \emph{accumulator} of just 6 words (higher precision is possible). The arithmetic cost is $7n$ additions to sum $n$ words, and the error bound can be up to $10^(-8)$ times smaller than for conventional summation. We describe the algorithm, the software infrastructure for reproducible BLAS (ReproBLAS), and performance results. For example, for the dot product of 4096 doubles, we get a 4$\times$ slowdown compared to Intel MKL on an Intel Core i7-2600 CPU operating at 3.4 GHz and 256 KB L2 Cache.},
+  address   = {New York, NY, USA},
+  journal   = {ACM Transactions on Mathematical Software},
+  numpages  = {1},
+  publisher = {Association for Computing Machinery},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
