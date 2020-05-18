@@ -10849,6 +10849,62 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   publisher = {Association for Computing Machinery},
 }
 
+@Article{Ma2020,
+  author      = {Linjian Ma and Jiayu Ye and Edgar Solomonik},
+  date        = {2020-05-10},
+  title       = {AutoHOOT: Automatic High-Order Optimization for Tensors},
+  eprint      = {2005.04540v1},
+  eprintclass = {cs.MS},
+  eprinttype  = {arXiv},
+  abstract    = {High-order optimization methods, including Newton's method and its variants as well as alternating minimization methods, dominate the optimization algorithms for tensor decompositions and tensor networks. These tensor methods are used for data analysis and simulation of quantum systems. In this work, we introduce AutoHOOT, the first automatic differentiation (AD) framework targeting at high-order optimization for tensor computations. AutoHOOT takes input tensor computation expressions and generates optimized derivative expressions. In particular, AutoHOOT contains a new explicit Jacobian / Hessian expression generation kernel whose outputs maintain the input tensors' granularity and are easy to optimize. The expressions are then optimized by both the traditional compiler optimization techniques and specific tensor algebra transformations. Experimental results show that AutoHOOT achieves competitive performance for both tensor decomposition and tensor network applications compared to existing AD software and other tensor computation libraries with manually written kernels, both on CPU and GPU architectures. The scalability of the generated kernels is as good as other well-known high-order numerical algorithms so that it can be executed efficiently on distributed parallel systems.},
+  file        = {:http\://arxiv.org/pdf/2005.04540v1:PDF},
+  keywords    = {cs.MS, cs.NA, math.NA},
+}
+
+@Article{Bertsimas2020,
+  author      = {Dimitris Bertsimas and Ryan Cory-Wright and Jean Pauphilet},
+  date        = {2020-05-11},
+  title       = {Solving Large-Scale Sparse PCA to Certifiable (Near) Optimality},
+  eprint      = {2005.05195v1},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {Sparse principal component analysis (PCA) is a popular dimensionality reduction technique for obtaining principal components which are linear combinations of a small subset of the original features. Existing approaches cannot supply certifiably optimal principal components with more than $p=100s$ covariates. By reformulating sparse PCA as a convex mixed-integer semidefinite optimization problem, we design a cutting-plane method which solves the problem to certifiable optimality at the scale of selecting k=10s covariates from p=300 variables, and provides small bound gaps at a larger scale. We also propose two convex relaxations and randomized rounding schemes that provide certifiably near-exact solutions within minutes for p=100s or hours for p=1,000s. Using real-world financial and medical datasets, we illustrate our approach's ability to derive interpretable principal components tractably at scale.},
+  file        = {:http\://arxiv.org/pdf/2005.05195v1:PDF},
+  keywords    = {math.OC, cs.LG, math.ST, stat.CO, stat.TH},
+}
+
+@Article{Fang2020,
+  author      = {Jianbin Fang and Chun Huang and Tao Tang and Zheng Wang},
+  date        = {2020-05-05},
+  title       = {Parallel Programming Models for Heterogeneous Many-Cores : A Survey},
+  eprint      = {2005.04094v1},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {Heterogeneous many-cores are now an integral part of modern computing systems ranging from embedding systems to supercomputers. While heterogeneous many-core design offers the potential for energy-efficient high-performance, such potential can only be unlocked if the application programs are suitably parallel and can be made to match the underlying heterogeneous platform. In this article, we provide a comprehensive survey for parallel programming models for heterogeneous many-core architectures and review the compiling techniques of improving programmability and portability. We examine various software optimization techniques for minimizing the communicating overhead between heterogeneous computing devices. We provide a road map for a wide variety of different research areas. We conclude with a discussion on open issues in the area and potential research directions. This article provides both an accessible introduction to the fast-moving area of heterogeneous programming and a detailed bibliography of its main achievements.},
+  file        = {:http\://arxiv.org/pdf/2005.04094v1:PDF},
+  keywords    = {cs.DC, cs.PL},
+}
+
+@Article{Jung2020,
+  author    = {Yoon Mo Jung and Joyce Jiyoung Whang and Sangwoon Yun},
+  title     = {Sparse probabilistic K-means},
+  doi       = {10.1016/j.amc.2020.125328},
+  pages     = {125328},
+  volume    = {382},
+  abstract  = {The goal of clustering is to partition a set of data points into groups of similar data points, called clusters. Clustering algorithms can be classified into two categories: hard and soft clustering. Hard clustering assigns each data point to one cluster exclusively. On the other hand, soft clustering allows probabilistic assignments to clusters. In this paper, we propose a new model which combines the benefits of these two models: clarity of hard clustering and probabilistic assignments of soft clustering. Since the majority of data usually have a clear association, only a few points may require a probabilistic interpretation. Thus, we apply the $\mathcal{l}_1$ norm constraint to impose sparsity on probabilistic assignments. Moreover, we also incorporate outlier detection in our clustering model to simultaneously detect outliers which can cause serious problems in statistical analyses. To optimize the model, we introduce an alternating minimization method and prove its convergence. Numerical experiments and comparisons with existing models show the soundness and effectiveness of the proposed model.},
+  journal   = {Applied Mathematics and Computation},
+  month     = {10},
+  publisher = {Elsevier {BV}},
+  year      = {2020},
+}
+
+@Article{Melo2020,
+  author   = {Melo, Jefferson G. and Monteiro, Renato D. C. and Wang, Hairong},
+  date     = {2020},
+  title    = {Iteration-complexity of an inexact proximal acceleratedaugmented Lagrangian method for solving linearly constrainedsmooth nonconvex composite optimization problems},
+  abstract = {This paper proposes and establishes the iteration-complexity of an inexact proximal accelerated augmented Lagrangian (IPAAL) method for solving linearly constrained smooth nonconvex composite optimization problems. Each IPAAL iteration consists of inexactly solving a proximal augmented Lagrangian subproblem by an accelerated composite gradient (ACG) method followed by a suitable Lagrange multiplier update. It is shown that IPAAL generates an approximate stationary solution in at most $O(\text{log}(1/\rho)/\rho^3)$ ACG iterations, where $\rho > 0$ is the given tolerance. It is also shown that the previous complexity bound can be sharpened to $O(\text{log}(1/\rho)/\rho^{2.5})$ under additional mildly stronger assumptions. The above bounds are derived assuming that the initial point is neither feasible nor the domain of the composite term of the objective function is bounded. Some preliminary numerical results are presented to illustrate the performance of the IPAAL method.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
