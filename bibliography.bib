@@ -10958,6 +10958,31 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   publisher = {The Royal Society},
   year      = {2020},
 }
+
+@Article{Zhang2020e,
+  author    = {Yongzhe Zhang and Ariful Azad and Ayd{\i}n Bulu{\c{c}}},
+  title     = {Parallel algorithms for finding connected components using linear algebra},
+  doi       = {10.1016/j.jpdc.2020.04.009},
+  abstract  = {Finding connected components is one of the most widely used operations on a graph. Optimal serial algorithms for the problem have been known for half a century, and many competing parallel algorithms have been proposed over the last several decades under various different models of parallel computation. This paper presents a class of parallel connected-component algorithms designed using linear-algebraic primitives. These algorithms are based on a PRAM algorithm by Shiloach and Vishkin and can be designed using standard GraphBLAS operations. We demonstrate two algorithms of this class, one named LACC for Linear Algebraic Connected Components, and the other named FastSV which can be regarded as LACC’s simplification. With the support of the highly-scalable Combinatorial BLAS library, LACC and FastSV outperform the previous state-of-the-art algorithm by a factor of up to 12x for small to medium scale graphs. For large graphs with more than 50B edges, LACC and FastSV scale to 4K nodes (262K cores) of a Cray XC40 supercomputer and outperform previous algorithms by a significant margin. This remarkable performance is accomplished by (1) exploiting sparsity that was not present in the original PRAM algorithm formulation, (2) using high-performance primitives of Combinatorial BLAS, and (3) identifying hot spots and optimizing them away by exploiting algorithmic insights.},
+  journal   = {Journal of Parallel and Distributed Computing},
+  month     = {may},
+  publisher = {Elsevier {BV}},
+  year      = {2020},
+}
+
+@Article{Li2020c,
+  author    = {Pei Heng Li and Taeho Lee and Hee Yong Youn},
+  title     = {Dimensionality Reduction with Sparse Locality for Principal Component Analysis},
+  doi       = {10.1155/2020/9723279},
+  pages     = {1--12},
+  volume    = {2020},
+  abstract  = {Various dimensionality reduction (DR) schemes have been developed for projecting high-dimensional data into low-dimensional representation. The existing schemes usually preserve either only the global structure or local structure of the original data, but not both. To resolve this issue, a scheme called sparse locality for principal component analysis (SLPCA) is proposed. In order to effectively consider the trade-off between the complexity and efficiency, a robust $L_{2,p}$-norm-based principal component analysis (R2P-PCA) is introduced for global DR, while sparse representation-based locality preserving projection (SR-LPP) is used for local DR. Sparse representation is also employed to construct the weighted matrix of the samples. Being parameter-free, this allows the construction of an intrinsic graph more robust against the noise. In addition, simultaneous learning of projection matrix and sparse similarity matrix is possible. Experimental results demonstrate that the proposed scheme consistently outperforms the existing schemes in terms of clustering accuracy and data reconstruction error.},
+  journal   = {Mathematical Problems in Engineering},
+  month     = {may},
+  publisher = {Hindawi Limited},
+  year      = {2020},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
