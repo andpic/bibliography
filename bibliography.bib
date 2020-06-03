@@ -11027,6 +11027,64 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   abstract  = {While systolic arrays are widely used for dense-matrix operations, they are seldom used for sparse-matrix operations. In this paper, we show how a systolic array of Multiply-and-Accumulate (MAC) units, similar to Google’s Tensor Processing Unit (TPU), can be adapted to efficiently handle sparse matrices. TPU-like accelerators are built upon a 2D array of MAC units and have demonstrated high throughput and efficiency for dense matrix multiplication, which is a key kernel in machine learning algorithms and is the target of the TPU. In this work, we employ a co-designed approach of first developing a packing technique to condense a sparse matrix and then propose a systolic array based system, Sparse-TPU, abbreviated to STPU, to accommodate the matrix computations for the packed denser matrix counterparts. To demonstrate the efficacy of our co-designed approach, we evaluate sparse matrix-vector multiplication on a broad set of synthetic and real-world sparse matrices. Experimental results show that STPU delivers 16.08$\times$ higher performance while consuming 4.39$\times$ and 19.79$\times$ lower energy for integer (int8) and floating point (float32) implementations, respectively, over a TPU baseline. Meanwhile, STPU has 12.93\% area overhead and an average of 4.14\% increase in dynamic energy over the TPU baseline for the float32 implementation.},
 }
 
+@Article{Cherubin2020,
+  author    = {Stefano Cherubin and Daniele Cattaneo and Michele Chiari and Giovanni Agosta},
+  title     = {Dynamic Precision Autotuning with {TAFFO}},
+  doi       = {10.1145/3388785},
+  number    = {2},
+  pages     = {1--26},
+  url       = {https://dl.acm.org/doi/pdf/10.1145/3388785},
+  volume    = {17},
+  abstract  = {Many classes of applications, both in the embedded and high performance domains, can trade off the accuracy of the computed results for computation performance. One way to achieve such a trade-off is precision tuning—that is, to modify the data types used for the computation by reducing the bit width, or by changing the representation from floating point to fixed point. We present a methodology for high-accuracy dynamic precision tuning based on the identification of input classes (i.e., classes of input datasets that benefit from similar optimizations). When a new input region is detected, the application kernels are re-compiled on the fly with the appropriate selection of parameters. In this way, we obtain a continuous optimization approach that enables the exploitation of the reduced precision computation while progressively exploring the solution space, thus reducing the time required by compilation overheads. We provide tools to support the automation of the runtime part of the solution, leaving to the user only the task of identifying the input classes. Our approach provides a significant performance boost (up to 320\%) on the typical approximate computing benchmarks, without meaningfully affecting the accuracy of the result, since the error remains always below 3\%.},
+  journal   = {{ACM} Transactions on Architecture and Code Optimization},
+  month     = {may},
+  publisher = {Association for Computing Machinery ({ACM})},
+  year      = {2020},
+}
+
+@InProceedings{Pirkelbauer2020,
+  author    = {Peter Pirkelbauer and Pei-Hung Lin and Tristan Vanderbruggen and Chunhua Liao},
+  booktitle = {Proceedings of the 2020 IEEE International Parallel and Distributed Processing Symposium},
+  date      = {2020},
+  title     = {{XPlacer}: Automatic Analysis of Data AccessPatterns on Heterogeneous {CPU}/{GPU} Systems},
+  series    = {IPDPS '20},
+  url       = {https://www.osti.gov/servlets/purl/1630806},
+  abstract  = {This paper presents XPlacer, a framework to automatically analyze problematic data access patterns in C++ and CUDA code. XPlacer records heap memory operations in both host and device code for later analysis. To this end, XPlacer instruments read and write operations, function calls, and kernel launches. Programmers mark points in the program execution where the recorded data is analyzed and anomalies diagnosed. XPlacer reports data access anti-patterns, including alternating CPU/GPU accesses to the same memory, memory with low access density, and unnecessary data transfers. The diagnostic also produces summative information about the recorded accesses, which aids users in identifying code that could degrade performance.\\ The paper evaluates XPlacer using LULESH, a Lawrence Livermore proxy application, Rodina benchmarks, and an implementation of the Smith-Waterman algorithm. XPlacer diagnosed several performance issues in these codes. The elimination of a performance problem in LULESH resulted in a 3$\times$ speedup on a heterogeneous platform combining Intel CPUs and Nvidia GPUs.},
+}
+
+@Article{Cortiella2020,
+  author      = {Alexandre Cortiella and Kwang-Chun Park and Alireza Doostan},
+  date        = {2020-05-27},
+  title       = {Sparse Identification of Nonlinear Dynamical Systems via Reweighted $\ell_1$-regularized Least Squares},
+  eprint      = {2005.13232v1},
+  eprintclass = {stat.ML},
+  eprinttype  = {arXiv},
+  abstract    = {This work proposes an iterative sparse-regularized regression method to recover governing equations of nonlinear dynamical systems from noisy state measurements. The method is inspired by the Sparse Identification of Nonlinear Dynamics (SINDy) approach of {\it [Brunton et al., PNAS, 113 (15) (2016) 3932-3937]}, which relies on two main assumptions: the state variables are known {\it a priori} and the governing equations lend themselves to sparse, linear expansions in a (nonlinear) basis of the state variables. The aim of this work is to improve the accuracy and robustness of SINDy in the presence of state measurement noise. To this end, a reweighted $\ell_1$-regularized least squares solver is developed, wherein the regularization parameter is selected from the corner point of a Pareto curve. The idea behind using weighted $\ell_1$-norm for regularization -- instead of the standard $\ell_1$-norm -- is to better promote sparsity in the recovery of the governing equations and, in turn, mitigate the effect of noise in the state variables. We also present a method to recover single physical constraints from state measurements. Through several examples of well-known nonlinear dynamical systems, we demonstrate empirically the accuracy and robustness of the reweighted $\ell_1$-regularized least squares strategy with respect to state measurement noise, thus illustrating its viability for a wide range of potential applications.},
+  file        = {:http\://arxiv.org/pdf/2005.13232v1:PDF},
+  keywords    = {stat.ML, cs.LG},
+}
+
+@InCollection{Lin2020a,
+  author    = {Zhouchen Lin and Huan Li and Cong Fang},
+  booktitle = {Accelerated Optimization for Machine Learning},
+  title     = {Accelerated Algorithms for Constrained Convex Optimization},
+  doi       = {10.1007/978-981-15-2910-8_3},
+  pages     = {57--108},
+  publisher = {Springer Singapore},
+  abstract  = {This chapter reviews the representative accelerated algorithms for deterministic constrained convex optimization. We overview the accelerated penalty method, accelerated Lagrange multiplier method, and the accelerated augmented Lagrange multiplier method. In particular, we concentrate on two widely used algorithms, namely the alternating direction method of multiplier (ADMM) and the primal-dual method. For ADMM, we study four scenarios, namely the generally convex and nonsmooth case, the strongly convex and nonsmooth case, the generally convex and smooth case, and the strongly convex and smooth case. We also introduce its non-ergodic accelerated variant. For the primal-dual method, we study three scenarios: both the two functions are generally convex, both are strongly convex, and one is generally convex, while the other is strongly convex. Finally, we introduce the Frank–Wolfe algorithm under the condition of strongly convex constraint set.},
+  year      = {2020},
+}
+
+@TechReport{Hu2020,
+  author      = {Jonathan Hu and Luc Berger-Vergiat and Stephen Thomas and Kasia Swirydowicz and Ichitaro Yamazaki and Paul Mullowney and Sheyas Ananthan and Sivasankaran Rajamanickam and Jay Sitaraman and Michael A. Sprague},
+  date        = {2020},
+  institution = {Office of Advanced Scientific Computing Research, Office of Science, US Department of Energy},
+  title       = {Compare linear-system solver and preconditioner stacks with emphasis on GPU performance and propose phase-2 NGP solvervelopment pathway},
+  eprint      = {ECP-Q2-FY20},
+  url         = {https://www.osti.gov/servlets/purl/1630801},
+  abstract    = {The goal of the ExaWind project is to enable predictive simulations of wind farms comprised of many megawatt-scale turbines situated in complex terrain. Predictive simulations will require computational fluid dynamics (CFD) simulations for which the mesh resolves the geometry of the turbines and captures the rotation and large deflections of blades. Whereas such simulations for a single turbine are arguably petascale class, multi-turbine wind farm simulations will require exascale-class resources. The primary physics codes in the ExaWind project are Nalu-Wind, which is an unstructured-grid solver for the acoustically incompressible Navier-Stokes equations, and OpenFAST, which is a whole-turbine simulation code. The Nalu-Wind model consists of the mass-continuity Poisson-type equation for pressure and a momentum equation for the velocity. For such modeling approaches, simulation times are dominated by linear-system setup and solution for the continuity and momentum systems. For the ExaWind challenge problem, the moving meshes greatly affect overall solver costs as reinitialization of matrices and recomputation of preconditioners is required at every time step.\\ In this report we evaluated GPU-performance baselines for the linear solvers in the Trilinos and hypre solver stacks using two representative Nalu-Wind simulations: an atmospheric boundary layer precursor simulation on a structured mesh, and a fixed-wing simulation using unstructured overset meshes. Both strong-scaling and weak-scaling experiments were conducted on the OLCF supercomputer Summit and similar proxy clusters. We focused on the performance of multi-threaded Gauss-Seidel and two-stage Gauss-Seidel that are extensions of classical Gauss-Seidel; of one-reduce GMRES, a communication-reducing variant of the Krylov GMRES; and algebraic multigrid methods that incorporate the afore-mentioned methods. The team has established that AMG methods are capable of solving linear systems arising from the fixed-wing overset meshes on CPU, a critical intermediate result for ExaWind FY20 Q3 and Q4 milestones. For the fixed-wing strong-scaling study (model with 3M grid-points), the team identified that Nalu-Wind simulations with the new Trilinos and hypre solvers scale to modest GPU counts, maintaining above 70\% efficiency up to 6 GPUs. However, there still remain significant bottlenecks to performance: matrix assembly (hypre), AMG setup (hypre and Trilinos) In the weak-scaling experiments (going from 0.4M to 211M gridpoints), it's shown that the solver apply phases are faster on GPUs, but that Nalu-Wind simulation times grow, primarily due to the multigrid-setup process.\\ Finally, based on the report outcomes, we propose a linear solver path-forward for the remainder of the ExaWind project. Near term, the NREL team will continue their work on GPU-based linear-system assembly. They will also investigate how the use of alternatives to the NVIDIA UVM (unified virtual memory) paradigm affects performance. Longer term, the NREL team will evaluate algorithmic performance on other types of accelerators and merge their improvements back to the main hypre repository branch. Near term, the Trilinos team will address performance bottlenecks identified in this milestone, such as implementing a GPU-based segregated momentum solve and reusing matrix graphs across linear-system assembly phases. Longer term, the Trilinos team will do detailed analysis and optimization of multigrid setup.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
