@@ -11158,6 +11158,100 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   keywords    = {cs.DS},
 }
 
+@Article{Crane2020,
+  author      = {Rixon Crane and Fred Roosta},
+  date        = {2020-06-05},
+  title       = {{DINO}: Distributed Newton-Type Optimization Method},
+  eprint      = {2006.03694v1},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {We present a novel communication-efficient Newton-type algorithm for finite-sum optimization over a distributed computing environment. Our method, named DINO, overcomes both theoretical and practical shortcomings of similar existing methods. Under minimal assumptions, we guarantee global sub-linear convergence of DINO to a first-order stationary point for general non-convex functions and arbitrary data distribution over the network. Furthermore, for functions satisfying Polyak-Lojasiewicz (PL) inequality, we show that DINO enjoys a linear convergence rate. Our proposed algorithm is practically parameter free, in that it will converge regardless of the selected hyper-parameters, which are easy to tune. Additionally, its sub-problems are simple linear least-squares, for which efficient solvers exist. Numerical simulations demonstrate the efficiency of DINO as compared with similar alternatives.},
+  file        = {:http\://arxiv.org/pdf/2006.03694v1:PDF},
+  keywords    = {math.OC},
+}
+
+@Article{Yi2020,
+  author      = {Xinlei Yi and Shengjun Zhang and Tao Yang and Tianyou Chai and Karl H. Johansson},
+  date        = {2020-06-04},
+  title       = {A Primal-Dual SGD Algorithm for Distributed Nonconvex Optimization},
+  eprint      = {2006.03474v1},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {The distributed nonconvex optimization problem of minimizing a global cost function formed by a sum of $n$ local cost functions by using local information exchange is considered. This problem is an important component of many machine learning techniques with data parallelism, such as deep learning and federated learning. We propose a distributed primal-dual stochastic gradient descent (SGD) algorithm, suitable for arbitrarily connected communication networks and any smooth (possibly nonconvex) cost functions. We show that the proposed algorithm achieves the linear speedup convergence rate $\mathcal{O}(1/\sqrt{nT})$ for general nonconvex cost functions and the well known $\mathcal{O}(1/T)$ convergence rate when the global cost function satisfies the Polyak-{\L}ojasiewicz condition, where $T$ is the total number of iterations. We also show that the output of the proposed algorithm with fixed parameters linearly converges to a neighborhood of a global optimum. We demonstrate through numerical experiments the efficiency of our algorithm in comparison with the baseline centralized SGD and recently proposed distributed SGD algorithms.},
+  file        = {:http\://arxiv.org/pdf/2006.03474v1:PDF},
+  keywords    = {math.OC},
+}
+
+@InProceedings{Tandon2020,
+  author    = {Suyash Tandon and Ivana Marincic and Henry Hoffmann and Eric Johnsen},
+  booktitle = {Proceedings of the 2020 {AIAA} Aviation Forum},
+  title     = {Enabling power-performance balance with transprecision calculations for extreme-scale computations of turbulent flows},
+  doi       = {10.2514/6.2020-2922},
+  publisher = {American Institute of Aeronautics and Astronautics},
+  abstract  = {In modern scientific computing, the execution of floating-point operations emerges as a major contributor to the energy consumption of a compute-intensive application with a large dynamic range. Experimental evidence shows that over 50\% of the energy consumed by a core and its data memory is related to floating-point computations. The adoption of floating-point formats requiring lesser number of bits is an interesting opportunity to reduce the energy consumption as it allows simplification of the arithmetic circuitry and reduces the memory bandwidth required to transfer the data between memory and registers. In theory, the adoption of multiple floating-point types following the principle of transprecision computing allows fine-grained control of floating-point arithmetic while meeting the desired standards on the accuracy of the final result. In this paper, the power-performance trade-offs for computing at different precision levels are analyzed for a parallel and distributed framework based on recovery-assisted discontinuous Galerkin (RADG) methods. The recovery operator of the RADG, operates on compact support from neighboring elements and allows high-order approximation of the solution, with potential for massive parallelism. Using PoLiMEr – a power monitoring and management tool for HPC applications – fine-grained insights into the power characteristics of the RADG code on the supercomputer Theta at Argonne National Laboratory are presented. 3D benchmark tests indicate a savings of approximately 5 W per node with single precision computing. A mixed precision approach where all computations except recovery operation is performed in single precision shows promising results, however, an automated approach for tuning floating-point types and analyzing the floating-point sensitivity of variables and operations is desirable.},
+  month     = {6},
+  year      = {2020},
+}
+
+@InProceedings{Kim2020,
+  author    = {Hongjune Kim and Jianping Zeng and Qingrui Liu and Mohammad Abdel-Majeed and Jaejin Lee and Changhee Jung},
+  booktitle = {Proceedings of the 41st {ACM} {SIGPLAN} Conference on Programming Language Design and Implementation},
+  title     = {Compiler-directed soft error resilience for lightweight {GPU} register file protection},
+  doi       = {10.1145/3385412.3386033},
+  publisher = {{ACM}},
+  abstract  = {This paper presents Penny, a compiler-directed resilience scheme for protecting GPU register files (RF) against soft errors. Penny replaces the conventional error correction code (ECC) based RF protection by using less expensive error detection code (EDC) along with idempotence based recovery. Compared to the ECC protection, Penny can achieve either the same level of RF resilience yet with significantly lower hardware costs or stronger resilience using the same ECC due to its ability to detect multi-bit errors when it is used solely for detection. In particular, to address the lack of store buffers in GPUs, which causes both checkpoint storage overwriting and the high cost of checkpointing stores, Penny provides several compiler optimizations such as storage coloring and checkpoint pruning. Across 25 benchmarks, Penny causes only $\approx$3\% run-time overhead on average.},
+  month     = {6},
+  year      = {2020},
+}
+
+@Article{Frandsen2020,
+  author    = {Abraham Frandsen and Rong Ge},
+  title     = {Optimization landscape of Tucker decomposition},
+  doi       = {10.1007/s10107-020-01531-z},
+  abstract  = {Tucker decomposition is a popular technique for many data analysis and machine learning applications. Finding a Tucker decomposition is a nonconvex optimization problem. As the scale of the problems increases, local search algorithms such as stochastic gradient descent have become popular in practice. In this paper, we characterize the optimization landscape of the Tucker decomposition problem. In particular, we show that if the tensor has an exact Tucker decomposition, for a standard nonconvex objective of Tucker decomposition, all local minima are also globally optimal. We also give a local search algorithm that can find an approximate local (and global) optimal solution in polynomial time.},
+  journal   = {Mathematical Programming},
+  month     = {6},
+  publisher = {Springer Science and Business Media {LLC}},
+  year      = {2020},
+}
+
+@Article{Trotter2020,
+  author    = {James D. Trotter and Johannes Langguth and Xing Cai},
+  title     = {Cache simulation for irregular memory traffic on multi-core {CPUs}: Case study on performance models for sparse matrix{\textendash}vector multiplication},
+  doi       = {10.1016/j.jpdc.2020.05.020},
+  pages     = {189--205},
+  volume    = {144},
+  abstract  = {Parallel computations with irregular memory access patterns are often limited by the memory subsystems of multi-core CPUs, though it can be difficult to pinpoint and quantify performance bottlenecks precisely. We present a method for estimating volumes of data traffic caused by irregular, parallel computations on multi-core CPUs with memory hierarchies containing both private and shared caches. Further, we describe a performance model based on these estimates that applies to bandwidth-limited computations. As a case study, we consider two standard algorithms for sparse matrix–vector multiplication, a widely used, irregular kernel. Using three different multi-core CPU systems and a set of matrices that induce a range of irregular memory access patterns, we demonstrate that our cache simulation combined with the proposed performance model accurately quantifies performance bottlenecks that would not be detected using standard best- or worst-case estimates of the data traffic volume.},
+  journal   = {Journal of Parallel and Distributed Computing},
+  month     = {10},
+  publisher = {Elsevier {BV}},
+  year      = {2020},
+}
+
+@InProceedings{AlHarthi2020,
+  author    = {Al-Harthi, Noha and A.Alomairy, Rabab M. and Akbudak, Kadir and Chen, Rui and Ltaief, Hatem and Bagci, Hakan and Keyes, David E.},
+  booktitle = {Proceedings of ISC High Performance 2020},
+  date      = {2020-06-04},
+  title     = {Solving Acoustic Boundary Integral Equations Using High Performance Tile Low-Rank {LU} Factorization},
+  series    = {ISC '20},
+  url       = {http://hdl.handle.net/10754/663212},
+  abstract  = {We design and develop a new high performance implementation of a fast direct LU-based solver using low-rank approximations on massively parallel systems. The LU factorization is the most time-consuming step in solving systems of linear equations in the context of analyzing acoustic scattering from large 3D objects. The matrix equation is obtained by discretizing the boundary integral of the exterior Helmholtz problem using a higher-order Nyström scheme. The main idea is to exploit the inherent data sparsity of the matrix operator by performing local tile-centric approximations while still capturing the most significant information. In particular, the proposed LU-based solver leverages the Tile Low-Rank (TLR) data compression format as implemented in the Hierarchical Computations on Manycore Architectures (HiCMA) library to decrease the complexity of “classical” dense direct solvers from cubic to quadratic order. We taskify the underlying boundary integral kernels to expose fine-grained computations. We then employ the dynamic runtime system StarPU to orchestrate the scheduling of computational tasks on shared and distributed-memory systems. The resulting asynchronous execution permits to compensate for the load imbalance due to the heterogeneous ranks, while mitigating the overhead of data motion. We assess the robustness of our TLR LU-based solver and study the qualitative impact when using different numerical accuracies. The new TLR LU factorization outperforms the state-of-the-art dense factorizations by up to an order of magnitude on various parallel systems, for analysis of scattering from large-scale 3D synthetic and real geometries.},
+}
+
+@Article{Zanon2020,
+  author    = {Mattia Zanon and Giuliano Zambonin and Gian Antonio Susto and Se{\'{a}}n McLoone},
+  title     = {Sparse Logistic Regression: Comparison of Regularization and Bayesian Implementations},
+  doi       = {10.3390/a13060137},
+  number    = {6},
+  pages     = {137},
+  volume    = {13},
+  abstract  = {In knowledge-based systems, besides obtaining good output prediction accuracy, it is crucial to understand the subset of input variables that have most influence on the output, with the goal of gaining deeper insight into the underlying process. These requirements call for logistic model estimation techniques that provide a sparse solution, i.e., where coefficients associated with non-important variables are set to zero. In this work we compare the performance of two methods: the first one is based on the well known Least Absolute Shrinkage and Selection Operator (LASSO) which involves regularization with an $\mathcal{l}$1 norm; the second one is the Relevance Vector Machine (RVM) which is based on a Bayesian implementation of the linear logistic model. The two methods are extensively compared in this paper, on real and simulated datasets. Results show that, in general, the two approaches are comparable in terms of prediction performance. RVM outperforms the LASSO both in term of structure recovery (estimation of the correct non-zero model coefficients) and prediction accuracy when the dimensionality of the data tends to increase. However, LASSO shows comparable performance to RVM when the dimensionality of the data is much higher than number of samples that is $p \gg n$},
+  journal   = {Algorithms},
+  month     = {6},
+  publisher = {{MDPI} {AG}},
+  year      = {2020},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
