@@ -11252,6 +11252,53 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   year      = {2020},
 }
 
+@Article{Fang2020a,
+  author      = {Zhuangyan Fang and Shengyu Zhu and Jiji Zhang and Yue Liu and Zhitang Chen and Yangbo He},
+  date        = {2020-06-10},
+  title       = {Low Rank Directed Acyclic Graphs and Causal Structure Learning},
+  eprint      = {2006.05691v1},
+  eprintclass = {cs.LG},
+  eprinttype  = {arXiv},
+  abstract    = {Despite several important advances in recent years, learning causal structures represented by directed acyclic graphs (DAGs) remains a challenging task in high dimensional settings when the graphs to be learned are not sparse. In particular, the recent formulation of structure learning as a continuous optimization problem proved to have considerable advantages over the traditional combinatorial formulation, but the performance of the resulting algorithms is still wanting when the target graph is relatively large and dense. In this paper we propose a novel approach to mitigate this problem, by exploiting a low rank assumption regarding the (weighted) adjacency matrix of a DAG causal model. We establish several useful results relating interpretable graphical conditions to the low rank assumption, and show how to adapt existing methods for causal structure learning to take advantage of this assumption. We also provide empirical evidence for the utility of our low rank algorithms, especially on graphs that are not sparse. Not only do they outperform state-of-the-art algorithms when the low rank condition is satisfied, the performance on randomly generated scale-free graphs is also very competitive even though the true ranks may not be as low as is assumed.},
+  file        = {:http\://arxiv.org/pdf/2006.05691v1:PDF},
+  keywords    = {cs.LG, stat.ML},
+}
+
+@Article{Jalving2020,
+  author      = {Jordan Jalving and Sungho Shin and Victor M. Zavala},
+  date        = {2020-06-09},
+  title       = {A Graph-Based Modeling Abstraction for Optimization: Concepts and Implementation in Plasmo.jl},
+  eprint      = {2006.05378v2},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {We present a general graph-based modeling abstraction for optimization that we call an OptiGraph. Under this abstraction, any optimization problem is treated as a hierarchical hypergraph in which nodes represent optimization subproblems and edges represent connectivity between such subproblems. The abstraction enables the modular construction of highly complex models in an intuitive manner, facilitates the use of graph analysis tools (to perform partitioning, aggregation, and visualization tasks), and facilitates communication of structures to decomposition algorithms. We provide an open-source implementation of the abstraction in the Julia-based package Plasmo.jl. We provide tutorial examples and large application case studies to illustrate the capabilities.},
+  file        = {:http\://arxiv.org/pdf/2006.05378v2:PDF},
+  keywords    = {math.OC},
+}
+
+@PhdThesis{Ellis2020,
+  author      = {Marquita May Ellis},
+  date        = {2020},
+  institution = {University of California, Berkeley},
+  title       = {Parallelizing Irregular Applications for Distributed Memory Scalability: Case Studies from Genomics},
+  eprint      = {EECS-2020-133},
+  url         = {https://www2.eecs.berkeley.edu/Pubs/TechRpts/2020/EECS-2020-133.pdf},
+  abstract    = {Generalizable approaches, models, and frameworks for irregular application scalability is an old yet open area in parallel and distributed computing research. Irregular applications are particularly hard to parallelize and distribute because, by definition, the pattern of computation is dependent upon the input data. With the proliferation of data-driven and data-intensive applications from the realm of Big Data, and the increasing demand for and availability of large-scale computing resources through HPC-Cloud convergence, the importance of generalized approaches to achieving irregular application scalability is only growing.\\ Rather than offering another software language or framework, this dissertation argues we first need to understand application scalability, especially irregular application scalability, and more closely examine patterns of computation, data sharing, and dependencies. As it stands, predominant performance models and tools from parallel and distributed computing focus on applications that are divided into distinct communication and computation phases, and ignore issues related to memory utilization. While time-tested and valuable, these models are not always sucient for understanding full application scalability, particularly, the scalability of data-intensive irregular applications. We present application case studies from genomics, highlighting the interdependencies of communication, computation, and memory capacities and performance.\\ The genomics applications we will examine offer a particularly useful and practical vantage point for this analysis, as they are data-intensive irregular application targets for both HPC and cloud computing. Further, they present an extreme for both domains. For HPC, they are less akin to traditional, well-studied and well-supported scientific simulations and more akin to text and document analysis applications. For cloud computing, they are an extreme in that they require frequent random global access to memory and data, stressing interconnection network latency and bandwidth and co-scheduled processors for tightly orchestrated computation.\\ We show how common patterns of irregular all-to-all computation can be managed eciently, comparing bulk-synchronous approaches built on collective communication and asynchronous approaches based on one-sided communication. For the former, our work is based on the popular Message Passing Interface (MPI) and makes heavy use of globally collective communication operations that exchange data across processors in a single step or, to save memory use, in a set of irregular steps. For the latter, we build on the UPC++ programming framework, which provides lightweight RPC mechanisms, to transfer both data and computational work between processors. We present performance results across multiple platforms including several modern HPC systems and, at least in one case, a cloud computing platform. With these application case studies, we seek not only to contribute to discussions around parallel algorithm and data structure design, programming systems, and performance modeling within the parallel computing community, but also to contribute to broader work in genomics through software development and analysis. Thus, we develop and present the first distributed memory scalable software for analyzing data sets from the latest generation of sequencing technologies, known as long read data sets. Specifically, we present scalable solutions to the problem of many-to-many long read overlap and alignment, the computational bottleneck to long read assembly, error correction, and direct analysis. Through cross-architectural empirical analysis, we identify the key components to ecient scalability, and highlight the priorities for any future optimization with analytical models.},
+}
+
+@Article{Boukaram2020,
+  author    = {Wajih Boukaram and Marco Lucchesi and George Turkiyyah and Olivier Le Ma{\^{\i}}tre and Omar Knio and David Keyes},
+  title     = {Hierarchical matrix approximations for space-fractional diffusion equations},
+  doi       = {10.1016/j.cma.2020.113191},
+  pages     = {113191},
+  volume    = {369},
+  abstract  = {Space fractional diffusion models generally lead to dense discrete matrix operators, which lead to substantial computational challenges when the system size becomes large. For a state of size $N$, full representation of a fractional diffusion matrix would require $O(N^2)$ memory storage requirement, with a similar estimate for matrix–vector products. In this work, we present $\mathcal{H}^2$ matrix representation and algorithms that are amenable to efficient implementation on GPUs, and that can reduce the cost of storing these operators to $O(N)$ asymptotically. Matrix–vector multiplications can be performed in asymptotically linear time as well. Performance of the algorithms is assessed in light of 2D simulations of space fractional diffusion equation with constant diffusivity. Attention is focused on smooth particle approximation of the governing equations, which lead to discrete operators involving explicit radial kernels. The algorithms are first tested using the fundamental solution of the unforced space fractional diffusion equation in an unbounded domain, and then for the steady, forced, fractional diffusion equation in a bounded domain. Both matrix-inverse and pseudo-transient solution approaches are considered in the latter case. Our experiments show that the construction of the fractional diffusion matrix, the matrix–vector multiplication, and the generation of an approximate inverse pre-conditioner all perform very well on a single GPU on 2D problems with $N$ in the range $10^5 -- 10^6$. In addition, the tests also showed that, for the entire range of parameters and fractional orders considered, results obtained using the $\mathcal{H}^2$ approximations were in close agreement with results obtained using dense operators, and exhibited the same spatial order of convergence. Overall, the present experiences showed that the $\mathcal{H}^2$ matrix framework promises to provide practical means to handle large-scale space fractional diffusion models in several space dimensions, at a computational cost that is asymptotically similar to the cost of handling classical diffusion equations.},
+  journal   = {Computer Methods in Applied Mechanics and Engineering},
+  month     = {sep},
+  publisher = {Elsevier {BV}},
+  year      = {2020},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
