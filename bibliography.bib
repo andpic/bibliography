@@ -11299,6 +11299,123 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   year      = {2020},
 }
 
+@Article{Doikov2020a,
+  author       = {Nikita Doikov and Yurii Nesterov},
+  date         = {2020-06-15},
+  journaltitle = {CORE Discussion Papers ; 2020/23 (2020) 22 pages http://hdl.handle.net/2078.1/230370},
+  title        = {Convex optimization based on global lower second-order models},
+  eprint       = {2006.08518v1},
+  eprintclass  = {math.OC},
+  eprinttype   = {arXiv},
+  abstract     = {In this paper, we present new second-order algorithms for composite convex optimization, called Contracting-domain Newton methods. These algorithms are affine-invariant and based on global second-order lower approximation for the smooth component of the objective. Our approach has an interpretation both as a second-order generalization of the conditional gradient method, or as a variant of trust-region scheme. Under the assumption, that the problem domain is bounded, we prove $\mathcal{O}(1/k^{2})$ global rate of convergence in functional residual, where $k$ is the iteration counter, minimizing convex functions with Lipschitz continuous Hessian. This significantly improves the previously known bound $\mathcal{O}(1/k)$ for this type of algorithms. Additionally, we propose a stochastic extension of our method, and present computational results for solving empirical risk minimization problem.},
+  file         = {:http\://arxiv.org/pdf/2006.08518v1:PDF},
+  keywords     = {math.OC},
+}
+
+@Article{You2020,
+  author      = {Yang You and Yuhui Wang and Huan Zhang and Zhao Zhang and James Demmel and Cho-Jui Hsieh},
+  date        = {2020-06-15},
+  title       = {The Limit of the Batch Size},
+  eprint      = {2006.08517v1},
+  eprintclass = {cs.LG},
+  eprinttype  = {arXiv},
+  abstract    = {Large-batch training is an efficient approach for current distributed deep learning systems. It has enabled researchers to reduce the ImageNet/ResNet-50 training from 29 hours to around 1 minute. In this paper, we focus on studying the limit of the batch size. We think it may provide a guidance to AI supercomputer and algorithm designers. We provide detailed numerical optimization instructions for step-by-step comparison. Moreover, it is important to understand the generalization and optimization performance of huge batch training. Hoffer et al. introduced "ultra-slow diffusion" theory to large-batch training. However, our experiments show contradictory results with the conclusion of Hoffer et al. We provide comprehensive experimental results and detailed analysis to study the limitations of batch size scaling and "ultra-slow diffusion" theory. For the first time we scale the batch size on ImageNet to at least a magnitude larger than all previous work, and provide detailed studies on the performance of many state-of-the-art optimization schemes under this setting. We propose an optimization recipe that is able to improve the top-1 test accuracy by 18\% compared to the baseline.},
+  file        = {:http\://arxiv.org/pdf/2006.08517v1:PDF},
+  keywords    = {cs.LG, cs.CV, cs.DC, stat.ML},
+}
+
+@Article{Wiebe2020,
+  author      = {Johannes Wiebe and Inês Cecílio and Jonathan Dunlop and Ruth Misener},
+  date        = {2020-06-15},
+  title       = {A robust approach to warped Gaussian process-constrained optimization},
+  eprint      = {2006.08222v1},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {Optimization problems with uncertain black-box constraints, modeled by warped Gaussian processes, have recently been considered in the Bayesian optimization setting. This work introduces a new class of constraints in which the same black-box function occurs multiple times evaluated at different domain points. Such constraints are important in applications where, e.g., safety-critical measures are aggregated over multiple time periods. Our approach, which uses robust optimization, reformulates these uncertain constraints into deterministic constraints guaranteed to be satisfied with a specified probability, i.e., deterministic approximations to a chance constraint. This approach extends robust optimization methods from parametric uncertainty to uncertain functions modeled by warped Gaussian processes. We analyze convexity conditions and propose a custom global optimization strategy for non-convex cases. A case study derived from production planning and an industrially relevant example from oil well drilling show that the approach effectively mitigates uncertainty in the learned curves. For the drill scheduling example, we develop a custom strategy for globally optimizing integer decisions.},
+  file        = {:http\://arxiv.org/pdf/2006.08222v1:PDF},
+  keywords    = {math.OC},
+}
+
+@Article{Simonetto2020,
+  author      = {Andrea Simonetto and Emiliano Dall'Anese and Santiago Paternain and Geert Leus and Georgios B. Giannakis},
+  date        = {2020-06-15},
+  title       = {Time-Varying Convex Optimization: Time-Structured Algorithms and Applications},
+  eprint      = {2006.08500v1},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {Optimization underpins many of the challenges that science and technology face on a daily basis. Recent years have witnessed a major shift from traditional optimization paradigms grounded on batch algorithms for medium-scale problems to challenging dynamic, time-varying, and even huge-size settings. This is driven by technological transformations that converted infrastructural and social platforms into complex and dynamic networked systems with even pervasive sensing and computing capabilities. The present paper reviews a broad class of state-of-the-art algorithms for time-varying optimization, with an eye to both algorithmic development and performance analysis. It offers a comprehensive overview of available tools and methods, and unveils open challenges in application domains of broad interest. The real-world examples presented include smart power systems, robotics, machine learning, and data analytics, highlighting domain-specific issues and solutions. The ultimate goal is to exempify wide engineering relevance of analytical tools and pertinent theoretical foundations.},
+  file        = {:http\://arxiv.org/pdf/2006.08500v1:PDF},
+  keywords    = {math.OC, cs.SY, eess.SY},
+}
+
+@InCollection{Tsai2020,
+  author    = {Yuhsiang M. Tsai and Terry Cojean and Hartwig Anzt},
+  booktitle = {Lecture Notes in Computer Science},
+  title     = {Sparse Linear Algebra on {AMD} and~{NVIDIA} {GPUs} {\textendash} The Race Is On},
+  doi       = {10.1007/978-3-030-50743-5_16},
+  pages     = {309--327},
+  publisher = {Springer International Publishing},
+  abstract  = {Efficiently processing sparse matrices is a central and performance-critical part of many scientific simulation codes. Recognizing the adoption of manycore accelerators in HPC, we evaluate in this paper the performance of the currently best sparse matrix-vector product (SpMV) implementations on high-end GPUs from AMD and NVIDIA. Specifically, we optimize SpMV kernels for the CSR, COO, ELL, and HYB format taking the hardware characteristics of the latest GPU technologies into account. We compare for 2,800 test matrices the performance of our kernels against AMD’s hipSPARSE library and NVIDIA’s cuSPARSE library, and ultimately assess how the GPU technologies from AMD and NVIDIA compare in terms of SpMV performance.},
+  year      = {2020},
+}
+
+@InCollection{Madsen2020,
+  author    = {Jonathan R. Madsen and Muaaz G. Awan and Hugo Brunie and Jack Deslippe and Rahul Gayatri and Leonid Oliker and Yunsong Wang and Charlene Yang and Samuel Williams},
+  booktitle = {Lecture Notes in Computer Science},
+  title     = {Timemory: Modular Performance Analysis for {HPC}},
+  doi       = {10.1007/978-3-030-50743-5_22},
+  pages     = {434--452},
+  publisher = {Springer International Publishing},
+  abstract  = {HPC has undergone a significant transition toward heterogeneous architectures. This transition has introduced several issues in code migration to support multiple frameworks for targeting the various architectures. In order to cope with these challenges, projects such as Kokkos and LLVM create abstractions which map a generic front-end API to the backend that supports the targeted architecture. This paper presents a complementary framework for performance measurement and analysis. Several performance measurement and analysis tools in existence provide their capabilities through various methods but the common theme among these tools are prohibitive limitations in terms of user-level extensions. For this reason, software developers commonly have to learn multiple tools and valuable analysis methods, such as the roofline model, are frequently required to be generated manually. The timemory framework provides complete modularity for performance measurement and analysis and eliminates all restrictions on user-level extensions. The timemory framework also provides a highly-efficient and intuitive method for handling multiple tools/measurements (i.e., "components") concurrently. The intersection of these characteristics provide ample evidence that timemory can serve as the common interface for existing performance measurement and analysis tools. Timemory components are developed in C++ but includes multi-language support for C, Fortran, and Python codes. Numerous components are provided by the library itself – including, but not limited to, timers, memory usage, hardware counters, and FLOP and instruction roofline models. Additionally, analysis of the intrinsic overhead demonstrates superior performance in comparison with popular tools.},
+  year      = {2020},
+}
+
+@InProceedings{Chatzidimitriou2020,
+  author    = {A. Chatzidimitriou and D. Gizopoulos},
+  booktitle = {Proceedings of the 2020 Design, Automation Test in Europe Conference Exhibition},
+  title     = {{rACE}: Reverse-Order Processor Reliability Analysis},
+  doi       = {10.23919/DATE48585.2020.9116355},
+  pages     = {1115--1120},
+  series    = {DATE 2020},
+  abstract  = {Modern microprocessors suffer from increased error rates that come along with fabrication technology scaling. Processor designs continuously become more prone to hardware faults that lead to execution errors and system failures, which raise the requirement of protection mechanisms. However, error mitigation strategies have to be applied diligently, as they impose significant power, area, and performance overheads. Early and accurate reliability estimation of a microprocessor design is essential in order to determine the most vulnerable hardware structures and the most efficient protection schemes. One of the most commonly used techniques for reliability estimation is Architecturally Correct Execution (ACE) analysis.ACE analysis can be applied at different abstraction models, including microarchitecture and RTL and often requires a single or few simulations to report the Architectural Vulnerability Factor (AVF) of the processor structures. However, ACE analysis overestimates the vulnerability of structures because of its pessimistic, worst-case nature. Moreover, it only delivers coarse-grain vulnerability reports and no details about the expected result of hardware faults (silent data corruptions, crashes). In this paper, we present reverse ACE (rACE), a methodology that (a) improves the accuracy of ACE analysis and (b) delivers fine-grain error outcome reports. Using a reverse-order tracing flow, rACE analysis associates portions of the simulated execution of a program with the actual output and the control flow, delivering finer accuracy and results classification. Our findings show that rACE reports an average 1.45$\times$ overestimation, compared to Statistical Fault Injection, for different sizes of the register file of an out-of-order CPU core (executing both ARM and x86 binaries), when a baseline ACE analysis reports 2.3$\times$ overestimation and even refined versions of ACE analysis report an average of 1.8$\times$ overestimation.},
+  issn      = {1558-1101},
+  month     = {3},
+  year      = {2020},
+}
+
+@Article{Mailitsky2020,
+  author   = {Yura Mailitsky and Konstantin Mishchenko},
+  date     = {2020},
+  title    = {Adaptive Gradient Descent without Descent},
+  abstract = {We present a strikingly simple proof that two rules are sufficient to automate gradient descent: 1) don’t increase the stepsize too fast and 2) don’t overstep the local curvature. No need for functional values, no line search, no information about the function except for the gradients. By following these rules, you get a method adaptive to the local geometry, with convergence guarantees depending only on the smoothness in a neighborhood of a solution. Given that the problem is convex, our method converges even if the global smoothness constant is infinity. As an illustration, it can minimize arbitrary continuously twice-differentiable convex function. We examine its performance on a range of convex and nonconvex problems, including logistic regression and matrix factorization.},
+}
+
+@InProceedings{Nie2020,
+  author    = {Bin Nie and Adwait Jog and Evgenia Smirni},
+  booktitle = {Proceedings of the 20th IEEE/ACM International Symposium on Cluster, Cloud and Internet Computing},
+  date      = {2020},
+  title     = {Characterizing Accuracy-Aware Resilience of {GPGPU} Applications},
+  pages     = {111--120},
+  series    = {CCGRID 2020},
+  abstract  = {Graphics Processing Units (GPUs) have rapidly evolved to enable energy-efficient data-parallel computing. In addition to achieving exascale performance at a stringent power budget, it is imperative for GPUs to provide reliable computing guarantees to the end user. In current commodity systems, such guarantees are often achieved by incurring high protection cost in terms of performance, power, and hardware resources. However, we argue that these strict guarantees are often not required (and that the associated protected overheads can be significantly reduced) because several GPGPU applications are either fault-tolerant or can accept a quantifiable loss in output quality. To this end, this paper characterizes in a hierarchical manner the accuracy-aware resilience of GPGPU applications consisting of thousands of threads. This characterization study shows that accuracy-aware error resilience exhibits several interesting patterns across threads at different hierarchies (i.e., kernel/thread-block/warp). The insights from this characterization study can be used to reduce the overheads of expensive protection or recovery mechanisms that are typically used by GPUs to ensure application reliability.},
+}
+
+@PhdThesis{Chang2020,
+  author      = {Tyler H. Chang},
+  date        = {2020},
+  institution = {Virginia Polytechnic Institute and State University},
+  title       = {Mathematical Software for Multiobjective Optimization Problems},
+  abstract    = {In this thesis, two distinct problems in data-driven computational science are considered. The main problem of interest is the multiobjective optimization problem, where the tradeoff surface (called the Pareto front) between multiple conflicting objectives must be approximated in order to identify designs that balance real-world tradeoffs. In order to solve multiobjective optimization problems that are derived from computationally expensive blackbox functions, such as engineering design optimization problems, several methodologies are combined, including surrogate modeling, trust region methods, and adaptive weighting. The result is a numerical software package that finds approximately Pareto optimal solutions that are evenly distributed across the Pareto front, using minimal cost function evaluations. The second problem of interest is the closely related problem of multivariate interpolation, where an unknown response surface representing an underlying phenomenon is approximated by finding a function that exactly matches available data. To solve the interpolation problem, a novel algorithm is proposed for computing only a sparse subset of the elements in the Delaunay triangulation, as needed to compute the Delaunay interpolant. For high-dimensional data, this reduces the time and space complexity of Delaunay interpolation from exponential time to polynomial time in practice. For each of the above problems, both serial and parallel implementations are described. Additionally, both solutions are demonstrated on real-world problems in computer system performance modeling.},
+}
+
+@PhdThesis{Wang2020b,
+  author      = {Leyuan Wang},
+  date        = {2020},
+  institution = {University of California Davis},
+  title       = {Parallel Algorithms on Graph Matching},
+  abstract    = {Subgraph matching is a basic task in querying graph dataset. It can also be called subgraph isomorphism search which consists to find all embeddings of a small query graph in a large data graph. It is one of the key techniques for understanding the underlying structure of graph datasets.\\ Graphs have been used to provide meaningful representations of objects and patterns, as well as more abstract descriptions. The representative power of graphs lies in their ability to characterize multiple pieces of information, as well as the relationships between them. Because of those properties, graph data structures have been leveraged in a wide spectrum of applications including social media, the World Wide Web, biological and genetic interactions, cyber network, co-author networks, citations, etc.. And at the heart of graph theory is the problem of graph matching, which attempts to find a way to map one graph onto another in such a way that both the topological structure and the node and edge labels are matched. For domains where data is noisy, an identical match may not be possible, so an inexact graph matching algorithm is used to search for the closest match, minimizing some similarity function.\\ There have been two completely different directions for supporting subgraph pattern matching. One direction is to develop specialized query processing engines, while the other direction is to develop efficient subgraph isomorphism algorithms for general, labeled graphs. Previously, both directions target distributed CPU systems. But the expensive network transfer overhead becomes a bottleneck. In order to explore the efficiency and parallel abilities of a single computer, we address latter direction of Subgraph Matching.\\ Most of previous works of subgraph matching fall into three classes of approaches: depth-first tree search, constraint propagation and graph indexing, all of which are not efficient on GPUs. Former intention to run subgraph matching on GPUs only targets a specific application and turns out to be memory-bounded. My research intends to tackle the bottleneck and further make subgraph matching meet the needs of a great spectrum of real-world applications.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
