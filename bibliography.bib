@@ -11416,6 +11416,61 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   abstract    = {Subgraph matching is a basic task in querying graph dataset. It can also be called subgraph isomorphism search which consists to find all embeddings of a small query graph in a large data graph. It is one of the key techniques for understanding the underlying structure of graph datasets.\\ Graphs have been used to provide meaningful representations of objects and patterns, as well as more abstract descriptions. The representative power of graphs lies in their ability to characterize multiple pieces of information, as well as the relationships between them. Because of those properties, graph data structures have been leveraged in a wide spectrum of applications including social media, the World Wide Web, biological and genetic interactions, cyber network, co-author networks, citations, etc.. And at the heart of graph theory is the problem of graph matching, which attempts to find a way to map one graph onto another in such a way that both the topological structure and the node and edge labels are matched. For domains where data is noisy, an identical match may not be possible, so an inexact graph matching algorithm is used to search for the closest match, minimizing some similarity function.\\ There have been two completely different directions for supporting subgraph pattern matching. One direction is to develop specialized query processing engines, while the other direction is to develop efficient subgraph isomorphism algorithms for general, labeled graphs. Previously, both directions target distributed CPU systems. But the expensive network transfer overhead becomes a bottleneck. In order to explore the efficiency and parallel abilities of a single computer, we address latter direction of Subgraph Matching.\\ Most of previous works of subgraph matching fall into three classes of approaches: depth-first tree search, constraint propagation and graph indexing, all of which are not efficient on GPUs. Former intention to run subgraph matching on GPUs only targets a specific application and turns out to be memory-bounded. My research intends to tackle the bottleneck and further make subgraph matching meet the needs of a great spectrum of real-world applications.},
 }
 
+@InCollection{Ayala2020,
+  author    = {Alan Ayala and Stanimire Tomov and Azzam Haidar and Jack Dongarra},
+  booktitle = {Lecture Notes in Computer Science},
+  title     = {{heFFTe}: Highly Efficient {FFT} for Exascale},
+  doi       = {10.1007/978-3-030-50371-0_19},
+  pages     = {262--275},
+  publisher = {Springer International Publishing},
+  abstract  = {Exascale computing aspires to meet the increasing demands from large scientific applications. Software targeting exascale is typically designed for heterogeneous architectures; henceforth, it is not only important to develop well-designed software, but also make it aware of the hardware architecture and efficiently exploit its power. Currently, several and diverse applications, such as those part of the Exascale Computing Project (ECP) in the United States, rely on efficient computation of the Fast Fourier Transform (FFT). In this context, we present the design and implementation of heFFTe (Highly Efficient FFT for Exascale) library, which targets the upcoming exascale supercomputers. We provide highly (linearly) scalable GPU kernels that achieve more than equation $40\times$ speedup with respect to local kernels from CPU state-of-the-art libraries, and over equation $2\times$ speedup for the whole FFT computation. A communication model for parallel FFTs is also provided to analyze the bottleneck for large-scale problems. We show experiments obtained on Summit supercomputer at Oak Ridge National Laboratory, using up to 24,576 IBM Power9 cores and 6,144 NVIDIA V-100 GPUs.},
+  year      = {2020},
+}
+
+@InProceedings{Mohanamuraly2020,
+  author    = {Pavanakumar Mohanamuraly and Gabriel Staffelbach},
+  booktitle = {Proceedings of the Platform for Advanced Scientific Computing Conference},
+  title     = {Hardware Locality-Aware Partitioning and Dynamic Load-Balancing of Unstructured Meshes for Large-Scale Scientific Applications},
+  doi       = {10.1145/3394277.3401851},
+  publisher = {{ACM}},
+  abstract  = {We present an open-source topology-aware hierarchical unstructured mesh partitioning and load-balancing tool TreePart. The framework provides powerful abstractions to automatically detect and build hierarchical MPI topology resembling the hardware at runtime. Using this information it intelligently chooses between shared and distributed parallel algorithms for partitioning and loadbalancing. It provides a range of partitioning methods by interfacing with existing shared and distributed memory parallel partitioning libraries. It provides powerful and scalable abstractions like onesided distributed dictionaries and MPI3 shared memory based halo communicators for optimising HPC codes. The tool was successfully integrated into our in-house code and we present results from a large-eddy simulation of a combustion problem.},
+  month     = {jun},
+  year      = {2020},
+}
+
+@Article{Gower2020,
+  author      = {Robert M. Gower and Othmane Sebbouh and Nicolas Loizou},
+  date        = {2020-06-18},
+  title       = {SGD for Structured Nonconvex Functions: Learning Rates, Minibatching and Interpolation},
+  eprint      = {2006.10311v2},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {We provide several convergence theorems for SGD for two large classes of structured non-convex functions: (i) the Quasar (Strongly) Convex functions and (ii) the functions satisfying the Polyak-Lojasiewicz condition. Our analysis relies on the Expected Residual condition which we show is a strictly weaker assumption as compared to previously used growth conditions, expected smoothness or bounded variance assumptions. We provide theoretical guarantees for the convergence of SGD for different step size selections including constant, decreasing and the recently proposed stochastic Polyak step size. In addition, all of our analysis holds for the arbitrary sampling paradigm, and as such, we are able to give insights into the complexity of minibatching and determine an optimal minibatch size. In particular we recover the best known convergence rates of full gradient descent and single element sampling SGD as a special case. Finally, we show that for models that interpolate the training data, we can dispense of our Expected Residual condition and give state-of-the-art results in this setting.},
+  file        = {:http\://arxiv.org/pdf/2006.10311v2:PDF},
+  keywords    = {math.OC, cs.LG, stat.ML},
+}
+
+@TechReport{Herault2020,
+  author      = {Thomas Herault and Yves Robert† and George Bosilca and Robert J. Harrison and Cannada A. Lewis and Edward F. Valeev},
+  date        = {2020},
+  institution = {Institut de recherche en informatique de Toulouse (IRIT)},
+  title       = {Distributed-memory multi-{GPU} block-sparse tensor contraction for electronic structure},
+  eprint      = {02872813},
+  eprinttype  = {HAL},
+  url         = {https://hal.inria.fr/hal-02872813/document},
+  abstract    = {Many domains of scientific simulation (chemistry, condensed matter physics, data science) increasingly eschew dense tensors for block-sparse tensors, sometimes with additional structure (recursive hierarchy, rank sparsity, etc.). Distributed-memory parallel computation with block-sparse tensorial data is paramount to minimize the time-tosolution (e.g., to study dynamical problems or for real-time analysis) and to accommodate problems of realistic size that are too large to fit into the host/device memory of a single node equipped with accelerators. Unfortunately, computation with such irregular data structures is a poor match to the dominant imperative, bulk-synchronous parallel programming model. In this paper, we focus on the critical element of block-sparse tensor algebra, namely binary tensor contraction, and report on an efficient and scalable implementation using the task-focused PaRSEC runtime. High performance of the block-sparse tensor contraction on the Summit supercomputer is demonstrated for synthetic data as well as for real data involved in electronic structure simulations of unprecedented size.},
+}
+
+@InProceedings{Wang2020c,
+  author    = {Huan Wang and Nitish Shirish Keskar and Caiming Xiong and Richard Socher},
+  booktitle = {Proceedings of the 23rd International Conference on Artificial Intelligence and Statistics},
+  date      = {2020},
+  title     = {Assessing Local Generalization Capability in Deep Models},
+  series    = {ASITATS 2020},
+  volume    = {108},
+  abstract  = {While it has not yet been proven, empirical evidence suggests that model generalization is related to local properties of the optima, which can be described via the Hessian. We connect model generalization with the local property of a solution under the PAC-Bayes paradigm. In particular, we prove that model generalization ability is related to the Hessian, the higher-order “smoothness” terms characterized by the Lipschitz constant of the Hessian, and the scales of the parameters. Guided by the proof, we propose a metric to score the generalization capability of a model, as well as an algorithm that optimizes the perturbed model accordingly.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
