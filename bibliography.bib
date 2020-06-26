@@ -11471,6 +11471,53 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   abstract  = {While it has not yet been proven, empirical evidence suggests that model generalization is related to local properties of the optima, which can be described via the Hessian. We connect model generalization with the local property of a solution under the PAC-Bayes paradigm. In particular, we prove that model generalization ability is related to the Hessian, the higher-order “smoothness” terms characterized by the Lipschitz constant of the Hessian, and the scales of the parameters. Guided by the proof, we propose a metric to score the generalization capability of a model, as well as an algorithm that optimizes the perturbed model accordingly.},
 }
 
+@Article{Chieu2020,
+  author    = {Nguyen Huy Chieu and Le Van Hien and Nguyen Thi Quynh Trang},
+  title     = {Tilt Stability for Quadratic Programs with One or Two Quadratic Inequality Constraints},
+  doi       = {10.1007/s40306-020-00372-4},
+  number    = {2},
+  pages     = {477--499},
+  volume    = {45},
+  abstract  = {This paper examines tilt stability for quadratic programs with one or two quadratic inequality constraints. Exploiting specific features of these problems and using some known results on tilt stability in nonlinear programming, we establish quite simple characterizations of tilt-stable local minimizers for quadratic programs with one quadratic inequality constraint under metric subregularity constraint qualification. By the same way, we also derive various tilt stability conditions for quadratic programs with two quadratic inequality constraints and satisfying certain suitable assumptions. Especially, the obtained results show that some tilt stability conditions only known to be sufficient in nonlinear programming become the necessary ones when the considered problems are quadratic programs with one or two quadratic inequality constraints.},
+  journal   = {Acta Mathematica Vietnamica},
+  month     = {6},
+  publisher = {Springer Science and Business Media {LLC}},
+  year      = {2020},
+}
+
+@InCollection{Goik2020,
+  author    = {Damian Goik and Krzysztof Banaś},
+  booktitle = {Lecture Notes in Computer Science},
+  title     = {A Block Preconditioner for Scalable Large Scale Finite Element Incompressible Flow Simulations},
+  doi       = {10.1007/978-3-030-50420-5_15},
+  pages     = {199--211},
+  publisher = {Springer International Publishing},
+  abstract  = {We present a block preconditioner, based on the algebraic multigrid method, for solving systems of linear equations, that arise in incompressible flow simulations performed by the stabilized finite element method. We select a set of adjustable parameters for the preconditioner and show how to tune the parameters in order to obtain fast convergence of the standard GMRES solver in which the preconditioner is employed. Additionally, we show some details of the parallel implementation of the preconditioner and the achieved scalability of the solver in large scale parallel incompressible flow simulations.},
+  year      = {2020},
+}
+
+@InCollection{Abdelfattah2020,
+  author    = {Ahmad Abdelfattah and Stan Tomov and Jack Dongarra},
+  booktitle = {Lecture Notes in Computer Science},
+  title     = {Investigating the Benefit of {FP}16-Enabled Mixed-Precision Solvers for Symmetric Positive Definite Matrices Using {GPUs}},
+  doi       = {10.1007/978-3-030-50417-5_18},
+  pages     = {237--250},
+  publisher = {Springer International Publishing},
+  abstract  = {Half-precision computation refers to performing floating-point operations in a 16-bit format. While half-precision has been driven largely by machine learning applications, recent algorithmic advances in numerical linear algebra have discovered beneficial use cases for half precision in accelerating the solution of linear systems of equations at higher precisions. In this paper, we present a high-performance, mixed-precision linear solver ($Ax=b$) for symmetric positive definite systems in double-precision using graphics processing units (GPUs). The solver is based on a mixed-precision Cholesky factorization that utilizes the high-performance tensor core units in CUDA-enabled GPUs. Since the Cholesky factors are affected by the low precision, an iterative refinement (IR) solver is required to recover the solution back to double-precision accuracy. Two different types of IR solvers are discussed on a wide range of test matrices. A preprocessing step is also developed, which scales and shifts the matrix, if necessary, in order to preserve its positive-definiteness in lower precisions. Our experiments on the V100 GPU show that performance speedups are up to 4.7$\times$  against a direct double-precision solver. However, matrix properties such as the condition number and the eigenvalue distribution can affect the convergence rate, which would consequently affect the overall performance.},
+  year      = {2020},
+}
+
+@InCollection{Moeller2020,
+  author    = {Matthias Möller and Merel Schalkers},
+  booktitle = {Lecture Notes in Computer Science},
+  title     = {$\lvert Lib \rangle$ : A Cross-Platform Programming Framework for Quantum-Accelerated Scientific Computing},
+  doi       = {10.1007/978-3-030-50433-5_35},
+  pages     = {451--464},
+  publisher = {Springer International Publishing},
+  abstract  = {This paper introduces a new cross-platform programming framework for developing quantum-accelerated scientific computing applications and executing them on most of today’s cloud-based quantum computers and simulators. It makes use of C++ template meta-programming techniques to implement quantum algorithms as generic, platform-independent expressions, which get automatically synthesized into device-specific compute kernels upon execution. Our software framework supports concurrent and asynchronous execution of multiple quantum kernels via a CUDA-inspired stream concept.},
+  year      = {2020},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
