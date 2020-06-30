@@ -11518,6 +11518,98 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   year      = {2020},
 }
 
+@Article{Ploskas2020,
+  author    = {Nikolaos Ploskas and Nikolaos V. Sahinidis and Nikolaos Samaras},
+  title     = {A triangulation and fill-reducing initialization procedure for the simplex algorithm},
+  doi       = {10.1007/s12532-020-00188-1},
+  abstract  = {The computation of an initial basis is of great importance for simplex algorithms since it determines to a large extent the number of iterations and the computational effort needed to solve linear programs. We propose three algorithms that aim to construct an initial basis that is sparse and will reduce the fill-in and computational effort during LU factorization and updates that are utilized in modern simplex implementations. The algorithms rely on triangulation and fill-reducing ordering techniques that are invoked prior to LU factorization. We compare the performance of the CPLEX 12.6.1 primal and dual simplex algorithms using the proposed starting bases against CPLEX using its default crash procedure over a set of 95 large benchmarks (NETLIB, Kennington, Mészáros, Mittelmann). The best proposed algorithm utilizes METIS (Karypis and Kumar in SIAM J Sci Comput 20:359–392, 1998), produces remarkably sparse starting bases, and results in 5\% reduction of the geometric mean of the execution time of CPLEX’s primal simplex algorithm. Although the proposed algorithm improves CPLEX’s primal simplex algorithm across all problem types studied in this paper, it performs better on hard problems, i.e., the instances for which the CPLEX default requires over 1000 s. For these problems, the proposed algorithm results in 37\% reduction of the geometric mean of the execution time of CPLEX’s primal simplex algorithm. The proposed algorithm also reduces the execution time of CPLEX’s dual simplex on hard instances by 10\%. For the instances that are most difficult for CPLEX, and for which CPLEX experiences numerical difficulties as it approaches the optimal solution, the best proposed algorithm speeds up CPLEX by more than 10 times. Finally, the proposed algorithms lead to a natural way to parallelize CPLEX with speedups over CPLEX’s dual simplex of 1.2 and 1.3 on two and four cores, respectively.},
+  journal   = {Mathematical Programming Computation},
+  month     = {6},
+  publisher = {Springer Science and Business Media {LLC}},
+  year      = {2020},
+}
+
+@Article{Angriman2020,
+  author      = {Eugenio Angriman and Maria Predari and Alexander van der Grinten and Henning Meyerhenke},
+  date        = {2020-06-24},
+  title       = {Approximation of the Diagonal of a Laplacian's Pseudoinverse for Complex Network Analysis},
+  eprint      = {2006.13679v1},
+  eprintclass = {cs.DS},
+  eprinttype  = {arXiv},
+  abstract    = {The ubiquity of massive graph data sets in numerous applications requires fast algorithms for extracting knowledge from these data. We are motivated here by three electrical measures for the analysis of large small-world graphs $G = (V, E)$ -- i.e., graphs with diameter in $O(\log |V|)$, which are abundant in complex network analysis. From a computational point of view, the three measures have in common that their crucial component is the diagonal of the graph Laplacian's pseudoinverse, $L^\dagger$. Computing diag$(L^\dagger)$ exactly by pseudoinversion, however, is as expensive as dense matrix multiplication -- and the standard tools in practice even require cubic time. Moreover, the pseudoinverse requires quadratic space -- hardly feasible for large graphs. Resorting to approximation by, e.g., using the Johnson-Lindenstrauss transform, requires the solution of $O(\log |V| / \epsilon^2)$ Laplacian linear systems to guarantee a relative error, which is still very expensive for large inputs. In this paper, we present a novel approximation algorithm that requires the solution of only one Laplacian linear system. The remaining parts are purely combinatorial -- mainly sampling uniform spanning trees, which we relate to diag$(L^\dagger)$ via effective resistances. For small-world networks, our algorithm obtains a $\pm \epsilon$-approximation with high probability, in a time that is nearly-linear in $|E|$ and quadratic in $1 / \epsilon$. Another positive aspect of our algorithm is its parallel nature due to independent sampling. We thus provide two parallel implementations of our algorithm: one using OpenMP, one MPI + OpenMP. In our experiments against the state of the art, our algorithm (i) yields more accurate results, (ii) is much faster and more memory-efficient, and (iii) obtains good parallel speedups, in particular in the distributed setting.},
+  file        = {:http\://arxiv.org/pdf/2006.13679v1:PDF},
+  keywords    = {cs.DS, cs.SI},
+}
+
+@Article{Tsai2020a,
+  author      = {Yuhsiang M. Tsai and Terry Cojean and Tobias Ribizel and Hartwig Anzt},
+  date        = {2020-06-25},
+  title       = {Preparing Ginkgo for AMD GPUs -- A Testimonial on Porting CUDA Code to HIP},
+  eprint      = {2006.14290v1},
+  eprintclass = {cs.MS},
+  eprinttype  = {arXiv},
+  abstract    = {With AMD reinforcing their ambition in the scientific high performance computing ecosystem, we extend the hardware scope of the Ginkgo linear algebra package to feature a HIP backend for AMD GPUs. In this paper, we report and discuss the porting effort from CUDA, the extension of the HIP framework to add missing features such as cooperative groups, the performance price of compiling HIP code for AMD architectures, and the design of a library providing native backends for NVIDIA and AMD GPUs while minimizing code duplication by using a shared code base.},
+  file        = {:http\://arxiv.org/pdf/2006.14290v1:PDF},
+  keywords    = {cs.MS},
+}
+
+@Article{Mangoubi2020,
+  author      = {Oren Mangoubi and Nisheeth K. Vishnoi},
+  date        = {2020-06-22},
+  title       = {A Second-order Equilibrium in Nonconvex-Nonconcave Min-max Optimization: Existence and Algorithm},
+  eprint      = {2006.12363v2},
+  eprintclass = {cs.DS},
+  eprinttype  = {arXiv},
+  abstract    = {Min-max optimization, with a nonconvex-nonconcave objective function $f: \mathbb{R}^d \times \mathbb{R}^d \rightarrow \mathbb{R}$, arises in many areas, including optimization, economics, and deep learning. The nonconvexity-nonconcavity of $f$ means that the problem of finding a global $\varepsilon$-min-max point cannot be solved in $\mathrm{poly}(d, \frac{1}{\varepsilon})$ evaluations of $f$. Thus, most algorithms seek to obtain a certain notion of local min-max point where, roughly speaking, each player optimizes her payoff in a local sense. However, the classes of local min-max solutions which prior algorithms seek are only guaranteed to exist under very strong assumptions on $f$, such as convexity or monotonicity. We propose a notion of a greedy equilibrium point for min-max optimization and prove the existence of such a point for any function such that it and its first three derivatives are bounded. Informally, we say that a point $(x^\star, y^\star)$ is an $\varepsilon$-greedy min-max equilibrium point of a function $f: \mathbb{R}^d \times \mathbb{R}^d \rightarrow \mathbb{R}$ if $y^\star$ is a second-order local maximum for $f(x^\star,\cdot)$ and, roughly, $x^\star$ is a local minimum for a greedy optimization version of the function $\max_y f(x,y)$ which can be efficiently estimated using greedy algorithms. The existence follows from an algorithm that converges from any starting point to such a point in a number of gradient and function evaluations that is polynomial in $\frac{1}{\varepsilon}$, the dimension $d$, and the bounds on $f$ and its first three derivatives. Our results do not require convexity, monotonicity, or special starting points.},
+  file        = {:http\://arxiv.org/pdf/2006.12363v2:PDF},
+  keywords    = {cs.DS, cs.GT, cs.LG, math.OC, stat.ML},
+}
+
+@Article{Yuan2020,
+  author      = {Rui Yuan and Alessandro Lazaric and Robert M. Gower},
+  date        = {2020-06-22},
+  title       = {Sketched Newton-Raphson},
+  eprint      = {2006.12120v1},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {We propose a new globally convergent stochastic second order method. Our starting point is the development of a new Sketched Newton-Raphson (SNR) method for solving large scale nonlinear equations of the form $F(x)=0$ with $F: \mathbb{R}^d \rightarrow \mathbb{R}^d$. We then show how to design several stochastic second order optimization methods by re-writing the optimization problem of interest as a system of nonlinear equations and applying SNR. For instance, by applying SNR to find a stationary point of a generalized linear model (GLM), we derive completely new and scalable stochastic second order methods. We show that the resulting method is very competitive as compared to state-of-the-art variance reduced methods. Using a variable splitting trick, we also show that the Stochastic Newton method (SNM) is a special case of SNR, and use this connection to establish the first global convergence theory of SNM. Indeed, by showing that SNR can be interpreted as a variant of the stochastic gradient descent (SGD) method we are able to leverage proof techniques of SGD and establish a global convergence theory and rates of convergence for SNR. As a special case, our theory also provides a new global convergence theory for the original Newton-Raphson method under strictly weaker assumptions as compared to what is commonly used for global convergence. There are many ways to re-write an optimization problem as nonlinear equations. Each re-write would lead to a distinct method when using SNR. As such, we believe that SNR and its global convergence theory will open the way to designing and analysing a host of new stochastic second order methods.},
+  file        = {:http\://arxiv.org/pdf/2006.12120v1:PDF},
+  keywords    = {math.NA, cs.NA, math.OC},
+}
+
+@Article{Calandra2020,
+  author    = {H. Calandra and S. Gratton and E. Riccietti and X. Vasseur},
+  title     = {On a multilevel Levenberg{\textendash}Marquardt method for the training of artificial neural networks and its application to the solution of partial differential equations},
+  doi       = {10.1080/10556788.2020.1775828},
+  pages     = {1--26},
+  abstract  = {In this paper, we propose a new multilevel Levenberg–Marquardt optimizer for the training of artificial neural networks with quadratic loss function. This setting allows us to get further insight into the potential of multilevel optimization methods. Indeed, when the least squares problem arises from the training of artificial neural networks, the variables subject to optimization are not related by any geometrical constraints and the standard interpolation and restriction operators cannot be employed any longer. A heuristic, inspired by algebraic multigrid methods, is then proposed to construct the multilevel transfer operators. We test the new optimizer on an important application: the approximate solution of partial differential equations by means of artificial neural networks. The learning problem is formulated as a least squares problem, choosing the nonlinear residual of the equation as a loss function, whereas the multilevel method is employed as a training method. Numerical experiments show encouraging results related to the efficiency of the new multilevel optimization method compared to the corresponding one-level procedure in this context.},
+  journal   = {Optimization Methods and Software},
+  month     = {jun},
+  publisher = {Informa {UK} Limited},
+  year      = {2020},
+}
+
+@Book{Andrei2020,
+  author    = {Neculai Andrei},
+  title     = {Nonlinear Conjugate Gradient Methods for Unconstrained Optimization},
+  doi       = {10.1007/978-3-030-42950-8},
+  publisher = {Springer International Publishing},
+  abstract  = {Two approaches are known for solving large-scale unconstrained optimization problems—the limited-memory quasi-Newton method (truncated Newton method) and the conjugate gradient method. This is the first book to detail conjugate gradient methods, showing their properties and convergence characteristics as well as their performance in solving large-scale unconstrained optimization problems and applications. Comparisons to the limited-memory and truncated Newton methods are also discussed. Topics studied in detail include: linear conjugate gradient methods, standard conjugate gradient methods, acceleration of conjugate gradient methods, hybrid, modifications of the standard scheme, memoryless BFGS preconditioned, and three-term. Other conjugate gradient methods with clustering the eigenvalues or with the minimization of the condition number of the iteration matrix, are also treated. For each method, the convergence analysis, the computational performances and the comparisons versus other conjugate gradient methods are given. \\ The theory behind the conjugate gradient algorithms presented as a methodology is developed with a clear, rigorous, and friendly exposition; the reader will gain an understanding of their properties and their convergence and will learn to develop and prove the convergence of his/her own methods. Numerous numerical studies are supplied with comparisons and comments on the behavior of conjugate gradient algorithms for solving a collection of 800 unconstrained optimization problems of different structures and complexities with the number of variables in the range [1000,10000].  The book is addressed to all those interested in developing and using new advanced techniques for solving unconstrained optimization complex problems. Mathematical programming researchers, theoreticians and practitioners in operations research, practitioners in engineering and industry researchers, as well as graduate students in mathematics, Ph.D. and master students in mathematical programming, will find plenty of information and practical applications for solving large-scale unconstrained optimization problems and applications by conjugate gradient methods.},
+  year      = {2020},
+}
+
+@Article{MendlerDuenner2020,
+  author      = {Celestine Mendler-Dünner and Aurelien Lucchi},
+  date        = {2020-06-24},
+  title       = {Randomized Block-Diagonal Preconditioning for Parallel Learning},
+  eprint      = {2006.13591v1},
+  eprintclass = {cs.LG},
+  eprinttype  = {arXiv},
+  abstract    = {We study preconditioned gradient-based optimization methods where the preconditioning matrix has block-diagonal form. Such a structural constraint comes with the advantage that the update computation can be parallelized across multiple independent tasks. Our main contribution is to demonstrate that the convergence of these methods can significantly be improved by a randomization technique which corresponds to repartitioning coordinates across tasks during the optimization procedure. We provide a theoretical analysis that accurately characterizes the expected convergence gains of repartitioning and validate our findings empirically on various traditional machine learning tasks. From an implementation perspective, block separable models are well suited for parallelization and, when shared memory is available, randomization can be implemented on top of existing methods very efficiently to improve convergence.},
+  file        = {:http\://arxiv.org/pdf/2006.13591v1:PDF},
+  keywords    = {cs.LG, cs.DC, stat.ML},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
