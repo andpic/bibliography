@@ -11622,6 +11622,86 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   keywords    = {math.OC, cs.NA, math.NA, 65K05, 90C25},
 }
 
+@Article{Anzt2020b,
+  author      = {Hartwig Anzt and Terry Cojean and Goran Flegar and Fritz Göbel and Thomas Grützmacher and Pratik Nayak and Tobias Ribizel and Yuhsiang Mike Tsai and Enrique S. Quintana-Ortí},
+  date        = {2020-06-30},
+  title       = {Ginkgo: A Modern Linear Operator Algebra Framework for High Performance Computing},
+  eprint      = {2006.16852v2},
+  eprintclass = {cs.MS},
+  eprinttype  = {arXiv},
+  abstract    = {In this paper, we present Ginkgo, a modern C++ math library for scientific high performance computing. While classical linear algebra libraries act on matrix and vector objects, Ginkgo's design principle abstracts all functionality as "linear operators", motivating the notation of a "linear operator algebra library". Ginkgo's current focus is oriented towards providing sparse linear algebra functionality for high performance GPU architectures, but given the library design, this focus can be easily extended to accommodate other algorithms and hardware architectures. We introduce this sophisticated software architecture that separates core algorithms from architecture-specific back ends and provide details on extensibility and sustainability measures. We also demonstrate Ginkgo's usability by providing examples on how to use its functionality inside the MFEM and deal.ii finite element ecosystems. Finally, we offer a practical demonstration of Ginkgo's high performance on state-of-the-art GPU architectures.},
+  file        = {:http\://arxiv.org/pdf/2006.16852v2:PDF},
+  keywords    = {cs.MS, D.2; G.1.3; G.4},
+}
+
+@Article{DAmbra2020,
+  author      = {Pasqua D'Ambra and Fabio Durastante and Salvatore Filippone},
+  date        = {2020-06-29},
+  title       = {AMG preconditioners for Linear Solvers towards Extreme Scale},
+  eprint      = {2006.16147v1},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {Linear solvers for large and sparse systems are a key element of scientific applications, and their efficient implementation is necessary to harness the computational power of current computers. Algebraic Multigrid (AMG) Preconditioners are a popular ingredient of such linear solvers; this is the motivation for the present work where we examine some recent developments in a package of AMG preconditioners to improve efficiency, scalability, and robustness on extreme-scale problems. The main novelty is the design and implementation of a new parallel coarsening algorithm based on aggregation of unknowns employing weighted graph matching techniques; this is a completely automated procedure, requiring no information from the user, and applicable to general symmetric positive definite (s.p.d.) matrices. The new coarsening algorithm improves in terms of numerical scalability at low operator complexity over decoupled aggregation algorithms available in previous releases of the package. The preconditioners package is built on the parallel software framework PSBLAS, which has also been updated to progress towards exascale. We present weak scalability results on two of the most powerful supercomputers in Europe, for linear systems with sizes up to $O(10^{10})$ unknowns.},
+  file        = {:http\://arxiv.org/pdf/2006.16147v1:PDF},
+  keywords    = {math.NA, cs.NA, 65F08, 65F10, 65N55, 65Y05},
+}
+
+@Article{Demirci2020,
+  author    = {Gunduz Vehbi Demirci and Cevdet Aykanat},
+  title     = {Cartesian Partitioning Models for 2D and 3D Parallel {SpGEMM} Algorithms},
+  doi       = {10.1109/tpds.2020.3000708},
+  number    = {12},
+  pages     = {2763--2775},
+  volume    = {31},
+  abstract  = {The focus is distributed-memory parallelization of sparse-general-matrix-multiplication (SpGEMM). Parallel SpGEMM algorithms are classified under one-dimensional (1D), 2D, and 3D categories denoting the number of dimensions by which the 3D sparse workcube representing the iteration space of SpGEMM is partitioned. Recently proposed successful 2D- and 3D-parallel SpGEMM algorithms benefit from upper bounds on communication overheads enforced by 2D and 3D cartesian partitioning of the workcube on 2D and 3D virtual processor grids, respectively. However, these methods are based on random cartesian partitioning and do not utilize sparsity patterns of SpGEMM instances for reducing the communication overheads. We propose hypergraph models for 2D and 3D cartesian partitioning of the workcube for further reducing the communication overheads of these 2D- and 3D- parallel SpGEMM algorithms. The proposed models utilize two- and three-phase partitioning that exploit multi-constraint hypergraph partitioning formulations. Extensive experimentation performed on 20 SpGEMM instances by using upto 900 processors demonstrate that proposed partitioning models significantly improve the scalability of 2D and 3D algorithms. For example, in 2D-parallel SpGEMM algorithm on 900 processors, the proposed partitioning model respectively achieves 85 and 42 percent decrease in total volume and total number of messages, leading to 1.63 times higher speedup compared to random partitioning, on average.},
+  journal   = {{IEEE} Transactions on Parallel and Distributed Systems},
+  month     = {dec},
+  publisher = {Institute of Electrical and Electronics Engineers ({IEEE})},
+  year      = {2020},
+}
+
+@Article{Slota2020,
+  author    = {George M. Slota and Cameron Root and Karen Devine and Kamesh Madduri and Sivasankaran Rajamanickam},
+  title     = {Scalable, Multi-Constraint, Complex-Objective Graph Partitioning},
+  doi       = {10.1109/tpds.2020.3002150},
+  number    = {12},
+  pages     = {2789--2801},
+  volume    = {31},
+  abstract  = {We introduce XtraPuLP , a distributed-memory graph partitioner designed to process irregular trillion-edge graphs. XtraPuLP is based on the scalable label propagation community detection technique, which has been demonstrated in various prior works as a viable means to produce high quality partitions of skewed and small-world graphs with minimal computation time. Our XtraPuLP implementation can also be generalized to compute partitions with an arbitrary number of constraints, and it can compute partitions with balanced communication load across all parts. On a collection of large sparse graphs, we show that XtraPuLP partitioning is considerably faster than state-of-the-art partitioning methods, while also demonstrating that XtraPuLP can produce partitions of real-world graphs with billion+ vertices and over a hundred billion edges in minutes. Additionally, we demonstrate XtraPuLP on a variety of applications, including large-scale graph analytics and sparse matrix-vector multiplication.},
+  journal   = {{IEEE} Transactions on Parallel and Distributed Systems},
+  month     = {dec},
+  publisher = {Institute of Electrical and Electronics Engineers ({IEEE})},
+  year      = {2020},
+}
+
+@Article{GarciaGasulla2020,
+  author   = {Marta Garcia-Gasulla and Fabio Banchelli and Kilian Peiro and Guillem Ramirez-Gargallo and Guillaume Houzeaux and Ismal Ben Hassan Saïdi and Christian Tenaud and Ivan Spisso and Filippo Mantovani},
+  date     = {2020},
+  title    = {A generic performance analysis technique appliedto different {CFD} methods for {HPC}},
+  url      = {https://perso.limsi.fr/tenaud/Files/cfd-in-hpc_2020_accepted.pdf},
+  abstract = {For complex engineering and scientific applications, Computational Fluid Dynamics simulations (CFD) require a huge amount of computational power. As such, it is of paramount importance to carefully assess the performance of CFD codes and to study them in depth for enabling optimization and portability. In this paper we study three complex CFD codes, OpenFOAM, Alya and CHORUS representing two numerical methods, namely the finite volume and finite element methods, on both structured and unstructured meshes. To all codes we apply a generic performance analysis method based on a set of metrics helping the code developer in spotting the critical points that can potentially limit the scalability of a parallel application. We show the root cause of the performance bottlenecks studying the three applications on the MareNostrum4 supercomputer. We conclude providing hints for improving the performance and the scalability of each application.},
+}
+
+@Article{Vanover2020,
+  author       = {Jackson Vanover and Xuan Deng and Cindy Rubio-González},
+  date         = {2020},
+  journaltitle = {Proceedings of the International Symposium on Software Testing and Analysis},
+  title        = {Discovering Discrepancies in Numerical Libraries},
+  series       = {ISSTA'20},
+  url          = {https://web.cs.ucdavis.edu/~rubio/includes/issta20.pdf},
+  abstract     = {Numerical libraries constitute the building blocks for software applications that perform numerical calculations. Thus, it is paramount that such libraries provide accurate and consistent results. To that end, this paper addresses the problem of finding discrepancies between synonymous functions in different numerical libraries as a means of identifying incorrect behavior. Our approach automatically finds such synonymous functions, synthesizes testing drivers, and executes differential tests to discover meaningful discrepancies across numerical libraries. We implement our approach in a tool named FPDiff, and provide an evaluation on four popular numerical libraries: GNU Scientific Library (GSL), SciPy, mpmath, and jmat. FPDiff finds a total of 126 equivalence classes with a 95.8\% precision and 79.0\% recall, and discovers 655 instances in which an input produces a set of disagreeing outputs between function synonyms, 150 of which we found to represent 125 unique bugs. We have reported all bugs to library maintainers; so far, 30 bugs have been fixed, 9 have been found to be previously known, and 25 more have been acknowledged by developers.},
+  publisher    = {{ACM}},
+  year         = {2020},
+}
+
+@TechReport{Carson2020b,
+  author      = {Erin Carson and Tomáš Gergelits},
+  date        = {2020},
+  institution = {LLNL-Charles University},
+  title       = {Quarter I Report: Initial Exploration of the Use of Mixed Precision in Iterative Solvers},
+  abstract    = {The first quarter of the project was primarily spent identifying potential projects at the intersection of finite precision analysis, mixed precision computation, and Krylov subspace methods. We summarize our findings in the remainder of the document. Other activities include attending biweekly xSDK meetings as well as contributing material to the technical report and journal versions of the multiprecision landscape paper.\\ The subsequent quarter will be spent selecting a subset of the described projects to focus on, performing initial numerical experiments to evaluate the potential for the use of mixed precision, and developing initial theoretical analysis.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
