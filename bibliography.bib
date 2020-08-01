@@ -11896,6 +11896,71 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   year      = {2020},
 }
 
+@TechReport{Demmel2020,
+  author      = {James Demmel and Jack Dongarra and Julie Langou and Julien Langou and Piotr Luszczek and Michael W. Mahoney},
+  date        = {2020},
+  institution = {University of Tennessee},
+  title       = {Prospectus for the Next {LAPACK} and {ScaLAPACK} Libraries:Basic ALgebra LIbraries for Sustainable Technology withInterdisciplinary Collaboration {(BALLISTIC)}},
+  url         = {https://www.icl.utk.edu/files/publications/2020/icl-utk-1391-2020.pdf},
+  abstract    = {The convergence of several unprecedented changes, including formidable new system design constraints and revolutionary levels of heterogeneity, has made it clear that much of the essential software infrastructure of computational science and engineering is, or will soon be, obsolete. Math libraries have historically been in the vanguard of software that must be adapted first to such changes, both because these low-level workhorses are so critical to the accuracy and performance of so many different types of applications, and because they have proved to be outstanding vehicles for finding and implementing solutions to the problems that novel architectures pose. Under the Basic ALgebra LIbraries for Sustainable Technology with Interdisciplinary Collaboration (BALLISTIC) project, the principal designers of the Linear Algebra PACKage (LAPACK) and the Scalable Linear Algebra PACKage (ScaLAPACK), the combination of which is abbreviated Sca/LAPACK, aim to enhance and update these libraries for the ongoing revolution in processor architecture, system design, and application requirements by incorporating them into a layered package of software components -- the BALLISTIC ecosystem -- that provides users seamless access to state-of-the-art solver implementations through familiar and improved Sca/LAPACK interfaces.\\ The set of innovations and improvements that will be made available through BALLISTIC is the result of a combination of inputs from a variety of sources: the authors' own algorithmic and software research, which attacks the challenges of multi-core, hybrid, and extreme-scale system designs; extensive interactions with users, vendors, and the management of large high-performance computing (HPC) facilities to help anticipate the demands and opportunities of new architectures and programming languages; and, finally, the enthusiastic participation of the research community in developing and offering enhanced versions of existing dense linear algebra software components. Aiming to help applications run portably at all levels of the platform pyramid, including in cloud-based systems, BALLISTIC's technical agenda includes: (1) adding new functionality requested by stakeholder communities; (2) incorporating vastly improved numerical methods and algorithms; (3) leveraging successful research results to transition Sca/LAPACK (interfaces) to multi-core and accelerator-enabled versions; (4) providing user-controllable autotuning for the deployed software; (5) introducing new interfaces and data structures to increase ease of use; (6) enhancing engineering for evolution via standards and community engagement; and (7) continuing to expand application community outreach. Enhanced engineering will also help keep the reference implementation for Sca/LAPACK efficient, maintainable, and testable at reasonable cost in the future.\\ The Sca/LAPACK libraries are the community standard for dense linear algebra. They have been adopted and/or supported by a large community of users, computing centers, and HPC vendors. Learning to use them is a basic part of the education of a computational scientist or engineer in many fields and at many academic institutions. No other numerical library can claim this breadth of integration with the community. Consequently, enhancing these libraries with state-of-the-art methods and algorithms and adapting them for new and emerging platforms (reaching up to extreme scale and including cloud-based environments) is set to have a correspondingly large impact on the research and education community, government laboratories, and private industry.},
+}
+
+@Article{You2020a,
+  author    = {Yang You and Yuxiong He and Samyam Rajbhandari and Wenhan Wang and Cho-Jui Hsieh and Kurt Keutzer and James Demmel},
+  date      = {2020},
+  title     = {Fast {LSTM} by dynamic decomposition on cloud and distributed systems},
+  doi       = {10.1007/s10115-020-01487-8},
+  abstract  = {Long short-term memory (LSTM) is a powerful deep learning technique that has been widely used in many real-world data-mining applications such as language modeling and machine translation. In this paper, we aim to minimize the latency of LSTM inference on cloud systems without losing accuracy. If an LSTM model does not fit in cache, the latency due to data movement will likely be greater than that due to computation. In this case, we reduce model parameters. If, as in most applications we consider, the LSTM models are able to fit the cache of cloud server processors, we focus on reducing the number of floating point operations, which has a corresponding linear impact on the latency of the inference calculation. Thus, in our system, we dynamically reduce model parameters or flops depending on which most impacts latency. Our inference system is based on singular value decomposition and canonical polyadic decomposition. Our system is accurate and low latency. We evaluate our system based on models from a series of real-world applications like language modeling, computer vision, question answering, and sentiment analysis. Users of our system can use either pre-trained models or start from scratch. Our system achieves $15\times$ average speedup for six real-world applications without losing accuracy in inference. We also design and implement a distributed optimization system with dynamic decomposition, which can significantly reduce the energy cost and accelerate the training process.},
+  journal   = {Knowledge and Information Systems},
+  month     = {7},
+  publisher = {Springer Science and Business Media {LLC}},
+  year      = {2020},
+}
+
+@InProceedings{Guo2020,
+  author    = {Hui Guo and Cindy Rubio-González},
+  booktitle = {Proceedings of the 42nd IEEE/ACM International Conference on Software Engineering},
+  date      = {2020},
+  title     = {Efficient Generation of Error-Inducing Floating-Point Inputsvia Symbolic Execution},
+  series    = {ICSE'20},
+  url       = {https://hguo15.github.io/huiguo.github.io/files/fpgen-icse20.pdf},
+  abstract  = {Floating point is widely used in software to emulate arithmetic over reals. Unfortunately, floating point leads to rounding errors that propagate and accumulate during execution. Generating inputs to maximize the numerical error is critical when evaluating the accuracy of floating-point code. In this paper, we formulate the problem of generating high error-inducing floating-point inputs as a code coverage maximization problem solved using symbolic execution. Specifically, we define inaccuracy checks to detect large precision loss and cancellation. We inject these checks at strategic program locations to construct specialized branches that, when covered by a given input, are likely to lead to large errors in the result. We apply symbolic execution to generate inputs that exercise these specialized branches, and describe optimizations that make our approach practical. We implement a tool named FPGen and present an evaluation on 21 numerical programs including matrix computation and statistics libraries. We show that FPGen exposes errors for 20 of these programs and triggers errors that are, on average, over 2 orders of magnitude larger than the state of the art.},
+}
+
+@Article{Christlieb2020,
+  author      = {Andrew J. Christlieb and Pierson T. Guthrey and William A. Sands and Mathialakan Thavappiragasm},
+  date        = {2020-07-06},
+  title       = {Parallel Algorithms for Successive Convolution},
+  eprint      = {2007.03041v2},
+  eprintclass = {physics.comp-ph},
+  eprinttype  = {arXiv},
+  abstract    = {In this work, we consider alternative discretizations for PDEs which use expansions involving integral operators to approximate spatial derivatives. These constructions use explicit information within the integral terms, but treat boundary data implicitly, which contributes to the overall speed of the method. This approach is provably unconditionally stable for linear problems and stability has been demonstrated experimentally for nonlinear problems. Additionally, it is matrix-free in the sense that it is not necessary to invert linear systems and iteration is not required for nonlinear terms. Moreover, the scheme employs a fast summation algorithm that yields a method with a computational complexity of $\mathcal{O}(N)$, where $N$ is the number of mesh points along a direction. While much work has been done to explore the theory behind these methods, their practicality in large scale computing environments is a largely unexplored topic. In this work, we explore the performance of these methods by developing a domain decomposition algorithm suitable for distributed memory systems along with shared memory algorithms. As a first pass, we derive an artificial CFL condition that enforces a nearest-neighbor communication pattern and briefly discuss possible generalizations. We also analyze several approaches for implementing the parallel algorithms by optimizing predominant loop structures and maximizing data reuse. Using a hybrid design that employs MPI and Kokkos for the distributed and shared memory components of the algorithms, respectively, we show that our methods are efficient and can sustain an update rate $> 1\times10^8$ DOF/node/s. We provide results that demonstrate the scalability and versatility of our algorithms using several different PDE test problems, including a nonlinear example, which employs an adaptive time-stepping rule.},
+  file        = {:http\://arxiv.org/pdf/2007.03041v2:PDF},
+  keywords    = {physics.comp-ph, cs.CE, cs.DC, cs.NA, math.NA},
+}
+
+@InProceedings{He2020a,
+  author    = {Xiao He and Xingwei Wang and Jia Shi and Yi Liu},
+  booktitle = {Proceedings of the 29th {ACM} {SIGSOFT} International Symposium on Software Testing and Analysis},
+  title     = {Testing high performance numerical simulation programs: experience, lessons learned, and open issues},
+  doi       = {10.1145/3395363.3397382},
+  publisher = {{ACM}},
+  abstract  = {High performance numerical simulation programs are widely used to simulate actual physical processes on high performance computers for the analysis of various physical and engineering problems. They are usually regarded as non-testable due to their high complexity. This paper reports our real experience and lessons learned from testing five simulation programs that will be used to design and analyze nuclear power plants. We applied five testing approaches and found 33 bugs. We found that property-based testing and metamorphic testing are two effective methods. Nevertheless, we suffered from the lack of domain knowledge, the high test costs, the shortage of test cases, severe oracle issues, and inadequate automation support. Consequently, the five programs are not exhaustively tested from the perspective of software testing, and many existing software testing techniques and tools are not fully applicable due to scalability and portability issues. We need more collaboration and communication with other communities to promote the research and application of software testing techniques.},
+  month     = {7},
+  year      = {2020},
+}
+
+@InProceedings{Han2020,
+  author    = {Jingoo Han and M. Mustafa Rafique and Luna Xu and Ali R. Butt and Seung-Hwan Lim and Sudharshan S. Vazhkudai},
+  booktitle = {Proceedings of the 20th {IEEE}/{ACM} International Symposium on Cluster, Cloud and Internet Computing},
+  title     = {{MARBLE}: A Multi-{GPU} Aware Job Scheduler for Deep Learning on {HPC} Systems},
+  doi       = {10.1109/ccgrid49817.2020.00-66},
+  publisher = {{IEEE}},
+  series    = {CCGRID '20},
+  abstract  = {Deep learning (DL) has become a key tool for solving complex scientific problems. However, managing the multi-dimensional large-scale data associated with DL, especially atop extant multiple graphics processing units (GPUs) in modern supercomputers poses significant challenges. Moreover, the latest high-performance computing (HPC) architectures bring different performance trends in training throughput compared to the existing studies. Existing DL optimizations such as larger batch size and GPU locality-aware scheduling have little effect on improving DL training throughput performance due to fast CPU-to-GPU connections. Additionally, DL training on multiple GPUs scales sublinearly. Thus, simply adding more GPUs to a system is ineffective. To this end, we design MARBLE, a first-of-its-kind job scheduler, which considers the non-linear scalability of GPUs at the intra-node level to schedule an appropriate number of GPUs per node for a job. By sharing the GPU resources on a node with multiple DL jobs, MARBLE avoids low GPU utilization in current multi-GPU DL training on HPC systems. Our comprehensive evaluation in the Summit supercomputer shows that MARBLE is able to improve DL training performance by up to 48.3\% compared to the popular Platform Load Sharing Facility (LSF) scheduler. Compared to the state-of-the-art of DL scheduler, Optimus, MARBLE reduces the job completion time by up to 47\%.},
+  month     = {5},
+  year      = {2020},
+}
 
 @Comment{jabref-meta: databaseType:biblatex;}
 
