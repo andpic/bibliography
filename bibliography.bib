@@ -11798,6 +11798,105 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   abstract   = {We consider the maximum cardinality matching problem in bipartite graphs. There are a number of exact, deterministic algorithms for this purpose, whose complexities are high in practice. There are randomized approaches for special classes of bipartite graphs. Random 2-out bipartite graphs, where each vertex chooses two neighbors at random from the other side, form one class for which there is an $O(m + n log n)$-time Monte Carlo algorithm. Regular bipartite graphs, where all vertices have the same degree, form another class for which there is an expected $O(m + n log n)$-time Las Vegas algorithm. We investigate these two algorithms and turn them into practical heuristics with randomization. Experimental results show that the heuristics are fast and obtain near optimal matchings. They are also more robust than the state of the art heuristics used in the cardinality matching algorithms, and are generally more useful as initialization routines.},
 }
 
+@Article{Uribe2020,
+  author      = {César A. Uribe and Ali Jadbabaie},
+  date        = {2020-07-07},
+  title       = {A Distributed Cubic-Regularized Newton Method for Smooth Convex Optimization over Networks},
+  eprint      = {2007.03562v1},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {We propose a distributed, cubic-regularized Newton method for large-scale convex optimization over networks. The proposed method requires only local computations and communications and is suitable for federated learning applications over arbitrary network topologies. We show a $O(k^{{-}3})$ convergence rate when the cost function is convex with Lipschitz gradient and Hessian, with $k$ being the number of iterations. We further provide network-dependent bounds for the communication required in each step of the algorithm. We provide numerical experiments that validate our theoretical results.},
+  file        = {:http\://arxiv.org/pdf/2007.03562v1:PDF},
+  keywords    = {math.OC, cs.LG, cs.MA, stat.ML},
+}
+
+@Article{Burke2020,
+  author    = {James V. Burke and Frank E. Curtis and Hao Wang and Jiashan Wang},
+  title     = {Inexact Sequential Quadratic Optimization with Penalty Parameter Updates within the {QP} Solver},
+  doi       = {10.1137/18m1176488},
+  number    = {3},
+  pages     = {1822--1849},
+  volume    = {30},
+  abstract  = {This paper focuses on the design of sequential quadratic optimization (commonly known as SQP) methods for solving large-scale nonlinear optimization problems. The most computationally demanding aspect of such an approach is the computation of the search direction during each iteration, for which we consider the use of matrix-free methods. In particular, we develop a method that requires an inexact solve of a single QP subproblem to establish the convergence of the overall SQP method. It is known that SQP methods can be plagued by poor behavior of the global convergence mechanism. To confront this issue, we propose the use of an exact penalty function with a dynamic penalty parameter updating strategy to be employed within the subproblem solver in such a way that the resulting search direction predicts progress toward both feasibility and optimality. We present our parameter updating strategy and prove that, under reasonable assumptions, the strategy does not modify the penalty parameter unnecessarily. We close the paper with a discussion of the results of numerical experiments that illustrate the benefits of our proposed techniques.},
+  journal   = {{SIAM} Journal on Optimization},
+  month     = {1},
+  publisher = {Society for Industrial {\&} Applied Mathematics ({SIAM})},
+  year      = {2020},
+}
+
+@Article{Bullins2020,
+  author      = {Brian Bullins and Kevin A. Lai},
+  date        = {2020-07-09},
+  title       = {Higher-order methods for convex-concave min-max optimization and monotone variational inequalities},
+  eprint      = {2007.04528v1},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {We provide improved convergence rates for constrained convex-concave min-max problems and monotone variational inequalities with higher-order smoothness. In min-max settings where the $p^{th}$-order derivatives are Lipschitz continuous, we give an algorithm HigherOrderMirrorProx that achieves an iteration complexity of $O(1/T^{\frac{p+1}{2}})$ when given access to an oracle for finding a fixed point of a $p^{th}$-order equation. We give analogous rates for the weak monotone variational inequality problem. For $p>2$, our results improve upon the iteration complexity of the first-order Mirror Prox method of Nemirovski [2004] and the second-order method of Monteiro and Svaiter [2012]. We further instantiate our entire algorithm in the unconstrained $p=2$ case.},
+  file        = {:http\://arxiv.org/pdf/2007.04528v1:PDF},
+  keywords    = {math.OC, cs.LG, stat.ML},
+}
+
+@Article{Gross2020,
+  author      = {James C. Gross and Geoffrey T. Parks},
+  date        = {2020-07-09},
+  title       = {Optimization by moving ridge functions: Derivative-free optimization for computationally intensive functions},
+  eprint      = {2007.04893v1},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {A novel derivative-free algorithm, optimization by moving ridge functions (OMoRF), for unconstrained and bound-constrained optimization is presented. This algorithm couples trust region methodologies with output-based dimension reduction to accelerate convergence of model-based optimization strategies. The dimension-reducing subspace is updated as the trust region moves through the design space, allowing OMoRF to be applied to functions with no known global low-dimensional structure. Furthermore, its low computational requirement allows it to make rapid progress when optimizing high-dimensional functions. Its performance is examined on a set of test problems of moderate to high dimension and a high-dimensional design optimization problem. The results show that OMoRF compares favourably to other common derivative-free optimization methods, particularly when very few function evaluations are available.},
+  file        = {:http\://arxiv.org/pdf/2007.04893v1:PDF},
+  keywords    = {math.OC},
+}
+
+@Article{Abdelfattah2020a,
+  author      = {Ahmad Abdelfattah and Hartwig Anzt and Erik G. Boman and Erin Carson and Terry Cojean and Jack Dongarra and Mark Gates and Thomas Grützmacher and Nicholas J. Higham and Sherry Li and Neil Lindquist and Yang Liu and Jennifer Loe and Piotr Luszczek and Pratik Nayak and Sri Pranesh and Siva Rajamanickam and Tobias Ribizel and Barry Smith and Kasia Swirydowicz and Stephen Thomas and Stanimire Tomov and Yaohung M. Tsai and Ichitaro Yamazaki and Urike Meier Yang},
+  date        = {2020-07-13},
+  title       = {A Survey of Numerical Methods Utilizing Mixed Precision Arithmetic},
+  eprint      = {2007.06674v1},
+  eprintclass = {cs.MS},
+  eprinttype  = {arXiv},
+  abstract    = {Within the past years, hardware vendors have started designing low precision special function units in response to the demand of the Machine Learning community and their demand for high compute power in low precision formats. Also the server-line products are increasingly featuring low-precision special function units, such as the NVIDIA tensor cores in ORNL's Summit supercomputer providing more than an order of magnitude higher performance than what is available in IEEE double precision. At the same time, the gap between the compute power on the one hand and the memory bandwidth on the other hand keeps increasing, making data access and communication prohibitively expensive compared to arithmetic operations. To start the multiprecision focus effort, we survey the numerical linear algebra community and summarize all existing multiprecision knowledge, expertise, and software capabilities in this landscape analysis report. We also include current efforts and preliminary results that may not yet be considered "mature technology," but have the potential to grow into production quality within the multiprecision focus effort. As we expect the reader to be familiar with the basics of numerical linear algebra, we refrain from providing a detailed background on the algorithms themselves but focus on how mixed- and multiprecision technology can help improving the performance of these methods and present highlights of application significantly outperforming the traditional fixed precision methods.},
+  file        = {:http\://arxiv.org/pdf/2007.06674v1:PDF},
+  keywords    = {cs.MS, cs.NA, math.NA, G.1.3; G.4},
+}
+
+@Article{Abdelfattah2020b,
+  author    = {Ahmad Abdelfattah and Stanimire Tomov and Jack Dongarra},
+  title     = {Matrix multiplication on batches of small matrices in half and half-complex precisions},
+  doi       = {10.1016/j.jpdc.2020.07.001},
+  pages     = {188--201},
+  volume    = {145},
+  abstract  = {Machine learning and artificial intelligence (AI) applications often rely on performing many small matrix operations -- in particular general matrix-matrix multiplication (GEMM). These operations are usually performed in a reduced precision, such as the 16-bit floating-point format (i.e., half precision or FP16). The GEMM operation is also very important for dense linear algebra algorithms, and half-precision GEMM operations can be used in mixed-precision linear solvers. Therefore, high-performance batched GEMM operations in reduced precision are significantly important, not only for deep learning frameworks, but also for scientific applications that rely on batched linear algebra, such as tensor contractions and sparse direct solvers.\\ This paper presents optimized batched GEMM kernels for graphics processing units (GPUs) in FP16 arithmetic. The paper addresses both real and complex half-precision computations on the GPU. The proposed design takes advantage of the Tensor Core technology that was recently introduced in CUDA-enabled GPUs. With eight tuning parameters introduced in the design, the developed kernels have a high degree of flexibility that overcomes the limitations imposed by the hardware and software (in the form of discrete configurations for the Tensor Core APIs). For real FP16 arithmetic, performance speedups are observed against cuBLAS for sizes up to 128, and range between $1.5\times$ and $2.5\times$. For the complex FP16 GEMM kernel, the speedups are between $1.7\times$ and $7\times$ thanks to a design that uses the standard interleaved matrix layout, in contrast with the planar layout required by the vendor's solution. The paper also discusses special optimizations for extremely small matrices, where even higher performance gains are achievable.},
+  journal   = {Journal of Parallel and Distributed Computing},
+  month     = {11},
+  publisher = {Elsevier {BV}},
+  year      = {2020},
+}
+
+@Article{Farhan2020,
+  author    = {Mohammed Al Farhan and Ahmad Abdelfattah and Stanimire Tomov and Mark Gates and Dalal Sukkari and Azzam Haidar and Robert Rosenberg and Jack Dongarra},
+  title     = {{MAGMA} templates for scalable linear algebra on emerging architectures},
+  doi       = {10.1177/1094342020938421},
+  pages     = {109434202093842},
+  abstract  = {With the acquisition and widespread use of more resources that rely on accelerator/wide vector-based computing, there has been a strong demand for science and engineering applications to take advantage of these latest assets. This, however, has been extremely challenging due to the diversity of systems to support their extreme concurrency, complex memory hierarchies, costly data movement, and heterogeneous node architectures. To address these challenges, we design a programming model and describe its ease of use in the development of a new MAGMA Templates library that delivers high-performance scalable linear algebra portable on current and emerging architectures. MAGMA Templates derives its performance and portability by (1) building on existing state-of-the-art linear algebra libraries, like MAGMA, SLATE, Trilinos, and vendor-optimized math libraries, and (2) providing access (seamlessly to the users) to the latest algorithms and architecture-specific optimizations through a single, easy-to-use C++-based API.},
+  journal   = {The International Journal of High Performance Computing Applications},
+  month     = {7},
+  publisher = {{SAGE} Publications},
+  year      = {2020},
+}
+
+@InProceedings{Laguna2020,
+  author    = {Ignacio Laguna},
+  booktitle = {2020 {IEEE} International Parallel and Distributed Processing Symposium ({IPDPS})},
+  title     = {Varity: Quantifying Floating-Point Variations in {HPC} Systems Through Randomized Testing},
+  doi       = {10.1109/ipdps47924.2020.00070},
+  publisher = {{IEEE}},
+  abstract  = {Floating-point arithmetic can be confusing and it is sometimes misunderstood by programmers. While numerical reproducibility is desirable in HPC, it is often unachievable due to the different ways compilers treat floating-point arithmetic and generate code around it. This reproducibility problem is exacerbated in heterogeneous HPC systems where code can be executed on different floating-point hardware, e.g., a host and a device architecture, producing in some situations different numerical results. We present VARITY, a tool to quantify floatingpoint variations in heterogeneous HPC systems. Our approach generates random test programs for multiple architectures (host and device) using the compilers that are available in the system. Using differential testing, it compares floating-point results and identifies unexpected variations in the program results. The results can guide programmers in choosing the compilers that produce the most similar results in a system, which is useful when numerical reproducibility is critical. By running 50,000 experiments with Varity on a system with IBM POWER9 CPUs, NVIDIA V100 GPUs, and four compilers (gcc, clang, xl, and nvcc), we identify and document several programs that produce significantly different results for a given input when different compilers or architectures are used, even when a similar optimization level is used everywhere.},
+  month     = {5},
+  year      = {2020},
+}
+
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
