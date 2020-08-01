@@ -12127,6 +12127,42 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   keywords    = {nlin.AO, q-bio.QM},
 }
 
+@InProceedings{Brock2020a,
+  author    = {Benjamin Brock and Aydin Buluc and Timothy G. Mattson and Scott McMillan and Jose E. Moreira and Roger Pearce and Oguz Selvitopi and Trevor Steil},
+  booktitle = {Proceedings of the 2020 {IEEE} International Parallel and Distributed Processing Symposium Workshops},
+  title     = {Considerations for a Distributed {GraphBLAS} {API}},
+  doi       = {10.1109/ipdpsw50202.2020.00048},
+  publisher = {{IEEE}},
+  series    = {IPDPSW '20},
+  abstract  = {The GraphBLAS emerged from an international effort to standardize linear-algebraic building blocks for computing on graphs and graph-structured data. The GraphBLAS is expressed as a C API and has paved the way for multiple implementations. The GraphBLAS C API, however, does not define how distributed-memory parallelism should be handled. This paper reviews various approaches for a GraphBLAS API for distributed computing. This work is guided by our experience with existing distributed memory libraries. Our goal for this paper is to highlight the pros and cons of different approaches rather than to advocate for one particular choice.},
+  month     = {may},
+  year      = {2020},
+}
+
+@InProceedings{Lopez2020,
+  author    = {Florent Lopez and Edmond Chow and Stanimire Tomov and Jack Dongarra},
+  booktitle = {Proceedings of the 2020 {IEEE} International Parallel and Distributed Processing Symposium Workshops},
+  title     = {Asynchronous {SGD} for {DNN} training on Shared-memory Parallel Architectures},
+  doi       = {10.1109/ipdpsw50202.2020.00168},
+  publisher = {{IEEE}},
+  series    = {IPDPSW '20},
+  abstract  = {We present a parallel asynchronous Stochastic Gradient Descent algorithm for shared memory architectures. Different from previous asynchronous algorithms, we consider the case where the gradient updates are not particularly sparse. In the context of the MagmaDNN framework, we compare the parallel efficiency of the asynchronous implementation with that of the traditional synchronous implementation. Tests are performed for training deep neural networks on multicore CPUs and GPU devices.},
+  month     = {may},
+  year      = {2020},
+}
+
+@InProceedings{Ozkaya2020,
+  author    = {M. Yusuf Ozkaya and M. Fatih Balin and Ali Pinar and Umit V. Catalyurek},
+  booktitle = {Proceedings of the 2020 {IEEE} International Parallel and Distributed Processing Symposium Workshops},
+  title     = {A scalable graph generation algorithm to sample over a given shell distribution},
+  doi       = {10.1109/ipdpsw50202.2020.00051},
+  publisher = {{IEEE}},
+  series    = {IPDPSW '20},
+  abstract  = {Graphs are commonly used to model the relationships between various entities. These graphs can be enormously large and thus, scalable graph analysis has been the subject of many research efforts. To enable scalable analytics, many researchers have focused on generating realistic graphs that support controlled experiments for understanding how algorithms perform under changing graph features. Significant progress has been made on scalable graph generation which preserve some important graph properties (e.g., degree distribution, clustering coefficients). In this paper, we study how to sample a graph from the space of graphs with a given shell distribution. Shell distribution is related to the $k$-core, which is the largest subgraph where each vertex is connected to at least $k$other vertices. A $k$-shell is the subset of vertices that are in $k$-core but not $( k +1)$-core, and the shell distribution comprises the sizes of these shells. Core decompositions are widely used to extract information from graphs and to assist other computations. We present a scalable shared and distributed memory graph generator that, given a shell decomposition, generates a random graph that conforms to it. Our extensive experimental results show the efficiency and scalability of our methods. Our algorithm generates $2 ^{33}$ vertices and $2 ^{37}$ edges in less than 50 seconds on 384 cores.},
+  month     = {may},
+  year      = {2020},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
