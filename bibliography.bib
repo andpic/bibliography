@@ -11962,6 +11962,171 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   year      = {2020},
 }
 
+@Article{Pachajoa2020,
+  author      = {Carlos Pachajoa and Christina Pacher and Markus Levonyak and Wilfried N. Gansterer},
+  date        = {2020-07-08},
+  title       = {Algorithm-Based Checkpoint-Recovery for the Conjugate Gradient Method},
+  eprint      = {2007.04066v1},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {As computers reach exascale and beyond, the incidence of faults will increase. Solutions to this problem are an active research topic. We focus on strategies to make the preconditioned conjugate gradient (PCG) solver resilient against node failures, specifically, the exact state reconstruction (ESR) method, which exploits redundancies in PCG. Reducing the frequency at which redundant information is stored lessens the runtime overhead. However, after the node failure, the solver must restart from the last iteration for which redundant information was stored, which increases recovery overhead. This formulation highlights the method's similarities to checkpoint-restart (CR). Thus, this method, which we call ESR with periodic storage (ESRP), can be considered a form of algorithm-based checkpoint-restart. The state is stored implicitly, by exploiting redundancy inherent to the algorithm, rather than explicitly as in CR. We also minimize the amount of data to be stored and retrieved compared to CR, but additional computation is required to reconstruct the solver's state. In this paper, we describe the necessary modifications to ESR to convert it into ESRP, and perform an experimental evaluation. We compare ESRP experimentally with previously-existing ESR and application-level in-memory CR. Our results confirm that the overhead for ESR is reduced significantly, both in the failure-free case, and if node failures are introduced. In the former case, the overhead of ESRP is usually lower than that of CR. However, CR is faster if node failures happen. We claim that these differences can be alleviated by the implementation of more appropriate preconditioners.},
+  file        = {:http\://arxiv.org/pdf/2007.04066v1:PDF},
+  keywords    = {cs.DC},
+}
+
+@InCollection{Ren2020,
+  author    = {Yanfei Ren and David F. Gleich},
+  booktitle = {Parallel Algorithms in Computational Science and Engineering},
+  title     = {A Simple Study of Pleasing Parallelism on Multicore Computers},
+  doi       = {10.1007/978-3-030-43736-7_11},
+  pages     = {325--346},
+  publisher = {Springer International Publishing},
+  abstract  = {Pleasingly parallel computations are those that involve completely independent work. We investigate these in the context of a problem we call AllPageRank. The AllPageRank problem involves computing a subset of accurate PageRank entries for each possible seeded PageRank vector. AllPageRank is representative of a wider class of possible computational procedures that will run a large number of experiments on a single graph structure. Our study involves computing the AllPageRank vectors for a multi-million node graph within a reasonable timeframe on a modern shared memory, high-core count computer. For this setting, we parallelize over all of the seeded PageRank vector computations, which are all independent. The experiments demonstrate that there are non-trivial complexities in obtaining performance even in this ideal situation. For instance, threading computational environments gave scaling problems with a shared graph structure in memory. Also sparse matrix ordering techniques and multivector, or SIMD, optimizations were required to get a total runtime of a few days. We also show how different algorithms for PageRank that have different algorithmic advances and memory access patterns behave to guide future investigation of similar problems.},
+  year      = {2020},
+}
+
+@InCollection{Manguoglu2020,
+  author    = {Murat Manguoğlu and Eric Polizzi and Ahmed H. Sameh},
+  booktitle = {Parallel Algorithms in Computational Science and Engineering},
+  title     = {Parallel Hybrid Sparse Linear System Solvers},
+  doi       = {10.1007/978-3-030-43736-7_4},
+  pages     = {95--120},
+  publisher = {Springer International Publishing},
+  abstract  = {In this chapter, we present the SPIKE family of algorithms for solving banded linear systems and its multithreaded implementation as well as direct-iterative hybrid variants for solving general sparse linear system of equations.},
+  year      = {2020},
+}
+
+@Article{Wang2020d,
+  author    = {Meiqi Wang and Sixian Jia and Enli Chen and Shaopu Yang and Pengfei Liu and Zhuang Qi},
+  title     = {A derived least square fast learning network model},
+  doi       = {10.1007/s10489-020-01773-6},
+  abstract  = {The extreme learning machine (ELM) requires a large number of hidden layer nodes in the training process. Thus, random parameters will exponentially increase and affect network stability. Moreover, the single activation function affects the generalization capability of the network. This paper proposes a derived least square fast learning network (DLSFLN) to solve the aforementioned problems. DLSFLN uses the inheritance of some functions to obtain various activation functions through continuous differentiation of functions. The types of activation functions were increased and the mapping capability of hidden layer neurons was enhanced when the random parameter dimension was maintained. DLSFLN randomly generates the input weights and hidden layer thresholds and uses the least square method to determine the connection weights between the output and the input layers and that between the output and the input nodes. The regression and classification experiments show that DLSFLN has a faster training speed and better training accuracy, generalization capability, and stability compared with other neural network algorithms, such as fast learning network(FLN).},
+  journal   = {Applied Intelligence},
+  month     = {jul},
+  publisher = {Springer Science and Business Media {LLC}},
+  year      = {2020},
+}
+
+@Article{Lai2020,
+  author      = {Ming-Jun Lai and Jiaxin Xie and Zhiqiang Xu},
+  date        = {2020-07-14},
+  title       = {Graph Sparsification by Universal Greedy Algorithms},
+  eprint      = {2007.07161v1},
+  eprintclass = {cs.DS},
+  eprinttype  = {arXiv},
+  abstract    = {Graph sparsification is to approximate an arbitrary graph by a sparse graph and is useful in many applications, such as simplification of social networks, least squares problems, numerical solution of symmetric positive definite linear systems and etc. In this paper, inspired by the well-known sparse signal recovery algorithm called orthogonal matching pursuit (OMP), we introduce a deterministic, greedy edge selection algorithm called universal greedy algorithm(UGA) for graph sparsification. The UGA algorithm can output a $\frac{(1+\epsilon)^2}{(1-\epsilon)^2}$-spectral sparsifier with $\lceil\frac{n}{\epsilon^2}\rceil$ edges in $O(m+n^2/\epsilon^2)$ time with $m$ edges and $n$ vertices for a general random graph satisfying a mild sufficient condition. This is a linear time algorithm in terms of the number of edges that the community of graph sparsification is looking for. The best result in the literature to the knowledge of the authors is the existence of a deterministic algorithm which is almost linear, i.e. $O(m^{1+o(1)})$ for some $o(1)=O(\frac{(\log\log(m))^{2/3}}{\log^{1/3}(m)})$. We shall point out that several random graphs satisfy the sufficient condition and hence, can be sparsified in linear time. For a general spectral sparsification problem, e.g., positive subset selection problem, a nonnegative UGA algorithm is proposed which needs $O(mn^2+ n^3/\epsilon^2)$ time and the convergence is established.},
+  file        = {:http\://arxiv.org/pdf/2007.07161v1:PDF},
+  keywords    = {cs.DS},
+}
+
+@Article{Levy2020,
+  author      = {Ryan Levy and Edgar Solomonik and Bryan K. Clark},
+  date        = {2020-07-10},
+  title       = {Distributed-Memory DMRG via Sparse and Dense Parallel Tensor Contractions},
+  eprint      = {2007.05540v1},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {The Density Matrix Renormalization Group (DMRG) algorithm is a powerful tool for solving eigenvalue problems to model quantum systems. DMRG relies on tensor contractions and dense linear algebra to compute properties of condensed matter physics systems. However, its efficient parallel implementation is challenging due to limited concurrency, large memory footprint, and tensor sparsity. We mitigate these problems by implementing two new parallel approaches that handle block sparsity arising in DMRG, via Cyclops, a distributed memory tensor contraction library. We benchmark their performance on two physical systems using the Blue Waters and Stampede2 supercomputers. Our DMRG performance is improved by up to 5.9X in runtime and 99X in processing rate over ITensor, at roughly comparable computational resource use. This enables higher accuracy calculations via larger tensors for quantum state approximation. We demonstrate that despite having limited concurrency, DMRG is weakly scalable with the use of efficient parallel tensor contraction mechanisms.},
+  file        = {:http\://arxiv.org/pdf/2007.05540v1:PDF},
+  keywords    = {cs.DC, cond-mat.str-el, physics.comp-ph},
+}
+
+@Article{Booth2020a,
+  author      = {Joshua Dennis Booth},
+  date        = {2020-07-15},
+  title       = {Auto Adaptive Irregular OpenMP Loops},
+  eprint      = {2007.07977v1},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {OpenMP is a standard for the parallelization due to the ease in programming parallel-for loops in a fork-join manner. Many shared-memory applications are implemented using this model despite not being ideal for applications with high load imbalance, such as those that make irregular memory accesses. One parameter, i.e., chunk size, is made available to users in order to mitigate performance loss. However, this parameter is dependent on architecture, system load, application, and input; making it difficult to tune. We present an OpenMP scheduler that does an adaptive tuning for chunk size for unbalanced applications that make irregular memory accesses. In particular, this method(iCh) uses work-stealing for imbalance and adapts chunk size using a force-feedback model that approximates variance of task length in a chunk. This scheduler has low overhead and allows for active load balancing while the applications are running. We demonstrate this using both sparse matrix-vector multiplication (spmv) and Betweenness Centrality (bc) and show that iCh can achieve average speedups close (i.e., within 1.061x for spmv and 1.092x for bc) of either OpenMP loops scheduled with dynamic or work-stealing methods that had chunk size tuned offline.},
+  file        = {:http\://arxiv.org/pdf/2007.07977v1:PDF},
+  keywords    = {cs.DC},
+}
+
+@InCollection{Guo2020a,
+  author    = {Mengyu Guo and Shaowen Wang},
+  booktitle = {Geotechnologies and the Environment},
+  title     = {Quantum Computing for Solving Spatial Optimization Problems},
+  doi       = {10.1007/978-3-030-47998-5_6},
+  pages     = {97--113},
+  publisher = {Springer International Publishing},
+  abstract  = {Ever since Shor'’'s quantum factoring algorithm was developed, quantum computing has been pursued as a promising and powerful approach to solving many computationally complex problems such as combinatorial optimization and machine learning. As an important quantum computing approach, quantum annealing (QA) has received considerable attention. Extensive research has shown that QA, exploiting quantum-mechanical effects such as tunneling, entanglement and superposition, could be much more efficient in solving hard combinatorial optimization problems than its classical counterpart -- simulated annealing. Recent advances in quantum annealing hardware open the possibility of empirical testing of QA against the most challenging computational problems arising in geospatial applications. This chapter demonstrates how to employ QA to solve NP-hard spatial optimization problems through an illustrative example of programming a p-median model and a case study on spatial supply chain optimization. The research findings also address the short- and long-term potential of quantum computing in the future development of high-performance computing for geospatial applications.},
+  year      = {2020},
+}
+
+@Article{Schenker2020,
+  author      = {Carla Schenker and Jeremy E. Cohen and Evrim Acar},
+  date        = {2020-07-19},
+  title       = {A Flexible Optimization Framework for Regularized Matrix-Tensor Factorizations with Linear Couplings},
+  eprint      = {2007.09605v1},
+  eprintclass = {cs.LG},
+  eprinttype  = {arXiv},
+  abstract    = {Coupled matrix and tensor factorizations (CMTF) are frequently used to jointly analyze data from multiple sources, also called data fusion. However, different characteristics of datasets stemming from multiple sources pose many challenges in data fusion and require to employ various regularizations, constraints, loss functions and different types of coupling structures between datasets. In this paper, we propose a flexible algorithmic framework for coupled matrix and tensor factorizations which utilizes Alternating Optimization (AO) and the Alternating Direction Method of Multipliers (ADMM). The framework facilitates the use of a variety of constraints, loss functions and couplings with linear transformations in a seamless way. Numerical experiments on simulated and real datasets demonstrate that the proposed approach is accurate, and computationally efficient with comparable or better performance than available CMTF methods for Frobenius norm loss, while being more flexible. Using Kullback-Leibler divergence on count data, we demonstrate that the algorithm yields accurate results also for other loss functions.},
+  file        = {:http\://arxiv.org/pdf/2007.09605v1:PDF},
+  keywords    = {cs.LG, math.OC, stat.ML},
+}
+
+@Article{Sayegh2020,
+  author    = {Ammar T. Al Sayegh and Elisa D. Sotelino},
+  title     = {A new row-wise parallel finite element analysis algorithm with dynamic load balancing},
+  doi       = {10.1504/ijeie.2020.108588},
+  number    = {2},
+  pages     = {120},
+  volume    = {3},
+  abstract  = {A parallel scheme is devised to efficiently parallelise all steps of parallel finite element analysis in this study. In addition, this scheme is based on a row-wise matrix distribution. A new row-wise parallel finite element analysis algorithm that exploits the nature of distributed compressed row sparse matrices and multivectors to improve concurrency is developed. A new dynamic load balancing technique has also been devised. The dynamic load balancing technique has been designed specifically to balance the computational workload among processors suitable for the analysis of nonlinear structures. This new algorithm has been implemented in ParaStruc, which is a parallel structural analysis system. Trilinos, a set of parallel numerical libraries developed by researchers in the Sandia National Laboratory has been used to build this algorithm. ParaStruc is a lightweight fully parallelised parallel finite element analysis system, which contains only three classes and a pre-processor. It is shown that this approach produces superior performance in terms of speedup, efficiency, and isoefficiency in the analysis of nonlinear structure response ranges when compared to parallel ABAQUS. The performance and efficiency of this algorithm has been verified with numerical simulations of a 200-metre 50-story 10-frame 10-bay 3D structure subjected to various load levels.},
+  journal   = {International Journal of Earthquake and Impact Engineering},
+  publisher = {Inderscience Publishers},
+  year      = {2020},
+}
+
+@Article{Chen2020e,
+  author    = {Shixiang Chen and Shiqian Ma and Lingzhou Xue and Hui Zou},
+  title     = {An Alternating Manifold Proximal Gradient Method for Sparse Principal Component Analysis and Sparse Canonical Correlation Analysis},
+  doi       = {10.1287/ijoo.2019.0032},
+  pages     = {ijoo.2019.0032},
+  abstract  = {Sparse principal component analysis and sparse canonical correlation analysis are two essential techniques from high-dimensional statistics and machine learning for analyzing large-scale data. Both problems can be formulated as an optimization problem with nonsmooth objective and nonconvex constraints. Because nonsmoothness and nonconvexity bring numerical difficulties, most algorithms suggested in the literature either solve some relaxations of them or are heuristic and lack convergence guarantees. In this paper, we propose a new alternating manifold proximal gradient method to solve these two high-dimensional problems and provide a unified convergence analysis. Numerical experimental results are reported to demonstrate the advantages of our algorithm.},
+  journal   = {{INFORMS} Journal on Optimization},
+  month     = {jul},
+  publisher = {Institute for Operations Research and the Management Sciences ({INFORMS})},
+  year      = {2020},
+}
+
+@InProceedings{Page2020,
+  author    = {Brian A. Page and Peter M. Kogge},
+  booktitle = {Proceedings of the 2020 {IEEE} International Parallel and Distributed Processing Symposium Workshops},
+  title     = {Scalability of Sparse Matrix Dense Vector Multiply ({SpMV}) on a Migrating Thread Architecture},
+  doi       = {10.1109/ipdpsw50202.2020.00088},
+  publisher = {{IEEE}},
+  series    = {IPDPSW '20},
+  abstract  = {Sparse matrix dense vector multiplication (SpMV), exhibits the memory bandwidth and communication driven nature of many sparse linear algebra operations. Irregular memory accesses from the non-zero structure within a sparse matrix wreak havoc on performance. This paper presents strong scaling for communication avoiding SpMV implementations on a migrating thread system intended to address the lack of locality in sparse problems. We developed communication avoiding SpMV code to attempt to reduce off-node thread migration by using the hypergraph partitioning package HYPE to determine workload distribution. Additionally, we investigate the performance impact of overlapping communication and computation through the use of remote memory operations supported by the architecture. Incorporating remote memory operations with hypergraph partitioning we achieved 6.18X speedup for overall performance.},
+  month     = {may},
+  year      = {2020},
+}
+
+@Article{Priest2020,
+  author      = {Benjamin W. Priest and Alec Dunton and Geoffrey Sanders},
+  date        = {2020-07-24},
+  title       = {Scaling Graph Clustering with Distributed Sketches},
+  eprint      = {2007.12669v1},
+  eprintclass = {cs.LG},
+  eprinttype  = {arXiv},
+  abstract    = {The unsupervised learning of community structure, in particular the partitioning vertices into clusters or communities, is a canonical and well-studied problem in exploratory graph analysis. However, like most graph analyses the introduction of immense scale presents challenges to traditional methods. Spectral clustering in distributed memory, for example, requires hundreds of expensive bulk-synchronous communication rounds to compute an embedding of vertices to a few eigenvectors of a graph associated matrix. Furthermore, the whole computation may need to be repeated if the underlying graph changes some low percentage of edge updates. We present a method inspired by spectral clustering where we instead use matrix sketches derived from random dimension-reducing projections. We show that our method produces embeddings that yield performant clustering results given a fully-dynamic stochastic block model stream using both the fast Johnson-Lindenstrauss and CountSketch transforms. We also discuss the effects of stochastic block model parameters upon the required dimensionality of the subsequent embeddings, and show how random projections could significantly improve the performance of graph clustering in distributed memory.},
+  file        = {:http\://arxiv.org/pdf/2007.12669v1:PDF},
+  keywords    = {cs.LG, stat.ML},
+}
+
+@Article{Mentus2020,
+  author      = {Cassidy Mentus and Marcus Roper},
+  date        = {2020-07-27},
+  title       = {Optimal Mixing in Transport Networks: Numerical Optimization and Analysis},
+  eprint      = {2007.13637v1},
+  eprintclass = {nlin.AO},
+  eprinttype  = {arXiv},
+  abstract    = {Many foraging microorganisms rely upon cellular transport networks to deliver nutrients, fluid and organelles between different parts of the organism. Networked organisms ranging from filamentous fungi to slime molds demonstrate a remarkable ability to mix or disperse molecules and organelles in their transport media. Here we introduce mathematical tools to analyze the structure of energy efficient transport networks that maximize mixing and sending signals originating from and arriving at each node. We define two types of entropies on flows to quantify mixing and develop numerical algorithms to optimize the combination of entropy and energy on networks, given constraints on the amount of available material. We present an in-depth exploration of optimal single source-sink networks on finite triangular grids, a fundamental setting for optimal transport networks in the plane. Using numerical simulations and rigorous proofs, we show that, if the constraint on conductances is strict, the optimal networks are paths of every possible length. If the constraint is relaxed, our algorithm produces loopy networks that fan out at the source and pour back into a single path that flows to the sink. Taken together, our results expand the class of optimal transportation networks that can be compared with real biological data, and highlight how real network morphologies may be shaped by tradeoffs between transport efficiency and the need to mix the transported matter.},
+  file        = {:http\://arxiv.org/pdf/2007.13637v1:PDF},
+  keywords    = {nlin.AO, q-bio.QM},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
