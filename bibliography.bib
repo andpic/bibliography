@@ -12163,6 +12163,18 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   year      = {2020},
 }
 
+@InProceedings{Alappat2020,
+  author    = {Alappat, Christie L. and Alvermann, Andreas and Basermann, Achim and Fehske, Holger and Futamura, Yasunori and Galgon, Martin and Hager, Georg and Huber, Sarah and Imakura, Akira and Kawai, Masatoshi and Kreutzer, Moritz and Lang, Bruno and Nakajima, Kengo and R{\"o}hrig-Z{\"o}llner, Melven and Sakurai, Tetsuya and Shahzad, Faisal and Thies, Jonas and Wellein, Gerhard},
+  booktitle = {Software for Exascale Computing -- SPPEXA 2016--2019},
+  title     = {{ESSEX}: Equipping Sparse Solvers For Exascale},
+  editor    = {Bungartz, Hans-Joachim and Reiz, Severin and Uekermann, Benjamin and Neumann, Philipp and Nagel, Wolfgang E.},
+  isbn      = {978-3-030-47956-5},
+  pages     = {143--187},
+  publisher = {Springer International Publishing},
+  abstract  = {The ESSEX project has investigated programming concepts, data structures, and numerical algorithms for scalable, efficient, and robust sparse eigenvalue solvers on future heterogeneous exascale systems. Starting without the burden of legacy code, a holistic performance engineering process could be deployed across the traditional software layers to identify efficient implementations and guide sustainable software development. At the basic building blocks level, a flexible MPI+X programming approach was implemented together with a new sparse data structure (SELL-C-$\sigma$) to support heterogeneous architectures by design. Furthermore, ESSEX focused on hardware-efficient kernels for all relevant architectures and efficient data structures for block vector formulations of the eigensolvers. The algorithm layer addressed standard, generalized, and nonlinear eigenvalue problems and provided some widely usable solver implementations including a block Jacobi--Davidson algorithm, contour-based integration schemes, and filter polynomial approaches. Adding to the highly efficient kernel implementations, algorithmic advances such as adaptive precision, optimized filtering coefficients, and preconditioning have further improved time to solution. These developments were guided by quantum physics applications, especially from the field of topological insulator- or graphene-based systems. For these, ScaMaC, a scalable matrix generation framework for a broad set of quantum physics problems, was developed. As the central software core of ESSEX, the PHIST library for sparse systems of linear equations and eigenvalue problems has been established. It abstracts algorithmic developments from low-level optimization. Finally, central ESSEX software components and solvers have demonstrated scalability and hardware efficiency on up to 256 K cores using million-way process/thread-level parallelism.},
+  year      = {2020},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
