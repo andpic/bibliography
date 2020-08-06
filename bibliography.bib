@@ -12223,6 +12223,26 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   year      = {2020},
 }
 
+@Article{Fasi2020b,
+  author     = {Fasi, Massimiliano and Higham, Nicholas J.},
+  date       = {2020},
+  title      = {Matrices with Tunable Infinity-Norm Condition Number and No Need for Pivoting in {LU} Factorization},
+  eprint     = {MIMS EPrint:2020.17},
+  eprinttype = {MIMS EPrint},
+  url        = {http://eprints.maths.manchester.ac.uk/id/eprint/2775},
+  abstract   = {We propose a two-parameter family of nonsymmetric dense $n \times n$ matrices $A(\alpha, \beta)$ for which LU factorization without pivoting is numerically stable, and we show how to choose $\alpha$ and $\beta$ to achieve any value of the $\infty$-norm condition number. The matrix $A(\alpha, \beta)$ can be formed from a simple formula in $O(n^2)$ flops. The matrix is suitable for use in the HPL-AI Mixed-Precision Benchmark, which requires an extreme scale test matrix (dimension $n > 10^7$) that has a controlled condition number and can be safely used in LU factorization without pivoting. It is also of interest as a general-purpose test matrix.},
+}
+
+@TechReport{Friedlander2002,
+  author      = {Michael P. Friedlander and Michael A. Saunders},
+  date        = {2002},
+  institution = {Argonne National Laboratory -- Mathematics and Computer Science Division},
+  title       = {A globally convergent {LCL} method for nonlinear optimization},
+  eprint      = {ANL/MCS-P1015-1202},
+  url         = {https://ftp.mcs.anl.gov/pub/tech_reports/reports/P1015.pdf},
+  abstract    = {For optimization problems with nonlinear constraints, linearly constrained Lagrangian (LCL) methods sequentially minimize a Lagrangian function subject to linearized constraints. These methods converge rapidly near a solution but may not be reliable from arbitrary starting points. The well known example MINOS has proven effective on many large problems. Its success motivates us to propose a globally convergent variant. Our stabilized LCL method possesses two important properties: the subproblems are always feasible, and they may be solved inexactly. These features are present in MINOS only as heuristics.\\ The new algorithm has been implemented in Matlab, with the option to use either the MINOS or SNOPT Fortran codes to solve the linearly constrained subproblems. Only first derivatives are required. We present numerical results on a nonlinear subset of the COPS, CUTE, and HS testproblem sets, which include many large examples. The results demonstrate the robustness and efficiency of the stabilized LCL procedure.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
