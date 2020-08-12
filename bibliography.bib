@@ -12243,6 +12243,141 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   abstract    = {For optimization problems with nonlinear constraints, linearly constrained Lagrangian (LCL) methods sequentially minimize a Lagrangian function subject to linearized constraints. These methods converge rapidly near a solution but may not be reliable from arbitrary starting points. The well known example MINOS has proven effective on many large problems. Its success motivates us to propose a globally convergent variant. Our stabilized LCL method possesses two important properties: the subproblems are always feasible, and they may be solved inexactly. These features are present in MINOS only as heuristics.\\ The new algorithm has been implemented in Matlab, with the option to use either the MINOS or SNOPT Fortran codes to solve the linearly constrained subproblems. Only first derivatives are required. We present numerical results on a nonlinear subset of the COPS, CUTE, and HS testproblem sets, which include many large examples. The results demonstrate the robustness and efficiency of the stabilized LCL procedure.},
 }
 
+@Article{Kepner2020,
+  author      = {Jeremy Kepner and Chad Meiners and Chansup Byun and Sarah McGuire and Timothy Davis and William Arcand and Jonathan Bernays and David Bestor and William Bergeron and Vijay Gadepally and Raul Harnasch and Matthew Hubbell and Micheal Houle and Micheal Jones and Andrew Kirby and Anna Klein and Lauren Milechin and Julie Mullen and Andrew Prout and Albert Reuther and Antonio Rosa and Siddharth Samsi and Doug Stetson and Adam Tse and Charles Yee and Peter Michaleas},
+  date        = {2020-08-01},
+  title       = {Multi-Temporal Analysis and Scaling Relations of 100,000,000,000 Network Packets},
+  eprint      = {2008.00307v1},
+  eprintclass = {cs.NI},
+  eprinttype  = {arXiv},
+  abstract    = {Our society has never been more dependent on computer networks. Effective utilization of networks requires a detailed understanding of the normal background behaviors of network traffic. Large-scale measurements of networks are computationally challenging. Building on prior work in interactive supercomputing and GraphBLAS hypersparse hierarchical traffic matrices, we have developed an efficient method for computing a wide variety of streaming network quantities on diverse time scales. Applying these methods to 100,000,000,000 anonymized source-destination pairs collected at a network gateway reveals many previously unobserved scaling relationships. These observations provide new insights into normal network background traffic that could be used for anomaly detection, AI feature engineering, and testing theoretical models of streaming networks.},
+  file        = {:http\://arxiv.org/pdf/2008.00307v1:PDF},
+  keywords    = {cs.NI, cs.DC, cs.SI},
+}
+
+@Article{Li2020f,
+  author      = {Cheng Li and Min Tang and Ruofeng Tong and Ming Cai and Jieyi Zhao and Dinesh Manocha},
+  date        = {2020-08-02},
+  title       = {P-Cloth: Interactive Complex Cloth Simulation on Multi-GPU Systems using Dynamic Matrix Assembly and Pipelined Implicit Integrators},
+  eprint      = {2008.00409v2},
+  eprintclass = {cs.GR},
+  eprinttype  = {arXiv},
+  abstract    = {We present a novel parallel algorithm for cloth simulation that exploits multiple GPUs for fast computation and the handling of very high resolution meshes. To accelerate implicit integration, we describe new parallel algorithms for sparse matrix-vector multiplication (SpMV) and for dynamic matrix assembly on a multi-GPU workstation. Our algorithms use a novel work queue generation scheme for a fat-tree GPU interconnect topology. Furthermore, we present a novel collision handling scheme that uses spatial hashing for discrete and continuous collision detection along with a non-linear impact zone solver. Our parallel schemes can distribute the computation and storage overhead among multiple GPUs and enable us to perform almost interactive simulation on complex cloth meshes, which can hardly be handled on a single GPU due to memory limitations. We have evaluated the performance with two multi-GPU workstations (with 4 and 8 GPUs, respectively) on cloth meshes with 0.5-1.65M triangles. Our approach can reliably handle the collisions and generate vivid wrinkles and folds at 2-5 fps, which is significantly faster than prior cloth simulation systems. We observe almost linear speedups with respect to the number of GPUs.},
+  file        = {:http\://arxiv.org/pdf/2008.00409v2:PDF},
+  keywords    = {cs.GR},
+}
+
+@Article{Ahrens2020b,
+  author      = {Peter Ahrens},
+  date        = {2020-07-31},
+  title       = {Load Plus Communication Balancing in Contiguous Partitions for Distributed Sparse Matrices: Linear-Time Algorithms},
+  eprint      = {2007.16192v1},
+  eprintclass = {cs.DS},
+  eprinttype  = {arXiv},
+  abstract    = {We study partitioning to parallelize multiplication of one or more dense vectors by a sparse matrix (SpMV or SpMM). We consider contiguous partitions, where the rows (or columns) of the matrix are split into $K$ parts without reordering. We present exact and approximate contiguous partitioning algorithms that minimize the runtime of the longest-running processor under cost models that combine work factors and hypergraph communication factors. This differs from traditional graph or hypergraph partitioning models which minimize total communication under a work balance constraint. We address regimes where partitions of the row space and column space are expected to match (the symmetric case) or are allowed to differ (the nonsymmetric case). Our algorithms use linear space. Our exact algorithm runs in linear time when $K^2$ is sublinear. Our $(1 + \epsilon)$-approximate algorithm runs in linear time when $K\log(1/\epsilon)$ is sublinear. We combine concepts from high-performance computing and computational geometry. Existing load balancing algorithms optimize a linear model of per-processor work. We make minor adaptations to optimize arbitrary nonuniform monotonic increasing or decreasing cost functions which may be expensive to evaluate. We then show that evaluating our model of communication is equivalent to planar dominance counting. We specialize Chazelle's dominance counting algorithm to points in the bounded integer plane and generalize it to trade reduced construction time for increased query time, since our partitioners make very few queries. Our algorithms split the original row (or column) ordering into parts to optimize diverse cost models. Combined with reordering or embedding techniques, our algorithms might be used to build more general heuristic partitioners, as they can optimally round one-dimensional embeddings of direct $K$-way noncontiguous partitioning problems.},
+  file        = {:http\://arxiv.org/pdf/2007.16192v1:PDF},
+  keywords    = {cs.DS},
+}
+
+@Article{Nolet2020,
+  author      = {Corey J. Nolet and Victor Lafargue and Edward Raff and Thejaswi Nanditale and Tim Oates and John Zedlewski and Joshua Patterson},
+  date        = {2020-08-01},
+  title       = {Bringing UMAP Closer to the Speed of Light with GPU Acceleration},
+  eprint      = {2008.00325v1},
+  eprintclass = {cs.LG},
+  eprinttype  = {arXiv},
+  abstract    = {The Uniform Manifold Approximation and Projection (UMAP) algorithm has become widely popular for its ease of use, quality of results, and support for exploratory, unsupervised, supervised, and semi-supervised learning. While many algorithms can be ported to a GPU in a simple and direct fashion, such efforts have resulted in inefficent and inaccurate versions of UMAP. We show a number of techniques that can be used to make a faster and more faithful GPU version of UMAP, and obtain speedups of up to 100x in practice. Many of these design choices/lessons are general purpose and may inform the conversion of other graph and manifold learning algorithms to use GPUs. Our implementation has been made publicly available as part of the open source RAPIDS cuML library(https://github.com/rapidsai/cuml).},
+  file        = {:http\://arxiv.org/pdf/2008.00325v1:PDF},
+  keywords    = {cs.LG, cs.DS, stat.ML},
+}
+
+@Article{Azad2020,
+  author    = {Ariful Azad and Aydin Bulu{\c{c}} and Xiaoye S. Li and Xinliang Wang and Johannes Langguth},
+  title     = {A Distributed-Memory Algorithm for Computing a Heavy-Weight Perfect Matching on Bipartite Graphs},
+  doi       = {10.1137/18m1189348},
+  number    = {4},
+  pages     = {C143--C168},
+  volume    = {42},
+  abstract  = {We design and implement an efficient parallel algorithm for finding a perfect matching in a weighted bipartite graph such that weights on the edges of the matching are large. This problem differs from the maximum weight matching problem, for which scalable approximation algorithms are known. It is primarily motivated by finding good pivots in scalable sparse direct solvers before factorization. Due to the lack of scalable alternatives, distributed solvers use sequential implementations of maximum weight perfect matching algorithms, such as those available in MC64. To overcome this limitation, we propose a fully parallel distributed memory algorithm that first generates a perfect matching and then iteratively improves the weight of the perfect matching by searching for weight-increasing cycles of length 4 in parallel. For most practical problems the weights of the perfect matchings generated by our algorithm are very close to the optimum. An efficient implementation of the algorithm scales up to 256 nodes (17,408 cores) on a Cray XC40 supercomputer and can solve instances that are too large to be handled by a single node using the sequential algorithm.},
+  journal   = {{SIAM} Journal on Scientific Computing},
+  month     = {jan},
+  publisher = {Society for Industrial {\&} Applied Mathematics ({SIAM})},
+  year      = {2020},
+}
+
+@InProceedings{Santos2020,
+  author    = {Fernando Fernandes dos Santos and Marcelo Brandalero and Pedro Martins Basso and Michael Hubner and Luigi Carro and Paolo Rech},
+  booktitle = {Proceedings of the 26th IEEE International Symposium on On-Line Testing and Robust System Design},
+  title     = {Reduced-Precision {DWC} for Mixed-Precision {GPUs}},
+  doi       = {10.1109/iolts50870.2020.9159748},
+  publisher = {{IEEE}},
+  series    = {IOLTS 2020},
+  abstract  = {Duplication with Comparison (DWC) is an effective software-level solution to improve the reliability of computing systems, including Graphics Processing Units (GPUs). DWC, however, introduces performance and energy consumption overheads that could be unacceptable for High-Performance Computing (HPC) or real-time safety-critical applications. In this work, we propose Reduced-Precision DWC (RP-DWC): an improvement over the traditional DWC approach that uses mixed-precision GPUs hardware resources to implement fault detection. We investigate, through both fault injection campaigns and accelerated neutron beam experiments, the impact of RPDWC onto performance, energy consumption, and its fault detection capabilites. We show that RP-DWC achieves on average 74\% fault coverage (up to 86\%) with very small overheads (0.1\% time and 24\% energy consumption overhead, in the best case).},
+  month     = {jul},
+  year      = {2020},
+}
+
+@InProceedings{Kreutzer2020,
+  author    = {Patrick Kreutzer and Stefan Kraus and Michael Philippsen},
+  booktitle = {Proceedings of the13th IEEE International Conference on Software Testing, Validation and Verification},
+  title     = {Language-Agnostic Generation of Compilable Test Programs},
+  doi       = {10.1109/icst46399.2020.00015},
+  publisher = {{IEEE}},
+  series    = {ICST 2020},
+  abstract  = {Testing is an integral part of the development of compilers and other language processors. To automatically create large sets of test programs, random program generators, or fuzzers, have emerged. Unfortunately, existing approaches are either language-specific (and thus require a rewrite for each language) or may generate programs that violate rules of the respective programming language (which limits their usefulness). This work introduces *Smith, a language-agnostic framework for the generation of valid, compilable test programs. It takes as input an abstract attribute grammar that specifies the syntactic and semantic rules of a programming language. It then creates test programs that satisfy all these rules. By aggressively pruning the search space and keeping the construction as local as possible, *Smith can generate huge, complex test programs in short time. We present four case studies covering four real-world programming languages (C, Lua, SQL, and SMT-LIB 2) to show that *Smith is both efficient and effective, while being flexible enough to support programming languages that differ considerably. We found bugs in all four case studies. For example, *Smith detected 165 different crashes in older versions of GCC and LLVM. *Smith and the language grammars are available online.},
+  month     = {oct},
+  year      = {2020},
+}
+
+@Article{Criscitiello2020,
+  author      = {Chris Criscitiello and Nicolas Boumal},
+  date        = {2020-08-05},
+  title       = {An accelerated first-order method for non-convex optimization on manifolds},
+  eprint      = {2008.02252v1},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {We describe the first gradient methods on Riemannian manifolds to achieve accelerated rates in the non-convex case. Under Lipschitz assumptions on the Riemannian gradient and Hessian of the cost function, these methods find approximate first-order critical points strictly faster than regular gradient descent. A randomized version also finds approximate second-order critical points. Both the algorithms and their analyses build extensively on existing work in the Euclidean case. The basic operation consists in running the Euclidean accelerated gradient descent method (appropriately safe-guarded against non-convexity) in the current tangent space, then moving back to the manifold and repeating. This requires lifting the cost function from the manifold to the tangent space, which can be done for example through the Riemannian exponential map. For this approach to succeed, the lifted cost function (called the pullback) must retain certain Lipschitz properties. As a contribution of independent interest, we prove precise claims to that effect, with explicit constants. Those claims are affected by the Riemannian curvature of the manifold, which in turn affects the worst-case complexity bounds for our optimization algorithms.},
+  file        = {:http\://arxiv.org/pdf/2008.02252v1:PDF},
+  keywords    = {math.OC, cs.NA, math.DG, math.NA},
+}
+
+@Article{Hebling2020,
+  author    = {Gustavo M. Hebling and Julio A.D. Massignan and João B.A. London Junior and Marcos H.M. Camillo},
+  title     = {Sparse and numerically stable implementation of a distribution system state estimation based on Multifrontal {QR} factorization},
+  doi       = {10.1016/j.epsr.2020.106734},
+  pages     = {106734},
+  volume    = {189},
+  abstract  = {Enhancing situational awareness of distribution networks is a requirement of Smart Grids. In order to fulfill this requirement, specialized algorithms have been developed to perform Distribution System State Estimation (DSSE). Due to the particularities of such networks, those algorithms often rely on simplifications and approximations of the measurement model which make difficult to generalize their results. This paper presents a sparse and numerically stable implementation of an algorithm for DSSE, which does not require any additional assumption from the traditional state estimation formulation. The numerical stability is guaranteed by using Multifrontal QR factorization and an optimal ordering technique is evaluated to reduce fill-in. Simulation results are carried out with IEEE three-phase unbalanced test feeders to evaluate the algorithm.},
+  journal   = {Electric Power Systems Research},
+  month     = {12},
+  publisher = {Elsevier {BV}},
+  year      = {2020},
+}
+
+@Article{Uroic2020,
+  author    = {Tessa Uroić and Hrvoje Jasak},
+  title     = {Parallelisation of selective algebraic multigrid for block--pressure--velocity system in {OpenFOAM}},
+  doi       = {10.1016/j.cpc.2020.107529},
+  pages     = {107529},
+  abstract  = {In the world of computational fluid dynamics (CFD), solving the governing equations of incompressible, turbulent, single--phase fluid flow still represents the basis of many industrial and academic applications. The implicitly coupled (monolithic) solution approach is still being developed and investigated for industrial--size applications. A parallel selection algebraic multigrid algorithm (AMG) based on the domain decomposition method is presented, applied for the solution of the linearised implicitly coupled pressure--velocity system discretised by the finite volume method, implemented in OpenFOAM. Since the setup phase of the selection AMG, i.e. sorting the equations into coarse and fine subsets is inherently sequential, it was decided to perform the setup phase locally on each processing unit. The prolongation matrix for transferring the correction from coarse to fine level and restriction matrix for transferring the residual from fine to coarse level are assembled locally as well. Parallel communication is necessary only for the calculation of the coarse level matrix, i.e. the matrix elements which describe the cross--coupling of equations located on different processing units. A localised version of the ILU factorisation based on Crout's algorithm is used as a smoother in the multigrid cycle. A detailed analysis of the coarse level matrix complexity is conducted in the context of the finite volume method in domain decomposition mode. The performance and scaling of our parallel implementation is investigated for two test cases and the possible drawbacks of the method are given.},
+  journal   = {Computer Physics Communications},
+  month     = {8},
+  publisher = {Elsevier {BV}},
+  year      = {2020},
+}
+
+@Article{Pham2020,
+  author    = {Minh Pham and Anh Ninh and Hoang Le and Yufeng Liu},
+  title     = {An efficient algorithm for minimizing multi non-smooth component functions},
+  doi       = {10.1080/10618600.2020.1804390},
+  pages     = {1--23},
+  abstract  = {Many problems in statistics and machine learning can be formulated as an optimization problem of a finite sum of non-smooth convex functions. We propose an algorithm to minimize this type of objective functions based on the idea of alternating linearization. Our algorithm retains the simplicity of contemporary methods without any restrictive assumptions on the smoothness of the loss function. We apply our proposed method to solve two challenging problems: overlapping group Lasso and convex regression with sharp partitions (CRISP). Numerical experiments show that our method is superior to the state-of-the-art algorithms, many of which are based on the accelerated proximal gradient method.},
+  journal   = {Journal of Computational and Graphical Statistics},
+  month     = {aug},
+  publisher = {Informa {UK} Limited},
+  year      = {2020},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
