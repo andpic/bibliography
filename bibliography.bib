@@ -12378,6 +12378,33 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   year      = {2020},
 }
 
+@TechReport{Brown2020,
+  author      = {Cade Brown and Ahmad Abdelfattah and Stanimire Tomov and Jack Dongarra},
+  date        = {2020},
+  institution = {University of Tennessee},
+  title       = {Design, Optimization, and Benchmarking of Dense Linear Algebra Algorithms on {AMD GPUs}},
+  url         = {https://www.icl.utk.edu/files/publications/2020/icl-utk-1405-2020.pdf},
+  abstract    = {Dense linear algebra (DLA) has historically been in the vanguard of software that must be adapted first to hardware changes. This is because DLA is both critical to the accuracy and performance of so many different types of applications, and because they have proved to be outstanding vehicles for finding and implementing solutions to the problems that novel architectures pose. Therefore, in this paper we investigate the portability of the MAGMA DLA library to the latest AMD GPUs. We use auto tools to convert the CUDA code in MAGMA to the HeterogeneousComputing Interface for Portability (HIP) language. MAGMA provides LAPACK for GPUs and benchmarks for fundamental DLA routines ranging from BLAS to dense factorizations, linear systems and eigen-problem solvers. We port these routines to HIP and quantify currently achievable performance through the MAGMA benchmarks for the main workload algorithms on MI25 and MI50 AMD GPUs. Comparison with performance roofline models and theoretical expectations are used to identify current limitations and directions for future improvements.},
+}
+
+@TechReport{Archibald2020,
+  author      = {Rick Archibald and Edmond Chow and Eduardo D'Azevedo and Jack Dongarra and and Markus Eisenbach and Rocco Febbo and Florent Lopez and Daniel Nichols and Stanimire Tomov and Kwai Wong and and Junqi Yin},
+  date        = {2020},
+  institution = {University of Tennessee},
+  title       = {Integrating Deep Learning in Domain Sciencesat Exascale},
+  url         = {https://www.icl.utk.edu/files/publications/2020/icl-utk-1403-2020.pdf},
+  abstract    = {This paper presents some of the current challenges in designing deep learning artificial intelligence (AI) and integrating it with traditional high-performance computing (HPC) simulations. We evaluate existing packages for their ability to run deep learning models and applications on large-scale HPC systems eciently, identify challenges, and propose new asynchronous parallelization and optimization techniques for current large-scale heterogeneous systems and upcoming exascale systems. These developments, along with existing HPC AI software capabilities, have been integrated into MagmaDNN, an open-source HPC deep learning framework. Many deep learning frameworks are targeted at data scientists and fall short in providing quality integration into existing HPC workflows. This paper discusses the necessities of an HPC deep learning framework and how those needs can be provided (e.g., as in MagmaDNN) through a deep integration with existing HPC libraries, such as MAGMA and its modular memory management, MPI, CuBLAS, CuDNN, MKL, and HIP. Advancements are also illustrated through the use of algorithmic enhancements in reduced- and mixed-precision, as well as asynchronous optimization methods. Finally, we present illustrations and potential solutions for enhancing traditional compute- and data-intensive applications at ORNL and UTK with AI. The approaches and future challenges are illustrated in materials science, imaging, and climate applications.},
+}
+
+@TechReport{Dongarra2020,
+  author      = {Jack Dongarra and Mark Gates and Piotr Luszczek and Stanimire Tomov},
+  institution = {University of Tennessee},
+  title       = {Translational Process: Mathematical Software Perspective},
+  abstract    = {Each successive generation of computer architecture has brought new challenges to achieving high performance mathematical solvers, necessitating development and analysis of new algorithms, which are then embodied in software libraries. These libraries hide architectural details from applications, allowing them to achieve a level of portability across platforms from desktops to worldclass high performance computing (HPC) systems. Thus there has been an informal translational computer science process of developing algorithms and distributing them in open source software libraries for adoption by applications and vendors. With the move to exascale, increasing intentionality about this process will benefit the long-term sustainability of the scientific software stack.},
+  date        = {2020},
+  url         = {https://www.icl.utk.edu/files/publications/2020/icl-utk-1404-2020.pdf},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
