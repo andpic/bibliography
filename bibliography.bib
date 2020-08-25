@@ -11383,13 +11383,6 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   year      = {2020},
 }
 
-@Article{Mailitsky2020,
-  author   = {Yura Mailitsky and Konstantin Mishchenko},
-  date     = {2020},
-  title    = {Adaptive Gradient Descent without Descent},
-  abstract = {We present a strikingly simple proof that two rules are sufficient to automate gradient descent: 1) don’t increase the stepsize too fast and 2) don’t overstep the local curvature. No need for functional values, no line search, no information about the function except for the gradients. By following these rules, you get a method adaptive to the local geometry, with convergence guarantees depending only on the smoothness in a neighborhood of a solution. Given that the problem is convex, our method converges even if the global smoothness constant is infinity. As an illustration, it can minimize arbitrary continuously twice-differentiable convex function. We examine its performance on a range of convex and nonconvex problems, including logistic regression and matrix factorization.},
-}
-
 @InProceedings{Nie2020,
   author    = {Bin Nie and Adwait Jog and Evgenia Smirni},
   booktitle = {Proceedings of the 20th IEEE/ACM International Symposium on Cluster, Cloud and Internet Computing},
@@ -12460,6 +12453,110 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   title        = {Ginkgo: A high performance numerical linear algebra library},
   doi          = {10.21105/joss.02260},
   abstract     = {Ginkgo is a production-ready sparse linear algebra library for high performance computing on GPU-centric architectures with a high level of performance portability and focuses on software sustainability.\\ The library focuses on solving sparse linear systems and accommodates a large variety of matrix formats, state-of-the-art iterative (Krylov) solvers and preconditioners, which make the library suitable for a variety of scientific applications. Ginkgo supports many architectures such as multi-threaded CPU, NVIDIA GPUs, and AMD GPUs. The heavy use of modern C++ features simplifies the addition of new executor paradigms and algorithmic functionality without introducing significant performance overhead.\\ Solving linear systems is usually one of the most computationally and memory intensive aspects of any application. Hence there has been a significant amount of effort in this direction with software libraries such as UMFPACK and CHOLMOD (“Suitesparse,” 2020) for solving linear systems with direct methods and PETSc (“PETSc,” 2020), Trilinos (“Trilinos,” 2020), Eigen (“Eigen,” 2020) and many more to solve linear systems with iterative methods. With Ginkgo, we aim to ensure high performance while not compromising portability. Hence, we provide very efficient low level kernels optimized for different architectures and separate these kernels from the algorithms thereby ensuring extensibility and ease of use.\\ Ginkgo is also a part of the xSDK effort (“xSDK,” 2020) and available as a Spack (Gamblin et al., 2015) package. xSDK aims to provide infrastructure for and interoperability between a collection of related and complementary software elements to foster rapid and efficient development of scientific applications using High Performance Computing. Within this effort, we provide interoperability with application libraries such as deal.ii (Arndt et al., 2019) and mfem (Anderson et al., 2020). Ginkgo provides wrappers within these two libraries so that they can take advantage of the features of Ginkgo},
+}
+
+@Article{Kronqvist2020,
+  author    = {Jan Kronqvist and Ruth Misener},
+  title     = {A disjunctive cut strengthening technique for convex {MINLP}},
+  doi       = {10.1007/s11081-020-09551-6},
+  abstract  = {Generating polyhedral outer approximations and solving mixed-integer linear relaxations remains one of the main approaches for solving convex mixed-integer nonlinear programming (MINLP) problems. There are several algorithms based on this concept, and the efficiency is greatly affected by the tightness of the outer approximation. In this paper, we present a new framework for strengthening cutting planes of nonlinear convex constraints, to obtain tighter outer approximations. The strengthened cuts can give a tighter continuous relaxation and an overall tighter representation of the nonlinear constraints. The cuts are strengthened by analyzing disjunctive structures in the MINLP problem, and we present two types of strengthened cuts. The first type of cut is obtained by reducing the right-hand side value of the original cut, such that it forms the tightest generally valid inequality for a chosen disjunction. The second type of cut effectively uses individual right-hand side values for each term of the disjunction. We prove that both types of cuts are valid and that the second type of cut can dominate both the first type and the original cut. We use the cut strengthening in conjunction with the extended supporting hyperplane algorithm, and numerical results show that the strengthening can significantly reduce both the number of iterations and the time needed to solve convex MINLP problems.},
+  journal   = {Optimization and Engineering},
+  month     = {aug},
+  publisher = {Springer Science and Business Media {LLC}},
+  year      = {2020},
+}
+
+@Article{Tsai2020b,
+  author      = {Yuhsiang Mike Tsai and Terry Cojean and Hartwig Anzt},
+  date        = {2020-08-19},
+  title       = {Evaluating the Performance of NVIDIA's A100 Ampere GPU for Sparse Linear Algebra Computations},
+  eprint      = {2008.08478v1},
+  eprintclass = {cs.MS},
+  eprinttype  = {arXiv},
+  abstract    = {GPU accelerators have become an important backbone for scientific high performance computing, and the performance advances obtained from adopting new GPU hardware are significant. In this paper we take a first look at NVIDIA's newest server line GPU, the A100 architecture part of the Ampere generation. Specifically, we assess its performance for sparse linear algebra operations that form the backbone of many scientific applications and assess the performance improvements over its predecessor.},
+  file        = {:http\://arxiv.org/pdf/2008.08478v1:PDF},
+  keywords    = {cs.MS, cs.PF},
+}
+
+@InCollection{Goebel2020,
+  author    = {Fritz Goebel and Hartwig Anzt and Terry Cojean and Goran Flegar and Enrique S. Quintana-Ort{\'{\i}}},
+  booktitle = {Euro-Par 2020: Parallel Processing},
+  title     = {Multiprecision Block-Jacobi for Iterative Triangular Solves},
+  doi       = {10.1007/978-3-030-57675-2_34},
+  pages     = {546--560},
+  publisher = {Springer International Publishing},
+  abstract  = {Recent research efforts have shown that Jacobi and block-Jacobi relaxation methods can be used as an effective and highly parallel approach for the solution of sparse triangular linear systems arising in the application of ILU-type preconditioners. Simultaneously, a few independent works have focused on designing efficient high performance adaptive-precision block-Jacobi preconditioning (block-diagonal scaling), in the context of the iterative solution of sparse linear systems, on manycore architectures. In this paper, we bridge the gap between relaxation methods based on regular splittings and preconditioners by demonstrating that iterative refinement can be leveraged to construct a relaxation method from the preconditioner. In addition, we exploit this insight to construct a highly-efficient sparse triangular system solver for graphics processors that combines iterative refinement with the block-Jacobi preconditioner available in the Ginkgo library.},
+  year      = {2020},
+}
+
+@InCollection{Gou2020,
+  author    = {Changjiang Gou and Ali Al Zoobi and Anne Benoit and Mathieu Faverge and Loris Marchal and Gr{\'{e}}goire Pichon and Pierre Ramet},
+  booktitle = {Euro-Par 2020: Parallel Processing},
+  title     = {Improving Mapping for Sparse Direct~Solvers},
+  doi       = {10.1007/978-3-030-57675-2_11},
+  pages     = {167--182},
+  publisher = {Springer International Publishing},
+  abstract  = {In order to express parallelism, parallel sparse direct solvers take advantage of the elimination tree to exhibit tree-shaped task graphs, where nodes represent computational tasks and edges represent data dependencies. One of the pre-processing stages of sparse direct solvers consists of mapping computational resources (processors) to these tasks. The objective is to minimize the factorization time by exhibiting good data locality and load balancing. The proportional mapping technique is a widely used approach to solve this resource-allocation problem. It achieves good data locality by assigning the same processors to large parts of the elimination tree. However, it may limit load balancing in some cases. In this paper, we propose a dynamic mapping algorithm based on proportional mapping. This new approach, named Steal, relaxes the data locality criterion to improve load balancing. In order to validate the newly introduced method, we perform extensive experiments on the PaStiX sparse direct solver. It demonstrates that our algorithm enables better static scheduling of the numerical factorization while keeping good data locality.},
+  year      = {2020},
+}
+
+@InCollection{Ahmad2020,
+  author    = {Najeeb Ahmad and Buse Yilmaz and Didem Unat},
+  booktitle = {Euro-Par 2020: Parallel Processing},
+  title     = {A Prediction Framework for Fast Sparse Triangular Solves},
+  doi       = {10.1007/978-3-030-57675-2_33},
+  pages     = {529--545},
+  publisher = {Springer International Publishing},
+  abstract  = {Sparse triangular solve (SpTRSV) is an important linear algebra kernel, finding extensive uses in numerical and scientific computing. The parallel implementation of SpTRSV is a challenging task due to the sequential nature of the steps involved. This makes it, in many cases, one of the most time-consuming operations in an application. Many approaches for efficient SpTRSV on CPU and GPU systems have been proposed in the literature. However, no single implementation or platform (CPU or GPU) gives the fastest solution for all input sparse matrices. In this work, we propose a machine learning-based framework to predict the SpTRSV implementation giving the fastest execution time for a given sparse matrix based on its structural features. The framework is tested with six SpTRSV implementations on a state-of-the-art CPU-GPU machine (Intel Xeon Gold CPU, NVIDIA V100 GPU). Experimental results, with 998 matrices taken from the SuiteSparse Matrix Collection, show the classifier prediction accuracy of 87\% for the fastest SpTRSV algorithm for a given input matrix. Predicted SpTRSV implementations achieve average speedups (harmonic mean) in the range of 1.4--2.7$\times$ against the six SpTRSV implementations used in the evaluation.},
+  year      = {2020},
+}
+
+@Article{Zhang2020f,
+  author      = {Ying Zhang and Zhiqiang Zhao and Zhuo Feng},
+  date        = {2020-08-17},
+  title       = {SF-GRASS: Solver-Free Graph Spectral Sparsification},
+  eprint      = {2008.07633v1},
+  eprintclass = {cs.DS},
+  eprinttype  = {arXiv},
+  abstract    = {Recent spectral graph sparsification techniques have shown promising performance in accelerating many numerical and graph algorithms, such as iterative methods for solving large sparse matrices, spectral partitioning of undirected graphs, vectorless verification of power/thermal grids, representation learning of large graphs, etc. However, prior spectral graph sparsification methods rely on fast Laplacian matrix solvers that are usually challenging to implement in practice. This work, for the first time, introduces a solver-free approach (SF-GRASS) for spectral graph sparsification by leveraging emerging spectral graph coarsening and graph signal processing (GSP) techniques. We introduce a local spectral embedding scheme for efficiently identifying spectrally-critical edges that are key to preserving graph spectral properties, such as the first few Laplacian eigenvalues and eigenvectors. Since the key kernel functions in SF-GRASS can be efficiently implemented using sparse-matrix-vector-multiplications (SpMVs), the proposed spectral approach is simple to implement and inherently parallel friendly. Our extensive experimental results show that the proposed method can produce a hierarchy of high-quality spectral sparsifiers in nearly-linear time for a variety of real-world, large-scale graphs and circuit networks when compared with the prior state-of-the-art spectral method.},
+  file        = {:http\://arxiv.org/pdf/2008.07633v1:PDF},
+  keywords    = {cs.DS, cs.LG, cs.NA, cs.SI, math.NA},
+}
+
+@Article{Ahmadi2020,
+  author      = {Amir Ali Ahmadi and Jeffrey Zhang},
+  date        = {2020-08-14},
+  title       = {Complexity aspects of local minima and related notions},
+  eprint      = {2008.06148v1},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {We consider the notions of (i) critical points, (ii) second-order points, (iii) local minima, and (iv) strict local minima for multivariate polynomials. For each type of point, and as a function of the degree of the polynomial, we study the complexity of deciding (1) if a given point is of that type, and (2) if a polynomial has a point of that type. Our results characterize the complexity of these two questions for all degrees left open by prior literature. Our main contributions reveal that many of these questions turn out to be tractable for cubic polynomials. In particular, we present an efficiently-checkable necessary and sufficient condition for local minimality of a point for a cubic polynomial. We also show that a local minimum of a cubic polynomial can be efficiently found by solving semidefinite programs of size linear in the number of variables. By contrast, we show that it is strongly NP-hard to decide if a cubic polynomial has a critical point. We also prove that the set of second-order points of any cubic polynomial is a spectrahedron, and conversely that any spectrahedron is the projection of the set of second-order points of a cubic polynomial. In our final section, we briefly present a potential application of finding local minima of cubic polynomials to the design of a third-order Newton method.},
+  file        = {:http\://arxiv.org/pdf/2008.06148v1:PDF},
+  keywords    = {math.OC, cs.CC, cs.LG, 90C60 (Primary), 90C22, 90C30, 90C46 (Secondary)},
+}
+
+@Article{Scott2020,
+  author       = {Jennifer Scott and Miroslav Tůma},
+  date         = {2020},
+  journaltitle = {SIAM Journal on Scientific Computing},
+  title        = {A Null-Space Approach for Symmetric Saddle Point Systems With a Non Zero (2,2) Block},
+  eprint       = {RAL-P-2020-003},
+  url          = {https://www2.karlin.mff.cuni.cz/~mirektuma/ps/RAL-P-2020-003.pdf},
+  abstract     = {Null-space methods have long been used to solve large-scale symmetric saddle point systems of equations in which the $k \times k$ $(2, 2)$ block is zero. This paper focuses on the case where the $(2, 2)$ block is non zero. A novel null-space approach is proposed to transform the saddle point system into another symmetric saddle point system of the same order but with a zero $(2, 2)$ block of order at most $2k$. Success of any null-space approach is dependent on the construction of a suitable null-space basis. The not uncommon case of the off-diagonal block being a wide matrix that has far fewer rows than columns and that may be dense is considered. A number of approaches are explored with the aim of balancing stability of the transformed system with sparsity. Linear least squares problems that contain a small number of dense rows arising from practical applications are used to illustrate our ideas and to explore their potential for solving large-scale systems.},
+}
+
+@Article{Malitsky2019,
+  author       = {Yura Malitsky and Konstantin Mishchenko},
+  date         = {2019-10-21},
+  journaltitle = {Proceedings of the 37th International Conference on Machine Learning},
+  title        = {Adaptive Gradient Descent without Descent},
+  eprint       = {1910.09529v2},
+  eprintclass  = {math.OC},
+  eprinttype   = {arXiv},
+  series       = {PLMR 2019},
+  abstract     = {We present a strikingly simple proof that two rules are sufficient to automate gradient descent: 1) don't increase the stepsize too fast and 2) don't overstep the local curvature. No need for functional values, no line search, no information about the function except for the gradients. By following these rules, you get a method adaptive to the local geometry, with convergence guarantees depending only on the smoothness in a neighborhood of a solution. Given that the problem is convex, our method converges even if the global smoothness constant is infinity. As an illustration, it can minimize arbitrary continuously twice-differentiable convex function. We examine its performance on a range of convex and nonconvex problems, including logistic regression and matrix factorization.},
+  file         = {:http\://arxiv.org/pdf/1910.09529v2:PDF},
+  keywords     = {math.OC, cs.LG, cs.NA, math.NA, stat.ML},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
