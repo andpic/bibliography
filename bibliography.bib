@@ -12559,6 +12559,44 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   keywords     = {math.OC, cs.LG, cs.NA, math.NA, stat.ML},
 }
 
+@Article{Huang2020a,
+  author      = {Kevin Huang and Junyu Zhang and Shuzhong Zhang},
+  date        = {2020-08-22},
+  title       = {Cubic Regularized Newton Method for Saddle Point Models: a Global and Local Convergence Analysis},
+  eprint      = {2008.09919v1},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {In this paper, we propose a cubic regularized Newton (CRN) method for solving convex-concave saddle point problems (SPP). At each iteration, a cubic regularized saddle point subproblem is constructed and solved, which provides a search direction for the iterate. With properly chosen stepsizes, the method is shown to converge to the saddle point with global linear and local superlinear convergence rates, if the saddle point function is gradient Lipschitz and strongly-convex-strongly-concave. In the case that the function is merely convex-concave, we propose a homotopy continuation (or path-following) method. Under a Lipschitz-type error bound condition, we present an iteration complexity bound of $\mathcal{O}\left(\ln \left(1/\epsilon\right)\right)$ to reach an $\epsilon$-solution through a homotopy continuation approach, and the iteration complexity bound becomes $\mathcal{O}\left(\left(1/\epsilon\right)^{\frac{1-\theta}{\theta^2}}\right)$ under a H\"{o}lderian-type error bound condition involving a parameter $\theta$ ($0<\theta<1$).},
+  file        = {:http\://arxiv.org/pdf/2008.09919v1:PDF},
+  keywords    = {math.OC},
+}
+
+@Article{Hanzely2020a,
+  author      = {Filip Hanzely},
+  date        = {2020-08-26},
+  title       = {Optimization for Supervised Machine Learning: Randomized Algorithms for Data and Parameters},
+  doi         = {10.25781/KAUST-4F2DH},
+  eprint      = {2008.11824},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {Many key problems in machine learning and data science are routinely modeled as optimization problems and solved via optimization algorithms. With the increase of the volume of data and the size and complexity of the statistical models used to formulate these often ill-conditioned optimization tasks, there is a need for new efficient algorithms able to cope with these challenges. In this thesis, we deal with each of these sources of difficulty in a different way. To efficiently address the big data issue, we develop new methods which in each iteration examine a small random subset of the training data only. To handle the big model issue, we develop methods which in each iteration update a random subset of the model parameters only. Finally, to deal with ill-conditioned problems, we devise methods that incorporate either higher-order information or Nesterov's acceleration/momentum. In all cases, randomness is viewed as a powerful algorithmic tool that we tune, both in theory and in experiments, to achieve the best results. Our algorithms have their primary application in training supervised machine learning models via regularized empirical risk minimization, which is the dominant paradigm for training such models. However, due to their generality, our methods can be applied in many other fields, including but not limited to data science, engineering, scientific computing, and statistics.},
+  file        = {:http\://arxiv.org/pdf/2008.11824v1:PDF},
+  keywords    = {math.OC, cs.LG, cs.NA, math.NA},
+}
+
+@Article{Besta2020,
+  author       = {Maciej Besta and Armon Carigiet and Zur Vonarburg-Shmaria and Kacper Janda and Lukas Gianinazzi and Torsten Hoefler},
+  date         = {2020-08-26},
+  journaltitle = {Proceedings of the ACM/IEEE International Conference on High Performance Computing, Networking, Storage and Analysis, November 2020},
+  title        = {High-Performance Parallel Graph Coloring with Strong Guarantees on Work, Depth, and Quality},
+  eprint       = {2008.11321},
+  eprintclass  = {cs.DS},
+  eprinttype   = {arXiv},
+  abstract     = {We develop the first parallel graph coloring heuristics with strong theoretical guarantees on work and depth and coloring quality. The key idea is to design a relaxation of the vertex degeneracy order, a well-known graph theory concept, and to color vertices in the order dictated by this relaxation. This introduces a tunable amount of parallelism into the degeneracy ordering that is otherwise hard to parallelize. This simple idea enables significant benefits in several key aspects of graph coloring. For example, one of our algorithms ensures polylogarithmic depth and a bound on the number of used colors that is superior to all other parallelizable schemes, while maintaining work-efficiency. In addition to provable guarantees, the developed algorithms have competitive run-times for several real-world graphs, while almost always providing superior coloring quality. Our degeneracy ordering relaxation is of separate interest for algorithms outside the context of coloring.},
+  file         = {:http\://arxiv.org/pdf/2008.11321v1:PDF},
+  keywords     = {cs.DS, cs.DC, cs.PF},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
