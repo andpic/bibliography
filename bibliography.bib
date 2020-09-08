@@ -12597,6 +12597,48 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   keywords     = {cs.DS, cs.DC, cs.PF},
 }
 
+@Article{Caliciotti2019,
+  author   = {Andrea Caliciotti and Giovanni Fasano and Florian Potra and Massimo Roma},
+  date     = {2019},
+  title    = {Issues on the use of a modified {Bunch} and {Kaufmandecomposition} for large scale {Newton's} equation},
+  url      = {https://arca.unive.it/retrieve/handle/10278/3729359/205899/CFPR-final2019_accepted.pdf},
+  abstract = {In this work, we deal with Truncated Newton methods for solving large scale (possibly nonconvex) unconstrained optimization problems. In particular, we consider the use of a modified Bunch and Kaufman factorization for solving the Newton equation, at each (outer) iteration of the method. The Bunch and Kaufman factorization of a tridiagonal matrix is an effective and stable matrix decomposition, which is well exploited in the widely adopted SYMMBK [2, 5, 6, 19, 20] routine. It can be used to provide conjugate directions, both in the case of $1 \times 1$ and $2 \times 2$ pivoting steps. The main drawback is that the resulting solution of Newton's equation might not be gradient--related, in the case the objective function is nonconvex. Here we first focus on some theoretical properties, in order to ensure that at each iteration of the Truncated Newton method, the search direction obtained by using an adapted Bunch and Kaufman factorization is gradient--related. This allows to perform a standard Armijo-type linesearch procedure, using a bounded descent direction. Furthermore, the results of an extended numerical experience using large scale CUTEst problems is reported, showing the reliability and the efficiency of the proposed approach, both on convex and nonconvex problems.},
+}
+
+@Article{Amaral2020,
+  author      = {V. S. Amaral and R. Andreani and E. G. Birgin and D. S. Marcondes and J. M. Martínez},
+  date        = {2020-09-03},
+  title       = {On complexity and convergence of high-order coordinate descent algorithms},
+  eprint      = {2009.01811},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {Coordinate descent methods with high-order regularized models for box-constrained minimization are introduced. High-order stationarity asymptotic convergence and first-order stationarity worst-case evaluation complexity bounds are established. The computer work that is necessary for obtaining first-order $\varepsilon$-stationarity with respect to the variables of each coordinate-descent block is $O(\varepsilon^{-(p+1)/p})$ whereas the computer work for getting first-order $\varepsilon$-stationarity with respect to all the variables simultaneously is $O(\varepsilon^{-(p+1)})$. Numerical examples involving multidimensional scaling problems are presented. The numerical performance of the methods is enhanced by means of coordinate-descent strategies for choosing initial points.},
+  file        = {:http\://arxiv.org/pdf/2009.01811v1:PDF},
+  keywords    = {math.OC, 90C30, 65K05, 49M37, 90C60, 68Q25},
+}
+
+@Article{Schmidt2020,
+  author      = {Drew Schmidt},
+  date        = {2020-09-02},
+  title       = {A Survey of Singular Value Decomposition Methods for Distributed Tall/Skinny Data},
+  eprint      = {2009.00761},
+  eprintclass = {cs.MS},
+  eprinttype  = {arXiv},
+  abstract    = {The Singular Value Decomposition (SVD) is one of the most important matrix factorizations, enjoying a wide variety of applications across numerous application domains. In statistics and data analysis, the common applications of SVD such as Principal Components Analysis (PCA) and linear regression. Usually these applications arise on data that has far more rows than columns, so-called "tall/skinny" matrices. In the big data analytics context, this may take the form of hundreds of millions to billions of rows with only a few hundred columns. There is a need, therefore, for fast, accurate, and scalable tall/skinny SVD implementations which can fully utilize modern computing resources. To that end, we present a survey of three different algorithms for computing the SVD for these kinds of tall/skinny data layouts using MPI for communication. We contextualize these with common big data analytics techniques, principally PCA. Finally, we present both CPU and GPU timing results from the Summit supercomputer, and discuss possible alternative approaches.},
+  file        = {:http\://arxiv.org/pdf/2009.00761v1:PDF},
+  keywords    = {cs.MS, stat.CO},
+}
+
+@TechReport{Devine2020,
+  author      = {Karen Devine and Grey Ballard},
+  date        = {2020},
+  institution = {Sandia National Laboratories},
+  title       = {{GentenMPI}: Distributed Memory Sparse Tensor Decomposition},
+  eprint      = {SAND2020-8515},
+  url         = {https://www.osti.gov/servlets/purl/1656940},
+  abstract    = {GentenMPl is a toolkit of sparse canonical polyadic (CP) tensor decomposition algorithms that is designed to run effectively on distributed-memory high-performance computers. Its use of distributed-memory parallelism enables it to efficiently decompose tensors that are too large for a single compute node's memory. GentenMPl leverages Sandia's decades-long investment in the Trilinos solver framework for much of its parallel-computation capability. Trilinos contains numerical algorithms and linear algebra classes that have been optimized for parallel simulation of complex physical phenomena. This work applies these tools to the data science problem of sparse tensor decomposition. In this report, we describe the use of Trilinos in GentenMPl, extensions needed for sparse tensor decomposition, and implementations of the CP-ALS (CP via alternating least squares [4, 7]) and GCP-SGD (generalized CP via stochastic gradient descent [11, 12, 17]) sparse tensor decomposition algorithms. We show that GentenMPl can decompose sparse tensors of extreme size, e.g., a 12.6-terabyte tensor on 8192 computer cores. We demonstrate that the Trilinos backbone provides good strong and weak scaling of the tensor decomposition algorithms.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
