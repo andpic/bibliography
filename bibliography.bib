@@ -12639,6 +12639,52 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   abstract    = {GentenMPl is a toolkit of sparse canonical polyadic (CP) tensor decomposition algorithms that is designed to run effectively on distributed-memory high-performance computers. Its use of distributed-memory parallelism enables it to efficiently decompose tensors that are too large for a single compute node's memory. GentenMPl leverages Sandia's decades-long investment in the Trilinos solver framework for much of its parallel-computation capability. Trilinos contains numerical algorithms and linear algebra classes that have been optimized for parallel simulation of complex physical phenomena. This work applies these tools to the data science problem of sparse tensor decomposition. In this report, we describe the use of Trilinos in GentenMPl, extensions needed for sparse tensor decomposition, and implementations of the CP-ALS (CP via alternating least squares [4, 7]) and GCP-SGD (generalized CP via stochastic gradient descent [11, 12, 17]) sparse tensor decomposition algorithms. We show that GentenMPl can decompose sparse tensors of extreme size, e.g., a 12.6-terabyte tensor on 8192 computer cores. We demonstrate that the Trilinos backbone provides good strong and weak scaling of the tensor decomposition algorithms.},
 }
 
+@Article{Higham2020b,
+  author     = {Nicholas J. Higham and Xiaobo Liu},
+  date       = {2020},
+  title      = {A Multiprecision Derivative-Free Schur-Parlett Algorithm for Computing Matrix Functions},
+  eprint     = {MIMS EPrint:2020.19},
+  eprinttype = {MIMS EPrint},
+  url        = {http://eprints.maths.manchester.ac.uk/2781/1/paper.pdf},
+  abstract   = {The Schur--Parlett algorithm, implemented in MATLAB as $funm$, computes a function $f(A)$ of an $n \times n$ matrix $A$ by using the Schur decomposition and a block recurrence of Parlett. The algorithm requires the ability to compute $f$ and its derivatives, and it requires that $f$ has a Taylor series expansion with a suitably large radius of convergence. We develop a version of the Schur--Parlett algorithm that requires only function values and uses higher precision arithmetic to evaluate $f$ on the diagonal blocks of order greater than $2$ (if there are any) of the reordered and blocked Schur form. The key idea is to compute by diagonalization the function of a small random diagonal perturbation of each triangular block, where the perturbation ensures that diagonalization will succeed. This multiprecision Schur--Parlett algorithm is applicable to arbitrary functions $f$ and, like the original Schur--Parlett algorithm, it generally behaves in a numerically stable fashion. Our algorithm is inspired by Davies's randomized approximate diagonalization method, but we explain why that is not a reliable numerical method for computing matrix functions. We apply our algorithm to the matrix Mittag--Leffler function and show that it yields results of accuracy similar to, and in some cases much greater than, the state of the art algorithm for this function. The algorithm will be useful for evaluating any matrix function for which the derivatives of the underlying function are not readily available or accurately computable.},
+}
+
+@InCollection{Georgakoudis2020,
+  author    = {Giorgis Georgakoudis and Johannes Doerfert and Ignacio Laguna and Thomas R. W. Scogland},
+  booktitle = {{OpenMP}: Portable Multi-Level Parallelism on Modern Systems},
+  title     = {{FAROS}: A Framework to Analyze {OpenMP} Compilation Through Benchmarking and Compiler Optimization Analysis},
+  doi       = {10.1007/978-3-030-58144-2_1},
+  pages     = {3--17},
+  publisher = {Springer International Publishing},
+  abstract  = {Compilers optimize OpenMP programs differently than their serial elision. Early outlining of parallel regions and invocation of parallel code via OpenMP runtime functions are two of the most profound differences. Understanding the interplay between compiler optimizations, OpenMP compilation, and application performance is hard and usually requires specialized benchmarks and compilation analysis tools.\\
+To this end, we present FAROS, an extensible framework to automate and structure the analysis of compiler optimization of OpenMP programs. FAROS provides a generic configuration interface to profile and analyze OpenMP applications with their native build configurations. Using FAROS on a set of 39 OpenMP programs, including HPC applications and kernels, we show that OpenMP compilation hinders optimization for the majority of programs. Comparing single-threaded OpenMP execution to its sequential counterpart, we observed slowdowns as much as 135.23\%. In some cases, however, OpenMP compilation speeds up execution as much as 25.48\% when OpenMP semantics help compiler optimization. Following analysis on compiler optimization reports enables us to pinpoint the reasons without in-depth knowledge of the compiler. The information can be used to improve compilers and also to bring performance on par through manual code refactoring.},
+  year      = {2020},
+}
+
+@Article{Wilkinson2020,
+  author      = {Leland Wilkinson and Hengrui Luo},
+  date        = {2020-09-08},
+  title       = {A Distance-preserving Matrix Sketch},
+  eprint      = {2009.03979},
+  eprintclass = {cs.HC},
+  eprinttype  = {arXiv},
+  abstract    = {Visualizing very large matrices involves many formidable problems. Various popular solutions to these problems involve sampling, clustering, projection, or feature selection to reduce the size and complexity of the original task. An important aspect of these methods is how to preserve relative distances between points in the higher-dimensional space after reducing rows and columns to fit in a lower dimensional space. This aspect is important because conclusions based on faulty visual reasoning can be harmful. Judging dissimilar points as similar or similar points as dissimilar on the basis of a visualization can lead to false conclusions. To ameliorate this bias and to make visualizations of very large datasets feasible, we introduce a new algorithm that selects a subset of rows and columns of a rectangular matrix. This selection is designed to preserve relative distances as closely as possible. We compare our matrix sketch to more traditional alternatives on a variety of artificial and real datasets.},
+  file        = {:http\://arxiv.org/pdf/2009.03979v1:PDF},
+  keywords    = {cs.HC, cs.LG, stat.ML},
+}
+
+@Article{Marin2020,
+  author    = {Oana Marin and Emil Constantinescu and Barry Smith},
+  title     = {A scalable matrix-free spectral element approach for unsteady {PDE} constrainedoptimization using {PETSc}/{TAO}},
+  doi       = {10.1016/j.jocs.2020.101207},
+  pages     = {101207},
+  abstract  = {We provide a new approach for the efficient matrix-free application of the transpose of the Jacobian for the spectral element method for the adjoint-based solution of partial differential equation (PDE) constrained optimization. This results in optimizations of nonlinear PDEs using explicit integrators where the integration of the adjoint problem is not more expensive than the forward simulation. Solving PDE constrained optimization problems entails combining expertise from multiple areas, including simulation, computation of derivatives, and optimization. The Portable, Extensible Toolkit for Scientific computation (PETSc) together with its companion package, the Toolkit for Advanced Optimization (TAO), is an integrated numerical software library that contains an algorithmic/software stack for solving linear systems, nonlinear systems, ordinary differential equations, differential algebraic equations, and large-scale optimization problems and, as such, is an ideal tool for performing PDE-constrained optimization. This paper describes an efficient approach in which the software stack provided by PETSc/TAO can be used for large-scale nonlinear time-dependent problems. While time integration can involve a range of high-order methods, both implicit and explicit. The PDE-constrained optimization algorithm used is gradient-based and seamlessly integrated with the simulation of the physical problem.},
+  journal   = {Journal of Computational Science},
+  month     = {sep},
+  publisher = {Elsevier {BV}},
+  year      = {2020},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
