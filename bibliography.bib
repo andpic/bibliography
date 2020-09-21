@@ -12381,7 +12381,7 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
 }
 
 @TechReport{Archibald2020,
-  author      = {Rick Archibald and Edmond Chow and Eduardo D'Azevedo and Jack Dongarra and and Markus Eisenbach and Rocco Febbo and Florent Lopez and Daniel Nichols and Stanimire Tomov and Kwai Wong and Junqi Yin},
+  author      = {Rick Archibald and Edmond Chow and Eduardo D'Azevedo and Jack Dongarra and Markus Eisenbach and Rocco Febbo and Florent Lopez and Daniel Nichols and Stanimire Tomov and Kwai Wong and Junqi Yin},
   date        = {2020},
   institution = {University of Tennessee},
   title       = {Integrating Deep Learning in Domain Sciencesat Exascale},
@@ -12461,7 +12461,7 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   doi       = {10.1007/s11081-020-09551-6},
   abstract  = {Generating polyhedral outer approximations and solving mixed-integer linear relaxations remains one of the main approaches for solving convex mixed-integer nonlinear programming (MINLP) problems. There are several algorithms based on this concept, and the efficiency is greatly affected by the tightness of the outer approximation. In this paper, we present a new framework for strengthening cutting planes of nonlinear convex constraints, to obtain tighter outer approximations. The strengthened cuts can give a tighter continuous relaxation and an overall tighter representation of the nonlinear constraints. The cuts are strengthened by analyzing disjunctive structures in the MINLP problem, and we present two types of strengthened cuts. The first type of cut is obtained by reducing the right-hand side value of the original cut, such that it forms the tightest generally valid inequality for a chosen disjunction. The second type of cut effectively uses individual right-hand side values for each term of the disjunction. We prove that both types of cuts are valid and that the second type of cut can dominate both the first type and the original cut. We use the cut strengthening in conjunction with the extended supporting hyperplane algorithm, and numerical results show that the strengthening can significantly reduce both the number of iterations and the time needed to solve convex MINLP problems.},
   journal   = {Optimization and Engineering},
-  month     = {aug},
+  month     = {8},
   publisher = {Springer Science and Business Media {LLC}},
   year      = {2020},
 }
@@ -12680,7 +12680,104 @@ To this end, we present FAROS, an extensible framework to automate and structure
   pages     = {101207},
   abstract  = {We provide a new approach for the efficient matrix-free application of the transpose of the Jacobian for the spectral element method for the adjoint-based solution of partial differential equation (PDE) constrained optimization. This results in optimizations of nonlinear PDEs using explicit integrators where the integration of the adjoint problem is not more expensive than the forward simulation. Solving PDE constrained optimization problems entails combining expertise from multiple areas, including simulation, computation of derivatives, and optimization. The Portable, Extensible Toolkit for Scientific computation (PETSc) together with its companion package, the Toolkit for Advanced Optimization (TAO), is an integrated numerical software library that contains an algorithmic/software stack for solving linear systems, nonlinear systems, ordinary differential equations, differential algebraic equations, and large-scale optimization problems and, as such, is an ideal tool for performing PDE-constrained optimization. This paper describes an efficient approach in which the software stack provided by PETSc/TAO can be used for large-scale nonlinear time-dependent problems. While time integration can involve a range of high-order methods, both implicit and explicit. The PDE-constrained optimization algorithm used is gradient-based and seamlessly integrated with the simulation of the physical problem.},
   journal   = {Journal of Computational Science},
-  month     = {sep},
+  month     = {9},
+  publisher = {Elsevier {BV}},
+  year      = {2020},
+}
+
+@InProceedings{Gao2020c,
+  author    = {G. Gao and Y. Wang and J. Vink and T. Wells and F. Saaf},
+  booktitle = {Conference Proceedings, ECMOR},
+  date      = {2020},
+  title     = {Distributed Quasi-Newton Derivative-Free Optimization Method for Optimization Problems with Multiple Local Optima},
+  pages     = {1--22},
+  series    = {ECMOR XVII},
+  url       = {https://www.earthdoc.org/content/papers/10.3997/2214-4609.202035131},
+  abstract  = {For highly nonlinear problems, the objective function f(x) may have multiple local optima and it is desired to locate all of them. Analytical or adjoint-based derivatives may not be available for most real optimization problems, especially, when responses of a system are predicted by numerical simulations. The distributed-Gauss-Newton (DGN) optimization method performs quite efficiently and robustly for history-matching problems with multiple best matches. However, this method is not applicable for generic optimization problems, e.g., life-cycle production optimization or well location optimization.\\
+In this paper, we generalized the distribution techniques of the DGN optimization method and developed a new distributed quasi-Newton (DQN) optimization method that is applicable to generic optimization problems. It can handle generalized objective functions $F(x,y(x))=f(x)$ with both explicit variables x and implicit variables, i.e., simulated responses, $y(x)$. The partial derivatives of $F(x,y)$ with respect to both x and y can be computed analytically, whereas the partial derivatives of $y(x)$ with respect to x (sensitivity matrix) is estimated by applying the same efficient information sharing mechanism implemented in the DGN optimization method. An ensemble of quasi-Newton optimization tasks is distributed among multiple high-performance-computing (HPC) cluster nodes. The simulation results generated from one optimization task are shared with others by updating a common set of training data points, which records simulated responses of all simulation jobs. The sensitivity matrix at the current best solution of each optimization task is approximated by either the linear-interpolation (LI) method or the support-vector-regression (SVR) method, using some or all training data points. The gradient of the objective function is then analytically computed using its partial derivatives with respect to x and y and the estimated sensitivities of y with respect to $x$. The Hessian is updated using the quasi-Newton formulation. A new search point for each distributed optimization task is generated by solving a quasi-Newton trust-region subproblem for the next iteration.\\
+The proposed DQN method is first validated on a synthetic history matching problem and its performance is found to be comparable with the DGN optimizer. Then, the DQN method is tested on different optimization problems. For all test problems, the DQN method can find multiple optima of the objective function with reasonably small numbers of iterations (30 to 50). Compared to sequential model-based derivative-free optimization methods, the DQN method can reduce the computational cost, in terms of the number of simulations required for convergence, by a factor of 3 to 10.},
+}
+
+@Article{Awan2020,
+  author    = {Muaaz G. Awan and Jack Deslippe and Aydin Buluc and Oguz Selvitopi and Steven Hofmeyr and Leonid Oliker and Katherine Yelick},
+  title     = {{ADEPT}: a domain independent sequence alignment strategy for gpu architectures},
+  doi       = {10.1186/s12859-020-03720-1},
+  number    = {1},
+  volume    = {21},
+  abstract  = {Bioinformatic workflows frequently make use of automated genome assembly and protein clustering tools. At the core of most of these tools, a significant portion of execution time is spent in determining optimal local alignment between two sequences. This task is performed with the Smith-Waterman algorithm, which is a dynamic programming based method. With the advent of modern sequencing technologies and increasing size of both genome and protein databases, a need for faster Smith-Waterman implementations has emerged. Multiple SIMD strategies for the Smith-Waterman algorithm are available for CPUs. However, with the move of HPC facilities towards accelerator based architectures, a need for an efficient GPU accelerated strategy has emerged. Existing GPU based strategies have either been optimized for a specific type of characters (Nucleotides or Amino Acids) or for only a handful of application use-cases.},
+  journal   = {{BMC} Bioinformatics},
+  month     = {9},
+  publisher = {Springer Science and Business Media {LLC}},
+  year      = {2020},
+}
+
+@InCollection{Tupitsa2020,
+  author    = {Nazarii Tupitsa and Alexander Gasnikov and Pavel Dvurechensky and Sergey Guminov},
+  booktitle = {Mathematical Optimization Theory and Operations Research},
+  title     = {Strongly Convex Optimization for the Dual Formulation of Optimal Transport},
+  doi       = {10.1007/978-3-030-58657-7_17},
+  pages     = {192--204},
+  publisher = {Springer International Publishing},
+  abstract  = {In this paper we experimentally check a hypothesis, that dual problem to discrete entropy regularized optimal transport problem possesses strong convexity on a certain compact set. We present a numerical estimation technique of parameter of strong convexity and show that such an estimate increases the performance of an accelerated alternating minimization algorithm for strongly convex functions applied to the considered problem.},
+  year      = {2020},
+}
+
+@Article{Brayford2020,
+  author      = {David Brayford and Christoph Bernau and Wolfram Hesse and Carla Guillen},
+  date        = {2020-09-13},
+  title       = {Analyzing Performance Properties Collected by the PerSyst Scalable HPC Monitoring Tool},
+  eprint      = {2009.06061},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {The ability to understand how a scientific application is executed on a large HPC system is of great importance in allocating resources within the HPC data center. In this paper, we describe how we used system performance data to identify: execution patterns, possible code optimizations and improvements to the system monitoring. We also identify candidates for employing machine learning techniques to predict the performance of similar scientific codes.},
+  file        = {:http\://arxiv.org/pdf/2009.06061v1:PDF},
+  keywords    = {cs.DC},
+}
+
+@Article{Xin2020,
+  author      = {Ran Xin and Shi Pu and Angelia Nedić and Usman A. Khan},
+  date        = {2020-09-12},
+  title       = {A general framework for decentralized optimization with first-order methods},
+  eprint      = {2009.05837},
+  eprintclass = {cs.LG},
+  eprinttype  = {arXiv},
+  abstract    = {Decentralized optimization to minimize a finite sum of functions over a network of nodes has been a significant focus within control and signal processing research due to its natural relevance to optimal control and signal estimation problems. More recently, the emergence of sophisticated computing and large-scale data science needs have led to a resurgence of activity in this area. In this article, we discuss decentralized first-order gradient methods, which have found tremendous success in control, signal processing, and machine learning problems, where such methods, due to their simplicity, serve as the first method of choice for many complex inference and training tasks. In particular, we provide a general framework of decentralized first-order methods that is applicable to undirected and directed communication networks alike, and show that much of the existing work on optimization and consensus can be related explicitly to this framework. We further extend the discussion to decentralized stochastic first-order methods that rely on stochastic gradients at each node and describe how local variance reduction schemes, previously shown to have promise in the centralized settings, are able to improve the performance of decentralized methods when combined with what is known as gradient tracking. We motivate and demonstrate the effectiveness of the corresponding methods in the context of machine learning and signal processing problems that arise in decentralized environments.},
+  file        = {:http\://arxiv.org/pdf/2009.05837v1:PDF},
+  keywords    = {cs.LG, cs.MA, cs.SY, eess.SY, math.OC, stat.ML},
+}
+
+@Article{Pi2020,
+  author    = {J. Pi and Honggang Wang and Panos M. Pardalos},
+  title     = {A Dual Reformulation and Solution Framework for Regularized Convex Clustering Problems},
+  doi       = {10.1016/j.ejor.2020.09.010},
+  abstract  = {Clustering techniques are powerful tools commonly used in statistical learning and data analytics. Most of the past research formulates clustering tasks as a non-convex problem, where a global optimum often cannot be found. Recent studies show that hierarchical clustering and k-means clustering can be relaxed and analyzed as a convex problem. Moreover, sparse convex clustering algorithms are proposed to extend the convex clustering framework to high-dimensional space by introducing an adaptive group-Lasso penalty term. Due to the non-smoothness nature of the associated objective functions, there are still no efficient fast-convergent algorithms for clustering problems even with convexity. In this paper, we first review the structure of convex clustering problems and prove the differentiability of their dual problems. We then show that such reformulated dual problems can be efficiently solved by the accelerated first-order methods with the feasibility projection. Furthermore, we present a general framework for convex clustering with regularization terms and discuss a specific implementation of this framework using $L_{1,1}$-norm. We also derive the dual form for the regularized convex clustering problems and show that it can be efficiently solved by embedding a projection operator and a proximal operator in the accelerated gradient method. Finally, we compare our approach with several other co-clustering algorithms using a number of example clustering problems. Numerical results show that our models and solution methods outperform all the compared algorithms for both convex clustering and convex co-clustering.},
+  journal   = {European Journal of Operational Research},
+  month     = {9},
+  publisher = {Elsevier {BV}},
+  year      = {2020},
+}
+
+@Article{Gusmeroli2020,
+  author      = {Nicolò Gusmeroli and Timotej Hrga and Borut Lužar and Janez Povh and Melanie Siebenhofer and Angelika Wiegele},
+  date        = {2020-09-14},
+  title       = {BiqBin: a parallel branch-and-bound solver for binary quadratic problems with linear constraints},
+  eprint      = {2009.06240},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {We present BiqBin, an exact solver for linearly constrained binary quadratic problems. Our approach is based on an exact penalty method to first efficiently transform the original problem into an instance of Max-Cut, and then to solve the Max-Cut problem by a branch-and-bound algorithm. All the main ingredients are carefully developed using new semidefinite programming relaxations obtained by strengthening the existing relaxations with a set of hypermetric inequalities, applying the bundle method as the bounding routine and using new strategies for exploring the branch-and-bound tree. Furthermore, an efficient C implementation of a sequential and a parallel branch-and-bound algorithm is presented. The latter is based on a load coordinator-worker scheme using MPI for multi-node parallelization and is evaluated on a high-performance computer. The new solver is benchmarked against BiqCrunch, GUROBI, and SCIP on four families of (linearly constrained) binary quadratic problems. Numerical results demonstrate that BiqBin is a highly competitive solver. The serial version outperforms the other three solvers on the majority of the benchmark instances. We also evaluate the parallel solver and show that it has good scaling properties. The general audience can use it as an on-line service available at http://www.biqbin.eu.},
+  file        = {:http\://arxiv.org/pdf/2009.06240v1:PDF},
+  keywords    = {math.OC},
+}
+
+@Article{Spiteri2020,
+  author    = {Pierre Spiteri},
+  title     = {Parallel asynchronous algorithms: A survey},
+  doi       = {10.1016/j.advengsoft.2020.102896},
+  pages     = {102896},
+  volume    = {149},
+  abstract  = {This paper deals with a synthetic presentation of parallel iterative asynchronous algorithms and their extensions for the solution of large sparse linear or pseudo-linear algebraic systems eventually constrained. The behavior of these iterative parallel asynchronous algorithms is studied by three distinct methods : contraction property, partial ordering property linked to the discrete maximum principle and nested sets; the link between these three kinds of analysis is presented. Stopping tests of the iterations are presented both from computer science and from numerical analysis approach including in this last case approximate contraction property, partial ordering property linked to the discrete maximum principle and nested sets. The principle of implementation of these parallel asynchronous iterative methods is described for subdomain method without overlapping and for subdomain method with overlapping; the use of load balancing approach for asynchronous parallel algorithms is also discussed. Various applications modelled by linear equations or pseudo linear equations and solved by such parallel algorithms are presented as well as the uses of these methods in computer security and Boolean calculation. The efficiency of parallel iterative asynchronous algorithms is also discussed.},
+  journal   = {Advances in Engineering Software},
+  month     = {11},
   publisher = {Elsevier {BV}},
   year      = {2020},
 }
