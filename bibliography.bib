@@ -12864,6 +12864,114 @@ The proposed DQN method is first validated on a synthetic history matching probl
   abstract   = {It is well established that mixed precision algorithms that factorize a matrix at a precision lower than the working precision can reduce the execution time and the energy consumption of parallel solvers for dense linear systems. Much less is known about the efficiency of mixed precision parallel algorithms for sparse linear systems, and existing work focuses on single core experiments. We evaluate the benefits of using single precision arithmetic in solving a double precision sparse linear systems using multiple cores, focusing on the key components of LU factorization and matrix–vector products. We find that single precision sparse LU factorization is prone to a severe loss of performance due to the intrusion of subnormal numbers. We identify a mechanism that allows cascading fill-ins to generate subnormal numbers and show that automatically flushing subnormals to zero avoids the performance penalties. Our results show that the anticipated speedup of 2 over a double precision LU factorization is obtained only for the very largest of our test problems. For iterative solvers, we find that for the majority of the matrices computing or applying incomplete factorization preconditioners in single precision does not present sufficient performance benefits to justify the loss of accuracy compared with the use of double precision. We also find that using single precision for the matrix–vector product kernels provides an average speedup of 1.5 over double precision kernels, but new mixed precision algorithms are needed to exploit this benefit without losing the performance gain in the process of refining the solution to double precision accuracy.},
 }
 
+@Article{Montoison2020,
+  author      = {Alexis Montoison and Dominique Orban},
+  date        = {2020-08-28},
+  title       = {{TriCG} and {TriMR}: Two Iterative Methods for Symmetric Quasi-Definite Systems},
+  doi         = {10.13140/RG.2.2.12344.16645},
+  eprint      = {2008.12863},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {We introduce iterative methods named TriCG and TriMR for solving symmetric quasi-definite systems based on the orthogonal tridiagonalization process proposed by Saunders, Simon and Yip in 1988. TriCG and TriMR are tantamount to preconditioned block-CG and block-MINRES with two right-hand sides in which the two approximate solutions are summed at each iteration, but require less storage and work per iteration. We evaluate the performance of TriCG and TriMR on linear systems generated from the SuiteSparse Matrix Collection and from discretized and stablized Stokes equations. We compare TriCG and TriMR with SYMMLQ and MINRES, the recommended Krylov methods for symmetric and indefinite systems. In all our experiments, TriCG and TriMR terminate earlier than SYMMLQ and MINRES on a residual-based stopping condition with an improvement of up to 50\% in terms of number of iterations.},
+  file        = {:http\://arxiv.org/pdf/2008.12863v1:PDF},
+  keywords    = {math.NA, cs.MS, cs.NA, math.OC, 15A06, 65F10, 65F08, 65F22, 65F25, 65F35, 65F50, 90C06, 90C90},
+}
+
+@Article{Yasar2020a,
+  author      = {Abdurrahman Yaşar and Sivasankaran Rajamanickam and Jonathan Berry and {\"U}mit V. Çatalyürek},
+  date        = {2020-09-25},
+  title       = {A Block-Based Triangle Counting Algorithm on Heterogeneous Environments},
+  eprint      = {2009.12457},
+  eprintclass = {cs.DS},
+  eprinttype  = {arXiv},
+  abstract    = {Triangle counting is a fundamental building block in graph algorithms. In this paper, we propose a block-based triangle counting algorithm to reduce data movement during both sequential and parallel execution. Our block-based formulation makes the algorithm naturally suitable for heterogeneous architectures. The problem of partitioning the adjacency matrix of a graph is well-studied. Our task decomposition goes one step further: it partitions the set of triangles in the graph. By streaming these small tasks to compute resources, we can solve problems that do not fit on a device. We demonstrate the effectiveness of our approach by providing an implementation on a compute node with multiple sockets, cores and GPUs. The current state-of-the-art in triangle enumeration processes the Friendster graph in 2.1 seconds, not including data copy time between CPU and GPU. Using that metric, our approach is 20 percent faster. When copy times are included, our algorithm takes 3.2 seconds. This is 5.6 times faster than the fastest published CPU-only time.},
+  file        = {:http\://arxiv.org/pdf/2009.12457v1:PDF},
+  keywords    = {cs.DS},
+}
+
+@InProceedings{DomenechAsensi2020,
+  author    = {Gines Domenech-Asensi and Tom J. Kazmierski},
+  booktitle = {Proceedings of the 2020 {IEEE} International Symposium on Circuits and Systems},
+  title     = {Stability and Efficiency of Explicit Integration in Interconnect Analysis on {GPUs}},
+  doi       = {10.1109/iscas45731.2020.9181157},
+  publisher = {{IEEE}},
+  series    = {ISCAS 2020},
+  abstract  = {This paper presents a new high-performance technique to parallelise numeric integration of large VLSI interconnect analog models on a general purpose GPU. The technique is based on the combination of space-state formulation with an explicit integration method based on the Adams-Bashforth second order formula. The paper studies the stability of the variable step explicit method and proposes a technique to guarantee integration stability specifically for interconnect systems. Although explicit methods require smaller integration steps compared to those of the traditional implicit techniques, they avoid the complex calculations inherent to implicit integration. The proposed approach is demonstrated using an RC VLSI interconnect model and results are compared to those achieved by Ngspice, a state-of-the-art implicit integration solver, implemented on the same parallel hardware. The results show that the speed-up of the parallelised explicit solution reaches one order of magnitude for large systems and is increasing with the circuit size.},
+  month     = {10},
+  year      = {2020},
+}
+
+@Article{Aliaga2020,
+  author      = {José I. Aliaga and Hartwig Anzt and Thomas Grützmacher and Enrique S. Quintana-Ortí and Andrés E. Tomás},
+  date        = {2020-09-25},
+  title       = {Compressed Basis GMRES on High Performance GPUs},
+  eprint      = {2009.12101},
+  eprintclass = {cs.MS},
+  eprinttype  = {arXiv},
+  abstract    = {Krylov methods provide a fast and highly parallel numerical tool for the iterative solution of many large-scale sparse linear systems. To a large extent, the performance of practical realizations of these methods is constrained by the communication bandwidth in all current computer architectures, motivating the recent investigation of sophisticated techniques to avoid, reduce, and/or hide the message-passing costs (in distributed platforms) and the memory accesses (in all architectures). This paper introduces a new communication-reduction strategy for the (Krylov) GMRES solver that advocates for decoupling the storage format (i.e., the data representation in memory) of the orthogonal basis from the arithmetic precision that is employed during the operations with that basis. Given that the execution time of the GMRES solver is largely determined by the memory access, the datatype transforms can be mostly hidden, resulting in the acceleration of the iterative step via a lower volume of bits being retrieved from memory. Together with the special properties of the orthonormal basis (whose elements are all bounded by 1), this paves the road toward the aggressive customization of the storage format, which includes some floating point as well as fixed point formats with little impact on the convergence of the iterative process. We develop a high performance implementation of the "compressed basis GMRES" solver in the Ginkgo sparse linear algebra library and using a large set of test problems from the SuiteSparse matrix collection we demonstrate robustness and performance advantages on a modern NVIDIA V100 GPU of up to 50\% over the standard GMRES solver that stores all data in IEEE double precision.},
+  file        = {:http\://arxiv.org/pdf/2009.12101v1:PDF},
+  keywords    = {cs.MS},
+}
+
+@Article{Facca2020,
+  author      = {Enrico Facca and Michele Benzi},
+  date        = {2020-09-28},
+  title       = {Fast Iterative Solution of the Optimal Transport Problem on Graphs},
+  eprint      = {2009.13478},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {In this paper, we address the numerical solution of the Optimal Transport Problem on undirected weighted graphs, taking the shortest path distance as transport cost. The optimal solution is obtained from the long-time limit of the gradient descent dynamics. Among different time stepping procedures for the discretization of this dynamics, a backward Euler time stepping scheme combined with the inexact Newton-Raphson method results in a robust and accurate approach for the solution of the Optimal Transport Problem on graphs. It is found experimentally that the algorithm requires solving between $\mathcal{O}(1)$ and $\mathcal{O}(M^{0.36})$ linear systems involving weighted Laplacian matrices, where $M$ is the number of edges. These linear systems are solved via algebraic multigrid methods, resulting in an efficient solver for the Optimal Transport Problem on graphs.},
+  file        = {:http\://arxiv.org/pdf/2009.13478v1:PDF},
+  keywords    = {math.NA, cs.NA},
+}
+
+@Article{Roy2020,
+  author      = {Abhishek Roy and Krishnakumar Balasubramanian and Saeed Ghadimi and Prasant Mohapatra},
+  date        = {2020-09-28},
+  title       = {Escaping Saddle-Points Faster under Interpolation-like Conditions},
+  eprint      = {2009.13016},
+  eprintclass = {stat.ML},
+  eprinttype  = {arXiv},
+  abstract    = {In this paper, we show that under over-parametrization several standard stochastic optimization algorithms escape saddle-points and converge to local-minimizers much faster. One of the fundamental aspects of over-parametrized models is that they are capable of interpolating the training data. We show that, under interpolation-like assumptions satisfied by the stochastic gradients in an over-parametrization setting, the first-order oracle complexity of Perturbed Stochastic Gradient Descent (PSGD) algorithm to reach an $\epsilon$-local-minimizer, matches the corresponding deterministic rate of $\tilde{\mathcal{O}}(1/\epsilon^{2})$. We next analyze Stochastic Cubic-Regularized Newton (SCRN) algorithm under interpolation-like conditions, and show that the oracle complexity to reach an $\epsilon$-local-minimizer under interpolation-like conditions, is $\tilde{\mathcal{O}}(1/\epsilon^{2.5})$. While this obtained complexity is better than the corresponding complexity of either PSGD, or SCRN without interpolation-like assumptions, it does not match the rate of $\tilde{\mathcal{O}}(1/\epsilon^{1.5})$ corresponding to deterministic Cubic-Regularized Newton method. It seems further Hessian-based interpolation-like assumptions are necessary to bridge this gap. We also discuss the corresponding improved complexities in the zeroth-order settings.},
+  file        = {:http\://arxiv.org/pdf/2009.13016v1:PDF},
+  keywords    = {stat.ML, cs.LG, math.OC, math.ST, stat.TH},
+}
+
+@Article{Zachariadis2020,
+  author    = {Orestis Zachariadis and Nitin Satpute and Juan G{\'{o}}mez-Luna and Joaqu{\'{\i}}n Olivares},
+  title     = {Accelerating sparse matrix{\textendash}matrix multiplication with {GPU} Tensor Cores},
+  doi       = {10.1016/j.compeleceng.2020.106848},
+  pages     = {106848},
+  volume    = {88},
+  abstract  = {parse general matrix–matrix multiplication (spGEMM) is an essential component in many scientific and data analytics applications. However, the sparsity pattern of the input matrices and the interaction of their patterns make spGEMM challenging. Modern GPUs include Tensor Core Units (TCUs), which specialize in dense matrix multiplication. Our aim is to re-purpose TCUs for sparse matrices. The key idea of our spGEMM algorithm, tSparse, is to multiply sparse rectangular blocks using the mixed precision mode of TCUs. tSparse partitions the input matrices into tiles and operates only on tiles which contain one or more elements. It creates a task list of the tiles, and performs matrix multiplication of these tiles using TCUs. To the best of our knowledge, this is the first time that TCUs are used in the context of spGEMM. We show that spGEMM, with our tiling approach, benefits from TCUs. Our approach significantly improves the performance of spGEMM in comparison to cuSPARSE, CUSP, RMerge2, Nsparse, AC-SpGEMM and spECK.},
+  journal   = {Computers {\&} Electrical Engineering},
+  month     = {12},
+  publisher = {Elsevier {BV}},
+  year      = {2020},
+}
+
+@Article{Herholz2020,
+  author       = {Philipp Herholz and Olga Sorkine-Hornung},
+  date         = {2020},
+  journaltitle = {ACM Transaction son Computer Graphics},
+  title        = {Sparse Cholesky Updates for Interactive Mesh Parameterization},
+  number       = {6},
+  url          = {https://igl.ethz.ch/projects/sparse-cholesky-update/sparse-cholesky-update-paper.pdf},
+  volume       = {39},
+  abstract     = {We present a novel linear solver for interactive parameterization tasks. Our method is based on the observation that quasi-conformal parameterizations of a triangle mesh are largely determined by boundary conditions. These boundary conditions are typically constructed interactively by users, who have to take several artistic and geometric constraints into account while introducing cuts on the geometry. Commonly, the main computational burden in these methods is solving a linear system every time new boundary conditions are imposed. The core of our solver is a novel approach to efficiently update the Cholesky factorization of the linear system to reflect new boundary conditions, thereby enabling a seamless and interactive workflow even for large meshes consisting of several millions of vertices},
+}
+
+@Article{Anwer2020,
+  author       = {Abdul Rehman Anwer and Guanpeng Li and Karthik Pattabiraman and Michael Sullivan and Timothy Tsai and Siva Kumar Sastry Hari},
+  date         = {2020},
+  journaltitle = {Proceedings of the International Conference on High Performance Computing, Networking, Storage, and Analysis},
+  title        = {{GPU}-Trident: Efficient Modeling of ErrorPropagation in {GPU} Programs},
+  issn         = {978-1-7281-9998-6/20/31.00},
+  series       = {SC 20},
+  url          = {http://blogs.ubc.ca/karthik/files/2020/08/SC2020-final.pdf},
+  abstract     = {Fault injection (FI) techniques are typically used to determine the reliability profiles of programs under soft errors. However, these techniques are highly resource- and time-intensive. Prior research developed a model, TRIDENT to analytically predict Silent Data Corruption (SDC, i.e., incorrect output without any indication) probabilities of single-threaded CPU applications without requiring FIs. Unfortunately, TRIDENT is incompatible with GPU programs, due to their high degree of parallelism and different memory architectures than CPU programs. The main challenge is that modeling error propagation across thousands of threads in a GPU kernel requires enormous amounts of data to be profiled and analyzed, posing a major scalability bottleneck for HPC applications.\\ In this paper, we propose GPU-TRIDENT, an accurate and scalable technique for modeling error propagation in GPU programs. We find that GPU-TRIDENT is 2 orders of magnitude faster than FI-based approaches, and nearly as accurate in determining the SDC rate of GPU programs.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
