@@ -12972,6 +12972,37 @@ The proposed DQN method is first validated on a synthetic history matching probl
   abstract     = {Fault injection (FI) techniques are typically used to determine the reliability profiles of programs under soft errors. However, these techniques are highly resource- and time-intensive. Prior research developed a model, TRIDENT to analytically predict Silent Data Corruption (SDC, i.e., incorrect output without any indication) probabilities of single-threaded CPU applications without requiring FIs. Unfortunately, TRIDENT is incompatible with GPU programs, due to their high degree of parallelism and different memory architectures than CPU programs. The main challenge is that modeling error propagation across thousands of threads in a GPU kernel requires enormous amounts of data to be profiled and analyzed, posing a major scalability bottleneck for HPC applications.\\ In this paper, we propose GPU-TRIDENT, an accurate and scalable technique for modeling error propagation in GPU programs. We find that GPU-TRIDENT is 2 orders of magnitude faster than FI-based approaches, and nearly as accurate in determining the SDC rate of GPU programs.},
 }
 
+@InProceedings{Lee2020,
+  author    = {Hochan Lee and David Wong and Loc Hoang and Roshan Dathathri and Gurbinder Gill and Vishwesh Jatala and David Kuck and Keshav Pingali},
+  booktitle = {Proceedings of the 2020 IEEE International Symposium on Workload Characterization},
+  date      = {2020},
+  title     = {A Study of APIs for Graph Analytics Workloads},
+  series    = {IISWC 2020},
+  abstract  = {Traditionally, parallel graph analytics workloads have been implemented in systems like Pregel, GraphLab, Galois, and Ligra that support graph data structures and graph operations directly. An alternative approach is to express graph workloads in terms of sparse matrix kernels such as sparse matrix-vector and matrix-matrix multiplication. An API for these kernels has been defined by the GraphBLAS project. The SuiteSparse project has implemented this API on shared-memory platforms, and the LAGraph project is building a library of graph algorithms using this API.\\ How does the matrix-based approach perform compared to the graph-based approach? Our experiments on a 56 core CPU show that for representative graph workloads, LAGraph/SuiteSparse solutions are 5$\times$ slower on the average than Galois solutions. We argue that this performance gap arises from inherent limitations of a matrix-based API: regardless of which architecture a matrixbased algorithm is run on, it is subject to the same inherent limitations of the matrix-based API.},
+}
+
+@Article{Selvitopi2020a,
+  author      = {Oguz Selvitopi and Saliya Ekanayake and Giulia Guidi and Georgios Pavlopoulos and Ariful Azad and Aydin Buluc},
+  date        = {2020-09-30},
+  title       = {Distributed Many-to-Many Protein Sequence Alignment using Sparse Matrices},
+  eprint      = {2009.14467},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {Identifying similar protein sequences is a core step in many computational biology pipelines such as detection of homologous protein sequences, generation of similarity protein graphs for downstream analysis, functional annotation and gene location. Performance and scalability of protein similarity searches have proven to be a bottleneck in many bioinformatics pipelines due to increases in cheap and abundant sequencing data. This work presents a new distributed-memory software, PASTIS. PASTIS relies on sparse matrix computations for efficient identification of possibly similar proteins. We use distributed sparse matrices for scalability and show that the sparse matrix infrastructure is a great fit for protein similarity searches when coupled with a fully-distributed dictionary of sequences that allows remote sequence requests to be fulfilled. Our algorithm incorporates the unique bias in amino acid sequence substitution in searches without altering the basic sparse matrix model, and in turn, achieves ideal scaling up to millions of protein sequences.},
+  file        = {:http\://arxiv.org/pdf/2009.14467v1:PDF},
+  keywords    = {cs.DC, q-bio.GN},
+}
+
+@InProceedings{Azad2020a,
+  author    = {Ariful Azad and Mohsen Mahmoudi Aznaveh and Scott Beamer and Mark Blanco and Jinhao Chen and Luke D’Alessandro and Roshan Dathathri and Tim Davis and Kevin Deweese and Jesun Firoz and Henry A Gabb and Gurbinder Gill and Balint Hegyi and Scott Kolodzie and Tze Meng Low and Andrew Lumsdaine and Tugsbayasgalan Manlaibaatar and Timothy G Mattson and Scott McMillan and Ramesh Peri and Keshav Pingali and Upasana Sridhar and Gabor Szarnyas and Yunming Zhang and Yongzhe Zhang},
+  booktitle = {Proceedings of the 2020 IEEE International Symposium on Workload Characterization},
+  date      = {2020},
+  title     = {Evaluation of Graph Analytics Frameworks Using the {GAP} Benchmark Suite,},
+  series    = {IISWC 2020},
+  url       = {https://www.cs.utexas.edu/~roshan/GraphAnalyticsFrameworksStudy.pdf},
+  abstract  = {Graphs play a key role in data analytics. Graphs and the software systems used to work with them are highly diverse. Algorithms interact with hardware in different ways and which graph solution works best on a given platform changes with the structure of the graph. This makes it difficult to decide which graph programming framework is the best for a given situation. In this paper, we try to make sense of this diverse landscape. We evaluate five different frameworks for graph analytics: SuiteSparse GraphBLAS, Galois, the NWGraph library, the Graph Kernel Collection (GKC), and GraphIt. We use the GAP Benchmark Suite to evaluate each framework. GAP consists of 30 tests: six graph algorithms (breadth-first search, single-source shortest path, PageRank, betweenness centrality, connected components, and triangle counting) on five graphs. The GAP Benchmark Suite includes high-performance reference implementations to provide a performance baseline for comparison. Our results show the relative strengths of each framework, but also serve as a case study for the challenges of establishing objective measures for comparing graph frameworks.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
