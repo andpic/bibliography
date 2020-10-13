@@ -13003,6 +13003,63 @@ The proposed DQN method is first validated on a synthetic history matching probl
   abstract  = {Graphs play a key role in data analytics. Graphs and the software systems used to work with them are highly diverse. Algorithms interact with hardware in different ways and which graph solution works best on a given platform changes with the structure of the graph. This makes it difficult to decide which graph programming framework is the best for a given situation. In this paper, we try to make sense of this diverse landscape. We evaluate five different frameworks for graph analytics: SuiteSparse GraphBLAS, Galois, the NWGraph library, the Graph Kernel Collection (GKC), and GraphIt. We use the GAP Benchmark Suite to evaluate each framework. GAP consists of 30 tests: six graph algorithms (breadth-first search, single-source shortest path, PageRank, betweenness centrality, connected components, and triangle counting) on five graphs. The GAP Benchmark Suite includes high-performance reference implementations to provide a performance baseline for comparison. Our results show the relative strengths of each framework, but also serve as a case study for the challenges of establishing objective measures for comparing graph frameworks.},
 }
 
+@Article{Gratton2020,
+  author    = {Serge Gratton and Ehouarn Simon and David Titley-Peloquin and Philippe L. Toint},
+  title     = {Minimizing convex quadratics with variable precision conjugate gradients},
+  doi       = {10.1002/nla.2337},
+  abstract  = {We investigate the method of conjugate gradients, exploiting inaccurate matrix‐vector products, for the solution of convex quadratic optimization problems. Theoretical performance bounds are derived, and the necessary quantities occurring in the theoretical bounds estimated, leading to a practical algorithm. Numerical experiments suggest that this approach has significant potential, including in the steadily more important context of multiprecision computations.},
+  journal   = {Numerical Linear Algebra with Applications},
+  month     = {oct},
+  publisher = {Wiley},
+  year      = {2020},
+}
+
+@Article{Hermans2020,
+  author      = {Ben Hermans and Andreas Themelis and Panagiotis Patrinos},
+  date        = {2020-10-06},
+  title       = {QPALM: A Proximal Augmented Lagrangian Method for Nonconvex Quadratic Programs},
+  eprint      = {2010.02653},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {We propose QPALM, a nonconvex quadratic programming (QP) solver based on the proximal augmented Lagrangian method. This method solves a sequence of inner subproblems which can be enforced to be strongly convex and which therefore admit of a unique solution. The resulting steps are shown to be equivalent to inexact proximal point iterations on the extended-real-valued cost function. Furthermore, we prove global convergence of such iterations to a stationary point at an R-linear rate in the specific case of a (possibly nonconvex) QP. The QPALM algorithm solves the subproblems iteratively using semismooth Newton directions and an exact linesearch. The former can be computed efficiently in most iterations by making use of suitable factorization update routines, while the latter requires the zero of a monotone, piecewise affine function. QPALM is implemented in open-source C code, with tailored linear algebra routines for the factorization in a self-written package LADEL. The resulting implementation is shown to be extremely robust in numerical simulations, solving all of the Maros-Meszaros problems and finding a stationary point for most of the nonconvex QPs in the Cutest test set. Furthermore, it is shown to be competitive against state-of-the-art convex QP solvers in typical QPs arising from application domains such as portfolio optimization and model predictive control. As such, QPALM strikes a unique balance between solving both easy and hard problems efficiently.},
+  file        = {:http\://arxiv.org/pdf/2010.02653v1:PDF},
+  keywords    = {math.OC, 90C05, 90C20, 90C26, 49J53, 49M15},
+}
+
+@Article{Gower2020a,
+  author      = {Robert M. Gower and Mark Schmidt and Francis Bach and Peter Richtarik},
+  date        = {2020-10-02},
+  title       = {Variance-Reduced Methods for Machine Learning},
+  eprint      = {2010.00892},
+  eprintclass = {cs.LG},
+  eprinttype  = {arXiv},
+  abstract    = {Stochastic optimization lies at the heart of machine learning, and its cornerstone is stochastic gradient descent (SGD), a method introduced over 60 years ago. The last 8 years have seen an exciting new development: variance reduction (VR) for stochastic optimization methods. These VR methods excel in settings where more than one pass through the training data is allowed, achieving a faster convergence than SGD in theory as well as practice. These speedups underline the surge of interest in VR methods and the fast-growing body of work on this topic. This review covers the key principles and main developments behind VR methods for optimization with finite data sets and is aimed at non-expert readers. We focus mainly on the convex setting, and leave pointers to readers interested in extensions for minimizing non-convex functions.},
+  file        = {:http\://arxiv.org/pdf/2010.00892v1:PDF},
+  keywords    = {cs.LG, math.OC, stat.ML, 65K05, 68T99, G.1.6},
+}
+
+@TechReport{Nesi2020,
+  author      = {Lucas Leandro Nesi and Vinicius Garcia Pinto and Marcelo Cogo Miletto and Lucas Mello Schnorr},
+  date        = {2020},
+  institution = {Université Grenoble Alpes, CNRS, Inria},
+  title       = {Distributed-memory multi-{GPU} block-sparse tensor contraction for electronic structure},
+  eprint      = {02960848},
+  eprinttype  = {HAL},
+  url         = {https://hal.inria.fr/hal-02960848/document},
+  abstract    = {High-performance computing (HPC) applications enable the solution of computeintensive problems in feasible time. Among many HPC paradigms, task-based programming has gathered community attention in recent years. This paradigm enables constructing an HPC application using a more declarative approach, structuring it in a direct acyclic graph (DAG). The performance evaluation of these applications is as hard as in any other programming paradigm. Understanding how to analyze these applications, employing the DAG and runtime metrics, presents opportunities to improve its performance. This article describes the StarVZ R-package available on CRAN for performance analysis of task-based applications. StarVZ enables transforms runtime trace data into different visualizations of the application behavior. An analyst can understand their applications’ performance limitations and compare multiple executions. StarVZ has been successfully applied to several study-cases, showing its applicability in a number of scenarios.},
+}
+
+@TechReport{Quirynen2020,
+  author      = {Rien Quirynen and Stefano Di Cairano},
+  date        = {2020},
+  institution = {Mitsubishi Electric Research Laboratories (MERL)},
+  title       = {Block-Structured Preconditioning of Iterative Solverswithin a Primal Active-Set Method for fast {MPC}},
+  eprint      = {TR2020-134},
+  eprinttype  = {TR},
+  url         = {https://www.merl.com/publications/docs/TR2020-134.pdf},
+  abstract    = {Model predictive control (MPC) for linear dynamical systems requires solving an optimal control structured quadratic program (QP) at each sampling instant. This paper proposes a primal active-set strategy, called PRESAS, for the efficient solution of such block-sparse QPs, based on a preconditioned iterative solver to compute the search direction in each iteration. Rank-one factorization updates of the preconditioner result in a per-iteration computational complexity of $\mathcal{O}(Nm^2)$, where m denotes the number of state and control variables and N the number of control intervals. Three different block-structured preconditioning techniques are presented and their numerical properties are studied further. In addition, an augmented Lagrangian based implementation is proposed to avoid a costly initialization procedure to find a primal feasible starting point. Based on a standalone C code implementation, we illustrate the computational performance of PRESAS against current state of the art QP solvers for multiple linear and nonlinear MPC case studies. We also show that the solver is real-time feasible on a dSPACE MicroAutoBox-II rapid prototyping unit for vehicle control applications, and numerical reliability is illustrated based on experimental results from a testbench of small-scale autonomous vehicles.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
