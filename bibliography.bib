@@ -13105,6 +13105,73 @@ The proposed DQN method is first validated on a synthetic history matching probl
   year      = {2020},
 }
 
+@Article{Mor2020,
+  author      = {Uria Mor and Haim Avron},
+  date        = {2020-10-15},
+  title       = {Solving Trust Region Subproblems Using Riemannian Optimization},
+  eprint      = {2010.07547},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {The Trust Region Subproblem is a fundamental optimization problem that takes a pivotal role in Trust Region Methods. However, the problem, and variants of it, also arise in quite a few other applications. In this article, we present a family of globally convergent iterative Riemannian optimization algorithms for a variant of the Trust Region Subproblem that replaces the inequality constraint with an equality constraint. Our approach uses either a trivial or a non-trivial Riemannian geometry of the search-space, and requires only minimal spectral information about the quadratic component of the objective function. We further show how the theory of Riemannian optimization promotes a deeper understanding of the Trust Region Subproblem and its difficulties, e.g. a deep connection between the Trust Region Subproblem and the problem of finding affine eigenvectors, and a new examination of the so-called hard case in light of the condition number of the Riemannian Hessian operator at a global optimum. Finally, we propose to incorporate preconditioning via a careful selection of a variable Riemannian metric, and establish bounds on the asymptotic convergence rate in terms of how well the preconditioner approximates the input matrix.},
+  file        = {:http\://arxiv.org/pdf/2010.07547v1:PDF},
+  keywords    = {math.OC, cs.NA, math.NA},
+}
+
+@Article{Kornowski2020,
+  author      = {Guy Kornowski and Ohad Shamir},
+  date        = {2020-10-13},
+  title       = {High-Order Oracle Complexity of Smooth and Strongly Convex Optimization},
+  eprint      = {2010.06642},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {In this note, we consider the complexity of optimizing a highly smooth (Lipschitz $k$-th order derivative) and strongly convex function, via calls to a $k$-th order oracle which returns the value and first $k$ derivatives of the function at a given point, and where the dimension is unrestricted. Extending the techniques introduced in Arjevani et al. [2019], we prove that the worst-case oracle complexity for any fixed $k$ to optimize the function up to accuracy $\epsilon$ is on the order of $\left(\frac{\mu_k D^{k-1}}{\lambda}\right)^{\frac{2}{3k+1}}+\log\log\left(\frac{1}{\epsilon}\right)$ (up to log factors independent of $\epsilon$), where $\mu_k$ is the Lipschitz constant of the $k$-th derivative, $D$ is the initial distance to the optimum, and $\lambda$ is the strong convexity parameter.},
+  file        = {:http\://arxiv.org/pdf/2010.06642v1:PDF},
+  keywords    = {math.OC, cs.LG},
+}
+
+@Article{Hrga2020,
+  author      = {Timotej Hrga and Janez Povh},
+  date        = {2020-10-15},
+  title       = {{MADAM}: A parallel exact solver for Max-Cut based on semidefinite programming and {ADMM}},
+  eprint      = {2010.07839},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {We present MADAM, a parallel semidefinite based exact solver for Max-Cut, a problem of finding the cut with maximum weight in a given graph. The algorithm uses branch and bound paradigm that applies alternating direction method of multipliers as the bounding routine to solve the basic semidefinite relaxation strengthened by a subset of hypermetric inequalities. The benefit of the new approach is less computationally expensive update rule for the dual variable with respect to the inequality constraints. We provide theoretical convergence of the algorithm, as well as extensive computational experiments with this method, to show that our algorithm outperformes current state-of-the-art approaches. Furthermore, by combining algorithmic ingredients from the serial algorithm we develop an efficient distributed parallel solver based on MPI.},
+  file        = {:http\://arxiv.org/pdf/2010.07839v1:PDF},
+  keywords    = {math.OC},
+}
+
+@Article{Han2020a,
+  author    = {Qingchang Han and Hailong Yang and Ming Dun and Zhongzhi Luan and Lin Gan and Guangwen Yang and Depei Qian},
+  title     = {Towards efficient tile low-rank {GEMM} computation on sunway many-core processors},
+  doi       = {10.1007/s11227-020-03444-2},
+  abstract  = {Tile low-rank general matrix multiplication (TLR GEMM) is a novel method of matrix multiplication on large data-sparse matrices, which can significantly reduce storage footprint and arithmetic complexity under given accuracy. To implement high-performance TLR GEMM on Sunway many-core processor, the following challenges remain to be addressed: 1) design an efficient parallel scheme; 2) provide an efficient kernel library of math functions commonly used in TLR GEMM. This paper proposes swTLR GEMM, an efficient implementation of TLR GEMM. We assign LR GEMM computation to a single computing processing element (CPE) and use grouped task queue to process different data tiles of the TLR matrix. Moreover, we implement an efficient kernel library (swLR Kernels) for low-rank matrix operations. To scale to massive (CGs), we organize the CGs into the CG grid and partition the matrices into blocks accordingly. We also apply Cannon’s algorithm to enable efficient communication when processing the matrix blocks across CGs simultaneously. The experiment results show that the DGEMM kernel in swLR Kernels achieves 102$\times$ speedup on average. In terms of overall performance, swTLR GEMM-LLD and swTLR GEMM-LLL achieve 91$\times$ and 20.1$\times$ speedup on average, respectively. In addition, our implementation of swTLR GEMM exhibits good scalability when running on 1,024 CGs of Sunway processors (66,560 cores in total).},
+  journal   = {The Journal of Supercomputing},
+  month     = {10},
+  publisher = {Springer Science and Business Media {LLC}},
+  year      = {2020},
+}
+
+@PhdThesis{SoltanMohammadi2020,
+  author      = {Soltan Mohammadi, Mahdi},
+  date        = {2020},
+  institution = {Department of Computer Science, The University of Arizona},
+  title       = {Automatic Sparse Computation Parallelization By Utilizing Domain-Specific Knowledge In Data Dependence Analysis},
+  eprint      = {28149621},
+  eprintclass = {ProQuest},
+  abstract    = {Sparse vectors, matrices, and tensors are commonly used to compress nonzero values of big data manipulated in data analytics, scientific simulations, and machine learning computations. As with general computations, parallelization of loops in sparse computations, codes manipulating sparse structures, is essential to efficiently utilize available parallel architectures. The sparse computations often exhibit partial parallelism in loops that are sequential in the corresponding dense computation due to sparsity of data dependencies coming from indirect memory access through index arrays, e.g. col in val[col[j]]. Such dependencies can only be discovered at runtime when content of index arrays are available. Consequently, performance programmers typically use the inspector/executor strategy to take advantage of partial parallelism in sparse computation. There, programmers implement an inspector code that creates iteration dependency graph at runtime from which wavefronts of iterations are extracted and fed into a parallel version of the computation called an executor. The executor executes iteration waves sequentially to respect sparse dependencies while executing iterations inside each wavefront in parallel.\\ To automate the generation of the inspector and executor code, compiler-based loop-carried data dependency analysis is needed. However, straightforward automatically generated inspectors typically have significantly higher overhead than hand written optimized ones. Consequently, the specific problem that I am addressing in this dissertation is how can we automate the strategies used by expert programmers to generate efficient runtime inspectors for parallelizing sparse computation.\\ The overarching contribution of this dissertation is an approach for encoding index array properties for individual index arrays and relationships between index arrays as universally quantified constraints and using them in compiler-based data dependence analysis. The dependence analysis is then evaluated in the context of finding wavefront parallelism in sparse computations. More specifically, one contribution is an approach to automatically use index array properties to prove more data dependencies unsatisfiable, removing the need for inspecting them at runtime. Other contributions are methods to use the same properties to simplify compiletime-satisfiable dependences by finding equalities and subset relationships enabling generation of faster runtime inspectors. The last contribution includes compile-time methods for expanding opportunities for array privatization in sparse computations by defining an array as private if its contents start and end each iteration with the same value. Evaluation results show my approach is able to find seven fully parallel loops in seven sparse computations where previous compiler-based approach could not, and efficiently extract partial parallelism from outer most loops of five out of six sparse computations.},
+}
+
+@Article{Scott2020a,
+  author       = {J. Scott and M Tůma},
+  date         = {2020},
+  journaltitle = {ACM Transactions on Mathematical Software},
+  title        = {A computational study of using black-box {QR} solvers for large-scale sparse-dense linear least squares problems},
+  eprint       = {RAL-P-2020-004},
+  url          = {http://purl.org/net/epubs/manifestation/47616417/RAL-P-2020-004.pdf},
+  abstract     = {Large-scale overdetermined linear least squares problems arise in many practical applications, both as subproblems of nonlinear least squares problems and in their own right. One popular solution method is based on the backward stable QR factorization of the system matrix A. This paper focuses on sparse-dense linear least squares problems, that is, problems where A is sparse except from a small number of rows that are considered to be dense. For large-scale problems, the direct application of a QR solver will fail because of a lack of memory or will be unacceptably slow. We study a number of approaches for solving such problems using a sparse QR solver without modication. We consider the case where the sparse part of A is rank-decient and show that either preprocessing A using partial matrix stretching or using regularization and employing a direct-iterative approach can be seamlessly combined with a black-box QR solver. Furthermore, we propose extending the augmented system formulation with iterative renement for sparse problems to sparse-dense problems and demonstrate experimentally that multi-precision variants can be successfully used.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
