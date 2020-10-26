@@ -13172,6 +13172,96 @@ The proposed DQN method is first validated on a synthetic history matching probl
   abstract     = {Large-scale overdetermined linear least squares problems arise in many practical applications, both as subproblems of nonlinear least squares problems and in their own right. One popular solution method is based on the backward stable QR factorization of the system matrix A. This paper focuses on sparse-dense linear least squares problems, that is, problems where A is sparse except from a small number of rows that are considered to be dense. For large-scale problems, the direct application of a QR solver will fail because of a lack of memory or will be unacceptably slow. We study a number of approaches for solving such problems using a sparse QR solver without modication. We consider the case where the sparse part of A is rank-decient and show that either preprocessing A using partial matrix stretching or using regularization and employing a direct-iterative approach can be seamlessly combined with a black-box QR solver. Furthermore, we propose extending the augmented system formulation with iterative renement for sparse problems to sparse-dense problems and demonstrate experimentally that multi-precision variants can be successfully used.},
 }
 
+@Article{Li2020g,
+  author      = {Min Li and Chuanfu Xiao and Chao Yang},
+  date        = {2020-10-20},
+  title       = {a-Tucker: Input-Adaptive and Matricization-Free Tucker Decomposition for Dense Tensors on CPUs and GPUs},
+  eprint      = {2010.10131},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {Tucker decomposition is one of the most popular models for analyzing and compressing large-scale tensorial data. Existing Tucker decomposition algorithms usually rely on a single solver to compute the factor matrices and core tensor, and are not flexible enough to adapt with the diversities of the input data and the hardware. Moreover, to exploit highly efficient GEMM kernels, most Tucker decomposition implementations make use of explicit matricizations, which could introduce extra costs in terms of data conversion and memory usage. In this paper, we present a-Tucker, a new framework for input-adaptive and matricization-free Tucker decomposition of dense tensors. A mode-wise flexible Tucker decomposition algorithm is proposed to enable the switch of different solvers for the factor matrices and core tensor, and a machine-learning adaptive solver selector is applied to automatically cope with the variations of both the input data and the hardware. To further improve the performance and enhance the memory efficiency, we implement a-Tucker in a fully matricization-free manner without any conversion between tensors and matrices. Experiments with a variety of synthetic and real-world tensors show that a-Tucker can substantially outperform existing works on both CPUs and GPUs.},
+  file        = {:http\://arxiv.org/pdf/2010.10131v1:PDF},
+  keywords    = {cs.DC, cs.AI},
+}
+
+@Article{Gottesbueren2020,
+  author      = {Lars Gottesbüren and Tobias Heuer and Peter Sanders and Sebastian Schlag},
+  date        = {2020-10-20},
+  title       = {Scalable Shared-Memory Hypergraph Partitioning},
+  eprint      = {2010.10272},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {Hypergraph partitioning is an important preprocessing step for optimizing data placement and minimizing communication volumes in high-performance computing applications. To cope with ever growing problem sizes, it has become increasingly important to develop fast parallel partitioning algorithms whose solution quality is competitive with existing sequential algorithms. To this end, we present Mt-KaHyPar, the first shared-memory multilevel hypergraph partitioner with parallel implementations of many techniques used by the sequential, high-quality partitioning systems: a parallel coarsening algorithm that uses parallel community detection as guidance, initial partitioning via parallel recursive bipartitioning with work-stealing, a scalable label propagation refinement algorithm, and the first fully-parallel direct $k$-way formulation of the classical FM algorithm. Experiments performed on a large benchmark set of instances from various application domains demonstrate the scalability and effectiveness of our approach. With 64 cores, we observe self-relative speedups of up to 51 and a harmonic mean speedup of 23.5. In terms of solution quality, we outperform the distributed hypergraph partitioner Zoltan on 95\% of the instances while also being a factor of 2.1 faster. With just four cores,Mt-KaHyPar is also slightly faster than the fastest sequential multilevel partitioner PaToH while producing better solutions on 83\% of all instances. The sequential high-quality partitioner KaHyPar still finds better solutions than our parallel approach, especially when using max-flow-based refinement. This, however, comes at the cost of considerably longer running times.},
+  file        = {:http\://arxiv.org/pdf/2010.10272v2:PDF},
+  keywords    = {cs.DC},
+}
+
+@InProceedings{Harris2020,
+  author    = {Steven Harris and Roger D. Chamberlain and Christopher Gill},
+  booktitle = {Proceedings of the IEEE High-Performance Extreme Computing Conference},
+  date      = {2020},
+  title     = {{OpenCL} Performance on the Intel Heterogeneous Architecture Research Platform},
+  series    = {HPEC 2020},
+  url       = {https://www.cse.wustl.edu/~roger/papers/hcg20.pdf},
+  abstract  = {The fundamental operation of matrix multiplication is ubiquitous across a myriad of disciplines. Yet, the identification of new optimizations for matrix multiplication remains relevant for emerging hardware architectures and heterogeneous systems. Frameworks such as OpenCL enable computation orchestration on existing systems, and its availability using the Intel High Level Synthesis compiler allows users to architect new designs for reconfigurable hardware using C/C++. Using the HARPv2 as a vehicle for exploration, we investigate the utility of several traditional matrix multiplication optimizations to better understand the performance portability of OpenCL and the implications for such optimizations on cache coherent heterogeneous architectures. Our results give targeted insights into the applicability of best practices that were designed for existing architectures when used on emerging heterogeneous systems.},
+}
+
+@Article{Liang2020,
+  author      = {Ling Liang and Defeng Sun and Kim-Chuan Toh},
+  date        = {2020-10-17},
+  title       = {An Inexact Augmented Lagrangian Method for Second-order Cone Programming with Applications},
+  eprint      = {2010.08772},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {In this paper, we adopt the augmented Lagrangian method (ALM) to solve convex quadratic second-order cone programming problems (SOCPs). Fruitful results on the efficiency of the ALM have been established in the literature. Recently, it has been shown by Cui et al. (2019) that, if the quadratic growth condition holds at an optimal solution for the dual problem, then the KKT residual converges to zero R-superlinearly when the ALM is applied to the primal problem. Moreover, Cui et al (2017) provided sufficient conditions for the quadratic growth condition to hold under the metric subregularity and bounded linear regularity conditions for solving composite matrix optimization problems involving spectral functions. Here, we adopt these recent ideas to analyze the convergence properties of the ALM when applied to SOCPs. To the best of our knowledge, no similar work has been done for SOCPs so far. In our paper, we first provide sufficient conditions to ensure the quadratic growth condition for SOCPs. With these elegant theoretical guarantees, we then design an SOCP solver and apply it to solve various classes of SOCPs such as minimal enclosing ball problems, classic trust-region subproblems, square-root Lasso problems, and DIMACS Challenge problems. Numerical results show that the proposed ALM based solver is efficient and robust compared to the existing highly developed solvers such as Mosek and SDPT3.},
+  file        = {:http\://arxiv.org/pdf/2010.08772v1:PDF},
+  keywords    = {math.OC, 90C06, 90C22, 90C25},
+}
+
+@Article{Hussain2020,
+  author      = {Md Taufique Hussain and Oguz Selvitopi and Aydin Buluç and Ariful Azad},
+  date        = {2020-10-16},
+  title       = {Communication-Avoiding and Memory-Constrained Sparse Matrix-Matrix Multiplication at Extreme Scale},
+  eprint      = {2010.08526},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {Sparse matrix-matrix multiplication (SpGEMM) is a widely used kernel in various graph, scientific computing and machine learning algorithms. In this paper, we consider SpGEMMs performed on hundreds of thousands of processors generating trillions of nonzeros in the output matrix. Distributed SpGEMM at this extreme scale faces two key challenges: (1) high communication cost and (2) inadequate memory to generate the output. We address these challenges with an integrated communication-avoiding and memory-constrained SpGEMM algorithm that scales to 262,144 cores (more than 1 million hardware threads) and can multiply sparse matrices of any size as long as inputs and a fraction of output fit in the aggregated memory. As we go from 16,384 cores to 262,144 cores on a Cray XC40 supercomputer, the new SpGEMM algorithm runs 10x faster when multiplying large-scale protein-similarity matrices.},
+  file        = {:http\://arxiv.org/pdf/2010.08526v1:PDF},
+  keywords    = {cs.DC},
+}
+
+@Article{Guidi2020,
+  author      = {Giulia Guidi and Oguz Selvitopi and Marquita Ellis and Leonid Oliker and Katherine Yelick and Aydin Buluc},
+  date        = {2020-10-20},
+  title       = {Parallel String Graph Construction and Transitive Reduction for De Novo Genome Assembly},
+  eprint      = {2010.10055},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {One of the most computationally intensive tasks in computational biology is de novo genome assembly, the decoding of the sequence of an unknown genome from redundant and erroneous short sequences. A common assembly paradigm identifies overlapping sequences, simplifies their layout, and creates consensus. Despite many algorithms developed in the literature, the efficient assembly of large genomes is still an open problem. In this work, we introduce new distributed-memory parallel algorithms for overlap detection and layout simplification steps of de novo genome assembly, and implement them in the diBELLA 2D pipeline. Our distributed memory algorithms for both overlap detection and layout simplification are based on linear-algebra operations over semirings using 2D distributed sparse matrices. Our layout step consists of performing a transitive reduction from the overlap graph to a string graph. We provide a detailed communication analysis of the main stages of our new algorithms. diBELLA 2D achieves near linear scaling with over 80\% parallel efficiency for the human genome, reducing the runtime for overlap detection by 1.2-1.3$\times$ for the human genome and 1.5-1.9$\times$ for C. elegans compared to the state-of-the-art. Our transitive reduction algorithm outperforms an existing distributed-memory implementation by 10.5-13.3$\times$ for the human genome and 18-29$\times$ for the C. elegans. Our work paves the way for efficient de novo assembly of large genomes using long reads in distributed memory.},
+  file        = {:http\://arxiv.org/pdf/2010.10055v1:PDF},
+  keywords    = {cs.DC, q-bio.GN},
+}
+
+@Manual{Lourenco2020,
+  author   = {Christopher Lourenco and Jinhao Chen and Erick Moreno-Centeno and Timothy A. Davis},
+  date     = {2020},
+  title    = {User Guide for {SLIP} {LU}, A Sparse Left-Looking Integer-Preserving {LU} Factorization},
+  version  = {1.0.2},
+  abstract = {SLIP LU is a software package designed to exactly solve unsymmetric sparse linear systems, $Ax = b$, where $A \in \mathbb{Q}^{n \times n}$ , $b \in \mathbb{Q}^{n \times r}$ , and $x \in \mathbb{Q}^{n \times r}$ . This package performs a left-looking, roundoff-error-free (REF) LU factorization $PAQ = LDU$, where $L$ and $U$ are integer, $D$ is diagonal, and $P$ and $Q$ are row and column permutations, respectively. Note that the matrix $D$ is never explicitly computed nor needed; thus this package uses only the matrices $L$ and $U$. The theory associated with this code is the Sparse Left-looking Integer-Preserving (SLIP) LU factorization [8]. Aside from solving sparse linear systems exactly, one of the key goals of this package is to provide a framework for other solvers to benchmark the reliability and stability of their linear solvers, as our final solution vector $x$ is guaranteed to be exact. In addition, SLIP LU provides a wrapper class for the GNU Multiple Precision Arithmetic (GMP) and GNU Multiple Precision Floating Point Reliable (MPFR) libraries in order to prevent memory leaks and improve the overall stability of these external libraries. SLIP LU is written in ANSI C and is accompanied by a MATLAB interface.},
+}
+
+@Article{Zhang2020h,
+  author    = {Guanglu Zhang and Douglas Allaire and Jonathan Cagan},
+  title     = {Taking the Guess Work Out of the Initial Guess: A Solution Interval Method for Least Squares Parameter Estimation in Nonlinear Models},
+  doi       = {10.1115/1.4048811},
+  pages     = {1--61},
+  abstract  = {Fitting a specified model to data is critical in many science and engineering fields. A major task in fitting a specified model to data is to estimate the value of each parameter in the model. Iterative local methods, such as the Gauss-Newton method and the Levenberg-Marquardt method, are often employed for parameter estimation in nonlinear models. However, practitioners must guess the initial value for each parameter to initialize these iterative local methods. A poor initial guess can contribute to non-convergence of these methods or lead these methods to converge to a wrong or inferior solution. In this paper, a solution interval method is introduced to find the optimal estimator for each parameter in a nonlinear model that minimizes the squared error of the fit. The method includes three algorithms that require different level of computational power to find the optimal parameter estimators. The method constructs a solution interval for each parameter in the model. These solution intervals significantly reduce the search space for optimal parameter estimators. The method also provides an empirical probability distribution for each parameter, which is valuable for parameter uncertainty assessment. The solution interval method is validated through two case studies in which the Michaelis-Menten model and Fick's second law are fit to experimental data sets, respectively. These case studies show that the solution interval method can find optimal parameter estimators efficiently. A four-step procedure for implementing the solution interval method in practice is also outlined.},
+  journal   = {Journal of Computing and Information Science in Engineering},
+  month     = {10},
+  publisher = {{ASME} International},
+  year      = {2020},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
