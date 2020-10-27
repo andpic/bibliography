@@ -13262,6 +13262,46 @@ The proposed DQN method is first validated on a synthetic history matching probl
   year      = {2020},
 }
 
+@TechReport{Marchal2020,
+  author      = {Loris Marchal and Thibault Marette and Grégoire Pichon and Frédéric Vivien},
+  date        = {2020},
+  institution = {Inria},
+  title       = {Trading Performance for Memoryin Sparse Direct Solvers using Low-rank Compression},
+  eprint      = {02976233},
+  eprinttype  = {HAL},
+  url         = {https://hal.inria.fr/hal-02976233/document},
+  abstract    = {Sparse direct solvers using Block Low-Rank compression have been proven efficient to solve problems arising in many real-life applications. Improving those solvers is crucial for being able to 1) solve larger problems and 2) speed up computations. A main characteristic of a sparse direct solver using low-rank compression is when compression is performed. There are two distinct approaches: (1) all blocks are compressed before starting the factorization, which reduces the memory as much as possible, or (2) each block is compressed as late as possible, which usually leads to better speedup. The objective of this paper is to design a composite approach, to speedup computations while staying under a given memory limit. This should allow to solve large problems that cannot be solved with Approach 2 while reducing the execution time compared to Approach 1. We propose a memory-aware strategy where each block can be compressed either at the beginning or as late as possible. We first consider the problem of choosing when to compress each block, under the assumption that all information on blocks is perfectly known, i.e., memory requirement and execution time of a block when compressed or not. We show that this problem is a variant of the NP-complete Knapsack problem, and adapt an existing 2-approximation algorithm for our problem. Unfortunately, the required information on blocks depends on numerical properties and in practice cannot be known in advance. We thus introduce models to estimate those values. Experiments on the PaStiX solver demonstrate that our new approach can achieve an excellent trade-off between memory consumption and computational cost. For instance on matrix Geo1438, Approach 2 uses three times as much memory as Approach 1 while being three times faster. Our new approach leads to an execution time only 30\% larger than Approach 2 when given a memory 30\% larger than the one needed by Approach 1},
+}
+
+@Article{Swirydowicz2020,
+  author    = {Katarzyna {\'{S}}wirydowicz and Julien Langou and Shreyas Ananthan and Ulrike Yang and Stephen Thomas},
+  title     = {Low synchronization Gram{\textendash}Schmidt and generalized minimal residual algorithms},
+  doi       = {10.1002/nla.2343},
+  abstract  = {The Gram–Schmidt process uses orthogonal projection to construct the $A = QR$ factorization of a matrix. When $Q$ has linearly independent columns, the operator $P = I - Q(Q^T Q)^{-1} Q^T$ defines an orthogonal projection onto $Q^\bot$. In finite precision, $Q$ loses orthogonality as the factorization progresses. A family of approximate projections is derived with the form $P = I - QT Q^T$, with correction matrix $T$. When $T = (Q^T Q)^{-1}$, and $T$ is triangular, it is postulated that the best achievable orthogonality is $\mathcal{O}(\varepsilon)\kappa(A)$. We present new variants of modified (MGS) and classical Gram–Schmidt algorithms that require one global reduction step. An interesting form of the projector leads to a compact $WY$ representation for MGS. In particular, the inverse compact $WY$ MGS algorithm is equivalent to a lower triangular solve. Our main contribution is to introduce a backward normalization lag into the compact $WY$ representation, resulting in a $\mathcal{O}(\varepsilon)\kappa([r_0, A V_m])$ stable Generalized Minimal Residual Method (GMRES) algorithm that requires only one global reduce per iteration. Further improvements in performance are achieved by accelerating GMRES on GPUs.},
+  journal   = {Numerical Linear Algebra with Applications},
+  month     = {10},
+  publisher = {Wiley},
+  year      = {2020},
+}
+
+@Book{Bueler2020,
+  author    = {Ed Bueler},
+  title     = {{PETSc} for Partial Differential Equations: Numerical Solutions in C and Python},
+  doi       = {10.1137/1.9781611976311},
+  publisher = {Society for Industrial and Applied Mathematics},
+  abstract  = {The Portable, Extensible Toolkit for Scientific Computation (PETSc) is an open-source library of advanced data structures and methods for solving linear and nonlinear equations and for managing discretizations. This book uses these modern numerical tools to demonstrate how to solve nonlinear partial differential equations (PDEs) in parallel. It starts from key mathematical concepts, such as Krylov space methods, preconditioning, multigrid, and Newton's method. In PETSc these components are composed at run time into fast solvers.\\ Discretizations are introduced from the beginning, with an emphasis on finite difference and finite element methodologies. The example C programs of the first 12 chapters, listed on the inside front cover, solve (mostly) elliptic and parabolic PDE problems. Discretization leads to large, sparse, and generally nonlinear systems of algebraic equations. For such problems, mathematical solver concepts are explained and illustrated through the examples, with sufficient context to speed further development.\\
+PETSc for Partial Differential Equations\begin{itemize}
+\item addresses both discretization and fast solvers for PDEs;
+\item emphasizes practice more than theory;
+\item contains well-structured examples, with advice on run-time solver choices;
+\item demonstrates how to achieve high performance and parallel scalability; and
+\item builds on the reader's understanding of fast solver concepts when applying the Firedrake
+\end{itemize}
+Python finite element solver library in the last two chapters.\\ This textbook, the first to cover PETSc programming for nonlinear PDEs, provides an on-ramp for graduate students and researchers to a major area of high-performance computing for science and engineering. It is suitable as a supplement for courses in scientific computing or numerical methods for differential equations.},
+  month     = {1},
+  year      = {2020},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
