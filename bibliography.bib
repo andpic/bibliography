@@ -13302,6 +13302,42 @@ Python finite element solver library in the last two chapters.\\ This textbook, 
   year      = {2020},
 }
 
+@Article{Isotton2020,
+  author      = {Giovanni Isotton and Carlo Janna and Massimo Bernaschi},
+  date        = {2020-10-27},
+  title       = {A GPU-accelerated adaptive FSAI preconditioner for massively parallel simulations},
+  eprint      = {2010.14175},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {The solution of linear systems of equations is a central task in a number of scientific and engineering applications. In many cases the solution of linear systems may take most of the simulation time thus representing a major bottleneck in the further development of scientific and technical software. For large scale simulations, nowadays accounting for several millions or even billions of unknowns, it is quite common to resort to preconditioned iterative solvers for exploiting their low memory requirements and, at least potential, parallelism. Approximate inverses have been shown to be robust and effective preconditioners in various contexts. In this work, we show how adaptive FSAI, an approximate inverse characterized by a very high degree of parallelism, can be successfully implemented on a distributed memory computer equipped with GPU accelerators. Taking advantage of GPUs in adaptive FSAI set-up is not a trivial task, nevertheless we show through an extensive numerical experimentation how the proposed approach outperforms more traditional preconditioners and results in a close-to-ideal behaviour in challenging linear algebra problems.},
+  file        = {:http\://arxiv.org/pdf/2010.14175v1:PDF},
+  keywords    = {math.NA, cs.NA},
+}
+
+@Article{Carson2020c,
+  author      = {Erin Carson and Kathryn Lund and Miroslav Rozložník and Stephen Thomas},
+  date        = {2020-10-22},
+  title       = {An overview of block Gram-Schmidt methods and their stability properties},
+  eprint      = {2010.12058},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {Block Gram-Schmidt algorithms comprise essential kernels in many scientific computing applications, but for many commonly used variants, a rigorous treatment of their stability properties remains open. This survey provides a comprehensive categorization of block Gram-Schmidt algorithms, especially those used in Krylov subspace methods to build orthonormal bases one block vector at a time. All known stability results are assembled, and new results are summarized or conjectured for important communication-reducing variants. A diverse array of numerical illustrations are presented, along with the MATLAB code for reproducing the results in a publicly available at repository https://github.com/katlund/BlockStab. A number of open problems are discussed, and an appendix containing all algorithms type-set in a uniform fashion is provided.},
+  file        = {:http\://arxiv.org/pdf/2010.12058v1:PDF},
+  keywords    = {math.NA, cs.NA, 15-02, 15A23, 65-02, 65F05, 65F10, 65F25},
+}
+
+@Article{Agullo2020a,
+  author      = {Emmanuel Agullo and Mirco Altenbernd and Hartwig Anzt and Leonardo Bautista-Gomez and Tommaso Benacchio and Luca Bonaventura and Hans-Joachim Bungartz and Sanjay Chatterjee and Florina M. Ciorba and Nathan DeBardeleben and Daniel Drzisga and Sebastian Eibl and Christian Engelmann and Wilfried N. Gansterer and Luc Giraud and Dominik Goeddeke and Marco Heisig and Fabienne Jezequel and Nils Kohl and Xiaoye Sherry Li and Romain Lion and Miriam Mehl and Paul Mycek and Michael Obersteiner and Enrique S. Quintana-Orti and Francesco Rizzi and Ulrich Ruede and Martin Schulz and Fred Fung and Robert Speck and Linda Stals and Keita Teranishi and Samuel Thibault and Dominik Thoennes and Andreas Wagner and Barbara Wohlmuth},
+  date        = {2020-10-26},
+  title       = {Resiliency in Numerical Algorithm Design for Extreme Scale Simulations},
+  eprint      = {2010.13342},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {This work is based on the seminar titled ``Resiliency in Numerical Algorithm Design for Extreme Scale Simulations'' held March 1-6, 2020 at Schloss Dagstuhl, that was attended by all the authors. Naive versions of conventional resilience techniques will not scale to the exascale regime: with a main memory footprint of tens of Petabytes, synchronously writing checkpoint data all the way to background storage at frequent intervals will create intolerable overheads in runtime and energy consumption. Forecasts show that the mean time between failures could be lower than the time to recover from such a checkpoint, so that large calculations at scale might not make any progress if robust alternatives are not investigated. More advanced resilience techniques must be devised. The key may lie in exploiting both advanced system features as well as specific application knowledge. Research will face two essential questions: (1) what are the reliability requirements for a particular computation and (2) how do we best design the algorithms and software to meet these requirements? One avenue would be to refine and improve on system- or application-level checkpointing and rollback strategies in the case an error is detected. Developers might use fault notification interfaces and flexible runtime systems to respond to node failures in an application-dependent fashion. Novel numerical algorithms or more stochastic computational approaches may be required to meet accuracy requirements in the face of undetectable soft errors. The goal of this Dagstuhl Seminar was to bring together a diverse group of scientists with expertise in exascale computing to discuss novel ways to make applications resilient against detected and undetected faults. In particular, participants explored the role that algorithms and applications play in the holistic approach needed to tackle this challenge.},
+  file        = {:http\://arxiv.org/pdf/2010.13342v1:PDF},
+  keywords    = {cs.DC, D.4.5; G.4; G.1; D.4.4},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
