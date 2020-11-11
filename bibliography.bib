@@ -13627,6 +13627,60 @@ Python finite element solver library in the last two chapters.\\ This textbook, 
   abstract  = {The task-based programming model associated with dynamic runtime systems has gained popularity for challenging problems because of workload imbalance, heterogeneous resources, or extreme concurrency. During the last decade, lowrank matrix approximations, where the main idea consists of exploiting data sparsity typically by compressing off-diagonal tiles up to an application-specific accuracy threshold, have been adopted to address the curse of dimensionality at extreme scale. In this paper, we create a bridge between the runtime and the linear algebra by communicating knowledge of the data sparsity to the runtime. We design and implement this synergistic approach with high user productivity in mind, in the context of the PaRSEC runtime system and the HiCMA numerical library. This requires to extend PaRSEC with new features to integrate rank information into the dataflow so that proper decisions can be taken at runtime. We focus on the tile low-rank (TLR) Cholesky factorization for solving 3D data-sparse covariance matrix problems arising in environmental applications. In particular, we employ the 3D exponential model of Matern matrix kernel, which exhibits challenging nonuniform high ranks in off-diagonal tiles. We first provide a dynamic data structure management driven by a performance model to reduce extra floating-point operations. Next, we optimize the memory footprint of the application by relying on a dynamic memory allocator, and supported by a rank-aware data distribution to cope with the workload imbalance. Finally, we expose further parallelism using kernel recursive formulations to shorten the critical path. Our resulting high-performance implementation outperforms existing data-sparse TLR Cholesky factorization by up to 7-fold on a large-scale distributed-memory system, while minimizing the memory footprint up to a 44-fold factor. This multidisciplinary work highlights the need to empower runtime systems beyond their original duty of task scheduling for servicing next-generation low-rank matrix algebra libraries.},
 }
 
+@InProceedings{You2020b,
+  author    = {X. You and H. Yang and Z. Luan and D. Qian and X. Liu},
+  booktitle = {Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis},
+  title     = {Zerospy: Exploring Software Inefficiency with Redundant Zeros},
+  doi       = {10.1109/SC41405.2020.00033},
+  pages     = {397-410},
+  publisher = {IEEE Computer Society},
+  series    = {SC '20},
+  url       = {https://doi.ieeecomputersociety.org/10.1109/SC41405.2020.00033},
+  abstract  = {Redundant zeros cause inefficiencies in which the zero values are loaded and computed repeatedly, resulting in unnecessary memory traffic and identity computation that waste memory bandwidth and CPU resources. Optimizing compilers is difficult in eliminating these zero-related inefficiencies due to limitations in static analysis. Hardware approaches, in contrast, optimize inefficiencies without code modification, but are not widely adopted in commodity processors. In this paper, we propose ZeroSpy - a fine-grained profiler to identify redundant zeros caused by both inappropriate use of data structures and useless computation. ZeroSpy also provides intuitive optimization guidance by revealing the locations where the redundant zeros happen in source lines and calling contexts. The experimental results demonstrate ZeroSpy is capable of identifying redundant zeros in programs that have been highly optimized for years. Based on the optimization guidance revealed by ZeroSpy, we can achieve significant speedups after eliminating redundant zeros.},
+  address   = {Los Alamitos, CA, USA},
+  keywords  = {redundant zero;software inefficiency;performance profiling and optimization},
+  month     = {nov},
+  year      = {2020},
+}
+
+@InProceedings{Das2020b,
+  author    = {A. Das and I. Briggs and G. Gopalakrishnan and S. Krishnamoorthy and P. Panchekha},
+  booktitle = {International Conference for High Performance Computing, Networking, Storage and Analysis},
+  title     = {Scalable yet Rigorous Floating-Point Error Analysis},
+  doi       = {10.1109/SC41405.2020.00055},
+  pages     = {708-721},
+  publisher = {IEEE Computer Society},
+  series    = {SC '20},
+  url       = {https://doi.ieeecomputersociety.org/10.1109/SC41405.2020.00055},
+  abstract  = {Automated techniques for rigorous floating-point round-off error analysis are a prerequisite to placing important activities in HPC such as precision allocation, verification, and code optimization on a formal footing. Yet existing techniques cannot provide tight bounds for expressions beyond a few dozen operators -- barely enough for HPC. In this work, we offer an approach embedded in a new tool called SATIRE that scales error analysis by four orders of magnitude compared to today’s best-of-class tools. We explain how three key ideas underlying SATIRE helps it attain such scale: path strength reduction, bound optimization, and abstraction. SATIRE provides tight bounds and rigorous guarantees on significantly larger expressions with well over a hundred thousand operators, covering important examples including FFT, matrix multiplication, and PDE stencils.},
+  address   = {Los Alamitos, CA, USA},
+  keywords  = {floating-point arithmetic;round-off error;numerical analysis;symbolic execution;algorithmic differentiation;abstraction;scalable analysis},
+  month     = {nov},
+  year      = {2020},
+}
+
+@InProceedings{Brunie2020a,
+  author    = {H. Brunie and C. Iancu and K. Ibrahim and P. Brisk and B. Cook},
+  booktitle = {International Conference for High Performance Computing, Networking, Storage and Analysis},
+  title     = {Tuning Floating-Point Precision Using Dynamic Program Information and Temporal Locality},
+  doi       = {10.1109/SC41405.2020.00054},
+  pages     = {694-707},
+  publisher = {IEEE Computer Society},
+  series    = {SC '20},
+  url       = {https://doi.ieeecomputersociety.org/10.1109/SC41405.2020.00054},
+  abstract  = {We present a methodology for precision tuning of full applications. These techniquesmust select a search space composed of either variables or instructions and provide a scalable search strategy. In full application settings one cannot assume compiler support for practical reasons. Thus, an additional important challenge is enabling code refactoring. We argue for an instruction-based search space and we show: 1) how to exploit dynamic program information based on call stacks; and 2) how to exploit the iterative nature of scientific codes, combined with temporal locality. We applied the methodology to tune the implementation of scientific codes written in a combination of Python, CUDA, C++ and Fortran, tuning calls to math exp library functions. The iterative search refinement always reduces the search complexity and the number of steps to solution. Dynamic program information increases search efficacy. Using this approach, we obtain application runtime performance improvements up to 27\%.},
+  address   = {Los Alamitos, CA, USA},
+  month     = {nov},
+  year      = {2020},
+}
+
+@Article{Campos2020,
+  author   = {Juan S. Campos and Ruth Misener and Panos Parpas},
+  date     = {2020},
+  title    = {Partial Lasserre relaxation for sparse Max-Cut},
+  abstract = {A common approach to solve or find bounds of polynomial optimization problems like Max-Cut is to use the first level of the Lasserre hierarchy. Higher levels of the Lasserre hierarchy provide tighter bounds, but solving these relaxations is usually computationally intractable. We propose to strengthen the first level relaxation for sparse Max-Cut problems using constraints from the second order Lasserre hierarchy. We explore a variety of approaches for adding a subset of the positive semidefinite constraints of the second order sparse relaxation obtained by using the maximum cliques of the graph’s chordal extension. We apply this idea to sparse graphs of different sizes and densities, and provide evidence of its strengths and limitations when compared to the state-of-the-art Max-Cut solver BiqCrunch and the alternative sparse relaxation CS-TSSOS.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
