@@ -13639,7 +13639,7 @@ Python finite element solver library in the last two chapters.\\ This textbook, 
   abstract  = {Redundant zeros cause inefficiencies in which the zero values are loaded and computed repeatedly, resulting in unnecessary memory traffic and identity computation that waste memory bandwidth and CPU resources. Optimizing compilers is difficult in eliminating these zero-related inefficiencies due to limitations in static analysis. Hardware approaches, in contrast, optimize inefficiencies without code modification, but are not widely adopted in commodity processors. In this paper, we propose ZeroSpy - a fine-grained profiler to identify redundant zeros caused by both inappropriate use of data structures and useless computation. ZeroSpy also provides intuitive optimization guidance by revealing the locations where the redundant zeros happen in source lines and calling contexts. The experimental results demonstrate ZeroSpy is capable of identifying redundant zeros in programs that have been highly optimized for years. Based on the optimization guidance revealed by ZeroSpy, we can achieve significant speedups after eliminating redundant zeros.},
   address   = {Los Alamitos, CA, USA},
   keywords  = {redundant zero;software inefficiency;performance profiling and optimization},
-  month     = {nov},
+  month     = {11},
   year      = {2020},
 }
 
@@ -13655,7 +13655,7 @@ Python finite element solver library in the last two chapters.\\ This textbook, 
   abstract  = {Automated techniques for rigorous floating-point round-off error analysis are a prerequisite to placing important activities in HPC such as precision allocation, verification, and code optimization on a formal footing. Yet existing techniques cannot provide tight bounds for expressions beyond a few dozen operators -- barely enough for HPC. In this work, we offer an approach embedded in a new tool called SATIRE that scales error analysis by four orders of magnitude compared to today’s best-of-class tools. We explain how three key ideas underlying SATIRE helps it attain such scale: path strength reduction, bound optimization, and abstraction. SATIRE provides tight bounds and rigorous guarantees on significantly larger expressions with well over a hundred thousand operators, covering important examples including FFT, matrix multiplication, and PDE stencils.},
   address   = {Los Alamitos, CA, USA},
   keywords  = {floating-point arithmetic;round-off error;numerical analysis;symbolic execution;algorithmic differentiation;abstraction;scalable analysis},
-  month     = {nov},
+  month     = {11},
   year      = {2020},
 }
 
@@ -13670,7 +13670,7 @@ Python finite element solver library in the last two chapters.\\ This textbook, 
   url       = {https://doi.ieeecomputersociety.org/10.1109/SC41405.2020.00054},
   abstract  = {We present a methodology for precision tuning of full applications. These techniquesmust select a search space composed of either variables or instructions and provide a scalable search strategy. In full application settings one cannot assume compiler support for practical reasons. Thus, an additional important challenge is enabling code refactoring. We argue for an instruction-based search space and we show: 1) how to exploit dynamic program information based on call stacks; and 2) how to exploit the iterative nature of scientific codes, combined with temporal locality. We applied the methodology to tune the implementation of scientific codes written in a combination of Python, CUDA, C++ and Fortran, tuning calls to math exp library functions. The iterative search refinement always reduces the search complexity and the number of steps to solution. Dynamic program information increases search efficacy. Using this approach, we obtain application runtime performance improvements up to 27\%.},
   address   = {Los Alamitos, CA, USA},
-  month     = {nov},
+  month     = {11},
   year      = {2020},
 }
 
@@ -13679,6 +13679,72 @@ Python finite element solver library in the last two chapters.\\ This textbook, 
   date     = {2020},
   title    = {Partial Lasserre relaxation for sparse Max-Cut},
   abstract = {A common approach to solve or find bounds of polynomial optimization problems like Max-Cut is to use the first level of the Lasserre hierarchy. Higher levels of the Lasserre hierarchy provide tighter bounds, but solving these relaxations is usually computationally intractable. We propose to strengthen the first level relaxation for sparse Max-Cut problems using constraints from the second order Lasserre hierarchy. We explore a variety of approaches for adding a subset of the positive semidefinite constraints of the second order sparse relaxation obtained by using the maximum cliques of the graph’s chordal extension. We apply this idea to sparse graphs of different sizes and densities, and provide evidence of its strengths and limitations when compared to the state-of-the-art Max-Cut solver BiqCrunch and the alternative sparse relaxation CS-TSSOS.},
+}
+
+@Article{Xia2020,
+  author    = {Yuanyuan Xia and Shaozhong Guo and Jiangwei Hao and Dan Liu and Jinchen Xu},
+  title     = {Error detection of arithmetic expressions},
+  doi       = {10.1007/s11227-020-03469-7},
+  abstract  = {Inspecting floating-point errors is essential to floating-point operations. In this paper, we present floating-point error detector (FPED), an inspector of floating-point errors for arithmetic expressions. FPED can pick a suitable benchmark generation approach by analyzing the distribution of the expression of a floating-point operation, thereby minimizing the possibilities of underreporting floating-point errors. FPED is also able to determine the significant sources of errors in a floating-point operation according to the frequencies of computation building blocks that contribute most to the floating-point errors, benefiting the follow-up optimizations of computation accuracies. We validate the correctness and functionalities of FPED by conducting experiments on the FPBench benchmark suite. The experimental results demonstrate that FPED can obtain more accurate detection results than the random detecting approach with respect to floating-point error detection. We also compare FPED with the existing dynamic error detection tools. The experimental results show that in most of the 33 test benchmarks, the maximum error results of FPED are greater than Herbgrind and the detection performance is higher than Herbgrind.},
+  journal   = {The Journal of Supercomputing},
+  month     = {11},
+  publisher = {Springer Science and Business Media {LLC}},
+  year      = {2020},
+}
+
+@Article{Squires2020,
+  author      = {Chandler Squires and Joshua Amaniampong and Caroline Uhler},
+  date        = {2020-11-06},
+  title       = {Efficient Permutation Discovery in Causal DAGs},
+  eprint      = {2011.03610},
+  eprintclass = {stat.ME},
+  eprinttype  = {arXiv},
+  abstract    = {The problem of learning a directed acyclic graph (DAG) up to Markov equivalence is equivalent to the problem of finding a permutation of the variables that induces the sparsest graph. Without additional assumptions, this task is known to be NP-hard. Building on the minimum degree algorithm for sparse Cholesky decomposition, but utilizing DAG-specific problem structure, we introduce an efficient algorithm for finding such sparse permutations. We show that on jointly Gaussian distributions, our method with depth $w$ runs in $O(p^{w+3})$ time. We compare our method with $w = 1$ to algorithms for finding sparse elimination orderings of undirected graphs, and show that taking advantage of DAG-specific problem structure leads to a significant improvement in the discovered permutation. We also compare our algorithm to provably consistent causal structure learning algorithms, such as the PC algorithm, GES, and GSP, and show that our method achieves comparable performance with a shorter runtime. Thus, our method can be used on its own for causal structure discovery. Finally, we show that there exist dense graphs on which our method achieves almost perfect performance, so that unlike most existing causal structure learning algorithms, the situations in which our algorithm achieves both good performance and good runtime are not limited to sparse graphs.},
+  file        = {:http\://arxiv.org/pdf/2011.03610v1:PDF},
+  keywords    = {stat.ME, cs.LG, stat.ML},
+}
+
+@Article{Xin2020a,
+  author      = {Ran Xin and Usman A. Khan and Soummya Kar},
+  date        = {2020-11-07},
+  title       = {A fast randomized incremental gradient method for decentralized non-convex optimization},
+  eprint      = {2011.03853},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {We study decentralized non-convex finite-sum minimization problems described over a network of nodes, where each node possesses a local batch of data samples. We propose a single-timescale first-order randomized incremental gradient method, termed as GT-SAGA. GT-SAGA is computationally efficient since it evaluates only one component gradient per node per iteration and achieves provably fast and robust performance by leveraging node-level variance reduction and network-level gradient tracking. For general smooth non-convex problems, we show almost sure and mean-squared convergence to a first-order stationary point and describe regimes of practical significance where GT-SAGA achieves a network-independent convergence rate and outperforms the existing approaches respectively. When the global cost function further satisfies the Polyak-Lojaciewisz condition, we show that GT-SAGA exhibits global linear convergence to an optimal solution in expectation and describe regimes of practical interest where the performance is network-independent and improves upon the existing work. Numerical experiments based on real-world datasets are included to highlight the behavior and convergence aspects of the proposed method.},
+  file        = {:http\://arxiv.org/pdf/2011.03853v1:PDF},
+  keywords    = {math.OC, cs.LG, cs.SY, eess.SY, stat.ML},
+}
+
+@Article{Tan2020a,
+  author      = {Cheng Tan and Chenhao Xie and Andres Marquez and Antonino Tumeo and Kevin Barker and Ang Li},
+  date        = {2020-11-10},
+  title       = {ARENA: Asynchronous Reconfigurable Accelerator Ring to Enable Data-Centric Parallel Computing},
+  eprint      = {2011.04931},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {The next generation HPC and data centers are likely to be reconfigurable and data-centric due to the trend of hardware specialization and the emergence of data-driven applications. In this paper, we propose ARENA -- an asynchronous reconfigurable accelerator ring architecture as a potential scenario on how the future HPC and data centers will be like. Despite using the coarse-grained reconfigurable arrays (CGRAs) as the substrate platform, our key contribution is not only the CGRA-cluster design itself, but also the ensemble of a new architecture and programming model that enables asynchronous tasking across a cluster of reconfigurable nodes, so as to bring specialized computation to the data rather than the reverse. We presume distributed data storage without asserting any prior knowledge on the data distribution. Hardware specialization occurs at runtime when a task finds the majority of data it requires are available at the present node. In other words, we dynamically generate specialized CGRA accelerators where the data reside. The asynchronous tasking for bringing computation to data is achieved by circulating the task token, which describes the data-flow graphs to be executed for a task, among the CGRA cluster connected by a fast ring network. Evaluations on a set of HPC and data-driven applications across different domains show that ARENA can provide better parallel scalability with reduced data movement (53.9\%). Compared with contemporary compute-centric parallel models, ARENA can bring on average 4.37$\times$ speedup. The synthesized CGRAs and their task-dispatchers only occupy 2.93$mm^2$ chip area under 45nm process technology and can run at 800MHz with on average 759.8mW power consumption. ARENA also supports the concurrent execution of multi-applications, offering ideal architectural support for future high-performance parallel computing and data analytics systems.},
+  file        = {:http\://arxiv.org/pdf/2011.04931v1:PDF},
+  keywords    = {cs.DC, cs.AR},
+}
+
+@Article{Moutafis2020b,
+  author    = {Panagiotis Moutafis and Francisco Garc{\'{\i}}a-Garc{\'{\i}}a and George Mavrommatis and Michael Vassilakopoulos and Antonio Corral and Luis Iribarne},
+  title     = {Algorithms for processing the group K nearest-neighbor query on distributed frameworks},
+  doi       = {10.1007/s10619-020-07317-8},
+  abstract  = {Given two datasets of points (called Query and Training), the Group (K) Nearest-Neighbor (GKNN) query retrieves (K) points of the Training with the smallest sum of distances to every point of the Query. This spatial query has been studied during the recent years and several performance improving techniques and pruning heuristics have been proposed. In previous work, we presented the first MapReduce algorithm, consisting of alternating local and parallel phases, which can be used to effectively process the GKNN query when the Query fits in memory, while the Training one belongs to the Big Data category. In this paper, we present a significantly improved algorithm that incorporates a new high-performance refining method, a fast way to calculate distance sums for pruning purposes and several other minor coding and algorithmic improvements. Moreover, we transform this algorithm (which has been implemented in the Hadoop framework) to SpatialHadoop (a popular distributed framework that is dedicated to spatial processing), using a novel two-level partitioning method. Using real world and synthetic datasets, we also present a thorough experimental study of the Hadoop and SpatialHadoop versions of the algorithm, including a backstage analysis of the algorithm’s performance, using metrics that highlight its internal functioning. Finally, we present an experimental comparison of the Hadoop, the SpatialHadoop versions and the version of our previous work, showing that the improved versions are the big winners, with the SpatialHadoop one being faster than its Hadoop counterpart.},
+  journal   = {Distributed and Parallel Databases},
+  month     = {11},
+  publisher = {Springer Science and Business Media {LLC}},
+  year      = {2020},
+}
+
+@PhdThesis{Lambert2020,
+  author      = {Lambert, Matthew},
+  date        = {2020},
+  institution = {University of Delaware},
+  title       = {Analysis of High Performance Sparse Matrix-Vector Multiplication for Small Finite Fields},
+  abstract    = {This thesis explores the intricacies of obtaining high performance sparse matrixvector multiplication on modern hardware, with an emphasis on operating over data from small finite fields. We develop and present novel adaptations of classical, fast matrix multiplication algorithms over these fields and apply them in a sparse setting. Further, we compare these novel formats and algorithms to a wide array of standard sparse matrix formats. In particular, we use modern code analysis tools to show how data layouts, vector/panel widths, and choice of compiler all substantially influence the efficiency of the underlying arithmetic of these various sparse formats. These analyses are performed in a data-agnostic manner, meaning we focus solely on the efficiency of the arithmetic and not on higher-level aspects of performance such as cache access patterns. In particular, we analyze the assembly code produced by compilers, removing matrix-specific intangibles from the discussion of format. These are still important considerations when considering any specific matrix, but they make comparing general formats to one another difficult, without exhaustive benchmarking. These results show the theoretical peak arithmetic performance, which we discuss in this abstract, analytic perspective. We see similar trends in synthetic performance benchmarks. Ultimately, we show that the Method of the Four Russians can be directly adapted to sparse matrix-panel (a matrix with relatively few columns) multiplication and that a custom, high-performance variant can achieve high performance in sparse matrix-vector multiplication, with potential to perform better in real-world matrices.},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
