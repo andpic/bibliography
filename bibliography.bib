@@ -13747,6 +13747,77 @@ Python finite element solver library in the last two chapters.\\ This textbook, 
   abstract    = {This thesis explores the intricacies of obtaining high performance sparse matrixvector multiplication on modern hardware, with an emphasis on operating over data from small finite fields. We develop and present novel adaptations of classical, fast matrix multiplication algorithms over these fields and apply them in a sparse setting. Further, we compare these novel formats and algorithms to a wide array of standard sparse matrix formats. In particular, we use modern code analysis tools to show how data layouts, vector/panel widths, and choice of compiler all substantially influence the efficiency of the underlying arithmetic of these various sparse formats. These analyses are performed in a data-agnostic manner, meaning we focus solely on the efficiency of the arithmetic and not on higher-level aspects of performance such as cache access patterns. In particular, we analyze the assembly code produced by compilers, removing matrix-specific intangibles from the discussion of format. These are still important considerations when considering any specific matrix, but they make comparing general formats to one another difficult, without exhaustive benchmarking. These results show the theoretical peak arithmetic performance, which we discuss in this abstract, analytic perspective. We see similar trends in synthetic performance benchmarks. Ultimately, we show that the Method of the Four Russians can be directly adapted to sparse matrix-panel (a matrix with relatively few columns) multiplication and that a custom, high-performance variant can achieve high performance in sparse matrix-vector multiplication, with potential to perform better in real-world matrices.},
 }
 
+@InCollection{Titolo2020a,
+  author    = {Laura Titolo and Mariano Moscato and Marco A. Feliu and César A. Muñoz},
+  booktitle = {Lecture Notes in Computer Science},
+  title     = {Automatic Generation of Guard-Stable Floating-Point Code},
+  doi       = {10.1007/978-3-030-63461-2_8},
+  pages     = {141--159},
+  publisher = {Springer International Publishing},
+  abstract  = {In floating-point programs, guard instability occurs when the control flow of a conditional statement diverges from its ideal execution under real arithmetic. This phenomenon is caused by the presence of round-off errors in floating-point computations. Writing programs that correctly handle guard instability often requires expertise on finite precision arithmetic. This paper presents a fully automatic toolchain that generates and formally verifies a guard-stable floating-point C program from its functional specification in real arithmetic. The generated program is instrumented to soundly detect when unstable guards may occur and, in these cases, to issue a warning. The proposed approach combines the PRECiSA floating-point static analyzer, the Frama-C software verification suite, and the PVS theorem prover.},
+  year      = {2020},
+}
+
+@Article{Fan2020,
+  author    = {Tiffany Fan and David I. Shuman and Shashanka Ubaru and Yousef Saad},
+  title     = {Spectrum-Adapted Polynomial Approximation for Matrix Functions with Applications in Graph Signal Processing},
+  doi       = {10.3390/a13110295},
+  number    = {11},
+  pages     = {295},
+  volume    = {13},
+  abstract  = {e propose and investigate two new methods to approximate $f(A)b$ for large, sparse, Hermitian matrices $A$. Computations of this form play an important role in numerous signal processing and machine learning tasks. The main idea behind both methods is to first estimate the spectral density of $A$, and then find polynomials of a fixed order that better approximate the function f on areas of the spectrum with a higher density of eigenvalues. Compared to state-of-the-art methods such as the Lanczos method and truncated Chebyshev expansion, the proposed methods tend to provide more accurate approximations of $f(A)b$ at lower polynomial orders, and for matrices $A$ with a large number of distinct interior eigenvalues and a small spectral width. We also explore the application of these techniques to (i) fast estimation of the norms of localized graph spectral filter dictionary atoms, and (ii) fast filtering of time-vertex signals.},
+  journal   = {Algorithms},
+  month     = {nov},
+  publisher = {{MDPI} {AG}},
+  year      = {2020},
+}
+
+@Article{Devarakonda2020,
+  author      = {Aditya Devarakonda and James Demmel},
+  date        = {2020-11-16},
+  title       = {Avoiding Communication in Logistic Regression},
+  eprint      = {2011.08281},
+  eprintclass = {cs.LG},
+  eprinttype  = {arXiv},
+  abstract    = {Stochastic gradient descent (SGD) is one of the most widely used optimization methods for solving various machine learning problems. SGD solves an optimization problem by iteratively sampling a few data points from the input data, computing gradients for the selected data points, and updating the solution. However, in a parallel setting, SGD requires interprocess communication at every iteration. We introduce a new communication-avoiding technique for solving the logistic regression problem using SGD. This technique re-organizes the SGD computations into a form that communicates every $s$ iterations instead of every iteration, where $s$ is a tuning parameter. We prove theoretical flops, bandwidth, and latency upper bounds for SGD and its new communication-avoiding variant. Furthermore, we show experimental results that illustrate that the new Communication-Avoiding SGD (CA-SGD) method can achieve speedups of up to $4.97\times$ on a high-performance Infiniband cluster without altering the convergence behavior or accuracy.},
+  file        = {:http\://arxiv.org/pdf/2011.08281v1:PDF},
+  keywords    = {cs.LG, cs.DC},
+}
+
+@Article{Cojean2020,
+  author      = {Terry Cojean and Yu-Hsiang "Mike" Tsai and Hartwig Anzt},
+  date        = {2020-11-17},
+  title       = {Ginkgo -- A Math Library designed for Platform Portability},
+  eprint      = {2011.08879},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {The first associations to software sustainability might be the existence of a continuous integration (CI) framework; the existence of a testing framework composed of unit tests, integration tests, and end-to-end tests; and also the existence of software documentation. However, when asking what is a common deathblow for a scientific software product, it is often the lack of platform and performance portability. Against this background, we designed the Ginkgo library with the primary focus on platform portability and the ability to not only port to new hardware architectures, but also achieve good performance. In this paper we present the Ginkgo library design, radically separating algorithms from hardware-specific kernels forming the distinct hardware executors, and report our experience when adding execution backends for NVIDIA, AMD, and Intel GPUs. We also comment on the different levels of performance portability, and the performance we achieved on the distinct hardware backends.},
+  file        = {:http\://arxiv.org/pdf/2011.08879v1:PDF},
+  keywords    = {cs.DC, cs.MS, cs.PF, cs.SE},
+}
+
+@Article{Chen2020f,
+  author      = {Chao Chen and Tianyu Liang and George Biros},
+  date        = {2020-11-16},
+  title       = {RCHOL: Randomized Cholesky Factorization for Solving SDD Linear Systems},
+  eprint      = {2011.07769},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {We introduce a randomized algorithm, namely {\tt rchol}, to construct an approximate Cholesky factorization for a given sparse Laplacian matrix (a.k.a., graph Laplacian). The (exact) Cholesky factorization for the matrix introduces a clique in the associated graph after eliminating every row/column. By randomization, {\tt rchol} samples a subset of the edges in the clique. We prove {\tt rchol} is breakdown free and apply it to solving linear systems with symmetric diagonally-dominant matrices. In addition, we parallelize {\tt rchol} based on the nested dissection ordering for shared-memory machines. Numerical experiments demonstrated the robustness and the scalability of {\tt rchol}. For example, our parallel code scaled up to 64 threads on a single node for solving the 3D Poisson equation, discretized with the 7-point stencil on a $1024\times 1024 \times 1024$ grid, or \textbf{one billion} unknowns.},
+  file        = {:http\://arxiv.org/pdf/2011.07769v1:PDF},
+  keywords    = {math.NA, cs.MS, cs.NA},
+}
+
+@InProceedings{Bereznyi2020,
+  author    = {Daniel Bereznyi and Ahmad Qutbuddin and YoungGu Her and KwangSoo Yang},
+  booktitle = {Proceedings of the 28th International Conference on Advances in Geographic Information Systems},
+  date      = {2020},
+  title     = {Node-attributed Spatial Graph Partitioning},
+  doi       = {10.1145/3397536.3422198},
+  series    = {SIGSPATIAL '20},
+  abstract  = {Given a spatial graph and a set of node attributes, the Node-attributed Spatial Graph Partitioning (NSGP) problem partitions a node-attributed spatial graph into k homogeneous sub-graphs that minimize both the total RMSErank1 and edge-cuts while meeting a size constraint on the sub-graphs. RMSErank1 is the Root Mean Square Error between a matrix and its rank-one decomposition. The NSGP problem is important for many societal applications such as identifying homogeneous communities in a spatial graph and detecting interrelated patterns in traffic accidents. This problem is NP-hard; it is computationally challenging because of the large size of spatial graphs and the constraint that the sub-graphs must be homogeneous, i.e. similar in terms of node attributes. This paper proposes a novel approach for finding a set of homogeneous sub-graphs that can minimize both the total RMSErank1 and edge-cuts while meeting the size constraint. Experiments and a case study using U.S. Census datasets and HP#6 watershed network datasets demonstrate that the proposed approach partitions a spatial graph into a set of homogeneous sub-graphs and reduces the computational cost.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
