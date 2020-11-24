@@ -13818,6 +13818,30 @@ Python finite element solver library in the last two chapters.\\ This textbook, 
   abstract  = {Given a spatial graph and a set of node attributes, the Node-attributed Spatial Graph Partitioning (NSGP) problem partitions a node-attributed spatial graph into k homogeneous sub-graphs that minimize both the total RMSErank1 and edge-cuts while meeting a size constraint on the sub-graphs. RMSErank1 is the Root Mean Square Error between a matrix and its rank-one decomposition. The NSGP problem is important for many societal applications such as identifying homogeneous communities in a spatial graph and detecting interrelated patterns in traffic accidents. This problem is NP-hard; it is computationally challenging because of the large size of spatial graphs and the constraint that the sub-graphs must be homogeneous, i.e. similar in terms of node attributes. This paper proposes a novel approach for finding a set of homogeneous sub-graphs that can minimize both the total RMSErank1 and edge-cuts while meeting the size constraint. Experiments and a case study using U.S. Census datasets and HP\#6 watershed network datasets demonstrate that the proposed approach partitions a spatial graph into a set of homogeneous sub-graphs and reduces the computational cost.},
 }
 
+@InProceedings{Li2020h,
+  author    = {Jiajia Li and Mahesh Lakshminarasimhan and Xiaolong Wu and Ang Li and Catherine Olschanowsky and Kevin Barker},
+  booktitle = {Proceedings of the {IEEE} International Symposium on Workload Characterization},
+  title     = {A Sparse Tensor Benchmark Suite for {CPUs} and {GPUs}},
+  doi       = {10.1109/iiswc50251.2020.00027},
+  publisher = {{IEEE}},
+  series    = {IISWC 2020},
+  abstract  = {Tensor computations present significant performance challenges that impact a wide spectrum of applications ranging from machine learning, healthcare analytics, social network analysis, data mining to quantum chemistry and signal processing. Efforts to improve the performance of tensor computations include exploring data layout, execution scheduling, and parallelism in common tensor kernels. This work presents a benchmark suite for arbitrary-order sparse tensor kernels using state-of-the-art tensor formats: coordinate (COO) and hierarchical coordinate (HiCOO) on CPUs and GPUs. It presents a set of reference tensor kernel implementations that are compatible with real-world tensors and power law tensors extended from synthetic graph generation techniques. We also propose Roofline performance models for these kernels to provide insights of computer platforms from sparse tensor view. This benchmark suite along with the synthetic tensor generator is publicly available.},
+  month     = {10},
+  year      = {2020},
+}
+
+@InProceedings{Barik2020,
+  author    = {Reet Barik and Marco Minutoli and Mahantesh Halappanavar and Nathan R. Tallent and Ananth Kalyanaraman},
+  booktitle = {Proceedings of the International Symposium on Workload Characterization},
+  title     = {Vertex Reordering for Real-World Graphs and Applications: An Empirical Evaluation},
+  doi       = {10.1109/iiswc50251.2020.00031},
+  publisher = {{IEEE}},
+  series    = {IISWC 2020},
+  abstract  = {Vertex reordering is a way to improve locality in graph computations. Given an input (or “natural”) order, reordering aims to compute an alternate permutation of the vertices that is aimed at maximizing a locality-based objective. Given decades of research on this topic, there are tens of graph reordering schemes, and there are also several linear arrangement “gap” measures for treatment as objectives. However, a comprehensive empirical analysis of the efficacy of the ordering schemes against the different gap measures, and against real-world applications is currently lacking. In this study, we present an extensive empirical evaluation of up to 11 ordering schemes, taken from different classes of approaches, on a set of 34 real-world graphs emerging from different application domains. Our study is presented in two parts: a) a thorough comparative evaluation of the different ordering schemes on their effectiveness to optimize different linear arrangement gap measures, relevant to preserving locality; and b) extensive evaluation of the impact of the ordering schemes on two real-world, parallel graph applications, namely, community detection and influence maximization. Our studies show a significant divergence among the ordering schemes (up to 40x between the best and the poor) in their effectiveness to reduce the gap measures; and a wide ranging impact of the ordering schemes on various aspects including application runtime (up to 4x), memory and cache use, load balancing, and parallel work and efficiency. The comparative study also helps in revealing the nuances of a parallel environment (compared to serial) on the ordering schemes and their role in optimizing applications.},
+  month     = {10},
+  year      = {2020},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
