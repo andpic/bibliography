@@ -13629,7 +13629,7 @@ Python finite element solver library in the last two chapters.\\ This textbook, 
 
 @InProceedings{You2020b,
   author    = {X. You and H. Yang and Z. Luan and D. Qian and X. Liu},
-  booktitle = {Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis},
+  booktitle = {Proceedings of the 2020 International Conference for High Performance Computing, Networking, Storage and Analysis},
   title     = {Zerospy: Exploring Software Inefficiency with Redundant Zeros},
   doi       = {10.1109/SC41405.2020.00033},
   pages     = {397-410},
@@ -13645,7 +13645,7 @@ Python finite element solver library in the last two chapters.\\ This textbook, 
 
 @InProceedings{Das2020b,
   author    = {A. Das and I. Briggs and G. Gopalakrishnan and S. Krishnamoorthy and P. Panchekha},
-  booktitle = {International Conference for High Performance Computing, Networking, Storage and Analysis},
+  booktitle = {Proceedings of the 2020 International Conference for High Performance Computing, Networking, Storage and Analysis},
   title     = {Scalable yet Rigorous Floating-Point Error Analysis},
   doi       = {10.1109/SC41405.2020.00055},
   pages     = {708-721},
@@ -13661,7 +13661,7 @@ Python finite element solver library in the last two chapters.\\ This textbook, 
 
 @InProceedings{Brunie2020a,
   author    = {H. Brunie and C. Iancu and K. Ibrahim and P. Brisk and B. Cook},
-  booktitle = {International Conference for High Performance Computing, Networking, Storage and Analysis},
+  booktitle = {Proceedings of the 2020 International Conference for High Performance Computing, Networking, Storage and Analysis},
   title     = {Tuning Floating-Point Precision Using Dynamic Program Information and Temporal Locality},
   doi       = {10.1109/SC41405.2020.00054},
   pages     = {694-707},
@@ -13840,6 +13840,24 @@ Python finite element solver library in the last two chapters.\\ This textbook, 
   abstract  = {Vertex reordering is a way to improve locality in graph computations. Given an input (or “natural”) order, reordering aims to compute an alternate permutation of the vertices that is aimed at maximizing a locality-based objective. Given decades of research on this topic, there are tens of graph reordering schemes, and there are also several linear arrangement “gap” measures for treatment as objectives. However, a comprehensive empirical analysis of the efficacy of the ordering schemes against the different gap measures, and against real-world applications is currently lacking. In this study, we present an extensive empirical evaluation of up to 11 ordering schemes, taken from different classes of approaches, on a set of 34 real-world graphs emerging from different application domains. Our study is presented in two parts: a) a thorough comparative evaluation of the different ordering schemes on their effectiveness to optimize different linear arrangement gap measures, relevant to preserving locality; and b) extensive evaluation of the impact of the ordering schemes on two real-world, parallel graph applications, namely, community detection and influence maximization. Our studies show a significant divergence among the ordering schemes (up to 40x between the best and the poor) in their effectiveness to reduce the gap measures; and a wide ranging impact of the ordering schemes on various aspects including application runtime (up to 4x), memory and cache use, load balancing, and parallel work and efficiency. The comparative study also helps in revealing the nuances of a parallel environment (compared to serial) on the ordering schemes and their role in optimizing applications.},
   month     = {10},
   year      = {2020},
+}
+
+@Article{Goli2020,
+  author       = {Mehdi Goli and Kumudha Narasimhan and Ruyman Reyes and Ben Tracy and Daniel Soutar and Svetlozar Georgiev},
+  date         = {2020},
+  journaltitle = {Proceedings of the 2020 IEEE/ACM International Workshop on Performance, Portability and Productivity in HPC},
+  title        = {Towards Cross-Platform Performance Portability ofDNN Models using SYCL},
+  series       = {P3HPC '20},
+  abstract     = {The incoming deployment of Exascale platforms with a myriad of different architectures and co-processors have prompted the need to provide a software ecosystem based on open standards that can simplify maintaining HPC applications on different hardware. Applications written for a particular platform should be portable to a different one, ensuring performance is as close to the peak as possible. However, it is not expected that key performance routines on relevant HPC applications will be performance portable as is, especially for common building blocks such as BLAS or DNN. The oneAPI the initiative aims to tackle this problem by combining a programming model, SYCL, with a set of interfaces for common building blocks that can be optimized for different hardware vendors. In particular, oneAPI includes the oneDNN performance library, which contains building blocks for deep learning applications and frameworks. By using the SYCL programming model, it can integrate easily with existing SYCL and C++ applications, sharing data and executing collaboratively on devices with the rest of the application. In this paper, we introduce a cuDNN backend for oneDNN, which allows running oneAPI applications on NVIDIA hardware taking advantage of existing building blocks from the CUDA ecosystem. We implement relevant neural networks (ResNet-50 and VGG16) on native CUDA and also a version of oneAPI with a CUDA backend, and demonstrate that performance portability can be achieved by leveraging existing building blocks for the target hardware.},
+}
+
+@Article{Sewall2020,
+  author       = {Jason Sewall and S. John Pennycook and Douglas Jacobsen and Tom Deakin and Simon McIntosh-Smith},
+  date         = {2020},
+  journaltitle = {Proceedings of the 2020 IEEE/ACM International Workshop on Performance, Portability and Productivity in HPC},
+  title        = {Interpreting and Visualizing Performance Portability Metrics},
+  series       = {P3HPC '20},
+  abstract     = {Recent work has introduced a number of tools and techniques for reasoning about the interplay between application performance and portability, or “performance portability”. These tools have proven useful for setting goals and guiding highlevel discussions, but our understanding of the performance portability problem remains incomplete. Different views of the same performance efficiency data offer different insights into an application’s performance portability (or lack thereof): standard statistical measures such as the mean and standard deviation require careful interpretation, and even metrics designed specifically to measure performance portability may obscure differences between applications.\\ This paper offers a critical assessment of existing approaches for summarizing performance efficiency data across different platforms, and proposes visualization as a means to extract useful information about the underlying distribution. We explore a number of alternative visualizations, outlining a new methodology that enables developers to reason about the performance portability of their applications and how it might be improved. This study unpicks what it might mean to be “performance portable” and provides useful tools to explore that question.},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
