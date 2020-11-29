@@ -13860,6 +13860,92 @@ Python finite element solver library in the last two chapters.\\ This textbook, 
   abstract     = {Recent work has introduced a number of tools and techniques for reasoning about the interplay between application performance and portability, or “performance portability”. These tools have proven useful for setting goals and guiding highlevel discussions, but our understanding of the performance portability problem remains incomplete. Different views of the same performance efficiency data offer different insights into an application’s performance portability (or lack thereof): standard statistical measures such as the mean and standard deviation require careful interpretation, and even metrics designed specifically to measure performance portability may obscure differences between applications.\\ This paper offers a critical assessment of existing approaches for summarizing performance efficiency data across different platforms, and proposes visualization as a means to extract useful information about the underlying distribution. We explore a number of alternative visualizations, outlining a new methodology that enables developers to reason about the performance portability of their applications and how it might be improved. This study unpicks what it might mean to be “performance portable” and provides useful tools to explore that question.},
 }
 
+@InProceedings{Choi2020,
+  author    = {Jaemin Choi and David F. Richards and Laxmikant V. Kale},
+  booktitle = {Proceedings of the 2020 IEEE/ACM nternational Workshop on Extreme Scale Programming Models and Middleware},
+  date      = {2020},
+  title     = {Achieving Computation-Communication Overlapwith Overdecomposition on {GPU} Systems},
+  series    = {ESPM2 '20},
+  abstract  = {The landscape of high performance computing is shifting towards a collection of multi-GPU nodes, widening the gap between on-node compute and off-node communication capabilities. Consequently, the ability to tolerate communication latencies and maximize utilization of the compute hardware are becoming increasingly important in achieving high performance. Overdecomposition has been successfully adopted on traditional CPU-based systems to achieve computation-communication overlap, significantly reducing the impact of communication on application performance. However, it has been unclear whether overdecomposition can provide the same benefits on modern GPU systems. In this work, we address the challenges in achieving computation-communication overlap with overdecomposition on GPU systems using the Charm++ parallel programming system. By prioritizing communication with CUDA streams in the application and supporting asynchronous progress of GPU operations in the Charm++ runtime system, we obtain improvements in overall performance of up to 50\% and 47\% with proxy applications Jacobi3D and MiniMD, respectively.},
+}
+
+@InProceedings{Nayak2020b,
+  author    = {Pratik Nayak and Terry Cojean and Hartwig Anzt},
+  booktitle = {Proceedings of the 11th IEEE/ACM Workshop on Latest Advances in Scalable Algorithms for Large-Scale Systems},
+  date      = {2020},
+  title     = {Two-stage Asynchronous Iterative Solversfor multi-{GPU} Clusters},
+  series    = {ScalA '20},
+  abstract  = {Given the trend of supercomputers accumulating much of their compute power in GPU accelerators composed of thousands of cores and operating in streaming mode, global synchronization points become a bottleneck, severely confining the performance of applications. In consequence, asynchronous methods breaking up the bulk-synchronous programming model are becoming increasingly attractive. In this paper, we study a GPU-focused asynchronous version of the Restricted Additive Schwarz (RAS) method that employs preconditioned Krylov subspace methods as subdomain solvers. We analyze the method for various parameters such as local solver tolerance and iteration counts. Leveraging the multi-GPU architecture on Summit, we show that these two-stage methods are more memory and time efficient than asynchronous RAS using direct solvers. We also demonstrate the superiority over synchronous counterparts, and present results using one-sided CUDA-aware MPI on up to 36 NVIDIA V100 GPUs.},
+}
+
+@Article{Khimich2020,
+  author       = {O. M. Khimich and O. V. Popov and O. V. Chistyakov and V. A. Sidoruk},
+  date         = {2020-11},
+  journaltitle = {Cybernetics and Systems Analysis},
+  title        = {A Parallel Algorithm for Solving a Partial Eigenvalue Problem for Block-Diagonal Bordered Matrices},
+  doi          = {10.1007/s10559-020-00311-z},
+  number       = {6},
+  pages        = {913--923},
+  volume       = {56},
+  abstract     = {A hybrid algorithm of the iterative method for the solution subspace of a partial generalized eigenvalue problem for symmetric positive definite sparse matrices of block-diagonal structure with bordering on hybrid computers with graphic processors is proposed, efficiency coefficients of the algorithm are obtained, and the algorithm is tested against test and practical problems.},
+  publisher    = {Springer Science and Business Media {LLC}},
+}
+
+@InProceedings{Gratien2020,
+  author    = {Jean-Marc Gratien},
+  booktitle = {Proceedings of the 2020 IEEE/ACM 6th Workshop on the LLVM Compiler Infrastructure in HPC (LLVM-HPC) and Workshop on HierarchicalParallelism for Exascale Computing},
+  date      = {2020},
+  title     = {Introducing multi-level parallelism, at coarse, fineand instruction level to enhance the performance ofiterative solvers for large sparse linear systems on Multi- and Many-core architecture},
+  series    = {HiPar '20},
+  abstract  = {With the evolution of High Performance Computing, multi-core and many-core systems are now a common feature of new hardware architectures. The introduction of very large number of cores at the processor level is challenging because it requires to handle multi level parallelism at various levels either coarse or fine to fully take advantage of the offered computing power. The induced programming effort can be fixed with parallel programming models based on the data flow model and the task programming paradigm [1]. To do so many of the standard numerical algorithms must be revisited as they cannot be easily parallelized at the finest levels. Iterative linear solvers are a key part of petroleum reservoir simulation as they can represent up to 80\% of the total computing time. In these algorithms, the standard preconditioning methods for large, sparse and unstructured matrices – such as Incomplete LU Factorization (ILU) or Algebraic Multigrid (AMG) – fail to scale on shared-memory architectures with large number of cores. In this paper we reconsider preconditioning algorithms to better introduce multi-level parallelism at both coarse level with MPI, fine level with threads and at the instruction level to enable SIMD optimizations. This paper illustrates how we enhance the implementation of preconditioners like the multilevel domain decomposition (DDML) preconditioners [2], based on the popular Additive Schwartz Method (ASM), or the classical ILU0 preconditioner with the fine grained parallel fixed point variant presented in [3]. Our approach is validated on linear systems extracted from realistic petroleum reservoir simulations. The robustness of the preconditioners is tested with respect to the data heterogeneities of the study cases. We evaluate the extensibility of our implementation regarding the model sizes and its scalability regarding the large number of cores provided by new KNL processors or multi-nodes clusters.},
+}
+
+@Article{Li2020i,
+  author       = {Shengbo Eben Li and Zhitao Wang and Yang Zheng and Qi Sun and Jiaxin Gao and Fei Ma and Keqiang Li},
+  date         = {2020-12},
+  journaltitle = {Transportation Research Part C: Emerging Technologies},
+  title        = {Synchronous and asynchronous parallel computation for large-scale optimal control of connected vehicles},
+  doi          = {10.1016/j.trc.2020.102842},
+  pages        = {102842},
+  volume       = {121},
+  abstract     = {Connected vehicles is an important intelligent transportation system to improve the traffic performance. This paper proposes two parallel computation algorithms to solve a large-scale optimal control problem in the coordination of multiple connected vehicles. The coordination is formulated as a centralized optimization problem in the receding horizon fashion. A decentralized computation network is designed to facilitate the development of parallel algorithms. We use Taylor series to linearize non-convex constraints, and introduce a set of consensus constraints to transform the centralized problem to a standard consensus optimization problem. A synchronous parallel algorithm is firstly proposed to solve the consensus optimization problem by applying the alternating direction method of multipliers (ADMM). The ADMM framework allows us to decompose the coupling constraints and decision variables, leading to parallel iterations for each vehicle in a synchronous fashion. We then propose an asynchronous version of the parallel algorithm that allows the vehicles to update their variables asynchronously in the computation network. The effectiveness and efficiency of the proposed algorithms are validated by extensive numerical simulations.},
+  publisher    = {Elsevier {BV}},
+}
+
+@Article{Asgari2020,
+  author      = {Bahar Asgari and Ramyad Hadidi and Joshua Dierberger and Charlotte Steinichen and Hyesoon Kim},
+  date        = {2020-11-22},
+  title       = {Copernicus: Characterizing the Performance Implications of Compression Formats Used in Sparse Workloads},
+  eprint      = {2011.10932},
+  eprintclass = {cs.AR},
+  eprinttype  = {arXiv},
+  abstract    = {Sparse matrices are the key ingredients of several application domains, from scientific computation to machine learning. The primary challenge with sparse matrices has been efficiently storing and transferring data, for which many sparse formats have been proposed to significantly eliminate zero entries. Such formats, essentially designed to optimize memory footprint, may not be as successful in performing faster processing. In other words, although they allow faster data transfer and improve memory bandwidth utilization -- the classic challenge of sparse problems -- their decompression mechanism can potentially create a computation bottleneck. Not only is this challenge not resolved, but also it becomes more serious with the advent of domain-specific architectures (DSAs), as they intend to more aggressively improve performance. The performance implications of using various formats along with DSAs, however, has not been extensively studied by prior work. To fill this gap of knowledge, we characterize the impact of using seven frequently used sparse formats on performance, based on a DSA for sparse matrix-vector multiplication (SpMV), implemented on an FPGA using high-level synthesis (HLS) tools, a growing and popular method for developing DSAs. Seeking a fair comparison, we tailor and optimize the HLS implementation of decompression for each format. We thoroughly explore diverse metrics, including decompression overhead, latency, balance ratio, throughput, memory bandwidth utilization, resource utilization, and power consumption, on a variety of real-world and synthetic sparse workloads.},
+  file        = {:http\://arxiv.org/pdf/2011.10932v1:PDF},
+  keywords    = {cs.AR},
+}
+
+@Article{Bernaschi2020,
+  author       = {Massimo Bernaschi and Pasqua D'Ambra and Dario Pasquini},
+  date         = {2020-11},
+  journaltitle = {Software Impacts},
+  title        = {{BootCMatchG}: An adaptive Algebraic {MultiGrid} linear solver for {GPUs}},
+  doi          = {10.1016/j.simpa.2020.100041},
+  pages        = {100041},
+  abstract     = {Sparse solvers are one of the building blocks of any technology for reliable and high-performance scientific and engineering computing. In this paper we present a software package which implements an efficient multigrid sparse solver running on Graphics Processing Units. The package is a branch of a wider initiative of software development for sparse Linear Algebra computations on emergent HPC architectures involving a large research group working in many application projects over the last ten years.},
+  publisher    = {Elsevier {BV}},
+}
+
+@Article{Rezaei2020,
+  author       = {Javad Rezaei and Fatemeh Zare-Mirakabad and Seyed Ali MirHassani and Sayed-Amir Marashi},
+  date         = {2020-11},
+  journaltitle = {Computers {\&} Operations Research},
+  title        = {{EIA}-{CNDP}: An Exact Iterative Algorithm for Critical Node Detection Problem},
+  doi          = {10.1016/j.cor.2020.105138},
+  pages        = {105138},
+  abstract     = {In designing reliable and impermeable networks, the robustness of the network is evaluated against the removal and failure of the node or edge where the network robustness (network connectivity) is measured using various metrics (objective functions) such as the number of connected components, size of the largest connected component, and pairwise connectivity. Critical node detection problem (CNDP) is one of the main issues in this literature, which aims to find a set of vertices whose removal maximizes or minimizes some objective function. In this paper, the focus is on solving CNDP, considering the size of the largest connected component as its objective function. In this regard, we introduce a new problem called K-Group-Division-Problem and present a mixed integer linear programming model to solve it. We prove that under certain circumstances, any optimal solution of the new problem is also an optimal solution of CNDP. Analyzing the performance of the proposed model on solving CNDP, indicates that this model is highly competitive against the base model in the literature. Furthermore, a novel exact algorithm is introduced which improves the proposed mixed integer linear programming model to address CNDP more efficiently. The results show that the proposed algorithm is much more efficient, and, compared with the base model, it can solve the problem on networks with a higher number of nodes.},
+  publisher    = {Elsevier {BV}},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
