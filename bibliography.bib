@@ -14024,6 +14024,39 @@ Python finite element solver library in the last two chapters.\\ This textbook, 
   issbn        = {978-3-030-47956-5},
 }
 
+@Article{Mohammed2020,
+  author       = {Thaha Mohammed and Aiiad Albeshri and Iyad Katib and Rashid Mehmood},
+  date         = {2020-11},
+  journaltitle = {The Journal of Supercomputing},
+  title        = {{DIESEL}: A novel deep learning-based tool for {SpMV} computations and solving sparse linear equation systems},
+  doi          = {10.1007/s11227-020-03489-3},
+  abstract     = {Sparse linear algebra is central to many areas of engineering, science, and business. The community has done considerable work on proposing new methods for sparse matrix-vector multiplication (SpMV) computations and iterative sparse solvers on graphical processing units (GPUs). Due to vast variations in matrix features, no single method performs well across all sparse matrices. A few tools on automatic prediction of best-performing SpMV kernels have emerged recently and require many more efforts to fully utilize their potential. The utilization of a GPU by the existing SpMV kernels is far from its full capacity. Moreover, the development and performance analysis of SpMV techniques on GPUs have not been studied in sufficient depth. This paper proposes DIESEL, a deep learning-based tool that predicts and executes the best performing SpMV kernel for a given matrix using a feature set carefully devised by us through rigorous empirical and mathematical instruments. The dataset comprises 1056 matrices from 26 different real-life application domains including computational fluid dynamics, materials, electromagnetics, economics, and more. We propose a range of new metrics and methods for performance analysis, visualization, and comparison of SpMV tools. DIESEL provides better performance with its accuracy 88.2\%, workload accuracy 91.96\%, and average relative loss 4.4\%, compared to 85.9\%, 85.31\%, and 7.65\% by the next best performing artificial intelligence (AI)-based SpMV tool. The extensive results and analyses presented in this paper provide several key insights into the performance of the SpMV tools and how these relate to the matrix datasets and the performance metrics, allowing the community to further improve and compare basic and AI-based SpMV tools in the future.},
+  publisher    = {Springer Science and Business Media {LLC}},
+}
+
+@Article{Beeumen2020,
+  author      = {Roel Van Beeumen and Khaled Z. Ibrahim and Gregory D. Kahanamoku-Meyer and Norman Y. Yao and Chao Yang},
+  date        = {2020-12-01},
+  title       = {Enhancing Scalability of a Matrix-Free Eigensolver for Studying Many-Body Localization},
+  eprint      = {2012.00217},
+  eprintclass = {cond-mat.dis-nn},
+  eprinttype  = {arXiv},
+  abstract    = {In [Van Beeumen, et. al, HPC Asia 2020, https://www.doi.org/10.1145/3368474.3368497] a scalable and matrix-free eigensolver was proposed for studying the many-body localization (MBL) transition of two-level quantum spin chain models with nearest-neighbor $XX+YY$ interactions plus $Z$ terms. This type of problem is computationally challenging because the vector space dimension grows exponentially with the physical system size, and averaging over different configurations of the random disorder is needed to obtain relevant statistical behavior. For each eigenvalue problem, eigenvalues from different regions of the spectrum and their corresponding eigenvectors need to be computed. Traditionally, the interior eigenstates for a single eigenvalue problem are computed via the shift-and-invert Lanczos algorithm. Due to the extremely high memory footprint of the LU factorizations, this technique is not well suited for large number of spins $L$, e.g., one needs thousands of compute nodes on modern high performance computing infrastructures to go beyond $L = 24$. The matrix-free approach does not suffer from this memory bottleneck, however, its scalability is limited by a computation and communication imbalance. We present a few strategies to reduce this imbalance and to significantly enhance the scalability of the matrix-free eigensolver. To optimize the communication performance, we leverage the consistent space runtime, CSPACER, and show its efficiency in accelerating the MBL irregular communication patterns at scale compared to optimized MPI non-blocking two-sided and one-sided RMA implementation variants. The efficiency and effectiveness of the proposed algorithm is demonstrated by computing eigenstates on a massively parallel many-core high performance computer.},
+  file        = {:http\://arxiv.org/pdf/2012.00217v1:PDF},
+  keywords    = {cond-mat.dis-nn, cs.DC, cs.PF},
+}
+
+@InCollection{Klein2020,
+  author    = {Ole Klein},
+  booktitle = {Modeling, Simulation and Optimization of Complex Processes {HPSC} 2018},
+  date      = {2020-12},
+  title     = {An Improved Conjugate Gradients Method for Quasi-linear Bayesian Inverse Problems, Tested on an Example from Hydrogeology},
+  doi       = {10.1007/978-3-030-55240-4_17},
+  pages     = {357--385},
+  publisher = {Springer International Publishing},
+  abstract  = {We present a framework for high-performance quasi-linear Bayesian inverse modelling and its application in hydrogeology; extensions to other domains of application are straightforward due to generic programming and modular design choices. The central component of the framework is a collection of specialized preconditioned methods for nonlinear least squares: the classical three-term recurrence relation of Conjugate Gradients and related methods is replaced by a specific choice of six-term recurrence relation, which is used to reformulate the resulting optimization problem and eliminate several costly matrix-vector products. We demonstrate that this reformulation leads to improved performance, robustness, and accuracy for a synthetic example application from hydrogeology. The proposed prior-preconditioned caching CG scheme is the only one among the considered CG methods that scales perfectly in the number of estimated parameters. In the highly relevant case of sparse measurements, the proposed method is up to two orders of magnitude faster than the classical CG scheme, and at least six times faster than a prior-preconditioned, non-caching version. It is therefore particularly suited for the large-scale inversion of sparse observations.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
