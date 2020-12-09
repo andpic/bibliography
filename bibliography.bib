@@ -14057,6 +14057,37 @@ Python finite element solver library in the last two chapters.\\ This textbook, 
   abstract  = {We present a framework for high-performance quasi-linear Bayesian inverse modelling and its application in hydrogeology; extensions to other domains of application are straightforward due to generic programming and modular design choices. The central component of the framework is a collection of specialized preconditioned methods for nonlinear least squares: the classical three-term recurrence relation of Conjugate Gradients and related methods is replaced by a specific choice of six-term recurrence relation, which is used to reformulate the resulting optimization problem and eliminate several costly matrix-vector products. We demonstrate that this reformulation leads to improved performance, robustness, and accuracy for a synthetic example application from hydrogeology. The proposed prior-preconditioned caching CG scheme is the only one among the considered CG methods that scales perfectly in the number of estimated parameters. In the highly relevant case of sparse measurements, the proposed method is up to two orders of magnitude faster than the classical CG scheme, and at least six times faster than a prior-preconditioned, non-caching version. It is therefore particularly suited for the large-scale inversion of sparse observations.},
 }
 
+@InProceedings{Elekes2020,
+  author    = {Marton Elekes and Attila Nagy and Dávid Sándor and János Benjamin Antal and Timothy A. Davis and Gabor Szárnyas},
+  booktitle = {Proceedings of the 2020 IEEE High Performance Extreme Computing Conference},
+  date      = {2020},
+  title     = {A {GraphBLAS} solution to the {SIGMOD} 2014 Programming Contest using multi-source {BFS}},
+  series    = {HPEC 2020},
+  abstract  = {The GraphBLAS standard defines a set of fundamental building blocks for formulating graph algorithms in the language of linear algebra. Since its first release in 2017, the expressivity of the GraphBLAS API and the performance of its implementations (such as SuiteSparse:GraphBLAS) have been studied on a number of textbook graph algorithms such as BFS, single-source shortest path, and connected components. However, less attention was devoted to other aspects of graph processing such as handling typed and attributed graphs (also known as property graphs), and making use of complex graph query techniques (handling paths, aggregation, and filtering). To study these problems in more detail, we have used GraphBLAS to solve the case study of the 2014 SIGMOD Programming Contest, which defines complex graph processing tasks that require a diverse set of operations. Our solution makes heavy use of multi-source BFS algorithms expressed as sparse matrix-matrix multiplications along with other GraphBLAS techniques such as masking and submatrix extraction. While the queries can be formulated in GraphBLAS concisely, our performance evaluation shows mixed results. For some queries and data sets, the performance is competitive with the hand-optimized top solutions submitted to the contest, however, in some cases, it is currently outperformed by orders of magnitude.},
+}
+
+@Article{Myers2020,
+  author      = {Jeremy M. Myers and Daniel M. Dunlavy and Keita Teranishi and D. S. Hollman},
+  date        = {2020-12-02},
+  title       = {Parameter Sensitivity Analysis of the SparTen High Performance Sparse Tensor Decomposition Software: Extended Analysis},
+  eprint      = {2012.01520},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {Tensor decomposition models play an increasingly important role in modern data science applications. One problem of particular interest is fitting a low-rank Canonical Polyadic (CP) tensor decomposition model when the tensor has sparse structure and the tensor elements are nonnegative count data. SparTen is a high-performance C++ library which computes a low-rank decomposition using different solvers: a first-order quasi-Newton or a second-order damped Newton method, along with the appropriate choice of runtime parameters. Since default parameters in SparTen are tuned to experimental results in prior published work on a single real-world dataset conducted using MATLAB implementations of these methods, it remains unclear if the parameter defaults in SparTen are appropriate for general tensor data. Furthermore, it is unknown how sensitive algorithm convergence is to changes in the input parameter values. This report addresses these unresolved issues with large-scale experimentation on three benchmark tensor data sets. Experiments were conducted on several different CPU architectures and replicated with many initial states to establish generalized profiles of algorithm convergence behavior.},
+  file        = {:http\://arxiv.org/pdf/2012.01520v1:PDF},
+  keywords    = {math.NA, cs.MS, cs.NA, cs.PF, stat.CO},
+}
+
+@InProceedings{Choi2020a,
+  author    = {Jaemin Choi and David F. Richards and Laxmikant V. Kale},
+  booktitle = {Proceedings of the IEEE/ACM 5th International Workshop on Extreme Scale Programming Models and Middleware},
+  date      = {2020},
+  title     = {Achieving Computation-Communication Overlapwith Overdecomposition on {GPU} Systems},
+  series    = {ESPM2 2020},
+  url       = {https://conferences.computer.org/scwpub/pdfs/ESPM22020-3LkQkprM0X1ItzzieZeAlw/107400a001/107400a001.pdf},
+  abstract  = {The landscape of high performance computing is shifting towards a collection of multi-GPU nodes, widening the gap between on-node compute and off-node communication capabilities. Consequently, the ability to tolerate communication latencies and maximize utilization of the compute hardware are becoming increasingly important in achieving high performance. Overdecomposition has been successfully adopted on traditional CPU-based systems to achieve computation-communication overlap, significantly reducing the impact of communication on application performance. However, it has been unclear whether overdecomposition can provide the same benefits on modern GPU systems. In this work, we address the challenges in achieving computation-communication overlap with overdecomposition on GPU systems using the Charm++ parallel programming system. By prioritizing communication with CUDA streams in the application and supporting asynchronous progress of GPU operations in the Charm++ runtime system, we obtain improvements in overall performance of up to 50\% and 47\% with proxy applications Jacobi3D and MiniMD, respectively.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
