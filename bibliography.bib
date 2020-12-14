@@ -14088,6 +14088,27 @@ Python finite element solver library in the last two chapters.\\ This textbook, 
   abstract  = {The landscape of high performance computing is shifting towards a collection of multi-GPU nodes, widening the gap between on-node compute and off-node communication capabilities. Consequently, the ability to tolerate communication latencies and maximize utilization of the compute hardware are becoming increasingly important in achieving high performance. Overdecomposition has been successfully adopted on traditional CPU-based systems to achieve computation-communication overlap, significantly reducing the impact of communication on application performance. However, it has been unclear whether overdecomposition can provide the same benefits on modern GPU systems. In this work, we address the challenges in achieving computation-communication overlap with overdecomposition on GPU systems using the Charm++ parallel programming system. By prioritizing communication with CUDA streams in the application and supporting asynchronous progress of GPU operations in the Charm++ runtime system, we obtain improvements in overall performance of up to 50\% and 47\% with proxy applications Jacobi3D and MiniMD, respectively.},
 }
 
+@Article{Li2020j,
+  author      = {Hao Li and Zixuan Li and Kenli Li and Jan S. Rellermeyer and Lydia Y. Chen and Keqin Li},
+  date        = {2020-12-07},
+  title       = {{SGD_Tucker}: A Novel Stochastic Optimization Strategy for Parallel Sparse Tucker Decomposition},
+  eprint      = {2012.03550},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {Sparse Tucker Decomposition (STD) algorithms learn a core tensor and a group of factor matrices to obtain an optimal low-rank representation feature for the \underline{H}igh-\underline{O}rder, \underline{H}igh-\underline{D}imension, and \underline{S}parse \underline{T}ensor (HOHDST). However, existing STD algorithms face the problem of intermediate variables explosion which results from the fact that the formation of those variables, i.e., matrices Khatri-Rao product, Kronecker product, and matrix-matrix multiplication, follows the whole elements in sparse tensor. The above problems prevent deep fusion of efficient computation and big data platforms. To overcome the bottleneck, a novel stochastic optimization strategy (SGD$\_$Tucker) is proposed for STD which can automatically divide the high-dimension intermediate variables into small batches of intermediate matrices. Specifically, SGD$\_$Tucker only follows the randomly selected small samples rather than the whole elements, while maintaining the overall accuracy and convergence rate. In practice, SGD$\_$Tucker features the two distinct advancements over the state of the art. First, SGD$\_$Tucker can prune the communication overhead for the core tensor in distributed settings. Second, the low data-dependence of SGD$\_$Tucker enables fine-grained parallelization, which makes SGD$\_$Tucker obtaining lower computational overheads with the same accuracy. Experimental results show that SGD$\_$Tucker runs at least 2$X$ faster than the state of the art.},
+  file        = {:http\://arxiv.org/pdf/2012.03550v2:PDF},
+  keywords    = {cs.DC},
+}
+
+@TechReport{GomezCrespo2020,
+  author      = {Gómez Crespo, Constantino and Casas Guix, Marc and Mantovani, Filippo and Focht, Erich},
+  date        = {2020},
+  institution = {Barcelona Supercomputing Centre},
+  title       = {Optimizing sparse matrix-vector multiplication in NEC SX-Aurora vector engine},
+  url         = {http://hdl.handle.net/2117/192586},
+  abstract    = {Sparse Matrix-Vector multiplication (SpMV) is an essential piece of code used in many High Performance Computing (HPC) applications. As previous literature shows, achieving efficient vectorization and performance in modern multi-core systems is nothing straightforward. It is important then to revisit the current stateof-the-art matrix formats and optimizations to be able to deliver deliver high performance in long vector architectures. In this tech-report, we describe how to develop an efficient implementation that achieves high throughput in the NEC Vector Engine: a 256 element-long vector architecture. Combining several pre-processing and kernel optimizations we obtain an average 12\% improvement over a base SELLC-$\sigma$ implementation on a heterogeneous set of 24 matrices.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
