@@ -2,12 +2,15 @@
 #
 # compile.py - Compile the input Tex file.
 
-import os, sys, glob, subprocess
+import os
+import sys
+import glob
+import subprocess
 
 
 def _call_pdflatex(file_name):
     return subprocess.call(
-            ["pdflatex", "-halt-on-error", file_name + ".tex"])
+        ["pdflatex", "-halt-on-error", file_name + ".tex"])
 
 
 def _delete_all_files_with_extension(extension):
@@ -18,24 +21,24 @@ def _delete_all_files_with_extension(extension):
 
 
 def _clean_all_files():
-    extensions_to_clean = ("acn", "acr", "alg", "aux", "bbl", "bcf", "blg", 
-        "blx.bib", "fdb_latexmk", "fls", "glg", "glo", "gls", "idx", "ind", 
-        "ilg", "lof", "loa", "lol", "log", "lot", "run.xml", "toc", "out", 
-        "xdy", "4ct", "4tc", "css", "dvi", "html", "idv", "lg", "tmp", 
-        "xref", "p")
+    extensions_to_clean = ("acn", "acr", "alg", "aux", "bbl", "bcf", "blg",
+                           "blx.bib", "fdb_latexmk", "fls", "glg", "glo", "gls", "idx", "ind",
+                           "ilg", "lof", "loa", "lol", "log", "lot", "run.xml", "toc", "out",
+                           "xdy", "4ct", "4tc", "css", "dvi", "html", "idv", "lg", "tmp",
+                           "xref")
     for extension in extensions_to_clean:
         _delete_all_files_with_extension(extension)
 
 
-def _call_htlatex(file_name):
+def _call_make4ht(file_name):
     return subprocess.call(
-            ["htlatex", file_name, 
-            "\"xhtml, mathml, charset=utf-8\""])
+        ["make4ht", file_name,
+         "\"mathml,mathjax\""])
 
 
 def _call_biber(file_name):
     return subprocess.call(
-            ["biber", file_name])
+        ["biber", file_name])
 
 
 def _compilation_setup(tex_file_path):
@@ -68,10 +71,9 @@ def _compile_html(tex_file_path):
     initial_folder_path, file_name = _compilation_setup(tex_file_path)
 
     error_codes = []
-    error_codes.append(_call_htlatex(file_name))
+    error_codes.append(_call_make4ht(file_name))
     error_codes.append(_call_biber(file_name))
-    error_codes.append(_call_htlatex(file_name))
-    error_codes.append(_call_htlatex(file_name))
+    error_codes.append(_call_make4ht(file_name))
 
     _compilation_teardown(initial_folder_path)
     return all(code == 0 for code in error_codes)
