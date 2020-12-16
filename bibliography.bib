@@ -1821,16 +1821,15 @@
 }
 
 @Article{Steinerberger2020,
-  author        = {Stefan Steinerberger},
-  title         = {A Spectral Approach to the Shortest Path Problem},
-  year          = {2020},
-  month         = apr,
-  abstract      = {Let $G=(V,E)$ be a simple, connected graph. One is often interested in a short path between two vertices $u,v$. We propose a spectral algorithm: construct the function $\phi:V \rightarrow \mathbb{R}_{\geq 0}$ $$ \phi = \arg\min_{f:V \rightarrow \mathbb{R} \atop f(u) = 0, f \not\equiv 0} \frac{\sum_{(w_1, w_2) \in E}{(f(w_1)-f(w_2))^2}}{\sum_{w \in V}{f(w)^2}}.$$ $\phi$ can also be understood as the smallest eigenvector of the Laplacian Matrix $L=D-A$ after the $u-$th row and column have been removed. We start in the point $v$ and construct a path from $v$ to $u$: at each step, we move to the neighbor for which $\phi$ is the smallest. This algorithm provably terminates and results in a short path from $v$ to $u$, often the shortest. The efficiency of this method is due to a discrete analogue of a phenomenon in Partial Differential Equations that is not well understood. We prove optimality for trees and discuss a number of open questions.},
-  archiveprefix = {arXiv},
-  eprint        = {2004.01163v1},
-  file          = {:http\://arxiv.org/pdf/2004.01163v1:PDF},
-  keywords      = {math.CO, cs.CG, cs.DM, math.SP},
-  primaryclass  = {math.CO},
+  author      = {Stefan Steinerberger},
+  date        = {2020-04-02},
+  title       = {A Spectral Approach to the Shortest Path Problem},
+  eprint      = {2004.01163v1},
+  eprintclass = {math.CO},
+  eprinttype  = {arXiv},
+  abstract    = {Let $G=(V,E)$ be a simple, connected graph. One is often interested in a short path between two vertices $u,v$. We propose a spectral algorithm: construct the function $\phi:V \rightarrow \mathbb{R}_{\geq 0}$, $\phi = \arg\min_{f:V \rightarrow \mathbb{R} \atop f(u) = 0, f \not\equiv 0} \frac{\sum_{(w_1, w_2) \in E}{(f(w_1)-f(w_2))^2}}{\sum_{w \in V}{f(w)^2}}$. $\phi$ can also be understood as the smallest eigenvector of the Laplacian Matrix $L=D-A$ after the $u-$th row and column have been removed. We start in the point $v$ and construct a path from $v$ to $u$: at each step, we move to the neighbor for which $\phi$ is the smallest. This algorithm provably terminates and results in a short path from $v$ to $u$, often the shortest. The efficiency of this method is due to a discrete analogue of a phenomenon in Partial Differential Equations that is not well understood. We prove optimality for trees and discuss a number of open questions.},
+  file        = {:http\://arxiv.org/pdf/2004.01163v1:PDF},
+  keywords    = {math.CO, cs.CG, cs.DM, math.SP},
 }
 
 @TechReport{Buttari2020,
@@ -1958,16 +1957,15 @@
 }
 
 @Article{Murray2020,
-  author        = {Michael Murray and Jared Tanner},
-  title         = {The Permuted Striped Block Model and its Factorization -- Algorithms with Recovery Guarantees},
-  year          = {2020},
-  month         = apr,
-  abstract      = {We introduce a novel class of matrices which are defined by the factorization $\textbf{Y} :=\textbf{A}\textbf{X}$, where $\textbf{A}$ is an $m \times n$ wide sparse binary matrix with a fixed number $d$ nonzeros per column and $\textbf{X}$ is an $n \times N$ sparse real matrix whose columns have at most $k$ nonzeros and are $\textit{dissociated}$. Matrices defined by this factorization can be expressed as a sum of $n$ rank one sparse matrices, whose nonzero entries, under the appropriate permutations, form striped blocks - we therefore refer to them as Permuted Striped Block (PSB) matrices. We define the $\textit{PSB data model}$ as a particular distribution over this class of matrices, motivated by its implications for community detection, provable binary dictionary learning with real valued sparse coding, and blind combinatorial compressed sensing. For data matrices drawn from the PSB data model, we provide computationally efficient factorization algorithms which recover the generating factors with high probability from as few as $N =O\left(\frac{n}{k}\log^2(n)\right)$ data vectors, where $k$, $m$ and $n$ scale proportionally. Notably, these algorithms achieve optimal sample complexity up to logarithmic factors.},
-  archiveprefix = {arXiv},
-  eprint        = {2004.05094v1},
-  file          = {:http\://arxiv.org/pdf/2004.05094v1:PDF},
-  keywords      = {cs.LG, cs.DM, eess.SP, stat.ML},
-  primaryclass  = {cs.LG},
+  author      = {Michael Murray and Jared Tanner},
+  date        = {2020-04-10},
+  title       = {The Permuted Striped Block Model and its Factorization -- Algorithms with Recovery Guarantees},
+  eprint      = {2004.05094v1},
+  eprintclass = {cs.LG},
+  eprinttype  = {arXiv},
+  abstract    = {We introduce a novel class of matrices which are defined by the factorization $\bm{Y} :=\bm{A}\bm{X}$, where $\bm{A}$ is an $m \times n$ wide sparse binary matrix with a fixed number $d$ nonzeros per column and $\bm{X}$ is an $n \times N$ sparse real matrix whose columns have at most $k$ nonzeros and are \textit{dissociated}. Matrices defined by this factorization can be expressed as a sum of $n$ rank one sparse matrices, whose nonzero entries, under the appropriate permutations, form striped blocks - we therefore refer to them as Permuted Striped Block (PSB) matrices. We define the \textit{PSB data model} as a particular distribution over this class of matrices, motivated by its implications for community detection, provable binary dictionary learning with real valued sparse coding, and blind combinatorial compressed sensing. For data matrices drawn from the PSB data model, we provide computationally efficient factorization algorithms which recover the generating factors with high probability from as few as $N =O\left(\frac{n}{k}\log^2(n)\right)$ data vectors, where $k$, $m$ and $n$ scale proportionally. Notably, these algorithms achieve optimal sample complexity up to logarithmic factors.},
+  file        = {:http\://arxiv.org/pdf/2004.05094v1:PDF},
+  keywords    = {cs.LG, cs.DM, eess.SP, stat.ML},
 }
 
 @Article{Duff2020a,
@@ -5609,4 +5607,33 @@ Python finite element solver library in the last two chapters.\\ This textbook, 
   url      = {http://hdl.handle.net/2117/192586},
 }
 
-@Comment{jabref-meta: databaseType:bibtex;}
+@Article{Anzt2020e,
+  author   = {Hartwig Anzt and Eileen Kuehn and Goran Flegar},
+  title    = {Crediting Pull Requests to Open Source Research Software as an Academic Contribution},
+  doi      = {https://doi.org/10.1016/j.jocs.2020.101278},
+  issn     = {1877-7503},
+  pages    = {101278},
+  url      = {http://www.sciencedirect.com/science/article/pii/S1877750320305743},
+  abstract = {Like any other scientific discipline, the High Performance Computing community suffers under the publish or perish paradigm. As a result, a significant portion of novel algorithm designs and hardware-optimized implementations never make it into production code but are instead abandoned once they served the purpose of yielding (another) publication. At the same time, community software packages driving scientific research lack the addition of new technology and hardware-specific implementations. This results in a very unsatisfying situation where researchers and software developers are working independently, and the traditional peer reviewing is reaching its capacity limits. A paradigm shift that accepts high-quality software pull requests to open source research software as conference contributions may create incentives to realize new and/or improved algorithms in community software ecosystems. In this paper, we propose to complement code reviews on pull requests to scientific open source software with scientific reviews, and allow the presentation and publication of high quality software contributions that present an academic improvement to the state-of-the-art at scientific conferences.},
+  journal  = {Journal of Computational Science},
+  keywords = {Scientific Excellence Paradigms, Conference Contributions, Scientific Reputation, Community Software Development},
+  year     = {2020},
+}
+
+@Article{Nesterov2020c,
+  author       = {Yurii Nesterov},
+  date         = {2020-12},
+  journaltitle = {Optimization Methods and Software},
+  title        = {Inexact basic tensor methods for some classes of convex optimization problems},
+  doi          = {10.1080/10556788.2020.1854252},
+  pages        = {1--29},
+  abstract     = {In this paper, we analyse the Basic Tensor Methods, which use approximate solutions of the auxiliary problems. The quality of this solution is described by the residual in thefunction value, which must be proportional to $\epsilon^{\frac{p+1}{p}}$, where $p \ge 1$ is the order of the method and $\epsilon$ is the desired accuracy in the main optimization problem. We analyse in details the auxiliary schemes for the third- and second-order tensor methods. The auxiliary problems for the third-order scheme can be solved very efficiently by a linearly convergent gradient-type method with a preconditioner. The most expensive operation in this process is a preliminary factorization of the Hessian of the objective function. For solving the auxiliary problem for the second order scheme, we suggest two variants of the Fast Gradient Methods with restart, which converge as $O(\frac{1}{k^6})$, where $k$ is the iteration counter. Finally, we present the results of the preliminary computational experiments.},
+  publisher    = {Informa {UK} Limited},
+}
+
+@Comment{jabref-meta: databaseType:biblatex;}
+
+@Comment{jabref-meta: grouping:
+0 AllEntriesGroup:;
+1 StaticGroup:Markings\;2\;1\;\;\;\;;
+}
