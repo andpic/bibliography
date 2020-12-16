@@ -14109,6 +14109,30 @@ Python finite element solver library in the last two chapters.\\ This textbook, 
   abstract    = {Sparse Matrix-Vector multiplication (SpMV) is an essential piece of code used in many High Performance Computing (HPC) applications. As previous literature shows, achieving efficient vectorization and performance in modern multi-core systems is nothing straightforward. It is important then to revisit the current stateof-the-art matrix formats and optimizations to be able to deliver deliver high performance in long vector architectures. In this tech-report, we describe how to develop an efficient implementation that achieves high throughput in the NEC Vector Engine: a 256 element-long vector architecture. Combining several pre-processing and kernel optimizations we obtain an average 12\% improvement over a base SELLC-$\sigma$ implementation on a heterogeneous set of 24 matrices.},
 }
 
+@Article{Anzt2020e,
+  author   = {Hartwig Anzt and Eileen Kuehn and Goran Flegar},
+  title    = {Crediting Pull Requests to Open Source Research Software as an Academic Contribution},
+  doi      = {https://doi.org/10.1016/j.jocs.2020.101278},
+  issn     = {1877-7503},
+  pages    = {101278},
+  url      = {http://www.sciencedirect.com/science/article/pii/S1877750320305743},
+  abstract = {Like any other scientific discipline, the High Performance Computing community suffers under the publish or perish paradigm. As a result, a significant portion of novel algorithm designs and hardware-optimized implementations never make it into production code but are instead abandoned once they served the purpose of yielding (another) publication. At the same time, community software packages driving scientific research lack the addition of new technology and hardware-specific implementations. This results in a very unsatisfying situation where researchers and software developers are working independently, and the traditional peer reviewing is reaching its capacity limits. A paradigm shift that accepts high-quality software pull requests to open source research software as conference contributions may create incentives to realize new and/or improved algorithms in community software ecosystems. In this paper, we propose to complement code reviews on pull requests to scientific open source software with scientific reviews, and allow the presentation and publication of high quality software contributions that present an academic improvement to the state-of-the-art at scientific conferences.},
+  journal  = {Journal of Computational Science},
+  keywords = {Scientific Excellence Paradigms, Conference Contributions, Scientific Reputation, Community Software Development},
+  year     = {2020},
+}
+
+@Article{Nesterov2020c,
+  author       = {Yurii Nesterov},
+  date         = {2020-12},
+  journaltitle = {Optimization Methods and Software},
+  title        = {Inexact basic tensor methods for some classes of convex optimization problems},
+  doi          = {10.1080/10556788.2020.1854252},
+  pages        = {1--29},
+  abstract     = {In this paper, we analyse the Basic Tensor Methods, which use approximate solutions of the auxiliary problems. The quality of this solution is described by the residual in thefunction value, which must be proportional to $\epsilon^{\frac{p+1}{p}}$, where $p \ge 1$ is the order of the method and $\epsilon$ is the desired accuracy in the main optimization problem. We analyse in details the auxiliary schemes for the third- and second-order tensor methods. The auxiliary problems for the third-order scheme can be solved very efficiently by a linearly convergent gradient-type method with a preconditioner. The most expensive operation in this process is a preliminary factorization of the Hessian of the objective function. For solving the auxiliary problem for the second order scheme, we suggest two variants of the Fast Gradient Methods with restart, which converge as $O(\frac{1}{k^6})$, where $k$ is the iteration counter. Finally, we present the results of the preliminary computational experiments.},
+  publisher    = {Informa {UK} Limited},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
