@@ -28,3 +28,12 @@
 *.bak
 *.sav
 *.*~
+*.4ct
+*.4tc
+*.css
+*.dvi
+*.html
+*.idv
+*.lg
+*.tmp
+*.xref
