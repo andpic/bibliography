@@ -14396,6 +14396,48 @@ Python finite element solver library in the last two chapters.\\ This textbook, 
   abstract    = {A key challenge in modern computing systems is to access data fast enough to fully utilize the computing elements in the chip. In Graphics Processing Units (GPUs), the performance is often constrained by register file size, memory bandwidth, and the capacity of the main memory. One important technique towards alleviating this challenge is data compression. By reducing the amount of data that needs to be communicated or stored, memory resources crucial for performance can be eciently utilized.\\ This thesis provides a set of approximation and compression techniques for GPUs, with the goal of eciently utilizing the computational fabric, and thereby increase performance. The thesis shows that these techniques can substantially lower the amount of information the system has to process, and are thus important tools in the process of meeting challenges in memory utilization. This thesis makes contributions within three areas: controlled floating-point precision reduction, lossless and lossy memory compression, and distributed training of neural networks. In the first area, the thesis shows that through automated and controlled floating-point approximation, the register file can be more eciently utilized. This is achieved through a framework which establishes a cross-layer connection between the application and the microarchitecture layer, and a novel register file organization capable of leveraging low-precision floatingpoint values and narrow integers for increased capacity and performance.\\ Within the area of compression, this thesis aims at increasing the effective bandwidth of GPUs by presenting a lossless and lossy memory compression algorithm to reduce the amount of transferred data. In contrast to state-ofthe-art compression techniques such as Base-Delta-Immediate and Bitplane Compression, which uses intra-block bases for compression, the proposed algorithm leverages multiple global base values to reach a higher compression ratio. The algorithm includes an optional approximation step for floating-point values which offers higher compression ratio at a given, low, error rate.\\ Finally, within the area of distributed training of neural networks, this thesis proposes a subgraph approximation scheme for graph data which mitigates accuracy loss in a distributed setting. The scheme allows neural network models that use graphs as inputs to converge at single-machine accuracy, while minimizing synchronization overhead between the machines.},
 }
 
+@Article{Guo2021,
+  author       = {Jian Guo and Hong Liang and Songpu Ai and Chao Lu and Haochen Hua and Junwei Cao},
+  date         = {2021-08},
+  journaltitle = {Tsinghua Science and Technology},
+  title        = {Improved approximate minimum degree ordering method and its application for electrical power network analysis and computation},
+  doi          = {10.26599/tst.2020.9010019},
+  number       = {4},
+  pages        = {464--474},
+  volume       = {26},
+  abstract     = {Electrical power network analysis and computation play an important role in the planning and operation of the power grid, and they are modeled mathematically as differential equations and network algebraic equations. The direct method based on Gaussian elimination theory can obtain analytical results. Two factors affect computing efficiency: the number of nonzero element fillings and the length of elimination tree. This article constructs mapping correspondence between eliminated tree nodes and quotient graph nodes through graph and quotient graph theories. The Approximate Minimum Degree (AMD) of quotient graph nodes and the length of the elimination tree nodes are composed to build an Approximate Minimum Degree and Minimum Length (AMDML) model. The quotient graph node with the minimum degree, which is also the minimum length of elimination tree node, is selected as the next ordering vector. Compared with AMD ordering method and other common methods, the proposed method further reduces the length of elimination tree without increasing the number of nonzero fillings; the length was decreased by about 10\% compared with the AMD method. A testbed for experiment was built. The efficiency of the proposed method was evaluated based on different sizes of coefficient matrices of power flow cases.},
+  publisher    = {Tsinghua University Press},
+}
+
+@PhdThesis{Mofrad2020,
+  author      = {Mohammad Hasanzadeh Mofrad},
+  date        = {2020},
+  institution = {University of Pittsburgh},
+  title       = {Distributed Sparse Computing and Communication for Big Graph Analytics and Deep Learning},
+  url         = {http://d-scholarship.pitt.edu/39841/1/Thesis.pdf},
+  abstract    = {Sparsity can be found in the underlying structure of many real-world computationally expensive problems including big graph analytics and large scale sparse deep neural networks. In addition, if gracefully investigated, many of these problems contain a broad substratum of parallelism suitable for parallel and distributed executions of sparse computation. However, usually, dense computation is preferred to its sparse alternative as sparse computation is not only hard to parallelize due to the irregular nature of the sparse data, but also complicated to implement in terms of rewriting a dense algorithm into a sparse one. Hence, foolproof sparse computation requires customized data structures to encode the sparsity of the sparse data and new algorithms to mask the complexity of the sparse computation. However, by carefully exploiting the sparse data structures and algorithms, sparse computation can reduce memory consumption, communication volume, and processing power and thus undoubtedly move the scalability boundaries compared to its dense equivalent.\\ In this dissertation, I explain how to use parallel and distributed computing techniques in the presence of sparsity to solve large scientific problems including graph analytics and deep learning. To meet this end goal, I leverage the duality between graph theory and sparse linear algebra primitives, and thus solve graph analytics and deep learning problems with the sparse matrix operations. My contributions are fourfold: (1) design and implementation of a new distributed compressed sparse matrix data structure that reduces both computation and communication volumes and is suitable for sparse matrix-vector and sparse matrix-matrix operations, (2) introducing the new MPI + X parallelism model that deems threads as basic units of computing and communication, (3) optimizing sparse matrix-matrix multiplication by employing different hashing techniques, and (4) proposing the new data-then-model parallelism that mitigates the effect of stragglers in sparse deep learning by combining data and model parallelisms. Altogether, these contributions provide a set of data structures and algorithms to accelerate and scale the sparse computing and communication.},
+}
+
+@InProceedings{Kennedy2021,
+  author    = {Graeme Kennedy and Yicong Fu},
+  booktitle = {{AIAA} Scitech 2021 Forum},
+  date      = {2021-01},
+  title     = {Topology Optimization Benchmark Problems for Assessing the Performance of Optimization Algorithms},
+  doi       = {10.2514/6.2021-1357},
+  publisher = {American Institute of Aeronautics and Astronautics},
+  abstract  = {This paper presents a set of benchmark topology optimization problems that are used to evaluate the performance of optimization software. The topology optimization formulations considered in this benchmark set include mass-constrained compliance minimization, stress-constrained mass minimization, mass and stress-constrained compliance minimization, and mass and frequency-constrained compliance minimization. Both structured and unstructured quadrilateral and hexahedral meshes are used with conventional and non-conventional topology optimization design domains. In total, the benchmark set contains 108 2D and 72 3D domain and mesh combinations. In this preliminary work, the performance of the optimizers SNOPT, IPOPT and ParOpt are evaluated. Performance profiles are used to assess the performance of an optimizer across the full benchmark set. We find that SNOPT performs the best overall among all optimizers. Furthermore, a modification of the quasi-Newton Hessian update provides a considerable performance benefit in both objective function value and discreteness measure.},
+}
+
+@InProceedings{Degro2021,
+  author    = {Atis Degro and Rainald Lohner},
+  booktitle = {{AIAA} Scitech 2021 Forum},
+  date      = {2021-01},
+  title     = {Simple Fault-Tolerant Computing for {CFD} Codes},
+  doi       = {10.2514/6.2021-0142},
+  publisher = {American Institute of Aeronautics and Astronautics},
+  abstract  = {Fault-tolerant computing options based on the use of restart information stored on and off node and the use of reserve processes have been developed, implemented and tested in a large-scale, production field solver taken from the domain of computational fluid dynamics. The tests conducted to date have shown good results, with recovery rates approaching 100\% under realistic node failure scenarios. Even though the computational overhead of the field solver is very low (explicit time-marching and finite differences), the fault tolerant implementation adds a run-time penalty that is only in the range of 6\%-12\%, depending on the spatial and temporal approximation used. The procedures developed are generally applicable, and could easily be ported to other codes.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
