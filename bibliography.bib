@@ -14438,6 +14438,52 @@ Python finite element solver library in the last two chapters.\\ This textbook, 
   abstract  = {Fault-tolerant computing options based on the use of restart information stored on and off node and the use of reserve processes have been developed, implemented and tested in a large-scale, production field solver taken from the domain of computational fluid dynamics. The tests conducted to date have shown good results, with recovery rates approaching 100\% under realistic node failure scenarios. Even though the computational overhead of the field solver is very low (explicit time-marching and finite differences), the fault tolerant implementation adds a run-time penalty that is only in the range of 6\%-12\%, depending on the spatial and temporal approximation used. The procedures developed are generally applicable, and could easily be ported to other codes.},
 }
 
+@Article{Ward2021,
+  author      = {John Paul Ward and Francis J. Narcowich and Joseph D. Ward},
+  date        = {2021-01-06},
+  title       = {Locally supported, quasi-interpolatory bases on graphs},
+  eprint      = {2101.02256},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {Lagrange functions are localized bases that have many applications in signal processing and data approximation. Their structure and fast decay make them excellent tools for constructing approximations. Here, we propose perturbations of Lagrange functions on graphs that maintain the nice properties of Lagrange functions while also having the added benefit of being locally supported. Moreover, their local construction means that they can be computed in parallel, and they are easily implemented via quasi-interpolation.},
+  file        = {:http\://arxiv.org/pdf/2101.02256v1:PDF},
+  keywords    = {math.NA, cs.NA, math.CA},
+}
+
+@Article{Wang2021,
+  author      = {Zhenqi Wang and Sebastian Wende-von Berg and Martin Braun},
+  date        = {2021-01-06},
+  title       = {Fast Parallel Newton-Raphson Power Flow Solver for Large Number of System Calculations with CPU and GPU},
+  eprint      = {2101.02270},
+  eprintclass = {cs.CE},
+  eprinttype  = {arXiv},
+  abstract    = {To analyze large sets of grid states, e.g. in time series calculations or parameter studies, large number of power flow calculations have to be performed, as well as evaluating the impact from uncertainties of the renewable energy e.g. wind and PV of power systems with Monte-Carlo simulation. For the application in real-time grid operation and in cases when computational time is critical, a novel approach on parallelization of Newton-Raphson power flow for many calculations on CPU and with GPU-acceleration is proposed. The result shows a speed-up of over x100 comparing to the open-source tool pandapower, when performing repetitive power flows of system with admittance matrix of the same sparsity pattern on both CPU and GPU. The speed-up relies on the optimized algorithm and parallelization strategy, which can reduce the repetitive work and saturate the high hardware performance of modern CPUs and GPUs well. This is achieved with the proposed batched sparse matrix operation and batched linear solver based on LU-refactorization. The batched linear solver shows a large performance improvement comparing to the state-of-art linear system solver KLU library and a better saturation of the GPU performance with small problem scale. Finally, the method of integrating the proposed solver into pandapower is presented, thus the parallel power flow solver with outstanding performance can be easily applied in challenging real-life grid operation and innovative researches e.g. data-driven machine learning studies.},
+  file        = {:http\://arxiv.org/pdf/2101.02270v1:PDF},
+  keywords    = {cs.CE, cs.SY, eess.SY},
+}
+
+@Article{Bollhoefer2021,
+  author       = {Matthias Bollhöfer and Olaf Schenk and Fabio Verbosio},
+  date         = {2021-04},
+  journaltitle = {Applied Numerical Mathematics},
+  title        = {A high performance level-block approximate {LU} factorization preconditioner algorithm},
+  doi          = {10.1016/j.apnum.2020.12.023},
+  pages        = {265--282},
+  volume       = {162},
+  abstract     = {Many application problems that lead to solving linear systems make use of preconditioned Krylov subspace solvers to compute their solution. Among the most popular preconditioning approaches are incomplete factorization methods either as single-level approaches or within a multilevel framework. We will present a block incomplete factorization that is based on skillfully blocking the system initially and throughout the factorization. Our objective is to develop algebraic block preconditioners for the efficient solution of such systems by Krylov subspace methods. We will demonstrate how our level-block approximate algorithm outperforms a single level-block scalar method often by orders of magnitude on modern architectures, thus paving the way for its prospective use inside various multilevel incomplete factorization approaches or other applications where the core part relies on an efficient incomplete factorization algorithms.},
+  publisher    = {Elsevier {BV}},
+}
+
+@Article{Champion2021,
+  author     = {Camille Champion and Magali Champion and Mélanie Blazère and Jean-Michel Loubes},
+  date       = {2021},
+  title      = {$\mathcal{l}$1-spectral clustering algorithm: a robust spectralclustering using Lasso regularization},
+  eprint     = {03095805},
+  eprinttype = {HAL},
+  url        = {https://hal.archives-ouvertes.fr/hal-03095805},
+  abstract   = {Detecting cluster structure is a fundamental task to understand and visualize functional characteristics of a graph. Among the different clustering methods available, spectral clustering is one of the most widely used due to its speed and simplicity, while still being sensitive to perturbations imposed on the graph. This paper presents a robust variant of spectral clustering, called $\mathcal{l}_1$-spectral clustering, based on Lasso regularization and adapted to perturbed graph models. By promoting sparse eigenbases solutions of specific $\mathcal{l}_1$-minimization problems, it detects the hidden natural cluster structure of the graph. The effectiveness and robustness to noise perturbations of the $\mathcal{l}_1$-spectral clustering algorithm is confirmed through a collection of simulated and real biological data.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
