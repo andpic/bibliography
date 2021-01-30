@@ -14484,6 +14484,64 @@ Python finite element solver library in the last two chapters.\\ This textbook, 
   abstract   = {Detecting cluster structure is a fundamental task to understand and visualize functional characteristics of a graph. Among the different clustering methods available, spectral clustering is one of the most widely used due to its speed and simplicity, while still being sensitive to perturbations imposed on the graph. This paper presents a robust variant of spectral clustering, called $\mathcal{l}_1$-spectral clustering, based on Lasso regularization and adapted to perturbed graph models. By promoting sparse eigenbases solutions of specific $\mathcal{l}_1$-minimization problems, it detects the hidden natural cluster structure of the graph. The effectiveness and robustness to noise perturbations of the $\mathcal{l}_1$-spectral clustering algorithm is confirmed through a collection of simulated and real biological data.},
 }
 
+@Article{Ma2021,
+  author      = {Ding Ma and Dominique Orban and Michael A. Saunders},
+  date        = {2021-01-06},
+  title       = {A Julia implementation of Algorithm NCL for constrained optimization},
+  doi         = {10.13140/RG.2.2.29888.35841},
+  eprint      = {2101.02164},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {Algorithm NCL is designed for general smooth optimization problems where first and second derivatives are available, including problems whose constraints may not be linearly independent at a solution (i.e., do not satisfy the LICQ). It is equivalent to the LANCELOT augmented Lagrangian method, reformulated as a short sequence of nonlinearly constrained subproblems that can be solved efficiently by IPOPT and KNITRO, with warm starts on each subproblem. We give numerical results from a Julia implementation of Algorithm NCL on tax policy models that do not satisfy the LICQ, and on nonlinear least-squares problems and general problems from the CUTEst test set.},
+  file        = {:http\://arxiv.org/pdf/2101.02164v1:PDF},
+  keywords    = {math.OC, cs.NA, math.NA},
+}
+
+@Article{Ahmadi2021,
+  author       = {Afshin Ahmadi and Felice Manganiello and Amin Khademi and Melissa Smith},
+  date         = {2021},
+  journaltitle = {{IEEE} Transactions on Parallel and Distributed Systems},
+  title        = {A Parallel Jacobi-Embedded Gauss-Seidel Method},
+  doi          = {10.1109/tpds.2021.3052091},
+  pages        = {1--1},
+  abstract     = {A broad range of scientific simulations involve solving large-scale computationally expensive linear systems of equations. Iterative techniques are typically preferred over direct methods when it comes to large systems due to their lower memory requirements and shorter execution times. Gauss-Seidel (GS) is an iterative method for solving linear systems that are either strictly diagonally dominant or symmetric positive definite. This technique is an improved version of Jacobi and typically converges in fewer iterations. However, the sequential nature of this algorithm complicates the parallel extraction. In fact, most parallel derivatives of GS rely on the sparsity pattern of the coefficient matrix and require matrix reordering or domain decomposition. In this paper, we introduce a new algorithm that exploits the convergence property of GS and adapts the parallel structure of Jacobi. The proposed method works for both dense and sparse systems and is straightforward to implement. We have thoroughly examined the performance of our method on multicore and many-core architectures. Experimental results demonstrate the superior performance of proposed algorithm compared with GS and Jacobi. Additionally, performance comparison with built-in Krylov solvers in MATLAB showed that in terms of time per iteration, Krylov methods perform faster on CPUs, but our approach is significantly better when executed on GPUs.},
+  publisher    = {Institute of Electrical and Electronics Engineers ({IEEE})},
+}
+
+@Article{Khosla2021,
+  author      = {Megha Khosla and Avishek Anand},
+  date        = {2021-01-18},
+  title       = {Revisiting the Auction Algorithm for Weighted Bipartite Perfect Matchings},
+  eprint      = {2101.07155},
+  eprintclass = {cs.DS},
+  eprinttype  = {arXiv},
+  abstract    = {We study the classical weighted perfect matchings problem for bipartite graphs or sometimes referred to as the assignment problem, i.e., given a weighted bipartite graph $G = (U\cup V,E)$ with weights $w : E \rightarrow \mathcal{R}$ we are interested to find the maximum matching in $G$ with the minimum/maximum weight. In this work we present a new and arguably simpler analysis of one of the earliest techniques developed for solving the assignment problem, namely the auction algorithm. Using our analysis technique we present tighter and improved bounds on the runtime complexity for finding an approximate minumum weight perfect matching in $k$-left regular sparse bipartite graphs.},
+  file        = {:http\://arxiv.org/pdf/2101.07155v1:PDF},
+  keywords    = {cs.DS, cs.DM, math.CO},
+}
+
+@Article{Ahn2021,
+  author       = {Dong H. Ahn and Allison H. Baker and Michael Bentley and Ian Briggs and Ganesh Gopalakrishnan and Dorit M. Hammerling and Ignacio Laguna and Gregory L. Lee and Daniel J. Milroy and Mariana Vertenstein},
+  date         = {2021-01},
+  journaltitle = {Communications of the {ACM}},
+  title        = {Keeping science on keel when software moves},
+  doi          = {10.1145/3382037},
+  number       = {2},
+  pages        = {66--74},
+  volume       = {64},
+  abstract     = {An approach to reproducibility problems related to porting software across machines and compilers.},
+  publisher    = {Association for Computing Machinery ({ACM})},
+}
+
+@Article{Carson2021,
+  author   = {Erin Carson and Kathryn Lund and Miroslav Rozlosnik},
+  date     = {2021},
+  title    = {The Stability of Block Variants of the Classical Gram-Schmidt},
+  eprint   = {6-2021},
+  url      = {https://www.math.cas.cz/fichier/preprints/IM_20210124200723_43.pdf},
+  abstract = {The block version of classical Gram-Schmidt (BCGS) is often employed to efficiently compute orthogonal bases for Krylov subspace methods and eigenvalue solvers, but a rigorous proof of its stability behavior has not yet been established. It is shown that the usual implementation of BCGS can lose orthogonality at a rate worse than $O(\epsilon)\kappa^2(X)$, where $\epsilon$ is the unit round-off. A useful intermediate quantity denoted as the Cholesky residual is given special attention and, along with a block generalization of the Pythagorean theorem, this quantity is used to develop more stable variants of BCGS. These variants are proved to have $O(\epsilon)\kappa^2(X)$ loss of orthogonality with relatively relaxed conditions on the intra-block orthogonalization routine. A variety of numerical examples illustrate the theoretical bounds.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
