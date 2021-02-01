@@ -14542,6 +14542,30 @@ Python finite element solver library in the last two chapters.\\ This textbook, 
   abstract = {The block version of classical Gram-Schmidt (BCGS) is often employed to efficiently compute orthogonal bases for Krylov subspace methods and eigenvalue solvers, but a rigorous proof of its stability behavior has not yet been established. It is shown that the usual implementation of BCGS can lose orthogonality at a rate worse than $O(\epsilon)\kappa^2(X)$, where $\epsilon$ is the unit round-off. A useful intermediate quantity denoted as the Cholesky residual is given special attention and, along with a block generalization of the Pythagorean theorem, this quantity is used to develop more stable variants of BCGS. These variants are proved to have $O(\epsilon)\kappa^2(X)$ loss of orthogonality with relatively relaxed conditions on the intra-block orthogonalization routine. A variety of numerical examples illustrate the theoretical bounds.},
 }
 
+@Article{Daas2021,
+  author      = {Hussam Al Daas and Tyrone Rees and Jennifer Scott},
+  date        = {2021-01-28},
+  title       = {Two-level Nyström--Schur preconditioner for sparse symmetric positive definite matrices},
+  eprint      = {2101.12164},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {Randomized methods are becoming increasingly popular in numerical linear algebra. However, few attempts have been made to use them in developing preconditioners. Our interest lies in solving large-scale sparse symmetric positive definite linear systems of equations where the system matrix is preordered to doubly bordered block diagonal form (for example, using a nested dissection ordering). We investigate the use of randomized methods to construct high quality preconditioners. In particular, we propose a new and efficient approach that employs Nystr\"om's method for computing low rank approximations to develop robust algebraic two-level preconditioners. Construction of the new preconditioners involves iteratively solving a smaller but denser symmetric positive definite Schur complement system with multiple right-hand sides. Numerical experiments on problems coming from a range of application areas demonstrate that this inner system can be solved cheaply using block conjugate gradients and that using a large convergence tolerance to limit the cost does not adversely affect the quality of the resulting Nystr\"om--Schur two-level preconditioner.},
+  file        = {:http\://arxiv.org/pdf/2101.12164v1:PDF},
+  keywords    = {math.NA, cs.NA},
+}
+
+@Article{Chen2021,
+  author      = {Yixin Chen and Wei Li and Rui Fan and Xiaopei Liu},
+  date        = {2021-01-28},
+  title       = {GPU Optimization for High-Quality Kinetic Fluid Simulation},
+  eprint      = {2101.11856},
+  eprintclass = {cs.GR},
+  eprinttype  = {arXiv},
+  abstract    = {Fluid simulations are often performed using the incompressible Navier-Stokes equations (INSE), leading to sparse linear systems which are difficult to solve efficiently in parallel. Recently, kinetic methods based on the adaptive-central-moment multiple-relaxation-time (ACM-MRT) model have demonstrated impressive capabilities to simulate both laminar and turbulent flows, with quality matching or surpassing that of state-of-the-art INSE solvers. Furthermore, due to its local formulation, this method presents the opportunity for highly scalable implementations on parallel systems such as GPUs. However, an efficient ACM-MRT-based kinetic solver needs to overcome a number of computational challenges, especially when dealing with complex solids inside the fluid domain. In this paper, we present multiple novel GPU optimization techniques to efficiently implement high-quality ACM-MRT-based kinetic fluid simulations in domains containing complex solids. Our techniques include a new communication-efficient data layout, a load-balanced immersed-boundary method, a multi-kernel launch method using a simplified formulation of ACM-MRT calculations to enable greater parallelism, and the integration of these techniques into a parametric cost model to enable automated parameter search to achieve optimal execution performance. We also extended our method to multi-GPU systems to enable large-scale simulations. To demonstrate the state-of-the-art performance and high visual quality of our solver, we present extensive experimental results and comparisons to other solvers.},
+  file        = {:http\://arxiv.org/pdf/2101.11856v1:PDF},
+  keywords    = {cs.GR, cs.DC, physics.comp-ph, physics.flu-dyn},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
