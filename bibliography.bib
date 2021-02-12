@@ -10627,16 +10627,6 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   year      = {2020},
 }
 
-@Article{Fasi2020a,
-  author     = {Fasi, Massimiliano and Higham, Nicholas J. and Mikaitis, Mantas and Pranesh, Srikara},
-  date       = {2020},
-  title      = {Numerical Behavior of the {NVIDIA} Tensor Cores},
-  eprint     = {MIMS EPrint:2020.10},
-  eprinttype = {MIMS EPrint},
-  url        = {http://eprints.maths.manchester.ac.uk/2761/1/fhms20.pdf},
-  abstract   = {We explore the floating-point arithmetic used by the NVIDIA Volta tensor cores, which are hardware accelerators for mixed-precision matrix multiplication. We investigate what precision is used for intermediate results, whether subnormal numbers are supported, what rounding mode is used, in which order the operations in the dot products arising in the matrix multiplication are performed, and whether partial sums are normalized. These aspects are not documented by NVIDIA, and we gain insight by running carefully designed numerical experiments on these hardware accelerators. Knowing the answers to these questions is important if one wishes to: 1) build hardware that computes a matrix-matrix product matching the results of NVIDIA tensor cores; 2) achieve bit-reproducible results when designing on conventional hardware with IEEE 754 floating point arithmetic code meant to run on NVIDIA tensor cores; and 3) understand the differences between results produced by code that utilizes tensor cores and code that uses only IEEE 754-compliant arithmetic operations. As an additional result, we point out a non-monotonicity issue that arises in floating-point multi-operand addition without the normalization of the intermediate results.},
-}
-
 @Article{Zhang2020d,
   author    = {Zhang, Guanglu and Allaire, Douglas and Cagan, Jonathan},
   title     = {An Initial Guess Free Method for Least Squares Parameter Estimation in Nonlinear Models},
@@ -14623,6 +14613,79 @@ Python finite element solver library in the last two chapters.\\ This textbook, 
   pages        = {107252},
   abstract     = {Process Systems Engineering (PSE) is the scientific discipline of integrating scales and components describing the behavior of a physicochemical system, via mathematical modelling, data analytics, design, optimization and control. PSE provides the ‘glue’ within scientific chemical engineering, and offers a scientific basis and computational tools towards addressing contemporary and future challenges such as in energy, environment, the ‘industry of tomorrow’ and sustainability. This perspective article offers a guide towards the next generation of PSE developments by looking at its history, core competencies, current status and ongoing trends.},
   publisher    = {Elsevier {BV}},
+}
+
+@Article{Deng2021,
+  author       = {Xiaomao Deng and Zi-Ju Liao and Xiao-Chuan Cai},
+  date         = {2021-02},
+  journaltitle = {Journal of Computational and Applied Mathematics},
+  title        = {A parallel multilevel domain decomposition method for source identification problems governed by elliptic equations},
+  doi          = {10.1016/j.cam.2021.113441},
+  pages        = {113441},
+  abstract     = {In this paper we develop a parallel multilevel domain decomposition method for large-scale source identification problems governed by elliptic equations. A popular approach is to formulate the inverse problem as a PDE-constrained optimization problem. The stationary point satisfies a Karush-Kuhn–Tucker (KKT) system consisting of the state, adjoint and source equations which is rather difficult to solve on parallel computers. We propose and study a parallel method that decomposes the optimization problem on the global domain into subproblems on overlapping subdomains, each subdomain is further decomposed to form an additive Schwarz preconditioner for solving these smaller subproblems simultaneously with a preconditioned Krylov subspace method. For each subproblem, the overlapping part of the solution is discarded and the remaining non-overlapping part of the solution is put together to obtain an approximated global solution to the inverse problem. Since all the subproblems are solved independently, the multilevel domain decomposition method has the advantage of higher degree of parallelism. Numerical experiments show that the algorithm is accurate in terms of the reconstruction error and has reasonably good speedup in terms of the total computing time. The efficiency and robustness of the proposed approach on a parallel computer with more than $1,000$ processors are reported.},
+  publisher    = {Elsevier {BV}},
+}
+
+@Article{Goto2021,
+  author       = {Hayato Goto and Kotaro Endo and Masaru Suzuki and Yoshisato Sakai and Taro Kanao and Yohei Hamakawa and Ryo Hidaka and Masaya Yamasaki and Kosuke Tatsumura},
+  date         = {2021-02},
+  journaltitle = {Science Advances},
+  title        = {High-performance combinatorial optimization based on classical mechanics},
+  doi          = {10.1126/sciadv.abe7953},
+  number       = {6},
+  pages        = {eabe7953},
+  volume       = {7},
+  abstract     = {Quickly obtaining optimal solutions of combinatorial optimization problems has tremendous value but is extremely difficult. Thus, various kinds of machines specially designed for combinatorial optimization have recently been proposed and developed. Toward the realization of higher-performance machines, here, we propose an algorithm based on classical mechanics, which is obtained by modifying a previously proposed algorithm called simulated bifurcation. Our proposed algorithm allows us to achieve not only high speed by parallel computing but also high solution accuracy for problems with up to one million binary variables. Benchmarking shows that our machine based on the algorithm achieves high performance compared to recently developed machines, including a quantum annealer using a superconducting circuit, a coherent Ising machine using a laser, and digital processors based on various algorithms. Thus, high-performance combinatorial optimization is realized by massively parallel implementations of the proposed algorithm based on classical mechanics.},
+  publisher    = {American Association for the Advancement of Science ({AAAS})},
+}
+
+@Article{Fasi2021,
+  author       = {Massimiliano Fasi and Nicholas J. Higham and Mantas Mikaitis and Srikara Pranesh},
+  date         = {2021-02},
+  journaltitle = {{PeerJ} Computer Science},
+  title        = {Numerical behavior of {NVIDIA} tensor cores},
+  doi          = {10.7717/peerj-cs.330},
+  eprint       = {MIMS EPrint:2020.10},
+  pages        = {e330},
+  volume       = {7},
+  abstract     = {We explore the floating-point arithmetic implemented in the NVIDIA tensor cores, which are hardware accelerators for mixed-precision matrix multiplication available on the Volta, Turing, and Ampere microarchitectures. Using Volta V100, Turing T4, and Ampere A100 graphics cards, we determine what precision is used for the intermediate results, whether subnormal numbers are supported, what rounding mode is used, in which order the operations underlying the matrix multiplication are performed, and whether partial sums are normalized. These aspects are not documented by NVIDIA, and we gain insight by running carefully designed numerical experiments on these hardware units. Knowing the answers to these questions is important if one wishes to: (1) accurately simulate NVIDIA tensor cores on conventional hardware; (2) understand the differences between results produced by code that utilizes tensor cores and code that uses only IEEE 754-compliant arithmetic operations; and (3) build custom hardware whose behavior matches that of NVIDIA tensor cores. As part of this work we provide a test suite that can be easily adapted to test newer versions of the NVIDIA tensor cores as well as similar accelerators from other vendors, as they become available. Moreover, we identify a non-monotonicity issue affecting floating point multi-operand adders if the intermediate results are not normalized after each step.},
+  publisher    = {{PeerJ}},
+}
+
+@Article{Olofsson2021,
+  author      = {Simon Olofsson and Eduardo S. Schultz and Adel Mhamdi and Alexander Mitsos and Marc Peter Deisenroth and Ruth Misener},
+  date        = {2021-02-07},
+  title       = {Design of Dynamic Experiments for Black-Box Model Discrimination},
+  eprint      = {2102.03782},
+  eprintclass = {cs.LG},
+  eprinttype  = {arXiv},
+  abstract    = {Diverse domains of science and engineering require and use mechanistic mathematical models, e.g. systems of differential algebraic equations. Such models often contain uncertain parameters to be estimated from data. Consider a dynamic model discrimination setting where we wish to chose: (i) what is the best mechanistic, time-varying model and (ii) what are the best model parameter estimates. These tasks are often termed model discrimination/selection/validation/verification. Typically, several rival mechanistic models can explain data, so we incorporate available data and also run new experiments to gather more data. Design of dynamic experiments for model discrimination helps optimally collect data. For rival mechanistic models where we have access to gradient information, we extend existing methods to incorporate a wider range of problem uncertainty and show that our proposed approach is equivalent to historical approaches when limiting the types of considered uncertainty. We also consider rival mechanistic models as dynamic black boxes that we can evaluate, e.g. by running legacy code, but where gradient or other advanced information is unavailable. We replace these black-box models with Gaussian process surrogate models and thereby extend the model discrimination setting to additionally incorporate rival black-box model. We also explore the consequences of using Gaussian process surrogates to approximate gradient-based methods.},
+  file        = {:http\://arxiv.org/pdf/2102.03782v1:PDF},
+  keywords    = {cs.LG, stat.AP},
+}
+
+@Article{Tsay2021,
+  author      = {Calvin Tsay and Jan Kronqvist and Alexander Thebelt and Ruth Misener},
+  date        = {2021-02-08},
+  title       = {Partition-based formulations for mixed-integer optimization of trained ReLU neural networks},
+  eprint      = {2102.04373},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {This paper introduces a class of mixed-integer formulations for trained ReLU neural networks. The approach balances model size and tightness by partitioning node inputs into a number of groups and forming the convex hull over the partitions via disjunctive programming. At one extreme, one partition per input recovers the convex hull of a node, i.e., the tightest possible formulation for each node. For fewer partitions, we develop smaller relaxations that approximate the convex hull, and show that they outperform existing formulations. Specifically, we propose strategies for partitioning variables based on theoretical motivations and validate these strategies using extensive computational experiments. Furthermore, the proposed scheme complements known algorithmic approaches, e.g., optimization-based bound tightening captures dependencies within a partition.},
+  file        = {:http\://arxiv.org/pdf/2102.04373v1:PDF},
+  keywords    = {math.OC, cs.LG, stat.ML},
+}
+
+@Article{Huang2021,
+  author      = {Minhui Huang},
+  date        = {2021-02-04},
+  title       = {Escaping Saddle Points for Nonsmooth Weakly Convex Functions via Perturbed Proximal Algorithms},
+  eprint      = {2102.02837},
+  eprintclass = {cs.LG},
+  eprinttype  = {arXiv},
+  abstract    = {We propose perturbed proximal algorithms that can provably escape strict saddles for nonsmooth weakly convex functions. The main results are based on a novel characterization of $\epsilon$-approximate local minimum for nonsmooth functions, and recent developments on perturbed gradient methods for escaping saddle points for smooth problems. Specifically, we show that under standard assumptions, the perturbed proximal point, perturbed proximal gradient and perturbed proximal linear algorithms find $\epsilon$-approximate local minimum for nonsmooth weakly convex functions in $O(\epsilon^{-2}\log(d)^4)$ iterations, where $d$ is the dimension of the problem.},
+  file        = {:http\://arxiv.org/pdf/2102.02837v1:PDF},
+  keywords    = {cs.LG, math.OC},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
