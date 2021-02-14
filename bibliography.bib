@@ -14688,6 +14688,56 @@ Python finite element solver library in the last two chapters.\\ This textbook, 
   keywords    = {cs.LG, math.OC},
 }
 
+@Article{Filipovic2021,
+  author      = {Jiří Filipovič and Jana Hozzová and Amin Nezarat and Jaroslav Oľha and Filip Petrovič},
+  date        = {2021-02-10},
+  title       = {Using hardware performance counters to speed up autotuning convergence on GPUs},
+  eprint      = {2102.05297},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {Nowadays, GPU accelerators are commonly used to speed up general-purpose computing tasks on a variety of hardware. However, due to the diversity of GPU architectures and processed data, optimization of codes for a particular type of hardware and specific data characteristics can be extremely challenging. The autotuning of performance-relevant source-code parameters allows for automatic optimization of applications and keeps their performance portable. Although the autotuning process typically results in code speed-up, searching the tuning space can bring unacceptable overhead if (i) the tuning space is vast and full of poorly-performing implementations, or (ii) the autotuning process has to be repeated frequently because of changes in processed data or migration to different hardware. In this paper, we introduce a novel method for searching tuning spaces. The method takes advantage of collecting hardware performance counters (also known as profiling counters) during empirical tuning. Those counters are used to navigate the searching process towards faster implementations. The method requires the tuning space to be sampled on any GPU. It builds a problem-specific model, which can be used during autotuning on various, even previously unseen inputs or GPUs. Using a set of five benchmarks, we experimentally demonstrate that our method can speed up autotuning when an application needs to be ported to different hardware or when it needs to process data with different characteristics. We also compared our method to state of the art and show that our method is superior in terms of the number of searching steps and typically outperforms other searches in terms of convergence time.},
+  file        = {:http\://arxiv.org/pdf/2102.05297v1:PDF},
+  keywords    = {cs.DC, cs.LG, cs.PF},
+}
+
+@Article{Tian2021,
+  author      = {Ruiqin Tian and Luanzheng Guo and Jiajia Li and Bin Ren and Gokcen Kestor},
+  date        = {2021-02-09},
+  title       = {A High-Performance Sparse Tensor Algebra Compiler in Multi-Level IR},
+  eprint      = {2102.05187},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {Tensor algebra is widely used in many applications, such as scientific computing, machine learning, and data analytics. The tensors represented real-world data are usually large and sparse. There are tens of storage formats designed for sparse matrices and/or tensors and the performance of sparse tensor operations depends on a particular architecture and/or selected sparse format, which makes it challenging to implement and optimize every tensor operation of interest and transfer the code from one architecture to another. We propose a tensor algebra domain-specific language (DSL) and compiler infrastructure to automatically generate kernels for mixed sparse-dense tensor algebra operations, named COMET. The proposed DSL provides high-level programming abstractions that resemble the familiar Einstein notation to represent tensor algebra operations. The compiler performs code optimizations and transformations for efficient code generation while covering a wide range of tensor storage formats. COMET compiler also leverages data reordering to improve spatial or temporal locality for better performance. Our results show that the performance of automatically generated kernels outperforms the state-of-the-art sparse tensor algebra compiler, with up to 20.92x, 6.39x, and 13.9x performance improvement, for parallel SpMV, SpMM, and TTM over TACO, respectively.},
+  file        = {:http\://arxiv.org/pdf/2102.05187v1:PDF},
+  keywords    = {cs.DC, cs.PL},
+}
+
+@Article{Marrakchi2021,
+  author       = {Sirine Marrakchi and Mohamed Jemni},
+  date         = {2021},
+  journaltitle = {Fundamenta Informaticae},
+  title        = {Static Scheduling with Load Balancing for Solving Triangular Band Linear Systems on Multicore Processors},
+  doi          = {10.3233/FI-2021-2012},
+  issn         = {01692968, 18758681},
+  pages        = {35-58},
+  volume       = {179},
+  abstract     = {A new approach for solving triangular band linear systems is established in this study to balance the load and obtain a high degree of parallelism. Our investigation consists to attribute both adequate start time and processor to each task and eliminate the useless dependencies which are not used in the parallel solve stage. Thereby, processors execute in parallel their related tasks taking account of the considered precedence constraints. The theoretical lower bounds for parallel execution time and the number of processors required to carry out the task graph in the shortest time are determined. Experimentations are realized on a shared-memory multicore processor. The experimental results are fitted to the values derived from the determined mathematical formulas. The comparison of results obtained by our contribution with those from triangular systems resolution routine belonging to the library PLASMA, Parallel Linear Algebra Software for Multicore Architectures, confirms the efficiency of the proposed approach.},
+  publisher    = {IOS Press},
+}
+
+@Article{Ho2021,
+  author       = {Nhut-Minh Ho and Himeshi De silva and Weng-Fai Wong},
+  date         = {2021-02},
+  journaltitle = {{ACM} Transactions on Architecture and Code Optimization},
+  title        = {{GRAM}: A Framework for Dynamically Mixing Precisions in {GPU} Applications},
+  doi          = {10.1145/3441830},
+  number       = {2},
+  pages        = {1--24},
+  volume       = {18},
+  abstract     = {This article presents GRAM (GPU-based Runtime Adaption for Mixed-precision) a framework for the effective use of mixed precision arithmetic for CUDA programs. Our method provides a fine-grain tradeoff between output error and performance. It can create many variants that satisfy different accuracy requirements by assigning different groups of threads to different precision levels adaptively at runtime. To widen the range of applications that can benefit from its approximation, GRAM comes with an optional half-precision approximate math library. Using GRAM, we can trade off precision for any performance improvement of up to 540 \%, depending on the application and accuracy requirement.},
+  publisher    = {Association for Computing Machinery ({ACM})},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
