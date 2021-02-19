@@ -14738,6 +14738,54 @@ Python finite element solver library in the last two chapters.\\ This textbook, 
   publisher    = {Association for Computing Machinery ({ACM})},
 }
 
+@Article{Gazzola2021,
+  author       = {Silvia Gazzola and James G. Nagy and Malena Sabat{\'{e}} Landman},
+  date         = {2021-02},
+  journaltitle = {{SIAM} Journal on Scientific Computing},
+  title        = {Iteratively Reweighted {FGMRES} and {FLSQR} for Sparse Reconstruction},
+  doi          = {10.1137/20m1333948},
+  pages        = {S47--S69},
+  abstract     = {This paper presents two new algorithms to compute sparse solutions of large-scale linear discrete ill-posed problems. The proposed approach consists in constructing a sequence of quadratic problems approximating an $\ell_2$-$\ell_1$ regularization scheme (with additional smoothing to ensure differentiability at the origin) and partially solving each problem in the sequence using flexible Krylov--Tikhonov methods. These algorithms are built upon a new solid theoretical justification that guarantees that the sequence of approximate solutions to each problem in the sequence converges to the solution of the considered modified version of the $\ell_2$-$\ell_1$ problem. Compared to other traditional methods, the new algorithms have the advantage of building a single (flexible) approximation (Krylov) subspace that encodes regularization through variable “preconditioning” and that is expanded as soon as a new problem in the sequence is defined. Links between the new solvers and other well-established solvers based on augmenting Krylov subspaces are also established. The performance of these algorithms is shown through a variety of numerical examples modeling image deblurring and computed tomography.},
+  publisher    = {Society for Industrial {\&} Applied Mathematics ({SIAM})},
+}
+
+@Article{Boroujeni2021,
+  author      = {Rosa Abbasi Boroujeni and Jonas Schiffl and Eva Darulova and Mattias Ulbrich and Wolfgang Ahrendt},
+  date        = {2021-01-21},
+  title       = {Deductive Verification of Floating-Point Java Programs in KeY},
+  eprint      = {2101.08733},
+  eprintclass = {cs.PL},
+  eprinttype  = {arXiv},
+  abstract    = {Deductive verification has been successful in verifying interesting properties of real-world programs. One notable gap is the limited support for floating-point reasoning. This is unfortunate, as floating-point arithmetic is particularly unintuitive to reason about due to rounding as well as the presence of the special values infinity and `Not a Number' (NaN). In this paper, we present the first floating-point support in a deductive verification tool for the Java programming language. Our support in the KeY verifier handles arithmetic via floating-point decision procedures inside SMT solvers and transcendental functions via axiomatization. We evaluate this integration on new benchmarks, and show that this approach is powerful enough to prove the absence of floating-point special values -- often a prerequisite for further reasoning about numerical computations -- as well as certain functional properties for realistic benchmarks.},
+  file        = {:http\://arxiv.org/pdf/2101.08733v1:PDF},
+  keywords    = {cs.PL},
+}
+
+@InProceedings{Fischer2021,
+  author    = {M. {Fischer} and O. {Riedel} and A. {Lechler} and A. {Verl}},
+  booktitle = {Proceedings of the 2021 {IEEE} Conference on Dependable and Secure Computing},
+  date      = {2021},
+  title     = {Arithmetic Coding for Floating-Point Numbers},
+  doi       = {10.1109/DSC49826.2021.9346236},
+  pages     = {1--8},
+  series    = {DSC '21},
+  abstract  = {To enable the usage of standard hardware in safety-critical applications for production systems, new approaches for hardware fault tolerance are required. These approaches must be implemented on software level. As shown in the literature, arithmetic coding is a promising approach, but only supports integer calculations. For complex safety functions, e.g. in robotics, fast floating-point calculations are needed. Therefore, this paper presents a method for direct arithmetic encoding of floating-point calculations with low-performance impact. Moreover, a detailed residual error estimation is given.},
+  year      = {2021},
+}
+
+@Article{Ohmori2021,
+  author       = {Shunichi Ohmori and Kazuho Yoshimoto},
+  date         = {2021-02},
+  journaltitle = {Algorithms},
+  title        = {A Primal-Dual Interior-Point Method for Facility Layout Problem with Relative-Positioning Constraints},
+  doi          = {10.3390/a14020060},
+  number       = {2},
+  pages        = {60},
+  volume       = {14},
+  abstract     = {We consider the facility layout problem (FLP) in which we find the arrangements of departments with the smallest material handling cost that can be expressed as the product of distance times flows between departments. It is known that FLP can be formulated as a linear programming problem if the relative positioning of departments is specified, and, thus, can be solved to optimality. In this paper, we describe a custom interior-point algorithm for solving FLP with relative positioning constraints (FLPRC) that is much faster than the standard methods used in the general-purpose solver. We build a compact formation of FLPRC and its duals, which enables us to establish the optimal condition very quickly. We use this optimality condition to implement the primal-dual interior-point method with an efficient Newton step computation that exploit special structure of a Hessian. We confirm effectiveness of our proposed model through applications to several well-known benchmark data sets. Our algorithm shows much faster speed for finding the optimal solution.},
+  publisher    = {{MDPI} {AG}},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
