@@ -5439,10 +5439,10 @@ In addition, we compare the performance in the general format (CSR format, BSR f
 }
 
 @Article{Scott2019,
-  author       = {Scott, J. and Tuma, M.},
-  title        = {Sparse stretching for solving sparse-dense linear least-squares problems},
-  journaltitle = {SIAM Journal on Scientific Computing},
+  author       = {Scott, J. and Tůma, M.},
   date         = {2019},
+  journaltitle = {SIAM Journal on Scientific Computing},
+  title        = {Sparse stretching for solving sparse-dense linear least-squares problems},
   issn         = {1095-7197},
   abstract     = {Large-scale linear least-squares problems arise in a wide range of practical applications. In some cases, the system matrix contains a small number of dense rows. These make the problem significantly harder to solve because their presence limits the direct applicability of sparse matrix techniques. In particular, the normal matrix is (close to) dense,
  so that forming it is impractical. One way to help overcome the dense row problem is to employ matrix stretching.
@@ -14784,6 +14784,26 @@ Python finite element solver library in the last two chapters.\\ This textbook, 
   volume       = {14},
   abstract     = {We consider the facility layout problem (FLP) in which we find the arrangements of departments with the smallest material handling cost that can be expressed as the product of distance times flows between departments. It is known that FLP can be formulated as a linear programming problem if the relative positioning of departments is specified, and, thus, can be solved to optimality. In this paper, we describe a custom interior-point algorithm for solving FLP with relative positioning constraints (FLPRC) that is much faster than the standard methods used in the general-purpose solver. We build a compact formation of FLPRC and its duals, which enables us to establish the optimal condition very quickly. We use this optimality condition to implement the primal-dual interior-point method with an efficient Newton step computation that exploit special structure of a Hessian. We confirm effectiveness of our proposed model through applications to several well-known benchmark data sets. Our algorithm shows much faster speed for finding the optimal solution.},
   publisher    = {{MDPI} {AG}},
+}
+
+@Article{Scott2021,
+  author   = {Jennifer Scott and Miroslav Tůma},
+  date     = {2021},
+  title    = {A Null-Space Approach for Large-Scale Symmetric Saddle Point Systems with a Small and Non Zero $(2,2)$ Block},
+  url      = {https://www2.karlin.mff.cuni.cz/~mirektuma/ps/null.pdf},
+  abstract = {Null-space methods have long been used to solve large sparse $n \times n$ symmetric saddle point systems of equations in which the $(2, 2)$ block is zero. This paper focuses on the case where the $(1, 1)$ block is ill conditioned or rank deficient and the $k \times k$ $(2, 2)$ block is non zero and small $(k \ll n)$. Such systems arise in a range of practical applications, including sparse-dense linear least squares problems. A novel null-space approach is proposed that transforms the system matrix into a nicer symmetric saddle point matrix of order $n$ that has a non zero $(2, 2)$ block of order at most $2k$ and, importantly, the $(1, 1)$ block is positive definite. Success of any null-space approach depends on constructing a suitable null-space basis. We propose new methods for constructing such bases for wide matrices that have far fewer rows than columns with the aim of balancing stability of the transformed saddle point matrix with preserving sparsity in the $(1, 1)$ block. Linear least squares problems that contain a small number of dense rows are used to illustrate our ideas and to explore their potential for solving large-scale systems.},
+}
+
+@Article{Pearson2020,
+  author      = {Carl Pearson and Kun Wu and I-Hsin Chung and Jinjun Xiong and Wen-Mei Hwu},
+  date        = {2020-12-28},
+  title       = {TEMPI: An Interposed MPI Library with a Canonical Representation of CUDA-aware Datatypes},
+  eprint      = {2012.14363},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {MPI derived datatypes are an abstraction that simplifies handling of non-contiguous data in MPI applications. These datatypes are recursively constructed at runtime from primitive Named Types defined in the MPI standard. More recently, the development and deployment of CUDA-aware MPI implementations has encouraged the transition of distributed high-performance MPI codes to use GPUs. Such implementations allow MPI functions to directly operate on GPU buffers, easing integration of GPU compute into MPI codes. Despite substantial attention to CUDA-aware MPI implementations, they continue to offer cripplingly poor GPU performance when manipulating derived datatypes on GPUs. This work presents a new MPI library, TEMPI, to address this issue. TEMPI first introduces a common datatype to represent equivalent MPI derived datatypes. TEMPI can be used as an interposed library on existing MPI deployments without system or application changes. Furthermore, this work presents a performance model of GPU derived datatype handling, demonstrating that previously preferred "one-shot" methods are not always fastest. Ultimately, the interposed-library model of this work demonstrates MPI_Pack speedup of up to 242,000x and MPI_Send speedup of up to 59,000x compared to the MPI implementation deployed on a leadership-class supercomputer. This yields speedup of more than 1000x in a 3D halo exchange at 192 ranks.},
+  file        = {:http\://arxiv.org/pdf/2012.14363v6:PDF},
+  keywords    = {cs.DC},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
