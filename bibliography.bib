@@ -14806,6 +14806,39 @@ Python finite element solver library in the last two chapters.\\ This textbook, 
   keywords    = {cs.DC},
 }
 
+@Article{Baeckstroem2021,
+  author      = {Karl Bäckström and Ivan Walulya and Marina Papatriantafilou and Philippas Tsigas},
+  date        = {2021-02-17},
+  title       = {Consistent Lock-free Parallel Stochastic Gradient Descent for Fast and Stable Convergence},
+  eprint      = {2102.09032},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {Stochastic gradient descent (SGD) is an essential element in Machine Learning (ML) algorithms. Asynchronous parallel shared-memory SGD (AsyncSGD), including synchronization-free algorithms, e.g. HOGWILD!, have received interest in certain contexts, due to reduced overhead compared to synchronous parallelization. Despite that they induce staleness and inconsistency, they have shown speedup for problems satisfying smooth, strongly convex targets, and gradient sparsity. Recent works take important steps towards understanding the potential of parallel SGD for problems not conforming to these strong assumptions, in particular for deep learning (DL). There is however a gap in current literature in understanding when AsyncSGD algorithms are useful in practice, and in particular how mechanisms for synchronization and consistency play a role. We focus on the impact of consistency-preserving non-blocking synchronization in SGD convergence, and in sensitivity to hyper-parameter tuning. We propose Leashed-SGD, an extensible algorithmic framework of consistency-preserving implementations of AsyncSGD, employing lock-free synchronization, effectively balancing throughput and latency. We argue analytically about the dynamics of the algorithms, memory consumption, the threads' progress over time, and the expected contention. We provide a comprehensive empirical evaluation, validating the analytical claims, benchmarking the proposed Leashed-SGD framework, and comparing to baselines for training multilayer perceptrons (MLP) and convolutional neural networks (CNN). We observe the crucial impact of contention, staleness and consistency and show how Leashed-SGD provides significant improvements in stability as well as wall-clock time to convergence (from 20-80\% up to 4x improvements) compared to the standard lock-based AsyncSGD algorithm and HOGWILD!, while reducing the overall memory footprint.},
+  file        = {:http\://arxiv.org/pdf/2102.09032v1:PDF},
+  keywords    = {cs.DC, cs.DS},
+}
+
+@Article{Shioya2021,
+  author       = {Akemi Shioya and Yusaku Yamamoto},
+  date         = {2021-02},
+  journaltitle = {Parallel Computing},
+  title        = {Block red-black {MILU}(0) preconditioner with relaxation on {GPU}},
+  doi          = {10.1016/j.parco.2021.102760},
+  pages        = {102760},
+  abstract     = {To accelerate the Krylov subspace-based linear equation solvers on Graphics Processing Units (GPUs), a stable, efficient and highly parallel preconditioner is essential. One of the strong candidates for such a preconditioner is the combination of the block red-black ordering and the relaxed modified incomplete LU factorization without fill-ins (MILU(0)). In this paper, we present techniques for implementing this type of preconditioner on General-purpose computing on GPU (GPGPU) using OpenACC. Our implementation is designed for 3-dimensional finite-difference computations with 7-point stencil, and the matrix storage format is optimized to realize coalesced memory access. Also, mixed-precision computation is employed to exploit the high single-precision performance of GPUs without sacrificing the accuracy of the computed solution. Extensive numerical tests were performed and the optimal values of various tunable parameters such as the number of blocks in each direction and the number of workers specified in OpenACC clauses are discussed. Performance comparison on NVIDIA Quadro GP100 and Tesla K40t GPUs shows that our solver is much faster than existing libraries like cuSPARSE, MAGMA, ViennaCL, and Ginkgo, especially when multiple linear equations with coefficient matrices sharing the same nonzero pattern are solved.},
+  publisher    = {Elsevier {BV}},
+}
+
+@InProceedings{Gomez2021,
+  author    = {Constantino G{\'{o}}mez and Filippo Mantovani and Erich Focht and Marc Casas},
+  booktitle = {Proceedings of the 26th {ACM} {SIGPLAN} Symposium on Principles and Practice of Parallel Programming},
+  date      = {2021-02},
+  title     = {Efficiently running {SpMV} on long vector architectures},
+  doi       = {10.1145/3437801.3441592},
+  publisher = {{ACM}},
+  abstract  = {Sparse Matrix-Vector multiplication (SpMV) is an essential kernel for parallel numerical applications. SpMV displays sparse and irregular data accesses, which complicate its vectorization. Such difficulties make SpMV to frequently experiment non-optimal results when run on long vector ISAs exploiting SIMD parallelism. In this context, the development of new optimizations becomes fundamental to enable high performance SpMV executions on emerging long vector architectures. In this paper, we improve the state-of-the-art SELL-C-$\sigma$ sparse matrix format by proposing several new optimizations for SpMV. We target aggressive long vector architectures like the NEC Vector Engine. By combining several optimizations, we obtain an average 12\% improvement over SELL-C-$\sigma$ considering a heterogeneous set of 24 matrices. Our optimizations boost performance in long vector architectures since they expose a high degree of SIMD parallelism.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
