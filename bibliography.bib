@@ -14839,6 +14839,105 @@ Python finite element solver library in the last two chapters.\\ This textbook, 
   abstract  = {Sparse Matrix-Vector multiplication (SpMV) is an essential kernel for parallel numerical applications. SpMV displays sparse and irregular data accesses, which complicate its vectorization. Such difficulties make SpMV to frequently experiment non-optimal results when run on long vector ISAs exploiting SIMD parallelism. In this context, the development of new optimizations becomes fundamental to enable high performance SpMV executions on emerging long vector architectures. In this paper, we improve the state-of-the-art SELL-C-$\sigma$ sparse matrix format by proposing several new optimizations for SpMV. We target aggressive long vector architectures like the NEC Vector Engine. By combining several optimizations, we obtain an average 12\% improvement over SELL-C-$\sigma$ considering a heterogeneous set of 24 matrices. Our optimizations boost performance in long vector architectures since they expose a high degree of SIMD parallelism.},
 }
 
+@Article{Gasparini2021,
+  author       = {Leonardo Gasparini and Jos{\'{e}} R.P. Rodrigues and Douglas A. Augusto and Luiz M. Carvalho and Cesar Conopoima and Paulo Goldfeld and Jairo Panetta and Jo{\~{a}}o P. Ramirez and Michael de Souza and Mateus O. Figueiredo and Victor M.D.M. Leite},
+  date         = {2021-02},
+  journaltitle = {Journal of Computational Science},
+  title        = {Hybrid Parallel Iterative Sparse Linear Solver Framework for Reservoir Geomechanical and Flow Simulation},
+  doi          = {10.1016/j.jocs.2021.101330},
+  pages        = {101330},
+  abstract     = {We discuss new developments of a hybrid parallel iterative sparse linear solver framework focused on petroleum reservoir flow and geomechanical simulation. It runs efficiently on several platforms, from desktop workstations to clusters of multicore nodes, with or without multiple GPUs, using a two-tier hierarchical architecture for distributed matrices and vectors. Results show good parallel scalability. Comparisons with a well-established library and a proprietary commercial solver indicate that our solver is competitive with the best available tools. We present results of the solver's application to simulations of real and synthetic reservoir models of up to billions of unknowns, running on CPUs and GPUs on up to 2,000 processes.},
+  publisher    = {Elsevier {BV}},
+}
+
+@Article{Gnanasekaran2021,
+  author      = {Abeynaya Gnanasekaran and Eric Darve},
+  date        = {2021-02-19},
+  title       = {Hierarchical Orthogonal Factorization: Sparse Least Squares Problems},
+  eprint      = {2102.09878},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {In this work, we develop a fast hierarchical solver for solving large, sparse least squares problems. We build upon the algorithm, spaQR (sparsified QR), that was developed by the authors to solve large sparse linear systems. Our algorithm is built on top of a Nested Dissection based multifrontal QR approach. We use low-rank approximations on the frontal matrices to sparsify the vertex separators at every level in the elimination tree. Using a two-step sparsification scheme, we reduce the number of columns and maintain the ratio of rows to columns in each front without introducing any additional fill-in. With this improvised scheme, we show that the runtime of the algorithm scales as $\mathcal{O}(M \log N)$ and uses $\mathcal{O}(M)$ memory to store the factorization. This is achieved at the expense of a small and controllable approximation error. The end result is an approximate factorization of the matrix stored as a sequence of sparse orthogonal and upper-triangular factors and hence easy to apply/solve with a vector. Finally, we compare the performance of the spaQR algorithm in solving sparse least squares problems with direct multifrontal QR and CGLS iterative method with a standard diagonal preconditioner.},
+  file        = {:http\://arxiv.org/pdf/2102.09878v1:PDF},
+  keywords    = {math.NA, cs.NA, 65F08 (Primary), 65F25, 65F50, 65Y20, 65F05 (Secondary), G.1.3},
+}
+
+@Article{Shi2021,
+  author      = {Hao-Jun Michael Shi and Melody Qiming Xuan and Figen Oztoprak and Jorge Nocedal},
+  date        = {2021-02-19},
+  title       = {On the Numerical Performance of Derivative-Free Optimization Methods Based on Finite-Difference Approximations},
+  eprint      = {2102.09762},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {The goal of this paper is to investigate an approach for derivative-free optimization that has not received sufficient attention in the literature and is yet one of the simplest to implement and parallelize. It consists of computing gradients of a smoothed approximation of the objective function (and constraints), and employing them within established codes. These gradient approximations are calculated by finite differences, with a differencing interval determined by the noise level in the functions and a bound on the second or third derivatives. It is assumed that noise level is known or can be estimated by means of difference tables or sampling. The use of finite differences has been largely dismissed in the derivative-free optimization literature as too expensive in terms of function evaluations and/or as impractical when the objective function contains noise. The test results presented in this paper suggest that such views should be re-examined and that the finite-difference approach has much to be recommended. The tests compared NEWUOA, DFO-LS and COBYLA against the finite-difference approach on three classes of problems: general unconstrained problems, nonlinear least squares, and general nonlinear programs with equality constraints.},
+  file        = {:http\://arxiv.org/pdf/2102.09762v1:PDF},
+  keywords    = {math.OC},
+}
+
+@InProceedings{Li2021,
+  author    = {Zhimin Li and Harshitha Menon and Kathryn Mohror and Peer-Timo Bremer and Yarden Livant and Valerio Pascucci},
+  booktitle = {Proceedings of the 26th {ACM} {SIGPLAN} Symposium on Principles and Practice of Parallel Programming},
+  date      = {2021-02},
+  title     = {Understanding a program{\textquotesingle}s resiliency through error propagation},
+  doi       = {10.1145/3437801.3441589},
+  publisher = {{ACM}},
+  abstract  = {Aggressive technology scaling trends have worsened the transient fault problem in high-performance computing (HPC) systems. Some faults are benign, but others can lead to silent data corruption (SDC), which represents a serious problem; a fault introducing an error that is not readily detected nto an HPC simulation. Due to the insidious nature of SDCs, researchers have worked to understand their impact on applications. Previous studies have relied on expensive fault injection campaigns with uniform sampling to provide overall SDC rates, but this solution does not provide any feedback on the code regions without samples.\\ In this research, we develop a method to systematically analyze all fault injection sites in an application with a low number of fault injection experiments. We use fault propagation data from a fault injection experiment to predict the resiliency of other untested fault sites and obtain an approximate fault tolerance threshold value for each site, which represents the largest error that can be introduced at the site without incurring incorrect simulation results. We define the collection of threshold values over all fault sites in the program as a fault tolerance boundary and propose a simple but efficient method to approximate the boundary. In our experiments, we show our method reduces the number of fault injection samples required to understand a program's resiliency by several orders of magnitude when compared with a traditional fault injection study.},
+}
+
+@InProceedings{Fischer2021a,
+  author    = {M. {Fischer} and O. {Riedel} and A. {Lechler} and A. {Verl}},
+  booktitle = {Proceedings of the {IEEE} Conference on Dependable and Secure Computing},
+  date      = {2021},
+  title     = {Arithmetic Coding for Floating-Point Numbers},
+  doi       = {10.1109/DSC49826.2021.9346236},
+  pages     = {01-08},
+  series    = {DSC '21},
+  abstract  = {To enable the usage of standard hardware in safety-critical applications for production systems, new approaches for hardware fault tolerance are required. These approaches must be implemented on software level. As shown in the literature, arithmetic coding is a promising approach, but only supports integer calculations. For complex safety functions, e.g. in robotics, fast floating-point calculations are needed. Therefore, this paper presents a method for direct arithmetic encoding of floating-point calculations with low-performance impact. Moreover, a detailed residual error estimation is given.},
+  year      = {2021},
+}
+
+@Article{Cartis2021,
+  author       = {Coralia Cartis and Lindon Roberts and Oliver Sheridan-Methven},
+  date         = {2021-02},
+  journaltitle = {Optimization},
+  title        = {Escaping local minima with local derivative-free methods: a numerical investigation},
+  doi          = {10.1080/02331934.2021.1883015},
+  pages        = {1--31},
+  abstract     = {We investigate the potential of applying a state-of-the-art, local derivative-free solver, Py-BOBYQA to global optimization problems. In particular, we demonstrate the potential of a restarts procedure – as distinct from multistart methods – to allow Py-BOBYQA to escape local minima (where ordinarily it would terminate at the first local minimum found). We also introduce an adaptive variant of restarts which yields improved performance on global optimization problems. As Py-BOBYQA is a model-based trust-region method, we compare largely with other global optimization methods for which (global) models are important, such as Bayesian optimization and response surface methods; we also consider state-of-the-art representative deterministic and stochastic codes, such as DIRECT and CMA-ES. We find numerically that the restarts procedures in Py-BOBYQA are effective at helping it to escape local minima, when compared to using no restarts in Py-BOBYQA. Additionally, we find that Py-BOBYQA with adaptive restarts has comparable performance with global optimization solvers for all accuracy/budget regimes, in both smooth and noisy settings. In particular, Py-BOBYQA variants are best performing for smooth and multiplicative noise problems in high-accuracy regimes. As a by-product, some preliminary conclusions can be drawn on the relative performance of the global solvers we have tested with default settings.},
+  publisher    = {Informa {UK} Limited},
+}
+
+@InProceedings{Ellis2021,
+  author    = {Marquita Ellis and Ayd{\i}n Bulu{\c{c}} and Katherine Yelick},
+  booktitle = {Proceedings of the 26th {ACM} {SIGPLAN} Symposium on Principles and Practice of Parallel Programming},
+  date      = {2021-02},
+  title     = {Asynchrony versus bulk-synchrony for a generalized N-body problem from genomics},
+  doi       = {10.1145/3437801.3441580},
+  publisher = {{ACM}},
+  abstract  = {This work examines a data-intensive irregular application from genomics, a long-read to long-read alignment problem, which represents a kind of Generalized N-Body problem, one of the "seven giants" of the NRC Big Data motifs [5]. In this problem, computations (genomic alignments) are performed on sparse and data-dependent pairs of inputs, with variable cost computation and variable datum sizes. In particular, there is no inherent locality in the pairwise interactions, unlike simulation-based N-Body problems, and the interaction sparsity depends on particular parameters of the input, which can also affect the quality of the output. We examine two extremes to distributed memory parallelization for this problem, bulk-synchrony and asynchrony, with real workloads. Our bulk-synchronous implementation, uses collective communication in MPI, while our asynchronous implementation uses cross-node RPCs in UPC++. We show that the asynchronous version effectively hides communication costs, with a memory footprint that is typically much lower than the bulk-synchronous version. Our application, while simple enough to be a kind of proxy for genomics or data analytics applications more broadly, is also part of a real application pipeline. It shows good scaling on real input problems, and at the same time, reveals some of the programming and architectural challenges for scaling this type of data-intensive irregular application.},
+}
+
+@InProceedings{Han2021,
+  author    = {Ruobing Han and Min Si and James Demmel and Yang You},
+  booktitle = {Proceedings of the 26th {ACM} {SIGPLAN} Symposium on Principles and Practice of Parallel Programming},
+  date      = {2021-02},
+  title     = {Dynamic scaling for low-precision learning},
+  doi       = {10.1145/3437801.3441624},
+  publisher = {{ACM}},
+  abstract  = {In recent years, distributed deep learning is becoming popular in industry and academia. Although researchers want to use distributed systems for training, it has been reported that the communication cost for synchronizing gradients can be a bottleneck. Using low-precision gradients is a promising technique for reducing the bandwidth requirement. In this work, we propose Auto Precision Scaling (APS), an algorithm that can improve the accuracy when we communicate gradients by low-precision floating-point values. APS can improve the accuracy for all precisions with a trivial communication cost. Our experimental results show that for both image classification and segmentation, applying APS can train the state-of-the-art models by 8-bit floating-point gradients with no or only a tiny accuracy loss (<0.05\%). Furthermore, we can avoid any accuracy loss by designing a hybrid-precision technique. Finally, we propose a performance model to evaluate the proposed method. Our experimental results show that APS can get a significant speedup over the state-of-the-art method. To make it available to researchers and developers, we design and implement a high-performance system for customized precision Deep Learning(CPD), which can simulate the training process using an arbitrary low-precision customized floating-point format. We integrate CPD into PyTorch and make it open-source to the public.},
+}
+
+@Article{Higham2021,
+  author    = {Higham, Nicholas K. and Lettington, Matthew C.},
+  date      = {2021-02},
+  title     = {Optimizing and Factorizing the Wilson Matrix},
+  eprint    = {MIMS EPrint:2021.3},
+  pages     = {e330},
+  volume    = {7},
+  abstract  = {The Wilson matrix, $W$, is a $4 \times 4$ unimodular symmetric positive definite matrix of integers that has been used as a test matrix since the 1940s, owing to its mild ill-conditioning. We ask how close $W$ is to being the most ill-conditioned matrix in its class, with or without the requirement of positive definiteness. By exploiting the matrix adjugate and applying various matrix norm bounds from the literature we derive bounds on the condition numbers for the two cases and we compare them with the optimal condition numbers found by exhaustive search. We also investigate the existence of factorizations $W = Z^T Z$ with $Z$ having integer or rational entries. Drawing on recent research that links the existence of these factorizations to number-theoretic considerations of quadratic forms, we show that $W$ has an integer factor $Z$ and two rational factors, up to signed permutations. This little $4 \times 4$ matrix continues to be a useful example on which to apply existing matrix theory as well as being capable of raising challenging questions that lead to new results.},
+  publisher = {{PeerJ}},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
