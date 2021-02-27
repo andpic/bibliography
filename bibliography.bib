@@ -14938,6 +14938,54 @@ Python finite element solver library in the last two chapters.\\ This textbook, 
   publisher = {{PeerJ}},
 }
 
+@Article{Hanauer2021,
+  author      = {Kathrin Hanauer and Monika Henzinger and Christian Schulz},
+  date        = {2021-02-22},
+  title       = {Recent Advances in Fully Dynamic Graph Algorithms},
+  eprint      = {2102.11169},
+  eprintclass = {cs.DS},
+  eprinttype  = {arXiv},
+  abstract    = {In recent years, significant advances have been made in the design and analysis of fully dynamic algorithms. However, these theoretical results have received very little attention from the practical perspective. Few of the algorithms are implemented and tested on real datasets, and their practical potential is far from understood. Here, we survey recent engineering and theory results in the area of fully dynamic graph algorithms.},
+  file        = {:http\://arxiv.org/pdf/2102.11169v1:PDF},
+  keywords    = {cs.DS},
+}
+
+@Article{Salim2021,
+  author      = {Adil Salim and Laurent Condat and Dmitry Kovalev and Peter Richtárik},
+  date        = {2021-02-22},
+  title       = {An Optimal Algorithm for Strongly Convex Minimization under Affine Constraints},
+  eprint      = {2102.11079},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {Optimization problems under affine constraints appear in various areas of machine learning. We consider the task of minimizing a smooth strongly convex function $F(x)$ under the affine constraint $K x = b$, with an oracle providing evaluations of the gradient of $F$ and matrix-vector multiplications by $K$ and its transpose. We provide lower bounds on the number of gradient computations and matrix-vector multiplications to achieve a given accuracy. Then we propose an accelerated primal--dual algorithm achieving these lower bounds. Our algorithm is the first optimal algorithm for this class of problems.},
+  file        = {:http\://arxiv.org/pdf/2102.11079v1:PDF},
+  keywords    = {math.OC},
+}
+
+@Article{Helal2021,
+  author      = {Ahmed E. Helal and Jan Laukemann and Fabio Checconi and Jesmin Jahan Tithi and Teresa Ranadive and Fabrizio Petrini and Jeewhan Choi},
+  date        = {2021-02-20},
+  title       = {ALTO: Adaptive Linearized Storage of Sparse Tensors},
+  eprint      = {2102.10245},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {The analysis of high-dimensional sparse data is becoming increasingly popular in many important domains. However, real-world sparse tensors are challenging to process due to their irregular shapes and data distributions. We propose the Adaptive Linearized Tensor Order (ALTO) format, a novel mode-agnostic (general) representation that keeps neighboring nonzero elements in the multi-dimensional space close to each other in memory. To generate the indexing metadata, ALTO uses an adaptive bit encoding scheme that trades off index computations for lower memory usage and more effective use of memory bandwidth. Moreover, by decoupling its sparse representation from the irregular spatial distribution of nonzero elements, ALTO eliminates the workload imbalance and greatly reduces the synchronization overhead of tensor computations. As a result, the parallel performance of ALTO-based tensor operations becomes a function of their inherent data reuse. On a gamut of tensor datasets, ALTO outperforms an oracle that selects the best state-of-the-art format for each dataset, when used in key tensor decomposition operations. Specifically, ALTO achieves a geometric mean speedup of 8X over the best mode-agnostic format, while delivering a geometric mean compression ratio of more than 4X relative to the best mode-specific format.},
+  file        = {:http\://arxiv.org/pdf/2102.10245v1:PDF},
+  keywords    = {cs.DC, cs.DS, cs.PF},
+}
+
+@Article{Lestandi2021,
+  author       = {Lucas Lestandi},
+  date         = {2021-02},
+  journaltitle = {Journal of Scientific Computing},
+  title        = {Numerical Study of Low Rank Approximation Methods for Mechanics Data and Its Analysis},
+  doi          = {10.1007/s10915-021-01421-2},
+  number       = {1},
+  volume       = {87},
+  abstract     = {This paper proposes a comparison of the numerical aspect and efficiency of several low rank approximation techniques for multidimensional data, namely CPD, HOSVD, TT-SVD, RPOD, QTT-SVD and HT. This approach is different from the numerous papers that compare the theoretical aspects of these methods or propose efficient implementation of a single technique. Here, after a brief presentation of the studied methods, they are tested in practical conditions in order to draw hindsight at which one should be preferred. Synthetic data provides sufficient evidence for dismissing CPD, T-HOSVD and RPOD. Then, three examples from mechanics provide data for realistic application of TT-SVD and ST-HOSVD. The obtained low rank approximation provides different levels of compression and accuracy depending on how separable the data is. In all cases, the data layout has significant influence on the analysis of modes and computing time while remaining similarly efficient at compressing information. Both methods provide satisfactory compression, from 0.1\% to 20\% of the original size within a few percent error in $L^2$ norm. ST-HOSVD provides an orthonormal basis while TT-SVD doesn’t. QTT is performing well only when one dimension is very large. A final experiment is applied to an order 7 tensor with ($4 \times 8 \times 8 \times 64 \times 64 \times 64 \times 64$) entries (32 GB) from complex multi-physics experiment. In that case, only HT provides actual compression (50\%) due to the low separability of this data. However, it is better suited for higher order d. Finally, these numerical tests have been performed with pydecomp , an open source python library developed by the author.},
+  publisher    = {Springer Science and Business Media {LLC}},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
