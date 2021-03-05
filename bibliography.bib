@@ -14986,6 +14986,152 @@ Python finite element solver library in the last two chapters.\\ This textbook, 
   publisher    = {Springer Science and Business Media {LLC}},
 }
 
+@Article{Shen2021,
+  author       = {Yuan Shen and Yannian Zuo and Xiayang Zhang},
+  date         = {2021-02},
+  journaltitle = {Journal of Computational and Applied Mathematics},
+  title        = {A faster generalized {ADMM}-based algorithm using a sequential updating scheme with relaxed stepsizes for multiple-block linearly constrained separable convex programming},
+  doi          = {10.1016/j.cam.2021.113503},
+  pages        = {113503},
+  abstract     = {The multi-block linearly constrained separable convex optimization is frequently applied in numerous applications, including image/signal processing, statistical learning, and data mining, where the objective function is the sum of multiple individual convex functions, and the key constraints are linear. A classical approach to solving such optimization problem could be the alternating direction method of multipliers(ADMM). It decomposes the subproblem into a series of small-scale ones such that its per-iteration cost may be meager. ADMM, however, is designed initially for the two-block model, and its convergence can not be guaranteed for a general multi-block model without additional assumptions. Dai et al. (2017) proposed the algorithm SUSLM (for Sequential Updating Scheme of the Lagrange Multiplier) for separable convex programming problems. The Lagrange multipliers are updated several times at each iteration, and a correction step is imposed at the end of each iteration. In order to derive its convergence property, a correction step is imposed at the end of each iteration. In this paper, we improve the SUSLM algorithm by introducing two controlled parameters in the updating expressions for decision variables and Lagrange multipliers. The condition of step sizes is then relaxed. We show experimentally that our SUSLM algorithm converges faster than SUSLM. Moreover, result comparisons on robust principal component analysis (RPCA) show better performances than other ADMM-based algorithms.},
+  publisher    = {Elsevier {BV}},
+}
+
+@Article{Jiang2021,
+  author      = {Zihan Jiang and Wanling Gao and Fei Tang and Xingwang Xiong and Lei Wang and Chuanxin Lan and Chunjie Luo and Hongxiao Li and Jianfeng Zhan},
+  date        = {2021-02-25},
+  title       = {HPC AI500: Representative, Repeatable and Simple HPC AI Benchmarking},
+  eprint      = {2102.12848},
+  eprintclass = {cs.PF},
+  eprinttype  = {arXiv},
+  abstract    = {Recent years witness a trend of applying large-scale distributed deep learning algorithms (HPC AI) in both business and scientific computing areas, whose goal is to speed up the training time to achieve a state-of-the-art quality. The HPC AI benchmarks accelerate the process. Unfortunately, benchmarking HPC AI systems at scale raises serious challenges. This paper presents a representative, repeatable and simple HPC AI benchmarking methodology. Among the seventeen AI workloads of AIBench Training -- by far the most comprehensive AI Training benchmarks suite -- we choose two representative and repeatable AI workloads. The selected HPC AI benchmarks include both business and scientific computing: Image Classification and Extreme Weather Analytics. To rank HPC AI systems, we present a new metric named Valid FLOPS, emphasizing both throughput performance and a target quality. The specification, source code, datasets, and HPC AI500 ranking numbers are publicly available from \url{https://www.benchcouncil.org/HPCAI500/}.},
+  file        = {:http\://arxiv.org/pdf/2102.12848v1:PDF},
+  keywords    = {cs.PF},
+}
+
+@Article{Cartis2021a,
+  author      = {Coralia Cartis and Lindon Roberts},
+  date        = {2021-02-24},
+  title       = {Scalable Subspace Methods for Derivative-Free Nonlinear Least-Squares Optimization},
+  eprint      = {2102.12016},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {We introduce a general framework for large-scale model-based derivative-free optimization based on iterative minimization within random subspaces. We present a probabilistic worst-case complexity analysis for our method, where in particular we prove high-probability bounds on the number of iterations before a given optimality is achieved. This framework is specialized to nonlinear least-squares problems, with a model-based framework based on the Gauss-Newton method. This method achieves scalability by constructing local linear interpolation models to approximate the Jacobian, and computes new steps at each iteration in a subspace with user-determined dimension. We then describe a practical implementation of this framework, which we call DFBGN. We outline efficient techniques for selecting the interpolation points and search subspace, yielding an implementation that has a low per-iteration linear algebra cost (linear in the problem dimension) while also achieving fast objective decrease as measured by evaluations. Extensive numerical results demonstrate that DFBGN has improved scalability, yielding strong performance on large-scale nonlinear least-squares problems.},
+  file        = {:http\://arxiv.org/pdf/2102.12016v1:PDF},
+  keywords    = {math.OC},
+}
+
+@Article{Engelmann2021,
+  author      = {Alexander Engelmann and Timm Faulwasser},
+  date        = {2021-02-24},
+  title       = {Decentralized conjugate gradients with finite-step convergence},
+  eprint      = {2102.12311},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {The decentralized solution of linear systems of equations arises as a subproblem in optimization over networks. Typical examples include the KKT system corresponding to equality constrained quadratic programs in distributed optimization algorithms or in active set methods. This note presents a tailored structure-exploiting decentralized variant of the conjugate gradient method. We show that the decentralized conjugate gradient method exhibits super-linear convergence in a finite number of steps. Finally, we illustrate the algorithm's performance in comparison to the Alternating Direction Method of Multipliers drawing upon examples from sensor fusion.},
+  file        = {:http\://arxiv.org/pdf/2102.12311v1:PDF},
+  keywords    = {math.OC, cs.SY, eess.SY},
+}
+
+@Article{Wu2021,
+  author      = {Xuyang Wu and He Wang and Jie Lu},
+  date        = {2021-02-25},
+  title       = {Distributed Optimization with Coupling Constraints},
+  eprint      = {2102.12989},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {In this paper, we develop a novel distributed algorithm for addressing convex optimization with both nonlinear inequality and linear equality constraints, where the objective function can be a general nonsmooth convex function and all the constraints can be fully coupled. Specifically, we first separate the constraints into three groups, and design two primal-dual methods and utilize a virtual-queue-based method to handle each group of the constraints independently. Then, we integrate these three methods in a strategic way, leading to an integrated primal-dual proximal (IPLUX) algorithm, and enable the distributed implementation of IPLUX. We show that IPLUX achieves an $O(1/k)$ rate of convergence in terms of optimality and feasibility, which is stronger than the convergence results of the state-of-the-art distributed algorithms for convex optimization with coupling nonlinear constraints. Finally, IPLUX exhibits competitive practical performance in the simulations.},
+  file        = {:http\://arxiv.org/pdf/2102.12989v1:PDF},
+  keywords    = {math.OC},
+}
+
+@Article{Sun2021,
+  author       = {Guangyong Sun and Linsong Li and Jianguang Fang and Qing Li},
+  date         = {2021-04},
+  journaltitle = {Thin-Walled Structures},
+  title        = {On lower confidence bound improvement matrix-based approaches for multiobjective Bayesian optimization and its applications to thin-walled structures},
+  doi          = {10.1016/j.tws.2020.107248},
+  pages        = {107248},
+  volume       = {161},
+  abstract     = {In engineering practice, most design criteria require time-consuming functional evaluation. To tackle such design problems, multiobjective Bayesian optimization has been widely applied to generation of optimal Pareto solutions. However, improvement function-based expected improvement (EI) and the hypervolume improvement-based lower confidence bound (LCB) infill-criteria are frequently criticized for their high computational cost. To address this issue, this study proposes a novel approach for developing multiobjective LCB criteria on the basis of LCB improvement matrix. Specifically, three cheap yet efficient infill-criteria are suggested by introducing three different improvement functions (namely, hypervolume improvement, Euclidean distance and maximin distance) that assemble the improvement matrix to a scalar value, which is then maximized for adding solution points sequentially. All these criteria have closed-form expressions and can maintain the anticipated properties, thereby largely reducing computational efforts without either integration or expensive evaluation of hypervolume indicator. The efficiency of the proposed criteria is demonstrated through the ZDT and DTLZ tests with different numbers of design variables and different complexities of objectives. The testing results exhibit that the proposed criteria have faster convergence, and enable to generate satisfactory Pareto front with fairly low computational cost compared with other conventional criteria. Finally, the best performing criterion is further applied to real-life design problems of tailor rolled blank (TRB) thin-walled structures under impact loads, which demonstrates a strong search capability for with good distribution of Pareto points, potentially providing an effective means to engineering design with strong nonlinearity and sophistication.},
+  publisher    = {Elsevier {BV}},
+}
+
+@Article{Liu2021,
+  author       = {Jinling Liu and Junzheng Jiang and Jiming Lin and Junyi Wang},
+  date         = {2021-02},
+  journaltitle = {Digital Signal Processing},
+  title        = {Generalized Newton methods for graph signal matrix completion},
+  doi          = {10.1016/j.dsp.2021.103009},
+  pages        = {103009},
+  abstract     = {The matrix completion problem can be found in many applications such as classification, image inpainting and collaborative filtering. In recent years, the emerging field of graph signal processing (GSP) has shed new light on this problem, deriving the graph signal matrix completion problem which incorporates the correlation of data elements. The nuclear-norm based methods possess satisfactory recovery performance, while they suffer from high computational cost and usually have slow convergence rate. In this paper, we propose two new iterative algorithms for solving the nuclear-norm regularization based graph signal matrix completion (NRGSMC) problem. By adopting approximate diagonalization approaches to estimate singular value decomposition (SVD), we obtain two generalized Newton algorithms, the generalized Newton with truncated Jacobi method (GNTJM) and the generalized Newton with parallel truncated Jacobi method (GNPTJM). The proposed methods are with low complexity and fast convergence by using the second-order information associated with the problem. Numerical results on three real-world data sets demonstrate that our schemes have evidently faster convergence rate than the gradient method with exact SVD, while maintain the similar completion performance.},
+  publisher    = {Elsevier {BV}},
+}
+
+@Article{Pan2021,
+  author       = {Kejia Pan and Hai-Wei Sun and Yuan Xu and Yufeng Xu},
+  date         = {2021-08},
+  journaltitle = {Applied Mathematics and Computation},
+  title        = {An efficient multigrid solver for two-dimensional spatial fractional diffusion equations with variable coefficients},
+  doi          = {10.1016/j.amc.2021.126091},
+  pages        = {126091},
+  volume       = {402},
+  abstract     = {Extrapolation cascadic multigrid (EXCMG) method with the conjugate gradient smoother is shown to be an efficient solver for large sparse symmetric positive definite systems resulting from linear finite element discretization of second-order elliptic boundary value problems [Pan et al. J. Comput. Phys. 344 (2017) 499–515]. In this paper, we generalize the EXCMG method to solve a class of spatial fractional diffusion equations (SFDEs) with variable coefficients. Both steady-state and time-dependent problems are considered. First of all, space-fractional derivatives defined in Riemann–Liouville sense are discretized by using the weighted average of shifted Grünwald formula, which results in a fully dense and nonsymmetric linear system for the steady-state problem, or a semi-discretized ODE system for the time-dependent problem. Then, to solve the former problem, we propose the EXCMG method with the biconjugate gradient stabilized smoother to deal with the dense and nonsymmetric linear system. Next, such technique is extended to solve the latter problem since it becomes fully discrete when the Crank-Nicolson scheme is introduced to handle the temporal derivative. Finally, several numerical examples are reported to show that the EXCMG method is an efficient solver for both steady-state and time-dependent SFDEs, and performs much better than the V-cycle multigrid method with banded-splitting smoother for time-dependent SFDEs [Lin et al. J. Comput. Phys. 336 (2017) 69–86].},
+  publisher    = {Elsevier {BV}},
+}
+
+@Article{Kozicky2021,
+  author       = {Claudio Kozick{\'{y}} and Ivan {\v{S}}ime{\v{c}}ek},
+  date         = {2021-02},
+  journaltitle = {Concurrency and Computation: Practice and Experience},
+  title        = {Joint direct and transposed sparse matrix-vector multiplication for multithreaded {CPUs}},
+  doi          = {10.1002/cpe.6236},
+  abstract     = {Repeatedly performing sparse matrix‐vector multiplication (SpMV) followed by transposed sparse matrix‐vector multiplication (SpM${}^T$V) with the same matrix is a part of several algorithms, for example, the Lanczos biorthogonalization algorithm and the biconjugate gradient method. Such algorithms can benefit from combining parallel SpMV and SpM${}^T$V into a single operation we call joint direct and transposed sparse matrix‐vector multiplication (SpMM${}^T$V). In this article, we present a parallel SpMM${}^T$V algorithm for shared‐memory CPUs. The algorithm uses a sparse matrix format that divides the stored matrix into sparse matrix blocks and compresses the row and column indices of the matrix. This sparse matrix format can be also used for SpMV, SpM${}^T$V, and similar sparse matrix‐vector operations. We expand upon existing research by suggesting new variants of the parallel SpMM${}^T$V algorithm and by extending the algorithm to efficiently support symmetric matrices. We compare the performance of the presented parallel SpMM${}^T$V algorithm with alternative approaches, which use state‐of‐the‐art sparse matrix formats and libraries, using sparse matrices from real‐world applications. The performance results indicate that the median performance of our proposed parallel SpMM${}^T$V algorithm is up to 45\% higher than of the alternative approaches.},
+  publisher    = {Wiley},
+}
+
+@PhdThesis{Wang2021a,
+  author      = {Wang, Yongyu},
+  date        = {2021},
+  institution = {Michigan Technological University},
+  title       = {High Performance Spectral Methods for Graph-Based Machine Learning},
+  url         = {https://search.proquest.com/openview/c1551e2ddafc1052c25367e2753854af/1.pdf?pq-origsite=gscholar&cbl=18750&diss=y},
+  abstract    = {Graphs play a critical role in machine learning and data mining fields. The success of graph-based machine learning algorithms highly depends on the quality of the underlying graphs. Desired graphs should have two characteristics: 1) they should be able to well-capture the underlying structures of the data sets. 2) they should be sparse enough so that the downstream algorithms can be performed efficiently on them.\\ This dissertation first studies the application of a two-phase spectrum-preserving spectral sparsification method that enables to construct very sparse sparsifiers with guaranteed preservation of original graph spectra for spectral clustering. Experiments show that the computational challenge due to the eigen-decomposition procedure in spectral clustering can be fundamentally addressed.\\ We then propose a highly-scalable spectral graph learning approach GRASPEL (Graph Spectral Learning at Scale). GRASPEL can learn high-quality graphs from high dimensional input data. Compared with prior state-of-the-art graph learning and construction methods [26, 27, 38] , GRASPEL leads to substantially improved algorithm performance.},
+}
+
+@InProceedings{Jackson2020,
+  author    = {Adrian Jackson and Pierre-Antoine Thouvenin and Ming Jiang and Abdullah Abdulaziz and Arwa Dabbech and Yves Wiaux},
+  booktitle = {Proceedings of the {ISC} High Performance Computing},
+  date      = {2020},
+  title     = {Scaling convex optimisation for radio astronomy},
+  language  = {English},
+  series    = {ISC '20},
+  url       = {https://researchportal.hw.ac.uk/files/44074559/Scaling_convex_optimisation_for_radio_astronomy.pdf},
+  abstract  = {Aperture synthesis by interferometry in radio astronomy allows observation of the sky by antenna arrays with otherwise inaccessible angular resolutions and sensitivities, providing a whole wealth of information for astrophysics and cosmology. At the target resolution and dynamic range of interest to upcoming telescopes, image cubes will reach close to Petabyte sizes, with data volumes orders of magnitude larger, possibly verging on the Exabyte scale. In this context, convex optimisation theory offers modern algorithmic structures that can handle extreme data volumes by distributing the computation across large computer systems, while explicitly incorporating complex image prior models to regularise the problem. Motivated by these advantages, we introduce a C++ library and set of applications, dubbed Puri-Psi, as a production implementation of the recently proposed RI imaging approach HyperSARA, previously available as a proof-of-concept MATLAB implementation. Puri-Psi enables scaling up to very large data volumes by parallelising across a large number processes and compute nodes. We validate Puri-Psi against the MATLAB implementation, and evaluate its performance in a representative high performance computing setting.},
+  month     = dec,
+  year      = {2020},
+}
+
+@TechReport{Korkmaz2021,
+  author      = {Esragul Korkmaz and Mathieu Faverge and Grégoire Pichon and Pierre Ramet},
+  date        = {2021},
+  institution = {Inria Bordeaux -- Sud Ouest},
+  title       = {Deciding Non-Compressible Blocks in Sparse Direct Solvers using Incomplete Factorization},
+  eprint      = {03152932v2},
+  eprinttype  = {HAL},
+  url         = {https://hal.inria.fr/hal-03152932/file/RR-9396.pdf},
+  abstract    = {Low-rank compression techniques are very promising for reducing memory footprint and execution time on a large spectrum of linear solvers. Sparse direct supernodal approaches are one these techniques. However, despite providing a very good scalability and reducing the memory footprint, they suffer from an important flops overhead in their unstructured low-rank updates. As a consequence, the execution time is not improved as expected. In this paper, we study a solution to improve low-rank compression techniques in sparse supernodal solvers. The proposed method tackles the overprice of the low-rank updates by identifying the blocks that have poor compression rates. We show that block incomplete LU factorization, thanks to the block fill-in levels, allows to identify most of these non-compressible blocks at low cost. This identification enables to postpone the low-rank compression step to trade small extra memory consumption for a better time to solution. The solution is validated within the PaStiX library with a large set of application matrices. It demonstrates sequential and multi-threaded speedup up to 8.5$\times$, for small memory overhead of less than 1.49$\times$ with respect to the original version.},
+}
+
+@Article{Ma2021a,
+  author       = {Wenpeng Ma and Yiwen Hu and Wu Yuan and Xiazhen Liu},
+  date         = {2021},
+  journaltitle = {Mathematical Problems in Engineering},
+  title        = {Developing a Multi-{GPU}-Enabled Preconditioned {GMRES} with Inexact Triangular Solves for Block Sparse Matrices},
+  doi          = {https://www.hindawi.com/journals/mpe/2021/6804723/},
+  abstract     = {Solving triangular systems is the building block for preconditioned GMRES algorithm. Inexact preconditioning becomes attractive because of the feature of high parallelism on accelerators. In this paper, we propose and implement an iterative, inexact block triangular solve on multi-GPUs based on PETSc’s framework. In addition, by developing a distributed block sparse matrix-vector multiplication procedure and investigating the optimized vector operations, we form the multi-GPU-enabled preconditioned GMRES with the block Jacobi preconditioner. In the implementation, the GPU-Direct technique is employed to avoid host-device memory copies. The preconditioning step used by PETSc’s structure and the cuSPARSE library are also investigated for performance comparisons. The experiments show that the developed GMRES with inexact preconditioning on 8 GPUs can achieve up to 4.4x speedup over the CPU-only implementation with exact preconditioning using 8 MPI processes.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
