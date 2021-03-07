@@ -15132,6 +15132,77 @@ Python finite element solver library in the last two chapters.\\ This textbook, 
   abstract     = {Solving triangular systems is the building block for preconditioned GMRES algorithm. Inexact preconditioning becomes attractive because of the feature of high parallelism on accelerators. In this paper, we propose and implement an iterative, inexact block triangular solve on multi-GPUs based on PETSc’s framework. In addition, by developing a distributed block sparse matrix-vector multiplication procedure and investigating the optimized vector operations, we form the multi-GPU-enabled preconditioned GMRES with the block Jacobi preconditioner. In the implementation, the GPU-Direct technique is employed to avoid host-device memory copies. The preconditioning step used by PETSc’s structure and the cuSPARSE library are also investigated for performance comparisons. The experiments show that the developed GMRES with inexact preconditioning on 8 GPUs can achieve up to 4.4x speedup over the CPU-only implementation with exact preconditioning using 8 MPI processes.},
 }
 
+@Article{Adil2021,
+  author      = {Muhammad Adil and Sasan Tavakkol and Ramtin Madani},
+  date        = {2021-03-01},
+  title       = {Rapid Convergence of First-Order Numerical Algorithms via Adaptive Conditioning},
+  eprint      = {2103.00736},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {This paper is an attempt to remedy the problem of slow convergence for first-order numerical algorithms by proposing an adaptive conditioning heuristic. First, we propose a parallelizable numerical algorithm that is capable of solving large-scale conic optimization problems on distributed platforms such as {graphics processing unit} with orders-of-magnitude time improvement. Proof of global convergence is provided for the proposed algorithm. We argue that on the contrary to common belief, the condition number of the data matrix is not a reliable predictor of convergence speed. In light of this observation, an adaptive conditioning heuristic is proposed which enables higher accuracy compared to other first-order numerical algorithms. Numerical experiments on a wide range of large-scale linear programming and second-order cone programming problems demonstrate the scalability and computational advantages of the proposed algorithm compared to commercial and open-source state-of-the-art solvers.},
+  file        = {:http\://arxiv.org/pdf/2103.00736v1:PDF},
+  keywords    = {math.OC},
+}
+
+@Article{Datta2021,
+  author      = {Abhirup Datta},
+  date        = {2021-02-26},
+  title       = {Sparse Cholesky matrices in spatial statistics},
+  eprint      = {2102.13299},
+  eprintclass = {stat.ME},
+  eprinttype  = {arXiv},
+  abstract    = {Gaussian Processes (GP) is a staple in the toolkit of a spatial statistician. Well-documented computing roadblocks in the analysis of large geospatial datasets using Gaussian Processes have now been successfully mitigated via several recent statistical innovations. Nearest Neighbor Gaussian Processes (NNGP) has emerged as one of the leading candidates for such massive-scale geospatial analysis owing to their empirical success. This article reviews the connection of NNGP to sparse Cholesky factors of the spatial precision (inverse-covariance) matrices. Focus of the review is on these sparse Cholesky matrices which are versatile and have recently found many diverse applications beyond the primary usage of NNGP for fast parameter estimation and prediction in the spatial (generalized) linear models. In particular, we discuss applications of sparse NNGP Cholesky matrices to address multifaceted computational issues in spatial bootstrapping, simulation of large-scale realizations of Gaussian random fields, and extensions to non-parametric mean function estimation of a Gaussian Process using Random Forests. We also review a sparse-Cholesky-based model for areal (geographically-aggregated) data that addresses interpretability issues of existing areal models. Finally, we highlight some yet-to-be-addressed issues of such sparse Cholesky approximations that warrants further research.},
+  file        = {:http\://arxiv.org/pdf/2102.13299v1:PDF},
+  keywords    = {stat.ME},
+}
+
+@Article{Song2021,
+  author      = {Chaobing Song and Stephen J. Wright and Jelena Diakonikolas},
+  date        = {2021-02-26},
+  title       = {Variance Reduction via Primal-Dual Accelerated Dual Averaging for Nonsmooth Convex Finite-Sums},
+  eprint      = {2102.13643},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {We study structured nonsmooth convex finite-sum optimization that appears widely in machine learning applications, including support vector machines and least absolute deviation. For the primal-dual formulation of this problem, we propose a novel algorithm called \emph{Variance Reduction via Primal-Dual Accelerated Dual Averaging (VRPDA)}. In the nonsmooth and general convex setting, VRPDA~has the overall complexity $O(nd\log\min \{1/\epsilon, n\} + d/\epsilon )$ in terms of the primal-dual gap, where $n$ denotes the number of samples, $d$ the dimension of the primal variables, and $\epsilon$ the desired accuracy. In the nonsmooth and strongly convex setting, the overall complexity of VRPDA~becomes $O(nd\log\min\{1/\epsilon, n\} + d/\sqrt{\epsilon})$ in terms of both the primal-dual gap and the distance between iterate and optimal solution. Both these results for VRPDA~improve significantly on state-of-the-art complexity estimates, which are $O(nd\log \min\{1/\epsilon, n\} + \sqrt{n}d/\epsilon)$ for the nonsmooth and general convex setting and $O(nd\log \min\{1/\epsilon, n\} + \sqrt{n}d/\sqrt{\epsilon})$ for the nonsmooth and strongly convex setting, in a much more simple and straightforward way. Moreover, both complexities are better than \emph{lower} bounds for general convex finite sums that lack the particular (common) structure that we consider. Our theoretical results are supported by numerical experiments, which confirm the competitive performance of VRPDA~compared to state-of-the-art.},
+  file        = {:http\://arxiv.org/pdf/2102.13643v1:PDF},
+  keywords    = {math.OC, cs.LG, cs.NA, math.NA},
+}
+
+@Article{Bellavia2021,
+  author       = {Stefania Bellavia and Gianmarco Gurioli},
+  date         = {2021-02},
+  journaltitle = {Optimization},
+  title        = {Stochastic analysis of an adaptive cubic regularization method under inexact gradient evaluations and dynamic Hessian accuracy},
+  doi          = {10.1080/02331934.2021.1892104},
+  pages        = {1--35},
+  abstract     = {We here adapt an extended version of the adaptive cubic regularization method with dynamic inexact Hessian information for nonconvex optimization in Bellavia et al. [Adaptive cubic regularization methods with dynamic inexact hessian information and applications to finite-sum minimization. IMA Journal of Numerical Analysis. 2021;41(1):764–799] to the stochastic optimization setting. While exact function evaluations are still considered, this novel variant inherits the innovative use of adaptive accuracy requirements for Hessian approximations introduced in the just quoted paper and additionally employs inexact computations of the gradient. Without restrictions on the variance of the errors, we assume that these approximations are available within a sufficiently large, but fixed, probability and we extend, in the spirit of Cartis and Scheinberg [Global convergence rate analysis of unconstrained optimization methods based on probabilistic models. Math Program Ser A. 2018;159(2):337–375], the deterministic analysis of the framework to its stochastic counterpart, showing that the expected number of iterations to reach a first-order stationary point matches the well-known worst-case optimal complexity. This is, in fact, still given by $O(\epsilon^{-3/2})$, with respect to the first-order $\epsilon$ tolerance. Finally, numerical tests on nonconvex finite-sum minimization confirm that using inexact first- and second-order derivatives can be beneficial in terms of the computational savings.},
+  publisher    = {Informa {UK} Limited},
+}
+
+@Article{Santos2021,
+  author       = {Fernando Fernandes Dos Santos and Marcelo Brandalero and Michael Sullivan and Rubens Luiz Rech Junior and Pedro Martins Basso and Prof. Michael Hubner and Luigi Carro and Paolo Rech},
+  date         = {2021},
+  journaltitle = {{IEEE} Transactions on Computers},
+  title        = {Reduced Precision {DWC}: an Efficient Hardening Strategy for Mixed-Precision Architectures},
+  doi          = {10.1109/tc.2021.3058872},
+  pages        = {1--1},
+  abstract     = {Duplication with Comparison (DWC) is an effective software-level solution to improve the reliability of computing devices. However, it introduces significant performance and energy consumption overheads that could render the protected application unsuitable for high-performance computing or real-time safety-critical applications. Modern computing architectures offer the possibility to execute operations in various precisions, and recent NVIDIA GPUs even feature dedicated functional units for computing with programmable accuracy. In this work, we propose Reduced-Precision Duplication with Comparison (RP-DWC) as a means to leverage the available mixed-precision hardware resources to implement software-level fault detection with reduced overheads. We discuss the benefits and challenges associated with RP-DWC and show that the intrinsic difference between the mixed-precision copies allows for the detection of most, but not all, errors. However, as the undetected faults are the ones that fall into the difference between precisions, they are the ones that produce a much smaller impact in the application output. We investigate, through fault injection and beam experiment campaigns, using three microbenchmarks and two real applications on Volta GPUs, RP-DWC impact into fault detection, performance, and energy consumption. We show that RP-DWC achieves an excellent coverage (up to 86\%) with minimal overheads (0.1\% time and 24\% energy consumption overhead).},
+  publisher    = {Institute of Electrical and Electronics Engineers ({IEEE})},
+}
+
+@Article{Zhou2021,
+  author       = {Tian Zhou and Lixin Gao and Xiaohong Guan},
+  date         = {2021-08},
+  journaltitle = {{IEEE} Transactions on Parallel and Distributed Systems},
+  title        = {A Fault-Tolerant Distributed Framework for Asynchronous Iterative Computations},
+  doi          = {10.1109/tpds.2021.3059420},
+  number       = {8},
+  pages        = {2062--2073},
+  volume       = {32},
+  abstract     = {Asynchronous iterative computations (AIC) are common in machine learning and data mining systems. However, the lack of synchronization barriers in asynchronous processing brings challenges for continuous processing while workers might fail. There is no global synchronization point that all workers can roll back to. In this article, we propose a fault-tolerant framework for asynchronous iterative computations (FAIC). Our framework takes a virtual snapshot of the AIC system without halting the computation of any worker. We prove that the virtual snapshot capture by FAIC can recover the AIC system correctly. We evaluate our FAIC framework on two existing AIC systems, Maiter and NOMAD. Our experiment result shows that the checkpoint overhead of FAIC is more than 50 percent shorter than the synchronous checkpoint method. FAIC is around 10 percent faster than other asynchronous snapshot algorithms, such as the Chandy-Lamport algorithm. Our experiments on a large cluster demonstrate that FAIC scales with the number of workers.},
+  publisher    = {Institute of Electrical and Electronics Engineers ({IEEE})},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
