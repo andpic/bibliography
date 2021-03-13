@@ -15262,6 +15262,91 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   publisher    = {Institute of Electrical and Electronics Engineers ({IEEE})},
 }
 
+@Article{Yurtsever2021,
+  author      = {Alp Yurtsever and Varun Mangalick and Suvrit Sra},
+  date        = {2021-03-08},
+  title       = {Three Operator Splitting with a Nonconvex Loss Function},
+  eprint      = {2103.04568},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {We consider the problem of minimizing the sum of three functions, one of which is nonconvex but differentiable, and the other two are convex but possibly nondifferentiable. We investigate the Three Operator Splitting method (TOS) of Davis & Yin (2017) with an aim to extend its theoretical guarantees for this nonconvex problem template. In particular, we prove convergence of TOS with nonasymptotic bounds on its nonstationarity and infeasibility errors. In contrast with the existing work on nonconvex TOS, our guarantees do not require additional smoothness assumptions on the terms comprising the objective; hence they cover instances of particular interest where the nondifferentiable terms are indicator functions. We also extend our results to a stochastic setting where we have access only to an unbiased estimator of the gradient. Finally, we illustrate the effectiveness of the proposed method through numerical experiments on quadratic assignment problems.},
+  file        = {:http\://arxiv.org/pdf/2103.04568v1:PDF},
+  keywords    = {math.OC},
+}
+
+@Article{Liang2021,
+  author      = {Guannan Liang and Qianqian Tong and Chunjiang Zhu and Jinbo bi},
+  date        = {2021-03-07},
+  title       = {Escaping Saddle Points with Stochastically Controlled Stochastic Gradient Methods},
+  eprint      = {2103.04413},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {Stochastically controlled stochastic gradient (SCSG) methods have been proved to converge efficiently to first-order stationary points which, however, can be saddle points in nonconvex optimization. It has been observed that a stochastic gradient descent (SGD) step introduces anistropic noise around saddle points for deep learning and non-convex half space learning problems, which indicates that SGD satisfies the correlated negative curvature (CNC) condition for these problems. Therefore, we propose to use a separate SGD step to help the SCSG method escape from strict saddle points, resulting in the CNC-SCSG method. The SGD step plays a role similar to noise injection but is more stable. We prove that the resultant algorithm converges to a second-order stationary point with a convergence rate of $\tilde{O}( \epsilon^{-2} log( 1/\epsilon))$ where $\epsilon$ is the pre-specified error tolerance. This convergence rate is independent of the problem dimension, and is faster than that of CNC-SGD. A more general framework is further designed to incorporate the proposed CNC-SCSG into any first-order method for the method to escape saddle points. Simulation studies illustrate that the proposed algorithm can escape saddle points in much fewer epochs than the gradient descent methods perturbed by either noise injection or a SGD step.},
+  file        = {:http\://arxiv.org/pdf/2103.04413v1:PDF},
+  keywords    = {math.OC, cs.LG, stat.ML},
+}
+
+@Article{Tran2021,
+  author      = {Hoang Tran and Ashok Cutkosky},
+  date        = {2021-03-04},
+  title       = {Correcting Momentum with Second-order Information},
+  eprint      = {2103.03265},
+  eprintclass = {cs.LG},
+  eprinttype  = {arXiv},
+  abstract    = {We develop a new algorithm for non-convex stochastic optimization that finds an $\epsilon$-critical point in the optimal $O(\epsilon^{-3})$ stochastic gradient and hessian-vector product computations. Our algorithm uses Hessian-vector products to "correct" a bias term in the momentum of SGD with momentum. This leads to better gradient estimates in a manner analogous to variance reduction methods. In contrast to prior work, we do not require excessively large batch sizes (or indeed any restrictions at all on the batch size), and both our algorithm and its analysis are much simpler. We validate our results on a variety of large-scale deep learning benchmarks and architectures, where we see improvements over SGD and Adam.},
+  file        = {:http\://arxiv.org/pdf/2103.03265v1:PDF},
+  keywords    = {cs.LG, stat.ML},
+}
+
+@Article{Emmenegger2021,
+  author      = {Nicolas Emmenegger and Rasmus Kyng and Ahad N. Zehmakan},
+  date        = {2021-03-08},
+  title       = {On the Oracle Complexity of Higher-Order Smooth Non-Convex Finite-Sum Optimization},
+  eprint      = {2103.05138},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {We prove lower bounds for higher-order methods in smooth non-convex finite-sum optimization. Our contribution is threefold: We first show that a deterministic algorithm cannot profit from the finite-sum structure of the objective, and that simulating a pth-order regularized method on the whole function by constructing exact gradient information is optimal up to constant factors. We further show lower bounds for randomized algorithms and compare them with the best known upper bounds. To address some gaps between the bounds, we propose a new second-order smoothness assumption that can be seen as an analogue of the first-order mean-squared smoothness assumption. We prove that it is sufficient to ensure state-of-the-art convergence guarantees, while allowing for a sharper lower bound.},
+  file        = {:http\://arxiv.org/pdf/2103.05138v1:PDF},
+  keywords    = {math.OC, cs.DS, cs.LG, stat.ML},
+}
+
+@Article{Higham2021a,
+  author      = {Nicholas J. Higham and Matthew C. Lettington and Karl Michael Schmidt},
+  date        = {2021-03-06},
+  title       = {Integer matrix factorisations, superalgebras and the quadratic form obstruction},
+  eprint      = {2103.04149},
+  eprintclass = {math.NT},
+  eprinttype  = {arXiv},
+  abstract    = {We identify and analyse obstructions to factorisation of integer matrices into products $N^T N$ or $N^2$ of matrices with rational or integer entries. The obstructions arise as quadratic forms with integer coefficients and raise the question of the discrete range of such forms. They are obtained by considering matrix decompositions over a superalgebra. We further obtain a formula for the determinant of a square matrix in terms of adjugates of these matrix decompositions, as well as identifying a $\it co-Latin$ symmetry space.},
+  file        = {:http\://arxiv.org/pdf/2103.04149v1:PDF},
+  keywords    = {math.NT, 15A23, 15CA30, 11H55, 05B15},
+}
+
+@Article{Courbet2021,
+  author      = {Clement Courbet},
+  date        = {2021-02-25},
+  title       = {NSan: A Floating-Point Numerical Sanitizer},
+  doi         = {10.1145/3446804.3446848},
+  eprint      = {2102.12782},
+  eprintclass = {cs.SE},
+  eprinttype  = {arXiv},
+  abstract    = {Sanitizers are a relatively recent trend in software engineering. They aim at automatically finding bugs in programs, and they are now commonly available to programmers as part of compiler toolchains. For example, the LLVM project includes out-of-the-box sanitizers to detect thread safety (tsan), memory (asan,msan,lsan), or undefined behaviour (ubsan) bugs. In this article, we present nsan, a new sanitizer for locating and debugging floating-point numerical issues, implemented inside the LLVM sanitizer framework. nsan puts emphasis on practicality. It aims at providing precise, and actionable feedback, in a timely manner. nsan uses compile-time instrumentation to augment each floating-point computation in the program with a higher-precision shadow which is checked for consistency during program execution. This makes nsan between 1 and 4 orders of magnitude faster than existing approaches, which allows running it routinely as part of unit tests, or detecting issues in large production applications.},
+  file        = {:http\://arxiv.org/pdf/2102.12782v1:PDF},
+  keywords    = {cs.SE, D.2.4},
+}
+
+@Article{Adje2021,
+  author      = {Assalé Adjé and Dorra Ben Khalifa and Matthieu Martel},
+  date        = {2021-03-09},
+  title       = {Fast and Efficient Bit-Level Precision Tuning},
+  eprint      = {2103.05241},
+  eprintclass = {cs.PL},
+  eprinttype  = {arXiv},
+  abstract    = {In this article, we introduce a new technique for precision tuning. This problem consists of finding the least data types for numerical values such that the result of the computation satisfies some accuracy requirement. State of the art techniques for precision tuning use a try and fail approach. They change the data types of some variables of the program and evaluate the accuracy of the result. Depending on what is obtained, they change more or less data types and repeat the process. Our technique is radically different. Based on semantic equations, we generate an Integer Linear Problem (ILP) from the program source code. Basically, this is done by reasoning on the most significant bit and the number of significant bits of the values which are integer quantities. The integer solution to this problem, computed in polynomial time by a (real) linear programming solver, gives the optimal data types at the bit level. A finer set of semantic equations is also proposed which does not reduce directly to an ILP problem. So we use policy iteration to find the solution. Both techniques have been implemented and we show that our results encompass the results of state of the art tools.},
+  file        = {:http\://arxiv.org/pdf/2103.05241v1:PDF},
+  keywords    = {cs.PL, cs.SE},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
