@@ -15203,6 +15203,65 @@ Python finite element solver library in the last two chapters.\\ This textbook, 
   publisher    = {Institute of Electrical and Electronics Engineers ({IEEE})},
 }
 
+@Article{Jiang2021a,
+  author      = {Xia Jiang and Xianlin Zeng and Jian Sun and Jie Chen},
+  date        = {2021-03-03},
+  title       = {Distributed proximal gradient algorithm for non-smooth non-convex optimization over time-varying networks},
+  eprint      = {2103.02271},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {This note studies the distributed non-convex optimization problem with non-smooth regularization, which has wide applications in decentralized learning, estimation and control. The objective function is the sum of different local objective functions, which consist of differentiable (possibly non-convex) cost functions and non-smooth convex functions. This paper presents a distributed proximal gradient algorithm for the non-smooth non-convex optimization problem over time-varying multi-agent networks. Each agent updates local variable estimate by the multi-step consensus operator and the proximal operator. We prove that the generated local variables achieve consensus and converge to the set of critical points with convergence rate $O(1/T)$. Finally, we verify the efficacy of proposed algorithm by numerical simulations.},
+  file        = {:http\://arxiv.org/pdf/2103.02271v1:PDF},
+  keywords    = {math.OC},
+}
+
+@Article{Anagnostidis2021,
+  author      = {Sotiris Anagnostidis and Aurelien Lucchi and Youssef Diouane},
+  date        = {2021-02-22},
+  title       = {Direct-Search for a Class of Stochastic Min-Max Problems},
+  eprint      = {2102.11386},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {Recent applications in machine learning have renewed the interest of the community in min-max optimization problems. While gradient-based optimization methods are widely used to solve such problems, there are however many scenarios where these techniques are not well-suited, or even not applicable when the gradient is not accessible. We investigate the use of direct-search methods that belong to a class of derivative-free techniques that only access the objective function through an oracle. In this work, we design a novel algorithm in the context of min-max saddle point games where one sequentially updates the min and the max player. We prove convergence of this algorithm under mild assumptions, where the objective of the max-player satisfies the Polyak-\L{}ojasiewicz (PL) condition, while the min-player is characterized by a nonconvex objective. Our method only assumes dynamically adjusted accurate estimates of the oracle with a fixed probability. To the best of our knowledge, our analysis is the first one to address the convergence of a direct-search method for min-max objectives in a stochastic setting.},
+  file        = {:http\://arxiv.org/pdf/2102.11386v1:PDF},
+  keywords    = {math.OC, cs.LG},
+}
+
+@InProceedings{Gabert2021,
+  author    = {Kasimir Gabert and Ali Pinar and Ümit V. {\c{C}}atalyürek},
+  booktitle = {Proceedings of the 14th {ACM} International Conference on Web Search and Data Mining},
+  date      = {2021-03},
+  title     = {A Unifying Framework to Identify Dense Subgraphs on Streams: Graph Nuclei to Hypergraph Cores},
+  doi       = {10.1145/3437963.3441790},
+  publisher = {{ACM}},
+  abstract  = {Finding dense regions of graphs is fundamental in graph mining. We focus on the computation of dense hierarchies and regions with graph nuclei---a generalization of k-cores and trusses. Static computation of nuclei, namely through variants of 'peeling', are easy to understand and implement. However, many practically important graphs undergo continuous change. Dynamic algorithms, maintaining nucleus computations on dynamic graph streams, are nuanced and require significant effort to port between nuclei, e.g., from k-cores to trusses.
+
+We propose a unifying framework to maintain nuclei in dynamic graph streams. First, we show no dynamic algorithm can asymptotically beat re-computation, highlighting the need to experimentally understand variability. Next, we prove equivalence between k-cores on a special hypergraph and nuclei. Our algorithm splits the problem into maintaining the special hypergraph and maintaining k-cores on it. We implement our algorithm and experimentally demonstrate improvements up to 108 x over re-computation. We show algorithmic improvements on k-cores apply to trusses and outperform truss-specific implementations.},
+}
+
+@Article{Kalantzis2021,
+  author      = {Vassilis Kalantzis and Yuanzhe Xi and Lior Horesh},
+  date        = {2021-03-08},
+  title       = {Fast randomized non-Hermitian eigensolver based on rational filtering and matrix partitioning},
+  eprint      = {2103.05128},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {This paper describes a set of rational filtering algorithms to compute a few eigenvalues (and associated eigenvectors) of non-Hermitian matrix pencils. Our interest lies in computing eigenvalues located inside a given disk, and the proposed algorithms approximate these eigenvalues and associated eigenvectors by harmonic Rayleigh-Ritz projections on subspaces built by computing range spaces of rational matrix functions through randomized range finders. These rational matrix functions are designed so that directions associated with non-sought eigenvalues are dampened to (approximately) zero. Variants based on matrix partitionings are introduced to further reduce the overall complexity of the proposed framework. Compared with existing eigenvalue solvers based on rational matrix functions, the proposed technique requires no estimation of the number of eigenvalues located inside the disk. Several theoretical and practical issues are discussed, and the competitiveness of the proposed framework is demonstrated via numerical experiments.},
+  file        = {:http\://arxiv.org/pdf/2103.05128v1:PDF},
+  keywords    = {math.NA, cs.NA},
+}
+
+@Article{Herschlag2021,
+  author       = {Gregory Herschlag and Seyong Lee and Jeffrey Vetter and Amanda Randles},
+  date         = {2021},
+  journaltitle = {{IEEE} Transactions on Parallel and Distributed Systems},
+  title        = {Analysis of {GPU} Data Access Patterns on Complex Geometries for the D3Q19 Lattice Boltzmann Algorithm},
+  doi          = {10.1109/tpds.2021.3061895},
+  pages        = {1--1},
+  abstract     = {GPU performance of the lattice Boltzmann method (LBM) depends heavily on memory access patterns. When LBM is advanced with GPUs on complex domains, typically, geometric data is accessed indirectly, and lattice data is accessed lexicographically. Although there are a variety of other access patterns, no study has yet examined the relative efficacy between them. Here, we examine a suite of memory access schemes via empirical testing and performance modeling. We find strong evidence that semi-direct is often better suited than the more common indirect addressing: semi-direct methods provide increased computational speed and may reduce memory consumption. For the lattice layout, we find that the Collected Structure of Arrays (CSoA) and bundling layouts outperform the common Structrure of Array layout; on V100 and P100 devices, CSoA consistently outperforms bundling, however the relationship is more complicated on K40 devices. When compared to state-of-the-art practices, our recommended addressing modifications lead to performance gains between 10--40\% across different domains and reduce memory consumption by as much as 17\%. We demonstrate that our results hold across multiple GPUs on a leadership class system, and present the first near-optimal strong results for LBM with arterial geometries run on GPUs.},
+  publisher    = {Institute of Electrical and Electronics Engineers ({IEEE})},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
