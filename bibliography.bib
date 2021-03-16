@@ -15256,6 +15256,37 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   keywords    = {cs.PL, cs.SE}
 }
 
+@inproceedings{Busato2018,
+  author    = {Federico Busato and Oded Green and Nicola Bombieri and David A. Bader},
+  booktitle = {Proceedings of the 2018 {IEEE} High Performance extreme Computing Conference ({HPEC})},
+  date      = {2018-09},
+  title     = {Hornet: An Efficient Data Structure for Dynamic Sparse Graphs and Matrices on {GPUs}},
+  doi       = {10.1109/hpec.2018.8547541},
+  publisher = {{IEEE}},
+  abstract  = {Sparse data computations are ubiquitous in science and engineering. Unlike their dense data counterparts, sparse data computations have less locality and more irregularity in their execution, making them significantly more challenging to parallelize and optimize. Many of the existing formats for sparse data representations on parallel architectures are restricted to static data problems, while those for dynamic data suffer from inefficiency both in terms of performance and memory footprint. This work presents Hornet, a novel data representation that targets dynamic data problems. Hornet is scalable with the input size, and does not require any data re-allocation or re-initialization during the data evolution. We show a Hornet implementation for GPU architectures and compare it to the most widely used static and dynamic data structures.}
+}
+
+@article{Ibriga2021,
+  author      = {Hilda S Ibriga and Will Wei Sun},
+  date        = {2021-03-11},
+  title       = {Covariate-assisted Sparse Tensor Completion},
+  eprint      = {2103.06428},
+  eprintclass = {stat.ML},
+  eprinttype  = {arXiv},
+  abstract    = {We aim to provably complete a sparse and highly-missing tensor in the presence of covariate information along tensor modes. Our motivation comes from online advertising where users click-through-rates (CTR) on ads over various devices form a CTR tensor that has about 96\% missing entries and has many zeros on non-missing entries, which makes the standalone tensor completion method unsatisfactory. Beside the CTR tensor, additional ad features or user characteristics are often available. In this paper, we propose Covariate-assisted Sparse Tensor Completion (COSTCO) to incorporate covariate information for the recovery of the sparse tensor. The key idea is to jointly extract latent components from both the tensor and the covariate matrix to learn a synthetic representation. Theoretically, we derive the error bound for the recovered tensor components and explicitly quantify the improvements on both the reveal probability condition and the tensor recovery accuracy due to covariates. Finally, we apply COSTCO to an advertisement dataset consisting of a CTR tensor and ad covariate matrix, leading to 23\% accuracy improvement over the baseline. An important by-product is that ad latent components from COSTCO reveal interesting ad clusters, which are useful for better ad targeting.},
+  file        = {:http\://arxiv.org/pdf/2103.06428v1:PDF},
+  keywords    = {stat.ML, cs.LG, math.ST, stat.ME, stat.TH}
+}
+
+@inproceedings{Zheng2021,
+  author    = {Ruohuang Zheng and Sreepathi Pai},
+  booktitle = {Proceedings of the International Symposium on Code Generation and Optimization},
+  date      = {2021},
+  title     = {Efficient Execution of Graph Algorithms on {CPU} with {SIMD} Extensions},
+  series    = {CGO '21},
+  abstract  = {Existing state-of-the-art CPU graph frameworks take advantage of multiple cores, but not the SIMD capability within each core. In this work, we retarget an existing GPU graph algorithm compiler to obtain the first graph framework that uses SIMD extensions on CPUs to efficiently execute graph algorithms. We evaluate this compiler on 10 benchmarks and 3 graphs on 3 different CPUs and also compare to the GPU. Evaluation results show that on a 8-core machine, enabling SIMD on a naive multi-core implementation achieves an additional 7.48x speedup, averaged across 10 benchmarks and 3 inputs. Applying our SIMD-targeted optimizations improves the plain SIMD implementation by 1.67x, outperforming a serial implementation by 12.46x. On average, the optimized multi-core SIMD version also outperforms the state-of-the-art graph framework, GraphIt, by 1.53x, averaged across 5 (common) benchmarks. SIMD execution on CPUs closes the gap between the CPU and GPU to 1.76x, but the CPU virtual memory performs better when graphs are much bigger than available physical memory.}
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
