@@ -15287,6 +15287,52 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   abstract  = {Existing state-of-the-art CPU graph frameworks take advantage of multiple cores, but not the SIMD capability within each core. In this work, we retarget an existing GPU graph algorithm compiler to obtain the first graph framework that uses SIMD extensions on CPUs to efficiently execute graph algorithms. We evaluate this compiler on 10 benchmarks and 3 graphs on 3 different CPUs and also compare to the GPU. Evaluation results show that on a 8-core machine, enabling SIMD on a naive multi-core implementation achieves an additional 7.48x speedup, averaged across 10 benchmarks and 3 inputs. Applying our SIMD-targeted optimizations improves the plain SIMD implementation by 1.67x, outperforming a serial implementation by 12.46x. On average, the optimized multi-core SIMD version also outperforms the state-of-the-art graph framework, GraphIt, by 1.53x, averaged across 5 (common) benchmarks. SIMD execution on CPUs closes the gap between the CPU and GPU to 1.76x, but the CPU virtual memory performs better when graphs are much bigger than available physical memory.}
 }
 
+@Article{Krasnopolsky2021,
+  author      = {Boris Krasnopolsky and Alexey Medvedev},
+  date        = {2021-03-12},
+  title       = {XAMG: A library for solving linear systems with multiple right-hand side vectors},
+  eprint      = {2103.07329},
+  eprintclass = {cs.MS},
+  eprinttype  = {arXiv},
+  abstract    = {This paper presents the XAMG library for solving large sparse systems of linear algebraic equations with multiple right-hand side vectors. The library specializes but is not limited to the solution of linear systems obtained from the discretization of elliptic differential equations. A corresponding set of numerical methods includes Krylov subspace, algebraic multigrid, Jacobi, Gauss-Seidel, and Chebyshev iterative methods. The parallelization is implemented with MPI+POSIX shared memory hybrid programming model, which introduces a three-level hierarchical decomposition using the corresponding per-level synchronization and communication primitives. The code contains a number of optimizations, including the multilevel data segmentation, compression of indices, mixed-precision floating-point calculations, vector status flags, and others. The XAMG library uses the program code of the well-known hypre library to construct the multigrid matrix hierarchy. The XAMG's own implementation for the solve phase of the iterative methods provides up to a twofold speedup compared to hypre for the tests performed. Additionally, XAMG provides extended functionality to solve systems with multiple right-hand side vectors.},
+  file        = {:http\://arxiv.org/pdf/2103.07329v1:PDF},
+  keywords    = {cs.MS, cs.DC, cs.NA, math.NA},
+}
+
+@Article{Ashari2015,
+  author       = {Arash Ashari and Naser Sedaghati and John Eisenlohr and P. Sadayappan},
+  date         = {2015-02},
+  journaltitle = {Journal of Parallel and Distributed Computing},
+  title        = {A model-driven blocking strategy for load balanced sparse matrix{\textendash}vector multiplication on {GPUs}},
+  doi          = {10.1016/j.jpdc.2014.11.001},
+  pages        = {3--15},
+  volume       = {76},
+  abstract     = {Sparse Matrix–Vector multiplication (SpMV) is one of the key operations in linear algebra. Overcoming thread divergence, load imbalance and un-coalesced and indirect memory access due to sparsity and irregularity are challenges to optimizing SpMV on GPUs.\\ In this paper we present a new Blocked Row–Column (BRC) storage format with a two-dimensional blocking mechanism that addresses these challenges effectively. It reduces thread divergence by reordering and blocking rows of the input matrix with nearly equal number of non-zero elements onto the same execution units (i.e., warps). BRC improves load balance by partitioning rows into blocks with a constant number of non-zeros such that different warps perform the same amount of work. We also present an approach to optimize BRC performance by judicious selection of block size based on sparsity characteristics of the matrix.\\ A CUDA implementation of BRC outperforms NVIDIA CUSP and cuSPARSE libraries and other state-of-the-art SpMV formats on a range of unstructured sparse matrices from multiple application domains. The BRC format has been integrated with PETSc, enabling its use in PETSc’s solvers. Furthermore, when partitioning the input matrix, BRC achieves near linear speedup on multiple GPUs.},
+  publisher    = {Elsevier {BV}},
+}
+
+@InCollection{Aliaga2021,
+  author    = {Jos{\'{e}} Ignacio Aliaga and Hartwig Anzt and Enrique S. Quintana-Ort{\'{\i}} and Andr{\'{e}}s E. Tom{\'{a}}s and Yuhsiang M. Tsai},
+  booktitle = {Euro-Par 2020: Parallel Processing Workshops},
+  date      = {2021},
+  title     = {Balanced and Compressed Coordinate Layout for the Sparse Matrix-Vector Product on {GPUs}},
+  doi       = {10.1007/978-3-030-71593-9_7},
+  pages     = {83--95},
+  publisher = {Springer International Publishing},
+  abstract  = {We contribute to the optimization of the sparse matrix-vector product on graphics processing units by introducing a variant of the coordinate sparse matrix layout that compresses the integer representation of the matrix indices. In addition, we employ a look-ahead table to avoid the storage of repeated numerical values in the sparse matrix, yielding a more compact data representation that is easier to maintain in the cache. Our evaluation on the two most recent generations of NVIDIA GPUs, the V100 and the A100 architectures, shows considerable performance improvements over the kernels for the sparse matrix-vector product in cuSPARSE (CUDA 11.0.167).},
+}
+
+@InCollection{Alhaddad2021,
+  author    = {Samer Alhaddad and Jens Förstner and Stefan Groth and Daniel Grünewald and Yevgen Grynko and Frank Hannig and Tobias Kenter and Franz-Josef Pfreundt and Christian Plessl and Merlind Schotte and Thomas Steinke and Jürgen Teich and Martin Weiser and Florian Wende},
+  booktitle = {Euro-Par 2020: Parallel Processing Workshops},
+  date      = {2021},
+  title     = {{HighPerMeshes} {\textendash} A Domain-Specific Language for Numerical Algorithms on Unstructured Grids},
+  doi       = {10.1007/978-3-030-71593-9_15},
+  pages     = {185--196},
+  publisher = {Springer International Publishing},
+  abstract  = {Solving partial differential equations on unstructured grids is a cornerstone of engineering and scientific computing. Nowadays, heterogeneous parallel platforms with CPUs, GPUs, and FPGAs enable energy-efficient and computationally demanding simulations. We developed the HighPerMeshes C++-embedded Domain-Specific Language (DSL) for bridging the abstraction gap between the mathematical and algorithmic formulation of mesh-based algorithms for PDE problems on the one hand and an increasing number of heterogeneous platforms with their different parallel programming and runtime models on the other hand. Thus, the HighPerMeshes DSL aims at higher productivity in the code development process for multiple target platforms. We introduce the concepts as well as the basic structure of the HighPerMeshes DSL, and demonstrate its usage with three examples, a Poisson and monodomain problem, respectively, solved by the continuous finite element method, and the discontinuous Galerkin method for Maxwell’s equation. The mapping of the abstract algorithmic description onto parallel hardware, including distributed memory compute clusters, is presented. Finally, the achievable performance and scalability are demonstrated for a typical example problem on a multi-core CPU cluster.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
