@@ -15333,6 +15333,109 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   abstract  = {Solving partial differential equations on unstructured grids is a cornerstone of engineering and scientific computing. Nowadays, heterogeneous parallel platforms with CPUs, GPUs, and FPGAs enable energy-efficient and computationally demanding simulations. We developed the HighPerMeshes C++-embedded Domain-Specific Language (DSL) for bridging the abstraction gap between the mathematical and algorithmic formulation of mesh-based algorithms for PDE problems on the one hand and an increasing number of heterogeneous platforms with their different parallel programming and runtime models on the other hand. Thus, the HighPerMeshes DSL aims at higher productivity in the code development process for multiple target platforms. We introduce the concepts as well as the basic structure of the HighPerMeshes DSL, and demonstrate its usage with three examples, a Poisson and monodomain problem, respectively, solved by the continuous finite element method, and the discontinuous Galerkin method for Maxwell’s equation. The mapping of the abstract algorithmic description onto parallel hardware, including distributed memory compute clusters, is presented. Finally, the achievable performance and scalability are demonstrated for a typical example problem on a multi-core CPU cluster.},
 }
 
+@Article{Carson2021a,
+  author      = {Erin Carson and Tomáš Gergelits},
+  date        = {2021-03-16},
+  title       = {Mixed Precision $s$-step Lanczos and Conjugate Gradient Algorithms},
+  eprint      = {2103.09210},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {Compared to the classical Lanczos algorithm, the $s$-step Lanczos variant has the potential to improve performance by asymptotically decreasing the synchronization cost per iteration. However, this comes at a cost. Despite being mathematically equivalent, the $s$-step variant is known to behave quite differently in finite precision, with potential for greater loss of accuracy and a decrease in the convergence rate relative to the classical algorithm. It has previously been shown that the errors that occur in the $s$-step version follow the same structure as the errors in the classical algorithm, but with the addition of an amplification factor that depends on the square of the condition number of the $O(s)-$dimensional Krylov bases computed in each outer loop. As the condition number of these $s$-step bases grows (in some cases very quickly) with $s$, this limits the parameter $s$ that can be chosen and thus limits the performance that can be achieved. In this work we show that if a select few computations in $s$-step Lanczos are performed in double the working precision, the error terms then depend only linearly on the conditioning of the $s$-step bases. This has the potential for drastically improving the numerical behavior of the algorithm with little impact on per-iteration performance. Our numerical experiments demonstrate the improved numerical behavior possible with the mixed precision approach, and also show that this improved behavior extends to the $s$-step CG algorithm in mixed precision.},
+  file        = {:http\://arxiv.org/pdf/2103.09210v1:PDF},
+  keywords    = {math.NA, cs.NA, 65G50, 65F10, 65F15, 65N15, 65N12},
+}
+
+@Article{Luo2021,
+  author      = {Xin-long Luo and Hang Xiao},
+  date        = {2021-03-10},
+  title       = {Generalized continuation Newton methods and the trust-region updating strategy for the underdetermined system},
+  eprint      = {2103.05829},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {This paper considers the generalized continuation Newton method and the trust-region updating strategy for the underdetermined system of nonlinear equations.Moreover, in order to improve its computational efficiency, the new method uses a switching updating technique of the Jacobian matrix. That is to say, it does not compute the next Jacobian matrix and replaces it with the current jacobian matrix when the linear approximation model of the merit function approximates it well. The numerical results show that the new method is more robust and faster than the traditional optimization method such as the Levenberg-Marquardt method (a variant of trust-region methods, the built-in subroutine fsolve.m of the MATLAB environment). The computational speed of the new method is about eight to fifty times as fast as that of fsolve. Furthermore, it also proves the global convergence and the local superlinear convergence of the new method under some standard assumptions.},
+  file        = {:http\://arxiv.org/pdf/2103.05829v1:PDF},
+  keywords    = {math.NA, cs.NA, math.DS, math.OC},
+}
+
+@Article{Lupu2021,
+  author      = {Daniela Lupu and Ion Necoara},
+  date        = {2021-03-14},
+  title       = {Convergence analysis of stochastic higher-order majorization-minimization algorithms},
+  eprint      = {2103.07984},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {Majorization-minimization algorithms consist of successively minimizing a sequence of upper bounds of the objective function so that along the iterations the objective function decreases. Such a simple principle allows to solve a large class of optimization problems, even nonconvex, nonsmooth and stochastic. We present a stochastic higher-order algorithmic framework for minimizing the average of a very large number of sufficiently smooth functions. Our stochastic framework is based on the notion of stochastic higher-order upper bound approximations of the finite-sum objective function and minibatching. We present convergence guarantees for nonconvex and convex optimization when the higher-order upper bounds approximate the objective function up to an error that is p times differentiable and has a Lipschitz continuous p derivative. More precisely, we derive asymptotic stationary point guarantees for nonconvex problems, and for convex ones we establish local linear convergence results, provided that the objective function is uniformly convex. Unlike other higher-order methods, ours work with any batch size. Moreover, in contrast to most existing stochastic Newton and third-order methods, our approach guarantees local convergence faster than with first-order oracle and adapts to the problem's curvature. Numerical simulations also confirm the efficiency of our algorithmic framework.},
+  file        = {:http\://arxiv.org/pdf/2103.07984v1:PDF},
+  keywords    = {math.OC},
+}
+
+@InCollection{Fevre2021,
+  author    = {Valentin Le F{\`{e}}vre and Thomas Herault and Julien Langou and Yves Robert},
+  booktitle = {Euro-Par 2020: Parallel Processing Workshops},
+  date      = {2021},
+  title     = {A Comparison of Several Fault-Tolerance Methods for the Detection and Correction of Floating-Point Errors in Matrix-Matrix Multiplication},
+  doi       = {10.1007/978-3-030-71593-9_24},
+  pages     = {303--315},
+  publisher = {Springer International Publishing},
+  abstract  = {This paper compares several fault-tolerance methods for the detection and correction of floating-point errors in matrix-matrix multiplication. These methods include replication, triplication, Algorithm-Based Fault Tolerance (ABFT) and residual checking (RC). Error correction for ABFT can be achieved either by solving a small-size linear system of equations, or by recomputing corrupted coefficients. We show that both approaches can be used for RC. We provide a synthetic presentation of all methods before discussing their pros and cons. We have implemented all these methods with calls to optimized BLAS routines, and we provide performance data for a wide range of failure rates and matrix sizes.},
+}
+
+@Article{Kanno2021,
+  author       = {Yoshihiro Kanno},
+  date         = {2021-03},
+  journaltitle = {Optimization and Engineering},
+  title        = {Accelerated proximal gradient method for bi-modulus static elasticity},
+  doi          = {10.1007/s11081-021-09595-2},
+  abstract     = {Bi-modulus constitutive law assumes that material constants have different values in tension and compression. It is known that finding an equilibrium state of an elastic body consisting of a bi-modulus material is recast as a semidefinite programming problem, which can be solved with a primal-dual interior-point method. As an alternative approach, this paper presents a fast first-order optimization method. Specifically, we propose an accelerated proximal gradient method for solving a minimization problem of the total potential energy. This algorithm is easy to implement, and free from numerical solution of linear equations. Numerical experiments demonstrate that the proposed method outperforms the semidefinite programming approach with a standard solver implementing a primal-dual interior-point method.},
+  publisher    = {Springer Science and Business Media {LLC}},
+}
+
+@Article{Besse2021,
+  author      = {Christophe Besse and Romain Duboscq and Stefan Le Coz},
+  date        = {2021-03-17},
+  title       = {Numerical Simulations on Nonlinear Quantum Graphs with the GraFiDi Library},
+  eprint      = {2103.09650},
+  eprintclass = {math.AP},
+  eprinttype  = {arXiv},
+  abstract    = {Nonlinear quantum graphs are metric graphs equipped with a nonlinear Schr{\"o}dinger equation. Whereas in the last ten years they have known considerable developments on the theoretical side, their study from the numerical point of view remains in its early stages. The goal of this paper is to present the Grafidi library, a Python library which has been developed with the numerical simulation of nonlinear Schr{\"o}dinger equations on graphs in mind. We will show how, with the help of the Grafidi library, one can implement the popular normalized gradient flow and nonlinear conjugate gradient flow methods to compute ground states of a nonlinear quantum graph. We will also simulate the dynamics of the nonlinear Schr{\"o}dinger equation with a Crank-Nicolson relaxation scheme and a Strang splitting scheme. Finally, in a series of numerical experiments on various types of graphs, we will compare the outcome of our numerical calculations for ground states with the existing theoretical results, thereby illustrating the versatility and efficiency of our implementations in the framework of the Grafidi library.},
+  file        = {:http\://arxiv.org/pdf/2103.09650v1:PDF},
+  keywords    = {math.AP, cs.NA, math.NA, nlin.PS},
+}
+
+@Article{Tsai2021,
+  author      = {Yuhsiang M. Tsai and Terry Cojean and Hartwig Anzt},
+  date        = {2021-03-18},
+  title       = {Porting a sparse linear algebra math library to Intel GPUs},
+  eprint      = {2103.10116},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {With the announcement that the Aurora Supercomputer will be composed of general purpose Intel CPUs complemented by discrete high performance Intel GPUs, and the deployment of the oneAPI ecosystem, Intel has committed to enter the arena of discrete high performance GPUs. A central requirement for the scientific computing community is the availability of production-ready software stacks and a glimpse of the performance they can expect to see on Intel high performance GPUs. In this paper, we present the first platform-portable open source math library supporting Intel GPUs via the DPC++ programming environment. We also benchmark some of the developed sparse linear algebra functionality on different Intel GPUs to assess the efficiency of the DPC++ programming ecosystem to translate raw performance into application performance. Aside from quantifying the efficiency within the hardware-specific roofline model, we also compare against routines providing the same functionality that ship with Intel's oneMKL vendor library.},
+  file        = {:http\://arxiv.org/pdf/2103.10116v1:PDF},
+  keywords    = {cs.DC, cs.MS, cs.PF},
+}
+
+@Article{Li2021a,
+  author       = {Jingwei Li and Xiao-Chuan Cai},
+  date         = {2021-03},
+  journaltitle = {Numerical Linear Algebra with Applications},
+  title        = {Summation pollution of principal component analysis and an improved algorithm for location sensitive data},
+  doi          = {10.1002/nla.2370},
+  abstract     = {Principal component analysis (PCA) is widely used for dimensionality reduction and unsupervised learning. The reconstruction error is sometimes large even when a large number of eigenmode is used. In this paper, we show that this unexpected error source is the pollution effect of a summation operation in the objective function of the PCA algorithm. The summation operator brings together unrelated parts of the data into the same optimization and the result is the reduction of the accuracy of the overall algorithm. We introduce a domain decomposed PCA that improves the accuracy, and surprisingly also increases the parallelism of the algorithm. To demonstrate the accuracy and parallel efficiency of the proposed algorithm, we consider three applications including a face recognition problem, a brain tumor detection problem using two‐ and three‐dimensional MRI images.},
+  publisher    = {Wiley},
+}
+
+@Article{Sgherzi2021,
+  author      = {Francesco Sgherzi and Alberto Parravicini and Marco Siracusa and Marco Domenico Santambrogio},
+  date        = {2021-03-18},
+  title       = {Solving Large Top-K Graph Eigenproblems with a Memory and Compute-optimized FPGA Design},
+  eprint      = {2103.10040},
+  eprintclass = {cs.AR},
+  eprinttype  = {arXiv},
+  abstract    = {Large-scale eigenvalue computations on sparse matrices are a key component of graph analytics techniques based on spectral methods. In such applications, an exhaustive computation of all eigenvalues and eigenvectors is impractical and unnecessary, as spectral methods can retrieve the relevant properties of enormous graphs using just the eigenvectors associated with the Top-K largest eigenvalues.\\ In this work, we propose a hardware-optimized algorithm to approximate a solution to the Top-K eigenproblem on sparse matrices representing large graph topologies. We prototype our algorithm through a custom FPGA hardware design that exploits HBM, Systolic Architectures, and mixed-precision arithmetic. We achieve a speedup of 6.22x compared to the highly optimized ARPACK library running on an 80-thread CPU, while keeping high accuracy and 49x better power efficiency.},
+  file        = {:http\://arxiv.org/pdf/2103.10040v1:PDF},
+  keywords    = {cs.AR},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
