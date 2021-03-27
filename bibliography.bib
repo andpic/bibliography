@@ -11740,16 +11740,17 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   keywords    = {math.OC}
 }
 
-@article{Abdelfattah2020a,
-  author      = {Ahmad Abdelfattah and Hartwig Anzt and Erik G. Boman and Erin Carson and Terry Cojean and Jack Dongarra and Mark Gates and Thomas Grützmacher and Nicholas J. Higham and Sherry Li and Neil Lindquist and Yang Liu and Jennifer Loe and Piotr Luszczek and Pratik Nayak and Sri Pranesh and Siva Rajamanickam and Tobias Ribizel and Barry Smith and Kasia Swirydowicz and Stephen Thomas and Stanimire Tomov and Yaohung M. Tsai and Ichitaro Yamazaki and Urike Meier Yang},
-  date        = {2020-07-13},
-  title       = {A Survey of Numerical Methods Utilizing Mixed Precision Arithmetic},
-  eprint      = {2007.06674v1},
-  eprintclass = {cs.MS},
-  eprinttype  = {arXiv},
-  abstract    = {Within the past years, hardware vendors have started designing low precision special function units in response to the demand of the Machine Learning community and their demand for high compute power in low precision formats. Also the server-line products are increasingly featuring low-precision special function units, such as the NVIDIA tensor cores in ORNL's Summit supercomputer providing more than an order of magnitude higher performance than what is available in IEEE double precision. At the same time, the gap between the compute power on the one hand and the memory bandwidth on the other hand keeps increasing, making data access and communication prohibitively expensive compared to arithmetic operations. To start the multiprecision focus effort, we survey the numerical linear algebra community and summarize all existing multiprecision knowledge, expertise, and software capabilities in this landscape analysis report. We also include current efforts and preliminary results that may not yet be considered "mature technology," but have the potential to grow into production quality within the multiprecision focus effort. As we expect the reader to be familiar with the basics of numerical linear algebra, we refrain from providing a detailed background on the algorithms themselves but focus on how mixed- and multiprecision technology can help improving the performance of these methods and present highlights of application significantly outperforming the traditional fixed precision methods.},
-  file        = {:http\://arxiv.org/pdf/2007.06674v1:PDF},
-  keywords    = {cs.MS, cs.NA, math.NA, G.1.3; G.4}
+@Article{Abdelfattah2021,
+  author       = {Ahmad Abdelfattah and Hartwig Anzt and Erik G. Boman and Erin Carson and Terry Cojean and Jack Dongarra and Mark Gates and Thomas Grützmacher and Nicholas J. Higham and Sherry Li and Neil Lindquist and Yang Liu and Jennifer Loe and Piotr Luszczek and Pratik Nayak and Sri Pranesh and Siva Rajamanickam and Tobias Ribizel and Barry Smith and Kasia Swirydowicz and Stephen Thomas and Stanimire Tomov and Yaohung M. Tsai and Ichitaro Yamazaki and Urike Meier Yang},
+  date         = {2021},
+  journaltitle = {The International Journal of High Performance Computing Applications},
+  title        = {A Survey of Numerical Methods Utilizing Mixed Precision Arithmetic},
+  eprint       = {2007.06674v1},
+  eprintclass  = {cs.MS},
+  eprinttype   = {arXiv},
+  abstract     = {Within the past years, hardware vendors have started designing low precision special function units in response to the demand of the Machine Learning community and their demand for high compute power in low precision formats. Also the server-line products are increasingly featuring low-precision special function units, such as the NVIDIA tensor cores in ORNL's Summit supercomputer providing more than an order of magnitude higher performance than what is available in IEEE double precision. At the same time, the gap between the compute power on the one hand and the memory bandwidth on the other hand keeps increasing, making data access and communication prohibitively expensive compared to arithmetic operations. To start the multiprecision focus effort, we survey the numerical linear algebra community and summarize all existing multiprecision knowledge, expertise, and software capabilities in this landscape analysis report. We also include current efforts and preliminary results that may not yet be considered "mature technology," but have the potential to grow into production quality within the multiprecision focus effort. As we expect the reader to be familiar with the basics of numerical linear algebra, we refrain from providing a detailed background on the algorithms themselves but focus on how mixed- and multiprecision technology can help improving the performance of these methods and present highlights of application significantly outperforming the traditional fixed precision methods.},
+  file         = {:http\://arxiv.org/pdf/2007.06674v1:PDF},
+  keywords     = {cs.MS, cs.NA, math.NA, G.1.3; G.4},
 }
 
 @article{Abdelfattah2020b,
@@ -15434,6 +15435,56 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   abstract    = {Large-scale eigenvalue computations on sparse matrices are a key component of graph analytics techniques based on spectral methods. In such applications, an exhaustive computation of all eigenvalues and eigenvectors is impractical and unnecessary, as spectral methods can retrieve the relevant properties of enormous graphs using just the eigenvectors associated with the Top-K largest eigenvalues.\\ In this work, we propose a hardware-optimized algorithm to approximate a solution to the Top-K eigenproblem on sparse matrices representing large graph topologies. We prototype our algorithm through a custom FPGA hardware design that exploits HBM, Systolic Architectures, and mixed-precision arithmetic. We achieve a speedup of 6.22x compared to the highly optimized ARPACK library running on an 80-thread CPU, while keeping high accuracy and 49x better power efficiency.},
   file        = {:http\://arxiv.org/pdf/2103.10040v1:PDF},
   keywords    = {cs.AR},
+}
+
+@Article{He2021,
+  author      = {Xin He and Rong Hu and Ya-Ping Fang},
+  date        = {2021-03-18},
+  title       = {Convergence rate analysis of fast primal-dual methods with scalings for linearly constrained convex optimization problems},
+  eprint      = {2103.10118},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {We propose a primal-dual algorithm with scaling, linked to the Nesterov's acceleration scheme, for a linear equality constrained convex optimization problem. We also consider two variants of the algorithm: an inexact proximal primal-dual algorithm and an inexact linearized primal-dual algorithm. We prove that these algorithms enjoy fast convergence properties, even faster than $\mathcal{O}(1/k^2)$ under suitable scaling conditions. Finally, we study an inertial primal-dual dynamic with time scaling for a better understanding of accelerated schemes of the proposed algorithms.},
+  file        = {:http\://arxiv.org/pdf/2103.10118v1:PDF},
+  keywords    = {math.OC},
+}
+
+@Article{Rajamanickam2021,
+  author      = {Sivasankaran Rajamanickam and Seher Acer and Luc Berger-Vergiat and Vinh Dang and Nathan Ellingwood and Evan Harvey and Brian Kelley and Christian R. Trott and Jeremiah Wilke and Ichitaro Yamazaki},
+  date        = {2021-03-22},
+  title       = {Kokkos Kernels: Performance Portable Sparse/Dense Linear Algebra and Graph Kernels},
+  eprint      = {2103.11991},
+  eprintclass = {cs.MS},
+  eprinttype  = {arXiv},
+  abstract    = {As hardware architectures are evolving in the push towards exascale, developing Computational Science and Engineering (CSE) applications depend on performance portable approaches for sustainable software development. This paper describes one aspect of performance portability with respect to developing a portable library of kernels that serve the needs of several CSE applications and software frameworks. We describe Kokkos Kernels, a library of kernels for sparse linear algebra, dense linear algebra and graph kernels. We describe the design principles of such a library and demonstrate portable performance of the library using some selected kernels. Specifically, we demonstrate the performance of four sparse kernels, three dense batched kernels, two graph kernels and one team level algorithm.},
+  file        = {:http\://arxiv.org/pdf/2103.11991v1:PDF},
+  keywords    = {cs.MS},
+}
+
+@Article{Yilmaz2021,
+  author      = {Buse Yilmaz},
+  date        = {2021-03-21},
+  title       = {Graph Transformation and Specialized Code Generation For Sparse Triangular Solve (SpTRSV)},
+  eprint      = {2103.11445},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {Sparse Triangular Solve (SpTRSV) is an important computational kernel used in the solution of sparse linear algebra systems in many scientific and engineering applications. It is diffcult to parallelize SpTRSV in today's architectures. The limited parallelism due to the dependencies between calculations and the irregular nature of the computations require an effective load balancing and synchronization mechanism approach. In this work, we present a novel graph transformation method where the equation representing a row is rewritten to break the dependencies. Using this approach, we propose a dependency graph transformation and code generation framework that increases the parallelism of the parts of a sparse matrix where it is scarce, reducing the need for synchronization points. In addition, the proposed framework generates specialized code for the transformed dependency graph on CPUs using domain-specific optimizations.},
+  file        = {:http\://arxiv.org/pdf/2103.11445v1:PDF},
+  keywords    = {cs.DC},
+}
+
+@InProceedings{Wilkinson2021,
+  author      = {William J. Wilkinson and Arno Solin and Vincent Adam},
+  booktitle   = {Proceedings of the 24th International Conference on Artificial Intelligence and Statistics},
+  date        = {2021-03-19},
+  title       = {Sparse Algorithms for Markovian Gaussian Processes},
+  eprint      = {2103.10710},
+  eprintclass = {stat.ML},
+  eprinttype  = {arXiv},
+  series      = {AISTATS 2021},
+  abstract    = {Approximate Bayesian inference methods that scale to very large datasets are crucial in leveraging probabilistic models for real-world time series. Sparse Markovian Gaussian processes combine the use of inducing variables with efficient Kalman filter-like recursions, resulting in algorithms whose computational and memory requirements scale linearly in the number of inducing points, whilst also enabling parallel parameter updates and stochastic optimisation. Under this paradigm, we derive a general site-based approach to approximate inference, whereby we approximate the non-Gaussian likelihood with local Gaussian terms, called sites. Our approach results in a suite of novel sparse extensions to algorithms from both the machine learning and signal processing literature, including variational inference, expectation propagation, and the classical nonlinear Kalman smoothers. The derived methods are suited to large time series, and we also demonstrate their applicability to spatio-temporal data, where the model has separate inducing points in both time and space.},
+  file        = {:http\://arxiv.org/pdf/2103.10710v1:PDF},
+  keywords    = {stat.ML, cs.LG},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
