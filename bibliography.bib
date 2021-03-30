@@ -15487,6 +15487,83 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   keywords    = {stat.ML, cs.LG},
 }
 
+@Article{Doikov2021,
+  author      = {Nikita Doikov and Yurii Nesterov},
+  date        = {2021-03-23},
+  title       = {Optimization Methods for Fully Composite Problems},
+  eprint      = {2103.12632},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {In this paper, we propose a new Fully Composite Formulation of convex optimization problems. It includes, as a particular case, the problems with functional constraints, max-type minimization problems, and problems of Composite Minimization, where the objective can have simple nondifferentiable components. We treat all these formulations in a unified way, highlighting the existence of very natural optimization schemes of different order. We prove the global convergence rates for our methods under the most general conditions. Assuming that the upper-level component of our objective function is subhomogeneous, we develop efficient modification of the basic Fully Composite first-order and second-order Methods, and propose their accelerated variants.},
+  file        = {:http\://arxiv.org/pdf/2103.12632v1:PDF},
+  keywords    = {math.OC},
+}
+
+@Article{Nepomuceno2021,
+  author      = {R. Nepomuceno and R. Sterle and G. Valarini and M. Pereira and H. Yviquel and G. Araujo},
+  date        = {2021-03-19},
+  title       = {Enabling OpenMP Task Parallelism on Multi-FPGAs},
+  eprint      = {2103.10573},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {FPGA-based hardware accelerators have received increasing attention mainly due to their ability to accelerate deep pipelined applications, thus resulting in higher computational performance and energy efficiency. Nevertheless, the amount of resources available on even the most powerful FPGA is still not enough to speed up very large modern workloads. To achieve that, FPGAs need to be interconnected in a Multi-FPGA architecture capable of accelerating a single application. However, programming such architecture is a challenging endeavor that still requires additional research. This paper extends the OpenMP task-based computation offloading model to enable a number of FPGAs to work together as a single Multi-FPGA architecture. Experimental results for a set of OpenMP stencil applications running on a Multi-FPGA platform consisting of 6 Xilinx VC709 boards interconnected through fiber-optic links have shown close to linear speedups as the number of FPGAs and IP-cores per FPGA increase.},
+  file        = {:http\://arxiv.org/pdf/2103.10573v2:PDF},
+  keywords    = {cs.DC},
+}
+
+@Article{Liu2021a,
+  author      = {Xiaoyan Liu and Yi Liu and Ming Dun and Bohong Yin and Hailong Yang and Zhongzhi Luan and Depei Qian},
+  date        = {2021-03-24},
+  title       = {Accelerating Sparse Approximate Matrix Multiplication on GPUs},
+  eprint      = {2103.13042},
+  eprintclass = {cs.PF},
+  eprinttype  = {arXiv},
+  abstract    = {Although the matrix multiplication plays a vital role in computational linear algebra, there are few efficient solutions for matrix multiplication of the near-sparse matrices. The Sparse Approximate Matrix Multiply (SpAMM) is one of the algorithms to fill the performance gap neglected by traditional optimizations for dense/sparse matrix multiplication. However, existing SpAMM algorithms fail to exploit the performance potential of GPUs for acceleration. In this paper, we present cuSpAMM, the first parallel SpAMM algorithm optimized for multiple GPUs. Several performance optimizations have been proposed, including algorithm re-design to adapt to the thread parallelism, blocking strategies for memory access optimization, and the acceleration with the tensor core. In addition, we scale cuSpAMM to run on multiple GPUs with an effective load balance scheme. We evaluate cuSpAMM on both synthesized and real-world datasets on multiple GPUs. The experiment results show that cuSpAMM achieves significant performance speedup compared to vendor optimized cuBLAS and cuSPARSE libraries.},
+  file        = {:http\://arxiv.org/pdf/2103.13042v1:PDF},
+  keywords    = {cs.PF},
+}
+
+@Article{Halsted2021,
+  author      = {Trevor Halsted and Ola Shorinwa and Javier Yu and Mac Schwager},
+  date        = {2021-03-23},
+  title       = {A Survey of Distributed Optimization Methods for Multi-Robot Systems},
+  eprint      = {2103.12840},
+  eprintclass = {cs.RO},
+  eprinttype  = {arXiv},
+  abstract    = {Distributed optimization consists of multiple computation nodes working together to minimize a common objective function through local computation iterations and network-constrained communication steps. In the context of robotics, distributed optimization algorithms can enable multi-robot systems to accomplish tasks in the absence of centralized coordination. We present a general framework for applying distributed optimization as a module in a robotics pipeline. We survey several classes of distributed optimization algorithms and assess their practical suitability for multi-robot applications. We further compare the performance of different classes of algorithms in simulations for three prototypical multi-robot problem scenarios. The Consensus Alternating Direction Method of Multipliers (C-ADMM) emerges as a particularly attractive and versatile distributed optimization method for multi-robot systems.},
+  file        = {:http\://arxiv.org/pdf/2103.12840v1:PDF},
+  keywords    = {cs.RO},
+}
+
+@Article{Wang2021b,
+  author       = {Yunzhe Wang and George Baciu and Chenhui Li},
+  date         = {2021-03},
+  journaltitle = {{ACM} Transactions on Knowledge Discovery from Data},
+  title        = {A Layout-Based Classification Method for Visualizing Time-Varying Graphs},
+  doi          = {10.1145/3441301},
+  number       = {4},
+  pages        = {1--24},
+  volume       = {15},
+  abstract     = {Connectivity analysis between the components of large evolving systems can reveal significant patterns of interaction. The systems can be simulated by topological graph structures. However, such analysis becomes challenging on large and complex graphs. Tasks such as comparing, searching, and summarizing structures, are difficult due to the enormous number of calculations required. For time-varying graphs, the temporal dimension even intensifies the difficulty. In this article, we propose to reduce the complexity of analysis by focusing on subgraphs that are induced by closely related entities. To summarize the diverse structures of subgraphs, we build a supervised layout-based classification model. The main premise is that the graph structures can induce a unique appearance of the layout. In contrast to traditional graph theory-based and contemporary neural network-based methods of graph classification, our approach generates low costs and there is no need to learn informative graph representations. Combined with temporally stable visualizations, we can also facilitate the understanding of sub-structures and the tracking of graph evolution. The method is evaluated on two real-world datasets. The results show that our system is highly effective in carrying out visual-based analytics of large graphs.},
+  publisher    = {Association for Computing Machinery ({ACM})},
+}
+
+@Article{Fujiwara2021,
+  author    = {Yasuhiro Fujiwara and Sekitoshi Kanai and Yasutoshi Ida and Atsutoshi Kumagai and Naonori Ueda},
+  date      = {2021},
+  title     = {Fast Algorithm for Anchor Graph Hashing},
+  number    = {6},
+  pages     = {916--928},
+  url       = {http://www.vldb.org/pvldb/vol14/p916-fujiwara.pdf},
+  volume    = {14},
+  abstract  = {Anchor graph hashing is used in many applications such as cancer detection, web page classifcation, and drug discovery. It computes the hash codes from the eigenvectors of the matrix representing the similarities between data points and anchor points; anchors refer to the points representing the data distribution. In performing an approximate nearest neighbor search, the hash codes of a query data point are determined by identifying its closest anchor points. Anchor graph hashing, however, incurs high computation cost since (1) the computation cost of obtaining the eigenvectors is quadratic to the number of anchor points, and (2) the similarities of the query data point to all the anchor points must be computed. Our proposal, Tridiagonal hashing, increases the efciency of anchor graph hashing because of its two advances: (1) we apply a graph clustering algorithm to compute the eigenvectors from the tridiagonal matrix obtained from the similarities between data points and anchor points, and (2) we detect anchor points closest to the query data point by using a dimensionality reduction approach. Experiments show that our approach is several orders of magnitude faster than the previous approaches. Besides, it yields high search accuracy than the original anchor graph hashing approach.},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  biburl    = {https://dblp.org/rec/journals/pvldb/FujiwaraKIKU21.bib},
+  journal   = {Proc. {VLDB} Endow.},
+  timestamp = {Tue, 23 Mar 2021 16:03:22 +0100},
+  year      = {2021},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
