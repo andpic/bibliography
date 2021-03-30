@@ -11740,7 +11740,7 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   keywords    = {math.OC}
 }
 
-@Article{Abdelfattah2021,
+@article{Abdelfattah2021,
   author       = {Ahmad Abdelfattah and Hartwig Anzt and Erik G. Boman and Erin Carson and Terry Cojean and Jack Dongarra and Mark Gates and Thomas Grützmacher and Nicholas J. Higham and Sherry Li and Neil Lindquist and Yang Liu and Jennifer Loe and Piotr Luszczek and Pratik Nayak and Sri Pranesh and Siva Rajamanickam and Tobias Ribizel and Barry Smith and Kasia Swirydowicz and Stephen Thomas and Stanimire Tomov and Yaohung M. Tsai and Ichitaro Yamazaki and Urike Meier Yang},
   date         = {2021},
   journaltitle = {The International Journal of High Performance Computing Applications},
@@ -11750,7 +11750,7 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   eprinttype   = {arXiv},
   abstract     = {Within the past years, hardware vendors have started designing low precision special function units in response to the demand of the Machine Learning community and their demand for high compute power in low precision formats. Also the server-line products are increasingly featuring low-precision special function units, such as the NVIDIA tensor cores in ORNL's Summit supercomputer providing more than an order of magnitude higher performance than what is available in IEEE double precision. At the same time, the gap between the compute power on the one hand and the memory bandwidth on the other hand keeps increasing, making data access and communication prohibitively expensive compared to arithmetic operations. To start the multiprecision focus effort, we survey the numerical linear algebra community and summarize all existing multiprecision knowledge, expertise, and software capabilities in this landscape analysis report. We also include current efforts and preliminary results that may not yet be considered "mature technology," but have the potential to grow into production quality within the multiprecision focus effort. As we expect the reader to be familiar with the basics of numerical linear algebra, we refrain from providing a detailed background on the algorithms themselves but focus on how mixed- and multiprecision technology can help improving the performance of these methods and present highlights of application significantly outperforming the traditional fixed precision methods.},
   file         = {:http\://arxiv.org/pdf/2007.06674v1:PDF},
-  keywords     = {cs.MS, cs.NA, math.NA, G.1.3; G.4},
+  keywords     = {cs.MS, cs.NA, math.NA, G.1.3; G.4}
 }
 
 @article{Abdelfattah2020b,
@@ -15288,7 +15288,7 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   abstract  = {Existing state-of-the-art CPU graph frameworks take advantage of multiple cores, but not the SIMD capability within each core. In this work, we retarget an existing GPU graph algorithm compiler to obtain the first graph framework that uses SIMD extensions on CPUs to efficiently execute graph algorithms. We evaluate this compiler on 10 benchmarks and 3 graphs on 3 different CPUs and also compare to the GPU. Evaluation results show that on a 8-core machine, enabling SIMD on a naive multi-core implementation achieves an additional 7.48x speedup, averaged across 10 benchmarks and 3 inputs. Applying our SIMD-targeted optimizations improves the plain SIMD implementation by 1.67x, outperforming a serial implementation by 12.46x. On average, the optimized multi-core SIMD version also outperforms the state-of-the-art graph framework, GraphIt, by 1.53x, averaged across 5 (common) benchmarks. SIMD execution on CPUs closes the gap between the CPU and GPU to 1.76x, but the CPU virtual memory performs better when graphs are much bigger than available physical memory.}
 }
 
-@Article{Krasnopolsky2021,
+@article{Krasnopolsky2021,
   author      = {Boris Krasnopolsky and Alexey Medvedev},
   date        = {2021-03-12},
   title       = {XAMG: A library for solving linear systems with multiple right-hand side vectors},
@@ -15297,10 +15297,10 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   eprinttype  = {arXiv},
   abstract    = {This paper presents the XAMG library for solving large sparse systems of linear algebraic equations with multiple right-hand side vectors. The library specializes but is not limited to the solution of linear systems obtained from the discretization of elliptic differential equations. A corresponding set of numerical methods includes Krylov subspace, algebraic multigrid, Jacobi, Gauss-Seidel, and Chebyshev iterative methods. The parallelization is implemented with MPI+POSIX shared memory hybrid programming model, which introduces a three-level hierarchical decomposition using the corresponding per-level synchronization and communication primitives. The code contains a number of optimizations, including the multilevel data segmentation, compression of indices, mixed-precision floating-point calculations, vector status flags, and others. The XAMG library uses the program code of the well-known hypre library to construct the multigrid matrix hierarchy. The XAMG's own implementation for the solve phase of the iterative methods provides up to a twofold speedup compared to hypre for the tests performed. Additionally, XAMG provides extended functionality to solve systems with multiple right-hand side vectors.},
   file        = {:http\://arxiv.org/pdf/2103.07329v1:PDF},
-  keywords    = {cs.MS, cs.DC, cs.NA, math.NA},
+  keywords    = {cs.MS, cs.DC, cs.NA, math.NA}
 }
 
-@Article{Ashari2015,
+@article{Ashari2015,
   author       = {Arash Ashari and Naser Sedaghati and John Eisenlohr and P. Sadayappan},
   date         = {2015-02},
   journaltitle = {Journal of Parallel and Distributed Computing},
@@ -15309,10 +15309,10 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   pages        = {3--15},
   volume       = {76},
   abstract     = {Sparse Matrix–Vector multiplication (SpMV) is one of the key operations in linear algebra. Overcoming thread divergence, load imbalance and un-coalesced and indirect memory access due to sparsity and irregularity are challenges to optimizing SpMV on GPUs.\\ In this paper we present a new Blocked Row–Column (BRC) storage format with a two-dimensional blocking mechanism that addresses these challenges effectively. It reduces thread divergence by reordering and blocking rows of the input matrix with nearly equal number of non-zero elements onto the same execution units (i.e., warps). BRC improves load balance by partitioning rows into blocks with a constant number of non-zeros such that different warps perform the same amount of work. We also present an approach to optimize BRC performance by judicious selection of block size based on sparsity characteristics of the matrix.\\ A CUDA implementation of BRC outperforms NVIDIA CUSP and cuSPARSE libraries and other state-of-the-art SpMV formats on a range of unstructured sparse matrices from multiple application domains. The BRC format has been integrated with PETSc, enabling its use in PETSc’s solvers. Furthermore, when partitioning the input matrix, BRC achieves near linear speedup on multiple GPUs.},
-  publisher    = {Elsevier {BV}},
+  publisher    = {Elsevier {BV}}
 }
 
-@InCollection{Aliaga2021,
+@incollection{Aliaga2021,
   author    = {Jos{\'{e}} Ignacio Aliaga and Hartwig Anzt and Enrique S. Quintana-Ort{\'{\i}} and Andr{\'{e}}s E. Tom{\'{a}}s and Yuhsiang M. Tsai},
   booktitle = {Euro-Par 2020: Parallel Processing Workshops},
   date      = {2021},
@@ -15320,10 +15320,10 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   doi       = {10.1007/978-3-030-71593-9_7},
   pages     = {83--95},
   publisher = {Springer International Publishing},
-  abstract  = {We contribute to the optimization of the sparse matrix-vector product on graphics processing units by introducing a variant of the coordinate sparse matrix layout that compresses the integer representation of the matrix indices. In addition, we employ a look-ahead table to avoid the storage of repeated numerical values in the sparse matrix, yielding a more compact data representation that is easier to maintain in the cache. Our evaluation on the two most recent generations of NVIDIA GPUs, the V100 and the A100 architectures, shows considerable performance improvements over the kernels for the sparse matrix-vector product in cuSPARSE (CUDA 11.0.167).},
+  abstract  = {We contribute to the optimization of the sparse matrix-vector product on graphics processing units by introducing a variant of the coordinate sparse matrix layout that compresses the integer representation of the matrix indices. In addition, we employ a look-ahead table to avoid the storage of repeated numerical values in the sparse matrix, yielding a more compact data representation that is easier to maintain in the cache. Our evaluation on the two most recent generations of NVIDIA GPUs, the V100 and the A100 architectures, shows considerable performance improvements over the kernels for the sparse matrix-vector product in cuSPARSE (CUDA 11.0.167).}
 }
 
-@InCollection{Alhaddad2021,
+@incollection{Alhaddad2021,
   author    = {Samer Alhaddad and Jens Förstner and Stefan Groth and Daniel Grünewald and Yevgen Grynko and Frank Hannig and Tobias Kenter and Franz-Josef Pfreundt and Christian Plessl and Merlind Schotte and Thomas Steinke and Jürgen Teich and Martin Weiser and Florian Wende},
   booktitle = {Euro-Par 2020: Parallel Processing Workshops},
   date      = {2021},
@@ -15331,10 +15331,10 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   doi       = {10.1007/978-3-030-71593-9_15},
   pages     = {185--196},
   publisher = {Springer International Publishing},
-  abstract  = {Solving partial differential equations on unstructured grids is a cornerstone of engineering and scientific computing. Nowadays, heterogeneous parallel platforms with CPUs, GPUs, and FPGAs enable energy-efficient and computationally demanding simulations. We developed the HighPerMeshes C++-embedded Domain-Specific Language (DSL) for bridging the abstraction gap between the mathematical and algorithmic formulation of mesh-based algorithms for PDE problems on the one hand and an increasing number of heterogeneous platforms with their different parallel programming and runtime models on the other hand. Thus, the HighPerMeshes DSL aims at higher productivity in the code development process for multiple target platforms. We introduce the concepts as well as the basic structure of the HighPerMeshes DSL, and demonstrate its usage with three examples, a Poisson and monodomain problem, respectively, solved by the continuous finite element method, and the discontinuous Galerkin method for Maxwell’s equation. The mapping of the abstract algorithmic description onto parallel hardware, including distributed memory compute clusters, is presented. Finally, the achievable performance and scalability are demonstrated for a typical example problem on a multi-core CPU cluster.},
+  abstract  = {Solving partial differential equations on unstructured grids is a cornerstone of engineering and scientific computing. Nowadays, heterogeneous parallel platforms with CPUs, GPUs, and FPGAs enable energy-efficient and computationally demanding simulations. We developed the HighPerMeshes C++-embedded Domain-Specific Language (DSL) for bridging the abstraction gap between the mathematical and algorithmic formulation of mesh-based algorithms for PDE problems on the one hand and an increasing number of heterogeneous platforms with their different parallel programming and runtime models on the other hand. Thus, the HighPerMeshes DSL aims at higher productivity in the code development process for multiple target platforms. We introduce the concepts as well as the basic structure of the HighPerMeshes DSL, and demonstrate its usage with three examples, a Poisson and monodomain problem, respectively, solved by the continuous finite element method, and the discontinuous Galerkin method for Maxwell’s equation. The mapping of the abstract algorithmic description onto parallel hardware, including distributed memory compute clusters, is presented. Finally, the achievable performance and scalability are demonstrated for a typical example problem on a multi-core CPU cluster.}
 }
 
-@Article{Carson2021a,
+@article{Carson2021a,
   author      = {Erin Carson and Tomáš Gergelits},
   date        = {2021-03-16},
   title       = {Mixed Precision $s$-step Lanczos and Conjugate Gradient Algorithms},
@@ -15343,22 +15343,10 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   eprinttype  = {arXiv},
   abstract    = {Compared to the classical Lanczos algorithm, the $s$-step Lanczos variant has the potential to improve performance by asymptotically decreasing the synchronization cost per iteration. However, this comes at a cost. Despite being mathematically equivalent, the $s$-step variant is known to behave quite differently in finite precision, with potential for greater loss of accuracy and a decrease in the convergence rate relative to the classical algorithm. It has previously been shown that the errors that occur in the $s$-step version follow the same structure as the errors in the classical algorithm, but with the addition of an amplification factor that depends on the square of the condition number of the $O(s)-$dimensional Krylov bases computed in each outer loop. As the condition number of these $s$-step bases grows (in some cases very quickly) with $s$, this limits the parameter $s$ that can be chosen and thus limits the performance that can be achieved. In this work we show that if a select few computations in $s$-step Lanczos are performed in double the working precision, the error terms then depend only linearly on the conditioning of the $s$-step bases. This has the potential for drastically improving the numerical behavior of the algorithm with little impact on per-iteration performance. Our numerical experiments demonstrate the improved numerical behavior possible with the mixed precision approach, and also show that this improved behavior extends to the $s$-step CG algorithm in mixed precision.},
   file        = {:http\://arxiv.org/pdf/2103.09210v1:PDF},
-  keywords    = {math.NA, cs.NA, 65G50, 65F10, 65F15, 65N15, 65N12},
+  keywords    = {math.NA, cs.NA, 65G50, 65F10, 65F15, 65N15, 65N12}
 }
 
-@Article{Luo2021,
-  author      = {Xin-long Luo and Hang Xiao},
-  date        = {2021-03-10},
-  title       = {Generalized continuation Newton methods and the trust-region updating strategy for the underdetermined system},
-  eprint      = {2103.05829},
-  eprintclass = {math.NA},
-  eprinttype  = {arXiv},
-  abstract    = {This paper considers the generalized continuation Newton method and the trust-region updating strategy for the underdetermined system of nonlinear equations.Moreover, in order to improve its computational efficiency, the new method uses a switching updating technique of the Jacobian matrix. That is to say, it does not compute the next Jacobian matrix and replaces it with the current jacobian matrix when the linear approximation model of the merit function approximates it well. The numerical results show that the new method is more robust and faster than the traditional optimization method such as the Levenberg-Marquardt method (a variant of trust-region methods, the built-in subroutine fsolve.m of the MATLAB environment). The computational speed of the new method is about eight to fifty times as fast as that of fsolve. Furthermore, it also proves the global convergence and the local superlinear convergence of the new method under some standard assumptions.},
-  file        = {:http\://arxiv.org/pdf/2103.05829v1:PDF},
-  keywords    = {math.NA, cs.NA, math.DS, math.OC},
-}
-
-@Article{Lupu2021,
+@article{Lupu2021,
   author      = {Daniela Lupu and Ion Necoara},
   date        = {2021-03-14},
   title       = {Convergence analysis of stochastic higher-order majorization-minimization algorithms},
@@ -15367,10 +15355,10 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   eprinttype  = {arXiv},
   abstract    = {Majorization-minimization algorithms consist of successively minimizing a sequence of upper bounds of the objective function so that along the iterations the objective function decreases. Such a simple principle allows to solve a large class of optimization problems, even nonconvex, nonsmooth and stochastic. We present a stochastic higher-order algorithmic framework for minimizing the average of a very large number of sufficiently smooth functions. Our stochastic framework is based on the notion of stochastic higher-order upper bound approximations of the finite-sum objective function and minibatching. We present convergence guarantees for nonconvex and convex optimization when the higher-order upper bounds approximate the objective function up to an error that is p times differentiable and has a Lipschitz continuous p derivative. More precisely, we derive asymptotic stationary point guarantees for nonconvex problems, and for convex ones we establish local linear convergence results, provided that the objective function is uniformly convex. Unlike other higher-order methods, ours work with any batch size. Moreover, in contrast to most existing stochastic Newton and third-order methods, our approach guarantees local convergence faster than with first-order oracle and adapts to the problem's curvature. Numerical simulations also confirm the efficiency of our algorithmic framework.},
   file        = {:http\://arxiv.org/pdf/2103.07984v1:PDF},
-  keywords    = {math.OC},
+  keywords    = {math.OC}
 }
 
-@InCollection{Fevre2021,
+@incollection{Fevre2021,
   author    = {Valentin Le F{\`{e}}vre and Thomas Herault and Julien Langou and Yves Robert},
   booktitle = {Euro-Par 2020: Parallel Processing Workshops},
   date      = {2021},
@@ -15378,20 +15366,20 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   doi       = {10.1007/978-3-030-71593-9_24},
   pages     = {303--315},
   publisher = {Springer International Publishing},
-  abstract  = {This paper compares several fault-tolerance methods for the detection and correction of floating-point errors in matrix-matrix multiplication. These methods include replication, triplication, Algorithm-Based Fault Tolerance (ABFT) and residual checking (RC). Error correction for ABFT can be achieved either by solving a small-size linear system of equations, or by recomputing corrupted coefficients. We show that both approaches can be used for RC. We provide a synthetic presentation of all methods before discussing their pros and cons. We have implemented all these methods with calls to optimized BLAS routines, and we provide performance data for a wide range of failure rates and matrix sizes.},
+  abstract  = {This paper compares several fault-tolerance methods for the detection and correction of floating-point errors in matrix-matrix multiplication. These methods include replication, triplication, Algorithm-Based Fault Tolerance (ABFT) and residual checking (RC). Error correction for ABFT can be achieved either by solving a small-size linear system of equations, or by recomputing corrupted coefficients. We show that both approaches can be used for RC. We provide a synthetic presentation of all methods before discussing their pros and cons. We have implemented all these methods with calls to optimized BLAS routines, and we provide performance data for a wide range of failure rates and matrix sizes.}
 }
 
-@Article{Kanno2021,
+@article{Kanno2021,
   author       = {Yoshihiro Kanno},
   date         = {2021-03},
   journaltitle = {Optimization and Engineering},
   title        = {Accelerated proximal gradient method for bi-modulus static elasticity},
   doi          = {10.1007/s11081-021-09595-2},
   abstract     = {Bi-modulus constitutive law assumes that material constants have different values in tension and compression. It is known that finding an equilibrium state of an elastic body consisting of a bi-modulus material is recast as a semidefinite programming problem, which can be solved with a primal-dual interior-point method. As an alternative approach, this paper presents a fast first-order optimization method. Specifically, we propose an accelerated proximal gradient method for solving a minimization problem of the total potential energy. This algorithm is easy to implement, and free from numerical solution of linear equations. Numerical experiments demonstrate that the proposed method outperforms the semidefinite programming approach with a standard solver implementing a primal-dual interior-point method.},
-  publisher    = {Springer Science and Business Media {LLC}},
+  publisher    = {Springer Science and Business Media {LLC}}
 }
 
-@Article{Besse2021,
+@article{Besse2021,
   author      = {Christophe Besse and Romain Duboscq and Stefan Le Coz},
   date        = {2021-03-17},
   title       = {Numerical Simulations on Nonlinear Quantum Graphs with the GraFiDi Library},
@@ -15400,10 +15388,10 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   eprinttype  = {arXiv},
   abstract    = {Nonlinear quantum graphs are metric graphs equipped with a nonlinear Schr{\"o}dinger equation. Whereas in the last ten years they have known considerable developments on the theoretical side, their study from the numerical point of view remains in its early stages. The goal of this paper is to present the Grafidi library, a Python library which has been developed with the numerical simulation of nonlinear Schr{\"o}dinger equations on graphs in mind. We will show how, with the help of the Grafidi library, one can implement the popular normalized gradient flow and nonlinear conjugate gradient flow methods to compute ground states of a nonlinear quantum graph. We will also simulate the dynamics of the nonlinear Schr{\"o}dinger equation with a Crank-Nicolson relaxation scheme and a Strang splitting scheme. Finally, in a series of numerical experiments on various types of graphs, we will compare the outcome of our numerical calculations for ground states with the existing theoretical results, thereby illustrating the versatility and efficiency of our implementations in the framework of the Grafidi library.},
   file        = {:http\://arxiv.org/pdf/2103.09650v1:PDF},
-  keywords    = {math.AP, cs.NA, math.NA, nlin.PS},
+  keywords    = {math.AP, cs.NA, math.NA, nlin.PS}
 }
 
-@Article{Tsai2021,
+@article{Tsai2021,
   author      = {Yuhsiang M. Tsai and Terry Cojean and Hartwig Anzt},
   date        = {2021-03-18},
   title       = {Porting a sparse linear algebra math library to Intel GPUs},
@@ -15412,20 +15400,20 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   eprinttype  = {arXiv},
   abstract    = {With the announcement that the Aurora Supercomputer will be composed of general purpose Intel CPUs complemented by discrete high performance Intel GPUs, and the deployment of the oneAPI ecosystem, Intel has committed to enter the arena of discrete high performance GPUs. A central requirement for the scientific computing community is the availability of production-ready software stacks and a glimpse of the performance they can expect to see on Intel high performance GPUs. In this paper, we present the first platform-portable open source math library supporting Intel GPUs via the DPC++ programming environment. We also benchmark some of the developed sparse linear algebra functionality on different Intel GPUs to assess the efficiency of the DPC++ programming ecosystem to translate raw performance into application performance. Aside from quantifying the efficiency within the hardware-specific roofline model, we also compare against routines providing the same functionality that ship with Intel's oneMKL vendor library.},
   file        = {:http\://arxiv.org/pdf/2103.10116v1:PDF},
-  keywords    = {cs.DC, cs.MS, cs.PF},
+  keywords    = {cs.DC, cs.MS, cs.PF}
 }
 
-@Article{Li2021a,
+@article{Li2021a,
   author       = {Jingwei Li and Xiao-Chuan Cai},
   date         = {2021-03},
   journaltitle = {Numerical Linear Algebra with Applications},
   title        = {Summation pollution of principal component analysis and an improved algorithm for location sensitive data},
   doi          = {10.1002/nla.2370},
   abstract     = {Principal component analysis (PCA) is widely used for dimensionality reduction and unsupervised learning. The reconstruction error is sometimes large even when a large number of eigenmode is used. In this paper, we show that this unexpected error source is the pollution effect of a summation operation in the objective function of the PCA algorithm. The summation operator brings together unrelated parts of the data into the same optimization and the result is the reduction of the accuracy of the overall algorithm. We introduce a domain decomposed PCA that improves the accuracy, and surprisingly also increases the parallelism of the algorithm. To demonstrate the accuracy and parallel efficiency of the proposed algorithm, we consider three applications including a face recognition problem, a brain tumor detection problem using two‐ and three‐dimensional MRI images.},
-  publisher    = {Wiley},
+  publisher    = {Wiley}
 }
 
-@Article{Sgherzi2021,
+@article{Sgherzi2021,
   author      = {Francesco Sgherzi and Alberto Parravicini and Marco Siracusa and Marco Domenico Santambrogio},
   date        = {2021-03-18},
   title       = {Solving Large Top-K Graph Eigenproblems with a Memory and Compute-optimized FPGA Design},
@@ -15434,10 +15422,10 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   eprinttype  = {arXiv},
   abstract    = {Large-scale eigenvalue computations on sparse matrices are a key component of graph analytics techniques based on spectral methods. In such applications, an exhaustive computation of all eigenvalues and eigenvectors is impractical and unnecessary, as spectral methods can retrieve the relevant properties of enormous graphs using just the eigenvectors associated with the Top-K largest eigenvalues.\\ In this work, we propose a hardware-optimized algorithm to approximate a solution to the Top-K eigenproblem on sparse matrices representing large graph topologies. We prototype our algorithm through a custom FPGA hardware design that exploits HBM, Systolic Architectures, and mixed-precision arithmetic. We achieve a speedup of 6.22x compared to the highly optimized ARPACK library running on an 80-thread CPU, while keeping high accuracy and 49x better power efficiency.},
   file        = {:http\://arxiv.org/pdf/2103.10040v1:PDF},
-  keywords    = {cs.AR},
+  keywords    = {cs.AR}
 }
 
-@Article{He2021,
+@article{He2021,
   author      = {Xin He and Rong Hu and Ya-Ping Fang},
   date        = {2021-03-18},
   title       = {Convergence rate analysis of fast primal-dual methods with scalings for linearly constrained convex optimization problems},
@@ -15446,10 +15434,10 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   eprinttype  = {arXiv},
   abstract    = {We propose a primal-dual algorithm with scaling, linked to the Nesterov's acceleration scheme, for a linear equality constrained convex optimization problem. We also consider two variants of the algorithm: an inexact proximal primal-dual algorithm and an inexact linearized primal-dual algorithm. We prove that these algorithms enjoy fast convergence properties, even faster than $\mathcal{O}(1/k^2)$ under suitable scaling conditions. Finally, we study an inertial primal-dual dynamic with time scaling for a better understanding of accelerated schemes of the proposed algorithms.},
   file        = {:http\://arxiv.org/pdf/2103.10118v1:PDF},
-  keywords    = {math.OC},
+  keywords    = {math.OC}
 }
 
-@Article{Rajamanickam2021,
+@article{Rajamanickam2021,
   author      = {Sivasankaran Rajamanickam and Seher Acer and Luc Berger-Vergiat and Vinh Dang and Nathan Ellingwood and Evan Harvey and Brian Kelley and Christian R. Trott and Jeremiah Wilke and Ichitaro Yamazaki},
   date        = {2021-03-22},
   title       = {Kokkos Kernels: Performance Portable Sparse/Dense Linear Algebra and Graph Kernels},
@@ -15458,10 +15446,10 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   eprinttype  = {arXiv},
   abstract    = {As hardware architectures are evolving in the push towards exascale, developing Computational Science and Engineering (CSE) applications depend on performance portable approaches for sustainable software development. This paper describes one aspect of performance portability with respect to developing a portable library of kernels that serve the needs of several CSE applications and software frameworks. We describe Kokkos Kernels, a library of kernels for sparse linear algebra, dense linear algebra and graph kernels. We describe the design principles of such a library and demonstrate portable performance of the library using some selected kernels. Specifically, we demonstrate the performance of four sparse kernels, three dense batched kernels, two graph kernels and one team level algorithm.},
   file        = {:http\://arxiv.org/pdf/2103.11991v1:PDF},
-  keywords    = {cs.MS},
+  keywords    = {cs.MS}
 }
 
-@Article{Yilmaz2021,
+@article{Yilmaz2021,
   author      = {Buse Yilmaz},
   date        = {2021-03-21},
   title       = {Graph Transformation and Specialized Code Generation For Sparse Triangular Solve (SpTRSV)},
@@ -15470,10 +15458,10 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   eprinttype  = {arXiv},
   abstract    = {Sparse Triangular Solve (SpTRSV) is an important computational kernel used in the solution of sparse linear algebra systems in many scientific and engineering applications. It is diffcult to parallelize SpTRSV in today's architectures. The limited parallelism due to the dependencies between calculations and the irregular nature of the computations require an effective load balancing and synchronization mechanism approach. In this work, we present a novel graph transformation method where the equation representing a row is rewritten to break the dependencies. Using this approach, we propose a dependency graph transformation and code generation framework that increases the parallelism of the parts of a sparse matrix where it is scarce, reducing the need for synchronization points. In addition, the proposed framework generates specialized code for the transformed dependency graph on CPUs using domain-specific optimizations.},
   file        = {:http\://arxiv.org/pdf/2103.11445v1:PDF},
-  keywords    = {cs.DC},
+  keywords    = {cs.DC}
 }
 
-@InProceedings{Wilkinson2021,
+@inproceedings{Wilkinson2021,
   author      = {William J. Wilkinson and Arno Solin and Vincent Adam},
   booktitle   = {Proceedings of the 24th International Conference on Artificial Intelligence and Statistics},
   date        = {2021-03-19},
@@ -15484,10 +15472,10 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   series      = {AISTATS 2021},
   abstract    = {Approximate Bayesian inference methods that scale to very large datasets are crucial in leveraging probabilistic models for real-world time series. Sparse Markovian Gaussian processes combine the use of inducing variables with efficient Kalman filter-like recursions, resulting in algorithms whose computational and memory requirements scale linearly in the number of inducing points, whilst also enabling parallel parameter updates and stochastic optimisation. Under this paradigm, we derive a general site-based approach to approximate inference, whereby we approximate the non-Gaussian likelihood with local Gaussian terms, called sites. Our approach results in a suite of novel sparse extensions to algorithms from both the machine learning and signal processing literature, including variational inference, expectation propagation, and the classical nonlinear Kalman smoothers. The derived methods are suited to large time series, and we also demonstrate their applicability to spatio-temporal data, where the model has separate inducing points in both time and space.},
   file        = {:http\://arxiv.org/pdf/2103.10710v1:PDF},
-  keywords    = {stat.ML, cs.LG},
+  keywords    = {stat.ML, cs.LG}
 }
 
-@Article{Doikov2021,
+@article{Doikov2021,
   author      = {Nikita Doikov and Yurii Nesterov},
   date        = {2021-03-23},
   title       = {Optimization Methods for Fully Composite Problems},
@@ -15496,10 +15484,10 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   eprinttype  = {arXiv},
   abstract    = {In this paper, we propose a new Fully Composite Formulation of convex optimization problems. It includes, as a particular case, the problems with functional constraints, max-type minimization problems, and problems of Composite Minimization, where the objective can have simple nondifferentiable components. We treat all these formulations in a unified way, highlighting the existence of very natural optimization schemes of different order. We prove the global convergence rates for our methods under the most general conditions. Assuming that the upper-level component of our objective function is subhomogeneous, we develop efficient modification of the basic Fully Composite first-order and second-order Methods, and propose their accelerated variants.},
   file        = {:http\://arxiv.org/pdf/2103.12632v1:PDF},
-  keywords    = {math.OC},
+  keywords    = {math.OC}
 }
 
-@Article{Nepomuceno2021,
+@article{Nepomuceno2021,
   author      = {R. Nepomuceno and R. Sterle and G. Valarini and M. Pereira and H. Yviquel and G. Araujo},
   date        = {2021-03-19},
   title       = {Enabling OpenMP Task Parallelism on Multi-FPGAs},
@@ -15508,10 +15496,10 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   eprinttype  = {arXiv},
   abstract    = {FPGA-based hardware accelerators have received increasing attention mainly due to their ability to accelerate deep pipelined applications, thus resulting in higher computational performance and energy efficiency. Nevertheless, the amount of resources available on even the most powerful FPGA is still not enough to speed up very large modern workloads. To achieve that, FPGAs need to be interconnected in a Multi-FPGA architecture capable of accelerating a single application. However, programming such architecture is a challenging endeavor that still requires additional research. This paper extends the OpenMP task-based computation offloading model to enable a number of FPGAs to work together as a single Multi-FPGA architecture. Experimental results for a set of OpenMP stencil applications running on a Multi-FPGA platform consisting of 6 Xilinx VC709 boards interconnected through fiber-optic links have shown close to linear speedups as the number of FPGAs and IP-cores per FPGA increase.},
   file        = {:http\://arxiv.org/pdf/2103.10573v2:PDF},
-  keywords    = {cs.DC},
+  keywords    = {cs.DC}
 }
 
-@Article{Liu2021a,
+@article{Liu2021a,
   author      = {Xiaoyan Liu and Yi Liu and Ming Dun and Bohong Yin and Hailong Yang and Zhongzhi Luan and Depei Qian},
   date        = {2021-03-24},
   title       = {Accelerating Sparse Approximate Matrix Multiplication on GPUs},
@@ -15520,10 +15508,10 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   eprinttype  = {arXiv},
   abstract    = {Although the matrix multiplication plays a vital role in computational linear algebra, there are few efficient solutions for matrix multiplication of the near-sparse matrices. The Sparse Approximate Matrix Multiply (SpAMM) is one of the algorithms to fill the performance gap neglected by traditional optimizations for dense/sparse matrix multiplication. However, existing SpAMM algorithms fail to exploit the performance potential of GPUs for acceleration. In this paper, we present cuSpAMM, the first parallel SpAMM algorithm optimized for multiple GPUs. Several performance optimizations have been proposed, including algorithm re-design to adapt to the thread parallelism, blocking strategies for memory access optimization, and the acceleration with the tensor core. In addition, we scale cuSpAMM to run on multiple GPUs with an effective load balance scheme. We evaluate cuSpAMM on both synthesized and real-world datasets on multiple GPUs. The experiment results show that cuSpAMM achieves significant performance speedup compared to vendor optimized cuBLAS and cuSPARSE libraries.},
   file        = {:http\://arxiv.org/pdf/2103.13042v1:PDF},
-  keywords    = {cs.PF},
+  keywords    = {cs.PF}
 }
 
-@Article{Halsted2021,
+@article{Halsted2021,
   author      = {Trevor Halsted and Ola Shorinwa and Javier Yu and Mac Schwager},
   date        = {2021-03-23},
   title       = {A Survey of Distributed Optimization Methods for Multi-Robot Systems},
@@ -15532,10 +15520,10 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   eprinttype  = {arXiv},
   abstract    = {Distributed optimization consists of multiple computation nodes working together to minimize a common objective function through local computation iterations and network-constrained communication steps. In the context of robotics, distributed optimization algorithms can enable multi-robot systems to accomplish tasks in the absence of centralized coordination. We present a general framework for applying distributed optimization as a module in a robotics pipeline. We survey several classes of distributed optimization algorithms and assess their practical suitability for multi-robot applications. We further compare the performance of different classes of algorithms in simulations for three prototypical multi-robot problem scenarios. The Consensus Alternating Direction Method of Multipliers (C-ADMM) emerges as a particularly attractive and versatile distributed optimization method for multi-robot systems.},
   file        = {:http\://arxiv.org/pdf/2103.12840v1:PDF},
-  keywords    = {cs.RO},
+  keywords    = {cs.RO}
 }
 
-@Article{Wang2021b,
+@article{Wang2021b,
   author       = {Yunzhe Wang and George Baciu and Chenhui Li},
   date         = {2021-03},
   journaltitle = {{ACM} Transactions on Knowledge Discovery from Data},
@@ -15545,10 +15533,10 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   pages        = {1--24},
   volume       = {15},
   abstract     = {Connectivity analysis between the components of large evolving systems can reveal significant patterns of interaction. The systems can be simulated by topological graph structures. However, such analysis becomes challenging on large and complex graphs. Tasks such as comparing, searching, and summarizing structures, are difficult due to the enormous number of calculations required. For time-varying graphs, the temporal dimension even intensifies the difficulty. In this article, we propose to reduce the complexity of analysis by focusing on subgraphs that are induced by closely related entities. To summarize the diverse structures of subgraphs, we build a supervised layout-based classification model. The main premise is that the graph structures can induce a unique appearance of the layout. In contrast to traditional graph theory-based and contemporary neural network-based methods of graph classification, our approach generates low costs and there is no need to learn informative graph representations. Combined with temporally stable visualizations, we can also facilitate the understanding of sub-structures and the tracking of graph evolution. The method is evaluated on two real-world datasets. The results show that our system is highly effective in carrying out visual-based analytics of large graphs.},
-  publisher    = {Association for Computing Machinery ({ACM})},
+  publisher    = {Association for Computing Machinery ({ACM})}
 }
 
-@Article{Fujiwara2021,
+@article{Fujiwara2021,
   author    = {Yasuhiro Fujiwara and Sekitoshi Kanai and Yasutoshi Ida and Atsutoshi Kumagai and Naonori Ueda},
   date      = {2021},
   title     = {Fast Algorithm for Anchor Graph Hashing},
@@ -15561,7 +15549,67 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   biburl    = {https://dblp.org/rec/journals/pvldb/FujiwaraKIKU21.bib},
   journal   = {Proc. {VLDB} Endow.},
   timestamp = {Tue, 23 Mar 2021 16:03:22 +0100},
-  year      = {2021},
+  year      = {2021}
+}
+
+@article{Luo2021,
+  author      = {Xin-long Luo and Hang Xiao},
+  date        = {2021-03-10},
+  title       = {Generalized continuation Newton methods and the trust-region updating strategy for the underdetermined system},
+  eprint      = {2103.05829},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {This paper considers the generalized continuation Newton method and the trust-region updating strategy for the underdetermined system of nonlinear equations.Moreover, in order to improve its computational efficiency, the new method uses a switching updating technique of the Jacobian matrix. That is to say, it does not compute the next Jacobian matrix and replaces it with the current jacobian matrix when the linear approximation model of the merit function approximates it well. The numerical results show that the new method is more robust and faster than the traditional optimization method such as the Levenberg-Marquardt method (a variant of trust-region methods, the built-in subroutine fsolve.m of the MATLAB environment). The computational speed of the new method is about eight to fifty times as fast as that of fsolve. Furthermore, it also proves the global convergence and the local superlinear convergence of the new method under some standard assumptions.},
+  file        = {:http\://arxiv.org/pdf/2103.05829v1:PDF},
+  keywords    = {math.NA, cs.NA, math.DS, math.OC}
+}
+
+@article{He2021a,
+  author      = {Xin He and Rong Hu and Ya-Ping Fang},
+  date        = {2021-03-24},
+  title       = {Fast convergence of primal-dual dynamics and algorithms with time scaling for linear equality constrained convex optimization problems},
+  eprint      = {2103.12931},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {We propose a primal-dual dynamic with time scaling for a linear equality constrained convex optimization problem, which consists of a second-order ODE for the primal variable and a first-order ODE for the dual variable. Without assuming strong convexity, we prove its fast convergence property and show that the obtained fast convergence property is preserved under a small perturbation. We also develop an inexact primal-dual algorithm derived by a time discretization, and derive the fast convergence property matching that of the underlying dynamic. Finally, we give numerical experiments to illustrate the validity of the proposed algorithm.},
+  file        = {:http\://arxiv.org/pdf/2103.12931v1:PDF},
+  keywords    = {math.OC}
+}
+
+@article{He2021b,
+  author      = {Xin He and Rong Hu and Ya-Ping Fang},
+  date        = {2021-03-24},
+  title       = {Inertial primal-dual methods for linear equality constrained convex optimization problems},
+  eprint      = {2103.12937},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {Inspired by a second-order primal-dual dynamical system [Zeng X, Lei J, Chen J. Dynamical primal-dual accelerated method with applications to network optimization. 2019; arXiv:1912.03690], we propose an inertial primal-dual method for the linear equality constrained convex optimization problem. When the objective function has a "nonsmooth + smooth" composite structure, we further propose an inexact inertial primal-dual method by linearizing the smooth individual function and solving the subproblem inexactly. Assuming merely convexity, we prove that the proposed methods enjoy $\mathcal{O}(1/k^2)$ convergence rate on $\mathcal{L}(x_k,\lambda^*)-\mathcal{L}(x^*,\lambda^*)$ and $\mathcal{O}(1/k)$ convergence rate on primal feasibility, where $\mathcal{L}$ is the Lagrangian function and $(x^*,\lambda^*)$ is a saddle point of $\mathcal{L}$. Numerical results are reported to demonstrate the validity of the proposed methods.},
+  file        = {:http\://arxiv.org/pdf/2103.12937v1:PDF},
+  keywords    = {math.OC}
+}
+
+@article{Nickolay2021,
+  author      = {Sam Nickolay and Eun-Sung Jung and Rajkumar Kettimuthu and Ian Foster},
+  date        = {2021-03-24},
+  title       = {Towards Accommodating Real-time Jobs on HPC Platforms},
+  eprint      = {2103.13130},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {Increasing data volumes in scientific experiments necessitate the use of high-performance computing (HPC) resources for data analysis. In many scientific fields, the data generated from scientific instruments and supercomputer simulations must be analyzed rapidly. In fact, the requirement for quasi-instant feedback is growing. Scientists want to use results from one experiment to guide the selection of the next or even to improve the course of a single experiment. Current HPC systems are typically batch-scheduled under policies in which an arriving job is run immediately only if enough resources are available; otherwise, it is queued. It is hard for these systems to support real-time jobs. Real-time jobs, in order to meet their requirements, should sometimes have to preempt batch jobs and/or be scheduled ahead of batch jobs that were submitted earlier. Accommodating real-time jobs may negatively impact system utilization also, especially when preemption/restart of batch jobs is involved. We first explore several existing scheduling strategies to make real-time jobs more likely to be scheduled in due time. We then rigorously formulate the problem as a mixed-integer linear programming for offline scheduling and develop novel scheduling heuristics for online scheduling. We perform simulation studies using trace logs of Mira, the IBM BG/Q system at Argonne National Laboratory, to quantify the impact of real-time jobs on batch job performance for various percentages of real-time jobs in the workload. We present new insights gained from grouping jobs into different categories based on runtime and the number of nodes used and studying the performance of each category. Our results show that with 10\% real-time job percentages, just-in-time checkpointing combined with our heuristic can improve the slowdowns of real-time jobs by 35\% while limiting the increase of the slowdowns of batch jobs to 10\%.},
+  file        = {:http\://arxiv.org/pdf/2103.13130v1:PDF},
+  keywords    = {cs.DC}
+}
+
+@inproceedings{Aldinucci2021,
+  author    = {Aldinucci, Marco and Agosta, Giovanni and Andreini, Antonio and Ardagna, Claudio A. and Bartolini, Andrea and Cilardo, Alessandro and Cosenza, Biagio and Danelutto, Marco and Esposito, Roberto and Fornaciari, William and Giorgi, Roberto and Lengani, Davide and Montella, Raffaele and Olivieri, Mauro and Saponara, Sergio},
+  booktitle = {Proceedings of the 2021 ACM International Conference on Computing Frontier},
+  date      = {2021},
+  title     = {The Italian research on HPC key technologies across EuroHPC},
+  doi       = {10.1145/3457388.3458508},
+  isbn      = {978-1-4503-8404-9},
+  pages     = {1--7},
+  series    = {CF 2021},
+  abstract  = {High-Performance Computing (HPC) is one of the strategic priorities for research and innovation worldwide due to its relevance for industrial and scientific applications. We envision HPC as composed of three pillars: infrastructures, applications, and key technologies and tools. While infrastructures are by construction centralized in large-scale HPC centers, and applications are generally within the purview of domain-specific organizations, key technologies fall in an intermediate case where coordination is needed, but design and development are often decentralized. A large group of Italian researchers has started a dedicated laboratory within the National Interuniversity Consortium for Informatics (CINI) to address this challenge. The laboratory, albeit young, has managed to succeed in its first attempts to propose a coordinated approach to HPC research within the EuroHPC Joint Undertaking, participating in the calls 2019-20 to five successful proposals for an aggregate total cost of 95M Euro. In this paper, we outline the working group's scope and goals and provide an overview of the five funded projects, which become fully operational in March 2021, and cover a selection of key technologies provided by the working group partners, highlighting their usage development within the projects.}
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
