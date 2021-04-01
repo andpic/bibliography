@@ -15612,6 +15612,16 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   abstract  = {High-Performance Computing (HPC) is one of the strategic priorities for research and innovation worldwide due to its relevance for industrial and scientific applications. We envision HPC as composed of three pillars: infrastructures, applications, and key technologies and tools. While infrastructures are by construction centralized in large-scale HPC centers, and applications are generally within the purview of domain-specific organizations, key technologies fall in an intermediate case where coordination is needed, but design and development are often decentralized. A large group of Italian researchers has started a dedicated laboratory within the National Interuniversity Consortium for Informatics (CINI) to address this challenge. The laboratory, albeit young, has managed to succeed in its first attempts to propose a coordinated approach to HPC research within the EuroHPC Joint Undertaking, participating in the calls 2019-20 to five successful proposals for an aggregate total cost of 95M Euro. In this paper, we outline the working group's scope and goals and provide an overview of the five funded projects, which become fully operational in March 2021, and cover a selection of key technologies provided by the working group partners, highlighting their usage development within the projects.}
 }
 
+@Article{JuezGil2021,
+  author       = {Mario Juez-Gil and {\'{A}}lvar Arnaiz-Gonz{\'{a}}lez and Juan J. Rodr{\'{\i}}guez and Carlos L{\'{o}}pez-Nozal and C{\'{e}}sar Garc{\'{\i}}a-Osorio},
+  date         = {2021-03},
+  journaltitle = {Information Fusion},
+  title        = {Rotation Forest for Big Data},
+  doi          = {10.1016/j.inffus.2021.03.007},
+  abstract     = {The Rotation Forest classifier is a successful ensemble method for a wide variety of data mining applications. However, the way in which Rotation Forest transforms the feature space through PCA, although powerful, penalizes training and prediction times, making it unfeasible for Big Data. In this paper, a MapReduce Rotation Forest and its implementation under the Spark framework are presented. The proposed MapReduce Rotation Forest behaves in the same way as the standard Rotation Forest, training the base classifiers on a rotated space, but using a functional implementation of the rotation that enables its execution in Big Data frameworks. Experimental results are obtained using different cloud-based cluster configurations. Bayesian tests are used to validate the method against two ensembles for Big Data: Random Forest and PCARDE classifiers. Our proposal incorporates the parallelization of both the PCA calculation and the tree training, providing a scalable solution that retains the performance of the original Rotation Forest and achieves a competitive execution time (in average, at training, more than 3 times faster than other PCA-based alternatives). In addition, extensive experimentation shows that by setting some parameters of the classifier (i.e., bootstrap sample size, number of trees, and number of rotations), the execution time is reduced with no significant loss of performance using a small ensemble.},
+  publisher    = {Elsevier {BV}},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
