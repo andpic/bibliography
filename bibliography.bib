@@ -15622,6 +15622,75 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   publisher    = {Elsevier {BV}},
 }
 
+@Article{Li2021b,
+  author       = {Yaguang Li and Wei Xu and Xin Gao},
+  date         = {2021-01},
+  journaltitle = {Electronic Journal of Statistics},
+  title        = {Graphical-model based high dimensional generalized linear models},
+  doi          = {10.1214/21-ejs1831},
+  number       = {1},
+  volume       = {15},
+  abstract     = {We consider the problem of both prediction and model selection in high dimensional generalized linear models. Predictive performance can be improved by leveraging structure information among predictors. In this paper, a graphic model-based doubly sparse regularized estimator is discussed under the high dimensional generalized linear models, that utilizes the graph structure among the predictors. The graphic information among predictors is incorporated node-by-node using a decomposed representation and the sparsity is encouraged both within and between the decomposed components. We propose an efficient iterative proximal algorithm to solve the optimization problem. Statistical convergence rates and selection consistency for the doubly sparse regularized estimator are established in the ultra-high dimensional setting. Specifically, we allow the dimensionality grows exponentially with the sample size. We compare the estimator with existing methods through numerical analysis on both simulation study and a microbiome data analysis.},
+  publisher    = {Institute of Mathematical Statistics},
+}
+
+@Article{Petelin2021,
+  author       = {Ga{\v{s}}per Petelin and Margarita Antoniou and Gregor Papa},
+  date         = {2021-03},
+  journaltitle = {Optimization and Engineering},
+  title        = {Multi-objective approaches to ground station scheduling for optimization of communication with satellites},
+  doi          = {10.1007/s11081-021-09617-z},
+  abstract     = {The ground station scheduling problem is a complex scheduling problem involving multiple objectives. Evolutionary techniques for multi-objective optimization are becoming popular among different fields, due to their effectiveness in obtaining a set of trade-off solutions. In contrast to some conventional methods, that aggregate the objectives into one weighted-sum objective function, multi-objective evolutionary algorithms manage to find a set of solutions in the Pareto-optimal front. Selecting one algorithm, however, for a specific problem adds additional challenge. In this paper the ground station scheduling problem was solved through six different evolutionary multi-objective algorithms, the NSGA-II, NSGA-III, SPEA2, GDE3, IBEA, and MOEA/D. The goal is to test their efficacy and performance to a number of benchmark static instances of the ground scheduling problem. Benchmark instances are of different sizes, allowing further testing of the behavior of the algorithms to different dimensionality of the problem. The solutions are compared to the recent solutions of a weighted-sum approach solved by the GA. The results show that all multi-objective algorithms manage to find as good solution as the weighted-sum, while giving more additional alternatives. The decomposition-based MOEA/D outperforms the rest of the algorithms for the specific problem in almost all aspects.},
+  publisher    = {Springer Science and Business Media {LLC}},
+}
+
+@Article{Gabow2021,
+  author       = {Harold N. Gabow and Piotr Sankowski},
+  date         = {2021-01},
+  journaltitle = {{SIAM} Journal on Computing},
+  title        = {Algorithms for Weighted Matching Generalizations I: Bipartite Graphs, b-matching, and Unweighted f-factors},
+  doi          = {10.1137/16m1106195},
+  number       = {2},
+  pages        = {440--486},
+  volume       = {50},
+  abstract     = {Let $G=(V,E)$ be a weighted graph or multigraph, with $f$ or $b$ a function assigning a nonnegative integer to each vertex. An $f$-factor is a subgraph whose degree function is $f$; a perfect $b$-matching is a $b$-factor in the graph formed from $G$ by adding an unlimited number of copies of each edge. This two-part paper culminates in an efficient algebraic algorithm to find a maximum $f$-factor, i.e., $f$-factor with maximum weight. Along the way it presents simpler special cases of interest. Part II presents the maximum $f$-factor algorithm and the special case of shortest paths in conservative undirected graphs (negative edges allowed). Part I presents these results: An algebraic algorithm for maximum $b$-matching, i.e., maximum weight $b$-matching. It is almost identical to its special case $b\equiv 1$, ordinary weighted matching. The time is $O(Wb(V)^{\omega})$ for $W$ the maximum magnitude of an edge weight, $b(V)=\sum_{v\in V} b(v)$, and $\omega<2.373$ the exponent of matrix multiplication. An algebraic algorithm to find an $f$-factor. The time is $O(f(V)^{\omega})$ for $f(V)=\sum_{v\in V} f(v)$. The specialization of the $f$-factor algorithm to bipartite graphs and its extension to maximum/minimum bipartite $f$-factors. This improves the known complexity bounds for vertex capacitated max-flow and min-cost max-flow on a subclass of graphs. Each algorithm is randomized and has two versions achieving the above time bound: For worst-case time the algorithm is correct with high probability. For expected time the algorithm is Las Vegas.},
+  publisher    = {Society for Industrial {\&} Applied Mathematics ({SIAM})},
+}
+
+@Article{Dauzickaite2021,
+  author    = {Ieva Dauzickaite and Amos Lawless and Jennifer Scott and Peter Jan van Leeuwen},
+  date      = {2021-03},
+  title     = {Randomised preconditioning for the forcing formulation of weak constraint 4D-Var},
+  doi       = {10.5194/egusphere-egu21-4414},
+  abstract  = {There is growing awareness that errors in the model equations cannot be ignored in data assimilation methods such as four-dimensional variational assimilation (4D-Var). If allowed for, more information can be extracted from observations, longer time windows are possible, and the minimization process is easier, at least in principle. Weak constraint 4D-Var estimates the model error and minimizes a series of linear least-squares cost functions using the conjugate gradient (CG) method; minimising each cost function is called an inner loop. CG needs preconditioning to improve its performance. In previous work, limited memory preconditioners (LMPs) have been constructed using approximations of the eigenvalues and eigenvectors of the Hessian in the previous inner loop. If the Hessian changes signicantly in consecutive inner loops, the LMP may be of limited usefulness. To circumvent this, we propose using randomised methods for low rank eigenvalue decomposition and use these approximations to cheaply construct LMPs using information from the current inner loop. Three randomised methods are compared. Numerical experiments in idealized systems show that the resulting LMPs perform better than the existing LMPs. Using these methods may allow more efficient and robust implementations of incremental weak constraint 4D-Var.},
+  publisher = {Copernicus {GmbH}},
+}
+
+@Article{Kepner2021,
+  author      = {Jeremy Kepner and Timothy Davis and Vijay Gadepally and Hayden Jananthan and Lauren Milechin},
+  date        = {2021-03-28},
+  title       = {Mathematics of Digital Hyperspace},
+  eprint      = {2103.15203},
+  eprintclass = {cs.MS},
+  eprinttype  = {arXiv},
+  abstract    = {Social media, e-commerce, streaming video, e-mail, cloud documents, web pages, traffic flows, and network packets fill vast digital lakes, rivers, and oceans that we each navigate daily. This digital hyperspace is an amorphous flow of data supported by continuous streams that stretch standard concepts of type and dimension. The unstructured data of digital hyperspace can be elegantly represented, traversed, and transformed via the mathematics of hypergraphs, hypersparse matrices, and associative array algebra. This paper explores a novel mathematical concept, the semilink, that combines pairs of semirings to provide the essential operations for graph analytics, database operations, and machine learning. The GraphBLAS standard currently supports hypergraphs, hypersparse matrices, the mathematics required for semilinks, and seamlessly performs graph, network, and matrix operations. With the addition of key based indices (such as pointers to strings) and semilinks, GraphBLAS can become a richer associative array algebra and be a plug-in replacement for spreadsheets, database tables, and data centric operating systems, enhancing the navigation of unstructured data found in digital hyperspace.},
+  file        = {:http\://arxiv.org/pdf/2103.15203v1:PDF},
+  keywords    = {cs.MS, cs.DB, cs.DM, cs.NE, math.RA},
+}
+
+@Article{Aravkin2021,
+  author      = {Aleksandr Y. Aravkin and Robert Baraldi and Dominique Orban},
+  date        = {2021-03-29},
+  title       = {A Proximal Quasi-Newton Trust-Region Method for Nonsmooth Regularized Optimization},
+  doi         = {10.13140/RG.2.2.18509.15845},
+  eprint      = {2103.15993},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {We develop a trust-region method for minimizing the sum of a smooth term $f$ and a nonsmooth term $h$, both of which can be nonconvex. Each iteration of our method minimizes a possibly nonconvex model of $f + h$ in a trust region. The model coincides with $f + h$ in value and subdifferential at the center. We establish global convergence to a first-order stationary point when $f$ satisfies a smoothness condition that holds, in particular, when it has Lipschitz-continuous gradient, and $h$ is proper and lower semi-continuous. The model of $h$ is required to be proper, lower-semi-continuous and prox-bounded. Under these weak assumptions, we establish a worst-case $O(1/\epsilon^2)$ iteration complexity bound that matches the best known complexity bound of standard trust-region methods for smooth optimization. We detail a special instance in which we use a limited-memory quasi-Newton model of $f$ and compute a step with the proximal gradient method, resulting in a practical proximal quasi-Newton method. We establish similar convergence properties and complexity bound for a quadratic regularization variant, and provide an interpretation as a proximal gradient method with adaptive step size for nonconvex problems. We describe our Julia implementations and report numerical results on inverse problems from sparse optimization and signal processing. Our trust-region algorithm exhibits promising performance and compares favorably with linesearch proximal quasi-Newton methods based on convex models.},
+  file        = {:http\://arxiv.org/pdf/2103.15993v1:PDF},
+  keywords    = {math.OC, 49J52, 65K10, 90C53, 90C56},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
