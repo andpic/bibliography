@@ -15691,6 +15691,57 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   keywords    = {math.OC, 49J52, 65K10, 90C53, 90C56},
 }
 
+@Article{Mollaebrahim2021,
+  author       = {Siavash Mollaebrahim and Baltasar Beferull-Lozano},
+  date         = {2021},
+  journaltitle = {{IEEE} Transactions on Signal Processing},
+  title        = {Design of Asymmetric Shift Operators for Efficient Decentralized Subspace Projection},
+  doi          = {10.1109/tsp.2021.3066787},
+  pages        = {1--1},
+  abstract     = {A large number of applications in decentralized signal processing includes projecting a vector of noisy observations onto a subspace dictated by prior information about the field being monitored. Accomplishing such a task in a centralized fashion in networks is prone to a number of issues such as large power consumption, congestion at certain nodes and suffers from robustness issues against possible node failures. Decentralized subspace projection is an alternative method to address those issues. Recently, it has been shown that graph filters (GFs) can be implemented to perform decentralized subspace projection. However, most of the existing methods have focused on designing GFs for symmetric topologies. However, in this paper, motivated by the typical scenario of asymmetric communications in Wireless Sensor Networks, we study the optimal design of graph shift operators to perform decentralized subspace projection for asymmetric topologies. Firstly, the existence of feasible solutions (graph shift operators) to achieve an exact projection is characterized, and then an optimization problem is proposed to obtain the shift operator. We also provide an ADMM-based decentralized algorithm for the design of the shift operator. A necessary condition for the existence of an exact subspace projection solution is also provided in terms of network connectivity. In the case where achieving an exact projection is not feasible due to the sparse connectivity, we provide an efficient solution to compute the projection matrix with high accuracy by using a set of parallel graph filters. Numerical results show the benefits of the proposed methods, as compared to the currently existing state-of-the-art methods.},
+  publisher    = {Institute of Electrical and Electronics Engineers ({IEEE})},
+}
+
+@Article{Huber2021,
+  author       = {Dominik Huber and Martin Schreiber and Martin Schulz},
+  date         = {2021-04},
+  journaltitle = {Journal of Computational Science},
+  title        = {Graph-based multi-core higher-order time integration of linear autonomous partial differential equations},
+  doi          = {10.1016/j.jocs.2021.101349},
+  abstract     = {Modern high-performance computing (HPC) systems rely on increasingly complex nodes with a steadily growing number of cores and matching deep memory hierarchies. In order to fully exploit them, algorithms must be explicitly designed to exploit these features. In this work we address this challenge for a widely used class of application kernels: polynomial-based time integration of linear autonomous partial differential equations.\\ We build on prior work [1] of a cache-aware, yet sequential solution and provide an innovative way to parallelize it, while addressing cache-awareness across a large number of cores. For this, we introduce a dependency graph driven view of the algorithm and then use both static graph partitioning and dynamic scheduling to efficiently map the execution to the underlying platform. We implement our approach on top of the widely available Intel Threading Building Blocks (TBB) library, although the concepts are programming model agnostic and can apply to any task-driven parallel programming approach.\\ We demonstrate the performance of our approach for a 2-nd, 4-th and 6-th order time integration of the linear advection equation on three different architectures with widely varying memory systems and achieve an up to 60\%  reduction of wall clock time compared to a conventional, state-of-the-art non-cache-aware approach.},
+  publisher    = {Elsevier {BV}},
+}
+
+@Article{Zhang2021,
+  author       = {Feng Zhang and Jiya Su and Weifeng Liu and Bingsheng He and Ruofan Wu and Xiaoyong Du and Rujia Wang},
+  date         = {2021},
+  journaltitle = {{IEEE} Transactions on Parallel and Distributed Systems},
+  title        = {{YuenyeungSpTRSV}: A Thread-Level and Warp-Level Fusion Synchronization-Free Sparse Triangular Solve},
+  doi          = {10.1109/tpds.2021.3066635},
+  abstract     = {Sparse triangular solves are widely used in linear algebra domains. Synchronization-free SpTRSVs, due to their short preprocessing time and high performance, are the most popular SpTRSV algorithms. However, we observe that the performance of those SpTRSVs on different matrices can vary greatly. Our further studies show that when the average number of components per level is high and the average number of nonzero elements per row is low, those SpTRSVs exhibit extremely low performance. The reason is that, they use a warp on the GPU to process a row in sparse matrices, and such warp-level designs have severe underutilization of the GPU. To solve this problem, we propose YuenyeungSpTRSV, a thread-level and wrap-level fusion synchronization-free SpTRSV, which handles the rows with a large number of nonzero elements at warp-level while the rows with a low number of nonzero elements at thread-level. It can achieve good performance on the most popular sparse matrix storage, compressed sparse row format, and thus users do not need to conduct format conversion. We evaluate YuenyeungSpTRSV with 245 matrices from the Florida Sparse Matrix Collection on four platforms, and experiments show that our SpTRSV exhibits 7.14 GFLOPS/s, which is 5.98x speedup over the state-of-the-art synchronization-free SpTRSV.},
+  publisher    = {Institute of Electrical and Electronics Engineers ({IEEE})},
+}
+
+@Article{Liu2021b,
+  author       = {Yang Liu and Xinxin Du and Shuaifeng Ma},
+  date         = {2021-03},
+  journaltitle = {Electronic Commerce Research},
+  title        = {Innovative study on clustering center and distance measurement of K-means algorithm: mapreduce efficient parallel algorithm based on user data of {JD} mall},
+  doi          = {10.1007/s10660-021-09458-z},
+  abstract     = {The traditional K-means algorithm is very sensitive to the selection of clustering centers and the calculation of distances, so the algorithm easily converges to a locally optimal solution. In addition, the traditional algorithm has slow convergence speed and low clustering accuracy, as well as memory bottleneck problems when processing massive data. Therefore, an improved K-means algorithm is proposed in this paper. In this algorithm, the selection of the initial points in the traditional clustering algorithm is improved first, and then a new global measure, the effective distance measure, is proposed. Its main idea is to calculate the effective distance between two data samples by sparse reconstruction. Finally, on the basis of the MapReduce framework, the efficiency of the algorithm is further improved by adjusting the Hadoop cluster. Based on the real customer data from the JD Mall dataset, this paper introduces the DBI, Rand and other indicators to evaluate the clustering effects of various algorithms. The results show that the proposed algorithm not only has good convergence and accuracy but also achieves better performances than those of other compared algorithms.},
+  publisher    = {Springer Science and Business Media {LLC}},
+}
+
+@Article{YiWen2021,
+  author       = {Wei Yi-Wen and Wei-Mei Chen and Hsin-Hung Tsai},
+  date         = {2021},
+  journaltitle = {{IEEE} Transactions on Parallel and Distributed Systems},
+  title        = {Accelerating the Bron-Kerbosch algorithm for maximal clique enumeration using {GPUs}},
+  doi          = {10.1109/tpds.2021.3067053},
+  abstract     = {Maximal clique enumeration (MCE) is a classic problem in graph theory to identify all complete subgraphs in a graph. In prior MCE work, the Bron-Kerbosch algorithm is one of the most popular solutions, and there are several improved algorithms proposed on CPU platforms. However, while few studies have focused on the related issue of parallel implementation, recently, there have been numerous explorations of the acceleration of general purpose applications using a graphics processing unit (GPU) to reduce the computing power consumption. In this paper, we develop a GPU-based Bron-Kerbosch algorithm that efficiently solves the MCE problem in parallel by optimizing the process of subproblem decomposition and computing resource usage. To speed up the computations, we use coalesced memory accesses and warp reductions to increase bandwidth and reduce memory latency. Our experimental results show that the proposed algorithm can fully exploit the resources of GPU architectures, allowing for the vast acceleration of operations to solve the MCE problem.},
+  publisher    = {Institute of Electrical and Electronics Engineers ({IEEE})},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
