@@ -15799,6 +15799,39 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   abstract     = {In today’s world, the applications of convolutional neural networks (CNN) are limitless and are employed in numerous fields. The CNNs get wider and deeper to achieve near-human accuracy. Implementing such networks on resource constrained hardware is a cumbersome task. CNNs need to be optimized both on hardware and algorithmic levels to compress and fit into resource limited devices. This survey aims to investigate different optimization techniques of Vision CNNs, both on algorithmic and hardware level, which would help in efficient hardware implementation, especially for FPGAs.}
 }
 
+@article{Zhai2021,
+  author      = {Yujia Zhai and Elisabeth Giem and Quan Fan and Kai Zhao and Jinyang Liu and Zizhong Chen},
+  date        = {2021-04-02},
+  title       = {FT-BLAS: A High Performance BLAS Implementation With Online Fault Tolerance},
+  doi         = {10.1145/3447818.3460364},
+  eprint      = {2104.00897},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {Basic Linear Algebra Subprograms (BLAS) is a core library in scientific computing and machine learning. This paper presents FT-BLAS, a new implementation of BLAS routines that not only tolerates soft errors on the fly, but also provides comparable performance to modern state-of-the-art BLAS libraries on widely-used processors such as Intel Skylake and Cascade Lake. To accommodate the features of BLAS, which contains both memory-bound and computing-bound routines, we propose a hybrid strategy to incorporate fault tolerance into our brand-new BLAS implementation: duplicating computing instructions for memory-bound Level-1 and Level-2 BLAS routines and incorporating an Algorithm-Based Fault Tolerance mechanism for computing-bound Level-3 BLAS routines. Our high performance and low overhead are obtained from delicate assembly-level optimization and a kernel-fusion approach to the computing kernels. Experimental results demonstrate that FT-BLAS offers high reliability and high performance -- faster than Intel MKL, OpenBLAS, and BLIS by up to 3.50\%, 22.14\% and 21.70\%, respectively, for routines spanning all three levels of BLAS we benchmarked, even under hundreds of errors injected per minute.},
+  file        = {:http\://arxiv.org/pdf/2104.00897v3:PDF},
+  keywords    = {cs.DC, cs.PF}
+}
+
+@article{Szarnyas2021,
+  author      = {Gábor Szárnyas and David A. Bader and Timothy A. Davis and James Kitchen and Timothy G. Mattson and Scott McMillan and Erik Welch},
+  date        = {2021-04-04},
+  title       = {LAGraph: Linear Algebra, Network Analysis Libraries, and the Study of Graph Algorithms},
+  eprint      = {2104.01661},
+  eprintclass = {cs.MS},
+  eprinttype  = {arXiv},
+  abstract    = {Graph algorithms can be expressed in terms of linear algebra. GraphBLAS is a library of low-level building blocks for such algorithms that targets algorithm developers. LAGraph builds on top of the GraphBLAS to target users of graph algorithms with high-level algorithms common in network analysis. In this paper, we describe the first release of the LAGraph library, the design decisions behind the library, and performance using the GAP benchmark suite. LAGraph, however, is much more than a library. It is also a project to document and analyze the full range of algorithms enabled by the GraphBLAS. To that end, we have developed a compact and intuitive notation for describing these algorithms. In this paper, we present that notation with examples from the GAP benchmark suite.},
+  file        = {:http\://arxiv.org/pdf/2104.01661v1:PDF},
+  keywords    = {cs.MS, cs.DS}
+}
+
+@article{Birgin2021,
+  author   = {E. G. Birgin and J. M. Mart´ınez},
+  date     = {2021},
+  title    = {Accelerated derivative-free nonlinear least-squaresapplied to the estimation of Manning coefficients},
+  url      = {https://www.ime.usp.br/~egbirgin/publications/bmsesem.pdf},
+  abstract = {A general framework for solving nonlinear least squares problems without the employment of derivatives is proposed in the present paper together with a new general global convergence theory. With the aim to cope with the case in which the number of variables is big (for the standards of derivative-free optimization), two dimension-reduction procedures are introduced. One of them is based on iterative subspace minimization and the other one is based on spline interpolation with variable nodes. Each iteration based on those procedures is followed by an acceleration step inspired in the Sequential Secant Method. The practical motivation for this work is the estimation of parameters in Hydraulic models applied to dam breaking problems. Numerical examples of the application of the new method to those problems are given.}
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
