@@ -15612,17 +15612,17 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   abstract  = {High-Performance Computing (HPC) is one of the strategic priorities for research and innovation worldwide due to its relevance for industrial and scientific applications. We envision HPC as composed of three pillars: infrastructures, applications, and key technologies and tools. While infrastructures are by construction centralized in large-scale HPC centers, and applications are generally within the purview of domain-specific organizations, key technologies fall in an intermediate case where coordination is needed, but design and development are often decentralized. A large group of Italian researchers has started a dedicated laboratory within the National Interuniversity Consortium for Informatics (CINI) to address this challenge. The laboratory, albeit young, has managed to succeed in its first attempts to propose a coordinated approach to HPC research within the EuroHPC Joint Undertaking, participating in the calls 2019-20 to five successful proposals for an aggregate total cost of 95M Euro. In this paper, we outline the working group's scope and goals and provide an overview of the five funded projects, which become fully operational in March 2021, and cover a selection of key technologies provided by the working group partners, highlighting their usage development within the projects.}
 }
 
-@Article{JuezGil2021,
+@article{JuezGil2021,
   author       = {Mario Juez-Gil and {\'{A}}lvar Arnaiz-Gonz{\'{a}}lez and Juan J. Rodr{\'{\i}}guez and Carlos L{\'{o}}pez-Nozal and C{\'{e}}sar Garc{\'{\i}}a-Osorio},
   date         = {2021-03},
   journaltitle = {Information Fusion},
   title        = {Rotation Forest for Big Data},
   doi          = {10.1016/j.inffus.2021.03.007},
   abstract     = {The Rotation Forest classifier is a successful ensemble method for a wide variety of data mining applications. However, the way in which Rotation Forest transforms the feature space through PCA, although powerful, penalizes training and prediction times, making it unfeasible for Big Data. In this paper, a MapReduce Rotation Forest and its implementation under the Spark framework are presented. The proposed MapReduce Rotation Forest behaves in the same way as the standard Rotation Forest, training the base classifiers on a rotated space, but using a functional implementation of the rotation that enables its execution in Big Data frameworks. Experimental results are obtained using different cloud-based cluster configurations. Bayesian tests are used to validate the method against two ensembles for Big Data: Random Forest and PCARDE classifiers. Our proposal incorporates the parallelization of both the PCA calculation and the tree training, providing a scalable solution that retains the performance of the original Rotation Forest and achieves a competitive execution time (in average, at training, more than 3 times faster than other PCA-based alternatives). In addition, extensive experimentation shows that by setting some parameters of the classifier (i.e., bootstrap sample size, number of trees, and number of rotations), the execution time is reduced with no significant loss of performance using a small ensemble.},
-  publisher    = {Elsevier {BV}},
+  publisher    = {Elsevier {BV}}
 }
 
-@Article{Li2021b,
+@article{Li2021b,
   author       = {Yaguang Li and Wei Xu and Xin Gao},
   date         = {2021-01},
   journaltitle = {Electronic Journal of Statistics},
@@ -15631,20 +15631,20 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   number       = {1},
   volume       = {15},
   abstract     = {We consider the problem of both prediction and model selection in high dimensional generalized linear models. Predictive performance can be improved by leveraging structure information among predictors. In this paper, a graphic model-based doubly sparse regularized estimator is discussed under the high dimensional generalized linear models, that utilizes the graph structure among the predictors. The graphic information among predictors is incorporated node-by-node using a decomposed representation and the sparsity is encouraged both within and between the decomposed components. We propose an efficient iterative proximal algorithm to solve the optimization problem. Statistical convergence rates and selection consistency for the doubly sparse regularized estimator are established in the ultra-high dimensional setting. Specifically, we allow the dimensionality grows exponentially with the sample size. We compare the estimator with existing methods through numerical analysis on both simulation study and a microbiome data analysis.},
-  publisher    = {Institute of Mathematical Statistics},
+  publisher    = {Institute of Mathematical Statistics}
 }
 
-@Article{Petelin2021,
+@article{Petelin2021,
   author       = {Ga{\v{s}}per Petelin and Margarita Antoniou and Gregor Papa},
   date         = {2021-03},
   journaltitle = {Optimization and Engineering},
   title        = {Multi-objective approaches to ground station scheduling for optimization of communication with satellites},
   doi          = {10.1007/s11081-021-09617-z},
   abstract     = {The ground station scheduling problem is a complex scheduling problem involving multiple objectives. Evolutionary techniques for multi-objective optimization are becoming popular among different fields, due to their effectiveness in obtaining a set of trade-off solutions. In contrast to some conventional methods, that aggregate the objectives into one weighted-sum objective function, multi-objective evolutionary algorithms manage to find a set of solutions in the Pareto-optimal front. Selecting one algorithm, however, for a specific problem adds additional challenge. In this paper the ground station scheduling problem was solved through six different evolutionary multi-objective algorithms, the NSGA-II, NSGA-III, SPEA2, GDE3, IBEA, and MOEA/D. The goal is to test their efficacy and performance to a number of benchmark static instances of the ground scheduling problem. Benchmark instances are of different sizes, allowing further testing of the behavior of the algorithms to different dimensionality of the problem. The solutions are compared to the recent solutions of a weighted-sum approach solved by the GA. The results show that all multi-objective algorithms manage to find as good solution as the weighted-sum, while giving more additional alternatives. The decomposition-based MOEA/D outperforms the rest of the algorithms for the specific problem in almost all aspects.},
-  publisher    = {Springer Science and Business Media {LLC}},
+  publisher    = {Springer Science and Business Media {LLC}}
 }
 
-@Article{Gabow2021,
+@article{Gabow2021,
   author       = {Harold N. Gabow and Piotr Sankowski},
   date         = {2021-01},
   journaltitle = {{SIAM} Journal on Computing},
@@ -15654,19 +15654,19 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   pages        = {440--486},
   volume       = {50},
   abstract     = {Let $G=(V,E)$ be a weighted graph or multigraph, with $f$ or $b$ a function assigning a nonnegative integer to each vertex. An $f$-factor is a subgraph whose degree function is $f$; a perfect $b$-matching is a $b$-factor in the graph formed from $G$ by adding an unlimited number of copies of each edge. This two-part paper culminates in an efficient algebraic algorithm to find a maximum $f$-factor, i.e., $f$-factor with maximum weight. Along the way it presents simpler special cases of interest. Part II presents the maximum $f$-factor algorithm and the special case of shortest paths in conservative undirected graphs (negative edges allowed). Part I presents these results: An algebraic algorithm for maximum $b$-matching, i.e., maximum weight $b$-matching. It is almost identical to its special case $b\equiv 1$, ordinary weighted matching. The time is $O(Wb(V)^{\omega})$ for $W$ the maximum magnitude of an edge weight, $b(V)=\sum_{v\in V} b(v)$, and $\omega<2.373$ the exponent of matrix multiplication. An algebraic algorithm to find an $f$-factor. The time is $O(f(V)^{\omega})$ for $f(V)=\sum_{v\in V} f(v)$. The specialization of the $f$-factor algorithm to bipartite graphs and its extension to maximum/minimum bipartite $f$-factors. This improves the known complexity bounds for vertex capacitated max-flow and min-cost max-flow on a subclass of graphs. Each algorithm is randomized and has two versions achieving the above time bound: For worst-case time the algorithm is correct with high probability. For expected time the algorithm is Las Vegas.},
-  publisher    = {Society for Industrial {\&} Applied Mathematics ({SIAM})},
+  publisher    = {Society for Industrial {\&} Applied Mathematics ({SIAM})}
 }
 
-@Article{Dauzickaite2021,
+@article{Dauzickaite2021,
   author    = {Ieva Dauzickaite and Amos Lawless and Jennifer Scott and Peter Jan van Leeuwen},
   date      = {2021-03},
   title     = {Randomised preconditioning for the forcing formulation of weak constraint 4D-Var},
   doi       = {10.5194/egusphere-egu21-4414},
   abstract  = {There is growing awareness that errors in the model equations cannot be ignored in data assimilation methods such as four-dimensional variational assimilation (4D-Var). If allowed for, more information can be extracted from observations, longer time windows are possible, and the minimization process is easier, at least in principle. Weak constraint 4D-Var estimates the model error and minimizes a series of linear least-squares cost functions using the conjugate gradient (CG) method; minimising each cost function is called an inner loop. CG needs preconditioning to improve its performance. In previous work, limited memory preconditioners (LMPs) have been constructed using approximations of the eigenvalues and eigenvectors of the Hessian in the previous inner loop. If the Hessian changes signicantly in consecutive inner loops, the LMP may be of limited usefulness. To circumvent this, we propose using randomised methods for low rank eigenvalue decomposition and use these approximations to cheaply construct LMPs using information from the current inner loop. Three randomised methods are compared. Numerical experiments in idealized systems show that the resulting LMPs perform better than the existing LMPs. Using these methods may allow more efficient and robust implementations of incremental weak constraint 4D-Var.},
-  publisher = {Copernicus {GmbH}},
+  publisher = {Copernicus {GmbH}}
 }
 
-@Article{Kepner2021,
+@article{Kepner2021,
   author      = {Jeremy Kepner and Timothy Davis and Vijay Gadepally and Hayden Jananthan and Lauren Milechin},
   date        = {2021-03-28},
   title       = {Mathematics of Digital Hyperspace},
@@ -15675,10 +15675,10 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   eprinttype  = {arXiv},
   abstract    = {Social media, e-commerce, streaming video, e-mail, cloud documents, web pages, traffic flows, and network packets fill vast digital lakes, rivers, and oceans that we each navigate daily. This digital hyperspace is an amorphous flow of data supported by continuous streams that stretch standard concepts of type and dimension. The unstructured data of digital hyperspace can be elegantly represented, traversed, and transformed via the mathematics of hypergraphs, hypersparse matrices, and associative array algebra. This paper explores a novel mathematical concept, the semilink, that combines pairs of semirings to provide the essential operations for graph analytics, database operations, and machine learning. The GraphBLAS standard currently supports hypergraphs, hypersparse matrices, the mathematics required for semilinks, and seamlessly performs graph, network, and matrix operations. With the addition of key based indices (such as pointers to strings) and semilinks, GraphBLAS can become a richer associative array algebra and be a plug-in replacement for spreadsheets, database tables, and data centric operating systems, enhancing the navigation of unstructured data found in digital hyperspace.},
   file        = {:http\://arxiv.org/pdf/2103.15203v1:PDF},
-  keywords    = {cs.MS, cs.DB, cs.DM, cs.NE, math.RA},
+  keywords    = {cs.MS, cs.DB, cs.DM, cs.NE, math.RA}
 }
 
-@Article{Aravkin2021,
+@article{Aravkin2021,
   author      = {Aleksandr Y. Aravkin and Robert Baraldi and Dominique Orban},
   date        = {2021-03-29},
   title       = {A Proximal Quasi-Newton Trust-Region Method for Nonsmooth Regularized Optimization},
@@ -15688,10 +15688,10 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   eprinttype  = {arXiv},
   abstract    = {We develop a trust-region method for minimizing the sum of a smooth term $f$ and a nonsmooth term $h$, both of which can be nonconvex. Each iteration of our method minimizes a possibly nonconvex model of $f + h$ in a trust region. The model coincides with $f + h$ in value and subdifferential at the center. We establish global convergence to a first-order stationary point when $f$ satisfies a smoothness condition that holds, in particular, when it has Lipschitz-continuous gradient, and $h$ is proper and lower semi-continuous. The model of $h$ is required to be proper, lower-semi-continuous and prox-bounded. Under these weak assumptions, we establish a worst-case $O(1/\epsilon^2)$ iteration complexity bound that matches the best known complexity bound of standard trust-region methods for smooth optimization. We detail a special instance in which we use a limited-memory quasi-Newton model of $f$ and compute a step with the proximal gradient method, resulting in a practical proximal quasi-Newton method. We establish similar convergence properties and complexity bound for a quadratic regularization variant, and provide an interpretation as a proximal gradient method with adaptive step size for nonconvex problems. We describe our Julia implementations and report numerical results on inverse problems from sparse optimization and signal processing. Our trust-region algorithm exhibits promising performance and compares favorably with linesearch proximal quasi-Newton methods based on convex models.},
   file        = {:http\://arxiv.org/pdf/2103.15993v1:PDF},
-  keywords    = {math.OC, 49J52, 65K10, 90C53, 90C56},
+  keywords    = {math.OC, 49J52, 65K10, 90C53, 90C56}
 }
 
-@Article{Mollaebrahim2021,
+@article{Mollaebrahim2021,
   author       = {Siavash Mollaebrahim and Baltasar Beferull-Lozano},
   date         = {2021},
   journaltitle = {{IEEE} Transactions on Signal Processing},
@@ -15699,47 +15699,104 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   doi          = {10.1109/tsp.2021.3066787},
   pages        = {1--1},
   abstract     = {A large number of applications in decentralized signal processing includes projecting a vector of noisy observations onto a subspace dictated by prior information about the field being monitored. Accomplishing such a task in a centralized fashion in networks is prone to a number of issues such as large power consumption, congestion at certain nodes and suffers from robustness issues against possible node failures. Decentralized subspace projection is an alternative method to address those issues. Recently, it has been shown that graph filters (GFs) can be implemented to perform decentralized subspace projection. However, most of the existing methods have focused on designing GFs for symmetric topologies. However, in this paper, motivated by the typical scenario of asymmetric communications in Wireless Sensor Networks, we study the optimal design of graph shift operators to perform decentralized subspace projection for asymmetric topologies. Firstly, the existence of feasible solutions (graph shift operators) to achieve an exact projection is characterized, and then an optimization problem is proposed to obtain the shift operator. We also provide an ADMM-based decentralized algorithm for the design of the shift operator. A necessary condition for the existence of an exact subspace projection solution is also provided in terms of network connectivity. In the case where achieving an exact projection is not feasible due to the sparse connectivity, we provide an efficient solution to compute the projection matrix with high accuracy by using a set of parallel graph filters. Numerical results show the benefits of the proposed methods, as compared to the currently existing state-of-the-art methods.},
-  publisher    = {Institute of Electrical and Electronics Engineers ({IEEE})},
+  publisher    = {Institute of Electrical and Electronics Engineers ({IEEE})}
 }
 
-@Article{Huber2021,
+@article{Huber2021,
   author       = {Dominik Huber and Martin Schreiber and Martin Schulz},
   date         = {2021-04},
   journaltitle = {Journal of Computational Science},
   title        = {Graph-based multi-core higher-order time integration of linear autonomous partial differential equations},
   doi          = {10.1016/j.jocs.2021.101349},
   abstract     = {Modern high-performance computing (HPC) systems rely on increasingly complex nodes with a steadily growing number of cores and matching deep memory hierarchies. In order to fully exploit them, algorithms must be explicitly designed to exploit these features. In this work we address this challenge for a widely used class of application kernels: polynomial-based time integration of linear autonomous partial differential equations.\\ We build on prior work [1] of a cache-aware, yet sequential solution and provide an innovative way to parallelize it, while addressing cache-awareness across a large number of cores. For this, we introduce a dependency graph driven view of the algorithm and then use both static graph partitioning and dynamic scheduling to efficiently map the execution to the underlying platform. We implement our approach on top of the widely available Intel Threading Building Blocks (TBB) library, although the concepts are programming model agnostic and can apply to any task-driven parallel programming approach.\\ We demonstrate the performance of our approach for a 2-nd, 4-th and 6-th order time integration of the linear advection equation on three different architectures with widely varying memory systems and achieve an up to 60\%  reduction of wall clock time compared to a conventional, state-of-the-art non-cache-aware approach.},
-  publisher    = {Elsevier {BV}},
+  publisher    = {Elsevier {BV}}
 }
 
-@Article{Zhang2021,
+@article{Zhang2021,
   author       = {Feng Zhang and Jiya Su and Weifeng Liu and Bingsheng He and Ruofan Wu and Xiaoyong Du and Rujia Wang},
   date         = {2021},
   journaltitle = {{IEEE} Transactions on Parallel and Distributed Systems},
   title        = {{YuenyeungSpTRSV}: A Thread-Level and Warp-Level Fusion Synchronization-Free Sparse Triangular Solve},
   doi          = {10.1109/tpds.2021.3066635},
   abstract     = {Sparse triangular solves are widely used in linear algebra domains. Synchronization-free SpTRSVs, due to their short preprocessing time and high performance, are the most popular SpTRSV algorithms. However, we observe that the performance of those SpTRSVs on different matrices can vary greatly. Our further studies show that when the average number of components per level is high and the average number of nonzero elements per row is low, those SpTRSVs exhibit extremely low performance. The reason is that, they use a warp on the GPU to process a row in sparse matrices, and such warp-level designs have severe underutilization of the GPU. To solve this problem, we propose YuenyeungSpTRSV, a thread-level and wrap-level fusion synchronization-free SpTRSV, which handles the rows with a large number of nonzero elements at warp-level while the rows with a low number of nonzero elements at thread-level. It can achieve good performance on the most popular sparse matrix storage, compressed sparse row format, and thus users do not need to conduct format conversion. We evaluate YuenyeungSpTRSV with 245 matrices from the Florida Sparse Matrix Collection on four platforms, and experiments show that our SpTRSV exhibits 7.14 GFLOPS/s, which is 5.98x speedup over the state-of-the-art synchronization-free SpTRSV.},
-  publisher    = {Institute of Electrical and Electronics Engineers ({IEEE})},
+  publisher    = {Institute of Electrical and Electronics Engineers ({IEEE})}
 }
 
-@Article{Liu2021b,
+@article{Liu2021b,
   author       = {Yang Liu and Xinxin Du and Shuaifeng Ma},
   date         = {2021-03},
   journaltitle = {Electronic Commerce Research},
   title        = {Innovative study on clustering center and distance measurement of K-means algorithm: mapreduce efficient parallel algorithm based on user data of {JD} mall},
   doi          = {10.1007/s10660-021-09458-z},
   abstract     = {The traditional K-means algorithm is very sensitive to the selection of clustering centers and the calculation of distances, so the algorithm easily converges to a locally optimal solution. In addition, the traditional algorithm has slow convergence speed and low clustering accuracy, as well as memory bottleneck problems when processing massive data. Therefore, an improved K-means algorithm is proposed in this paper. In this algorithm, the selection of the initial points in the traditional clustering algorithm is improved first, and then a new global measure, the effective distance measure, is proposed. Its main idea is to calculate the effective distance between two data samples by sparse reconstruction. Finally, on the basis of the MapReduce framework, the efficiency of the algorithm is further improved by adjusting the Hadoop cluster. Based on the real customer data from the JD Mall dataset, this paper introduces the DBI, Rand and other indicators to evaluate the clustering effects of various algorithms. The results show that the proposed algorithm not only has good convergence and accuracy but also achieves better performances than those of other compared algorithms.},
-  publisher    = {Springer Science and Business Media {LLC}},
+  publisher    = {Springer Science and Business Media {LLC}}
 }
 
-@Article{YiWen2021,
+@article{YiWen2021,
   author       = {Wei Yi-Wen and Wei-Mei Chen and Hsin-Hung Tsai},
   date         = {2021},
   journaltitle = {{IEEE} Transactions on Parallel and Distributed Systems},
   title        = {Accelerating the Bron-Kerbosch algorithm for maximal clique enumeration using {GPUs}},
   doi          = {10.1109/tpds.2021.3067053},
   abstract     = {Maximal clique enumeration (MCE) is a classic problem in graph theory to identify all complete subgraphs in a graph. In prior MCE work, the Bron-Kerbosch algorithm is one of the most popular solutions, and there are several improved algorithms proposed on CPU platforms. However, while few studies have focused on the related issue of parallel implementation, recently, there have been numerous explorations of the acceleration of general purpose applications using a graphics processing unit (GPU) to reduce the computing power consumption. In this paper, we develop a GPU-based Bron-Kerbosch algorithm that efficiently solves the MCE problem in parallel by optimizing the process of subproblem decomposition and computing resource usage. To speed up the computations, we use coalesced memory accesses and warp reductions to increase bandwidth and reduce memory latency. Our experimental results show that the proposed algorithm can fully exploit the resources of GPU architectures, allowing for the vast acceleration of operations to solve the MCE problem.},
-  publisher    = {Institute of Electrical and Electronics Engineers ({IEEE})},
+  publisher    = {Institute of Electrical and Electronics Engineers ({IEEE})}
+}
+
+@article{Dussault2021,
+  author      = {Jean-Pierre Dussault and Dominique Orban},
+  date        = {2021-03-30},
+  title       = {Scalable adaptive cubic regularization methods},
+  doi         = {10.13140/RG.2.2.18142.15680},
+  eprint      = {2103.16659},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {Adaptive cubic regularization (ARC) methods for unconstrained optimization compute steps from linear systems involving a shifted Hessian in the spirit of the Levenberg-Marquardt and trust-region methods. The standard approach consists in performing an iterative search for the shift akin to solving the secular equation in trust-region methods. Such search requires computing the Cholesky factorization of a tentative shifted Hessian at each iteration, which limits the size of problems that can be reasonably considered. We propose a scalable implementation of ARC named ARCqK in which we solve a set of shifted systems concurrently by way of an appropriate modification of the Lanczos formulation of the conjugate gradient (CG) method. At each iteration of ARCqK to solve a problem with n variables, a range of m << n shift parameters is selected. The computational overhead in CG beyond the Lanczos process is thirteen scalar operations to update five vectors of length m and two n-vector updates for each value of the shift. The CG variant only requires one Hessian-vector product and one dot product per iteration, independently of the number of shift parameters. Solves corresponding to inadequate shift parameters are interrupted early. All shifted systems are solved inexactly. Such modest cost makes our implementation scalable and appropriate for large-scale problems. We provide a new analysis of the inexact ARC method including its worst case evaluation complexity, global and asymptotic convergence. We describe our implementation and provide preliminary numerical observations that confirm that for problems of size at least 100, our implementation of ARCqK is more efficient than a classic Steihaug-Toint trust region method. Finally, we generalize our convergence results to inexact Hessians and nonlinear least-squares problems.},
+  file        = {:http\://arxiv.org/pdf/2103.16659v1:PDF},
+  keywords    = {math.OC, 65F10, 65F22, 65F25, 65F35, 65F50, 90C06, 90C20, 90C30}
+}
+
+@article{Bellavia2021a,
+  author      = {Stefania Bellavia and Gianmarco Gurioli and Benedetta Morini and Philippe L. Toint},
+  date        = {2021-03-30},
+  title       = {Quadratic and Cubic Regularisation Methods with Inexact function and Random Derivatives for Finite-Sum Minimisation},
+  eprint      = {2104.00592},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {This paper focuses on regularisation methods using models up to the third order to search for up to second-order critical points of a finite-sum minimisation problem. The variant presented belongs to the framework of [3]: it employs random models with accuracy guaranteed with a sufficiently large prefixed probability and deterministic inexact function evaluations within a prescribed level of accuracy. Without assuming unbiased estimators, the expected number of iterations is $\mathcal{O}\bigl(\epsilon_1^{-2}\bigr)$ or $\mathcal{O}\bigl(\epsilon_1^{-{3/2}}\bigr)$ when searching for a first-order critical point using a second or third order model, respectively, and of $\mathcal{O}\bigl(\max[\epsilon_1^{-{3/2}},\epsilon_2^{-3}]\bigr)$ when seeking for second-order critical points with a third order model, in which $\epsilon_j$, $j\in\{1,2\}$, is the $j$th-order tolerance. These results match the worst-case optimal complexity for the deterministic counterpart of the method. Preliminary numerical tests for first-order optimality in the context of nonconvex binary classification in imaging, with and without Artifical Neural Networks (ANNs), are presented and discussed.},
+  file        = {:http\://arxiv.org/pdf/2104.00592v2:PDF},
+  keywords    = {math.NA, cs.NA}
+}
+
+@article{BergerVergiat2021,
+  author      = {Luc Berger-Vergiat and Brian Kelley and Sivasankaran Rajamanickam and Jonathan Hu and Katarzyna Swirydowicz and Paul Mullowney and Stephen Thomas and Ichitaro Yamazaki},
+  date        = {2021-04-02},
+  title       = {Two-Stage Gauss--Seidel Preconditioners and Smoothers for Krylov Solvers on a GPU cluster},
+  eprint      = {2104.01196},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {Gauss-Seidel (GS) relaxation is often employed as a preconditioner for a Krylov solver or as a smoother for Algebraic Multigrid (AMG). However, the requisite sparse triangular solve is difficult to parallelize on many-core architectures such as graphics processing units (GPUs). In the present study, the performance of the traditional GS relaxation based on a triangular solve is compared with two-stage variants, replacing the direct triangular solve with a fixed number of inner Jacobi-Richardson (JR) iterations. When a small number of inner iterations is sufficient to maintain the Krylov convergence rate, the two-stage GS (GS2) often outperforms the traditional algorithm on many-core architectures. We also compare GS2 with JR. When they perform the same number of flops for SpMV (e.g. three JR sweeps compared to two GS sweeps with one inner JR sweep), the GS2 iterations, and the Krylov solver preconditioned with GS2, may converge faster than the JR iterations. Moreover, for some problems (e.g. elasticity), it was found that JR may diverge with a damping factor of one, whereas two-stage GS may improve the convergence with more inner iterations. Finally, to study the performance of the two-stage smoother and preconditioner for a practical problem, (e.g. using tuned damping factors), these were applied to incompressible fluid flow simulations on GPUs.},
+  file        = {:http\://arxiv.org/pdf/2104.01196v1:PDF},
+  keywords    = {math.NA, cs.MS, cs.NA}
+}
+
+@article{Kalinin2021,
+  author      = {Kirill P. Kalinin and Natalia G. Berloff},
+  date        = {2021-04-06},
+  title       = {Large-scale Sustainable Search on Unconventional Computing Hardware},
+  eprint      = {2104.02553},
+  eprintclass = {cond-mat.dis-nn},
+  eprinttype  = {arXiv},
+  abstract    = {Since the advent of the Internet, quantifying the relative importance of web pages is at the core of search engine methods. According to one algorithm, PageRank, the worldwide web structure is represented by the Google matrix, whose principal eigenvector components assign a numerical value to web pages for their ranking. Finding such a dominant eigenvector on an ever-growing number of web pages becomes a computationally intensive task incompatible with Moore's Law. We demonstrate that special-purpose optical machines such as networks of optical parametric oscillators, lasers, and gain-dissipative condensates, may aid in accelerating the reliable reconstruction of principal eigenvectors of real-life web graphs. We discuss the feasibility of simulating the PageRank algorithm on large Google matrices using such unconventional hardware. We offer alternative rankings based on the minimisation of spin Hamiltonians. Our estimates show that special-purpose optical machines may provide dramatic improvements in power consumption over classical computing architectures.},
+  file        = {:http\://arxiv.org/pdf/2104.02553v1:PDF},
+  keywords    = {cond-mat.dis-nn, cs.ET, cs.IR, physics.comp-ph, physics.optics}
+}
+
+@article{Sateesan2021,
+  author       = {Arish Sateesan and Sharad Sinha and Smitha K. G. and A. P. Vinod},
+  date         = {2021},
+  journaltitle = {Neural Processing Letters},
+  title        = {A Survey of Algorithmic and Hardware Optimization Techniques for Vision Convolutional Neural Networks on {FPGAs}},
+  abstract     = {In today’s world, the applications of convolutional neural networks (CNN) are limitless and are employed in numerous fields. The CNNs get wider and deeper to achieve near-human accuracy. Implementing such networks on resource constrained hardware is a cumbersome task. CNNs need to be optimized both on hardware and algorithmic levels to compress and fit into resource limited devices. This survey aims to investigate different optimization techniques of Vision CNNs, both on algorithmic and hardware level, which would help in efficient hardware implementation, especially for FPGAs.}
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
