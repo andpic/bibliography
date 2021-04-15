@@ -15832,6 +15832,37 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   abstract = {A general framework for solving nonlinear least squares problems without the employment of derivatives is proposed in the present paper together with a new general global convergence theory. With the aim to cope with the case in which the number of variables is big (for the standards of derivative-free optimization), two dimension-reduction procedures are introduced. One of them is based on iterative subspace minimization and the other one is based on spline interpolation with variable nodes. Each iteration based on those procedures is followed by an acceleration step inspired in the Sequential Secant Method. The practical motivation for this work is the estimation of parameters in Hydraulic models applied to dam breaking problems. Numerical examples of the application of the new method to those problems are given.}
 }
 
+@Article{Gatti2021,
+  author      = {Alice Gatti and Zhixiong Hu and Pieter Ghysels and Esmond G. Ng and Tess Smidt},
+  date        = {2021-04-08},
+  title       = {Graph Partitioning and Sparse Matrix Ordering using Reinforcement Learning},
+  eprint      = {2104.03546},
+  eprintclass = {cs.LG},
+  eprinttype  = {arXiv},
+  abstract    = {We present a novel method for graph partitioning, based on reinforcement learning and graph convolutional neural networks. The new reinforcement learning based approach is used to refine a given partitioning obtained on a coarser representation of the graph, and the algorithm is applied recursively. The neural network is implemented using graph attention layers, and trained using an advantage actor critic (A2C) agent. We present two variants, one for finding an edge separator that minimizes the normalized cut or quotient cut, and one that finds a small vertex separator. The vertex separators are then used to construct a nested dissection ordering for permuting a sparse matrix so that its triangular factorization will incur less fill-in. The partitioning quality is compared with partitions obtained using METIS and Scotch, and the nested dissection ordering is evaluated in the sparse solver SuperLU. Our results show that the proposed method achieves similar partitioning quality than METIS and Scotch. Furthermore, the method generalizes from one class of graphs to another, and works well on a variety of graphs from the SuiteSparse sparse matrix collection.},
+  file        = {:http\://arxiv.org/pdf/2104.03546v1:PDF},
+  keywords    = {cs.LG},
+}
+
+@Article{Cipolla2021,
+  author       = {Stefano Cipolla and Marco Donatelli and Fabio Durastante},
+  date         = {2021-04},
+  journaltitle = {Numerical Algorithms},
+  title        = {Regularization of inverse problems by an approximate matrix-function technique},
+  doi          = {10.1007/s11075-021-01076-y},
+  abstract     = {In this work, we introduce and investigate a class of matrix-free regularization techniques for discrete linear ill-posed problems based on the approximate computation of a special matrix-function. In order to produce a regularized solution, the proposed strategy employs a regular approximation of the Heavyside step function computed into a small Krylov subspace. This particular feature allows our proposal to be independent from the structure of the underlying matrix. If on the one hand, the use of the Heavyside step function prevents the amplification of the noise by suitably filtering the responsible components of the spectrum of the discretization matrix, on the other hand, it permits the correct reconstruction of the signal inverting the remaining part of the spectrum. Numerical tests on a gallery of standard benchmark problems are included to prove the efficacy of our approach even for problems affected by a high level of noise.},
+  publisher    = {Springer Science and Business Media {LLC}},
+}
+
+@PhdThesis{Stramondo2021,
+  author      = {G. Stramondo},
+  date        = {2021-04-08},
+  institution = {University of Amsterdam},
+  title       = {Memory system design for application-specific hardware},
+  url         = {https://hdl.handle.net/11245.1/2ebac42a-43a3-4938-8861-04dc3e90a2af},
+  abstract    = {Computing drives a lot of developments all around us, and leads to innovation in many fields of science, engineering, and entertainment. As such, the need for computing is increasing at fast pace. This pace has seen the prevalent use of multi- and many-core processors, where parallelism is a sustainable way (for now) to feed our computing needs. We now see single machines reaching multiple TFLOPs in performance, when combining multi-core CPUs and many-core accelerators.\\ However, a second bottleneck arises in many of these computing systems: the memory. The so-called "memory wall", a term coined in 1994 by Wulf and McKee, is a metaphor for the significant performance limitations that the memory itself poses for computing systems. Simply put, the memory system is often unable to provide enough data to the computing system, thus limiting the performance of the entire computing system.\\ One way to go around the memory wall is to redesign the memory system to support more parallelism, and be better suited for the applications running on the computing system. The work presented in this thesis illustrates different ways in which such a novel design can be approached and deployed, as well as the potential performance gains such novel memory systems can provide.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
