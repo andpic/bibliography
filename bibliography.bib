@@ -15863,6 +15863,42 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   abstract    = {Computing drives a lot of developments all around us, and leads to innovation in many fields of science, engineering, and entertainment. As such, the need for computing is increasing at fast pace. This pace has seen the prevalent use of multi- and many-core processors, where parallelism is a sustainable way (for now) to feed our computing needs. We now see single machines reaching multiple TFLOPs in performance, when combining multi-core CPUs and many-core accelerators.\\ However, a second bottleneck arises in many of these computing systems: the memory. The so-called "memory wall", a term coined in 1994 by Wulf and McKee, is a metaphor for the significant performance limitations that the memory itself poses for computing systems. Simply put, the memory system is often unable to provide enough data to the computing system, thus limiting the performance of the entire computing system.\\ One way to go around the memory wall is to redesign the memory system to support more parallelism, and be better suited for the applications running on the computing system. The work presented in this thesis illustrates different ways in which such a novel design can be approached and deployed, as well as the potential performance gains such novel memory systems can provide.},
 }
 
+@Article{Wang2021c,
+  author      = {Hao Wang and Xiangyu Yang and Xin Deng},
+  date        = {2021-04-09},
+  title       = {A Hybrid First-Order Method for Nonconvex $\ell_p$-ball Constrained Optimization},
+  eprint      = {2104.04400},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {In this paper, we consider the nonconvex optimization problem in which the objective is continuously differentiable and the feasible set is a nonconvex $\ell_{p}$ ball. Studying such optimization offers the possibility to bridge the gap between a range of intermediate values $p \in (0,1)$ and $p \in \{0,1\}$ in the norm-constraint sparse optimization, both in theory and practice. We propose a novel hybrid method within a first-order algorithmic framework for solving such problems by combining the Frank-Wolfe method and the gradient projection method. During iterations, it solves a Frank-Wolfe subproblem if the current iterate is in the interior of the $\ell_p$ ball, and it solves a gradient projection subproblem with a weighted $\ell_1$-ball constraint if the current iterate is on the boundary of the $\ell_p$ ball. Global convergence is proved, and a worst-case iteration complexity $O(1/\epsilon^2)$ of the optimality error is also established. We believe our proposed method is the first practical algorithm for solving $\ell_p$-ball constrained nonlinear problems with theoretical guarantees. Numerical experiments demonstrate the practicability and efficiency of the proposed algorithm.},
+  file        = {:http\://arxiv.org/pdf/2104.04400v1:PDF},
+  keywords    = {math.OC},
+}
+
+@Article{Dong2021,
+  author      = {Yijun Dong and Per-Gunnar Martinsson},
+  date        = {2021-04-13},
+  title       = {Simpler is better: A comparative study of randomized algorithms for computing the CUR decomposition},
+  eprint      = {2104.05877},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {The CUR decomposition is a technique for low-rank approximation that selects small subsets of the columns and rows of a given matrix to use as bases for its column and rowspaces. It has recently attracted much interest, as it has several advantages over traditional low rank decompositions based on orthonormal bases. These include the preservation of properties such as sparsity or non-negativity, the ability to interpret data, and reduced storage requirements. The problem of finding the skeleton sets that minimize the norm of the residual error is known to be NP-hard, but classical pivoting schemes such as column pivoted QR work tend to work well in practice. When combined with randomized dimension reduction techniques, classical pivoting based methods become particularly effective, and have proven capable of very rapidly computing approximate CUR decompositions of large, potentially sparse, matrices. Another class of popular algorithms for computing CUR de-compositions are based on drawing the columns and rows randomly from the full index sets, using specialized probability distributions based on leverage scores. Such sampling based techniques are particularly appealing for very large scale problems, and are well supported by theoretical performance guarantees. This manuscript provides a comparative study of the various randomized algorithms for computing CUR decompositions that have recently been proposed. Additionally, it proposes some modifications and simplifications to the existing algorithms that leads to faster execution times.},
+  file        = {:http\://arxiv.org/pdf/2104.05877v1:PDF},
+  keywords    = {math.NA, cs.NA},
+}
+
+@Article{Nolet2021,
+  author      = {Corey J. Nolet and Divye Gala and Edward Raff and Joe Eaton and Brad Rees and John Zedlewski and Tim Oates},
+  date        = {2021-04-13},
+  title       = {Semiring Primitives for Sparse Neighborhood Methods on the GPU},
+  eprint      = {2104.06357},
+  eprintclass = {cs.LG},
+  eprinttype  = {arXiv},
+  abstract    = {High-performance primitives for mathematical operations on sparse vectors must deal with the challenges of skewed degree distributions and limits on memory consumption that are typically not issues in dense operations. We demonstrate that a sparse semiring primitive can be flexible enough to support a wide range of critical distance measures while maintaining performance and memory efficiency on the GPU. We further show that this primitive is a foundational component for enabling many neighborhood-based information retrieval and machine learning algorithms to accept sparse input. To our knowledge, this is the first work aiming to unify the computation of several critical distance measures on the GPU under a single flexible design paradigm and we hope that it provides a good baseline for future research in this area. Our implementation is fully open source and publicly available at https://github.com/rapidsai/cuml.},
+  file        = {:http\://arxiv.org/pdf/2104.06357v1:PDF},
+  keywords    = {cs.LG, cs.DC, math.RA},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
