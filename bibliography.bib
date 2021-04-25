@@ -15899,6 +15899,90 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   keywords    = {cs.LG, cs.DC, math.RA},
 }
 
+@Article{Ramezani2021,
+  author      = {Morteza Ramezani and Anand Sivasubramaniam and Mahmut T. Kandemir},
+  date        = {2021-04-11},
+  title       = {GraphGuess: Approximate Graph Processing System with Adaptive Correction},
+  eprint      = {2104.10039},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {Graph-based data structures have drawn great attention in recent years. The large and rapidly growing trend on developing graph processing systems focus mostly on improving the performance by preprocessing the input graph and modifying its layout. These systems usually take several hours to days to complete processing a single graph on high-end machines, let alone the overhead of pre-processing which most of the time can be dominant. Yet for most of graph applications the exact answer is not always crucial, and providing a rough estimate of the final result is adequate. Approximate computing is introduced to trade off accuracy of results for computation or energy savings that could not be achieved by conventional techniques alone. Although various computing platforms and application domains benefit from approximate computing, it has not been thoroughly explored yet in the context of graph processing systems. In this work, we design, implement and evaluate GraphGuess, inspired from the domain of approximate graph theory and extend it to a general, practical graph processing system. GraphGuess is essentially an approximate graph processing technique with adaptive correction, which can be implemented on top of any graph processing system. We build a vertex-centric processing system based on GraphGuess, where it allows the user to trade off accuracy for better performance. Our experimental studies show that using GraphGuess can significantly reduce the processing time for large scale graphs while maintaining high accuracy.},
+  file        = {:http\://arxiv.org/pdf/2104.10039v1:PDF},
+  keywords    = {cs.DC},
+}
+
+@Article{Ahmad2021,
+  author       = {Najeeb Ahmad and Buse Ylmaz and Didem Unat},
+  date         = {2021},
+  journaltitle = {{IEEE} Transactions on Parallel and Distributed Systems},
+  title        = {A Split Execution Model for {SpTRSV}},
+  doi          = {10.1109/tpds.2021.3074501},
+  pages        = {1--1},
+  abstract     = {Sparse Triangular Solve (SpTRSV) is an important and extensively used kernel in scientific computing. Parallelism within SpTRSV depends upon matrix sparsity pattern and, in many cases, is non-uniform from one computational step to the next. In cases where the SpTRSV computational steps have contrasting parallelism characteristics some steps are more parallel, others more sequential in nature, the performance of an SpTRSV algorithm may be limited by the contrasting parallelism characteristics. In this work, we propose a split-execution model for SpTRSV to automatically divide SpTRSV computation into two sub-SpTRSV systems and an SpMV, such that one of the sub-SpTRSVs has more parallelism than the other. Each sub-SpTRSV is then computed by using a different SpTRSV algorithm and possibly executes on a different platform (CPU or GPU). By analyzing the SpTRSV Directed Acyclic Graph (DAG) and matrix sparsity features, we use a heuristics-based approach to (i) automatically determine suitability of an SpTRSV for split-execution, (ii) find the appropriate split-point, and (iii) execute SpTRSV in a split fashion using two SpTRSV algorithms while managing any required inter-platform communication. Experimental evaluation of the execution model on two CPU-GPU machines with matrix dataset of 327 matrices from the SuiteSparse Matrix Collection shows that our approach correctly selects the fastest SpTRSV method (split or unsplit) for 88\% of matrices on the Intel Xeon Gold (6148) + NVIDIA Tesla V100 and 83\% on the Intel Core I7 + NVIDIA G1080 Ti platform achieving speedups in the range of 1.01 10 and 1.03 6.36, respectively.},
+  publisher    = {Institute of Electrical and Electronics Engineers ({IEEE})},
+}
+
+@Article{CoronadoBarrientos2021,
+  author       = {E. Coronado-Barrientos and M. Antonioletti and A. Garcia-Loureiro},
+  date         = {2021-06},
+  journaltitle = {Advances in Engineering Software},
+  title        = {A new {AXT} format for an efficient {SpMV} product using {AVX}-512 instructions and {CUDA}},
+  doi          = {10.1016/j.advengsoft.2021.102997},
+  pages        = {102997},
+  volume       = {156},
+  abstract     = {The Sparse Matrix-Vector (SpMV) product is a key operation used in many scientific applications. This work proposes a new sparse matrix storage scheme, the AXT format, that improves the SpMV performance on vector capability platforms. AXT can be adapted to different platforms, improving the storage efficiency for matrices with different sparsity patterns. Intel AVX-512 instructions and CUDA are used to optimise the performances of the four different AXT subvariants. Performance comparisons are made with the Compressed Sparse Row (CSR) and AXC formats on an Intel Xeon Gold 6148 processor and an NVIDIA Tesla V100 Graphics Processing Units using 26 matrices. On the Intel platform the overall AXT performance is 18\% and 44.3\% higher than the AXC and CSR respectively, reaching speed-up factors of up to x7.33. On the NVIDIA platform the AXT performance is 44\% and 8\% higher than the AXC and CSR performances respectively, reaching speed-up factors of up to x378.5.},
+  publisher    = {Elsevier {BV}},
+}
+
+@Article{Guthe2021,
+  author       = {Stefan Guthe and Daniel Thuerck},
+  date         = {2021-04},
+  journaltitle = {{ACM} Transactions on Mathematical Software},
+  title        = {Algorithm~1015},
+  doi          = {10.1145/3442348},
+  number       = {2},
+  pages        = {1--27},
+  volume       = {47},
+  abstract     = {We present a new algorithm for solving the dense linear (sum) assignment problem and an efficient, parallel implementation that is based on the successive shortest path algorithm. More specifically, we introduce the well-known epsilon scaling approach used in the Auction algorithm to approximate the dual variables of the successive shortest path algorithm prior to solving the assignment problem to limit the complexity of the path search. This improves the runtime by several orders of magnitude for hard-to-solve real-world problems, making the runtime virtually independent of how hard the assignment is to find. In addition, our approach allows for using accelerators and/or external compute resources to calculate individual rows of the cost matrix. This enables us to solve problems that are larger than what has been reported in the past, including the ability to efficiently solve problems whose cost matrix exceeds the available systems memory. To our knowledge, this is the first implementation that is able to solve problems with more than one trillion arcs in less than 100 hours on a single machine.},
+  publisher    = {Association for Computing Machinery ({ACM})},
+}
+
+@Article{Kong2021,
+  author      = {Weiwei Kong},
+  date        = {2021-04-19},
+  title       = {Accelerated Inexact First-Order Methods for Solving Nonconvex Composite Optimization Problems},
+  eprint      = {2104.09685},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {This thesis focuses on developing and analyzing accelerated and inexact first-order methods for solving or finding stationary points of various nonconvex composite optimization (NCO) problems. Our main tools mainly come from variational and convex analysis, and our key results are in the form of iteration complexity bounds and how these bounds compare to other ones in the literature.},
+  file        = {:http\://arxiv.org/pdf/2104.09685v1:PDF},
+  keywords    = {math.OC},
+}
+
+@Article{Kosaian2021,
+  author      = {Jack Kosaian and K. V. Rashmi},
+  date        = {2021-04-19},
+  title       = {Arithmetic-Intensity-Guided Fault Tolerance for Neural Network Inference on GPUs},
+  eprint      = {2104.09455},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {Neural networks (NNs) are increasingly employed in domains that require high reliability, such as scientific computing and safety-critical systems, as well as in environments more prone to unreliability (e.g., soft errors), such as on spacecraft. As recent work has shown that faults in NN inference can lead to mispredictions and safety hazards, it is critical to impart fault tolerance to NN inference. Algorithm-based fault tolerance (ABFT) is emerging as an appealing approach for efficient fault tolerance in NNs. In this work, we identify new, unexploited opportunities for low-overhead ABFT for NN inference: current inference-optimized GPUs have high compute-to-memory-bandwidth ratios, while many layers of current and emerging NNs have low arithmetic intensity. This leaves many convolutional and fully-connected layers in NNs memory-bandwidth-bound. These layers thus exhibit stalls in computation that could be filled by redundant execution, but that current approaches to ABFT for NN inference cannot exploit. To reduce execution-time overhead for such memory-bandwidth-bound layers, we first investigate thread-level ABFT schemes for inference-optimized GPUs that exploit this fine-grained compute underutilization. We then propose intensity-guided ABFT, an adaptive, arithmetic-intensity-guided approach to ABFT that selects the best ABFT scheme for each individual layer between traditional approaches to ABFT, which are suitable for compute-bound layers, and thread-level ABFT, which is suitable for memory-bandwidth-bound layers. Through this adaptive approach, intensity-guided ABFT reduces execution-time overhead by 1.09--5.3$\times$ across a variety of NNs, lowering the cost of fault tolerance for current and future NN inference workloads.},
+  file        = {:http\://arxiv.org/pdf/2104.09455v1:PDF},
+  keywords    = {cs.DC, cs.LG},
+}
+
+@Article{Davis2020a,
+  author      = {Joshua Hoke Davis and Christopher Daley and Swaroop Pophale and Thomas Huber and Sunita Chandrasekaran and Nicholas J. Wright},
+  date        = {2020-10-19},
+  title       = {Performance Assessment of OpenMP Compilers Targeting NVIDIA V100 GPUs},
+  eprint      = {2010.09454},
+  eprintclass = {cs.PF},
+  eprinttype  = {arXiv},
+  abstract    = {Heterogeneous systems are becoming increasingly prevalent. In order to exploit the rich compute resources of such systems, robust programming models are needed for application developers to seamlessly migrate legacy code from today's systems to tomorrow's. Over the past decade and more, directives have been established as one of the promising paths to tackle programmatic challenges on emerging systems. This work focuses on applying and demonstrating OpenMP offloading directives on five proxy applications. We observe that the performance varies widely from one compiler to the other; a crucial aspect of our work is reporting best practices to application developers who use OpenMP offloading compilers. While some issues can be worked around by the developer, there are other issues that must be reported to the compiler vendors. By restructuring OpenMP offloading directives, we gain an 18x speedup for the su3 proxy application on NERSC's Cori system when using the Clang compiler, and a 15.7x speedup by switching max reductions to add reductions in the laplace mini-app when using the Cray-llvm compiler on Cori.},
+  file        = {:http\://arxiv.org/pdf/2010.09454v3:PDF},
+  keywords    = {cs.PF, cs.DC},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
