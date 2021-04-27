@@ -15832,7 +15832,7 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   abstract = {A general framework for solving nonlinear least squares problems without the employment of derivatives is proposed in the present paper together with a new general global convergence theory. With the aim to cope with the case in which the number of variables is big (for the standards of derivative-free optimization), two dimension-reduction procedures are introduced. One of them is based on iterative subspace minimization and the other one is based on spline interpolation with variable nodes. Each iteration based on those procedures is followed by an acceleration step inspired in the Sequential Secant Method. The practical motivation for this work is the estimation of parameters in Hydraulic models applied to dam breaking problems. Numerical examples of the application of the new method to those problems are given.}
 }
 
-@Article{Gatti2021,
+@article{Gatti2021,
   author      = {Alice Gatti and Zhixiong Hu and Pieter Ghysels and Esmond G. Ng and Tess Smidt},
   date        = {2021-04-08},
   title       = {Graph Partitioning and Sparse Matrix Ordering using Reinforcement Learning},
@@ -15841,29 +15841,29 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   eprinttype  = {arXiv},
   abstract    = {We present a novel method for graph partitioning, based on reinforcement learning and graph convolutional neural networks. The new reinforcement learning based approach is used to refine a given partitioning obtained on a coarser representation of the graph, and the algorithm is applied recursively. The neural network is implemented using graph attention layers, and trained using an advantage actor critic (A2C) agent. We present two variants, one for finding an edge separator that minimizes the normalized cut or quotient cut, and one that finds a small vertex separator. The vertex separators are then used to construct a nested dissection ordering for permuting a sparse matrix so that its triangular factorization will incur less fill-in. The partitioning quality is compared with partitions obtained using METIS and Scotch, and the nested dissection ordering is evaluated in the sparse solver SuperLU. Our results show that the proposed method achieves similar partitioning quality than METIS and Scotch. Furthermore, the method generalizes from one class of graphs to another, and works well on a variety of graphs from the SuiteSparse sparse matrix collection.},
   file        = {:http\://arxiv.org/pdf/2104.03546v1:PDF},
-  keywords    = {cs.LG},
+  keywords    = {cs.LG}
 }
 
-@Article{Cipolla2021,
+@article{Cipolla2021,
   author       = {Stefano Cipolla and Marco Donatelli and Fabio Durastante},
   date         = {2021-04},
   journaltitle = {Numerical Algorithms},
   title        = {Regularization of inverse problems by an approximate matrix-function technique},
   doi          = {10.1007/s11075-021-01076-y},
   abstract     = {In this work, we introduce and investigate a class of matrix-free regularization techniques for discrete linear ill-posed problems based on the approximate computation of a special matrix-function. In order to produce a regularized solution, the proposed strategy employs a regular approximation of the Heavyside step function computed into a small Krylov subspace. This particular feature allows our proposal to be independent from the structure of the underlying matrix. If on the one hand, the use of the Heavyside step function prevents the amplification of the noise by suitably filtering the responsible components of the spectrum of the discretization matrix, on the other hand, it permits the correct reconstruction of the signal inverting the remaining part of the spectrum. Numerical tests on a gallery of standard benchmark problems are included to prove the efficacy of our approach even for problems affected by a high level of noise.},
-  publisher    = {Springer Science and Business Media {LLC}},
+  publisher    = {Springer Science and Business Media {LLC}}
 }
 
-@PhdThesis{Stramondo2021,
+@phdthesis{Stramondo2021,
   author      = {G. Stramondo},
   date        = {2021-04-08},
   institution = {University of Amsterdam},
   title       = {Memory system design for application-specific hardware},
   url         = {https://hdl.handle.net/11245.1/2ebac42a-43a3-4938-8861-04dc3e90a2af},
-  abstract    = {Computing drives a lot of developments all around us, and leads to innovation in many fields of science, engineering, and entertainment. As such, the need for computing is increasing at fast pace. This pace has seen the prevalent use of multi- and many-core processors, where parallelism is a sustainable way (for now) to feed our computing needs. We now see single machines reaching multiple TFLOPs in performance, when combining multi-core CPUs and many-core accelerators.\\ However, a second bottleneck arises in many of these computing systems: the memory. The so-called "memory wall", a term coined in 1994 by Wulf and McKee, is a metaphor for the significant performance limitations that the memory itself poses for computing systems. Simply put, the memory system is often unable to provide enough data to the computing system, thus limiting the performance of the entire computing system.\\ One way to go around the memory wall is to redesign the memory system to support more parallelism, and be better suited for the applications running on the computing system. The work presented in this thesis illustrates different ways in which such a novel design can be approached and deployed, as well as the potential performance gains such novel memory systems can provide.},
+  abstract    = {Computing drives a lot of developments all around us, and leads to innovation in many fields of science, engineering, and entertainment. As such, the need for computing is increasing at fast pace. This pace has seen the prevalent use of multi- and many-core processors, where parallelism is a sustainable way (for now) to feed our computing needs. We now see single machines reaching multiple TFLOPs in performance, when combining multi-core CPUs and many-core accelerators.\\ However, a second bottleneck arises in many of these computing systems: the memory. The so-called "memory wall", a term coined in 1994 by Wulf and McKee, is a metaphor for the significant performance limitations that the memory itself poses for computing systems. Simply put, the memory system is often unable to provide enough data to the computing system, thus limiting the performance of the entire computing system.\\ One way to go around the memory wall is to redesign the memory system to support more parallelism, and be better suited for the applications running on the computing system. The work presented in this thesis illustrates different ways in which such a novel design can be approached and deployed, as well as the potential performance gains such novel memory systems can provide.}
 }
 
-@Article{Wang2021c,
+@article{Wang2021c,
   author      = {Hao Wang and Xiangyu Yang and Xin Deng},
   date        = {2021-04-09},
   title       = {A Hybrid First-Order Method for Nonconvex $\ell_p$-ball Constrained Optimization},
@@ -15872,10 +15872,10 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   eprinttype  = {arXiv},
   abstract    = {In this paper, we consider the nonconvex optimization problem in which the objective is continuously differentiable and the feasible set is a nonconvex $\ell_{p}$ ball. Studying such optimization offers the possibility to bridge the gap between a range of intermediate values $p \in (0,1)$ and $p \in \{0,1\}$ in the norm-constraint sparse optimization, both in theory and practice. We propose a novel hybrid method within a first-order algorithmic framework for solving such problems by combining the Frank-Wolfe method and the gradient projection method. During iterations, it solves a Frank-Wolfe subproblem if the current iterate is in the interior of the $\ell_p$ ball, and it solves a gradient projection subproblem with a weighted $\ell_1$-ball constraint if the current iterate is on the boundary of the $\ell_p$ ball. Global convergence is proved, and a worst-case iteration complexity $O(1/\epsilon^2)$ of the optimality error is also established. We believe our proposed method is the first practical algorithm for solving $\ell_p$-ball constrained nonlinear problems with theoretical guarantees. Numerical experiments demonstrate the practicability and efficiency of the proposed algorithm.},
   file        = {:http\://arxiv.org/pdf/2104.04400v1:PDF},
-  keywords    = {math.OC},
+  keywords    = {math.OC}
 }
 
-@Article{Dong2021,
+@article{Dong2021,
   author      = {Yijun Dong and Per-Gunnar Martinsson},
   date        = {2021-04-13},
   title       = {Simpler is better: A comparative study of randomized algorithms for computing the CUR decomposition},
@@ -15884,10 +15884,10 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   eprinttype  = {arXiv},
   abstract    = {The CUR decomposition is a technique for low-rank approximation that selects small subsets of the columns and rows of a given matrix to use as bases for its column and rowspaces. It has recently attracted much interest, as it has several advantages over traditional low rank decompositions based on orthonormal bases. These include the preservation of properties such as sparsity or non-negativity, the ability to interpret data, and reduced storage requirements. The problem of finding the skeleton sets that minimize the norm of the residual error is known to be NP-hard, but classical pivoting schemes such as column pivoted QR work tend to work well in practice. When combined with randomized dimension reduction techniques, classical pivoting based methods become particularly effective, and have proven capable of very rapidly computing approximate CUR decompositions of large, potentially sparse, matrices. Another class of popular algorithms for computing CUR de-compositions are based on drawing the columns and rows randomly from the full index sets, using specialized probability distributions based on leverage scores. Such sampling based techniques are particularly appealing for very large scale problems, and are well supported by theoretical performance guarantees. This manuscript provides a comparative study of the various randomized algorithms for computing CUR decompositions that have recently been proposed. Additionally, it proposes some modifications and simplifications to the existing algorithms that leads to faster execution times.},
   file        = {:http\://arxiv.org/pdf/2104.05877v1:PDF},
-  keywords    = {math.NA, cs.NA},
+  keywords    = {math.NA, cs.NA}
 }
 
-@Article{Nolet2021,
+@article{Nolet2021,
   author      = {Corey J. Nolet and Divye Gala and Edward Raff and Joe Eaton and Brad Rees and John Zedlewski and Tim Oates},
   date        = {2021-04-13},
   title       = {Semiring Primitives for Sparse Neighborhood Methods on the GPU},
@@ -15896,10 +15896,10 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   eprinttype  = {arXiv},
   abstract    = {High-performance primitives for mathematical operations on sparse vectors must deal with the challenges of skewed degree distributions and limits on memory consumption that are typically not issues in dense operations. We demonstrate that a sparse semiring primitive can be flexible enough to support a wide range of critical distance measures while maintaining performance and memory efficiency on the GPU. We further show that this primitive is a foundational component for enabling many neighborhood-based information retrieval and machine learning algorithms to accept sparse input. To our knowledge, this is the first work aiming to unify the computation of several critical distance measures on the GPU under a single flexible design paradigm and we hope that it provides a good baseline for future research in this area. Our implementation is fully open source and publicly available at https://github.com/rapidsai/cuml.},
   file        = {:http\://arxiv.org/pdf/2104.06357v1:PDF},
-  keywords    = {cs.LG, cs.DC, math.RA},
+  keywords    = {cs.LG, cs.DC, math.RA}
 }
 
-@Article{Ramezani2021,
+@article{Ramezani2021,
   author      = {Morteza Ramezani and Anand Sivasubramaniam and Mahmut T. Kandemir},
   date        = {2021-04-11},
   title       = {GraphGuess: Approximate Graph Processing System with Adaptive Correction},
@@ -15908,10 +15908,10 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   eprinttype  = {arXiv},
   abstract    = {Graph-based data structures have drawn great attention in recent years. The large and rapidly growing trend on developing graph processing systems focus mostly on improving the performance by preprocessing the input graph and modifying its layout. These systems usually take several hours to days to complete processing a single graph on high-end machines, let alone the overhead of pre-processing which most of the time can be dominant. Yet for most of graph applications the exact answer is not always crucial, and providing a rough estimate of the final result is adequate. Approximate computing is introduced to trade off accuracy of results for computation or energy savings that could not be achieved by conventional techniques alone. Although various computing platforms and application domains benefit from approximate computing, it has not been thoroughly explored yet in the context of graph processing systems. In this work, we design, implement and evaluate GraphGuess, inspired from the domain of approximate graph theory and extend it to a general, practical graph processing system. GraphGuess is essentially an approximate graph processing technique with adaptive correction, which can be implemented on top of any graph processing system. We build a vertex-centric processing system based on GraphGuess, where it allows the user to trade off accuracy for better performance. Our experimental studies show that using GraphGuess can significantly reduce the processing time for large scale graphs while maintaining high accuracy.},
   file        = {:http\://arxiv.org/pdf/2104.10039v1:PDF},
-  keywords    = {cs.DC},
+  keywords    = {cs.DC}
 }
 
-@Article{Ahmad2021,
+@article{Ahmad2021,
   author       = {Najeeb Ahmad and Buse Ylmaz and Didem Unat},
   date         = {2021},
   journaltitle = {{IEEE} Transactions on Parallel and Distributed Systems},
@@ -15919,10 +15919,10 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   doi          = {10.1109/tpds.2021.3074501},
   pages        = {1--1},
   abstract     = {Sparse Triangular Solve (SpTRSV) is an important and extensively used kernel in scientific computing. Parallelism within SpTRSV depends upon matrix sparsity pattern and, in many cases, is non-uniform from one computational step to the next. In cases where the SpTRSV computational steps have contrasting parallelism characteristics some steps are more parallel, others more sequential in nature, the performance of an SpTRSV algorithm may be limited by the contrasting parallelism characteristics. In this work, we propose a split-execution model for SpTRSV to automatically divide SpTRSV computation into two sub-SpTRSV systems and an SpMV, such that one of the sub-SpTRSVs has more parallelism than the other. Each sub-SpTRSV is then computed by using a different SpTRSV algorithm and possibly executes on a different platform (CPU or GPU). By analyzing the SpTRSV Directed Acyclic Graph (DAG) and matrix sparsity features, we use a heuristics-based approach to (i) automatically determine suitability of an SpTRSV for split-execution, (ii) find the appropriate split-point, and (iii) execute SpTRSV in a split fashion using two SpTRSV algorithms while managing any required inter-platform communication. Experimental evaluation of the execution model on two CPU-GPU machines with matrix dataset of 327 matrices from the SuiteSparse Matrix Collection shows that our approach correctly selects the fastest SpTRSV method (split or unsplit) for 88\% of matrices on the Intel Xeon Gold (6148) + NVIDIA Tesla V100 and 83\% on the Intel Core I7 + NVIDIA G1080 Ti platform achieving speedups in the range of 1.01 10 and 1.03 6.36, respectively.},
-  publisher    = {Institute of Electrical and Electronics Engineers ({IEEE})},
+  publisher    = {Institute of Electrical and Electronics Engineers ({IEEE})}
 }
 
-@Article{CoronadoBarrientos2021,
+@article{CoronadoBarrientos2021,
   author       = {E. Coronado-Barrientos and M. Antonioletti and A. Garcia-Loureiro},
   date         = {2021-06},
   journaltitle = {Advances in Engineering Software},
@@ -15931,10 +15931,10 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   pages        = {102997},
   volume       = {156},
   abstract     = {The Sparse Matrix-Vector (SpMV) product is a key operation used in many scientific applications. This work proposes a new sparse matrix storage scheme, the AXT format, that improves the SpMV performance on vector capability platforms. AXT can be adapted to different platforms, improving the storage efficiency for matrices with different sparsity patterns. Intel AVX-512 instructions and CUDA are used to optimise the performances of the four different AXT subvariants. Performance comparisons are made with the Compressed Sparse Row (CSR) and AXC formats on an Intel Xeon Gold 6148 processor and an NVIDIA Tesla V100 Graphics Processing Units using 26 matrices. On the Intel platform the overall AXT performance is 18\% and 44.3\% higher than the AXC and CSR respectively, reaching speed-up factors of up to x7.33. On the NVIDIA platform the AXT performance is 44\% and 8\% higher than the AXC and CSR performances respectively, reaching speed-up factors of up to x378.5.},
-  publisher    = {Elsevier {BV}},
+  publisher    = {Elsevier {BV}}
 }
 
-@Article{Guthe2021,
+@article{Guthe2021,
   author       = {Stefan Guthe and Daniel Thuerck},
   date         = {2021-04},
   journaltitle = {{ACM} Transactions on Mathematical Software},
@@ -15944,10 +15944,10 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   pages        = {1--27},
   volume       = {47},
   abstract     = {We present a new algorithm for solving the dense linear (sum) assignment problem and an efficient, parallel implementation that is based on the successive shortest path algorithm. More specifically, we introduce the well-known epsilon scaling approach used in the Auction algorithm to approximate the dual variables of the successive shortest path algorithm prior to solving the assignment problem to limit the complexity of the path search. This improves the runtime by several orders of magnitude for hard-to-solve real-world problems, making the runtime virtually independent of how hard the assignment is to find. In addition, our approach allows for using accelerators and/or external compute resources to calculate individual rows of the cost matrix. This enables us to solve problems that are larger than what has been reported in the past, including the ability to efficiently solve problems whose cost matrix exceeds the available systems memory. To our knowledge, this is the first implementation that is able to solve problems with more than one trillion arcs in less than 100 hours on a single machine.},
-  publisher    = {Association for Computing Machinery ({ACM})},
+  publisher    = {Association for Computing Machinery ({ACM})}
 }
 
-@Article{Kong2021,
+@article{Kong2021,
   author      = {Weiwei Kong},
   date        = {2021-04-19},
   title       = {Accelerated Inexact First-Order Methods for Solving Nonconvex Composite Optimization Problems},
@@ -15956,10 +15956,10 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   eprinttype  = {arXiv},
   abstract    = {This thesis focuses on developing and analyzing accelerated and inexact first-order methods for solving or finding stationary points of various nonconvex composite optimization (NCO) problems. Our main tools mainly come from variational and convex analysis, and our key results are in the form of iteration complexity bounds and how these bounds compare to other ones in the literature.},
   file        = {:http\://arxiv.org/pdf/2104.09685v1:PDF},
-  keywords    = {math.OC},
+  keywords    = {math.OC}
 }
 
-@Article{Kosaian2021,
+@article{Kosaian2021,
   author      = {Jack Kosaian and K. V. Rashmi},
   date        = {2021-04-19},
   title       = {Arithmetic-Intensity-Guided Fault Tolerance for Neural Network Inference on GPUs},
@@ -15968,10 +15968,10 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   eprinttype  = {arXiv},
   abstract    = {Neural networks (NNs) are increasingly employed in domains that require high reliability, such as scientific computing and safety-critical systems, as well as in environments more prone to unreliability (e.g., soft errors), such as on spacecraft. As recent work has shown that faults in NN inference can lead to mispredictions and safety hazards, it is critical to impart fault tolerance to NN inference. Algorithm-based fault tolerance (ABFT) is emerging as an appealing approach for efficient fault tolerance in NNs. In this work, we identify new, unexploited opportunities for low-overhead ABFT for NN inference: current inference-optimized GPUs have high compute-to-memory-bandwidth ratios, while many layers of current and emerging NNs have low arithmetic intensity. This leaves many convolutional and fully-connected layers in NNs memory-bandwidth-bound. These layers thus exhibit stalls in computation that could be filled by redundant execution, but that current approaches to ABFT for NN inference cannot exploit. To reduce execution-time overhead for such memory-bandwidth-bound layers, we first investigate thread-level ABFT schemes for inference-optimized GPUs that exploit this fine-grained compute underutilization. We then propose intensity-guided ABFT, an adaptive, arithmetic-intensity-guided approach to ABFT that selects the best ABFT scheme for each individual layer between traditional approaches to ABFT, which are suitable for compute-bound layers, and thread-level ABFT, which is suitable for memory-bandwidth-bound layers. Through this adaptive approach, intensity-guided ABFT reduces execution-time overhead by 1.09--5.3$\times$ across a variety of NNs, lowering the cost of fault tolerance for current and future NN inference workloads.},
   file        = {:http\://arxiv.org/pdf/2104.09455v1:PDF},
-  keywords    = {cs.DC, cs.LG},
+  keywords    = {cs.DC, cs.LG}
 }
 
-@Article{Davis2020a,
+@article{Davis2020a,
   author      = {Joshua Hoke Davis and Christopher Daley and Swaroop Pophale and Thomas Huber and Sunita Chandrasekaran and Nicholas J. Wright},
   date        = {2020-10-19},
   title       = {Performance Assessment of OpenMP Compilers Targeting NVIDIA V100 GPUs},
@@ -15980,7 +15980,52 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   eprinttype  = {arXiv},
   abstract    = {Heterogeneous systems are becoming increasingly prevalent. In order to exploit the rich compute resources of such systems, robust programming models are needed for application developers to seamlessly migrate legacy code from today's systems to tomorrow's. Over the past decade and more, directives have been established as one of the promising paths to tackle programmatic challenges on emerging systems. This work focuses on applying and demonstrating OpenMP offloading directives on five proxy applications. We observe that the performance varies widely from one compiler to the other; a crucial aspect of our work is reporting best practices to application developers who use OpenMP offloading compilers. While some issues can be worked around by the developer, there are other issues that must be reported to the compiler vendors. By restructuring OpenMP offloading directives, we gain an 18x speedup for the su3 proxy application on NERSC's Cori system when using the Clang compiler, and a 15.7x speedup by switching max reductions to add reductions in the laplace mini-app when using the Cray-llvm compiler on Cori.},
   file        = {:http\://arxiv.org/pdf/2010.09454v3:PDF},
-  keywords    = {cs.PF, cs.DC},
+  keywords    = {cs.PF, cs.DC}
+}
+
+@article{Shang2021,
+  author       = {Fanhua Shang and Hua Huang and Jun Fan and Yuanyuan Liu and Hongying Liu and Jianhui Liu},
+  date         = {2021},
+  journaltitle = {{IEEE} Transactions on Knowledge and Data Engineering},
+  title        = {Asynchronous Parallel, Sparse Approximated {SVRG} for High-Dimensional Machine Learning},
+  doi          = {10.1109/tkde.2021.3070539},
+  pages        = {1--1},
+  abstract     = {With increasing of data size and development of multi-core computers, asynchronous parallel stochastic optimization algorithms such as KroMagnon have gained significant attention. In this paper, we propose a new Sparse approximation and asynchronous parallel Stochastic Variance Reduced Gradient (SSVRG) method for sparse and high-dimensional machine learning problems. Unlike standard SVRG and its asynchronous parallel variant, KroMagnon, the snapshot point of SSVRG is set to the average of all the iterates in the previous epoch, which allows it to take much larger learning rates and makes it more robust to the choice of learning rates. In particular, we use the sparse approximation of the popular SVRG estimator to perform completely sparse updates. Therefore, SSVRG has a much lower per-iteration computational cost than its dense counterpart, SVRG++, and is very friendly to asynchronous parallel implementation. Moreover, we provide the convergence guarantees of SSVRG for both SC and non-SC problems, while existing asynchronous algorithms (e.g., KroMagnon) only have convergence guarantees for SC problems. Finally, we extend SSVRG to non-smooth and asynchronous parallel settings. Numerical results demonstrate that SSVRG converges significantly faster than the state-of-the-art asynchronous parallel methods, e.g., KroMagnon, and is usually more than three orders of magnitude faster than SVRG++.},
+  publisher    = {Institute of Electrical and Electronics Engineers ({IEEE})}
+}
+
+@article{Saeed2021,
+  author       = {Saeed, Yaman A. and Ismail, Raed A. and Al-Haj Baddar, Sherenaz W.},
+  date         = {2021},
+  journaltitle = {Arabian Journal for Science and Engineering},
+  title        = {{D-SAG}: A Distributed Sort-Based Algorithm for Graph Clustering},
+  doi          = {10.1007/s13369-021-05664-x},
+  issn         = {2191-4281},
+  url          = {https://doi.org/10.1007/s13369-021-05664-x},
+  abstract     = {Graph clustering has become a mainstream branch of computing due to its necessity for solving a wide range of problems nowadays. Thus, harnessing the capabilities of parallel and distributed computing has become instrumental. In this work, we introduce SAG, a quasilinear sort-based algorithm for graph clustering that maps naturally to distributed and/or parallel architectures. The main idea behind SAG is that nodes within a cluster naturally have similar adjacent nodes. Experiments on graphs with varying sizes compared SAG to its distributed counter-part, D-SAG, in terms of execution time, space, speedup, efficiency, and cost. Results showed the superiority of D-SAG in terms of execution time for graphs with more than 0.2$\times$ 106 nodes. Moreover, the best speedup D-SAG achieved was 3.7-fold for synthetic graphs and 3.96-fold for real-world graphs, both using 6 computers.},
+  refid        = {Saeed2021}
+}
+
+@inproceedings{Anagreh2021,
+  author    = {Anagreh, Mohammad and Vainikko, Eero and Laud, Peeter},
+  booktitle = {Proceedings of the 29th Euromicro International Conference on Parallel, Distributed and Network-Based Processing},
+  date      = {2021},
+  title     = {Parallel Privacy-Preserving Shortest Paths by Radius-Stepping},
+  doi       = {10.1109/PDP52278.2021.00051},
+  pages     = {276--280},
+  series    = {PDP 2021},
+  abstract  = {The radius-stepping algorithm is an efficient, parallelizable algorithm for finding the shortest paths in graphs. It solved the problem in $\triangle$-Stepping algorithm, which has no known theoretical bounds for general graphs. In this paper, we describe a parallel privacy-preserving method for finding Single-Source Shortest Paths (SSSP). Our optimized method is based on the Radius-Stepping algorithm. The method is implemented on top of the Secure Multiparty Computation (SMC) Sharemind platform. We have re-shaped the radius-stepping algorithm to work on vectors representing the graph in a SIMD manner, in order to enable a fast execution using the secret-sharing based SMC protocol set of Sharemind. The results of the real implementation show an efficient method that reduced the execution time hundreds of times in comparison with a standard case of the privacy-preserving radius-stepping and $\triangle$-Stepping algorithms.},
+  issn      = {2377-5750},
+  month     = {March},
+  year      = {2021}
+}
+
+@phdthesis{Palanduz2021,
+  author      = {Kemal Marice Palanduz},
+  date        = {2021},
+  institution = {Faculty of Engineering at Stellenbosch University},
+  title       = {On separable primal-dual algorithms for verylarge-scale optimization},
+  abstract    = {In this study, we develop two novel separable primal-dual algorithms, containing closed-form primal and dual variable expressions. The separability of the primal-dual expressions allow both algorithms to exploit massively parallel computational devices, which is desirable for very large-scale optimization. One of the algorithms is ideally suited for low-rank singular value decomposition (SVD), since the separable primal and dual updates become embarrassingly parallel for the SVD problem, allowing the algorithm to efficiently exploit general purpose graphical compute units (GPGPUs).\\ In the first part of this study, we develop an iterative separable augmented Lagrangian algorithm (SALA), which has the salient feature of embarrassingly parallel primal and dual variable expressions, hence the algorithm is ideal for implementation on massively parallel computational devices, such as GPGPUs. SALA solves a sequence of quadratic-like problems, able to capture reciprocal and exponential-like behavior; a desirable property in structural optimization. Since SALA resides in the class of alternating directions of multiplier method type algorithms, we demonstrate numerical results on structural problems requiring medium levels of accuracy.\\ In the second part of this study, we propose a separable Lagrangian algorithm (SLA) for very large-scale optimization. SLA, derived from the dual of Falk, solves a sequence of quadraticlike problems and, like SALA, is able to capture reciprocal and exponential-like behavior. SLA has embarrassingly parallel primal updates, while the dual variables require the solution of a positive-definite linear system. Indeed, both primal and dual variable updates can exploit massively parallel computational devices. We demonstrate numerical results for structural problems involving hundreds of millions of variables and constraints, solved for in a few minutes on a single quad-core machine.\\ Following the development of SLA, we address the low-rank SVD problem. Two separate algorithms are developed, using a variation of SLA that exploits the structure of the SVD problem, resulting in embarrassingly parallel primal and dual updates. Both algorithms use a GPGPU accelerated, constrained and convex sequential approximate optimization (SAO) approach to maximize the well-known Rayleigh quotient, while addressing the difficulties inherent to state-of-the-art Krylov subspace methods, such as resilience to slowly decaying singular values and constant memory requirements. The convex SAO subproblems are conditioned using a novel scaling strategy, allowing for generic solver settings to be used across a wide range of singular value distributions. We demonstrate outstanding numerical results compared to state-of-the-art Lanczos methods, in both CPU and GPGPU implementations, which significantly reduce the time-complexity required for large-scale problems.\\ Finally, we propose a multi-solver approach to soften the no-free-lunch (NFL) theorems for optimization on large-scale structural problems. State-of-the-art algorithms and SLA, each exploiting different solution strategies, compete simultaneously for a problem solution on a single multi-core system. Numerical results demonstrate the efficacy of using a multi-solver approach over a range of test problems, since said approach outperforms any standalone solver tested in terms of mean solution time.}
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
