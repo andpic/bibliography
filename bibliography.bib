@@ -16016,7 +16016,7 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   series    = {PDP 2021},
   abstract  = {The radius-stepping algorithm is an efficient, parallelizable algorithm for finding the shortest paths in graphs. It solved the problem in $\triangle$-Stepping algorithm, which has no known theoretical bounds for general graphs. In this paper, we describe a parallel privacy-preserving method for finding Single-Source Shortest Paths (SSSP). Our optimized method is based on the Radius-Stepping algorithm. The method is implemented on top of the Secure Multiparty Computation (SMC) Sharemind platform. We have re-shaped the radius-stepping algorithm to work on vectors representing the graph in a SIMD manner, in order to enable a fast execution using the secret-sharing based SMC protocol set of Sharemind. The results of the real implementation show an efficient method that reduced the execution time hundreds of times in comparison with a standard case of the privacy-preserving radius-stepping and $\triangle$-Stepping algorithms.},
   issn      = {2377-5750},
-  month     = {March},
+  month     = {3},
   year      = {2021}
 }
 
@@ -16026,6 +16026,67 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   institution = {Faculty of Engineering at Stellenbosch University},
   title       = {On separable primal-dual algorithms for verylarge-scale optimization},
   abstract    = {In this study, we develop two novel separable primal-dual algorithms, containing closed-form primal and dual variable expressions. The separability of the primal-dual expressions allow both algorithms to exploit massively parallel computational devices, which is desirable for very large-scale optimization. One of the algorithms is ideally suited for low-rank singular value decomposition (SVD), since the separable primal and dual updates become embarrassingly parallel for the SVD problem, allowing the algorithm to efficiently exploit general purpose graphical compute units (GPGPUs).\\ In the first part of this study, we develop an iterative separable augmented Lagrangian algorithm (SALA), which has the salient feature of embarrassingly parallel primal and dual variable expressions, hence the algorithm is ideal for implementation on massively parallel computational devices, such as GPGPUs. SALA solves a sequence of quadratic-like problems, able to capture reciprocal and exponential-like behavior; a desirable property in structural optimization. Since SALA resides in the class of alternating directions of multiplier method type algorithms, we demonstrate numerical results on structural problems requiring medium levels of accuracy.\\ In the second part of this study, we propose a separable Lagrangian algorithm (SLA) for very large-scale optimization. SLA, derived from the dual of Falk, solves a sequence of quadraticlike problems and, like SALA, is able to capture reciprocal and exponential-like behavior. SLA has embarrassingly parallel primal updates, while the dual variables require the solution of a positive-definite linear system. Indeed, both primal and dual variable updates can exploit massively parallel computational devices. We demonstrate numerical results for structural problems involving hundreds of millions of variables and constraints, solved for in a few minutes on a single quad-core machine.\\ Following the development of SLA, we address the low-rank SVD problem. Two separate algorithms are developed, using a variation of SLA that exploits the structure of the SVD problem, resulting in embarrassingly parallel primal and dual updates. Both algorithms use a GPGPU accelerated, constrained and convex sequential approximate optimization (SAO) approach to maximize the well-known Rayleigh quotient, while addressing the difficulties inherent to state-of-the-art Krylov subspace methods, such as resilience to slowly decaying singular values and constant memory requirements. The convex SAO subproblems are conditioned using a novel scaling strategy, allowing for generic solver settings to be used across a wide range of singular value distributions. We demonstrate outstanding numerical results compared to state-of-the-art Lanczos methods, in both CPU and GPGPU implementations, which significantly reduce the time-complexity required for large-scale problems.\\ Finally, we propose a multi-solver approach to soften the no-free-lunch (NFL) theorems for optimization on large-scale structural problems. State-of-the-art algorithms and SLA, each exploiting different solution strategies, compete simultaneously for a problem solution on a single multi-core system. Numerical results demonstrate the efficacy of using a multi-solver approach over a range of test problems, since said approach outperforms any standalone solver tested in terms of mean solution time.}
+}
+
+@article{Buluc2021,
+  author      = {Aydin Buluc and Tamara G. Kolda and Stefan M. Wild and Mihai Anitescu and Anthony DeGennaro and John Jakeman and Chandrika Kamath and Ramakrishnan and Kannan and Miles E. Lopes and Per-Gunnar Martinsson and Kary Myers and Jelani Nelson and Juan M. Restrepo and C. Seshadhri and Draguna Vrabie and Brendt Wohlberg and Stephen J. Wright and Chao Yang and Peter Zwart},
+  date        = {2021-04-19},
+  title       = {Randomized Algorithms for Scientific Computing (RASC)},
+  eprint      = {2104.11079},
+  eprintclass = {cs.AI},
+  eprinttype  = {arXiv},
+  abstract    = {Randomized algorithms have propelled advances in artificial intelligence and represent a foundational research area in advancing AI for Science. Future advancements in DOE Office of Science priority areas such as climate science, astrophysics, fusion, advanced materials, combustion, and quantum computing all require randomized algorithms for surmounting challenges of complexity, robustness, and scalability. This report summarizes the outcomes of that workshop, "Randomized Algorithms for Scientific Computing (RASC)," held virtually across four days in December 2020 and January 2021.},
+  file        = {:http\://arxiv.org/pdf/2104.11079v1:PDF},
+  keywords    = {cs.AI, cs.CE}
+}
+
+@article{Brun2021,
+  author   = {Brun, Emeric and Defour, David and De Oliveira Castro, Pablo and Istoan, Matei and Mancusi, Davide and Petit, Eric and Vaquet, Alan},
+  date     = {2021},
+  title    = {A Study of the Effects and Benefits of Custom-Precision Mathematical Libraries for HPC Codes},
+  doi      = {10.1109/TETC.2021.3070422},
+  pages    = {1-1},
+  abstract = {Mathematical libraries are being specifically developed to use fixed-width data-paths on processors and target common floating-point formats like binary32 and binary64. In this article we propose a framework to evaluate the effects of mathematical library calls accuracy in scientific computations. First, our tool collects for each call-site of a mathematical function the input-data profile. Then, using a heuristic exploration algorithm, we estimate the minimal required accuracy by rounding the result to lower precisions. The data profile and accuracy measurement per call-site is used to speculatively select the mathematical function implementation with the most appropriate accuracy for a given scenario. We have tested the methodology with the Intel MKL VML library with predefined accuracy levels. We demonstrate the benefits of our approach on two real-world applications: SGP4, a satellite tracking application, and PATMOS, a Monte Carlo neutron transport code. We experiment and discuss its generalization across data-sets, and finally propose a speculative runtime implementation for PATMOS. The experiment provides an insight into the performance improvements that can be achieved by leveraging the control of per-function call-site accuracy-mode execution of the Intel MKL VML library.},
+  journal  = {IEEE Transactions on Emerging Topics in Computing},
+  year     = {2021}
+}
+
+@article{Aksoy2021,
+  author      = {Sinan Aksoy and Stephen Young and Jesun Firoz and Roberto Gioiosa and Mark Raugas and Juan Escobedo},
+  date        = {2021-04-23},
+  title       = {SpectralFly: Ramanujan Graphs as Flexible and Efficient Interconnection Networks},
+  eprint      = {2104.11725},
+  eprintclass = {cs.NI},
+  eprinttype  = {arXiv},
+  abstract    = {In recent years, graph theoretic considerations have become increasingly important in the design of HPC interconnection topologies. One approach is to seek optimal or near-optimal families of graphs with respect to a particular graph theoretic property, such as diameter. In this work, we consider topologies which optimize the spectral gap. In particular, we study a novel HPC topology, SpectralFly, designed around the Ramanujan graph construction of Lubotzky, Phillips, and Sarnak (LPS). We show combinatorial properties, such as diameter, bisection bandwidth, average path length, and resilience to link failure, of SpectralFly topologies are better than, or comparable to, similarly constrained DragonFly, SlimFly, and BundleFly topologies. Additionally, we simulate the performance of SpectralFly topologies on a representative sample of physics-inspired HPC workloads using the Structure Simulation Toolkit Macroscale Element Library simulator and demonstrate considerable benefit to using the LPS construction as the basis of the SpectralFly topology.},
+  file        = {:http\://arxiv.org/pdf/2104.11725v1:PDF},
+  keywords    = {cs.NI, cs.AR, cs.DC, cs.DM}
+}
+
+@article{Karim2021,
+  author      = {Samah Karim and Edgar Solomonik},
+  date        = {2021-04-27},
+  title       = {Efficient Preconditioners for Interior Point Methods via a new Schur Complementation Strategy},
+  eprint      = {2104.12916},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {We propose new preconditioned iterative solvers for linear systems arising in primal-dual interior-point methods for convex quadratic programming problems. These preconditioned conjugate gradient methods operate on an implicit Schur complement of the KKT system at each iteration. In contrast to standard approaches, the Schur complement we consider enables the reuse of the factorization of the Hessian of the equality-constraint Lagrangian across all interior point iterations. Further, the resulting reduced system admits preconditioners that directly alleviate the ill-conditioning associated with the strict complementarity condition in interior point methods. The two preconditioners we propose also provably reduce the number of unique eigenvalues for the coefficient matrix (CG iteration count). One is efficient when the number of equality constraints is small, while the other is efficient when the number of remaining degrees of freedom is small. Numerical experiments with synthetic problems and problems from the Maros-M\'ezr\'aros QP collection show that our preconditioned inexact interior point are effective at improving conditioning and reducing cost. Across all test problems for which the direct method is not fastest, our preconditioned methods achieve a reduction in cost by a geometric mean of 1.432 relative to the best alternative preconditioned method for each problem.},
+  file        = {:http\://arxiv.org/pdf/2104.12916v1:PDF},
+  keywords    = {math.NA, cs.NA, 65F10, 65F08 (Primary) 65K05, 90C51 (Secondary), G.1.3; G.1.6}
+}
+
+@article{Scott2021a,
+  author       = {C. B. Scott and Eric Mjolsness},
+  date         = {2021-04},
+  journaltitle = {{PLOS} {ONE}},
+  title        = {Graph diffusion distance: Properties and efficient computation},
+  doi          = {10.1371/journal.pone.0249624},
+  editor       = {Gabriele Oliva},
+  number       = {4},
+  pages        = {e0249624},
+  volume       = {16},
+  abstract     = {We define a new family of similarity and distance measures on graphs, and explore their theoretical properties in comparison to conventional distance metrics. These measures are defined by the solution(s) to an optimization problem which attempts find a map minimizing the discrepancy between two graph Laplacian exponential matrices, under norm-preserving and sparsity constraints. Variants of the distance metric are introduced to consider such optimized maps under sparsity constraints as well as fixed time-scaling between the two Laplacians. The objective function of this optimization is multimodal and has discontinuous slope, and is hence difficult for univariate optimizers to solve. We demonstrate a novel procedure for efficiently calculating these optima for two of our distance measure variants. We present numerical experiments demonstrating that (a) upper bounds of our distance metrics can be used to distinguish between lineages of related graphs; (b) our procedure is faster at finding the required optima, by as much as a factor of $10^3$; and (c) the upper bounds satisfy the triangle inequality exactly under some assumptions and approximately under others. We also derive an upper bound for the distance between two graph products, in terms of the distance between the two pairs of factors. Additionally, we present several possible applications, including the construction of infinite “graph limits” by means of Cauchy sequences of graphs related to one another by our distance measure.},
+  publisher    = {Public Library of Science ({PLoS})}
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
