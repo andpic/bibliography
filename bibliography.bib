@@ -16089,6 +16089,89 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   publisher    = {Public Library of Science ({PLoS})}
 }
 
+@Article{Kronbichler2021,
+  author   = {Martin Kronbichler and Dmytro Sashko and Peter Munch},
+  title    = {Enhancing data locality of the conjugate gradient method for high-order matrix-free finite-element implementations},
+  abstract = {This work presents a variant of the conjugate gradient (CG) method with minimal memory access for the vector operations, targeting high-order finite-element schemes with fast matrix-free operator evaluation and cheap preconditioners like the matrix diagonal. The algorithm relies on a data-dependency analysis and interleaves the vector updates and inner products in a CG iteration with the matrix-vector product. As a result, around 90\% of the vector entries of the three active vectors of the CG method are transferred from slow RAM memory exactly once per iteration, with all additional access hitting fast cache memory. Node-level performance analyses and scaling studies on up to 147k cores show that the new method is around two times faster than a standard CG solver as well as optimized pipelined CG and s-step CG methods for large sizes that exceed processor caches, and provides similar performance near the strong scaling limit.},
+  journal  = {The International Journal of High Performance Computing Applications},
+  year     = {2021},
+}
+
+@Article{Chen2021a,
+  author      = {Peng Chen and Mohamed Wahib and Xiao Wang and Shinichiro Takizawa and Takahiro Hirofuchi and Hirotaka Ogawa and Satoshi Matsuoka},
+  date        = {2021-04-27},
+  title       = {Performance Portable Back-projection Algorithms on {CPUs}: Agnostic Data Locality and Vectorization Optimizations},
+  doi         = {10.1145/3447818.3460353},
+  eprint      = {2104.13248},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {Computed Tomography (CT) is a key 3D imaging technology that fundamentally relies on the compute-intense back-projection operation to generate 3D volumes. GPUs are typically used for back-projection in production CT devices. However, with the rise of power-constrained micro-CT devices, and also the emergence of CPUs comparable in performance to GPUs, back-projection for CPUs could become favorable. Unlike GPUs, extracting parallelism for back-projection algorithms on CPUs is complex given that parallelism and locality are not explicitly defined and controlled by the programmer, as is the case when using CUDA for instance. We propose a collection of novel back-projection algorithms that reduce the arithmetic computation, robustly enable vectorization, enforce a regular memory access pattern, and maximize the data locality. We also implement the novel algorithms as efficient back-projection kernels that are performance portable over a wide range of CPUs. Performance evaluation using a variety of CPUs from different vendors and generations demonstrates that our back-projection implementation achieves on average 5.2x speedup over the multi-threaded implementation of the most widely used, and optimized, open library. With a state-of-the-art CPU, we reach performance that rivals top-performing GPUs.},
+  file        = {:http\://arxiv.org/pdf/2104.13248v1:PDF},
+  keywords    = {cs.DC},
+}
+
+@InProceedings{Yasar2021,
+  author    = {Abdurrahman Yaşar and Kasimir Gabert and Ümit V. {\c{C}}atalyürek},
+  booktitle = {Proceedings of the 18th {ACM} International Conference on Computing Frontiers},
+  date      = {2021-05},
+  title     = {Parallel graph algorithms by blocks},
+  doi       = {10.1145/3457388.3459987},
+  publisher = {{ACM}},
+  abstract  = {In today's data-driven world and heterogeneous computing environments, processing large-scale graphs in an architecture agnostic manner has become more crucial than ever before. In terms of graph analytics frameworks, on the one side, there has been a significant interest in developing hand-optimized high-performance computing solutions. On the systems side, following the big data movement and to bring parallel computing to the masses, researchers have proposed several graph processing and management systems to handle large-scale graphs. Hand optimized HPC approaches require high expertise and are expensive to maintain and develop, and graph processing frameworks suffer from limited expressibility and performance. We propose Parallel Graph Algorithms by Blocks (PGAbB), a block-based graph algorithms framework for shared-memory, multi-core, multi-GPU machines. PGAbB offers a sweet spot between efficient parallelism and architecture agnostic algorithm design for a wide class of graph problems while performing close to hand-optimized HPC implementations.\\ While our PGAbB framework, as well as many other recent HPC graph-analytics frameworks, are highly tuned and able to run complex graph analytics in fractions of seconds on billion-edge graphs, there remains a gap in their end-to-end use. Despite the significant improvements that modern hardware and operating systems have made towards input and output, reading the graph from file systems easily takes thousands of times longer than running the computational kernel itself. This slowdown causes both a disconnect for end users and a loss of productivity for researchers and developers. We close this gap by providing a simple to use, small, header-only, and dependency-free C++11 library, PIGO, that brings I/O improvements to graph and sparse matrix systems. Using PIGO, we improve the end-to-end performance for state-of-the-art systems significantly---in many cases by over 40X.},
+}
+
+@Article{Acer2021,
+  author       = {Seher Acer and Erik G. Boman and Christian A. Glusa and Sivasankaran Rajamanickam},
+  date         = {2021-04},
+  journaltitle = {Parallel Computing},
+  title        = {Sphynx: A parallel multi-{GPU} graph partitioner for distributed-memory systems},
+  doi          = {10.1016/j.parco.2021.102769},
+  pages        = {102769},
+  abstract     = {Graph partitioning has been an important tool to partition the work among several processors to minimize the communication cost and balance the workload. While accelerator-based supercomputers are emerging to be the standard, the use of graph partitioning becomes even more important as applications are rapidly moving to these architectures. However, there is no distributed-memory-parallel, multi-GPU graph partitioner available for applications. We developed a spectral graph partitioner, Sphynx, using the portable, accelerator-friendly stack of the Trilinos framework. In Sphynx, we allow using different preconditioners and exploit their unique advantages. We use Sphynx to systematically evaluate the various algorithmic choices in spectral partitioning with a focus on the GPU performance. We perform those evaluations on two distinct classes of graphs: regular (such as meshes, matrices from finite element methods) and irregular (such as social networks and web graphs), and show that different settings and preconditioners are needed for these graph classes. The experimental results on the Summit supercomputer show that Sphynx is the fastest alternative on irregular graphs in an application-friendly setting and obtains a partitioning quality close to ParMETIS on regular graphs. When compared to nvGRAPH on a single GPU, Sphynx is faster and obtains better balance and better quality partitions. Sphynx provides a good and robust partitioning method across a wide range of graphs for applications looking for a GPU-based partitioner.},
+  publisher    = {Elsevier {BV}},
+}
+
+@Article{Tumurbaatar2021,
+  author       = {Altansuren Tumurbaatar and Matthew J. Sottile},
+  date         = {2021},
+  journaltitle = {Journal of Graph Algorithms and Applications},
+  title        = {Algebraic Algorithms for Betweenness Centrality and 2 Percolation Centrality},
+  doi          = {10.7155/jgaa.00558},
+  number       = {1},
+  pages        = {241--261},
+  volume       = {25},
+  abstract     = {In this paper, we explored different ways to write the algebraic version of betweenness centrality algorithm. Particularly, we focused on Brandes’ algorithm [8]. We aimed for algebraic betweenness centrality that can be parallelized easily. We proposed 3-tuple geodetic semiring as an extension to the usual geodetic semiring with 2-tuples [6]. Using the 3-tuple geodetic semiring, Dijkstra’s and Brandes’ algorithm, we wrote more concise and general algebraic betweenness centrality (ABC) algorithm which is valid for weighted and directed graphs. We also proposed an alternative version of ABC using the usual geodetic semiring with 2-tuple where we used a simple way to construct shortest path tree after computing shortest path distances in the usual geodetic semiring. This allows us to avoid computational complexity of ABC implementation using 3-tuple geodetic semiring. We used numba [18] to optimize and parallelize ABC. We evaluated the performance of ABC using 2-tuple geodetic semiring as compared to NetworkX [16], a common python package for graph algorithms. We did scalability experiments on parallel ABC and showed its total speedup. We also showed that with small modification, ABC can be adapted to algebraicly compute other centrality measures such as percolation centrality.},
+  publisher    = {Journal of Graph Algorithms and Applications},
+}
+
+@InProceedings{Wu2021a,
+  author    = {Junwei Wu and Jingwei Sun and Hao Sun and Guangzhong Sun},
+  booktitle = {2021 {IEEE} International Symposium on Performance Analysis of Systems and Software ({ISPASS})},
+  date      = {2021-03},
+  title     = {Performance Analysis of Graph Neural Network Frameworks},
+  doi       = {10.1109/ispass51385.2021.00029},
+  publisher = {{IEEE}},
+  abstract  = {Graph neural networks (GNNs) are effective models to address learning problems on graphs and have been successfully applied to numerous domains. To improve the productivity of implementing GNNs, various GNN programming frameworks have been developed. Both the effectiveness (accuracy, loss, etc) and the performance (latency, bandwidth, etc) are essential metrics to evaluate the implementation of GNNs. There are many comparative studies related to the effectiveness of different GNN models on domain tasks. However, the performance characteristics of different GNN frameworks are still lacking. In this study, we evaluate the effectiveness and performance of six popular GNN models, GCN, GIN, GAT, GraphSAGE, MoNet, and GatedGCN, across several common benchmarks under two popular GNN frameworks, PyTorch Geometric and Deep Graph Library. We analyze the training time, GPU utilization, and memory usage of different evaluation settings and the performance of models across different hardware configurations under the two frameworks. Our evaluation provides in-depth observations of performance bottlenecks of GNNs and the performance differences between the two popular GNN frameworks. Our work helps GNN researchers understand the performance differences of the popular GNN frameworks, and gives guidelines for developers to find potential performance bugs of frameworks and optimization possibilities of GNNs.},
+}
+
+@Article{Sethi2021,
+  author       = {Jasleen Kaur Sethi and Mamta Mittal},
+  date         = {2021-04},
+  journaltitle = {Earth Science Informatics},
+  title        = {An efficient correlation based adaptive {LASSO} regression method for air quality index prediction},
+  doi          = {10.1007/s12145-021-00618-1},
+  abstract     = {One of the adverse effects of population growth and urbanization in developing countries is air pollution. Due to which more than 4.2 million deaths occur every year. Therefore, prediction of air quality is a subject worth in-depth research and has received substantial interest in the recent years from academic units and the government. Feature selection methods are applied before prediction to identify potentially significant predictors based on exploratory data analysis. In this research work, a feature selection method based on Least Absolute Selection and Shrinkage Operator (LASSO) named Correlation based Adaptive LASSO (CbAL) Regression method has been proposed for predicting the air quality. For the experimental evaluation, cross regional data, including the concentration of pollutants and the meteorological factors of Delhi and its surrounding cities, has been taken from the Central Pollution Control Board (CPCB) Website. Further, to validate this feature selection method, various machine learning techniques have been taken into consideration and some preventive measures have been suggested to enhance the air quality. Feature selection analysis reveals that carbon monoxide, sulphur dioxide, nitrogen dioxide and Ozone are the most important factors for forecasting the air quality and the pollutants found in the cities of Noida and Gurugram have a more substantial impact on the Air Quality Index of Delhi than other surrounding cities. The model evaluation depicts that the feature subset extracted by the proposed method performs better than the complete dataset and the subset extracted by LASSO Regression with an average classification accuracy of 78\%. The findings of this study can help to identify important contributors of AQI so that viable measures to improve the air quality of Delhi can be carried out.},
+  publisher    = {Springer Science and Business Media {LLC}},
+}
+
+@Article{Mlakar2021,
+  author   = {Daniel Mlakar and Martin Winter and Mathias Parger and Markus Steinberger},
+  date     = {2021},
+  title    = {Speculative Parallel Reverse Cuthill-McKeeReordering on Multi- and Many-core Architectures},
+  url      = {https://www.markussteinberger.net/papers/SpeculativeRCM.pdf},
+  abstract = {Bandwidth reduction of sparse matrices is used to reduce fill-in of linear solvers and to increase performance of other sparse matrix operations, e.g., sparse matrix vector multiplication in iterative solvers. To compute a bandwidth reducing permutation, Reverse Cuthill-McKee (RCM) reordering is often applied, which is challenging to parallelize, as its core is inherently serial. As many-core architectures, like the GPU, offer subpar single-threading performance and are typically only connected to high-performance CPU cores via a slow memory bus, neither computing RCM on the GPU nor moving the data to the CPU are viable options. Nevertheless, reordering matrices, potentially multiple times in-between operations, might be essential for high throughput. Still, to the best of our knowledge, we are the first to propose an RCM implementation that can execute on multicore CPUs and many-core GPUs alike, moving the computation to the data rather than vice versa.\\ Our algorithm parallelizes RCM into mostly independent batches of nodes. For every batch, a single CPU-thread/a GPU thread-block speculatively discovers child nodes and sorts them according to the RCM algorithm. Before writing their permutation, we re-evaluate the discovery and build new batches. To increase parallelism and reduce dependencies, we create a signaling chain along successive batches and introduce early signaling conditions. In combination with a parallel work queue, new batches are started in order and the resulting RCM permutation is identical to the ground-truth single-threaded algorithm.\\ We propose the first RCM implementation that runs on the GPU. It achieves several orders of magnitude speed-up over NVIDIA’s single-threaded cuSolver RCM implementation and is significantly faster than previous parallel CPU approaches. Our results are especially significant for many-core architectures, as it is now possible to include RCM reordering into sequences of sparse matrix operations without major performance loss.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
