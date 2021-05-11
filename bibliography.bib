@@ -16188,6 +16188,53 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   abstract  = {This chapter reviews the properties of global spectral methods and suggests ways of their efficient parallel implementation when applied to the Navier-Stokes equations governing incompressible fluid flows. It formulates the governing equations for incompressible fluid flows, and presents an efficient high-order accuracy time-stepping scheme. The chapter presents examples of simulations of turbulence in simple geometries and of unsteady laminar flows in complex geometries obtained using conventional supercomputers and hypercube computers. It reviews the spectral element discretization appropriate for the formulation. The spectral accuracy is recovered if an elemental interface passes exactly through the sharp corner. A row of three-dimensional spectral elements is considered as computational domain with periodic boundary conditions imposed on all sides. Similar Fourier pseudospectral simulations of a Beltrami flow performed on a 128-node and on a 1024-node Ncube are reported in Pelz. Spectral element simulations are capable of resolving precisely the Hopf bifurcation that the flow undergoes as the Reynolds number increases.},
 }
 
+@Article{Chen2021b,
+  author       = {Jiong Chen and Florian Schäfer and Jin Huang and Mathieu Desbrun},
+  date         = {2021},
+  journaltitle = {{ACM} Transactions on Graphics},
+  title        = {Multiscale Cholesky Preconditioning for Ill-conditioned Problems},
+  doi          = {10.1145/3450626.3459851},
+  number       = {4},
+  url          = {http://www.geometry.caltech.edu/pubs/CSHD21.pdf},
+  volume       = {40},
+  abstract     = {Many computer graphics applications boil down to solving sparse systems of linear equations. While the current arsenal of numerical solvers available in various specialized libraries and for different computer architectures often allow efficient and scalable solutions to image processing, modeling and simulation applications, an increasing number of graphics problems face large-scale and ill-conditioned sparse linear systems -- a numerical challenge which typically chokes both direct factorizations (due to high memory requirements) and iterative solvers (because of slow convergence). We propose a novel approach to the efficient preconditioning of such problems which often emerge from the discretization over unstructured meshes of partial differential equations with heterogeneous and anisotropic coefficients. Our numerical approach consists in simply performing a fine-to-coarse ordering and a multiscale sparsity pattern of the degrees of freedom, using which we apply an incomplete Cholesky factorization. By further leveraging supernodes for cache coherence, graph coloring to improve parallelism and partial diagonal shifting to remedy negative pivots, we obtain a preconditioner which, combined with a conjugate gradient solver, far exceeds the performance of existing carefully-engineered libraries for graphics problems involving bad mesh elements and/or high contrast of coefficients. We also back the core concepts behind our simple solver with theoretical foundations linking the recent method of operator-adapted wavelets used in numerical homogenization to the traditional Cholesky factorization of a matrix, providing us with a clear bridge between incomplete Cholesky factorization and multiscale analysis that we leverage numerically.},
+}
+
+@InCollection{Costanzo2021,
+  author    = {Manuel Costanzo and Enzo Rucci and Ulises Costi and Franco Chichizola and Marcelo Naiouf},
+  booktitle = {Communications in Computer and Information Science},
+  date      = {2021},
+  title     = {Comparison of {HPC} Architectures for Computing All-Pairs Shortest Paths. Intel Xeon Phi {KNL} vs {NVIDIA} Pascal},
+  doi       = {10.1007/978-3-030-75836-3_3},
+  pages     = {37--49},
+  publisher = {Springer International Publishing},
+  abstract  = {Today, one of the main challenges for high-performance computing systems is to improve their performance by keeping energy consumption at acceptable levels. In this context, a consolidated strategy consists of using accelerators such as GPUs or many-core Intel Xeon Phi processors. In this work, devices of the NVIDIA Pascal and Intel Xeon Phi Knights Landing architectures are described and compared. Selecting the Floyd-Warshall algorithm as a representative case of graph and memory-bound applications, optimized implementations were developed to analyze and compare performance and energy efficiency on both devices. As it was expected, Xeon Phi showed superior when considering double-precision data. However, contrary to what was considered in our preliminary analysis, it was found that the performance and energy efficiency of both devices were comparable using single-precision datatype.},
+}
+
+@Article{Huang2021a,
+  author      = {Qijing Huang and Minwoo Kang and Grace Dinh and Thomas Norell and Aravind Kalaiah and James Demmel and John Wawrzynek and Yakun Sophia Shao},
+  date        = {2021-05-05},
+  title       = {CoSA: Scheduling by Constrained Optimization for Spatial Accelerators},
+  eprint      = {2105.01898},
+  eprintclass = {cs.LG},
+  eprinttype  = {arXiv},
+  abstract    = {Recent advances in Deep Neural Networks (DNNs) have led to active development of specialized DNN accelerators, many of which feature a large number of processing elements laid out spatially, together with a multi-level memory hierarchy and flexible interconnect. While DNN accelerators can take advantage of data reuse and achieve high peak throughput, they also expose a large number of runtime parameters to the programmers who need to explicitly manage how computation is scheduled both spatially and temporally. In fact, different scheduling choices can lead to wide variations in performance and efficiency, motivating the need for a fast and efficient search strategy to navigate the vast scheduling space. To address this challenge, we present CoSA, a constrained-optimization-based approach for scheduling DNN accelerators. As opposed to existing approaches that either rely on designers' heuristics or iterative methods to navigate the search space, CoSA expresses scheduling decisions as a constrained-optimization problem that can be deterministically solved using mathematical optimization techniques. Specifically, CoSA leverages the regularities in DNN operators and hardware to formulate the DNN scheduling space into a mixed-integer programming (MIP) problem with algorithmic and architectural constraints, which can be solved to automatically generate a highly efficient schedule in one shot. We demonstrate that CoSA-generated schedules significantly outperform state-of-the-art approaches by a geometric mean of up to 2.5x across a wide range of DNN networks while improving the time-to-solution by 90x.},
+  file        = {:http\://arxiv.org/pdf/2105.01898v1:PDF},
+  keywords    = {cs.LG, cs.AR},
+}
+
+@Article{Ceccon2021,
+  author      = {Francesco Ceccon and Ruth Misener},
+  date        = {2021-05-04},
+  title       = {Solving the pooling problem at scale with extensible solver GALINI},
+  eprint      = {2105.01687},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {This paper presents a Python library to model pooling problems, a class of network flow problems with many engineering applications. The library automatically generates a mixed-integer quadratically-constrained quadratic optimization problem from a given network structure. The library additionally uses the network structure to build 1) a convex linear relaxation of the non-convex quadratic program and 2) a mixed-integer linear restriction of the problem. We integrate the pooling network library with galini, an open-source extensible global solver for quadratic optimization. We demonstrate galini's extensible characteristics by using the pooling library to develop two galini plug-ins: 1) a cut generator plug-in that adds valid inequalities in the galini cut loop and 2) a primal heuristic plug-in that uses the mixed-integer linear restriction. We test galini on large scale pooling problems and show that, thanks to the good upper bound provided by the mixed-integer linear restriction and the good lower bounds provided by the convex relaxation, we obtain optimality gaps that are competitive with Gurobi 9.1 on the largest problem instances.},
+  file        = {:http\://arxiv.org/pdf/2105.01687v1:PDF},
+  keywords    = {math.OC},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
