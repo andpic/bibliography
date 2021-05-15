@@ -16235,6 +16235,67 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   keywords    = {math.OC},
 }
 
+@Article{Berner2021,
+  author      = {Julius Berner and Philipp Grohs and Gitta Kutyniok and Philipp Petersen},
+  date        = {2021-05-09},
+  title       = {The Modern Mathematics of Deep Learning},
+  eprint      = {2105.04026},
+  eprintclass = {cs.LG},
+  eprinttype  = {arXiv},
+  abstract    = {We describe the new field of mathematical analysis of deep learning. This field emerged around a list of research questions that were not answered within the classical framework of learning theory. These questions concern: the outstanding generalization power of overparametrized neural networks, the role of depth in deep architectures, the apparent absence of the curse of dimensionality, the surprisingly successful optimization performance despite the non-convexity of the problem, understanding what features are learned, why deep architectures perform exceptionally well in physical problems, and which fine aspects of an architecture affect the behavior of a learning task in which way. We present an overview of modern approaches that yield partial answers to these questions. For selected approaches, we describe the main ideas in more detail.},
+  file        = {:http\://arxiv.org/pdf/2105.04026v1:PDF},
+  keywords    = {cs.LG, stat.ML},
+}
+
+@Article{Heirman2021,
+  author       = {Wim Heirman and Stijn Eyerman and Kristof Du Bois and Ibrahim Hur},
+  date         = {2021-04},
+  journaltitle = {{ACM} Transactions on Architecture and Code Optimization},
+  title        = {Automatic Sublining for Efficient Sparse Memory Accesses},
+  doi          = {10.1145/3452141},
+  number       = {3},
+  pages        = {1--23},
+  volume       = {18},
+  abstract     = {Sparse memory accesses, which are scattered accesses to single elements of a large data structure, are a challenge for current processor architectures. Their lack of spatial and temporal locality and their irregularity makes caches and traditional stream prefetchers useless. Furthermore, performing standard caching and prefetching on sparse accesses wastes precious memory bandwidth and thrashes caches, deteriorating performance for regular accesses. Bypassing prefetchers and caches for sparse accesses, and fetching only a single element (e.g., 8 B) from main memory (subline access), can solve these issues.\\ Deciding which accesses to handle as sparse accesses and which as regular cached accesses, is a challenging task, with a large potential impact on performance. Not only is performance reduced by treating sparse accesses as regular accesses, not caching accesses that do have locality also negatively impacts performance by significantly increasing their latency and bandwidth consumption. Furthermore, this decision depends on the dynamic environment, such as input set characteristics and system load, making a static decision by the programmer or compiler suboptimal.\\ We propose the Instruction Spatial Locality Estimator (ISLE), a hardware detector that finds instructions that access isolated words in a sea of unused data. These sparse accesses are dynamically converted into uncached subline accesses, while keeping regular accesses cached. ISLE does not require modifying source code or binaries, and adapts automatically to a changing environment (input data, available bandwidth, etc.). We apply ISLE to a graph analytics processor running sparse graph workloads, and show that ISLE outperforms the performance of no subline accesses, manual sublining, and prior work on detecting sparse accesses.},
+  publisher    = {Association for Computing Machinery ({ACM})},
+}
+
+@Article{Zhou2021a,
+  author       = {Yi Zhou and Weibo Lin and Jin-Kao Hao and Mingyu Xiao and Yan Jin},
+  date         = {2021-05},
+  journaltitle = {European Journal of Operational Research},
+  title        = {An effective branch-and-bound algorithm for the maximum s-bundle problem},
+  doi          = {10.1016/j.ejor.2021.05.001},
+  abstract     = {An $s$-bundle (where $s$ is a positive integer) is a connected graph, the vertex connectivity of which is at least $n-s$, where $n$ is the number of vertices in the graph. As a relaxation of the classical clique model, the $s$-bundle is relevant for representing cohesive groups with an emphasis on the connectivity of members; thus, it is of great practical importance. In this work, we investigate the fundamental problem of finding the maximum $s$-bundle from a given graph and present an effective branch-and-bound algorithm for solving this NP-hard problem. The proposed algorithm is distinguished owing to its new multi-branching rules, graph coloring-based bounding technique, and reduction rules using structural information. The experiments indicate that the algorithm outperforms the best-known approaches on a wide range of well-known benchmark graphs for different $s$ values. In particular, compared with the popular Russian Doll Search algorithm, the proposed algorithm almost doubles the success rate of solving large social networks in an hour when $s=5$.},
+  publisher    = {Elsevier {BV}},
+}
+
+@InProceedings{Ziogas2021,
+  author    = {Alexandros Nikolaos Ziogas and Tal Ben-Nun and Timo Schneider and Torsten Hoefler},
+  booktitle = {Proceedings of the 2021 International Conference on Supercomputing},
+  date      = {2021},
+  title     = {{NPBench}: A Benchmarking Suite for High-Performance {NumPy}},
+  series    = {ICS ’21},
+  abstract  = {Python, already one of the most popular languages for scientific computing, has made significant inroads in High Performance Computing (HPC). At the center of Python’s ecosystem is NumPy, an efficient implementation of the multi-dimensional array (tensor) structure, together with basic arithmetic and linear algebra. Compared to traditional HPC languages, the relatively low performance of Python and NumPy has spawned significant research in compilers and frameworks that decouple Python’s compact representation from the underlying implementation. However, it is challenging to compare language compatibility and performance among different frameworks and architectures without a standard set of benchmarks and metrics. To that end, we introduce NPBench, a set of NumPy code samples representing a large variety of HPC applications. We use NPBench to test popular NumPy-accelerating compilers and frameworks on a variety of metrics. NPBench will guide both end-users and framework developers focusing on performance and will drive further use of Python in the high-performance scientific domains},
+}
+
+@InProceedings{Pandey2021,
+  author    = {Prashant Pandey and Brian Wheatman and Helen Xu and Aydin Buluç},
+  booktitle = {Proceedings of the ACM SIGMOD/PODS Conference},
+  date      = {2021},
+  title     = {Terrace: A Hierarchical Graph Container for Skewed Dynamic Graphs},
+  series    = {SIGMOD '21},
+  abstract  = {Various applications model problems as streaming graphs, which need to quickly apply a stream of updates and run algorithms on the updated graph. Furthermore, many dynamic real-world graphs, such as social networks, follow a skewed distribution of vertex degrees, where there are a few high-degree vertices and many low-degree vertices.\\ Existing static graph-processing systems optimized for graph skewness achieve high performance and low space usage by preprocessing a cache-efficient graph partitioning based on vertex degree. In the streaming setting, the whole graph is not available upfront, however, so finding an optimal partitioning is not feasible in the presence of updates. As a result, existing streaming graph-processing systems take a "one-size-fits-all" approach, leaving performance on the table.\\ We present Terrace, a system for streaming graphs that uses a hierarchical data structure design to store a vertex’s neighbors in different data structures depending on the degree of the vertex. This multi-level structure enables Terrace to dynamically partition vertices based on their degrees and adapt to skewness in the underlying graph.\\ Our experiments show that Terrace supports faster batch insertions for batch sizes up to 1M when compared to Aspen, a state-ofthe-art graph streaming system. On graph query algorithms, Terrace is between 1.7$\times$--2.6$\times$ faster than Aspen and between 0.5$\times$--1.3$\times$ as fast as Ligra, a state-of-the-art static graph-processing system},
+}
+
+@PhdThesis{Saez2021,
+  author      = {Rocío Carratalá Sáez},
+  date        = {2021},
+  institution = {Universitat Jaume I},
+  title       = {Analysis of Parallelization Strategies in the context of Hierarchical Matrix Factorizations},
+  abstract    = {$\mathcal{H}$-Matrices were born as a powerful numerical tool to tackle applications whose data generates structures that end laying in between dense and sparse scenarios. The key benefit that makes $\mathcal{H}$-Matrices valuable is the savings that offer both in terms of storage and computations, in such a way that they are reduced to log-linear costs.\\ The key behind the success of $\mathcal{H}$-Matrices is the controllable compression they offer: by choosing the appropriate admissibility condition to discern important versus dispensable data and designing good partitioning algorithms, one can choose the accuracy loss that wants to assume in exchange for computations acceleration and memory consumption reduction. This is the reason why $\mathcal{H}$-Matrices are specially suitable for boundary element and finite element methods where the pursued result does not need to be totally accurate, but it is important to have it ready as fast as possible, as it can determine, for example, whether an engineering design is ready to be produced or needs to be improved.\\ On their side, task-parallelism has proved sufficiently its benefits when being employed to optimize the parallel execution when solving linear systems of equations. Particularly, tiled or block algorithms combined with this parallelism strategy have widely been (and are still) employed to provide the scientific community with powerful and efficient parallel solutions for multicore architectures.\\ The main objective of this thesis is designing, implementing and evaluating parallel algorithms to operate efficiently with $\mathcal{H}$-Matrices in multicore architectures. To this end, the first contribution we describe is a study in which we prove that task-parallelism is suitable for operating with HMatrices, by simplifying as much as possible the $\mathcal{H}$-Arithmetic scenario. Next, we describe in detail the difficulties that need to be addressed when parallelizing the complex implementations that operate with this type of matrices. Afterwards, we explain how the new features included in OmpSs-2 programming model helped us avoiding the majority of the described issues and thus we were able to attain a fair efficiency when executing a task-parallel $\mathcal{H}$-LU. Lastly, we illustrate how we explored a regularized version of $\mathcal{H}$-Matrices, which we call Tile $\mathcal{H}$-Matrices, in which we are able to maintain competitive-wit$\mathcal{H}$-pure-$\mathcal{H}$-Matrices precision and compression ratios, while leveraging the well known benefits of tile algorithms applied to matrices provided with (regular) tiles (this is, mostly homogeneous block dimensions).},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
