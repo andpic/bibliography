@@ -16296,6 +16296,50 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   abstract    = {$\mathcal{H}$-Matrices were born as a powerful numerical tool to tackle applications whose data generates structures that end laying in between dense and sparse scenarios. The key benefit that makes $\mathcal{H}$-Matrices valuable is the savings that offer both in terms of storage and computations, in such a way that they are reduced to log-linear costs.\\ The key behind the success of $\mathcal{H}$-Matrices is the controllable compression they offer: by choosing the appropriate admissibility condition to discern important versus dispensable data and designing good partitioning algorithms, one can choose the accuracy loss that wants to assume in exchange for computations acceleration and memory consumption reduction. This is the reason why $\mathcal{H}$-Matrices are specially suitable for boundary element and finite element methods where the pursued result does not need to be totally accurate, but it is important to have it ready as fast as possible, as it can determine, for example, whether an engineering design is ready to be produced or needs to be improved.\\ On their side, task-parallelism has proved sufficiently its benefits when being employed to optimize the parallel execution when solving linear systems of equations. Particularly, tiled or block algorithms combined with this parallelism strategy have widely been (and are still) employed to provide the scientific community with powerful and efficient parallel solutions for multicore architectures.\\ The main objective of this thesis is designing, implementing and evaluating parallel algorithms to operate efficiently with $\mathcal{H}$-Matrices in multicore architectures. To this end, the first contribution we describe is a study in which we prove that task-parallelism is suitable for operating with HMatrices, by simplifying as much as possible the $\mathcal{H}$-Arithmetic scenario. Next, we describe in detail the difficulties that need to be addressed when parallelizing the complex implementations that operate with this type of matrices. Afterwards, we explain how the new features included in OmpSs-2 programming model helped us avoiding the majority of the described issues and thus we were able to attain a fair efficiency when executing a task-parallel $\mathcal{H}$-LU. Lastly, we illustrate how we explored a regularized version of $\mathcal{H}$-Matrices, which we call Tile $\mathcal{H}$-Matrices, in which we are able to maintain competitive-wit$\mathcal{H}$-pure-$\mathcal{H}$-Matrices precision and compression ratios, while leveraging the well known benefits of tile algorithms applied to matrices provided with (regular) tiles (this is, mostly homogeneous block dimensions).},
 }
 
+@Article{Gowda2021,
+  author      = {Shashi Gowda and Yingbo Ma and Alessandro Cheli and Maja Gwozdz and Viral B. Shah and Alan Edelman and Christopher Rackauckas},
+  date        = {2021-05-09},
+  title       = {High-performance symbolic-numerics via multiple dispatch},
+  eprint      = {2105.03949},
+  eprintclass = {cs.CL},
+  eprinttype  = {arXiv},
+  abstract    = {As mathematical computing becomes more democratized in high-level languages, high-performance symbolic-numeric systems are necessary for domain scientists and engineers to get the best performance out of their machine without deep knowledge of code optimization. Naturally, users need different term types either to have different algebraic properties for them, or to use efficient data structures. To this end, we developed Symbolics.jl, an extendable symbolic system which uses dynamic multiple dispatch to change behavior depending on the domain needs. In this work we detail an underlying abstract term interface which allows for speed without sacrificing generality. We show that by formalizing a generic API on actions independent of implementation, we can retroactively add optimized data structures to our system without changing the pre-existing term rewriters. We showcase how this can be used to optimize term construction and give a 113x acceleration on general symbolic transformations. Further, we show that such a generic API allows for complementary term-rewriting implementations. We demonstrate the ability to swap between classical term-rewriting simplifiers and e-graph-based term-rewriting simplifiers. We showcase an e-graph ruleset which minimizes the number of CPU cycles during expression evaluation, and demonstrate how it simplifies a real-world reaction-network simulation to halve the runtime. Additionally, we show a reaction-diffusion partial differential equation solver which is able to be automatically converted into symbolic expressions via multiple dispatch tracing, which is subsequently accelerated and parallelized to give a 157x simulation speedup. Together, this presents Symbolics.jl as a next-generation symbolic-numeric computing environment geared towards modeling and simulation.},
+  file        = {:http\://arxiv.org/pdf/2105.03949v2:PDF},
+  keywords    = {cs.CL, cs.MS, cs.SC, D.3.3; I.1.1; I.1.3},
+}
+
+@Article{Aldbaissy2021,
+  author       = {Rim Aldbaissy and Fr{\'{e}}d{\'{e}}ric Hecht and Gihane Mansour and Toni Sayah and Pierre Henri Tournier},
+  date         = {2021-05},
+  journaltitle = {International Journal of Computer Mathematics},
+  title        = {Scalable domain decomposition preconditioner for Navier{\textendash}Stokes equations coupled with the heat equation},
+  doi          = {10.1080/00207160.2021.1925888},
+  pages        = {1--16},
+  abstract     = {In this article, we study the thermal instability that appears from time to time while printing using a 3D printer. To solve the semi-discretized problem at each time-step, we use a scalable parallel algorithm based on a two-level Optimized Restricted Additive Schwarz (ORAS) domain decomposition preconditioner for GMRES. Parallel scalability tests are conducted with comparison against the parallel direct solver MUMPS and the one-level Schwarz method, which show lack of robustness for larger number of processors. 2D numerical tests illustrate that the number of iterations to reach GMRES convergence depends on the state of the physical simulation during time, and that the second level of preconditioning is needed to achieve robustness.},
+  publisher    = {Informa {UK} Limited},
+}
+
+@Article{Park2021,
+  author       = {Jueon Park and Kyungyong Lee},
+  date         = {2021-05},
+  journaltitle = {Cluster Computing},
+  title        = {S-{MPEC}: Sparse Matrix Multiplication Performance Estimator on a Cloud Environment},
+  doi          = {10.1007/s10586-021-03287-3},
+  abstract     = {Sparse matrix multiplication (SPMM) is widely used for various machine learning algorithms. As the applications of SPMM using large-scale datasets become prevalent, executing SPMM jobs on an optimized setup has become very important. Execution environments of distributed SPMM tasks on cloud resources can be set up in diverse ways with respect to the input sparse datasets, distinct SPMM implementation methods, and the choice of cloud instance types. In this paper, we propose S-MPEC which can predict latency to complete various SPMM tasks using Apache Spark on distributed cloud environments. We first characterize various distributed SPMM implementations on Apache Spark. Considering the characters and hardware specifications on the cloud, we propose unique features to build a GB-regressor model and Bayesian optimizations. Our proposed S-MPEC model can predict latency on an arbitrary SPMM task accurately and recommend an optimal implementation method. Thorough evaluation of the proposed system reveals that a user can expect 44\% less latency to complete SPMM tasks compared with the native SPMM implementations in Apache Spark.},
+  publisher    = {Springer Science and Business Media {LLC}},
+}
+
+@Article{Eftekhari2021,
+  author       = {Aryan Eftekhari and Dimosthenis Pasadakis and Matthias Bollhöfer and Simon Scheidegger and Olaf Schenk},
+  date         = {2021-05},
+  journaltitle = {Journal of Computational Science},
+  title        = {Block-Enhanced Precision Matrix Estimation for Large-Scale Datasets},
+  doi          = {10.1016/j.jocs.2021.101389},
+  pages        = {101389},
+  abstract     = {The $\mathcal{l}_1$-regularized Gaussian maximum likelihood method is a common approach for sparse precision matrix estimation, but one that poses a computational challenge for high-dimensional datasets. We present a novel $\mathcal{l}_1$-regularized maximum likelihood method for performant large-scale sparse precision matrix estimation utilizing the block structures in the underlying computations. We identify the computational bottlenecks and contribute a block coordinate descent update as well as a block approximate matrix inversion routine, which is then parallelized using a shared-memory scheme. We demonstrate the effectiveness, accuracy, and performance of these algorithms. Our numerical examples and comparative results with various modern open-source packages reveal that these precision matrix estimation methods can accelerate the computation of covariance matrices by two to three orders of magnitude, while keeping memory requirements modest. Furthermore, we conduct large-scale case studies for applications from finance and medicine with several thousand random variables to demonstrate applicability for real-world datasets.},
+  publisher    = {Elsevier {BV}},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
