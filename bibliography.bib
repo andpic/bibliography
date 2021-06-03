@@ -16089,15 +16089,15 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   publisher    = {Public Library of Science ({PLoS})}
 }
 
-@Article{Kronbichler2021,
+@article{Kronbichler2021,
   author   = {Martin Kronbichler and Dmytro Sashko and Peter Munch},
   title    = {Enhancing data locality of the conjugate gradient method for high-order matrix-free finite-element implementations},
   abstract = {This work presents a variant of the conjugate gradient (CG) method with minimal memory access for the vector operations, targeting high-order finite-element schemes with fast matrix-free operator evaluation and cheap preconditioners like the matrix diagonal. The algorithm relies on a data-dependency analysis and interleaves the vector updates and inner products in a CG iteration with the matrix-vector product. As a result, around 90\% of the vector entries of the three active vectors of the CG method are transferred from slow RAM memory exactly once per iteration, with all additional access hitting fast cache memory. Node-level performance analyses and scaling studies on up to 147k cores show that the new method is around two times faster than a standard CG solver as well as optimized pipelined CG and s-step CG methods for large sizes that exceed processor caches, and provides similar performance near the strong scaling limit.},
   journal  = {The International Journal of High Performance Computing Applications},
-  year     = {2021},
+  year     = {2021}
 }
 
-@Article{Chen2021a,
+@article{Chen2021a,
   author      = {Peng Chen and Mohamed Wahib and Xiao Wang and Shinichiro Takizawa and Takahiro Hirofuchi and Hirotaka Ogawa and Satoshi Matsuoka},
   date        = {2021-04-27},
   title       = {Performance Portable Back-projection Algorithms on {CPUs}: Agnostic Data Locality and Vectorization Optimizations},
@@ -16107,20 +16107,20 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   eprinttype  = {arXiv},
   abstract    = {Computed Tomography (CT) is a key 3D imaging technology that fundamentally relies on the compute-intense back-projection operation to generate 3D volumes. GPUs are typically used for back-projection in production CT devices. However, with the rise of power-constrained micro-CT devices, and also the emergence of CPUs comparable in performance to GPUs, back-projection for CPUs could become favorable. Unlike GPUs, extracting parallelism for back-projection algorithms on CPUs is complex given that parallelism and locality are not explicitly defined and controlled by the programmer, as is the case when using CUDA for instance. We propose a collection of novel back-projection algorithms that reduce the arithmetic computation, robustly enable vectorization, enforce a regular memory access pattern, and maximize the data locality. We also implement the novel algorithms as efficient back-projection kernels that are performance portable over a wide range of CPUs. Performance evaluation using a variety of CPUs from different vendors and generations demonstrates that our back-projection implementation achieves on average 5.2x speedup over the multi-threaded implementation of the most widely used, and optimized, open library. With a state-of-the-art CPU, we reach performance that rivals top-performing GPUs.},
   file        = {:http\://arxiv.org/pdf/2104.13248v1:PDF},
-  keywords    = {cs.DC},
+  keywords    = {cs.DC}
 }
 
-@InProceedings{Yasar2021,
+@inproceedings{Yasar2021,
   author    = {Abdurrahman Yaşar and Kasimir Gabert and Ümit V. {\c{C}}atalyürek},
   booktitle = {Proceedings of the 18th {ACM} International Conference on Computing Frontiers},
   date      = {2021-05},
   title     = {Parallel graph algorithms by blocks},
   doi       = {10.1145/3457388.3459987},
   publisher = {{ACM}},
-  abstract  = {In today's data-driven world and heterogeneous computing environments, processing large-scale graphs in an architecture agnostic manner has become more crucial than ever before. In terms of graph analytics frameworks, on the one side, there has been a significant interest in developing hand-optimized high-performance computing solutions. On the systems side, following the big data movement and to bring parallel computing to the masses, researchers have proposed several graph processing and management systems to handle large-scale graphs. Hand optimized HPC approaches require high expertise and are expensive to maintain and develop, and graph processing frameworks suffer from limited expressibility and performance. We propose Parallel Graph Algorithms by Blocks (PGAbB), a block-based graph algorithms framework for shared-memory, multi-core, multi-GPU machines. PGAbB offers a sweet spot between efficient parallelism and architecture agnostic algorithm design for a wide class of graph problems while performing close to hand-optimized HPC implementations.\\ While our PGAbB framework, as well as many other recent HPC graph-analytics frameworks, are highly tuned and able to run complex graph analytics in fractions of seconds on billion-edge graphs, there remains a gap in their end-to-end use. Despite the significant improvements that modern hardware and operating systems have made towards input and output, reading the graph from file systems easily takes thousands of times longer than running the computational kernel itself. This slowdown causes both a disconnect for end users and a loss of productivity for researchers and developers. We close this gap by providing a simple to use, small, header-only, and dependency-free C++11 library, PIGO, that brings I/O improvements to graph and sparse matrix systems. Using PIGO, we improve the end-to-end performance for state-of-the-art systems significantly---in many cases by over 40X.},
+  abstract  = {In today's data-driven world and heterogeneous computing environments, processing large-scale graphs in an architecture agnostic manner has become more crucial than ever before. In terms of graph analytics frameworks, on the one side, there has been a significant interest in developing hand-optimized high-performance computing solutions. On the systems side, following the big data movement and to bring parallel computing to the masses, researchers have proposed several graph processing and management systems to handle large-scale graphs. Hand optimized HPC approaches require high expertise and are expensive to maintain and develop, and graph processing frameworks suffer from limited expressibility and performance. We propose Parallel Graph Algorithms by Blocks (PGAbB), a block-based graph algorithms framework for shared-memory, multi-core, multi-GPU machines. PGAbB offers a sweet spot between efficient parallelism and architecture agnostic algorithm design for a wide class of graph problems while performing close to hand-optimized HPC implementations.\\ While our PGAbB framework, as well as many other recent HPC graph-analytics frameworks, are highly tuned and able to run complex graph analytics in fractions of seconds on billion-edge graphs, there remains a gap in their end-to-end use. Despite the significant improvements that modern hardware and operating systems have made towards input and output, reading the graph from file systems easily takes thousands of times longer than running the computational kernel itself. This slowdown causes both a disconnect for end users and a loss of productivity for researchers and developers. We close this gap by providing a simple to use, small, header-only, and dependency-free C++11 library, PIGO, that brings I/O improvements to graph and sparse matrix systems. Using PIGO, we improve the end-to-end performance for state-of-the-art systems significantly---in many cases by over 40X.}
 }
 
-@Article{Acer2021,
+@article{Acer2021,
   author       = {Seher Acer and Erik G. Boman and Christian A. Glusa and Sivasankaran Rajamanickam},
   date         = {2021-04},
   journaltitle = {Parallel Computing},
@@ -16128,10 +16128,10 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   doi          = {10.1016/j.parco.2021.102769},
   pages        = {102769},
   abstract     = {Graph partitioning has been an important tool to partition the work among several processors to minimize the communication cost and balance the workload. While accelerator-based supercomputers are emerging to be the standard, the use of graph partitioning becomes even more important as applications are rapidly moving to these architectures. However, there is no distributed-memory-parallel, multi-GPU graph partitioner available for applications. We developed a spectral graph partitioner, Sphynx, using the portable, accelerator-friendly stack of the Trilinos framework. In Sphynx, we allow using different preconditioners and exploit their unique advantages. We use Sphynx to systematically evaluate the various algorithmic choices in spectral partitioning with a focus on the GPU performance. We perform those evaluations on two distinct classes of graphs: regular (such as meshes, matrices from finite element methods) and irregular (such as social networks and web graphs), and show that different settings and preconditioners are needed for these graph classes. The experimental results on the Summit supercomputer show that Sphynx is the fastest alternative on irregular graphs in an application-friendly setting and obtains a partitioning quality close to ParMETIS on regular graphs. When compared to nvGRAPH on a single GPU, Sphynx is faster and obtains better balance and better quality partitions. Sphynx provides a good and robust partitioning method across a wide range of graphs for applications looking for a GPU-based partitioner.},
-  publisher    = {Elsevier {BV}},
+  publisher    = {Elsevier {BV}}
 }
 
-@Article{Tumurbaatar2021,
+@article{Tumurbaatar2021,
   author       = {Altansuren Tumurbaatar and Matthew J. Sottile},
   date         = {2021},
   journaltitle = {Journal of Graph Algorithms and Applications},
@@ -16141,54 +16141,54 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   pages        = {241--261},
   volume       = {25},
   abstract     = {In this paper, we explored different ways to write the algebraic version of betweenness centrality algorithm. Particularly, we focused on Brandes’ algorithm [8]. We aimed for algebraic betweenness centrality that can be parallelized easily. We proposed 3-tuple geodetic semiring as an extension to the usual geodetic semiring with 2-tuples [6]. Using the 3-tuple geodetic semiring, Dijkstra’s and Brandes’ algorithm, we wrote more concise and general algebraic betweenness centrality (ABC) algorithm which is valid for weighted and directed graphs. We also proposed an alternative version of ABC using the usual geodetic semiring with 2-tuple where we used a simple way to construct shortest path tree after computing shortest path distances in the usual geodetic semiring. This allows us to avoid computational complexity of ABC implementation using 3-tuple geodetic semiring. We used numba [18] to optimize and parallelize ABC. We evaluated the performance of ABC using 2-tuple geodetic semiring as compared to NetworkX [16], a common python package for graph algorithms. We did scalability experiments on parallel ABC and showed its total speedup. We also showed that with small modification, ABC can be adapted to algebraicly compute other centrality measures such as percolation centrality.},
-  publisher    = {Journal of Graph Algorithms and Applications},
+  publisher    = {Journal of Graph Algorithms and Applications}
 }
 
-@InProceedings{Wu2021a,
+@inproceedings{Wu2021a,
   author    = {Junwei Wu and Jingwei Sun and Hao Sun and Guangzhong Sun},
   booktitle = {2021 {IEEE} International Symposium on Performance Analysis of Systems and Software ({ISPASS})},
   date      = {2021-03},
   title     = {Performance Analysis of Graph Neural Network Frameworks},
   doi       = {10.1109/ispass51385.2021.00029},
   publisher = {{IEEE}},
-  abstract  = {Graph neural networks (GNNs) are effective models to address learning problems on graphs and have been successfully applied to numerous domains. To improve the productivity of implementing GNNs, various GNN programming frameworks have been developed. Both the effectiveness (accuracy, loss, etc) and the performance (latency, bandwidth, etc) are essential metrics to evaluate the implementation of GNNs. There are many comparative studies related to the effectiveness of different GNN models on domain tasks. However, the performance characteristics of different GNN frameworks are still lacking. In this study, we evaluate the effectiveness and performance of six popular GNN models, GCN, GIN, GAT, GraphSAGE, MoNet, and GatedGCN, across several common benchmarks under two popular GNN frameworks, PyTorch Geometric and Deep Graph Library. We analyze the training time, GPU utilization, and memory usage of different evaluation settings and the performance of models across different hardware configurations under the two frameworks. Our evaluation provides in-depth observations of performance bottlenecks of GNNs and the performance differences between the two popular GNN frameworks. Our work helps GNN researchers understand the performance differences of the popular GNN frameworks, and gives guidelines for developers to find potential performance bugs of frameworks and optimization possibilities of GNNs.},
+  abstract  = {Graph neural networks (GNNs) are effective models to address learning problems on graphs and have been successfully applied to numerous domains. To improve the productivity of implementing GNNs, various GNN programming frameworks have been developed. Both the effectiveness (accuracy, loss, etc) and the performance (latency, bandwidth, etc) are essential metrics to evaluate the implementation of GNNs. There are many comparative studies related to the effectiveness of different GNN models on domain tasks. However, the performance characteristics of different GNN frameworks are still lacking. In this study, we evaluate the effectiveness and performance of six popular GNN models, GCN, GIN, GAT, GraphSAGE, MoNet, and GatedGCN, across several common benchmarks under two popular GNN frameworks, PyTorch Geometric and Deep Graph Library. We analyze the training time, GPU utilization, and memory usage of different evaluation settings and the performance of models across different hardware configurations under the two frameworks. Our evaluation provides in-depth observations of performance bottlenecks of GNNs and the performance differences between the two popular GNN frameworks. Our work helps GNN researchers understand the performance differences of the popular GNN frameworks, and gives guidelines for developers to find potential performance bugs of frameworks and optimization possibilities of GNNs.}
 }
 
-@Article{Sethi2021,
+@article{Sethi2021,
   author       = {Jasleen Kaur Sethi and Mamta Mittal},
   date         = {2021-04},
   journaltitle = {Earth Science Informatics},
   title        = {An efficient correlation based adaptive {LASSO} regression method for air quality index prediction},
   doi          = {10.1007/s12145-021-00618-1},
   abstract     = {One of the adverse effects of population growth and urbanization in developing countries is air pollution. Due to which more than 4.2 million deaths occur every year. Therefore, prediction of air quality is a subject worth in-depth research and has received substantial interest in the recent years from academic units and the government. Feature selection methods are applied before prediction to identify potentially significant predictors based on exploratory data analysis. In this research work, a feature selection method based on Least Absolute Selection and Shrinkage Operator (LASSO) named Correlation based Adaptive LASSO (CbAL) Regression method has been proposed for predicting the air quality. For the experimental evaluation, cross regional data, including the concentration of pollutants and the meteorological factors of Delhi and its surrounding cities, has been taken from the Central Pollution Control Board (CPCB) Website. Further, to validate this feature selection method, various machine learning techniques have been taken into consideration and some preventive measures have been suggested to enhance the air quality. Feature selection analysis reveals that carbon monoxide, sulphur dioxide, nitrogen dioxide and Ozone are the most important factors for forecasting the air quality and the pollutants found in the cities of Noida and Gurugram have a more substantial impact on the Air Quality Index of Delhi than other surrounding cities. The model evaluation depicts that the feature subset extracted by the proposed method performs better than the complete dataset and the subset extracted by LASSO Regression with an average classification accuracy of 78\%. The findings of this study can help to identify important contributors of AQI so that viable measures to improve the air quality of Delhi can be carried out.},
-  publisher    = {Springer Science and Business Media {LLC}},
+  publisher    = {Springer Science and Business Media {LLC}}
 }
 
-@Article{Mlakar2021,
+@article{Mlakar2021,
   author   = {Daniel Mlakar and Martin Winter and Mathias Parger and Markus Steinberger},
   date     = {2021},
   title    = {Speculative Parallel Reverse Cuthill-McKeeReordering on Multi- and Many-core Architectures},
   url      = {https://www.markussteinberger.net/papers/SpeculativeRCM.pdf},
-  abstract = {Bandwidth reduction of sparse matrices is used to reduce fill-in of linear solvers and to increase performance of other sparse matrix operations, e.g., sparse matrix vector multiplication in iterative solvers. To compute a bandwidth reducing permutation, Reverse Cuthill-McKee (RCM) reordering is often applied, which is challenging to parallelize, as its core is inherently serial. As many-core architectures, like the GPU, offer subpar single-threading performance and are typically only connected to high-performance CPU cores via a slow memory bus, neither computing RCM on the GPU nor moving the data to the CPU are viable options. Nevertheless, reordering matrices, potentially multiple times in-between operations, might be essential for high throughput. Still, to the best of our knowledge, we are the first to propose an RCM implementation that can execute on multicore CPUs and many-core GPUs alike, moving the computation to the data rather than vice versa.\\ Our algorithm parallelizes RCM into mostly independent batches of nodes. For every batch, a single CPU-thread/a GPU thread-block speculatively discovers child nodes and sorts them according to the RCM algorithm. Before writing their permutation, we re-evaluate the discovery and build new batches. To increase parallelism and reduce dependencies, we create a signaling chain along successive batches and introduce early signaling conditions. In combination with a parallel work queue, new batches are started in order and the resulting RCM permutation is identical to the ground-truth single-threaded algorithm.\\ We propose the first RCM implementation that runs on the GPU. It achieves several orders of magnitude speed-up over NVIDIA’s single-threaded cuSolver RCM implementation and is significantly faster than previous parallel CPU approaches. Our results are especially significant for many-core architectures, as it is now possible to include RCM reordering into sequences of sparse matrix operations without major performance loss.},
+  abstract = {Bandwidth reduction of sparse matrices is used to reduce fill-in of linear solvers and to increase performance of other sparse matrix operations, e.g., sparse matrix vector multiplication in iterative solvers. To compute a bandwidth reducing permutation, Reverse Cuthill-McKee (RCM) reordering is often applied, which is challenging to parallelize, as its core is inherently serial. As many-core architectures, like the GPU, offer subpar single-threading performance and are typically only connected to high-performance CPU cores via a slow memory bus, neither computing RCM on the GPU nor moving the data to the CPU are viable options. Nevertheless, reordering matrices, potentially multiple times in-between operations, might be essential for high throughput. Still, to the best of our knowledge, we are the first to propose an RCM implementation that can execute on multicore CPUs and many-core GPUs alike, moving the computation to the data rather than vice versa.\\ Our algorithm parallelizes RCM into mostly independent batches of nodes. For every batch, a single CPU-thread/a GPU thread-block speculatively discovers child nodes and sorts them according to the RCM algorithm. Before writing their permutation, we re-evaluate the discovery and build new batches. To increase parallelism and reduce dependencies, we create a signaling chain along successive batches and introduce early signaling conditions. In combination with a parallel work queue, new batches are started in order and the resulting RCM permutation is identical to the ground-truth single-threaded algorithm.\\ We propose the first RCM implementation that runs on the GPU. It achieves several orders of magnitude speed-up over NVIDIA’s single-threaded cuSolver RCM implementation and is significantly faster than previous parallel CPU approaches. Our results are especially significant for many-core architectures, as it is now possible to include RCM reordering into sequences of sparse matrix operations without major performance loss.}
 }
 
-@Article{Bertaccini2019,
+@article{Bertaccini2019,
   author       = {D. Bertaccini and F. Durastante},
   date         = {2019},
   journaltitle = {Numerical Mathematics and Advanced Applications},
   title        = {Computing function of large matrices by a preconditioned rational Krylov method},
-  abstract     = {Rational Krylov methods are a powerful alternative for computing the product of a function of a large matrix times a given vector. However, the creation of the underlying rational subspaces requires solving sequences of large linear sysetms, a delicate task that can require intensive computational resources and should be monitored to avoid the creation of subspace different to those required whenever, e.g., the underlying matrices are ill-conditioned. We propose the use of robust preconditioned iterative techniques to speedup the underlying process. We also discuss briefly how the inexact solution of these linear systems can affect the computed subspace. A preliminary test approximating a fractional power of the Laplacian matrix is included.},
+  abstract     = {Rational Krylov methods are a powerful alternative for computing the product of a function of a large matrix times a given vector. However, the creation of the underlying rational subspaces requires solving sequences of large linear sysetms, a delicate task that can require intensive computational resources and should be monitored to avoid the creation of subspace different to those required whenever, e.g., the underlying matrices are ill-conditioned. We propose the use of robust preconditioned iterative techniques to speedup the underlying process. We also discuss briefly how the inexact solution of these linear systems can affect the computed subspace. A preliminary test approximating a fractional power of the Laplacian matrix is included.}
 }
 
-@InBook{Karniadakis1992,
+@inbook{Karniadakis1992,
   author    = {George Em Karniadakis and Steven A. Orszag},
   booktitle = {Supercomputing in Engineering Analysis},
   date      = {1992},
   title     = {Parallel Spectral Computations of Complex Engineering Flows},
-  abstract  = {This chapter reviews the properties of global spectral methods and suggests ways of their efficient parallel implementation when applied to the Navier-Stokes equations governing incompressible fluid flows. It formulates the governing equations for incompressible fluid flows, and presents an efficient high-order accuracy time-stepping scheme. The chapter presents examples of simulations of turbulence in simple geometries and of unsteady laminar flows in complex geometries obtained using conventional supercomputers and hypercube computers. It reviews the spectral element discretization appropriate for the formulation. The spectral accuracy is recovered if an elemental interface passes exactly through the sharp corner. A row of three-dimensional spectral elements is considered as computational domain with periodic boundary conditions imposed on all sides. Similar Fourier pseudospectral simulations of a Beltrami flow performed on a 128-node and on a 1024-node Ncube are reported in Pelz. Spectral element simulations are capable of resolving precisely the Hopf bifurcation that the flow undergoes as the Reynolds number increases.},
+  abstract  = {This chapter reviews the properties of global spectral methods and suggests ways of their efficient parallel implementation when applied to the Navier-Stokes equations governing incompressible fluid flows. It formulates the governing equations for incompressible fluid flows, and presents an efficient high-order accuracy time-stepping scheme. The chapter presents examples of simulations of turbulence in simple geometries and of unsteady laminar flows in complex geometries obtained using conventional supercomputers and hypercube computers. It reviews the spectral element discretization appropriate for the formulation. The spectral accuracy is recovered if an elemental interface passes exactly through the sharp corner. A row of three-dimensional spectral elements is considered as computational domain with periodic boundary conditions imposed on all sides. Similar Fourier pseudospectral simulations of a Beltrami flow performed on a 128-node and on a 1024-node Ncube are reported in Pelz. Spectral element simulations are capable of resolving precisely the Hopf bifurcation that the flow undergoes as the Reynolds number increases.}
 }
 
-@Article{Chen2021b,
+@article{Chen2021b,
   author       = {Jiong Chen and Florian Schäfer and Jin Huang and Mathieu Desbrun},
   date         = {2021},
   journaltitle = {{ACM} Transactions on Graphics},
@@ -16197,10 +16197,10 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   number       = {4},
   url          = {http://www.geometry.caltech.edu/pubs/CSHD21.pdf},
   volume       = {40},
-  abstract     = {Many computer graphics applications boil down to solving sparse systems of linear equations. While the current arsenal of numerical solvers available in various specialized libraries and for different computer architectures often allow efficient and scalable solutions to image processing, modeling and simulation applications, an increasing number of graphics problems face large-scale and ill-conditioned sparse linear systems -- a numerical challenge which typically chokes both direct factorizations (due to high memory requirements) and iterative solvers (because of slow convergence). We propose a novel approach to the efficient preconditioning of such problems which often emerge from the discretization over unstructured meshes of partial differential equations with heterogeneous and anisotropic coefficients. Our numerical approach consists in simply performing a fine-to-coarse ordering and a multiscale sparsity pattern of the degrees of freedom, using which we apply an incomplete Cholesky factorization. By further leveraging supernodes for cache coherence, graph coloring to improve parallelism and partial diagonal shifting to remedy negative pivots, we obtain a preconditioner which, combined with a conjugate gradient solver, far exceeds the performance of existing carefully-engineered libraries for graphics problems involving bad mesh elements and/or high contrast of coefficients. We also back the core concepts behind our simple solver with theoretical foundations linking the recent method of operator-adapted wavelets used in numerical homogenization to the traditional Cholesky factorization of a matrix, providing us with a clear bridge between incomplete Cholesky factorization and multiscale analysis that we leverage numerically.},
+  abstract     = {Many computer graphics applications boil down to solving sparse systems of linear equations. While the current arsenal of numerical solvers available in various specialized libraries and for different computer architectures often allow efficient and scalable solutions to image processing, modeling and simulation applications, an increasing number of graphics problems face large-scale and ill-conditioned sparse linear systems -- a numerical challenge which typically chokes both direct factorizations (due to high memory requirements) and iterative solvers (because of slow convergence). We propose a novel approach to the efficient preconditioning of such problems which often emerge from the discretization over unstructured meshes of partial differential equations with heterogeneous and anisotropic coefficients. Our numerical approach consists in simply performing a fine-to-coarse ordering and a multiscale sparsity pattern of the degrees of freedom, using which we apply an incomplete Cholesky factorization. By further leveraging supernodes for cache coherence, graph coloring to improve parallelism and partial diagonal shifting to remedy negative pivots, we obtain a preconditioner which, combined with a conjugate gradient solver, far exceeds the performance of existing carefully-engineered libraries for graphics problems involving bad mesh elements and/or high contrast of coefficients. We also back the core concepts behind our simple solver with theoretical foundations linking the recent method of operator-adapted wavelets used in numerical homogenization to the traditional Cholesky factorization of a matrix, providing us with a clear bridge between incomplete Cholesky factorization and multiscale analysis that we leverage numerically.}
 }
 
-@InCollection{Costanzo2021,
+@incollection{Costanzo2021,
   author    = {Manuel Costanzo and Enzo Rucci and Ulises Costi and Franco Chichizola and Marcelo Naiouf},
   booktitle = {Communications in Computer and Information Science},
   date      = {2021},
@@ -16208,10 +16208,10 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   doi       = {10.1007/978-3-030-75836-3_3},
   pages     = {37--49},
   publisher = {Springer International Publishing},
-  abstract  = {Today, one of the main challenges for high-performance computing systems is to improve their performance by keeping energy consumption at acceptable levels. In this context, a consolidated strategy consists of using accelerators such as GPUs or many-core Intel Xeon Phi processors. In this work, devices of the NVIDIA Pascal and Intel Xeon Phi Knights Landing architectures are described and compared. Selecting the Floyd-Warshall algorithm as a representative case of graph and memory-bound applications, optimized implementations were developed to analyze and compare performance and energy efficiency on both devices. As it was expected, Xeon Phi showed superior when considering double-precision data. However, contrary to what was considered in our preliminary analysis, it was found that the performance and energy efficiency of both devices were comparable using single-precision datatype.},
+  abstract  = {Today, one of the main challenges for high-performance computing systems is to improve their performance by keeping energy consumption at acceptable levels. In this context, a consolidated strategy consists of using accelerators such as GPUs or many-core Intel Xeon Phi processors. In this work, devices of the NVIDIA Pascal and Intel Xeon Phi Knights Landing architectures are described and compared. Selecting the Floyd-Warshall algorithm as a representative case of graph and memory-bound applications, optimized implementations were developed to analyze and compare performance and energy efficiency on both devices. As it was expected, Xeon Phi showed superior when considering double-precision data. However, contrary to what was considered in our preliminary analysis, it was found that the performance and energy efficiency of both devices were comparable using single-precision datatype.}
 }
 
-@Article{Huang2021a,
+@article{Huang2021a,
   author      = {Qijing Huang and Minwoo Kang and Grace Dinh and Thomas Norell and Aravind Kalaiah and James Demmel and John Wawrzynek and Yakun Sophia Shao},
   date        = {2021-05-05},
   title       = {CoSA: Scheduling by Constrained Optimization for Spatial Accelerators},
@@ -16220,10 +16220,10 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   eprinttype  = {arXiv},
   abstract    = {Recent advances in Deep Neural Networks (DNNs) have led to active development of specialized DNN accelerators, many of which feature a large number of processing elements laid out spatially, together with a multi-level memory hierarchy and flexible interconnect. While DNN accelerators can take advantage of data reuse and achieve high peak throughput, they also expose a large number of runtime parameters to the programmers who need to explicitly manage how computation is scheduled both spatially and temporally. In fact, different scheduling choices can lead to wide variations in performance and efficiency, motivating the need for a fast and efficient search strategy to navigate the vast scheduling space. To address this challenge, we present CoSA, a constrained-optimization-based approach for scheduling DNN accelerators. As opposed to existing approaches that either rely on designers' heuristics or iterative methods to navigate the search space, CoSA expresses scheduling decisions as a constrained-optimization problem that can be deterministically solved using mathematical optimization techniques. Specifically, CoSA leverages the regularities in DNN operators and hardware to formulate the DNN scheduling space into a mixed-integer programming (MIP) problem with algorithmic and architectural constraints, which can be solved to automatically generate a highly efficient schedule in one shot. We demonstrate that CoSA-generated schedules significantly outperform state-of-the-art approaches by a geometric mean of up to 2.5x across a wide range of DNN networks while improving the time-to-solution by 90x.},
   file        = {:http\://arxiv.org/pdf/2105.01898v1:PDF},
-  keywords    = {cs.LG, cs.AR},
+  keywords    = {cs.LG, cs.AR}
 }
 
-@Article{Ceccon2021,
+@article{Ceccon2021,
   author      = {Francesco Ceccon and Ruth Misener},
   date        = {2021-05-04},
   title       = {Solving the pooling problem at scale with extensible solver GALINI},
@@ -16232,10 +16232,10 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   eprinttype  = {arXiv},
   abstract    = {This paper presents a Python library to model pooling problems, a class of network flow problems with many engineering applications. The library automatically generates a mixed-integer quadratically-constrained quadratic optimization problem from a given network structure. The library additionally uses the network structure to build 1) a convex linear relaxation of the non-convex quadratic program and 2) a mixed-integer linear restriction of the problem. We integrate the pooling network library with galini, an open-source extensible global solver for quadratic optimization. We demonstrate galini's extensible characteristics by using the pooling library to develop two galini plug-ins: 1) a cut generator plug-in that adds valid inequalities in the galini cut loop and 2) a primal heuristic plug-in that uses the mixed-integer linear restriction. We test galini on large scale pooling problems and show that, thanks to the good upper bound provided by the mixed-integer linear restriction and the good lower bounds provided by the convex relaxation, we obtain optimality gaps that are competitive with Gurobi 9.1 on the largest problem instances.},
   file        = {:http\://arxiv.org/pdf/2105.01687v1:PDF},
-  keywords    = {math.OC},
+  keywords    = {math.OC}
 }
 
-@Article{Berner2021,
+@article{Berner2021,
   author      = {Julius Berner and Philipp Grohs and Gitta Kutyniok and Philipp Petersen},
   date        = {2021-05-09},
   title       = {The Modern Mathematics of Deep Learning},
@@ -16244,10 +16244,10 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   eprinttype  = {arXiv},
   abstract    = {We describe the new field of mathematical analysis of deep learning. This field emerged around a list of research questions that were not answered within the classical framework of learning theory. These questions concern: the outstanding generalization power of overparametrized neural networks, the role of depth in deep architectures, the apparent absence of the curse of dimensionality, the surprisingly successful optimization performance despite the non-convexity of the problem, understanding what features are learned, why deep architectures perform exceptionally well in physical problems, and which fine aspects of an architecture affect the behavior of a learning task in which way. We present an overview of modern approaches that yield partial answers to these questions. For selected approaches, we describe the main ideas in more detail.},
   file        = {:http\://arxiv.org/pdf/2105.04026v1:PDF},
-  keywords    = {cs.LG, stat.ML},
+  keywords    = {cs.LG, stat.ML}
 }
 
-@Article{Heirman2021,
+@article{Heirman2021,
   author       = {Wim Heirman and Stijn Eyerman and Kristof Du Bois and Ibrahim Hur},
   date         = {2021-04},
   journaltitle = {{ACM} Transactions on Architecture and Code Optimization},
@@ -16257,46 +16257,46 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   pages        = {1--23},
   volume       = {18},
   abstract     = {Sparse memory accesses, which are scattered accesses to single elements of a large data structure, are a challenge for current processor architectures. Their lack of spatial and temporal locality and their irregularity makes caches and traditional stream prefetchers useless. Furthermore, performing standard caching and prefetching on sparse accesses wastes precious memory bandwidth and thrashes caches, deteriorating performance for regular accesses. Bypassing prefetchers and caches for sparse accesses, and fetching only a single element (e.g., 8 B) from main memory (subline access), can solve these issues.\\ Deciding which accesses to handle as sparse accesses and which as regular cached accesses, is a challenging task, with a large potential impact on performance. Not only is performance reduced by treating sparse accesses as regular accesses, not caching accesses that do have locality also negatively impacts performance by significantly increasing their latency and bandwidth consumption. Furthermore, this decision depends on the dynamic environment, such as input set characteristics and system load, making a static decision by the programmer or compiler suboptimal.\\ We propose the Instruction Spatial Locality Estimator (ISLE), a hardware detector that finds instructions that access isolated words in a sea of unused data. These sparse accesses are dynamically converted into uncached subline accesses, while keeping regular accesses cached. ISLE does not require modifying source code or binaries, and adapts automatically to a changing environment (input data, available bandwidth, etc.). We apply ISLE to a graph analytics processor running sparse graph workloads, and show that ISLE outperforms the performance of no subline accesses, manual sublining, and prior work on detecting sparse accesses.},
-  publisher    = {Association for Computing Machinery ({ACM})},
+  publisher    = {Association for Computing Machinery ({ACM})}
 }
 
-@Article{Zhou2021a,
+@article{Zhou2021a,
   author       = {Yi Zhou and Weibo Lin and Jin-Kao Hao and Mingyu Xiao and Yan Jin},
   date         = {2021-05},
   journaltitle = {European Journal of Operational Research},
   title        = {An effective branch-and-bound algorithm for the maximum s-bundle problem},
   doi          = {10.1016/j.ejor.2021.05.001},
   abstract     = {An $s$-bundle (where $s$ is a positive integer) is a connected graph, the vertex connectivity of which is at least $n-s$, where $n$ is the number of vertices in the graph. As a relaxation of the classical clique model, the $s$-bundle is relevant for representing cohesive groups with an emphasis on the connectivity of members; thus, it is of great practical importance. In this work, we investigate the fundamental problem of finding the maximum $s$-bundle from a given graph and present an effective branch-and-bound algorithm for solving this NP-hard problem. The proposed algorithm is distinguished owing to its new multi-branching rules, graph coloring-based bounding technique, and reduction rules using structural information. The experiments indicate that the algorithm outperforms the best-known approaches on a wide range of well-known benchmark graphs for different $s$ values. In particular, compared with the popular Russian Doll Search algorithm, the proposed algorithm almost doubles the success rate of solving large social networks in an hour when $s=5$.},
-  publisher    = {Elsevier {BV}},
+  publisher    = {Elsevier {BV}}
 }
 
-@InProceedings{Ziogas2021,
+@inproceedings{Ziogas2021,
   author    = {Alexandros Nikolaos Ziogas and Tal Ben-Nun and Timo Schneider and Torsten Hoefler},
   booktitle = {Proceedings of the 2021 International Conference on Supercomputing},
   date      = {2021},
   title     = {{NPBench}: A Benchmarking Suite for High-Performance {NumPy}},
   series    = {ICS ’21},
-  abstract  = {Python, already one of the most popular languages for scientific computing, has made significant inroads in High Performance Computing (HPC). At the center of Python’s ecosystem is NumPy, an efficient implementation of the multi-dimensional array (tensor) structure, together with basic arithmetic and linear algebra. Compared to traditional HPC languages, the relatively low performance of Python and NumPy has spawned significant research in compilers and frameworks that decouple Python’s compact representation from the underlying implementation. However, it is challenging to compare language compatibility and performance among different frameworks and architectures without a standard set of benchmarks and metrics. To that end, we introduce NPBench, a set of NumPy code samples representing a large variety of HPC applications. We use NPBench to test popular NumPy-accelerating compilers and frameworks on a variety of metrics. NPBench will guide both end-users and framework developers focusing on performance and will drive further use of Python in the high-performance scientific domains},
+  abstract  = {Python, already one of the most popular languages for scientific computing, has made significant inroads in High Performance Computing (HPC). At the center of Python’s ecosystem is NumPy, an efficient implementation of the multi-dimensional array (tensor) structure, together with basic arithmetic and linear algebra. Compared to traditional HPC languages, the relatively low performance of Python and NumPy has spawned significant research in compilers and frameworks that decouple Python’s compact representation from the underlying implementation. However, it is challenging to compare language compatibility and performance among different frameworks and architectures without a standard set of benchmarks and metrics. To that end, we introduce NPBench, a set of NumPy code samples representing a large variety of HPC applications. We use NPBench to test popular NumPy-accelerating compilers and frameworks on a variety of metrics. NPBench will guide both end-users and framework developers focusing on performance and will drive further use of Python in the high-performance scientific domains}
 }
 
-@InProceedings{Pandey2021,
+@inproceedings{Pandey2021,
   author    = {Prashant Pandey and Brian Wheatman and Helen Xu and Aydin Buluç},
   booktitle = {Proceedings of the ACM SIGMOD/PODS Conference},
   date      = {2021},
   title     = {Terrace: A Hierarchical Graph Container for Skewed Dynamic Graphs},
   series    = {SIGMOD '21},
-  abstract  = {Various applications model problems as streaming graphs, which need to quickly apply a stream of updates and run algorithms on the updated graph. Furthermore, many dynamic real-world graphs, such as social networks, follow a skewed distribution of vertex degrees, where there are a few high-degree vertices and many low-degree vertices.\\ Existing static graph-processing systems optimized for graph skewness achieve high performance and low space usage by preprocessing a cache-efficient graph partitioning based on vertex degree. In the streaming setting, the whole graph is not available upfront, however, so finding an optimal partitioning is not feasible in the presence of updates. As a result, existing streaming graph-processing systems take a "one-size-fits-all" approach, leaving performance on the table.\\ We present Terrace, a system for streaming graphs that uses a hierarchical data structure design to store a vertex’s neighbors in different data structures depending on the degree of the vertex. This multi-level structure enables Terrace to dynamically partition vertices based on their degrees and adapt to skewness in the underlying graph.\\ Our experiments show that Terrace supports faster batch insertions for batch sizes up to 1M when compared to Aspen, a state-ofthe-art graph streaming system. On graph query algorithms, Terrace is between 1.7$\times$--2.6$\times$ faster than Aspen and between 0.5$\times$--1.3$\times$ as fast as Ligra, a state-of-the-art static graph-processing system},
+  abstract  = {Various applications model problems as streaming graphs, which need to quickly apply a stream of updates and run algorithms on the updated graph. Furthermore, many dynamic real-world graphs, such as social networks, follow a skewed distribution of vertex degrees, where there are a few high-degree vertices and many low-degree vertices.\\ Existing static graph-processing systems optimized for graph skewness achieve high performance and low space usage by preprocessing a cache-efficient graph partitioning based on vertex degree. In the streaming setting, the whole graph is not available upfront, however, so finding an optimal partitioning is not feasible in the presence of updates. As a result, existing streaming graph-processing systems take a "one-size-fits-all" approach, leaving performance on the table.\\ We present Terrace, a system for streaming graphs that uses a hierarchical data structure design to store a vertex’s neighbors in different data structures depending on the degree of the vertex. This multi-level structure enables Terrace to dynamically partition vertices based on their degrees and adapt to skewness in the underlying graph.\\ Our experiments show that Terrace supports faster batch insertions for batch sizes up to 1M when compared to Aspen, a state-ofthe-art graph streaming system. On graph query algorithms, Terrace is between 1.7$\times$--2.6$\times$ faster than Aspen and between 0.5$\times$--1.3$\times$ as fast as Ligra, a state-of-the-art static graph-processing system}
 }
 
-@PhdThesis{Saez2021,
+@phdthesis{Saez2021,
   author      = {Rocío Carratalá Sáez},
   date        = {2021},
   institution = {Universitat Jaume I},
   title       = {Analysis of Parallelization Strategies in the context of Hierarchical Matrix Factorizations},
-  abstract    = {$\mathcal{H}$-Matrices were born as a powerful numerical tool to tackle applications whose data generates structures that end laying in between dense and sparse scenarios. The key benefit that makes $\mathcal{H}$-Matrices valuable is the savings that offer both in terms of storage and computations, in such a way that they are reduced to log-linear costs.\\ The key behind the success of $\mathcal{H}$-Matrices is the controllable compression they offer: by choosing the appropriate admissibility condition to discern important versus dispensable data and designing good partitioning algorithms, one can choose the accuracy loss that wants to assume in exchange for computations acceleration and memory consumption reduction. This is the reason why $\mathcal{H}$-Matrices are specially suitable for boundary element and finite element methods where the pursued result does not need to be totally accurate, but it is important to have it ready as fast as possible, as it can determine, for example, whether an engineering design is ready to be produced or needs to be improved.\\ On their side, task-parallelism has proved sufficiently its benefits when being employed to optimize the parallel execution when solving linear systems of equations. Particularly, tiled or block algorithms combined with this parallelism strategy have widely been (and are still) employed to provide the scientific community with powerful and efficient parallel solutions for multicore architectures.\\ The main objective of this thesis is designing, implementing and evaluating parallel algorithms to operate efficiently with $\mathcal{H}$-Matrices in multicore architectures. To this end, the first contribution we describe is a study in which we prove that task-parallelism is suitable for operating with HMatrices, by simplifying as much as possible the $\mathcal{H}$-Arithmetic scenario. Next, we describe in detail the difficulties that need to be addressed when parallelizing the complex implementations that operate with this type of matrices. Afterwards, we explain how the new features included in OmpSs-2 programming model helped us avoiding the majority of the described issues and thus we were able to attain a fair efficiency when executing a task-parallel $\mathcal{H}$-LU. Lastly, we illustrate how we explored a regularized version of $\mathcal{H}$-Matrices, which we call Tile $\mathcal{H}$-Matrices, in which we are able to maintain competitive-wit$\mathcal{H}$-pure-$\mathcal{H}$-Matrices precision and compression ratios, while leveraging the well known benefits of tile algorithms applied to matrices provided with (regular) tiles (this is, mostly homogeneous block dimensions).},
+  abstract    = {$\mathcal{H}$-Matrices were born as a powerful numerical tool to tackle applications whose data generates structures that end laying in between dense and sparse scenarios. The key benefit that makes $\mathcal{H}$-Matrices valuable is the savings that offer both in terms of storage and computations, in such a way that they are reduced to log-linear costs.\\ The key behind the success of $\mathcal{H}$-Matrices is the controllable compression they offer: by choosing the appropriate admissibility condition to discern important versus dispensable data and designing good partitioning algorithms, one can choose the accuracy loss that wants to assume in exchange for computations acceleration and memory consumption reduction. This is the reason why $\mathcal{H}$-Matrices are specially suitable for boundary element and finite element methods where the pursued result does not need to be totally accurate, but it is important to have it ready as fast as possible, as it can determine, for example, whether an engineering design is ready to be produced or needs to be improved.\\ On their side, task-parallelism has proved sufficiently its benefits when being employed to optimize the parallel execution when solving linear systems of equations. Particularly, tiled or block algorithms combined with this parallelism strategy have widely been (and are still) employed to provide the scientific community with powerful and efficient parallel solutions for multicore architectures.\\ The main objective of this thesis is designing, implementing and evaluating parallel algorithms to operate efficiently with $\mathcal{H}$-Matrices in multicore architectures. To this end, the first contribution we describe is a study in which we prove that task-parallelism is suitable for operating with HMatrices, by simplifying as much as possible the $\mathcal{H}$-Arithmetic scenario. Next, we describe in detail the difficulties that need to be addressed when parallelizing the complex implementations that operate with this type of matrices. Afterwards, we explain how the new features included in OmpSs-2 programming model helped us avoiding the majority of the described issues and thus we were able to attain a fair efficiency when executing a task-parallel $\mathcal{H}$-LU. Lastly, we illustrate how we explored a regularized version of $\mathcal{H}$-Matrices, which we call Tile $\mathcal{H}$-Matrices, in which we are able to maintain competitive-wit$\mathcal{H}$-pure-$\mathcal{H}$-Matrices precision and compression ratios, while leveraging the well known benefits of tile algorithms applied to matrices provided with (regular) tiles (this is, mostly homogeneous block dimensions).}
 }
 
-@Article{Gowda2021,
+@article{Gowda2021,
   author      = {Shashi Gowda and Yingbo Ma and Alessandro Cheli and Maja Gwozdz and Viral B. Shah and Alan Edelman and Christopher Rackauckas},
   date        = {2021-05-09},
   title       = {High-performance symbolic-numerics via multiple dispatch},
@@ -16305,10 +16305,10 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   eprinttype  = {arXiv},
   abstract    = {As mathematical computing becomes more democratized in high-level languages, high-performance symbolic-numeric systems are necessary for domain scientists and engineers to get the best performance out of their machine without deep knowledge of code optimization. Naturally, users need different term types either to have different algebraic properties for them, or to use efficient data structures. To this end, we developed Symbolics.jl, an extendable symbolic system which uses dynamic multiple dispatch to change behavior depending on the domain needs. In this work we detail an underlying abstract term interface which allows for speed without sacrificing generality. We show that by formalizing a generic API on actions independent of implementation, we can retroactively add optimized data structures to our system without changing the pre-existing term rewriters. We showcase how this can be used to optimize term construction and give a 113x acceleration on general symbolic transformations. Further, we show that such a generic API allows for complementary term-rewriting implementations. We demonstrate the ability to swap between classical term-rewriting simplifiers and e-graph-based term-rewriting simplifiers. We showcase an e-graph ruleset which minimizes the number of CPU cycles during expression evaluation, and demonstrate how it simplifies a real-world reaction-network simulation to halve the runtime. Additionally, we show a reaction-diffusion partial differential equation solver which is able to be automatically converted into symbolic expressions via multiple dispatch tracing, which is subsequently accelerated and parallelized to give a 157x simulation speedup. Together, this presents Symbolics.jl as a next-generation symbolic-numeric computing environment geared towards modeling and simulation.},
   file        = {:http\://arxiv.org/pdf/2105.03949v2:PDF},
-  keywords    = {cs.CL, cs.MS, cs.SC, D.3.3; I.1.1; I.1.3},
+  keywords    = {cs.CL, cs.MS, cs.SC, D.3.3; I.1.1; I.1.3}
 }
 
-@Article{Aldbaissy2021,
+@article{Aldbaissy2021,
   author       = {Rim Aldbaissy and Fr{\'{e}}d{\'{e}}ric Hecht and Gihane Mansour and Toni Sayah and Pierre Henri Tournier},
   date         = {2021-05},
   journaltitle = {International Journal of Computer Mathematics},
@@ -16316,20 +16316,20 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   doi          = {10.1080/00207160.2021.1925888},
   pages        = {1--16},
   abstract     = {In this article, we study the thermal instability that appears from time to time while printing using a 3D printer. To solve the semi-discretized problem at each time-step, we use a scalable parallel algorithm based on a two-level Optimized Restricted Additive Schwarz (ORAS) domain decomposition preconditioner for GMRES. Parallel scalability tests are conducted with comparison against the parallel direct solver MUMPS and the one-level Schwarz method, which show lack of robustness for larger number of processors. 2D numerical tests illustrate that the number of iterations to reach GMRES convergence depends on the state of the physical simulation during time, and that the second level of preconditioning is needed to achieve robustness.},
-  publisher    = {Informa {UK} Limited},
+  publisher    = {Informa {UK} Limited}
 }
 
-@Article{Park2021,
+@article{Park2021,
   author       = {Jueon Park and Kyungyong Lee},
   date         = {2021-05},
   journaltitle = {Cluster Computing},
   title        = {S-{MPEC}: Sparse Matrix Multiplication Performance Estimator on a Cloud Environment},
   doi          = {10.1007/s10586-021-03287-3},
   abstract     = {Sparse matrix multiplication (SPMM) is widely used for various machine learning algorithms. As the applications of SPMM using large-scale datasets become prevalent, executing SPMM jobs on an optimized setup has become very important. Execution environments of distributed SPMM tasks on cloud resources can be set up in diverse ways with respect to the input sparse datasets, distinct SPMM implementation methods, and the choice of cloud instance types. In this paper, we propose S-MPEC which can predict latency to complete various SPMM tasks using Apache Spark on distributed cloud environments. We first characterize various distributed SPMM implementations on Apache Spark. Considering the characters and hardware specifications on the cloud, we propose unique features to build a GB-regressor model and Bayesian optimizations. Our proposed S-MPEC model can predict latency on an arbitrary SPMM task accurately and recommend an optimal implementation method. Thorough evaluation of the proposed system reveals that a user can expect 44\% less latency to complete SPMM tasks compared with the native SPMM implementations in Apache Spark.},
-  publisher    = {Springer Science and Business Media {LLC}},
+  publisher    = {Springer Science and Business Media {LLC}}
 }
 
-@Article{Eftekhari2021,
+@article{Eftekhari2021,
   author       = {Aryan Eftekhari and Dimosthenis Pasadakis and Matthias Bollhöfer and Simon Scheidegger and Olaf Schenk},
   date         = {2021-05},
   journaltitle = {Journal of Computational Science},
@@ -16337,10 +16337,10 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   doi          = {10.1016/j.jocs.2021.101389},
   pages        = {101389},
   abstract     = {The $\mathcal{l}_1$-regularized Gaussian maximum likelihood method is a common approach for sparse precision matrix estimation, but one that poses a computational challenge for high-dimensional datasets. We present a novel $\mathcal{l}_1$-regularized maximum likelihood method for performant large-scale sparse precision matrix estimation utilizing the block structures in the underlying computations. We identify the computational bottlenecks and contribute a block coordinate descent update as well as a block approximate matrix inversion routine, which is then parallelized using a shared-memory scheme. We demonstrate the effectiveness, accuracy, and performance of these algorithms. Our numerical examples and comparative results with various modern open-source packages reveal that these precision matrix estimation methods can accelerate the computation of covariance matrices by two to three orders of magnitude, while keeping memory requirements modest. Furthermore, we conduct large-scale case studies for applications from finance and medicine with several thousand random variables to demonstrate applicability for real-world datasets.},
-  publisher    = {Elsevier {BV}},
+  publisher    = {Elsevier {BV}}
 }
 
-@Article{Advani2021,
+@article{Advani2021,
   author      = {Rishi Advani and Sean O'Hagan},
   date        = {2021-05-14},
   title       = {Efficient Algorithms for Constructing an Interpolative Decomposition},
@@ -16349,18 +16349,18 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   eprinttype  = {arXiv},
   abstract    = {Low-rank approximations are essential in modern data science. The interpolative decomposition provides one such approximation. Its distinguishing feature is that it reuses columns from the original matrix. This enables it to preserve matrix properties such as sparsity and non-negativity. It also helps save space in memory. In this work, we introduce two optimized algorithms to construct an interpolative decomposition along with numerical evidence that they outperform the current state of the art.},
   file        = {:http\://arxiv.org/pdf/2105.07076v1:PDF},
-  keywords    = {math.NA, cs.NA, 65F55, G.1.3},
+  keywords    = {math.NA, cs.NA, 65F55, G.1.3}
 }
 
-@Article{Liu2021c,
+@article{Liu2021c,
   author       = {Xuejuan Liu and Junguo Wang and Xiangying Yuan},
   date         = {2021},
   journaltitle = {{IAENG} International Journal of Applied Mathematics},
   title        = {Spectral Clustering Algorithm Based on OptiSim Selection},
-  abstract     = {The spectral clustering (SC) method has a good clustering effect on arbitrary structure datasets because of its solid theoretical basis. However, the required time complexity is high, thus limiting the application of SC in big datasets. To reduce time complexity, we propose an SC algorithm based on OptiSim Selection (SCOSS) in this study. This new algorithm starts from selecting a representative subset by using an optimizable k-dissimilarity selection algorithm (OptiSim) and then uses the Nystrom method to approximate the eigenvectors ¨ of the similarity matrix. Theoretical deductions and experiment results show that the proposed algorithm can use less clustering time to achieve a good clustering result.},
+  abstract     = {The spectral clustering (SC) method has a good clustering effect on arbitrary structure datasets because of its solid theoretical basis. However, the required time complexity is high, thus limiting the application of SC in big datasets. To reduce time complexity, we propose an SC algorithm based on OptiSim Selection (SCOSS) in this study. This new algorithm starts from selecting a representative subset by using an optimizable k-dissimilarity selection algorithm (OptiSim) and then uses the Nystrom method to approximate the eigenvectors ¨ of the similarity matrix. Theoretical deductions and experiment results show that the proposed algorithm can use less clustering time to achieve a good clustering result.}
 }
 
-@Article{Wiebe2021,
+@article{Wiebe2021,
   author      = {Johannes Wiebe and Ruth Misener},
   date        = {2021-05-18},
   title       = {ROmodel: Modeling robust optimization problems in Pyomo},
@@ -16369,20 +16369,20 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   eprinttype  = {arXiv},
   abstract    = {This paper introduces ROmodel, an open source Python package extending the modeling capabilities of the algebraic modeling language Pyomo to robust optimization problems. ROmodel helps practitioners transition from deterministic to robust optimization through modeling objects which allow formulating robust models in close analogy to their mathematical formulation. ROmodel contains a library of commonly used uncertainty sets which can be generated using their matrix representations, but it also allows users to define custom uncertainty sets using Pyomo constraints. ROmodel supports adjustable variables via linear decision rules. The resulting models can be solved using ROmodels solvers which implement both the robust reformulation and cutting plane approach. ROmodel is a platform to implement and compare custom uncertainty sets and reformulations. We demonstrate ROmodel's capabilities by applying it to six case studies. We implement custom uncertainty sets based on (warped) Gaussian processes to show how ROmodel can integrate data-driven models with optimization.},
   file        = {:http\://arxiv.org/pdf/2105.08598v1:PDF},
-  keywords    = {math.OC},
+  keywords    = {math.OC}
 }
 
-@InCollection{Khor2021,
+@incollection{Khor2021,
   author    = {Cheng Seong Khor},
   booktitle = {E-Business - Higher Education and Intelligence Applications},
   date      = {2021-05},
   title     = {Recent Advancements in Commercial Integer Optimization Solvers for Business Intelligence Applications},
   doi       = {10.5772/intechopen.93416},
   publisher = {{IntechOpen}},
-  abstract  = {The chapter focuses on the recent advancements in commercial integer optimization solvers as exemplified by the CPLEX software package particularly but not limited to mixed-integer linear programming (MILP) models applied to business intelligence applications. We provide background on the main underlying algorithmic method of branch-and-cut, which is based on the established optimization solution methods of branch-and-bound and cutting planes. The chapter also covers heuristic-based algorithms, which include preprocessing and probing strategies as well as the more advanced methods of local or neighborhood search for polishing solutions toward enhanced use in practical settings. Emphasis is given to both theory and implementation of the methods available. Other considerations are offered on parallelization, solution pools, and tuning tools, culminating with some concluding remarks on computational performance vis-à-vis business intelligence applications with a view toward perspective for future work in this area.},
+  abstract  = {The chapter focuses on the recent advancements in commercial integer optimization solvers as exemplified by the CPLEX software package particularly but not limited to mixed-integer linear programming (MILP) models applied to business intelligence applications. We provide background on the main underlying algorithmic method of branch-and-cut, which is based on the established optimization solution methods of branch-and-bound and cutting planes. The chapter also covers heuristic-based algorithms, which include preprocessing and probing strategies as well as the more advanced methods of local or neighborhood search for polishing solutions toward enhanced use in practical settings. Emphasis is given to both theory and implementation of the methods available. Other considerations are offered on parallelization, solution pools, and tuning tools, culminating with some concluding remarks on computational performance vis-à-vis business intelligence applications with a view toward perspective for future work in this area.}
 }
 
-@Article{Yang2021,
+@article{Yang2021,
   author       = {Yu Yang and Nannan Zou and Enping Lin and Fei Suo and Zhong Chen},
   date         = {2021},
   journaltitle = {{IEEE} Transactions on Signal Processing},
@@ -16390,10 +16390,10 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   doi          = {10.1109/tsp.2021.3080426},
   pages        = {1--1},
   abstract     = {Parameter retrieval is a typical nonconvex optimization problem in a wide range of research and engineering fields. Classic methods tackle the parameter retrieval problem by feature extraction from the subspace or transform domain. In this paper, we proposed a network-based method to directly solve the nonconvex optimization problem on parameters estimation of complex exponential signals, with no requirement of labeled data. The proposed network has an architecture similar to the Autoencoder network but with the decoder sub-network replaced by a complex exponential signal generator. After training the network to fit the signal parameters to the acquired data, one could obtain the parameters, i.e. frequencies, decay rates, and intensities, and reconstruct the signal. By this work, we show that with a simple application of a lightweight neural network, nonconvex optimization problems like parameter retrieval can be solved efficiently, even without any intricately designed algorithms. We also discuss the robustness of the network-based method by repeated experiments and present the failure cases to indicate the limitations of this method.},
-  publisher    = {Institute of Electrical and Electronics Engineers ({IEEE})},
+  publisher    = {Institute of Electrical and Electronics Engineers ({IEEE})}
 }
 
-@Article{Wiegele2021,
+@article{Wiegele2021,
   author      = {Angelika Wiegele and Shudian Zhao},
   date        = {2021-05-19},
   title       = {SDP-based bounds for graph partition via extended ADMM},
@@ -16402,10 +16402,10 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   eprinttype  = {arXiv},
   abstract    = {We study two NP-complete graph partition problems, $k$-equipartition problems and graph partition problems with knapsack constraints (GPKC). We introduce tight SDP relaxations with nonnegativity constraints to get lower bounds, the SDP relaxations are solved by an extended alternating direction method of multipliers (ADMM). In this way, we obtain high quality lower bounds for $k$-equipartition on large instances up to $n =1000$ vertices within as few as five minutes and for GPKC problems up to $n=500$ vertices within as little as one hour. On the other hand, interior point methods fail to solve instances from $n=300$ due to memory requirements. We also design heuristics to generate upper bounds from the SDP solutions, giving us tighter upper bounds than other methods proposed in the literature with low computational expense.},
   file        = {:http\://arxiv.org/pdf/2105.09075v2:PDF},
-  keywords    = {math.OC},
+  keywords    = {math.OC}
 }
 
-@Article{Zhu2021,
+@article{Zhu2021,
   author      = {Yu Zhu and Ananthram Swami and Santiago Segarra},
   date        = {2021-05-19},
   title       = {Free Energy Node Embedding via Generalized Skip-gram with Negative Sampling},
@@ -16414,10 +16414,10 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   eprinttype  = {arXiv},
   abstract    = {A widely established set of unsupervised node embedding methods can be interpreted as consisting of two distinctive steps: i) the definition of a similarity matrix based on the graph of interest followed by ii) an explicit or implicit factorization of such matrix. Inspired by this viewpoint, we propose improvements in both steps of the framework. On the one hand, we propose to encode node similarities based on the free energy distance, which interpolates between the shortest path and the commute time distances, thus, providing an additional degree of flexibility. On the other hand, we propose a matrix factorization method based on a loss function that generalizes that of the skip-gram model with negative sampling to arbitrary similarity matrices. Compared with factorizations based on the widely used $\ell_2$ loss, the proposed method can better preserve node pairs associated with higher similarity scores. Moreover, it can be easily implemented using advanced automatic differentiation toolkits and computed efficiently by leveraging GPU resources. Node clustering, node classification, and link prediction experiments on real-world datasets demonstrate the effectiveness of incorporating free-energy-based similarities as well as the proposed matrix factorization compared with state-of-the-art alternatives.},
   file        = {:http\://arxiv.org/pdf/2105.09182v1:PDF},
-  keywords    = {cs.LG, cs.SI},
+  keywords    = {cs.LG, cs.SI}
 }
 
-@Article{Biondi2021,
+@article{Biondi2021,
   author       = {Ettore Biondi and Guillaume Barnier and Robert G. Clapp and Francesco Picetti and Stuart Farris},
   date         = {2021-05},
   journaltitle = {Computers {\&} Geosciences},
@@ -16425,10 +16425,10 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   doi          = {10.1016/j.cageo.2021.104790},
   pages        = {104790},
   abstract     = {We present an object-oriented optimization framework that can be employed to solve small- and large-scale problems based on the concept of vectors and operators. By using such a strategy, we implement different iterative optimization algorithms that can be used in combination with architecture-independent vectors and operators, allowing the minimization of single-machine or cluster-based problems with a unique codebase. We implement a Python library following the described structure with a user-friendly interface that is designed to seamlessly scale to high-performance-computing (HPC) environments. We demonstrate its flexibility and scalability on multiple inverse problems, where convex and non-convex objective functions are optimized with different iterative algorithms.},
-  publisher    = {Elsevier {BV}},
+  publisher    = {Elsevier {BV}}
 }
 
-@Article{Qian2021,
+@article{Qian2021,
   author       = {Xuehai Qian},
   date         = {2021-05},
   journaltitle = {Science China Information Sciences},
@@ -16437,7 +16437,72 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   number       = {6},
   volume       = {64},
   abstract     = {This paper surveys domain-specific architectures (DSAs) built from two emerging memory technologies. Hybrid memory cube (HMC) and high bandwidth memory (HBM) can reduce data movement between memory and computation by placing computing logic inside memory dies. On the other hand, the emerging non-volatile memory, metal-oxide resistive random access memory (ReRAM) has been considered as a promising candidate for future memory architecture due to its high density, fast read access and low leakage power. The key feature is ReRAM’s capability to perform the inherently parallel in-situ matrix-vector multiplication in the analog domain. We focus on the DSAs for two important applications—graph processing and machine learning acceleration. Based on the understanding of the recent architectures and our research experience, we also discuss several potential research directions.},
-  publisher    = {Springer Science and Business Media {LLC}},
+  publisher    = {Springer Science and Business Media {LLC}}
+}
+
+@article{Dauzickaite2021a,
+  author      = {Ieva Daužickaitė and Amos S. Lawless and Jennifer A. Scott and Peter Jan van Leeuwen},
+  date        = {2021-05-20},
+  title       = {On preconditioning the state formulation of incremental weak constraint 4D-Var},
+  eprint      = {2105.09802},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {Using a high degree of parallelism is essential to perform data assimilation efficiently. The state formulation of the incremental weak constraint four-dimensional variational data assimilation method allows parallel calculations in the time dimension. In this approach, the solution is approximated by minimising a series of quadratic cost functions using the conjugate gradient method. To use this method in practice, effective preconditioning strategies that maintain the potential for parallel calculations are needed. We examine approximations to the control variable transform (CVT) technique when the latter is beneficial. The new strategy employs a randomised singular value decomposition and retains the potential for parallelism in the time domain. Numerical results for the Lorenz 96 model show that this approach accelerates the minimisation in the first few iterations, with better results when CVT performs well.},
+  file        = {:http\://arxiv.org/pdf/2105.09802v1:PDF},
+  keywords    = {math.NA, cs.NA}
+}
+
+@article{Cartis2021b,
+  author      = {Coralia Cartis and Jan Fiala and Zhen Shao},
+  date        = {2021-05-25},
+  title       = {Hashing embeddings of optimal dimension, with applications to linear least squares},
+  eprint      = {2105.11815},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {The aim of this paper is two-fold: firstly, to present subspace embedding properties for $s$-hashing sketching matrices, with $s\geq 1$, that are optimal in the projection dimension $m$ of the sketch, namely, $m=\mathcal{O}(d)$, where $d$ is the dimension of the subspace. A diverse set of results are presented that address the case when the input matrix has sufficiently low coherence (thus removing the $\log^2 d$ factor dependence in $m$, in the low-coherence result of Bourgain et al (2015) at the expense of a smaller coherence requirement); how this coherence changes with the number $s$ of column nonzeros (allowing a scaling of $\sqrt{s}$ of the coherence bound), or is reduced through suitable transformations (when considering hashed -- instead of subsampled -- coherence reducing transformations such as randomised Hadamard). Secondly, we apply these general hashing sketching results to the special case of Linear Least Squares (LLS), and develop Ski-LLS, a generic software package for these problems, that builds upon and improves the Blendenpik solver on dense input and the (sequential) LSRN performance on sparse problems. In addition to the hashing sketching improvements, we add suitable linear algebra tools for rank-deficient and for sparse problems that lead Ski-LLS to outperform not only sketching-based routines on randomly generated input, but also state of the art direct solver SPQR and iterative code HSL on certain subsets of the sparse Florida matrix collection; namely, on least squares problems that are significantly overdetermined, or moderately sparse, or difficult.},
+  file        = {:http\://arxiv.org/pdf/2105.11815v1:PDF},
+  keywords    = {math.NA, cs.NA, math.OC, stat.ML, 65K05, 93E24, 65F08, 65F10, 65F20, 65F50, 62J05}
+}
+
+@inproceedings{Rolinger2021,
+  author    = {Rolinger, Thomas B. and Krieger, Christopher D. and Sussman, Alan},
+  booktitle = {roceedings of the 35th International Parallel \& Distributed Processing Symposium},
+  date      = {2021},
+  title     = {Optimizing Memory-Compute Colocation for Irregular Applications on a Migratory Thread Architecture},
+  series    = {IPDPS '21},
+  abstract  = {The movement of data between memory and processors has become a performance bottleneck for many applications. This is made worse for applications with sparse and irregular memory accesses, as they exhibit weak locality and make poor utilization of cache. As a result, colocating memory and compute is crucial for achieving high performance on irregular applications. There are two paradigms for memory-compute colocation. The first is the conventional approach of moving the data to the compute. The second paradigm is to move the compute to the data, which is less conventional and not as well understood. An example are migratory threads, which physically relocate upon remote accesses to the compute resource that hosts the data. In this paper, we explore the paradigm of moving compute to the data by optimizing memory-compute colocation for irregular applications on a migratory thread architecture. Our optimization method includes both initial data placement as well as data replication. We evaluate our optimization on sparse matrix-vector multiply (SpMV) and sparse matrix-matrix multiply (SpGEMM). Our results show that we can achieve speed-ups as high as 4.2x on SpMV and 6x on SpGEMM when compared to the default data layout. We also highlight that our optimization to improve memory-compute colocation can be applicable to both migratory threads and more conventional systems. To this end, we evaluate our optimization approach on a conventional compute cluster using the Chapel programming language. We demonstrate speed-ups as high as 18x for SpMV.}
+}
+
+@inproceedings{Coupette2021,
+  author   = {Corinna Coupette and Jilles Vreeken},
+  date     = {2021},
+  title    = {Graph Similarity Description: How Are These Graphs Similar?},
+  doi      = {10.1145/3447548.3467257},
+  abstract = {How do social networks differ across platforms? How do information networks change over time? Answering questions like these requires us to compare two or more graphs. This task is commonly treated as a measurement problem, but numerical answers give limited insight. Here, we argue that if the goal is to gain understanding, we should treat graph similarity assessment as a description problem instead. We formalize this problem as a model selection task using the Minimum Description Length principle, capturing the similarity of the input graphs in a common model and the differences between them in transformations to individual models. To discover good models, we propose Momo, which breaks the problem into two parts and introduces efficient algorithms for each. Through an extensive set of experiments on a wide range of synthetic and real-world graphs, we confirm that Momo works well in practice}
+}
+
+@phdthesis{Sheng2021,
+  author      = {Yue Sheng},
+  date        = {2021},
+  institution = {University of Pennsylvania},
+  title       = {Applications of Random Matrix Theory in Statistics and Machine Learning},
+  abstract    = {We live in an age of big data. Analyzing modern data sets can be very difficult because they usually present the following features: massive, high-dimensional, and heterogeneous. How to deal with these new features often plays a key role in modern statistical and machine learning research. This dissertation uses random matrix theory (RMT), a powerful mathematical tool, to study several important problems where the data is massive, high-dimensional, and sometimes heterogeneous.\\ The first chapter briefly introduces some basics of random matrix theory (RMT). We also cover some classical applications of RMT to statistics and machine learning.\\ The second chapter is about distributed linear regression, where we consider the ordinary least squares (OLS) estimators. Distributed statistical learning problems arise commonly when dealing with large datasets. In this setup, datasets are partitioned over machines, which compute locally, and communicate short messages. Communication is often the bottleneck. We study one-step and iterative weighted parameter averaging in statistical linear models under data parallelism. We do linear regression on each machine, send the results to a central server, and take a weighted average of the parameters. Optionally, we iterate, sending back the weighted average and doing local ridge regressions centered at it. How does this work compared to doing linear regression on the full data? Here we study the performance loss in estimation and test error, and confidence interval length in high dimensions, where the number of parameters is comparable to the training data size. We find the performance loss in one-step weighted averaging, and also give results for iterative ivaveraging. We also find that different problems are affected differently by the distributed framework.\\ The third chapter studies a fundamental and highly important problem in this area: How to do ridge regression in a distributed computing environment? Ridge regression is an extremely popular method for supervised learning, and has several optimality properties, thus it is important to study. We study one-shot methods that construct weighted combinations of ridge regression estimators computed on each machine. By analyzing the mean squared error in a high dimensional random-effects model where each predictor has a small effect, we discover several new phenomena. We also propose a new Weighted ONe-shot DistributEd Ridge regression (WONDER) algorithm. We test WONDER in simulation studies and using the Million Song Dataset as an example. There it can save at least 100x in computation time, while nearly preserving test accuracy.\\ The fourth chapter is trying to solve another possible issue with modern data sets, that is heterogeneity. Dimensionality reduction via PCA and factor analysis is an important tool of data analysis. A critical step is selecting the number of components. However, existing methods (such as the scree plot, likelihood ratio, parallel analysis, etc) do not have statistical guarantees in the increasingly common setting where the data are heterogeneous. There each noise entry can have a different distribution. To address this problem, we propose the Signflip Parallel Analysis (Signflip PA) method: it compares data singular values to those of “empirical null” data generated by flipping the sign of each entry randomly with probability one-half. We show that Signflip PA consistently selects factors above the noise level in highdimensional signal-plus-noise models (including spiked models and factor models) under heterogeneous settings. Here classical parallel analysis is no longer effective. To do this, we propose to leverage recent breakthroughs in random matrix theory, such as dimensionfree operator norm bounds and large deviations for the top eigenvalues of nonhomogeneous matrices. We also illustrate that Signflip PA performs well in numerical simulations and on empirical data examples.}
+}
+
+@phdthesis{Sundararajan2021,
+  author      = {Akhil Sundararajan},
+  date        = {2021},
+  institution = {The University of Wisconsin - Madison},
+  title       = {Analysis and Design of Distributed Optimization Algorithms},
+  abstract    = {This work concerns the analysis and design of distributed first-order optimization algorithms. The goal of such algorithms is to optimize a global function that is the average of local functions using only local computations and communications. Many recent algorithms have been proposed that achieve linear convergence to the global optimum. We provide a unified analysis that yields the worst-case linear convergence rate as a function of the properties of the functions and underlying network, as well as the parameters of the algorithm. The framework requires solving a small semidefinite program whose feasibility is a sufficient condition for certifying linear convergence of a distributed algorithm. We present results for both known, fixed graphs and unknown, time-varying graphs. The analysis framework is a computationally efficient method for distributed algorithm analysis that enables the rapid comparison, selection, and tuning of algorithms.\\ This work also makes an effort to systematize distributed algorithm design by devising a canonical form for first order distributed algorithms. The canonical form characterizes any distributed algorithm that can be implemented using a single round of communication and gradient computation per iteration, and where each agent stores up to two state variables. The canonical form features a minimal set of parameters that are both unique and expressive enough to capture any distributed algorithm in this class. Using this canonical form, we propose a new algorithm, which we call SVL, that is easily implementable and achieves a faster worst-case convergence rate than all other known algorithms.}
+}
+
+@phdthesis{Huang2021b,
+  author      = {Huang, Shengyu},
+  date        = {2021},
+  institution = {Arizona State University},
+  title       = {Optimization of Block-Based Tensor Decompositions through Sub-Tensor Impact Graphs and Applications to Dynamicity in Data and User Focus},
+  abstract    = {Tensors are commonly used for representing multi-dimensional data, such as Web graphs, sensor streams, and social networks. As a consequence of the increase in the use of tensors, tensor decomposition operations began to form the basis for many data analysis and knowledge discovery tasks, from clustering, trend detection, anomaly detection to correlation analysis [31, 38].\\ It is well known that Singular Value matrix Decomposition (SVD) [9] is used to extract latent semantics for matrix data. When apply svd to tensors, which have more than two modes, it is tensor decomposition. The two most popular tensor decomposition algorithms are the Tucker [54] and the CP [19] decompositions. Intuitively, they both generalize SVD to tensors. However, one key problem with tensor decomposition is its computational complexity which may cause system bottleneck. Therefore, two phase block-centric CP tensor decomposition (2PCP) was proposed to partition the tensor into small sub-tensors, execute sub-tensor decomposition in parallel and combine the factors from each sub-tensor into final decomposition factors through iterative refinement process.\\ Consequently, I proposed Sub-tensor Impact Graph (SIG) to account for inaccuracy propagation among sub-tensors and measure the impact of decomposition of sub-tensors on the other’s decomposition, Based on SIG, I proposed several optimization strategies to optimize 2PCP’s phase-2 refinement process. Furthermore, I applied SIG and optimization strategies for data focus, data evolution and focus shifting in tensor analysis. Personalized Tensor Decomposition (PTD) is proposed to account for the users focus given the observations that in many applications, the user may have a focus of interest i.e., part of the data for which the user needs high accuracy and beyond this area focus, accuracy may not be as critical. PTD takes as input one or more areas of focus and performs the decomposition in such a way that, when reconstructed, the accuracy of the tensor is boosted for these areas of focus.\\ iA related challenge of data evolution in tensor analytics is incremental tensor decomposition since re-computation of the whole tensor decomposition with each update will cause high computational costs and incur large memory overheads. Especially for applications where data evolves over time and the tensor-based analysis results need to be continuously maintained. To avoid re-decomposition, I propose a two-phase block-incremental CP-based tensor decomposition technique, BICP, that efficiently and effectively maintains tensor decomposition results in the presence of dynamically evolving tensor data.\\ I further extend the research focus on user focus shift. User focus may change over time as data is evolving along the time. Although PTD is efficient, re-computation for each user preference update can be bottleneck for the system. Therefore I propose dynamic evolving user focus tensor decomposition which can smartly reuse the existing decomposition result to improve the efficiency of evolving user focus block decomposition.}
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
