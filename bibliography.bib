@@ -16564,6 +16564,16 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   publisher    = {Elsevier {BV}},
 }
 
+@InProceedings{Selvitopi2021,
+  author    = {Oguz Selvitopi and Benjamin Brock and Israt Nisa and Alok Tripathy and Katherine Yelick and Ayd{\i}n Bulu{\c{c}}},
+  booktitle = {Proceedings of the {ACM} International Conference on Supercomputing},
+  date      = {2021-06},
+  title     = {Distributed-memory parallel algorithms for sparse times tall-skinny-dense matrix multiplication},
+  doi       = {10.1145/3447818.3461472},
+  publisher = {{ACM}},
+  abstract  = {Sparse times dense matrix multiplication (SpMM) finds its applications in well-established fields such as computational linear algebra as well as emerging fields such as graph neural networks. In this study, we evaluate the performance of various techniques for performing SpMM as a distributed computation across many nodes by focusing on GPU accelerators. We examine how the actual local computational performance of state-of-the-art SpMM implementations affect computational efficiency as dimensions change when we scale to large numbers of nodes, which proves to be an unexpectedly important bottleneck. We consider various distribution strategies, including A-Stationary, B-Stationary, and C-Stationary algorithms, 1.5D and 2D algorithms, and RDMA-based and bulk synchronous methods of data transfer. Our results show that the best choice of algorithm and implementation technique depends not only on the cost of communication for particular matrix sizes and dimensions, but also on the performance of local SpMM operations. Our evaluations reveal that with the involvement of GPU accelerators, the best design choices for SpMM differ from the conventional algorithms that are known to perform well for dense matrix-matrix or sparse matrix-sparse matrix multiplies.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
