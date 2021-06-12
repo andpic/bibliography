@@ -15022,15 +15022,15 @@ Python finite element solver library in the last two chapters.\\ This textbook, 
   year      = {2020}
 }
 
-@techreport{Korkmaz2021,
-  author      = {Esragul Korkmaz and Mathieu Faverge and Grégoire Pichon and Pierre Ramet},
+@TechReport{Korkmaz2021,
+  author      = {Esragul Korkmaz and Mathieu Faverge and Grégoire Pichon and Pierre RametEsragul Korkmaz and Mathieu Faverge and Grégoire Pichon and Pierre Ramet},
   date        = {2021},
   institution = {Inria Bordeaux -- Sud Ouest},
   title       = {Deciding Non-Compressible Blocks in Sparse Direct Solvers using Incomplete Factorization},
   eprint      = {03152932v2},
   eprinttype  = {HAL},
   url         = {https://hal.inria.fr/hal-03152932/file/RR-9396.pdf},
-  abstract    = {Low-rank compression techniques are very promising for reducing memory footprint and execution time on a large spectrum of linear solvers. Sparse direct supernodal approaches are one these techniques. However, despite providing a very good scalability and reducing the memory footprint, they suffer from an important flops overhead in their unstructured low-rank updates. As a consequence, the execution time is not improved as expected. In this paper, we study a solution to improve low-rank compression techniques in sparse supernodal solvers. The proposed method tackles the overprice of the low-rank updates by identifying the blocks that have poor compression rates. We show that block incomplete LU factorization, thanks to the block fill-in levels, allows to identify most of these non-compressible blocks at low cost. This identification enables to postpone the low-rank compression step to trade small extra memory consumption for a better time to solution. The solution is validated within the PaStiX library with a large set of application matrices. It demonstrates sequential and multi-threaded speedup up to 8.5$\times$, for small memory overhead of less than 1.49$\times$ with respect to the original version.}
+  abstract    = {Low-rank compression techniques are very promising for reducing memory footprint and execution time on a large spectrum of linear solvers. Sparse direct supernodal approaches are one these techniques. However, despite providing a very good scalability and reducing the memory footprint, they suffer from an important flops overhead in their unstructured low-rank updates. As a consequence, the execution time is not improved as expected. In this paper, we study a solution to improve low-rank compression techniques in sparse supernodal solvers. The proposed method tackles the overprice of the low-rank updates by identifying the blocks that have poor compression rates. We show that block incomplete LU factorization, thanks to the block fill-in levels, allows to identify most of these non-compressible blocks at low cost. This identification enables to postpone the low-rank compression step to trade small extra memory consumption for a better time to solution. The solution is validated within the PaStiX library with a large set of application matrices. It demonstrates sequential and multi-threaded speedup up to 8.5$\times$, for small memory overhead of less than 1.49$\times$ with respect to the original version.},
 }
 
 @article{Ma2021a,
@@ -16572,6 +16572,48 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   doi       = {10.1145/3447818.3461472},
   publisher = {{ACM}},
   abstract  = {Sparse times dense matrix multiplication (SpMM) finds its applications in well-established fields such as computational linear algebra as well as emerging fields such as graph neural networks. In this study, we evaluate the performance of various techniques for performing SpMM as a distributed computation across many nodes by focusing on GPU accelerators. We examine how the actual local computational performance of state-of-the-art SpMM implementations affect computational efficiency as dimensions change when we scale to large numbers of nodes, which proves to be an unexpectedly important bottleneck. We consider various distribution strategies, including A-Stationary, B-Stationary, and C-Stationary algorithms, 1.5D and 2D algorithms, and RDMA-based and bulk synchronous methods of data transfer. Our results show that the best choice of algorithm and implementation technique depends not only on the cost of communication for particular matrix sizes and dimensions, but also on the performance of local SpMM operations. Our evaluations reveal that with the involvement of GPU accelerators, the best design choices for SpMM differ from the conventional algorithms that are known to perform well for dense matrix-matrix or sparse matrix-sparse matrix multiplies.},
+}
+
+@Article{Kolev2021,
+  author       = {Tzanio Kolev and Paul Fischer and Misun Min and Jack Dongarra and Jed Brown and Veselin Dobrev and Tim Warburton and Stanimire Tomov and Mark S Shephard and Ahmad Abdelfattah and Valeria Barra and Natalie Beams and Jean-Sylvain Camier and Noel Chalmers and Yohann Dudouit and Ali Karakus and Ian Karlin and Stefan Kerkemeier and Yu-Hsiang Lan and David Medina and Elia Merzari and Aleksandr Obabko and Will Pazner and Thilina Rathnayake and Cameron W Smith and Lukas Spies and Kasia Swirydowicz and Jeremy Thompson and Ananias Tomboulides and Vladimir Tomov},
+  date         = {2021-06},
+  journaltitle = {The International Journal of High Performance Computing Applications},
+  title        = {Efficient exascale discretizations: High-order finite element methods},
+  doi          = {10.1177/10943420211020803},
+  pages        = {109434202110208},
+  abstract     = {Efficient exploitation of exascale architectures requires rethinking of the numerical algorithms used in many large-scale applications. These architectures favor algorithms that expose ultra fine-grain parallelism and maximize the ratio of floating point operations to energy intensive data movement. One of the few viable approaches to achieve high efficiency in the area of PDE discretizations on unstructured grids is to use matrix-free/partially assembled high-order finite element methods, since these methods can increase the accuracy and/or lower the computational time due to reduced data motion. In this paper we provide an overview of the research and development activities in the Center for Efficient Exascale Discretizations (CEED), a co-design center in the Exascale Computing Project that is focused on the development of next-generation discretization software and algorithms to enable a wide range of finite element applications to run efficiently on future hardware. CEED is a research partnership involving more than 30 computational scientists from two US national labs and five universities, including members of the Nek5000, MFEM, MAGMA and PETSc projects. We discuss the CEED co-design activities based on targeted benchmarks, miniapps and discretization libraries and our work on performance optimizations for large-scale GPU architectures. We also provide a broad overview of research and development activities in areas such as unstructured adaptive mesh refinement algorithms, matrix-free linear solvers, high-order data visualization, and list examples of collaborations with several ECP and external applications.},
+  publisher    = {{SAGE} Publications},
+}
+
+@InCollection{Nayak2021,
+  author    = {Pratik Nayak and Fritz Göbel and Hartwig Anzt},
+  booktitle = {Computational Science {\textendash} {ICCS} 2021},
+  date      = {2021},
+  title     = {A Collaborative Peer Review Process for Grading Coding Assignments},
+  doi       = {10.1007/978-3-030-77980-1_49},
+  pages     = {654--660},
+  publisher = {Springer International Publishing},
+  abstract  = {With software technology becoming one of the most important aspects of computational science, it is imperative that we train students in the use of software development tools and teach them to adhere to sustainable software development workflows. In this paper, we showcase how we employ a collaborative peer review workflow for the homework assignments of our course on Numerical Linear Algebra for High Performance Computing (HPC). In the workflow we employ, the students are required to operate with the git version control system, perform code reviews, realize unit tests, and plug into a continuous integration system. From the students’ performance and feedback, we are optimistic that this workflow encourages the acceptance and usage of software development tools in academic software development.},
+}
+
+@Misc{Buluc2021a,
+  author    = {Buluc, Aydin and Kizilkale, Can},
+  date      = {2021},
+  title     = {HUNTRESS: a fast heuristic for reconstructing phylogenetic trees of tumor evolution (HUNTRESS) v0.1},
+  doi       = {10.11578/DC.20210416.2},
+  language  = {en},
+  abstract  = {We introduce HUNTRESS (Histogrammed UNion Tree REconStruction heuriStic), a computational method for tumor phylogeny reconstruction from noisy genotype matrices derived from single-cell sequencing data, whose running time is linear with the number of cells and quadratic with the number of mutations. Provided that the input genotype matrix includes no false positives, each cellular subpopulation is at least a user defined fraction of the total number of cells, and the number of cells are much bigger than the number of mutations considered, HUNTRESS computes the ground truth tumor phylogeny with high probability. On simulated data HUNTRESS is faster than available alternatives with comparable or better accuracy. Additionally, the phylogenies reconstructed by HUNTRESS on two single-cell sequencing data sets agree with the best known evolutionary scenarios for the associated tumors.},
+  publisher = {Lawrence Berkeley National Laboratory (LBNL), Berkeley, CA (United States)},
+}
+
+@TechReport{Amestoy2021,
+  author     = {Patrick Amestoy and Olivier Boiteau and Alfredo Buttari and Matthieu Gerest and FabienneJézéquel and Jean-Yves l’Excellent and Théo Mary},
+  date       = {2021},
+  title      = {Mixed Precision Low Rank Approximations and theirApplication to Block Low Rank {LU} Factorization},
+  eprint     = {03251738},
+  eprinttype = {HAL},
+  url        = {https://hal.archives-ouvertes.fr/hal-03251738/document},
+  abstract   = {We introduce a novel approach to exploit mixed precision arithmetic for low-rank approximations. Our approach is based on the observation that singular vectors associated with small singular values can be stored in lower precisions while preserving high accuracy overall. We provide an explicit criterion to determine which level of precision is needed for each singular vector. We apply this approach to block low-rank (BLR) matrices, most of whose off-diagonal blocks have low rank. We propose a new BLR LU factorization algorithm that exploits the mixed precision representation of the blocks. We carry out the rounding error analysis of this algorithm and prove that the use of mixed precision arithmetic does not compromise the numerical stability of BLR LU factorization. Moreover our analysis determines which level of precision is needed for each floating-point operation (flop), and therefore guides us towards an implementation that is both robust and efficient. We evaluate the potential of this new algorithm on a range of matrices coming from real-life problems in industrial and academic applications. We show that a large fraction of the entries in the LU factors and flops to perform the BLR LU factorization can be safely switched to lower precisions, leading to significant reductions of the storage and flop costs, of up to a factor three using fp64, fp32, and bfloat16 arithmetics.},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
