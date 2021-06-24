@@ -16616,6 +16616,48 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   abstract   = {We introduce a novel approach to exploit mixed precision arithmetic for low-rank approximations. Our approach is based on the observation that singular vectors associated with small singular values can be stored in lower precisions while preserving high accuracy overall. We provide an explicit criterion to determine which level of precision is needed for each singular vector. We apply this approach to block low-rank (BLR) matrices, most of whose off-diagonal blocks have low rank. We propose a new BLR LU factorization algorithm that exploits the mixed precision representation of the blocks. We carry out the rounding error analysis of this algorithm and prove that the use of mixed precision arithmetic does not compromise the numerical stability of BLR LU factorization. Moreover our analysis determines which level of precision is needed for each floating-point operation (flop), and therefore guides us towards an implementation that is both robust and efficient. We evaluate the potential of this new algorithm on a range of matrices coming from real-life problems in industrial and academic applications. We show that a large fraction of the entries in the LU factors and flops to perform the BLR LU factorization can be safely switched to lower precisions, leading to significant reductions of the storage and flop costs, of up to a factor three using fp64, fp32, and bfloat16 arithmetics.},
 }
 
+@Article{Xie2021,
+  author       = {Zhen Xie and Guangming Tan and Weifeng Liu and Ninghui Sun},
+  date         = {2021},
+  journaltitle = {{IEEE} Transactions on Parallel and Distributed Systems},
+  title        = {A Pattern-based {SpGEMM} Library for Multi-core and Many-core Architectures},
+  doi          = {10.1109/tpds.2021.3090328},
+  pages        = {1--1},
+  abstract     = {General sparse matrix-matrix multiplication (SpGEMM) is one of the most important mathematical library routines in a number of applications. In recent years, several efficient SpGEMM algorithms have been proposed, however, most of them are based on the compressed sparse row (CSR) format, and the possible performance gain from exploiting other formats has not been well studied. And some specific algorithms are restricted to parameter tuning that has a significant impact on performance. So the particular format, algorithm, and parameter that yield the best performance for SpGEMM remain undetermined. In this paper, we conduct a prospective study on format-specific parallel SpGEMM algorithms and analyze their pros and cons. We then propose a pattern-based SpGEMM library, that provides a unified programming interface in the CSR format, analyses the pattern of two input matrices, and automatically determines the best format, algorithm, and parameter for arbitrary matrix pairs. For this purpose, we build an algorithm set that integrates three new designed algorithms with existing popular libraries, and design a hybrid deep learning model called MatNet to quickly identify patterns of input matrices and accurately predict the best solution by using sparse features and density representations. The evaluation shows that this library consistently outperforms the state-of-the-art library. We also demonstrate its adaptability in an AMG solver and a BFS algorithm with 30\% performance improvement.},
+  publisher    = {Institute of Electrical and Electronics Engineers ({IEEE})},
+}
+
+@InProceedings{Qiu2021,
+  author    = {Jiezhong Qiu and Laxman Dhulipala and Jie Tang and Richard Peng and Chi Wang},
+  booktitle = {Proceedings of the 2021 International Conference on Management of Data},
+  date      = {2021-06},
+  title     = {{LightNE}: A Lightweight Graph Processing System for Network Embedding},
+  doi       = {10.1145/3448016.3457329},
+  publisher = {{ACM}},
+  abstract  = {We propose LightNE, a cost-effective, scalable, and high quality network embedding system that scales to graphs with hundreds of billions of edges on a single machine. In contrast to the mainstream belief that distributed architecture and GPUs are needed for large-scale network embedding with good quality, we prove that we can achieve higher quality, better scalability, lower cost and faster runtime with shared-memory, CPU-only architecture. LightNE combines two theoretically grounded embedding methods NetSMF and ProNE. We introduce the following techniques to network embedding for the first time: (1) a newly proposed downsampling method to reduce the sample complexity of NetSMF while preserving its theoretical advantages; (2) a high-performance parallel graph processing stack GBBS to achieve high memory efficiency and scalability; (3) sparse parallel hash table to aggregate and maintain the matrix sparsifier in memory; and (4) Intel MKL for efficient randomized SVD and spectral propagation.},
+}
+
+@Article{Choi2021,
+  author      = {Young-Geun Choi and Seunghwan Lee and Donghyeon Yu},
+  date        = {2021-06-17},
+  title       = {An efficient parallel block coordinate descent algorithm for large-scale precision matrix estimation using graphics processing units},
+  eprint      = {2106.09382},
+  eprintclass = {stat.CO},
+  eprinttype  = {arXiv},
+  abstract    = {Large-scale sparse precision matrix estimation has attracted wide interest from the statistics community. The convex partial correlation selection method (CONCORD) developed by Khare et al. (2015) has recently been credited with some theoretical properties for estimating sparse precision matrices. The CONCORD obtains its solution by a coordinate descent algorithm (CONCORD-CD) based on the convexity of the objective function. However, since a coordinate-wise update in CONCORD-CD is inherently serial, a scale-up is nontrivial. In this paper, we propose a novel parallelization of CONCORD-CD, namely, CONCORD-PCD. CONCORD-PCD partitions the off-diagonal elements into several groups and updates each group simultaneously without harming the computational convergence of CONCORD-CD. We guarantee this by employing the notion of edge coloring in graph theory. Specifically, we establish a nontrivial correspondence between scheduling the updates of the off-diagonal elements in CONCORD-CD and coloring the edges of a complete graph. It turns out that CONCORD-PCD simultaneously updates off-diagonal elements in which the associated edges are colorable with the same color. As a result, the number of steps required for updating off-diagonal elements reduces from p(p-1)/2 to p-1 (for even p) or p (for odd p), where p denotes the number of variables. We prove that the number of such steps is irreducible In addition, CONCORD-PCD is tailored to single-instruction multiple-data (SIMD) parallelism. A numerical study shows that the SIMD-parallelized PCD algorithm implemented in graphics processing units (GPUs) boosts the CONCORD-CD algorithm multiple times.},
+  file        = {:http\://arxiv.org/pdf/2106.09382v1:PDF},
+  keywords    = {stat.CO},
+}
+
+@InProceedings{Huang2021c,
+  author    = {Jingwei Huang and Shan Huang and Mingwei Sun},
+  booktitle = {Proceedings of CVPR 2021},
+  date      = {2021},
+  title     = {{DeepLM}: Large-scale Nonlinear Least Squares on Deep Learning Frameworksusing Stochastic Domain Decomposition},
+  series    = {CVPR 2021},
+  abstract  = {We propose a novel approach for large-scale nonlinear least squares problems based on deep learning frameworks. Nonlinear least squares are commonly solved with the Levenberg-Marquardt (LM) algorithm for fast convergence. We implement a general and efficient LM solver on a deep learning framework by designing a new backward jacobian network to enable automatic sparse jacobian matrix computation. Furthermore, we introduce a stochastic domain decomposition approach that enables batched optimization and preserves convergence for large problems. We evaluate our method by solving bundle adjustment as a fundamental problem. Experiments show that our optimizer significantly outperforms the state-of-the-art solutions and existing deep learning solvers considering quality, efficiency, and memory. Our stochastic domain decomposition enables distributed optimization, consumes little memory and time, and achieves similar quality compared to a global solver. As a result, our solver effectively solves nonlinear least squares on an extremely large scale. Our code will be available based on Pytorch and Mindspore.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
