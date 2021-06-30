@@ -16658,6 +16658,51 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   abstract  = {We propose a novel approach for large-scale nonlinear least squares problems based on deep learning frameworks. Nonlinear least squares are commonly solved with the Levenberg-Marquardt (LM) algorithm for fast convergence. We implement a general and efficient LM solver on a deep learning framework by designing a new backward jacobian network to enable automatic sparse jacobian matrix computation. Furthermore, we introduce a stochastic domain decomposition approach that enables batched optimization and preserves convergence for large problems. We evaluate our method by solving bundle adjustment as a fundamental problem. Experiments show that our optimizer significantly outperforms the state-of-the-art solutions and existing deep learning solvers considering quality, efficiency, and memory. Our stochastic domain decomposition enables distributed optimization, consumes little memory and time, and achieves similar quality compared to a global solver. As a result, our solver effectively solves nonlinear least squares on an extremely large scale. Our code will be available based on Pytorch and Mindspore.},
 }
 
+@Article{Tadonki2021,
+  author      = {Claude Tadonki},
+  date        = {2021-06-22},
+  title       = {High Performance Optimization at the Door of the Exascale},
+  eprint      = {2106.11819},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {quest for processing speed potential. In fact, we always get a fraction of the technically available computing power (so-called {\em theoretical peak}), and the gap is likely to go hand-to-hand with the hardware complexity of the target system. Among the key aspects of this complexity, we have: the {\em heterogeneity} of the computing units, the {\em memory hierarchy and partitioning} including the non-uniform memory access (NUMA) configuration, and the {\em interconnect} for data exchanges among the computing nodes. Scientific investigations and cutting-edge technical activities should ideally scale-up with respect to sustained performance. The special case of quantitative approaches for solving (large-scale) problems deserves a special focus. Indeed, most of common real-life problems, even when considering the artificial intelligence paradigm, rely on optimization techniques for the main kernels of algorithmic solutions. Mathematical programming and pure combinatorial methods are not easy to implement efficiently on large-scale supercomputers because of {\em irregular control flow}, {\em complex memory access patterns}, {\em heterogeneous kernels}, {\em numerical issues}, to name a few. We describe and examine our thoughts from the standpoint of large-scale supercomputers.},
+  file        = {:http\://arxiv.org/pdf/2106.11819v1:PDF},
+  keywords    = {cs.DC},
+}
+
+@Article{Lu2021,
+  author      = {Zhongjie Lu},
+  date        = {2021-06-24},
+  title       = {A sparse approximate inverse for triangular matrices based on Jacobi iteration},
+  eprint      = {2106.12836},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {In this paper, we propose a sparse approximate inverse for triangular matrices (SAIT) based on Jacobi iteration. The main operation of the algorithm is matrix-matrix multiplication. We apply the SAIT to iterative methods with ILU preconditioners. Then the two triangular solvers in the ILU preconditioning procedure are replaced by two matrix-vector multiplications, which can be fine-grained parallelized. We test the new algorithm by solving some linear systems and eigenvalue problems.},
+  file        = {:http\://arxiv.org/pdf/2106.12836v1:PDF},
+  keywords    = {math.NA, cs.NA},
+}
+
+@InProceedings{Schuman2021,
+  author    = {Catherine D. Schuman and Bill Kay and Prasanna Date and Ramakrishnan Kannan and Piyush Sao and Thomas E. Potok},
+  booktitle = {Proceedings of the 2021 {IEEE} International Parallel and Distributed Processing Symposium Workshops},
+  date      = {2021-06},
+  title     = {Sparse Binary Matrix-Vector Multiplication on Neuromorphic Computers},
+  doi       = {10.1109/ipdpsw52791.2021.00054},
+  publisher = {{IEEE}},
+  series    = {IPDPSW 2021},
+  abstract  = {Neuromorphic computers offer the opportunity for low-power, efficient computation. Though they have been primarily applied to neural network tasks, there is also the opportunity to leverage the inherent characteristics of neuromorphic computers (low power, massive parallelism, collocated processing and memory) to perform non-neural network tasks. Here, we demonstrate how an approach for performing sparse binary matrix-vector multiplication on neuromorphic computers. We describe the approach, which relies on the connection between binary matrix-vector multiplication and breadth first search, and we introduce the algorithm for performing this calculation in a neuromorphic way. We validate the approach in simulation. Finally, we provide a discussion of the runtime of this algorithm and discuss where neuromorphic computers in the future may have a computational advantage when performing this computation.},
+}
+
+@Article{Wang2021d,
+  author       = {Ruimin Wang and Zhiwei Yang and Hao Xu and Lu Lu},
+  date         = {2021-06},
+  journaltitle = {The Journal of Supercomputing},
+  title        = {A high-performance batched matrix multiplication framework for {GPUs} under unbalanced input distribution},
+  doi          = {10.1007/s11227-021-03936-9},
+  abstract     = {In the past few decades, general matrix multiplication (GEMM), as the basic component of the Basic Linear Algebra Subprograms (BLAS) library, has played a vital role in various fields such as machine learning, image processing, and fluid dynamics. Because these fields tend to deconstruct the problem into multiple smaller sub-problems, today’s BLAS libraries have implemented batched GEMM routines to achieve high performance in this scenario. MAGMA proposes a vbatch routine to calculate batched GEMM with variable size on GPU, but unbalanced input will cause some workgroups and threads to be idle, thereby affecting performance. In addition, unbalanced input will also affect the load balancing of the Computing Unit in GPU, and extreme input will lead to insufficient utilization of hardware resources. In this paper we proposes a high-performance batched GEMM computing framework on GPU. For a large batch of small matrices with variable sizes and unbalanced distribution, the proposed framework considered the hardware architecture and the possible data distribution, and adopted three methods (flexible tile, sort-up and split-down) to improve hardware utilization and achieve better load balancing. Experimental results show that our framework has a 3.02$\times$ performance improvement compared to the latest MAGMA implementation on AMD Radeon Instinct MI50 GPU, and 3.14$\times$ speedup on MI100.},
+  publisher    = {Springer Science and Business Media {LLC}},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
