@@ -16703,6 +16703,51 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   publisher    = {Springer Science and Business Media {LLC}},
 }
 
+@Article{Scott2021b,
+  author      = {Jennifer Scott and Miroslav Tuma},
+  date        = {2021-06-24},
+  title       = {Solving large linear least squares with linear equality constraints},
+  eprint      = {2106.13142},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {We consider the problem of efficiently solving large-scale linear least squares problems that have one or more linear constraints that must be satisfied exactly. Whilst some classical approaches are theoretically well founded, they can face difficulties when the matrix of constraints contains dense rows or if an algorithmic transformation used in the solution process results in a modified problem that is much denser than the original one. To address this, we propose modifications and new ideas, with an emphasis on requiring the constraints are satisfied with a small residual. We examine combining the null-space method with our recently developed algorithm for computing a null space basis matrix for a ``wide'' matrix. We further show that a direct elimination approach enhanced by careful pivoting can be effective in transforming the problem to an unconstrained sparse-dense least squares problem that can be solved with existing direct or iterative methods. We also present a number of solution variants that employ an augmented system formulation, which can be attractive when solving a sequence of related problems. Numerical experiments using problems coming from practical applications are used throughout to demonstrate the effectiveness of the different approaches.},
+  file        = {:http\://arxiv.org/pdf/2106.13142v1:PDF},
+  keywords    = {math.NA, cs.NA},
+}
+
+@InProceedings{Gabert2021a,
+  author    = {Kasimir Gabert and Umit V. Catalyurek},
+  booktitle = {Proceedings of the 2021 {IEEE} International Parallel and Distributed Processing Symposium Workshops},
+  date      = {2021-06},
+  title     = {{PIGO}: A Parallel Graph Input/Output Library},
+  doi       = {10.1109/ipdpsw52791.2021.00050},
+  publisher = {{IEEE}},
+  series    = {IPDPSW 2021},
+  abstract  = {Graph and sparse matrix systems are highly tuned, able to run complex graph analytics in fractions of seconds on billion-edge graphs. For both developers and researchers, the focus has been on computational kernels and not end-to-end runtime. Despite the significant improvements that modern hardware and operating systems have made towards input and output, these can still become application bottlenecks. Unfortunately, on high-performance shared-memory graph systems running billion-scale graphs, reading the graph from file systems easily takes over 2000$\times$ longer than running the computational kernel. This slowdown causes both a disconnect for end users and a loss of productivity for researchers and developers.We close the gap by providing a simple to use, small, header-only, and dependency-free C++11 library that brings I/O improvements to graph and matrix systems. Using our library, we improve the end-to-end performance for state-of-the-art systems significantly—in many cases by over 40$\times$.},
+}
+
+@InProceedings{Gabert2021b,
+  author    = {Kasimir Gabert and Ali Pinar and Umit V. Catalyurek},
+  booktitle = {Proceedings of the 2021 {IEEE} International Parallel and Distributed Processing Symposium Workshops},
+  date      = {2021-06},
+  title     = {Shared-Memory Scalable k-Core Maintenance on Dynamic Graphs and Hypergraphs},
+  doi       = {10.1109/ipdpsw52791.2021.00158},
+  publisher = {{IEEE}},
+  series    = {IPDPSW 2021},
+  abstract  = {Computing k-cores on graphs is an important graph mining target as it provides an efficient means of identifying a graph’s dense and cohesive regions. Computing k-cores on hypergraphs has seen recent interest, as many datasets naturally produce hypergraphs. Maintaining k-cores as the underlying data changes is important as graphs are large, growing, and continuously modified. In many practical applications, the graph updates are bursty, both with periods of significant activity and periods of relative calm. Existing maintenance algorithms fail to handle large bursts, and prior parallel approaches on both graphs and hypergraphs fail to scale as available cores increase.We address these problems by presenting two parallel and scalable fully-dynamic batch algorithms for maintaining k-cores on both graphs and hypergraphs. Both algorithms take advantage of the connection between k-cores and h-indices. One algorithm is well suited for large batches and the other for small. We provide the first algorithms that experimentally demonstrate scalability as the number of threads increase while sustaining high change rates in graphs and hypergraphs.},
+}
+
+@InProceedings{Brock2021,
+  author    = {Benjamin Brock and Aydin Buluc and Timothy G. Mattson and Scott McMillan and Jose E. Moreira},
+  booktitle = {Proceedings of the 2021 {IEEE} International Parallel and Distributed Processing Symposium Workshops},
+  date      = {2021-06},
+  title     = {Introduction to {GraphBLAS} 2.0},
+  doi       = {10.1109/ipdpsw52791.2021.00047},
+  publisher = {{IEEE}},
+  series    = {IPDPSW 2021},
+  abstract  = {The GraphBLAS is a set of basic building blocks for constructing graph algorithms in terms of linear algebra. They are first and foremost defined mathematically with the goal that language bindings will be produced for a wide range of programming languages. We started with the C programming language and over the last four years have produced multiple versions of the GraphBLAS C API specification. In this paper, we describe our next version of the C GraphBLAS specification. It introduces a number of major changes including support for multithreading, import/export functionality, and functions that use the indices of matrix/vector elements. Since some of these changes introduce small backwards compatibility issues, this is a major release we call GraphBLAS 2.0.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
