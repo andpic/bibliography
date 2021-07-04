@@ -16748,6 +16748,117 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   abstract  = {The GraphBLAS is a set of basic building blocks for constructing graph algorithms in terms of linear algebra. They are first and foremost defined mathematically with the goal that language bindings will be produced for a wide range of programming languages. We started with the C programming language and over the last four years have produced multiple versions of the GraphBLAS C API specification. In this paper, we describe our next version of the C GraphBLAS specification. It introduces a number of major changes including support for multithreading, import/export functionality, and functions that use the indices of matrix/vector elements. Since some of these changes introduce small backwards compatibility issues, this is a major release we call GraphBLAS 2.0.},
 }
 
+@Article{Chen2021c,
+  author      = {Yuedan Chen and M. Tamer Özsu and Guoqing Xiao and Zhuo Tang and Kenli Li},
+  date        = {2021-06-26},
+  title       = {GSmart: An Efficient SPARQL Query Engine Using Sparse Matrix Algebra -- Full Version},
+  eprint      = {2106.14038},
+  eprintclass = {cs.DB},
+  eprinttype  = {arXiv},
+  abstract    = {Efficient execution of SPARQL queries over large RDF datasets is a topic of considerable interest due to increased use of RDF to encode data. Most of this work has followed either relational or graph-based approaches. In this paper, we propose an alternative query engine, called gSmart, based on matrix algebra. This approach can potentially better exploit the computing power of high-performance heterogeneous architectures that we target. gSmart incorporates: (1) grouped incident edge-based SPARQL query evaluation, in which all unevaluated edges of a vertex are evaluated together using a series of matrix operations to fully utilize query constraints and narrow down the solution space; (2) a graph query planner that determines the order in which vertices in query graphs should be evaluated; (3) memory- and computation-efficient data structures including the light-weight sparse matrix (LSpM) storage for RDF data and the tree-based representation for evaluation results; (4) a multi-stage data partitioner to map the incident edge-based query evaluation into heterogeneous HPC architectures and develop multi-level parallelism; and (5) a parallel executor that uses the fine-grained processing scheme, pre-pruning technique, and tree-pruning technique to lower inter-node communication and enable high throughput. Evaluations of gSmart on a CPU+GPU HPC architecture show execution time speedups of up to 46920.00x compared to the existing SPARQL query engines on a single node machine. Additionally, gSmart on the Tianhe-1A supercomputer achieves a maximum speedup of 6.90x scaling from 2 to 16 CPU+GPU nodes.},
+  file        = {:http\://arxiv.org/pdf/2106.14038v1:PDF},
+  keywords    = {cs.DB, cs.DC},
+}
+
+@Article{Azad2021,
+  author      = {Ariful Azad and Oguz Selvitopi and Md Taufique Hussain and John R. Gilbert and Aydin Buluc},
+  date        = {2021-06-28},
+  title       = {Combinatorial BLAS 2.0: Scaling combinatorial algorithms on distributed-memory systems},
+  eprint      = {2106.14402},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {Combinatorial algorithms such as those that arise in graph analysis, modeling of discrete systems, bioinformatics, and chemistry, are often hard to parallelize. The Combinatorial BLAS library implements key computational primitives for rapid development of combinatorial algorithms in distributed-memory systems. During the decade since its first introduction, the Combinatorial BLAS library has evolved and expanded significantly. This paper details many of the key technical features of Combinatorial BLAS version 2.0, such as communication avoidance, hierarchical parallelism via in-node multithreading, accelerator support via GPU kernels, generalized semiring support, implementations of key data structures and functions, and scalable distributed I/O operations for human-readable files. Our paper also presents several rules of thumb for choosing the right data structures and functions in Combinatorial BLAS 2.0, under various common application scenarios.},
+  file        = {:http\://arxiv.org/pdf/2106.14402v1:PDF},
+  keywords    = {cs.DC, cs.DM, cs.PF, math.CO},
+}
+
+@Article{Kim2021,
+  author      = {Youngdae Kim and François Pacaud and Kibaek Kim and Mihai Anitescu},
+  date        = {2021-06-28},
+  title       = {Leveraging GPU batching for scalable nonlinear programming through massive Lagrangian decomposition},
+  eprint      = {2106.14995},
+  eprintclass = {math.OC},
+  eprinttype  = {arXiv},
+  abstract    = {We present the implementation of a trust-region Newton algorithm ExaTron for bound-constrained nonlinear programming problems, fully running on multiple GPUs. Without data transfers between CPU and GPU, our implementation has achieved the elimination of a major performance bottleneck under a memory-bound situation, particularly when solving many small problems in batch. We discuss the design principles and implementation details for our kernel function and core operations. Different design choices are justified by numerical experiments. By using the application of distributed control of alternating current optimal power flow, where a large problem is decomposed into many smaller nonlinear programs using a Lagrangian approach, we demonstrate computational performance of ExaTron on the Summit supercomputer at Oak RidgeNational Laboratory. Our numerical results show the linear scaling with respect to the batch size and the number of GPUs and more than 35 times speedup on 6 GPUs than on 40 CPUs available on a single node.},
+  file        = {:http\://arxiv.org/pdf/2106.14995v1:PDF},
+  keywords    = {math.OC, cs.DC, cs.MS, 65K05, 90C06, 90C30, 90-04, 90-08},
+}
+
+@Article{Swirydowicz2021,
+  author      = {Kasia Swirydowicz and Eric Darve and Wesley Jones and Jonathan Maack and Shaked Regev and Michael A. Saunders and Stephen J. Thomas and Slaven Peles},
+  date        = {2021-06-25},
+  title       = {Linear solvers for power grid optimization problems: a review of GPU-accelerated linear solvers},
+  eprint      = {2106.13909},
+  eprintclass = {math.NA},
+  eprinttype  = {arXiv},
+  abstract    = {The linear equations that arise in interior methods for constrained optimization are sparse symmetric indefinite and become extremely ill-conditioned as the interior method converges. These linear systems present a challenge for existing solver frameworks based on sparse $LU$ or $LDL^T$ decompositions. We benchmark five well known direct linear solver packages using matrices extracted from power grid optimization problems. The achieved solution accuracy varies greatly among the packages. None of the tested packages delivers significant GPU acceleration for our test cases.},
+  file        = {:http\://arxiv.org/pdf/2106.13909v1:PDF},
+  keywords    = {math.NA, cs.MS, cs.NA},
+}
+
+@Article{Manieri2021,
+  author       = {Lucrezia Manieri and Alessandro Falsone and Maria Prandini},
+  date         = {2021},
+  journaltitle = {{IEEE} Control Systems Letters},
+  title        = {Hyper-graph partitioning for a multi-agent reformulation of large-scale {MILPs}},
+  doi          = {10.1109/lcsys.2021.3093338},
+  pages        = {1--1},
+  abstract     = {This paper addresses the challenge of solving large-scale Mixed Integer Linear Programs (MILPs). A resolution scheme is proposed for the class of MILPs with a hidden constraint-coupled multi-agent structure. In particular, we focus on the problem of disclosing such a structure to then apply a computationally efficient decentralized optimization algorithm recently proposed in the literature. The multi-agent reformulation problem consists in manipulating the matrix defining the linear constraints of the MILP so as to put it in a singly-bordered block-angular form, where the blocks define local constraints and decision variables of the agents, whereas the border defines the coupling constraints. We translate the matrix reformulation problem into a hyper-graph partitioning problem and introduce a novel algorithm which accounts for the specific requirements on the singly-bordered block-angular form to best take advantage of the decentralized optimization approach. Numerical results show the effectiveness of the proposed hyper-graph partitioning algorithm.},
+  publisher    = {Institute of Electrical and Electronics Engineers ({IEEE})},
+}
+
+@InProceedings{Gilbert2021,
+  author    = {Michael S. Gilbert and Seher Acer and Erik G. Boman and Kamesh Madduri and Sivasankaran Rajamanickam},
+  booktitle = {2021 {IEEE} International Parallel and Distributed Processing Symposium ({IPDPS})},
+  date      = {2021-05},
+  title     = {Performance-Portable Graph Coarsening for Efficient Multilevel Graph Analysis},
+  doi       = {10.1109/ipdps49936.2021.00030},
+  publisher = {{IEEE}},
+  abstract  = {The multilevel heuristic is an effective strategy for speeding up graph analytics, and graph coarsening is an integral step of multilevel methods. We perform a comprehensive study of multilevel coarsening in this work. We primarily focus on the graphics processing unit (GPU) parallelization of the Heavy Edge Coarsening (HEC) method executed in an iterative setting. We present optimizations for the two phases of coarsening, a fine-to-coarse vertex mapping phase, and a coarse graph construction phase. We also express several other coarsening algorithms using the Kokkos framework and discuss their parallelization. We demonstrate the efficacy of parallelized HEC on an NVIDIA Turing GPU and a 32-core AMD Ryzen processor using multilevel spectral graph partitioning as the primary case study.},
+}
+
+@InProceedings{Xia2021,
+  author    = {Yang Xia and Peng Jiang and Gagan Agrawal and Rajiv Ramnath},
+  booktitle = {2021 {IEEE} International Parallel and Distributed Processing Symposium ({IPDPS})},
+  date      = {2021-05},
+  title     = {Scaling Sparse Matrix Multiplication on {CPU}-{GPU} Nodes},
+  doi       = {10.1109/ipdps49936.2021.00047},
+  publisher = {{IEEE}},
+  abstract  = {Multiplication of two sparse matrices (SpGEMM) is a popular kernel behind many numerical solvers, and also features in implementing many common graph algorithms. Though many recent research efforts have focused on implementing SpGEMM efficiently on a single GPU, none of the existing work has considered the case where the memory requirements exceed the size of GPU memory. Similarly, the use of the aggregate computing power of CPU and GPU has also not been addressed for those large matrices. In this paper, we present a framework for scaling SpGEMM computations for matrices that do not fit into GPU memory. We address how the computation and data can be partitioned across kernel executions on GPUs. An important emphasis in our work is overlapping data movement and computation. We achieve this by addressing many challenges, such as avoiding dynamic memory allocations, and re-scheduling data transfers with the computation of chunks. We extend our framework to make efficient use of both GPU and CPU, by developing an efficient work distribution strategy. Our evaluation on 9 large matrices shows that our out-of-core GPU implementation achieves 1.98-3.03X speedups over a state-of-the-art multi-core CPU implementation, our hybrid implementation further achieves speedups up to 3.74x, and that our design choices are directly contributing towards achieving this performance.},
+}
+
+@InProceedings{Nisa2021,
+  author    = {Israt Nisa and Prashant Pandey and Marquita Ellis and Leonid Oliker and Aydin Buluc and Katherine Yelick},
+  booktitle = {Proceedings of the 2021 {IEEE} International Parallel and Distributed Processing Symposium},
+  date      = {2021-05},
+  title     = {Distributed-Memory k-mer Counting on {GPUs}},
+  doi       = {10.1109/ipdps49936.2021.00061},
+  publisher = {{IEEE}},
+  series    = {IPDPS 2021},
+  abstract  = {A fundamental step in many bioinformatics computations is to count the frequency of fixed-length sequences, called k-mers, a problem that has received considerable attention as an important target for shared memory parallelization. With datasets growing at an exponential rate, distributed memory parallelization is becoming increasingly critical. Existing distributed memory k-mer counters do not take advantage of GPUs for accelerating computations. Additionally, they do not employ domain-specific optimizations to reduce communication volume in a distributed environment. In this paper, we present the first GPU-accelerated distributed-memory parallel k-mer counter. We evaluate the communication volume as the major bottleneck in scaling k-mer counting to multiple GPU-equipped compute nodes and implement a supermer-based optimization to reduce the communication volume and to enhance scalability. Our empirical analysis examines the balance of communication to computation on a state-of-the-art system, the Summit supercomputer at Oak Ridge National Lab. Results show overall speedups of up to two orders of magnitude with GPU optimization over CPU-based k mer counters. Furthermore, we show an additional 1.5$\times$ speedup using the supermer-based communication optimization.},
+}
+
+@Article{Bogle2021,
+  author      = {Ian Bogle and Erik G Boman and Karen D Devine and Sivasankaran Rajamanickam and George M Slota},
+  date        = {2021-06-30},
+  title       = {Parallel Graph Coloring Algorithms for Distributed GPU Environments},
+  eprint      = {2107.00075},
+  eprintclass = {cs.DC},
+  eprinttype  = {arXiv},
+  abstract    = {Graph coloring is often used in parallelizing scientific computations that run in distributed and multi-GPU environments; it identifies sets of independent data that can be updated in parallel. Many algorithms exist for graph coloring on a single GPU or in distributed memory, but to the best of our knowledge, hybrid MPI+GPU algorithms have been unexplored until this work. We present several MPI+GPU coloring approaches based on the distributed coloring algorithms of Gebremedhin et al. and the shared-memory algorithms of Deveci et al. . The on-node parallel coloring uses implementations in KokkosKernels, which provide parallelization for both multicore CPUs and GPUs. We further extend our approaches to compute distance-2 and partial distance-2 colorings, giving the first known distributed, multi-GPU algorithm for these problems. In addition, we propose a novel heuristic to reduce communication for recoloring in distributed graph coloring. Our experiments show that our approaches operate efficiently on inputs too large to fit on a single GPU and scale up to graphs with 76.7 billion edges running on 128 GPUs.},
+  file        = {:http\://arxiv.org/pdf/2107.00075v1:PDF},
+  keywords    = {cs.DC, cs.DM},
+}
+
+@InProceedings{Ding2021,
+  author    = {Nan Ding and Yang Liu and Samuel Williams and Xiaoye S. Li},
+  booktitle = {Proceedings of the {SIAM} Conference on Applied and Computational Discrete Algorithms},
+  date      = {2021},
+  title     = {A Message-Driven, Multi-{GPU} Parallel Sparse Triangular Solver},
+  series    = {ACDA '21},
+  abstract  = {Sparse triangular solve is used in conjunction with Sparse LU for solving sparse linear systems, either as a direct solver or as a preconditioner. As GPUs have become a firstclass compute citizen, designing an efficient and scalable SpTRSV on multi-GPU HPC systems is imperative. In this paper, we leverage the advantage of GPU-initiated data transfers of NVSHMEM to implement and evaluate a Multi-GPU SpTRSV. We create a novel producer-consumer paradigm to manage the computation and communication in SpTRSV and implement it using two CUDA streams. Our multi-GPU SpTRSV implementation using CUDA streams achieves a 3.7$\times$ speedup when using twelve GPUs (two nodes) relative to our implementation on a single GPU, and up to 6.1$\times$ compared to cusparse csrsv2() over the range of one to eighteen GPUs. To further explain the observed performance and explore the key features of matrices to estimate the potential performance benefits when using multi-GPU, we extend the critical path model of SpTRSV to GPUs. We demonstrate the ability of our performance model to understand various aspects of performance and performance bottlenecks on multi-GPU and motivate code optimizations.},
+}
+
 @Comment{jabref-meta: databaseType:biblatex;}
 
 @Comment{jabref-meta: grouping:
