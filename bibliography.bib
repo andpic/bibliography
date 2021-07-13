@@ -9380,16 +9380,16 @@ In several numerical examples, we demonstrate the convergence behaviour of the p
   keywords    = {math.OC, 90C30, 65K05, 49M37}
 }
 
-@article{Dvurechensky2020,
+@Article{Dvurechensky2020,
   author      = {Pavel Dvurechensky and Shimrit Shtern and Mathias Staudigl and Petr Ostroukhov and Kamil Safin},
-  title       = {Self-concordant analysis of Frank-Wolfe algorithms},
   date        = {2020-02-11},
+  title       = {Self-concordant analysis of Frank-Wolfe algorithms},
   eprint      = {2002.04320},
-  eprinttype  = {arXiv},
   eprintclass = {math.OC},
+  eprinttype  = {arXiv},
   abstract    = {Projection-free optimization via different variants of the Frank-Wolfe (FW) method has become one of the cornerstones in optimization for machine learning since in many cases the linear minimization oracle is much cheaper to implement than projections and some sparsity needs to be preserved. In a number of applications, e.g. Poisson inverse problems or quantum state tomography, the loss is given by a self-concordant (SC) function having unbounded curvature, implying absence of theoretical guarantees for the existing FW methods. We use the theory of SC functions to provide a new adaptive step size for FW methods and prove global convergence rate $O(\frac{1}{k})$, $k$ being the iteration counter. If the problem can be represented by a local linear minimization oracle, we are the first to propose a FW method with linear convergence rate without assuming neither strong convexity nor a Lipschitz continuous gradient.},
   file        = {:http\://arxiv.org/pdf/2002.04320v1:PDF},
-  keywords    = {math.OC, cs.LG, stat.CO, 65K05, 90C25,}
+  keywords    = {math.OC, cs.LG, stat.CO, 65K05, 90C25},
 }
 
 @article{Alimisis2020,
@@ -16857,6 +16857,38 @@ We propose a unifying framework to maintain nuclei in dynamic graph streams. Fir
   title     = {A Message-Driven, Multi-{GPU} Parallel Sparse Triangular Solver},
   series    = {ACDA '21},
   abstract  = {Sparse triangular solve is used in conjunction with Sparse LU for solving sparse linear systems, either as a direct solver or as a preconditioner. As GPUs have become a firstclass compute citizen, designing an efficient and scalable SpTRSV on multi-GPU HPC systems is imperative. In this paper, we leverage the advantage of GPU-initiated data transfers of NVSHMEM to implement and evaluate a Multi-GPU SpTRSV. We create a novel producer-consumer paradigm to manage the computation and communication in SpTRSV and implement it using two CUDA streams. Our multi-GPU SpTRSV implementation using CUDA streams achieves a 3.7$\times$ speedup when using twelve GPUs (two nodes) relative to our implementation on a single GPU, and up to 6.1$\times$ compared to cusparse csrsv2() over the range of one to eighteen GPUs. To further explain the observed performance and explore the key features of matrices to estimate the potential performance benefits when using multi-GPU, we extend the critical path model of SpTRSV to GPUs. We demonstrate the ability of our performance model to understand various aspects of performance and performance bottlenecks on multi-GPU and motivate code optimizations.},
+}
+
+@Article{Parker2021,
+  author       = {J.T. Parker and P.A. Hill and D. Dickinson and B.D. Dudson},
+  date         = {2021-07},
+  journaltitle = {Journal of Computational and Applied Mathematics},
+  title        = {Parallel tridiagonal matrix inversion with a hybrid multigrid{\textendash}Thomas algorithm method},
+  doi          = {10.1016/j.cam.2021.113706},
+  pages        = {113706},
+  abstract     = {Tridiagonal matrix inversion is an important operation with many applications. It arises frequently in solving discretized one-dimensional elliptic partial differential equations, and forms the basis for many algorithms for block tridiagonal matrix inversion for discretized PDEs in higher-dimensions. In such systems, this operation is often the scaling bottleneck in parallel computation. In this paper, we derive a hybrid multigrid–Thomas algorithm designed to efficiently invert tridiagonal matrix equations in a highly-scalable fashion in the context of time evolving partial differential equation systems. We decompose the domain between processors, using multigrid to solve on a grid consisting of the boundary points of each processor’s local domain. We then reconstruct the solution on each processor using a direct solve with the Thomas algorithm. This algorithm has the same theoretical optimal scaling as cyclic reduction and recursive doubling. We use our algorithm to solve Poisson’s equation as part of the spatial discretization of a time-evolving PDE system. Our algorithm is faster than cyclic reduction per inversion and retains good scaling efficiency to twice as many cores.},
+  publisher    = {Elsevier {BV}},
+}
+
+@Article{Inapakurthi2021,
+  author       = {Ravi Kiran Inapakurthi and Srinivas Soumitri Miriyala and Kishalay Mitra},
+  date         = {2021-07},
+  journaltitle = {Chemical Engineering Journal},
+  title        = {Deep Learning Based Dynamic Behavior Modelling and Prediction of Particulate Matter in Air},
+  doi          = {10.1016/j.cej.2021.131221},
+  pages        = {131221},
+  abstract     = {Recurrent Neural Networks (RNNs) and Long Short-Term Memory (LSTM) networks are utilized to capture the dynamic trends of 15 environmental parameters including particulate matter and pollutants in the atmosphere that cause long-term health hazards. Despite having the capability for capturing the long-term dependencies and nonlinearities in dynamic data, these deep learning based models suffer from overfitting if hyper-parameters are not determined optimally. For this purpose, a novel evolutionary algorithm for neural architecture search balancing the accuracy-complexity trade-off through a multi-objective optimization is proposed. This algorithm not only designs optimal deep-RNNs, but also ensures simultaneous determination of activation function and truncated backpropagation length. Analysis of many-to-one and many-to-many styled RNNs concluded that latter style is more effective. Subsequently it is compared with that of LSTMs to achieve an overall accuracy between 85.612\% to 99.56\%. To further minimize this error, multi-variate modelling is proposed. However, since it is important to identify the most significant features, which can be considered as inputs to multi-variate deep RNNs, Monte Carlo based Global Sensitivity Analysis is performed. It proved the hypothesis with sufficient statistical evidence that pH of rain (whose univariate modelling accuracy was least among all) is affected by methane, carbon monoxide, non-methane hydrocarbons and total hydrocarbons, thus improving the modelling accuracy to 98.97\%. These models not only can help policymakers make informed decisions and mitigate climate change, but also the approach can be extended for other time-series modelling related applications due to its generic nature.},
+  publisher    = {Elsevier {BV}},
+}
+
+@Article{Rehfeldt2021,
+  author       = {Daniel Rehfeldt and Hannes Hobbie and David Schönheit and Thorsten Koch and Dominik Möst and Ambros Gleixner},
+  date         = {2021-07},
+  journaltitle = {European Journal of Operational Research},
+  title        = {A massively parallel interior-point solver for {LPs} with generalized arrowhead structure, and applications to energy system models},
+  doi          = {10.1016/j.ejor.2021.06.063},
+  abstract     = {Linear energy system models are a crucial component of energy system design and operations, as well as energy policy consulting. If detailed enough, such models lead to large-scale linear programs, which can be intractable even for the best state-of-the-art solvers. This article introduces an interior-point solver that exploits common structures of energy system models to efficiently run in parallel on distributed-memory systems. The solver is designed for linear programs with doubly-bordered block-diagonal constraint matrix and makes use of a Schur complement based decomposition. In order to handle the large number of linking constraints and variables commonly observed in energy system models, a distributed Schur complement preconditioner is used. In addition, the solver features a number of more generic techniques such as parallel matrix scaling and structure-preserving presolving. The implementation is based on the solver PIPS-IPM. We evaluate the computational performance on energy system models with up to four billion nonzero entries in the constraint matrix--and up to one billion columns and one billion rows. This article mainly concentrates on the energy system model ELMOD, which is a linear optimization model representing the European electricity markets by the use of a nodal pricing market-clearing. It has been widely applied in the literature on energy system analyses in recent years. However, it will be demonstrated that the new solver is also applicable to other energy system models.},
+  publisher    = {Elsevier {BV}},
 }
 
 @Comment{jabref-meta: databaseType:biblatex;}
